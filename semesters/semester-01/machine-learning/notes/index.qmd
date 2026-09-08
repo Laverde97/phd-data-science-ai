@@ -3,18 +3,38 @@ title: "Notas de estudio"
 subtitle: "Machine Learning · Semestre 1"
 ---
 
-Resúmenes, conceptos clave, fórmulas, referencias y notas personales del módulo.
+Catálogo de apuntes del módulo. Los apuntes de clase se toman en Google Colab y se
+publican como notebooks reproducibles; las notas personales (resúmenes, fórmulas y
+referencias) se agregan aquí a medida que se redactan.
+
+## Apuntes de clase
+
+Seis sesiones registradas. Cada fila enlaza al notebook en GitHub y a su versión
+ejecutable en Google Colab.
+
+|  # | Fecha de clase | Tema | Notebook | Colab |
+| -: | -------------- | ---- | -------- | ----- |
+| 01 | 31/08/2026 · Lunes | Fundamentos de Python: `input`, condicionales y bucles | [GitHub](https://github.com/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/notebooks/class-notes/01-clase-2026-08-31.ipynb) | [Open in Colab](https://colab.research.google.com/github/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/notebooks/class-notes/01-clase-2026-08-31.ipynb) |
+| 02 | 01/09/2026 · Martes | NumPy (`np.array`) y listas de Python | [GitHub](https://github.com/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/notebooks/class-notes/02-clase-2026-09-01.ipynb) | [Open in Colab](https://colab.research.google.com/github/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/notebooks/class-notes/02-clase-2026-09-01.ipynb) |
+| 03 | 02/09/2026 · Miércoles | Conexión a MySQL (Cloud SQL) y gráficas con Matplotlib | [GitHub](https://github.com/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/notebooks/class-notes/03-clase-2026-09-02.ipynb) | [Open in Colab](https://colab.research.google.com/github/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/notebooks/class-notes/03-clase-2026-09-02.ipynb) |
+| 04 | 03/09/2026 · Jueves | Formatos de datos (XML/JSON), Cloud Storage y Pandas | [GitHub](https://github.com/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/notebooks/class-notes/04-clase-2026-09-03.ipynb) | [Open in Colab](https://colab.research.google.com/github/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/notebooks/class-notes/04-clase-2026-09-03.ipynb) |
+| 05 | 04/09/2026 · Viernes | Análisis exploratorio con Pandas: `describe`, correlaciones e `iloc` | [GitHub](https://github.com/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/notebooks/class-notes/05-clase-2026-09-04.ipynb) | [Open in Colab](https://colab.research.google.com/github/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/notebooks/class-notes/05-clase-2026-09-04.ipynb) |
+| 06 | 07/09/2026 · Lunes | Preparación de datos: imputación y variables dummy | [GitHub](https://github.com/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/notebooks/class-notes/06-clase-2026-09-07.ipynb) | [Open in Colab](https://colab.research.google.com/github/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/notebooks/class-notes/06-clase-2026-09-07.ipynb) |
+
+: Apuntes de clase del módulo {.striped .hover tbl-colwidths="[6,20,40,17,17]"}
+
+## Notas personales
+
+Resúmenes, conceptos clave, fórmulas y referencias redactados fuera de clase.
 
 ## Convención de nombres
 
 `01-tema.md`, `02-tema.md`, … — prefijo de dos dígitos en orden cronológico.
-
-## Inventario
 
 | # | Tema | Actualizada | Enlace | Estado |
 |:--:|------|:-----------:|--------|--------|
 | — | — | — | — | — |
 
 ::: {.callout-note}
-Aún no se han agregado notas a esta sección.
+Aún no se han agregado notas personales a esta sección.
 :::

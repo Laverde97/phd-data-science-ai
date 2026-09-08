@@ -70,7 +70,7 @@ Cuando `x` supera a `hasta`, la condición se vuelve falsa y el bucle termina. C
 
 ## Recursos
 
-[Abrir en Google Colab](https://colab.research.google.com/github/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/notebooks/01-tablas-de-multiplicar.ipynb){.btn .btn-primary}
-[Ver el notebook en GitHub](https://github.com/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/notebooks/01-tablas-de-multiplicar.ipynb){.btn .btn-outline-secondary}
+[Abrir en Google Colab](https://colab.research.google.com/github/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/notebooks/assignments/01-tablas-de-multiplicar.ipynb){.btn .btn-primary}
+[Ver el notebook en GitHub](https://github.com/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/notebooks/assignments/01-tablas-de-multiplicar.ipynb){.btn .btn-outline-secondary}
 
-[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/notebooks/01-tablas-de-multiplicar.ipynb)
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/notebooks/assignments/01-tablas-de-multiplicar.ipynb)
