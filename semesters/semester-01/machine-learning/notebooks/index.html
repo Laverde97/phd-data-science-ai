@@ -362,10 +362,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#convención-de-nombres" id="toc-convención-de-nombres" class="nav-link active" data-scroll-target="#convención-de-nombres">Convención de nombres</a></li>
+  <li><a href="#organización" id="toc-organización" class="nav-link active" data-scroll-target="#organización">Organización</a></li>
+  <li><a href="#tareas" id="toc-tareas" class="nav-link" data-scroll-target="#tareas">Tareas</a></li>
+  <li><a href="#apuntes-de-clase" id="toc-apuntes-de-clase" class="nav-link" data-scroll-target="#apuntes-de-clase">Apuntes de clase</a></li>
+  <li><a href="#guías-de-aprendizaje" id="toc-guías-de-aprendizaje" class="nav-link" data-scroll-target="#guías-de-aprendizaje">Guías de aprendizaje</a></li>
+  <li><a href="#plantilla" id="toc-plantilla" class="nav-link" data-scroll-target="#plantilla">Plantilla</a></li>
   <li><a href="#patrón-de-url-de-colab" id="toc-patrón-de-url-de-colab" class="nav-link" data-scroll-target="#patrón-de-url-de-colab">Patrón de URL de Colab</a></li>
   <li><a href="#badge-open-in-colab" id="toc-badge-open-in-colab" class="nav-link" data-scroll-target="#badge-open-in-colab">Badge Open in Colab</a></li>
-  <li><a href="#inventario" id="toc-inventario" class="nav-link" data-scroll-target="#inventario">Inventario</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/notebooks/index.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></nav>
     </div>
@@ -393,52 +396,169 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>Notebooks reproducibles del módulo, preparados para abrirse directamente en Google Colab.</p>
-<section id="convención-de-nombres" class="level2">
-<h2 class="anchored" data-anchor-id="convención-de-nombres">Convención de nombres</h2>
-<p><code>01-tema.ipynb</code>, <code>02-tema.ipynb</code>, … — prefijo de dos dígitos en orden cronológico.</p>
+<p>Notebooks reproducibles del módulo, preparados para abrirse directamente en Google Colab. Están organizados en tres grupos: <strong>tareas</strong>, <strong>apuntes de clase</strong> y <strong>guías de aprendizaje</strong>.</p>
+<section id="organización" class="level2">
+<h2 class="anchored" data-anchor-id="organización">Organización</h2>
+<pre class="text"><code>notebooks/
+  00-template.ipynb        plantilla reproducible
+  assignments/             notebooks de tareas entregadas
+  class-notes/             apuntes tomados en cada sesión
+  learning-guides/         guías temáticas de estudio</code></pre>
+<p>Prefijo de dos dígitos en orden cronológico (<code>01-…</code>, <code>02-…</code>). Los apuntes de clase usan el patrón <code>NN-clase-YYYY-MM-DD.ipynb</code>.</p>
 </section>
-<section id="patrón-de-url-de-colab" class="level2">
-<h2 class="anchored" data-anchor-id="patrón-de-url-de-colab">Patrón de URL de Colab</h2>
-<pre class="text"><code>https://colab.research.google.com/github/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/notebooks/&lt;archivo&gt;.ipynb</code></pre>
-</section>
-<section id="badge-open-in-colab" class="level2">
-<h2 class="anchored" data-anchor-id="badge-open-in-colab">Badge Open in Colab</h2>
-<p>Añade esta línea como primera celda <strong>Markdown</strong> de cada notebook, ajustando la ruta:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="al">![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)</span><span class="co">](https://colab.research.google.com/github/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/notebooks/00-template.ipynb)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</section>
-<section id="inventario" class="level2">
-<h2 class="anchored" data-anchor-id="inventario">Inventario</h2>
-<table class="caption-top table">
+<section id="tareas" class="level2">
+<h2 class="anchored" data-anchor-id="tareas">Tareas</h2>
+<table class="table-striped table-hover caption-top table">
+<caption>Notebooks de tareas</caption>
 <thead>
 <tr class="header">
-<th style="text-align: center;">#</th>
 <th>Notebook</th>
-<th style="text-align: center;">Abrir en Colab</th>
-<th>Estado</th>
+<th>Descripción</th>
+<th style="text-align: center;">GitHub</th>
+<th style="text-align: center;">Colab</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: center;">00</td>
-<td><code>00-template.ipynb</code> — plantilla reproducible</td>
-<td style="text-align: center;"><a href="https://colab.research.google.com/github/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/notebooks/00-template.ipynb">Colab</a></td>
-<td>Plantilla</td>
+<td><strong>Tabla de multiplicar</strong> — <a href="../../../../semesters/semester-01/machine-learning/assignments/assignment-01-tablas-de-multiplicar.html">Tarea 01</a></td>
+<td>Pide <code>n</code> y un límite e imprime la tabla con un bucle <code>while</code>.</td>
+<td style="text-align: center;"><a href="https://github.com/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/notebooks/assignments/01-tablas-de-multiplicar.ipynb">GitHub</a></td>
+<td style="text-align: center;"><a href="https://colab.research.google.com/github/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/notebooks/assignments/01-tablas-de-multiplicar.ipynb">Open in Colab</a></td>
 </tr>
 <tr class="even">
-<td style="text-align: center;">01</td>
-<td><code>01-tablas-de-multiplicar.ipynb</code> — <a href="../../../../semesters/semester-01/machine-learning/assignments/assignment-01-tablas-de-multiplicar.html">Tarea 01</a></td>
-<td style="text-align: center;"><a href="https://colab.research.google.com/github/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/notebooks/01-tablas-de-multiplicar.ipynb">Colab</a></td>
-<td>Completado</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">02</td>
-<td><code>02-ingreso-con-password.ipynb</code> — <a href="../../../../semesters/semester-01/machine-learning/assignments/assignment-02-ingreso-con-password.html">Tarea 02</a></td>
-<td style="text-align: center;"><a href="https://colab.research.google.com/github/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/notebooks/02-ingreso-con-password.ipynb">Colab</a></td>
-<td>Completado</td>
+<td><strong>Ingreso con password</strong> — <a href="../../../../semesters/semester-01/machine-learning/assignments/assignment-02-ingreso-con-password.html">Tarea 02</a></td>
+<td>Simula el acceso con un password fijo y tres intentos (<code>while</code>, <code>if/else</code>, <code>break</code>).</td>
+<td style="text-align: center;"><a href="https://github.com/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/notebooks/assignments/02-ingreso-con-password.ipynb">GitHub</a></td>
+<td style="text-align: center;"><a href="https://colab.research.google.com/github/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/notebooks/assignments/02-ingreso-con-password.ipynb">Open in Colab</a></td>
 </tr>
 </tbody>
 </table>
+</section>
+<section id="apuntes-de-clase" class="level2">
+<h2 class="anchored" data-anchor-id="apuntes-de-clase">Apuntes de clase</h2>
+<table class="table-striped table-hover caption-top table">
+<caption>Apuntes de clase</caption>
+<colgroup>
+<col style="width: 5%">
+<col style="width: 18%">
+<col style="width: 49%">
+<col style="width: 14%">
+<col style="width: 14%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: right;">#</th>
+<th>Fecha</th>
+<th>Notebook y tema</th>
+<th style="text-align: center;">GitHub</th>
+<th style="text-align: center;">Colab</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">01</td>
+<td>31/08/2026 · Lunes</td>
+<td><strong>Fundamentos de Python.</strong> Mayor y menor de tres variables, series numéricas, sumatorias y tabla de multiplicar.</td>
+<td style="text-align: center;"><a href="https://github.com/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/notebooks/class-notes/01-clase-2026-08-31.ipynb">GitHub</a></td>
+<td style="text-align: center;"><a href="https://colab.research.google.com/github/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/notebooks/class-notes/01-clase-2026-08-31.ipynb">Open in Colab</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">02</td>
+<td>01/09/2026 · Martes</td>
+<td><strong>NumPy y listas.</strong> Arreglos <code>np.array</code> y listas de Python: recorrido con <code>for</code>, <code>append</code> y eliminación de elementos.</td>
+<td style="text-align: center;"><a href="https://github.com/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/notebooks/class-notes/02-clase-2026-09-01.ipynb">GitHub</a></td>
+<td style="text-align: center;"><a href="https://colab.research.google.com/github/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/notebooks/class-notes/02-clase-2026-09-01.ipynb">Open in Colab</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">03</td>
+<td>02/09/2026 · Miércoles</td>
+<td><strong>Bases de datos y Matplotlib.</strong> Conexión a una instancia MySQL en Google Cloud SQL e introducción a gráficas con Matplotlib.</td>
+<td style="text-align: center;"><a href="https://github.com/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/notebooks/class-notes/03-clase-2026-09-02.ipynb">GitHub</a></td>
+<td style="text-align: center;"><a href="https://colab.research.google.com/github/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/notebooks/class-notes/03-clase-2026-09-02.ipynb">Open in Colab</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">04</td>
+<td>03/09/2026 · Jueves</td>
+<td><strong>Formatos de datos y Pandas.</strong> Formatos XML/JSON, buckets de Google Cloud Storage y primeras operaciones con Pandas.</td>
+<td style="text-align: center;"><a href="https://github.com/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/notebooks/class-notes/04-clase-2026-09-03.ipynb">GitHub</a></td>
+<td style="text-align: center;"><a href="https://colab.research.google.com/github/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/notebooks/class-notes/04-clase-2026-09-03.ipynb">Open in Colab</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">05</td>
+<td>04/09/2026 · Viernes</td>
+<td><strong>Análisis exploratorio.</strong> <code>describe</code>, media, correlaciones e <code>iloc</code>; gráficas de líneas y un caso de utilidad por cliente.</td>
+<td style="text-align: center;"><a href="https://github.com/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/notebooks/class-notes/05-clase-2026-09-04.ipynb">GitHub</a></td>
+<td style="text-align: center;"><a href="https://colab.research.google.com/github/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/notebooks/class-notes/05-clase-2026-09-04.ipynb">Open in Colab</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">06</td>
+<td>07/09/2026 · Lunes</td>
+<td><strong>Preparación de datos.</strong> Importación del conjunto, imputación de faltantes y codificación con <code>pd.get_dummies</code>.</td>
+<td style="text-align: center;"><a href="https://github.com/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/notebooks/class-notes/06-clase-2026-09-07.ipynb">GitHub</a></td>
+<td style="text-align: center;"><a href="https://colab.research.google.com/github/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/notebooks/class-notes/06-clase-2026-09-07.ipynb">Open in Colab</a></td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>El apunte del 02/09/2026 se publicó con los datos de conexión reemplazados por marcadores (<code>&lt;HOST&gt;</code>, <code>&lt;USUARIO&gt;</code>, <code>&lt;PASSWORD&gt;</code>); el del 04/09/2026 no incluye el enlace privado a la grabación de la sesión.</p>
+</div>
+</div>
+</section>
+<section id="guías-de-aprendizaje" class="level2">
+<h2 class="anchored" data-anchor-id="guías-de-aprendizaje">Guías de aprendizaje</h2>
+<table class="table-striped table-hover caption-top table">
+<caption>Guías de aprendizaje</caption>
+<thead>
+<tr class="header">
+<th>Notebook</th>
+<th>Descripción</th>
+<th style="text-align: center;">GitHub</th>
+<th style="text-align: center;">Colab</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Preparando los datos</strong></td>
+<td>Flujo de preparación: inspección, separación <code>X</code>/<code>y</code>, imputación, variables dummy y guardado del conjunto.</td>
+<td style="text-align: center;"><a href="https://github.com/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/notebooks/learning-guides/01-preparando-los-datos.ipynb">GitHub</a></td>
+<td style="text-align: center;"><a href="https://colab.research.google.com/github/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/notebooks/learning-guides/01-preparando-los-datos.ipynb">Open in Colab</a></td>
+</tr>
+<tr class="even">
+<td><strong>Separando los datos</strong></td>
+<td><code>train_test_split</code>, división estratificada, papel de <code>random_state</code> y nociones de under/overfitting.</td>
+<td style="text-align: center;"><a href="https://github.com/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/notebooks/learning-guides/02-separando-los-datos.ipynb">GitHub</a></td>
+<td style="text-align: center;"><a href="https://colab.research.google.com/github/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/notebooks/learning-guides/02-separando-los-datos.ipynb">Open in Colab</a></td>
+</tr>
+<tr class="odd">
+<td><strong>Supervisado vs.&nbsp;No supervisado</strong></td>
+<td>Clasificación y regresión, clustering con K-Means, reducción de dimensionalidad con PCA y detección de anomalías.</td>
+<td style="text-align: center;"><a href="https://github.com/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/notebooks/learning-guides/03-supervisado-no-supervisado.ipynb">GitHub</a></td>
+<td style="text-align: center;"><a href="https://colab.research.google.com/github/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/notebooks/learning-guides/03-supervisado-no-supervisado.ipynb">Open in Colab</a></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="plantilla" class="level2">
+<h2 class="anchored" data-anchor-id="plantilla">Plantilla</h2>
+<p><code>00-template.ipynb</code> — plantilla reproducible con badge de Colab y semilla fija. <a href="https://github.com/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/notebooks/00-template.ipynb">GitHub</a> · <a href="https://colab.research.google.com/github/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/notebooks/00-template.ipynb">Open in Colab</a></p>
+</section>
+<section id="patrón-de-url-de-colab" class="level2">
+<h2 class="anchored" data-anchor-id="patrón-de-url-de-colab">Patrón de URL de Colab</h2>
+<pre class="text"><code>https://colab.research.google.com/github/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/notebooks/&lt;subcarpeta&gt;/&lt;archivo&gt;.ipynb</code></pre>
+</section>
+<section id="badge-open-in-colab" class="level2">
+<h2 class="anchored" data-anchor-id="badge-open-in-colab">Badge Open in Colab</h2>
+<p>Primera línea de la celda <strong>Markdown</strong> inicial de cada notebook, con la ruta ajustada:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="al">![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)</span><span class="co">](https://colab.research.google.com/github/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/notebooks/00-template.ipynb)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -449,7 +569,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Duplica <code>00-template.ipynb</code>, renómbralo siguiendo la convención (<code>01-tema.ipynb</code>), actualiza la ruta del badge de Colab y añade una fila al inventario.</p>
+<p>Duplica <code>00-template.ipynb</code> en la subcarpeta que corresponda (<code>assignments/</code>, <code>class-notes/</code> o <code>learning-guides/</code>), renómbralo siguiendo la convención, actualiza la ruta del badge de Colab y añade una fila a la tabla de esta página.</p>
 </div>
 </div>
 

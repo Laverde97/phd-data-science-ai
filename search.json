@@ -46,35 +46,56 @@
     "href": "semesters/semester-01/machine-learning/notebooks/index.html",
     "title": "Notebooks · Google Colab",
     "section": "",
-    "text": "Notebooks reproducibles del módulo, preparados para abrirse directamente en Google Colab."
+    "text": "Notebooks reproducibles del módulo, preparados para abrirse directamente en Google Colab. Están organizados en tres grupos: tareas, apuntes de clase y guías de aprendizaje."
   },
   {
-    "objectID": "semesters/semester-01/machine-learning/notebooks/index.html#convención-de-nombres",
-    "href": "semesters/semester-01/machine-learning/notebooks/index.html#convención-de-nombres",
+    "objectID": "semesters/semester-01/machine-learning/notebooks/index.html#organización",
+    "href": "semesters/semester-01/machine-learning/notebooks/index.html#organización",
     "title": "Notebooks · Google Colab",
-    "section": "Convención de nombres",
-    "text": "Convención de nombres\n01-tema.ipynb, 02-tema.ipynb, … — prefijo de dos dígitos en orden cronológico."
+    "section": "Organización",
+    "text": "Organización\nnotebooks/\n  00-template.ipynb        plantilla reproducible\n  assignments/             notebooks de tareas entregadas\n  class-notes/             apuntes tomados en cada sesión\n  learning-guides/         guías temáticas de estudio\nPrefijo de dos dígitos en orden cronológico (01-…, 02-…). Los apuntes de clase usan el patrón NN-clase-YYYY-MM-DD.ipynb."
+  },
+  {
+    "objectID": "semesters/semester-01/machine-learning/notebooks/index.html#tareas",
+    "href": "semesters/semester-01/machine-learning/notebooks/index.html#tareas",
+    "title": "Notebooks · Google Colab",
+    "section": "Tareas",
+    "text": "Tareas\n\nNotebooks de tareas\n\n\nNotebook\nDescripción\nGitHub\nColab\n\n\n\n\nTabla de multiplicar — Tarea 01\nPide n y un límite e imprime la tabla con un bucle while.\nGitHub\nOpen in Colab\n\n\nIngreso con password — Tarea 02\nSimula el acceso con un password fijo y tres intentos (while, if/else, break).\nGitHub\nOpen in Colab"
+  },
+  {
+    "objectID": "semesters/semester-01/machine-learning/notebooks/index.html#apuntes-de-clase",
+    "href": "semesters/semester-01/machine-learning/notebooks/index.html#apuntes-de-clase",
+    "title": "Notebooks · Google Colab",
+    "section": "Apuntes de clase",
+    "text": "Apuntes de clase\n\nApuntes de clase\n\n\n\n\n\n\n\n\n\n#\nFecha\nNotebook y tema\nGitHub\nColab\n\n\n\n\n01\n31/08/2026 · Lunes\nFundamentos de Python. Mayor y menor de tres variables, series numéricas, sumatorias y tabla de multiplicar.\nGitHub\nOpen in Colab\n\n\n02\n01/09/2026 · Martes\nNumPy y listas. Arreglos np.array y listas de Python: recorrido con for, append y eliminación de elementos.\nGitHub\nOpen in Colab\n\n\n03\n02/09/2026 · Miércoles\nBases de datos y Matplotlib. Conexión a una instancia MySQL en Google Cloud SQL e introducción a gráficas con Matplotlib.\nGitHub\nOpen in Colab\n\n\n04\n03/09/2026 · Jueves\nFormatos de datos y Pandas. Formatos XML/JSON, buckets de Google Cloud Storage y primeras operaciones con Pandas.\nGitHub\nOpen in Colab\n\n\n05\n04/09/2026 · Viernes\nAnálisis exploratorio. describe, media, correlaciones e iloc; gráficas de líneas y un caso de utilidad por cliente.\nGitHub\nOpen in Colab\n\n\n06\n07/09/2026 · Lunes\nPreparación de datos. Importación del conjunto, imputación de faltantes y codificación con pd.get_dummies.\nGitHub\nOpen in Colab\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nEl apunte del 02/09/2026 se publicó con los datos de conexión reemplazados por marcadores (&lt;HOST&gt;, &lt;USUARIO&gt;, &lt;PASSWORD&gt;); el del 04/09/2026 no incluye el enlace privado a la grabación de la sesión."
+  },
+  {
+    "objectID": "semesters/semester-01/machine-learning/notebooks/index.html#guías-de-aprendizaje",
+    "href": "semesters/semester-01/machine-learning/notebooks/index.html#guías-de-aprendizaje",
+    "title": "Notebooks · Google Colab",
+    "section": "Guías de aprendizaje",
+    "text": "Guías de aprendizaje\n\nGuías de aprendizaje\n\n\nNotebook\nDescripción\nGitHub\nColab\n\n\n\n\nPreparando los datos\nFlujo de preparación: inspección, separación X/y, imputación, variables dummy y guardado del conjunto.\nGitHub\nOpen in Colab\n\n\nSeparando los datos\ntrain_test_split, división estratificada, papel de random_state y nociones de under/overfitting.\nGitHub\nOpen in Colab\n\n\nSupervisado vs. No supervisado\nClasificación y regresión, clustering con K-Means, reducción de dimensionalidad con PCA y detección de anomalías.\nGitHub\nOpen in Colab"
+  },
+  {
+    "objectID": "semesters/semester-01/machine-learning/notebooks/index.html#plantilla",
+    "href": "semesters/semester-01/machine-learning/notebooks/index.html#plantilla",
+    "title": "Notebooks · Google Colab",
+    "section": "Plantilla",
+    "text": "Plantilla\n00-template.ipynb — plantilla reproducible con badge de Colab y semilla fija. GitHub · Open in Colab"
   },
   {
     "objectID": "semesters/semester-01/machine-learning/notebooks/index.html#patrón-de-url-de-colab",
     "href": "semesters/semester-01/machine-learning/notebooks/index.html#patrón-de-url-de-colab",
     "title": "Notebooks · Google Colab",
     "section": "Patrón de URL de Colab",
-    "text": "Patrón de URL de Colab\nhttps://colab.research.google.com/github/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/notebooks/&lt;archivo&gt;.ipynb"
+    "text": "Patrón de URL de Colab\nhttps://colab.research.google.com/github/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/notebooks/&lt;subcarpeta&gt;/&lt;archivo&gt;.ipynb"
   },
   {
     "objectID": "semesters/semester-01/machine-learning/notebooks/index.html#badge-open-in-colab",
     "href": "semesters/semester-01/machine-learning/notebooks/index.html#badge-open-in-colab",
     "title": "Notebooks · Google Colab",
     "section": "Badge Open in Colab",
-    "text": "Badge Open in Colab\nAñade esta línea como primera celda Markdown de cada notebook, ajustando la ruta:\n[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/notebooks/00-template.ipynb)"
-  },
-  {
-    "objectID": "semesters/semester-01/machine-learning/notebooks/index.html#inventario",
-    "href": "semesters/semester-01/machine-learning/notebooks/index.html#inventario",
-    "title": "Notebooks · Google Colab",
-    "section": "Inventario",
-    "text": "Inventario\n\n\n\n#\nNotebook\nAbrir en Colab\nEstado\n\n\n\n\n00\n00-template.ipynb — plantilla reproducible\nColab\nPlantilla\n\n\n01\n01-tablas-de-multiplicar.ipynb — Tarea 01\nColab\nCompletado\n\n\n02\n02-ingreso-con-password.ipynb — Tarea 02\nColab\nCompletado\n\n\n\n\n\n\n\n\n\nTipCómo empezar un notebook nuevo\n\n\n\nDuplica 00-template.ipynb, renómbralo siguiendo la convención (01-tema.ipynb), actualiza la ruta del badge de Colab y añade una fila al inventario."
+    "text": "Badge Open in Colab\nPrimera línea de la celda Markdown inicial de cada notebook, con la ruta ajustada:\n[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/notebooks/00-template.ipynb)\n\n\n\n\n\n\nTipCómo empezar un notebook nuevo\n\n\n\nDuplica 00-template.ipynb en la subcarpeta que corresponda (assignments/, class-notes/ o learning-guides/), renómbralo siguiendo la convención, actualiza la ruta del badge de Colab y añade una fila a la tabla de esta página."
   },
   {
     "objectID": "semesters/semester-01/machine-learning/data/ventas-costos-facturacion/index.html",
@@ -727,42 +748,49 @@
     "href": "semesters/semester-01/machine-learning/index.html#recursos-del-módulo",
     "title": "Machine Learning",
     "section": "Recursos del módulo",
-    "text": "Recursos del módulo\n\n\n📝 Tareas\nTres tareas completadas: dos de Python (con notebook) y una página web como evidencia externa.\nExplorar tareas\n\n\n🧠 Quiz\nPreguntas de repaso, cuestionarios y evaluaciones.\nExplorar quizzes\n\n\n🗃️ Data\nDatasets del módulo, cada uno con su ficha de variables, dimensiones y esquema.\nExplorar data\n\n\n🧪 Talleres\nLaboratorios prácticos y actividades guiadas.\nExplorar talleres\n\n\n🚀 Notebooks · Colab\nPlantilla reproducible y dos notebooks de tareas, todos con badge para abrir en Google Colab.\nExplorar notebooks\n\n\n📊 Presentaciones\nInventario de presentaciones. El material de clase de los docentes se conserva en almacenamiento privado.\nExplorar presentaciones\n\n\n📚 Notas\nResúmenes, conceptos, fórmulas y material de estudio personal.\nExplorar notas"
+    "text": "Recursos del módulo\n\n\n📝 Tareas\nTres tareas completadas: dos de Python (con notebook) y una página web como evidencia externa.\nExplorar tareas\n\n\n🧠 Quiz\nPreguntas de repaso, cuestionarios y evaluaciones.\nExplorar quizzes\n\n\n🗃️ Data\nDatasets del módulo, cada uno con su ficha de variables, dimensiones y esquema.\nExplorar data\n\n\n🧪 Talleres\nLaboratorios prácticos y actividades guiadas.\nExplorar talleres\n\n\n🚀 Notebooks · Colab\nPlantilla reproducible, 2 notebooks de tareas, 6 apuntes de clase y 3 guías de aprendizaje, todos con badge para abrir en Google Colab.\nExplorar notebooks\n\n\n📊 Presentaciones\nInventario de presentaciones. El material de clase de los docentes se conserva en almacenamiento privado.\nExplorar presentaciones\n\n\n📚 Notas\nResúmenes, conceptos, fórmulas y material de estudio personal.\nExplorar notas"
   },
   {
     "objectID": "semesters/semester-01/machine-learning/index.html#progreso-del-módulo-editable",
     "href": "semesters/semester-01/machine-learning/index.html#progreso-del-módulo-editable",
     "title": "Machine Learning",
     "section": "Progreso del módulo (editable)",
-    "text": "Progreso del módulo (editable)\nSeguimiento de los materiales realmente incorporados. Se edita directamente en este archivo (semesters/semester-01/machine-learning/index.qmd) y queda versionado en cada commit.\nEstado actual: 3 tareas completadas, 2 notebooks de tareas, 3 datasets documentados y las presentaciones de clase en almacenamiento privado.\n\n\n\n\n\n\n\n\n\nMaterial\nTipo\nUbicación\nEstado\n\n\n\n\nTarea 01 · Tabla de multiplicar\nTarea (Python)\nassignments/ + notebooks/01-…\nCompletada\n\n\nTarea 02 · Ingreso con password\nTarea (Python)\nassignments/ + notebooks/02-…\nCompletada\n\n\nTarea 03 · Página web\nTarea (Web)\nassignments/ (evidencia externa)\nCompletada\n\n\nVentas · costos y valor de facturación\nDataset\ndata/ (repo público)\nDocumentado\n\n\nCitas mensuales y personal\nDataset\ndata/ (repo público)\nDocumentado\n\n\nClientes · compra (variables codificadas)\nDataset\ndata/ (repo público)\nDocumentado\n\n\nIntroducción a Machine Learning\nPresentación\nAlmacenamiento privado\nInventariado\n\n\nPreparación de datos\nPresentación\nAlmacenamiento privado\nInventariado\n\n\nSeparación de datos\nPresentación\nAlmacenamiento privado\nInventariado\n\n\n\n\n\n\n\n\n\nNoteCómo actualizar\n\n\n\n\n\nAñade una fila por material incorporado. Estados sugeridos: Inventariado, Documentado, En progreso, Completado. No se anticipan aquí materiales que todavía no existen."
+    "text": "Progreso del módulo (editable)\nSeguimiento de los materiales realmente incorporados. Se edita directamente en este archivo (semesters/semester-01/machine-learning/index.qmd) y queda versionado en cada commit.\nEstado actual: 3 tareas completadas, 2 notebooks de tareas, 6 apuntes de clase, 3 guías de aprendizaje, 3 datasets documentados y las presentaciones de clase en almacenamiento privado.\n\n\n\n\n\n\n\n\n\nMaterial\nTipo\nUbicación\nEstado\n\n\n\n\nTarea 01 · Tabla de multiplicar\nTarea (Python)\nassignments/ + notebooks/assignments/01-…\nCompletada\n\n\nTarea 02 · Ingreso con password\nTarea (Python)\nassignments/ + notebooks/assignments/02-…\nCompletada\n\n\nTarea 03 · Página web\nTarea (Web)\nassignments/ (evidencia externa)\nCompletada\n\n\nApunte de clase · 31/08/2026\nApunte\nnotebooks/class-notes/\nIncorporado\n\n\nApunte de clase · 01/09/2026\nApunte\nnotebooks/class-notes/\nIncorporado\n\n\nApunte de clase · 02/09/2026\nApunte\nnotebooks/class-notes/\nIncorporado\n\n\nApunte de clase · 03/09/2026\nApunte\nnotebooks/class-notes/\nIncorporado\n\n\nApunte de clase · 04/09/2026\nApunte\nnotebooks/class-notes/\nIncorporado\n\n\nApunte de clase · 07/09/2026\nApunte\nnotebooks/class-notes/\nIncorporado\n\n\nGuía · Preparando los datos\nGuía de aprendizaje\nnotebooks/learning-guides/\nIncorporada\n\n\nGuía · Separando los datos\nGuía de aprendizaje\nnotebooks/learning-guides/\nIncorporada\n\n\nGuía · Supervisado vs. No supervisado\nGuía de aprendizaje\nnotebooks/learning-guides/\nIncorporada\n\n\nVentas · costos y valor de facturación\nDataset\ndata/ (repo público)\nDocumentado\n\n\nCitas mensuales y personal\nDataset\ndata/ (repo público)\nDocumentado\n\n\nClientes · compra (variables codificadas)\nDataset\ndata/ (repo público)\nDocumentado\n\n\nIntroducción a Machine Learning\nPresentación\nAlmacenamiento privado\nInventariado\n\n\nPreparación de datos\nPresentación\nAlmacenamiento privado\nInventariado\n\n\nSeparación de datos\nPresentación\nAlmacenamiento privado\nInventariado\n\n\n\n\n\n\n\n\n\nNoteCómo actualizar\n\n\n\n\n\nAñade una fila por material incorporado. Estados sugeridos: Inventariado, Documentado, En progreso, Completado. No se anticipan aquí materiales que todavía no existen."
   },
   {
     "objectID": "semesters/semester-01/machine-learning/index.html#abrir-notebooks-en-google-colab",
     "href": "semesters/semester-01/machine-learning/index.html#abrir-notebooks-en-google-colab",
     "title": "Machine Learning",
     "section": "Abrir notebooks en Google Colab",
-    "text": "Abrir notebooks en Google Colab\nCada notebook .ipynb de la carpeta notebooks/ incluye un badge Open in Colab que apunta a:\nhttps://colab.research.google.com/github/Laverde97/phd-data-science-ai/blob/main/&lt;ruta-del-notebook&gt;"
+    "text": "Abrir notebooks en Google Colab\nCada notebook .ipynb de la carpeta notebooks/ (y de sus subcarpetas assignments/, class-notes/ y learning-guides/) incluye un badge Open in Colab que apunta a:\nhttps://colab.research.google.com/github/Laverde97/phd-data-science-ai/blob/main/&lt;ruta-del-notebook&gt;"
   },
   {
     "objectID": "semesters/semester-01/machine-learning/notes/index.html",
     "href": "semesters/semester-01/machine-learning/notes/index.html",
     "title": "Notas de estudio",
     "section": "",
-    "text": "Resúmenes, conceptos clave, fórmulas, referencias y notas personales del módulo."
+    "text": "Catálogo de apuntes del módulo. Los apuntes de clase se toman en Google Colab y se publican como notebooks reproducibles; las notas personales (resúmenes, fórmulas y referencias) se agregan aquí a medida que se redactan."
+  },
+  {
+    "objectID": "semesters/semester-01/machine-learning/notes/index.html#apuntes-de-clase",
+    "href": "semesters/semester-01/machine-learning/notes/index.html#apuntes-de-clase",
+    "title": "Notas de estudio",
+    "section": "Apuntes de clase",
+    "text": "Apuntes de clase\nSeis sesiones registradas. Cada fila enlaza al notebook en GitHub y a su versión ejecutable en Google Colab.\n\nApuntes de clase del módulo\n\n\n\n\n\n\n\n\n\n#\nFecha de clase\nTema\nNotebook\nColab\n\n\n\n\n01\n31/08/2026 · Lunes\nFundamentos de Python: input, condicionales y bucles\nGitHub\nOpen in Colab\n\n\n02\n01/09/2026 · Martes\nNumPy (np.array) y listas de Python\nGitHub\nOpen in Colab\n\n\n03\n02/09/2026 · Miércoles\nConexión a MySQL (Cloud SQL) y gráficas con Matplotlib\nGitHub\nOpen in Colab\n\n\n04\n03/09/2026 · Jueves\nFormatos de datos (XML/JSON), Cloud Storage y Pandas\nGitHub\nOpen in Colab\n\n\n05\n04/09/2026 · Viernes\nAnálisis exploratorio con Pandas: describe, correlaciones e iloc\nGitHub\nOpen in Colab\n\n\n06\n07/09/2026 · Lunes\nPreparación de datos: imputación y variables dummy\nGitHub\nOpen in Colab"
+  },
+  {
+    "objectID": "semesters/semester-01/machine-learning/notes/index.html#notas-personales",
+    "href": "semesters/semester-01/machine-learning/notes/index.html#notas-personales",
+    "title": "Notas de estudio",
+    "section": "Notas personales",
+    "text": "Notas personales\nResúmenes, conceptos clave, fórmulas y referencias redactados fuera de clase."
   },
   {
     "objectID": "semesters/semester-01/machine-learning/notes/index.html#convención-de-nombres",
     "href": "semesters/semester-01/machine-learning/notes/index.html#convención-de-nombres",
     "title": "Notas de estudio",
     "section": "Convención de nombres",
-    "text": "Convención de nombres\n01-tema.md, 02-tema.md, … — prefijo de dos dígitos en orden cronológico."
-  },
-  {
-    "objectID": "semesters/semester-01/machine-learning/notes/index.html#inventario",
-    "href": "semesters/semester-01/machine-learning/notes/index.html#inventario",
-    "title": "Notas de estudio",
-    "section": "Inventario",
-    "text": "Inventario\n\n\n\n#\nTema\nActualizada\nEnlace\nEstado\n\n\n\n\n—\n—\n—\n—\n—\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nAún no se han agregado notas a esta sección."
+    "text": "Convención de nombres\n01-tema.md, 02-tema.md, … — prefijo de dos dígitos en orden cronológico.\n\n\n\n#\nTema\nActualizada\nEnlace\nEstado\n\n\n\n\n—\n—\n—\n—\n—\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nAún no se han agregado notas personales a esta sección."
   },
   {
     "objectID": "semesters/semester-01/machine-learning/quizzes/index.html",
