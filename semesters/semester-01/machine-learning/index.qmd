@@ -30,7 +30,7 @@ Preguntas de repaso, cuestionarios y evaluaciones.
 
 ::: {.resource-card}
 ### 🗃️ Data
-Datasets originales, procesados o auxiliares utilizados en ejercicios.
+Datasets del módulo, cada uno con su ficha de variables, dimensiones y esquema.
 
 [Explorar data](data/index.qmd)
 :::
@@ -51,7 +51,8 @@ Notebooks reproducibles con enlaces para abrir directamente en Google Colab.
 
 ::: {.resource-card}
 ### 📊 Presentaciones
-Diapositivas, material visual y recursos de clase.
+Inventario de presentaciones. El material de clase de los docentes se conserva en
+almacenamiento privado.
 
 [Explorar presentaciones](presentations/index.qmd)
 :::
@@ -66,25 +67,23 @@ Resúmenes, conceptos, fórmulas y material de estudio personal.
 
 ## Progreso del módulo (editable)
 
-Tabla de seguimiento del módulo. Se **edita directamente en este archivo**
-(`semesters/semester-01/machine-learning/index.qmd`) y queda versionada en cada commit.
-Los temas son una guía inicial y deben ajustarse al programa real del curso.
+Seguimiento de los materiales realmente incorporados. Se **edita directamente en este archivo**
+(`semesters/semester-01/machine-learning/index.qmd`) y queda versionado en cada commit.
 
-| Unidad | Tema | Estado |
-|:------:|------|--------|
-| 01 | Fundamentos de Machine Learning | En progreso |
-| 02 | Preparación de datos | Pendiente de documentar |
-| 03 | Separación de datos (train/test) | Pendiente de documentar |
-| 04 | Aprendizaje supervisado | Próximamente |
-| 05 | Aprendizaje no supervisado | Próximamente |
-| 06 | Evaluación y selección de modelos | Próximamente |
+| Material | Tipo | Ubicación | Estado |
+|----------|------|-----------|--------|
+| Ventas · costos y valor de facturación | Dataset | `data/` (repo público) | Documentado |
+| Citas mensuales y personal | Dataset | `data/` (repo público) | Documentado |
+| Clientes · compra (variables codificadas) | Dataset | `data/` (repo público) | Documentado |
+| Introducción a Machine Learning | Presentación | Almacenamiento privado | Inventariado |
+| Preparación de datos | Presentación | Almacenamiento privado | Inventariado |
+| Separación de datos | Presentación | Almacenamiento privado | Inventariado |
 
 ::: {.callout-note collapse="true"}
-## Cómo actualizar el estado
+## Cómo actualizar
 
-Sustituye el texto de la columna **Estado** por uno de: `Próximamente`,
-`Pendiente de documentar`, `En progreso`, `Completado`. Añade filas nuevas al final
-manteniendo la numeración de dos dígitos.
+Añade una fila por material incorporado. Estados sugeridos: `Inventariado`, `Documentado`,
+`En progreso`, `Completado`. No se anticipan aquí materiales que todavía no existen.
 :::
 
 ## Abrir notebooks en Google Colab

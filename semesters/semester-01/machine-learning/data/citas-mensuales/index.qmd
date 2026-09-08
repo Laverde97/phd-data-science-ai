@@ -1,0 +1,42 @@
+---
+title: "Citas mensuales y personal"
+subtitle: "Ficha de dataset · Machine Learning · Semestre 1"
+---
+
+| | |
+|---|---|
+| **Archivo en el repo** | `citas-mensuales.csv` |
+| **Nombre original (local)** | `citas.txt` (contenido CSV; la copia usa extensión `.csv`) |
+| **Formato** | CSV, separador `,`, codificación UTF-8 |
+| **Dimensiones** | 10 filas de datos × 3 columnas (+ fila de cabecera) |
+| **Procedencia** | Pendiente de confirmar |
+| **Licencia** | Pendiente de confirmar |
+
+## Propósito
+
+Serie mensual agregada para practicar regresión simple y correlación: relación entre el personal
+disponible y la cantidad de citas atendidas por mes.
+
+## Variables
+
+| Variable | Tipo | Descripción | Ejemplo |
+|----------|------|-------------|---------|
+| `mes` | Entero (1–10) | Número de mes | `1` |
+| `cantidadcitas` | Entero | Número de citas registradas en el mes | `18` |
+| `personal` | Entero | Cantidad de personal disponible ese mes | `5` |
+
+## Riesgos de privacidad
+
+Datos **agregados por mes**, sin identificadores de personas. No se observan riesgos de privacidad.
+
+## Cargar en Python
+
+```python
+import pandas as pd
+
+url = ("https://raw.githubusercontent.com/Laverde97/phd-data-science-ai/main/"
+       "semesters/semester-01/machine-learning/data/"
+       "citas-mensuales/citas-mensuales.csv")
+df = pd.read_csv(url)
+df.head()
+```

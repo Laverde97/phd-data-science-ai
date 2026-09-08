@@ -1,0 +1,47 @@
+---
+title: "Ventas · costos y valor de facturación"
+subtitle: "Ficha de dataset · Machine Learning · Semestre 1"
+---
+
+| | |
+|---|---|
+| **Archivo en el repo** | `ventas-costos-facturacion.csv` |
+| **Nombre original (local)** | `datos18(ventas18).csv` |
+| **Formato** | CSV, separador `;`, codificación UTF-8 |
+| **Dimensiones** | 10 filas de datos × 3 columnas (+ fila de cabecera) |
+| **Procedencia** | Pendiente de confirmar |
+| **Licencia** | Pendiente de confirmar |
+
+## Propósito
+
+Ejemplo pequeño para practicar lectura de CSV con separador no estándar, cálculo de márgenes
+(`valor_factura − costo_factura`) y regresión lineal simple (predecir `valor_factura` a partir
+de `costo_factura`).
+
+## Variables
+
+| Variable | Tipo | Descripción | Ejemplo |
+|----------|------|-------------|---------|
+| `nombre_cliente` | Texto | Nombre de pila asociado a la factura | `Juan` |
+| `costo_factura` | Entero | Costo asociado a la factura (unidad monetaria no especificada) | `15000` |
+| `valor_factura` | Entero | Valor facturado al cliente | `20000` |
+
+## Riesgos de privacidad
+
+La columna `nombre_cliente` contiene nombres de pila. Aparentan ser **ficticios** (nombres
+comunes, cifras redondas), pero la procedencia **no está confirmada**. Hasta confirmarla, trátese
+como dato de ejemplo: no cruzar con otras fuentes ni asumir que corresponde a personas reales.
+Si se confirma que hubo datos reales, deberá sustituirse por identificadores (`Cliente 1…N`).
+
+## Cargar en Python
+
+```python
+import pandas as pd
+
+url = ("https://raw.githubusercontent.com/Laverde97/phd-data-science-ai/main/"
+       "semesters/semester-01/machine-learning/data/"
+       "ventas-costos-facturacion/ventas-costos-facturacion.csv")
+df = pd.read_csv(url, sep=";")
+df["margen"] = df["valor_factura"] - df["costo_factura"]
+df.head()
+```

@@ -14,7 +14,15 @@ __pycache__/
 .env.*
 !.env.example
 
+# Private / non-distributable academic material (kept out of this public repo).
+# Use these folders as a local staging area; NO global rule for .pptx/.pdf so that
+# own, publishable presentations can still be committed normally.
+_private/
+_local/
+
 # OS / misc
 .DS_Store
 *.tar.gz
 /.luarc.json
+
+/.quarto/

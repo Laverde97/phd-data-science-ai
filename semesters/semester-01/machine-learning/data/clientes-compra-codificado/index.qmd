@@ -1,0 +1,56 @@
+---
+title: "Clientes · compra (variables codificadas)"
+subtitle: "Ficha de dataset · Machine Learning · Semestre 1"
+---
+
+| | |
+|---|---|
+| **Archivo en el repo** | `clientes-compra-codificado.csv` |
+| **Nombre original (local)** | `DATOS1_CODIFICADO.csv` |
+| **Formato** | CSV, separador `,`, codificación UTF-8 |
+| **Dimensiones** | 12 filas de datos × 6 columnas (+ fila de cabecera) |
+| **Procedencia** | Pendiente de confirmar |
+| **Licencia** | Pendiente de confirmar |
+
+## Propósito
+
+Ejemplo de **preprocesamiento** ya aplicado: codificación *one-hot* de la variable categórica
+"país" e imputación de valores faltantes en el salario. Sirve para practicar clasificación
+binaria (`Compro_SI`) y para discutir la trampa de las variables ficticias.
+
+## Variables
+
+| Variable | Tipo | Descripción | Ejemplo |
+|----------|------|-------------|---------|
+| `Edad` | Decimal | Edad del individuo, en años | `37.0` |
+| `Salario` | Decimal | Salario del individuo | `800000.0` |
+| `Pais_COLOMBIA` | Binaria (0/1) | Indicador *one-hot*: país = Colombia | `1` |
+| `Pais_ECUADOR` | Binaria (0/1) | Indicador *one-hot*: país = Ecuador | `0` |
+| `Pais_PERU` | Binaria (0/1) | Indicador *one-hot*: país = Perú | `0` |
+| `Compro_SI` | Binaria (0/1) | **Variable objetivo**: 1 = realizó la compra | `1` |
+
+## Observaciones
+
+- El `Salario` incluye un valor ≈ `486363.64` que parece resultado de **imputación por la media**.
+- Las filas con `Pais_COLOMBIA = Pais_ECUADOR = Pais_PERU = 0` corresponden a un **país base
+  implícito** (codificación con una categoría de referencia; evita la colinealidad perfecta).
+
+## Riesgos de privacidad
+
+Contiene atributos personales (edad, salario, país) pero **sin identificadores directos** (no hay
+nombre, documento ni contacto) y con solo 12 registros. Riesgo bajo; aun así, no combinar con
+otras fuentes que permitan reidentificación mientras la procedencia no esté confirmada.
+
+## Cargar en Python
+
+```python
+import pandas as pd
+
+url = ("https://raw.githubusercontent.com/Laverde97/phd-data-science-ai/main/"
+       "semesters/semester-01/machine-learning/data/"
+       "clientes-compra-codificado/clientes-compra-codificado.csv")
+df = pd.read_csv(url)
+X = df.drop(columns="Compro_SI")
+y = df["Compro_SI"]
+df.head()
+```

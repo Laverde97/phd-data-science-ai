@@ -3,20 +3,28 @@ title: "Presentaciones"
 subtitle: "Machine Learning · Semestre 1"
 ---
 
-Diapositivas, presentaciones y material visual de apoyo del módulo.
+Inventario de las presentaciones del módulo.
 
-## Convención de nombres
+::: {.callout-note}
+## Material de clase — almacenamiento privado
 
-`presentation-01-tema.ext`, `presentation-02-tema.ext`, … — prefijo de dos dígitos en orden
-cronológico. Cuando sea posible, conserva el archivo fuente y una versión **PDF** optimizada
-para consulta.
+Las presentaciones de esta lista son **material académico entregado en clase**, cuya autoría
+corresponde a los docentes del curso. **No se distribuyen en este repositorio público.** Se
+conservan en un almacenamiento privado personal, con la autoría original intacta y sin
+modificar. Este sitio solo mantiene el inventario; no incluye enlaces a los archivos.
+
+Las presentaciones **propias** que se elaboren más adelante sí se publicarán aquí.
+:::
 
 ## Inventario
 
-| # | Título | Fecha | Fuente | PDF | Estado |
-|:--:|--------|:-----:|--------|-----|--------|
-| — | — | — | — | — | — |
+| # | Título | Formato | Autoría | Disponibilidad |
+|--:|--------|---------|---------|----------------|
+| 1 | Introducción a Machine Learning | PPTX | Docentes del curso | Almacenamiento privado — no distribuible públicamente |
+| 2 | Preparación de datos | PPTX | Docentes del curso | Almacenamiento privado — no distribuible públicamente |
+| 3 | Separación de datos | PPTX + PDF | Docentes del curso | Almacenamiento privado — no distribuible públicamente |
 
-::: {.callout-note}
-Aún no se han agregado presentaciones a esta sección.
-:::
+## Convención (presentaciones propias)
+
+`presentation-01-tema.ext`, `presentation-02-tema.ext`, … — prefijo de dos dígitos en orden
+cronológico. Conservar el archivo fuente y una versión PDF para consulta.

@@ -3,27 +3,33 @@ title: "Data"
 subtitle: "Machine Learning · Semestre 1"
 ---
 
-Datasets y documentación de datos utilizados en el módulo.
+Datasets utilizados en el módulo, cada uno con su ficha (variables, dimensiones, tipos y
+propósito). Los archivos son pequeños y de uso didáctico.
 
 ::: {.callout-warning}
 ## Seguridad de datos
 
-No se deben publicar datos sensibles, privados, con información personal o con restricciones
-de licencia. Cuando un dataset no pueda compartirse, esta sección debe documentar únicamente
-su **origen**, **descripción**, **variables**, **esquema** y **procedimiento de acceso**.
+No se publican datos sensibles, privados, con información personal identificable o con
+restricciones de licencia. Cuando un dataset no pueda compartirse, esta sección documenta
+únicamente su **origen**, **descripción**, **variables**, **esquema** y **procedimiento de
+acceso**.
 :::
-
-## Convención de nombres
-
-`raw/` para datos sin procesar, `processed/` para derivados. Archivos con prefijo cronológico
-cuando aplique.
-
-## Inventario
-
-| Dataset | Origen | Acceso | Esquema | Estado |
-|---------|--------|:------:|---------|--------|
-| — | — | — | — | — |
 
 ::: {.callout-note}
-Aún no se han agregado datasets públicos ni fichas de datos a esta sección.
+**Procedencia y licencia pendientes de confirmar.** Los tres datasets provienen del material
+de trabajo del curso; su origen y condiciones de uso todavía no están verificados. Se publican
+como ejemplos didácticos y se actualizarán las fichas cuando se confirme la procedencia.
 :::
+
+## Datasets
+
+| Dataset | Filas × Cols | Formato | Propósito | Ficha |
+|---------|:------------:|---------|-----------|-------|
+| Ventas · costos y valor de facturación | 10 × 3 | CSV `;` | Márgenes; regresión simple | [Ver ficha](ventas-costos-facturacion/index.qmd) |
+| Citas mensuales y personal | 10 × 3 | CSV `,` | Serie agregada; regresión/correlación | [Ver ficha](citas-mensuales/index.qmd) |
+| Clientes · compra (variables codificadas) | 12 × 6 | CSV `,` | Preprocesamiento *one-hot*; clasificación binaria | [Ver ficha](clientes-compra-codificado/index.qmd) |
+
+## Convención
+
+Una carpeta por dataset: `nombre-en-kebab-case/` con el archivo de datos y un `index.qmd` que
+actúa como ficha. Datos sin procesar en `raw/` y derivados en `processed/` cuando aplique.
