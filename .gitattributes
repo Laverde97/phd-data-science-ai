@@ -1,0 +1,7 @@
+* text=auto eol=lf
+
+*.ipynb linguist-language=Jupyter\ Notebook
+*.qmd   linguist-language=RMarkdown
+*.png   binary
+*.jpg   binary
+*.pdf   binary

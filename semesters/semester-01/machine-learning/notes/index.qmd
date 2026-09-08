@@ -1,0 +1,20 @@
+---
+title: "Notas de estudio"
+subtitle: "Machine Learning · Semestre 1"
+---
+
+Resúmenes, conceptos clave, fórmulas, referencias y notas personales del módulo.
+
+## Convención de nombres
+
+`01-tema.md`, `02-tema.md`, … — prefijo de dos dígitos en orden cronológico.
+
+## Inventario
+
+| # | Tema | Actualizada | Enlace | Estado |
+|:--:|------|:-----------:|--------|--------|
+| — | — | — | — | — |
+
+::: {.callout-note}
+Aún no se han agregado notas a esta sección.
+:::

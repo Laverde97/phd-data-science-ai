@@ -1,0 +1,21 @@
+---
+title: "Talleres"
+subtitle: "Machine Learning · Semestre 1"
+---
+
+Laboratorios, talleres guiados y ejercicios prácticos del módulo.
+
+## Convención de nombres
+
+`workshop-01-tema.ext`, `workshop-02-tema.ext`, … — prefijo de dos dígitos en orden cronológico.
+Si el taller es un notebook, incluye su badge **Open in Colab**.
+
+## Inventario
+
+| # | Título | Fecha | Enlace | Estado |
+|:--:|--------|:-----:|--------|--------|
+| — | — | — | — | — |
+
+::: {.callout-note}
+Aún no se han agregado talleres a esta sección.
+:::

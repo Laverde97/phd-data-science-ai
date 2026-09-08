@@ -1,0 +1,70 @@
+---
+title: "Research Track"
+subtitle: "Literatura · Preguntas · Experimentos · Resultados · Avances"
+page-layout: full
+---
+
+::: {.module-banner}
+## Investigación doctoral
+
+Espacio reservado para el trabajo de investigación del doctorado, separado de los materiales
+de clase. Cada sección conserva su propia carpeta y convención de archivos.
+:::
+
+::: {.resource-grid}
+::: {.resource-card}
+### 📚 Literatura
+Revisión bibliográfica, fichas de lectura y referencias.
+
+[Abrir sección](literature/index.qmd)
+:::
+
+::: {.resource-card}
+### ❓ Preguntas de investigación
+Preguntas, hipótesis y objetivos del proyecto.
+
+[Abrir sección](research-questions/index.qmd)
+:::
+
+::: {.resource-card}
+### 🧪 Experimentos
+Diseño, configuración y bitácora de experimentos.
+
+[Abrir sección](experiments/index.qmd)
+:::
+
+::: {.resource-card}
+### 📈 Resultados
+Hallazgos, métricas y figuras derivadas de los experimentos.
+
+[Abrir sección](results/index.qmd)
+:::
+
+::: {.resource-card}
+### 🗓️ Reuniones
+Actas de reuniones con la dirección y el grupo de investigación.
+
+[Abrir sección](meetings/index.qmd)
+:::
+
+::: {.resource-card}
+### 🚧 Avances
+Informes de progreso y planificación por periodos.
+
+[Abrir sección](progress/index.qmd)
+:::
+
+::: {.resource-card}
+### 📝 Manuscritos
+Borradores de artículos, tesis y material en redacción.
+
+[Abrir sección](manuscripts/index.qmd)
+:::
+
+::: {.resource-card}
+### 🎤 Presentaciones científicas
+Charlas, pósters y seminarios de investigación.
+
+[Abrir sección](presentations/index.qmd)
+:::
+:::

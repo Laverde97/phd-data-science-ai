@@ -1,0 +1,29 @@
+---
+title: "Data"
+subtitle: "Machine Learning · Semestre 1"
+---
+
+Datasets y documentación de datos utilizados en el módulo.
+
+::: {.callout-warning}
+## Seguridad de datos
+
+No se deben publicar datos sensibles, privados, con información personal o con restricciones
+de licencia. Cuando un dataset no pueda compartirse, esta sección debe documentar únicamente
+su **origen**, **descripción**, **variables**, **esquema** y **procedimiento de acceso**.
+:::
+
+## Convención de nombres
+
+`raw/` para datos sin procesar, `processed/` para derivados. Archivos con prefijo cronológico
+cuando aplique.
+
+## Inventario
+
+| Dataset | Origen | Acceso | Esquema | Estado |
+|---------|--------|:------:|---------|--------|
+| — | — | — | — | — |
+
+::: {.callout-note}
+Aún no se han agregado datasets públicos ni fichas de datos a esta sección.
+:::

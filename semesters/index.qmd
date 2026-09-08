@@ -1,0 +1,21 @@
+---
+title: "Semestres"
+subtitle: "Doctorado en Ciencia de Datos e Inteligencia Artificial"
+---
+
+Índice de semestres del doctorado. Cada semestre agrupa sus módulos, y cada módulo conserva
+la misma arquitectura de recursos (tareas, quiz, data, talleres, notebooks, presentaciones y notas).
+
+::: {.grid}
+::: {.card}
+### Semestre 1
+**2026-II · En curso**
+
+- Módulo 01 · Machine Learning
+
+[Ver semestre →](semester-01/index.qmd)
+:::
+:::
+
+Los siguientes semestres (Semestre 2, Semestre 3, …) se agregarán aquí a medida que avance
+el programa, sin modificar la estructura existente.

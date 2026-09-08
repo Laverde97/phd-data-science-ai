@@ -1,0 +1,20 @@
+# Quarto build artifacts
+_site/
+.quarto/
+**/*.quarto_ipynb
+.jupyter_cache/
+
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Secrets / local
+.env
+.env.*
+!.env.example
+
+# OS / misc
+.DS_Store
+*.tar.gz
+/.luarc.json

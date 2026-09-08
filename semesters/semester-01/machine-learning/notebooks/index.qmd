@@ -1,0 +1,37 @@
+---
+title: "Notebooks · Google Colab"
+subtitle: "Machine Learning · Semestre 1"
+---
+
+Notebooks reproducibles del módulo, preparados para abrirse directamente en Google Colab.
+
+## Convención de nombres
+
+`01-tema.ipynb`, `02-tema.ipynb`, … — prefijo de dos dígitos en orden cronológico.
+
+## Patrón de URL de Colab
+
+```text
+https://colab.research.google.com/github/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/notebooks/<archivo>.ipynb
+```
+
+## Badge Open in Colab
+
+Añade esta línea como primera celda **Markdown** de cada notebook, ajustando la ruta:
+
+```markdown
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/notebooks/00-template.ipynb)
+```
+
+## Inventario
+
+| # | Notebook | Abrir en Colab | Estado |
+|:--:|----------|:--------------:|--------|
+| 00 | `00-template.ipynb` — plantilla reproducible | [Colab](https://colab.research.google.com/github/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/notebooks/00-template.ipynb) | Plantilla |
+
+::: {.callout-tip}
+## Cómo empezar un notebook nuevo
+
+Duplica `00-template.ipynb`, renómbralo siguiendo la convención (`01-tema.ipynb`), actualiza
+la ruta del badge de Colab y añade una fila al inventario.
+:::

@@ -1,0 +1,72 @@
+---
+title: "Doctoral Learning Hub"
+subtitle: "Data Science · Artificial Intelligence · Machine Learning"
+page-layout: full
+toc: false
+---
+
+::: {.hero}
+# PhD · Data Science & Artificial Intelligence
+
+Un espacio académico para organizar, documentar y compartir el aprendizaje desarrollado
+durante el doctorado: cursos, notebooks, talleres, evaluaciones, datos, presentaciones
+y avances de investigación.
+
+[Explorar Machine Learning](semesters/semester-01/machine-learning/index.qmd){.btn .btn-primary .btn-lg}
+[Ver investigación](research/index.qmd){.btn .btn-outline-secondary .btn-lg}
+:::
+
+## Semestre actual
+
+::: {.grid}
+::: {.card}
+### Semestre 1
+**2026-II**
+
+Organización del primer semestre doctoral por módulos y recursos.
+
+[Ver semestre →](semesters/semester-01/index.qmd)
+:::
+
+::: {.card}
+### Módulo 1 · Machine Learning
+Aprendizaje supervisado y no supervisado, preparación de datos, evaluación de modelos
+y experimentación reproducible.
+
+[Entrar al módulo →](semesters/semester-01/machine-learning/index.qmd)
+:::
+
+::: {.card}
+### Research Track
+Espacio para consolidar ideas, lecturas, experimentos y avances del proyecto doctoral.
+
+[Ver investigación →](research/index.qmd)
+:::
+:::
+
+## Organización del repositorio
+
+Cada módulo conserva la misma estructura para que el repositorio pueda crecer sin perder orden:
+
+- **Tareas** — entregables académicos y soluciones.
+- **Quiz** — evaluaciones, bancos de preguntas y repasos.
+- **Data** — datasets utilizados durante el módulo.
+- **Talleres** — ejercicios prácticos y laboratorios.
+- **Notebooks (Colab)** — notebooks ejecutables desde Google Colab.
+- **Presentaciones** — diapositivas y material de clase.
+- **Notas** — resúmenes, conceptos y material de estudio.
+
+::: {.callout-tip}
+## Reproducibilidad
+
+Los notebooks se publican con un badge **Open in Colab**, fijan una semilla y registran
+las versiones de sus dependencias. Los datasets restringidos se documentan mediante su
+origen y esquema, nunca se publican.
+:::
+
+## Filosofía
+
+> Learn · Build · Document · Research · Reproduce
+
+El objetivo no es almacenar archivos: es construir una **bitácora técnica y académica
+reproducible** del doctorado.

@@ -1,0 +1,20 @@
+---
+title: "Preguntas de investigación"
+subtitle: "Research Track"
+---
+
+Preguntas, hipótesis y objetivos que guían el proyecto, con su evolución a lo largo del doctorado.
+
+## Convención de archivos
+
+Un documento por iteración: `01-preguntas.md`, `02-preguntas.md`, …
+
+## Contenido
+
+| Elemento | Fecha | Enlace | Estado |
+|----------|:-----:|--------|--------|
+| — | — | — | — |
+
+::: {.callout-note}
+Sección en preparación. Aún no se ha agregado contenido.
+:::

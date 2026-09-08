@@ -1,0 +1,20 @@
+---
+title: "Resultados"
+subtitle: "Research Track"
+---
+
+Hallazgos, métricas y figuras derivadas de los experimentos.
+
+## Convención de archivos
+
+`exp-01-resultados.md` por experimento; figuras en `figures/`.
+
+## Contenido
+
+| Elemento | Fecha | Enlace | Estado |
+|----------|:-----:|--------|--------|
+| — | — | — | — |
+
+::: {.callout-note}
+Sección en preparación. Aún no se ha agregado contenido.
+:::

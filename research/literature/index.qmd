@@ -1,0 +1,20 @@
+---
+title: "Literatura"
+subtitle: "Research Track"
+---
+
+Revisión bibliográfica del proyecto doctoral: fichas de lectura, síntesis temáticas y la bibliografía consolidada.
+
+## Convención de archivos
+
+`autor-anio-tema.md` para cada ficha de lectura; `references.bib` para la bibliografía compartida.
+
+## Contenido
+
+| Elemento | Fecha | Enlace | Estado |
+|----------|:-----:|--------|--------|
+| — | — | — | — |
+
+::: {.callout-note}
+Sección en preparación. Aún no se ha agregado contenido.
+:::

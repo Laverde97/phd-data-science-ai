@@ -1,0 +1,20 @@
+---
+title: "Experimentos"
+subtitle: "Research Track"
+---
+
+Diseño, configuración y bitácora de los experimentos de investigación.
+
+## Convención de archivos
+
+Una carpeta por experimento: `exp-01-nombre/` con `README.md`, configuración y notebook asociado.
+
+## Contenido
+
+| Elemento | Fecha | Enlace | Estado |
+|----------|:-----:|--------|--------|
+| — | — | — | — |
+
+::: {.callout-note}
+Sección en preparación. Aún no se ha agregado contenido.
+:::

@@ -1,0 +1,20 @@
+---
+title: "Manuscritos"
+subtitle: "Research Track"
+---
+
+Borradores de artículos, capítulos de tesis y material en redacción.
+
+## Convención de archivos
+
+Una carpeta por manuscrito: `manuscript-01-titulo/` con fuentes y versiones.
+
+## Contenido
+
+| Elemento | Fecha | Enlace | Estado |
+|----------|:-----:|--------|--------|
+| — | — | — | — |
+
+::: {.callout-note}
+Sección en preparación. Aún no se ha agregado contenido.
+:::

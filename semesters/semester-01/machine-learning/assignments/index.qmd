@@ -1,0 +1,21 @@
+---
+title: "Tareas"
+subtitle: "Machine Learning · Semestre 1"
+---
+
+Entregables, ejercicios y soluciones desarrolladas durante el módulo.
+
+## Convención de nombres
+
+`assignment-01-tema.ext`, `assignment-02-tema.ext`, … — prefijo de dos dígitos en orden cronológico.
+
+## Inventario
+
+| # | Título | Fecha | Enlace | Estado |
+|:--:|--------|:-----:|--------|--------|
+| — | — | — | — | — |
+
+::: {.callout-note}
+Aún no se han agregado tareas a esta sección. Añade una fila por entregable y enlaza el
+archivo correspondiente dentro de esta carpeta.
+:::

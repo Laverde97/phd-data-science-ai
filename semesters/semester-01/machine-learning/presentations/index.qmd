@@ -1,0 +1,22 @@
+---
+title: "Presentaciones"
+subtitle: "Machine Learning · Semestre 1"
+---
+
+Diapositivas, presentaciones y material visual de apoyo del módulo.
+
+## Convención de nombres
+
+`presentation-01-tema.ext`, `presentation-02-tema.ext`, … — prefijo de dos dígitos en orden
+cronológico. Cuando sea posible, conserva el archivo fuente y una versión **PDF** optimizada
+para consulta.
+
+## Inventario
+
+| # | Título | Fecha | Fuente | PDF | Estado |
+|:--:|--------|:-----:|--------|-----|--------|
+| — | — | — | — | — | — |
+
+::: {.callout-note}
+Aún no se han agregado presentaciones a esta sección.
+:::

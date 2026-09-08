@@ -1,0 +1,20 @@
+---
+title: "Presentaciones científicas"
+subtitle: "Research Track"
+---
+
+Charlas, pósters y seminarios de investigación.
+
+## Convención de archivos
+
+`presentation-01-evento.ext` con prefijo cronológico; conservar fuente y PDF.
+
+## Contenido
+
+| Elemento | Fecha | Enlace | Estado |
+|----------|:-----:|--------|--------|
+| — | — | — | — |
+
+::: {.callout-note}
+Sección en preparación. Aún no se ha agregado contenido.
+:::

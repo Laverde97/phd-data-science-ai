@@ -1,0 +1,20 @@
+---
+title: "Avances"
+subtitle: "Research Track"
+---
+
+Informes de progreso y planificación por periodos académicos.
+
+## Convención de archivos
+
+`aaaa-qN-avance.md` (trimestral) o `semestre-NN-avance.md`.
+
+## Contenido
+
+| Elemento | Fecha | Enlace | Estado |
+|----------|:-----:|--------|--------|
+| — | — | — | — |
+
+::: {.callout-note}
+Sección en preparación. Aún no se ha agregado contenido.
+:::

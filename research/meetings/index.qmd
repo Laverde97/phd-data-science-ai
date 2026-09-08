@@ -1,0 +1,20 @@
+---
+title: "Reuniones"
+subtitle: "Research Track"
+---
+
+Actas de reuniones con la dirección de tesis y el grupo de investigación.
+
+## Convención de archivos
+
+`aaaa-mm-dd-reunion.md` en orden cronológico.
+
+## Contenido
+
+| Elemento | Fecha | Enlace | Estado |
+|----------|:-----:|--------|--------|
+| — | — | — | — |
+
+::: {.callout-note}
+Sección en preparación. Aún no se ha agregado contenido.
+:::

@@ -1,0 +1,84 @@
+project:
+  type: website
+  output-dir: _site
+  render:
+    - "*.qmd"
+    - "semesters/**/*.qmd"
+    - "research/**/*.qmd"
+
+website:
+  title: "PhD · Data Science & Artificial Intelligence"
+  description: "Bitácora técnica, portafolio y sitio académico reproducible del Doctorado en Ciencia de Datos e Inteligencia Artificial."
+  site-url: "https://laverde97.github.io/phd-data-science-ai/"
+  repo-url: "https://github.com/Laverde97/phd-data-science-ai"
+  repo-actions: [source]
+  favicon: assets/favicon.svg
+  open-graph: true
+  twitter-card: true
+  reader-mode: true
+  back-to-top-navigation: true
+  page-navigation: true
+  bread-crumbs: true
+  search:
+    location: navbar
+    type: overlay
+  navbar:
+    pinned: true
+    logo: assets/logo.svg
+    left:
+      - href: index.qmd
+        text: Inicio
+      - text: Semestres
+        menu:
+          - href: semesters/index.qmd
+            text: Todos los semestres
+          - href: semesters/semester-01/index.qmd
+            text: Semestre 1
+          - href: semesters/semester-01/machine-learning/index.qmd
+            text: "Semestre 1 · Machine Learning"
+      - href: research/index.qmd
+        text: Investigación
+    right:
+      - icon: github
+        href: "https://github.com/Laverde97/phd-data-science-ai"
+        aria-label: GitHub
+  sidebar:
+    - id: research
+      title: "Investigación"
+      style: floating
+      collapse-level: 1
+      contents:
+        - href: research/index.qmd
+          text: Panorama
+        - section: "Secciones"
+          contents:
+            - research/literature/index.qmd
+            - research/research-questions/index.qmd
+            - research/experiments/index.qmd
+            - research/results/index.qmd
+            - research/meetings/index.qmd
+            - research/progress/index.qmd
+            - research/manuscripts/index.qmd
+            - research/presentations/index.qmd
+  page-footer:
+    left: "Doctoral learning repository · Data Science & Artificial Intelligence"
+    right: "Built with [Quarto](https://quarto.org)"
+
+format:
+  html:
+    theme:
+      light: cosmo
+      dark: darkly
+    css: styles.css
+    toc: true
+    toc-expand: 2
+    smooth-scroll: true
+    code-copy: true
+    code-overflow: wrap
+    highlight-style: github
+    anchor-sections: true
+    link-external-icon: true
+    link-external-newwindow: true
+
+execute:
+  freeze: auto

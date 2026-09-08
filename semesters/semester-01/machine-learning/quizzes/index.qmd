@@ -1,0 +1,20 @@
+---
+title: "Quiz"
+subtitle: "Machine Learning · Semestre 1"
+---
+
+Cuestionarios, preguntas de repaso y bancos de evaluación del módulo.
+
+## Convención de nombres
+
+`quiz-01-tema.ext`, `quiz-02-tema.ext`, … — prefijo de dos dígitos en orden cronológico.
+
+## Inventario
+
+| # | Título | Fecha | Enlace | Estado |
+|:--:|--------|:-----:|--------|--------|
+| — | — | — | — | — |
+
+::: {.callout-note}
+Aún no se han agregado quizzes a esta sección.
+:::

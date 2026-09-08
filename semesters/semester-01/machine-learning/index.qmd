@@ -1,0 +1,97 @@
+---
+title: "Machine Learning"
+subtitle: "Semestre 1 · Módulo 1"
+page-layout: full
+---
+
+::: {.module-banner}
+## Módulo 01 · Machine Learning
+
+Repositorio académico del primer módulo doctoral. Aquí se centralizan materiales, ejercicios,
+evaluaciones, notebooks y recursos utilizados durante el curso.
+:::
+
+## Recursos del módulo
+
+::: {.resource-grid}
+::: {.resource-card}
+### 📝 Tareas
+Entregables, ejercicios y soluciones desarrolladas durante el módulo.
+
+[Explorar tareas](assignments/index.qmd)
+:::
+
+::: {.resource-card}
+### 🧠 Quiz
+Preguntas de repaso, cuestionarios y evaluaciones.
+
+[Explorar quizzes](quizzes/index.qmd)
+:::
+
+::: {.resource-card}
+### 🗃️ Data
+Datasets originales, procesados o auxiliares utilizados en ejercicios.
+
+[Explorar data](data/index.qmd)
+:::
+
+::: {.resource-card}
+### 🧪 Talleres
+Laboratorios prácticos y actividades guiadas.
+
+[Explorar talleres](workshops/index.qmd)
+:::
+
+::: {.resource-card}
+### 🚀 Notebooks · Colab
+Notebooks reproducibles con enlaces para abrir directamente en Google Colab.
+
+[Explorar notebooks](notebooks/index.qmd)
+:::
+
+::: {.resource-card}
+### 📊 Presentaciones
+Diapositivas, material visual y recursos de clase.
+
+[Explorar presentaciones](presentations/index.qmd)
+:::
+
+::: {.resource-card}
+### 📚 Notas
+Resúmenes, conceptos, fórmulas y material de estudio personal.
+
+[Explorar notas](notes/index.qmd)
+:::
+:::
+
+## Progreso del módulo (editable)
+
+Tabla de seguimiento del módulo. Se **edita directamente en este archivo**
+(`semesters/semester-01/machine-learning/index.qmd`) y queda versionada en cada commit.
+Los temas son una guía inicial y deben ajustarse al programa real del curso.
+
+| Unidad | Tema | Estado |
+|:------:|------|--------|
+| 01 | Fundamentos de Machine Learning | En progreso |
+| 02 | Preparación de datos | Pendiente de documentar |
+| 03 | Separación de datos (train/test) | Pendiente de documentar |
+| 04 | Aprendizaje supervisado | Próximamente |
+| 05 | Aprendizaje no supervisado | Próximamente |
+| 06 | Evaluación y selección de modelos | Próximamente |
+
+::: {.callout-note collapse="true"}
+## Cómo actualizar el estado
+
+Sustituye el texto de la columna **Estado** por uno de: `Próximamente`,
+`Pendiente de documentar`, `En progreso`, `Completado`. Añade filas nuevas al final
+manteniendo la numeración de dos dígitos.
+:::
+
+## Abrir notebooks en Google Colab
+
+Cada notebook `.ipynb` de la carpeta `notebooks/` incluye un badge **Open in Colab**
+que apunta a:
+
+```text
+https://colab.research.google.com/github/Laverde97/phd-data-science-ai/blob/main/<ruta-del-notebook>
+```
