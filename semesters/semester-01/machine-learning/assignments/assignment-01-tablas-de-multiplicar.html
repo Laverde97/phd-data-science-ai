@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Notebooks · Google Colab – PhD · Data Science &amp; Artificial Intelligence</title>
+<title>Tarea 01 · Tabla de multiplicar – PhD · Data Science &amp; Artificial Intelligence</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -115,10 +115,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <link rel="stylesheet" href="../../../../styles.css">
-<meta property="og:title" content="Notebooks · Google Colab – PhD · Data Science &amp; Artificial Intelligence">
+<meta property="og:title" content="Tarea 01 · Tabla de multiplicar – PhD · Data Science &amp; Artificial Intelligence">
 <meta property="og:description" content="Machine Learning · Semestre 1">
 <meta property="og:site_name" content="PhD · Data Science &amp; Artificial Intelligence">
-<meta name="twitter:title" content="Notebooks · Google Colab – PhD · Data Science &amp; Artificial Intelligence">
+<meta name="twitter:title" content="Tarea 01 · Tabla de multiplicar – PhD · Data Science &amp; Artificial Intelligence">
 <meta name="twitter:description" content="Machine Learning · Semestre 1">
 <meta name="twitter:card" content="summary">
 </head>
@@ -362,12 +362,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#convención-de-nombres" id="toc-convención-de-nombres" class="nav-link active" data-scroll-target="#convención-de-nombres">Convención de nombres</a></li>
-  <li><a href="#patrón-de-url-de-colab" id="toc-patrón-de-url-de-colab" class="nav-link" data-scroll-target="#patrón-de-url-de-colab">Patrón de URL de Colab</a></li>
-  <li><a href="#badge-open-in-colab" id="toc-badge-open-in-colab" class="nav-link" data-scroll-target="#badge-open-in-colab">Badge Open in Colab</a></li>
-  <li><a href="#inventario" id="toc-inventario" class="nav-link" data-scroll-target="#inventario">Inventario</a></li>
+  <li><a href="#enunciado" id="toc-enunciado" class="nav-link active" data-scroll-target="#enunciado">Enunciado</a></li>
+  <li><a href="#objetivo" id="toc-objetivo" class="nav-link" data-scroll-target="#objetivo">Objetivo</a></li>
+  <li><a href="#código-original" id="toc-código-original" class="nav-link" data-scroll-target="#código-original">Código original</a></li>
+  <li><a href="#explicación-conceptual" id="toc-explicación-conceptual" class="nav-link" data-scroll-target="#explicación-conceptual">Explicación conceptual</a>
+  <ul class="collapse">
+  <li><a href="#input" id="toc-input" class="nav-link" data-scroll-target="#input"><code>input</code></a></li>
+  <li><a href="#int" id="toc-int" class="nav-link" data-scroll-target="#int"><code>int</code></a></li>
+  <li><a href="#el-contador-x" id="toc-el-contador-x" class="nav-link" data-scroll-target="#el-contador-x">El contador <code>x</code></a></li>
+  <li><a href="#el-bucle-while" id="toc-el-bucle-while" class="nav-link" data-scroll-target="#el-bucle-while">El bucle <code>while</code></a></li>
+  </ul></li>
+  <li><a href="#recursos" id="toc-recursos" class="nav-link" data-scroll-target="#recursos">Recursos</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/notebooks/index.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/assignments/assignment-01-tablas-de-multiplicar.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -375,7 +382,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Notebooks · Google Colab</h1>
+<h1 class="title">Tarea 01 · Tabla de multiplicar</h1>
 <p class="subtitle lead">Machine Learning · Semestre 1</p>
 </div>
 
@@ -393,64 +400,69 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>Notebooks reproducibles del módulo, preparados para abrirse directamente en Google Colab.</p>
-<section id="convención-de-nombres" class="level2">
-<h2 class="anchored" data-anchor-id="convención-de-nombres">Convención de nombres</h2>
-<p><code>01-tema.ipynb</code>, <code>02-tema.ipynb</code>, … — prefijo de dos dígitos en orden cronológico.</p>
+<section id="enunciado" class="level2">
+<h2 class="anchored" data-anchor-id="enunciado">Enunciado</h2>
+<blockquote class="blockquote">
+<p>CONSTRUIR UN PROGRAMA PARA QUE ME HAGA LA TABLA DE MULTIPLICAR CON DIGITAR EL N, EL QUE UNO QUIERA HACER, HASTA DONDE QUIERE LLEGAR, POR EJEMPLO, N=5 HASTA 20.</p>
+</blockquote>
 </section>
-<section id="patrón-de-url-de-colab" class="level2">
-<h2 class="anchored" data-anchor-id="patrón-de-url-de-colab">Patrón de URL de Colab</h2>
-<pre class="text"><code>https://colab.research.google.com/github/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/notebooks/&lt;archivo&gt;.ipynb</code></pre>
+<section id="objetivo" class="level2">
+<h2 class="anchored" data-anchor-id="objetivo">Objetivo</h2>
+<p>Escribir un programa que pida al usuario el número de la tabla y el límite, y luego imprima la tabla de multiplicar correspondiente. Se practican cuatro elementos básicos de Python:</p>
+<ul>
+<li>lectura de datos con <code>input</code>,</li>
+<li>conversión de texto a número con <code>int</code>,</li>
+<li>una variable <strong>contador</strong>,</li>
+<li>repetición controlada con un bucle <code>while</code>.</li>
+</ul>
 </section>
-<section id="badge-open-in-colab" class="level2">
-<h2 class="anchored" data-anchor-id="badge-open-in-colab">Badge Open in Colab</h2>
-<p>Añade esta línea como primera celda <strong>Markdown</strong> de cada notebook, ajustando la ruta:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="al">![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)</span><span class="co">](https://colab.research.google.com/github/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/notebooks/00-template.ipynb)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<section id="código-original" class="level2">
+<h2 class="anchored" data-anchor-id="código-original">Código original</h2>
+<p>Solución entregada, sin modificaciones.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>n <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>(<span class="st">'Digite la tabla que quiere realizar: '</span>)) <span class="co">#Esta línea le pide al usuario el número de la tabla de multiplicar.</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>hasta <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>(<span class="st">'Digite hasta dónde quiere llegar: '</span>)) <span class="co"># Aquí se pregunta hasta qué número queremos multiplicar.</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">1</span> <span class="co"># La variable x es nuestro contador, comienza en 1 porque queremos empezar multiplicando: 5 x 1</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> x <span class="op">&lt;=</span> hasta: <span class="co"># Mientras x sea menor o igual que hasta, repita las instrucciones que están dentro del while.</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(n, <span class="st">'x'</span>, x, <span class="st">'='</span>, n <span class="op">*</span> x) <span class="co"># "x": Es el simbolo, x: Hasta donde quiere multiplicar, "=": Es el simbolo, n * x: Es la multiplicación de 5 * 3, que da 15</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> x <span class="op">+</span> <span class="dv">1</span> <span class="co"># Esta línea aumenta el contador en 1, si no se pone, x siempre sería 1 y el programa repetiría para siempre: 5 x 1 = 5</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="inventario" class="level2">
-<h2 class="anchored" data-anchor-id="inventario">Inventario</h2>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th style="text-align: center;">#</th>
-<th>Notebook</th>
-<th style="text-align: center;">Abrir en Colab</th>
-<th>Estado</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;">00</td>
-<td><code>00-template.ipynb</code> — plantilla reproducible</td>
-<td style="text-align: center;"><a href="https://colab.research.google.com/github/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/notebooks/00-template.ipynb">Colab</a></td>
-<td>Plantilla</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">01</td>
-<td><code>01-tablas-de-multiplicar.ipynb</code> — <a href="../../../../semesters/semester-01/machine-learning/assignments/assignment-01-tablas-de-multiplicar.html">Tarea 01</a></td>
-<td style="text-align: center;"><a href="https://colab.research.google.com/github/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/notebooks/01-tablas-de-multiplicar.ipynb">Colab</a></td>
-<td>Completado</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">02</td>
-<td><code>02-ingreso-con-password.ipynb</code> — <a href="../../../../semesters/semester-01/machine-learning/assignments/assignment-02-ingreso-con-password.html">Tarea 02</a></td>
-<td style="text-align: center;"><a href="https://colab.research.google.com/github/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/notebooks/02-ingreso-con-password.ipynb">Colab</a></td>
-<td>Completado</td>
-</tr>
-</tbody>
-</table>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Cómo empezar un notebook nuevo
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Duplica <code>00-template.ipynb</code>, renómbralo siguiendo la convención (<code>01-tema.ipynb</code>), actualiza la ruta del badge de Colab y añade una fila al inventario.</p>
-</div>
+<section id="explicación-conceptual" class="level2">
+<h2 class="anchored" data-anchor-id="explicación-conceptual">Explicación conceptual</h2>
+<section id="input" class="level3">
+<h3 class="anchored" data-anchor-id="input"><code>input</code></h3>
+<p><code>input('texto…')</code> muestra el mensaje entre comillas y <strong>espera</strong> a que el usuario escriba algo y pulse Enter. Lo que devuelve es siempre una <strong>cadena de texto</strong> (<code>str</code>), aunque el usuario teclee dígitos: <code>"5"</code>, no <code>5</code>.</p>
+</section>
+<section id="int" class="level3">
+<h3 class="anchored" data-anchor-id="int"><code>int</code></h3>
+<p><code>int(...)</code> convierte esa cadena en un número <strong>entero</strong>. Es necesario porque no se puede multiplicar ni comparar texto como si fuera un número: <code>int("5")</code> da <code>5</code>. Por eso el programa envuelve cada <code>input</code> dentro de <code>int(...)</code> y guarda el resultado en <code>n</code> y en <code>hasta</code>.</p>
+</section>
+<section id="el-contador-x" class="level3">
+<h3 class="anchored" data-anchor-id="el-contador-x">El contador <code>x</code></h3>
+<p><code>x = 1</code> crea una variable que sirve de <strong>contador</strong>: lleva la cuenta de por qué número vamos multiplicando. Empieza en <code>1</code> para que la primera línea impresa sea <code>n x 1</code>. Dentro del bucle, <code>x = x + 1</code> incrementa el contador en cada vuelta. Si esa línea faltara, <code>x</code> valdría siempre <code>1</code>, la condición del <code>while</code> nunca dejaría de cumplirse y el programa se repetiría sin fin.</p>
+</section>
+<section id="el-bucle-while" class="level3">
+<h3 class="anchored" data-anchor-id="el-bucle-while">El bucle <code>while</code></h3>
+<p><code>while x &lt;= hasta:</code> repite el bloque indentado <strong>mientras</strong> la condición sea verdadera. En cada vuelta:</p>
+<ol type="1">
+<li>imprime <code>n 'x' x '=' n * x</code>, es decir, una fila de la tabla;</li>
+<li>suma <code>1</code> a <code>x</code>.</li>
+</ol>
+<p>Cuando <code>x</code> supera a <code>hasta</code>, la condición se vuelve falsa y el bucle termina. Con <code>n = 5</code> y <code>hasta = 20</code> se imprimen 20 filas, desde <code>5 x 1 = 5</code> hasta <code>5 x 20 = 100</code>.</p>
+</section>
+</section>
+<section id="recursos" class="level2">
+<h2 class="anchored" data-anchor-id="recursos">Recursos</h2>
+<p><a href="https://colab.research.google.com/github/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/notebooks/01-tablas-de-multiplicar.ipynb" class="btn btn-primary">Abrir en Google Colab</a> <a href="https://github.com/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/notebooks/01-tablas-de-multiplicar.ipynb" class="btn btn-outline-secondary">Ver el notebook en GitHub</a></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="https://colab.research.google.com/github/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/notebooks/01-tablas-de-multiplicar.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" class="img-fluid figure-img"></a></p>
+<figcaption>Open in Colab</figcaption>
+</figure>
 </div>
 
 
@@ -885,7 +897,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/notebooks/index.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/assignments/assignment-01-tablas-de-multiplicar.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>Built with <a href="https://quarto.org">Quarto</a></p>
 </div>
