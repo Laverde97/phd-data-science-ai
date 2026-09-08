@@ -1,0 +1,160 @@
+:root {
+  --phd-accent: #6f42c1;
+  --phd-accent-2: #0d6efd;
+  --phd-border: rgba(127, 127, 127, .20);
+  --phd-card-bg: rgba(127, 127, 127, .03);
+  --phd-hero-a: rgba(111, 66, 193, .12);
+  --phd-hero-b: rgba(13, 110, 253, .08);
+}
+
+body.quarto-dark {
+  --phd-accent: #b794f6;
+  --phd-accent-2: #63b3ed;
+  --phd-border: rgba(255, 255, 255, .14);
+  --phd-card-bg: rgba(255, 255, 255, .03);
+  --phd-hero-a: rgba(183, 148, 246, .16);
+  --phd-hero-b: rgba(99, 179, 237, .10);
+}
+
+body {
+  letter-spacing: .01em;
+}
+
+.navbar {
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--phd-border);
+}
+
+.navbar-brand img {
+  height: 26px;
+  width: auto;
+}
+
+/* Hero ---------------------------------------------------------------- */
+.hero {
+  padding: 4rem 3rem;
+  margin: 1rem 0 3rem 0;
+  border: 1px solid var(--phd-border);
+  border-radius: 24px;
+  background: linear-gradient(135deg, var(--phd-hero-a), var(--phd-hero-b));
+}
+
+.hero h1 {
+  font-size: clamp(2.3rem, 5vw, 4.6rem);
+  font-weight: 800;
+  line-height: 1.02;
+  letter-spacing: -.04em;
+  margin-bottom: 1rem;
+}
+
+.hero .btn {
+  margin: .4rem .6rem .2rem 0;
+  border-radius: 999px;
+  font-weight: 600;
+}
+
+/* Cards -------------------------------------------------------------- */
+.grid,
+.resource-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.card,
+.resource-card {
+  border: 1px solid var(--phd-border);
+  border-radius: 18px;
+  padding: 1.4rem;
+  background: var(--phd-card-bg);
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+}
+
+.card:hover,
+.resource-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, .10);
+  border-color: var(--phd-accent);
+}
+
+.card h3,
+.resource-card h3,
+.card h4,
+.resource-card h4 {
+  margin-top: 0;
+}
+
+.card a:last-child,
+.resource-card a:last-child {
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* Module banner --------------------------------------------------------- */
+.module-banner {
+  padding: 2rem;
+  border: 1px solid var(--phd-border);
+  border-left: 5px solid var(--phd-accent);
+  border-radius: 12px;
+  background: linear-gradient(90deg, var(--phd-hero-a), transparent);
+  margin-bottom: 2rem;
+}
+
+.module-banner h2 {
+  margin-top: 0;
+}
+
+/* Tables -------------------------------------------------------------- */
+main table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1.25rem 0;
+  font-size: .95rem;
+}
+
+main table thead th {
+  border-bottom: 2px solid var(--phd-accent);
+  text-align: left;
+  padding: .55rem .7rem;
+}
+
+main table td,
+main table tbody th {
+  border-bottom: 1px solid var(--phd-border);
+  padding: .55rem .7rem;
+}
+
+main table tbody tr:hover {
+  background: var(--phd-card-bg);
+}
+
+/* Status chips ------------------------------------------------------- */
+.status-done,
+.status-wip,
+.status-todo {
+  display: inline-block;
+  padding: .1rem .55rem;
+  border-radius: 999px;
+  font-size: .8rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.status-done { background: rgba(25, 135, 84, .15); color: #198754; }
+.status-wip  { background: rgba(255, 193, 7, .18);  color: #b8860b; }
+.status-todo { background: rgba(127, 127, 127, .15); color: inherit; }
+
+/* Misc -------------------------------------------------------------- */
+blockquote {
+  border-left-color: var(--phd-accent);
+}
+
+.callout {
+  border-radius: 12px;
+}
+
+@media (max-width: 600px) {
+  .hero { padding: 2.4rem 1.4rem; }
+  .module-banner { padding: 1.4rem; }
+}

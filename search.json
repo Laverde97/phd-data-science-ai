@@ -1,0 +1,557 @@
+[
+  {
+    "objectID": "semesters/semester-01/machine-learning/workshops/index.html",
+    "href": "semesters/semester-01/machine-learning/workshops/index.html",
+    "title": "Talleres",
+    "section": "",
+    "text": "Laboratorios, talleres guiados y ejercicios prácticos del módulo."
+  },
+  {
+    "objectID": "semesters/semester-01/machine-learning/workshops/index.html#convención-de-nombres",
+    "href": "semesters/semester-01/machine-learning/workshops/index.html#convención-de-nombres",
+    "title": "Talleres",
+    "section": "Convención de nombres",
+    "text": "Convención de nombres\nworkshop-01-tema.ext, workshop-02-tema.ext, … — prefijo de dos dígitos en orden cronológico. Si el taller es un notebook, incluye su badge Open in Colab."
+  },
+  {
+    "objectID": "semesters/semester-01/machine-learning/workshops/index.html#inventario",
+    "href": "semesters/semester-01/machine-learning/workshops/index.html#inventario",
+    "title": "Talleres",
+    "section": "Inventario",
+    "text": "Inventario\n\n\n\n#\nTítulo\nFecha\nEnlace\nEstado\n\n\n\n\n—\n—\n—\n—\n—\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nAún no se han agregado talleres a esta sección."
+  },
+  {
+    "objectID": "semesters/semester-01/machine-learning/presentations/index.html",
+    "href": "semesters/semester-01/machine-learning/presentations/index.html",
+    "title": "Presentaciones",
+    "section": "",
+    "text": "Diapositivas, presentaciones y material visual de apoyo del módulo."
+  },
+  {
+    "objectID": "semesters/semester-01/machine-learning/presentations/index.html#convención-de-nombres",
+    "href": "semesters/semester-01/machine-learning/presentations/index.html#convención-de-nombres",
+    "title": "Presentaciones",
+    "section": "Convención de nombres",
+    "text": "Convención de nombres\npresentation-01-tema.ext, presentation-02-tema.ext, … — prefijo de dos dígitos en orden cronológico. Cuando sea posible, conserva el archivo fuente y una versión PDF optimizada para consulta."
+  },
+  {
+    "objectID": "semesters/semester-01/machine-learning/presentations/index.html#inventario",
+    "href": "semesters/semester-01/machine-learning/presentations/index.html#inventario",
+    "title": "Presentaciones",
+    "section": "Inventario",
+    "text": "Inventario\n\n\n\n#\nTítulo\nFecha\nFuente\nPDF\nEstado\n\n\n\n\n—\n—\n—\n—\n—\n—\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nAún no se han agregado presentaciones a esta sección."
+  },
+  {
+    "objectID": "semesters/semester-01/machine-learning/notebooks/index.html",
+    "href": "semesters/semester-01/machine-learning/notebooks/index.html",
+    "title": "Notebooks · Google Colab",
+    "section": "",
+    "text": "Notebooks reproducibles del módulo, preparados para abrirse directamente en Google Colab."
+  },
+  {
+    "objectID": "semesters/semester-01/machine-learning/notebooks/index.html#convención-de-nombres",
+    "href": "semesters/semester-01/machine-learning/notebooks/index.html#convención-de-nombres",
+    "title": "Notebooks · Google Colab",
+    "section": "Convención de nombres",
+    "text": "Convención de nombres\n01-tema.ipynb, 02-tema.ipynb, … — prefijo de dos dígitos en orden cronológico."
+  },
+  {
+    "objectID": "semesters/semester-01/machine-learning/notebooks/index.html#patrón-de-url-de-colab",
+    "href": "semesters/semester-01/machine-learning/notebooks/index.html#patrón-de-url-de-colab",
+    "title": "Notebooks · Google Colab",
+    "section": "Patrón de URL de Colab",
+    "text": "Patrón de URL de Colab\nhttps://colab.research.google.com/github/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/notebooks/&lt;archivo&gt;.ipynb"
+  },
+  {
+    "objectID": "semesters/semester-01/machine-learning/notebooks/index.html#badge-open-in-colab",
+    "href": "semesters/semester-01/machine-learning/notebooks/index.html#badge-open-in-colab",
+    "title": "Notebooks · Google Colab",
+    "section": "Badge Open in Colab",
+    "text": "Badge Open in Colab\nAñade esta línea como primera celda Markdown de cada notebook, ajustando la ruta:\n[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/notebooks/00-template.ipynb)"
+  },
+  {
+    "objectID": "semesters/semester-01/machine-learning/notebooks/index.html#inventario",
+    "href": "semesters/semester-01/machine-learning/notebooks/index.html#inventario",
+    "title": "Notebooks · Google Colab",
+    "section": "Inventario",
+    "text": "Inventario\n\n\n\n#\nNotebook\nAbrir en Colab\nEstado\n\n\n\n\n00\n00-template.ipynb — plantilla reproducible\nColab\nPlantilla\n\n\n\n\n\n\n\n\n\nTipCómo empezar un notebook nuevo\n\n\n\nDuplica 00-template.ipynb, renómbralo siguiendo la convención (01-tema.ipynb), actualiza la ruta del badge de Colab y añade una fila al inventario."
+  },
+  {
+    "objectID": "semesters/semester-01/machine-learning/data/index.html",
+    "href": "semesters/semester-01/machine-learning/data/index.html",
+    "title": "Data",
+    "section": "",
+    "text": "Datasets y documentación de datos utilizados en el módulo."
+  },
+  {
+    "objectID": "semesters/semester-01/machine-learning/data/index.html#convención-de-nombres",
+    "href": "semesters/semester-01/machine-learning/data/index.html#convención-de-nombres",
+    "title": "Data",
+    "section": "Convención de nombres",
+    "text": "Convención de nombres\nraw/ para datos sin procesar, processed/ para derivados. Archivos con prefijo cronológico cuando aplique."
+  },
+  {
+    "objectID": "semesters/semester-01/machine-learning/data/index.html#inventario",
+    "href": "semesters/semester-01/machine-learning/data/index.html#inventario",
+    "title": "Data",
+    "section": "Inventario",
+    "text": "Inventario\n\n\n\nDataset\nOrigen\nAcceso\nEsquema\nEstado\n\n\n\n\n—\n—\n—\n—\n—\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nAún no se han agregado datasets públicos ni fichas de datos a esta sección."
+  },
+  {
+    "objectID": "semesters/semester-01/index.html",
+    "href": "semesters/semester-01/index.html",
+    "title": "Semestre 1",
+    "section": "",
+    "text": "Primer módulo del semestre.\nEstado: En curso\nAcceder al módulo →\n\n\nLos siguientes módulos se agregarán a medida que avance el semestre, conservando la misma arquitectura académica (siete categorías de recursos por módulo).\n\n\n\n\n\n\nNote\n\n\n\nEl nombre y el número de los módulos posteriores se documentarán cuando se conozcan oficialmente. No se anticipan aquí."
+  },
+  {
+    "objectID": "semesters/semester-01/index.html#módulos",
+    "href": "semesters/semester-01/index.html#módulos",
+    "title": "Semestre 1",
+    "section": "",
+    "text": "Primer módulo del semestre.\nEstado: En curso\nAcceder al módulo →\n\n\nLos siguientes módulos se agregarán a medida que avance el semestre, conservando la misma arquitectura académica (siete categorías de recursos por módulo).\n\n\n\n\n\n\nNote\n\n\n\nEl nombre y el número de los módulos posteriores se documentarán cuando se conozcan oficialmente. No se anticipan aquí."
+  },
+  {
+    "objectID": "research/results/index.html",
+    "href": "research/results/index.html",
+    "title": "Resultados",
+    "section": "",
+    "text": "Hallazgos, métricas y figuras derivadas de los experimentos.",
+    "crumbs": [
+      "Investigación",
+      "Secciones",
+      "Resultados"
+    ]
+  },
+  {
+    "objectID": "research/results/index.html#convención-de-archivos",
+    "href": "research/results/index.html#convención-de-archivos",
+    "title": "Resultados",
+    "section": "Convención de archivos",
+    "text": "Convención de archivos\nexp-01-resultados.md por experimento; figuras en figures/.",
+    "crumbs": [
+      "Investigación",
+      "Secciones",
+      "Resultados"
+    ]
+  },
+  {
+    "objectID": "research/results/index.html#contenido",
+    "href": "research/results/index.html#contenido",
+    "title": "Resultados",
+    "section": "Contenido",
+    "text": "Contenido\n\n\n\nElemento\nFecha\nEnlace\nEstado\n\n\n\n\n—\n—\n—\n—\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nSección en preparación. Aún no se ha agregado contenido.",
+    "crumbs": [
+      "Investigación",
+      "Secciones",
+      "Resultados"
+    ]
+  },
+  {
+    "objectID": "research/progress/index.html",
+    "href": "research/progress/index.html",
+    "title": "Avances",
+    "section": "",
+    "text": "Informes de progreso y planificación por periodos académicos.",
+    "crumbs": [
+      "Investigación",
+      "Secciones",
+      "Avances"
+    ]
+  },
+  {
+    "objectID": "research/progress/index.html#convención-de-archivos",
+    "href": "research/progress/index.html#convención-de-archivos",
+    "title": "Avances",
+    "section": "Convención de archivos",
+    "text": "Convención de archivos\naaaa-qN-avance.md (trimestral) o semestre-NN-avance.md.",
+    "crumbs": [
+      "Investigación",
+      "Secciones",
+      "Avances"
+    ]
+  },
+  {
+    "objectID": "research/progress/index.html#contenido",
+    "href": "research/progress/index.html#contenido",
+    "title": "Avances",
+    "section": "Contenido",
+    "text": "Contenido\n\n\n\nElemento\nFecha\nEnlace\nEstado\n\n\n\n\n—\n—\n—\n—\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nSección en preparación. Aún no se ha agregado contenido.",
+    "crumbs": [
+      "Investigación",
+      "Secciones",
+      "Avances"
+    ]
+  },
+  {
+    "objectID": "research/meetings/index.html",
+    "href": "research/meetings/index.html",
+    "title": "Reuniones",
+    "section": "",
+    "text": "Actas de reuniones con la dirección de tesis y el grupo de investigación.",
+    "crumbs": [
+      "Investigación",
+      "Secciones",
+      "Reuniones"
+    ]
+  },
+  {
+    "objectID": "research/meetings/index.html#convención-de-archivos",
+    "href": "research/meetings/index.html#convención-de-archivos",
+    "title": "Reuniones",
+    "section": "Convención de archivos",
+    "text": "Convención de archivos\naaaa-mm-dd-reunion.md en orden cronológico.",
+    "crumbs": [
+      "Investigación",
+      "Secciones",
+      "Reuniones"
+    ]
+  },
+  {
+    "objectID": "research/meetings/index.html#contenido",
+    "href": "research/meetings/index.html#contenido",
+    "title": "Reuniones",
+    "section": "Contenido",
+    "text": "Contenido\n\n\n\nElemento\nFecha\nEnlace\nEstado\n\n\n\n\n—\n—\n—\n—\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nSección en preparación. Aún no se ha agregado contenido.",
+    "crumbs": [
+      "Investigación",
+      "Secciones",
+      "Reuniones"
+    ]
+  },
+  {
+    "objectID": "research/literature/index.html",
+    "href": "research/literature/index.html",
+    "title": "Literatura",
+    "section": "",
+    "text": "Revisión bibliográfica del proyecto doctoral: fichas de lectura, síntesis temáticas y la bibliografía consolidada.",
+    "crumbs": [
+      "Investigación",
+      "Secciones",
+      "Literatura"
+    ]
+  },
+  {
+    "objectID": "research/literature/index.html#convención-de-archivos",
+    "href": "research/literature/index.html#convención-de-archivos",
+    "title": "Literatura",
+    "section": "Convención de archivos",
+    "text": "Convención de archivos\nautor-anio-tema.md para cada ficha de lectura; references.bib para la bibliografía compartida.",
+    "crumbs": [
+      "Investigación",
+      "Secciones",
+      "Literatura"
+    ]
+  },
+  {
+    "objectID": "research/literature/index.html#contenido",
+    "href": "research/literature/index.html#contenido",
+    "title": "Literatura",
+    "section": "Contenido",
+    "text": "Contenido\n\n\n\nElemento\nFecha\nEnlace\nEstado\n\n\n\n\n—\n—\n—\n—\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nSección en preparación. Aún no se ha agregado contenido.",
+    "crumbs": [
+      "Investigación",
+      "Secciones",
+      "Literatura"
+    ]
+  },
+  {
+    "objectID": "research/experiments/index.html",
+    "href": "research/experiments/index.html",
+    "title": "Experimentos",
+    "section": "",
+    "text": "Diseño, configuración y bitácora de los experimentos de investigación.",
+    "crumbs": [
+      "Investigación",
+      "Secciones",
+      "Experimentos"
+    ]
+  },
+  {
+    "objectID": "research/experiments/index.html#convención-de-archivos",
+    "href": "research/experiments/index.html#convención-de-archivos",
+    "title": "Experimentos",
+    "section": "Convención de archivos",
+    "text": "Convención de archivos\nUna carpeta por experimento: exp-01-nombre/ con README.md, configuración y notebook asociado.",
+    "crumbs": [
+      "Investigación",
+      "Secciones",
+      "Experimentos"
+    ]
+  },
+  {
+    "objectID": "research/experiments/index.html#contenido",
+    "href": "research/experiments/index.html#contenido",
+    "title": "Experimentos",
+    "section": "Contenido",
+    "text": "Contenido\n\n\n\nElemento\nFecha\nEnlace\nEstado\n\n\n\n\n—\n—\n—\n—\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nSección en preparación. Aún no se ha agregado contenido.",
+    "crumbs": [
+      "Investigación",
+      "Secciones",
+      "Experimentos"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Doctoral Learning Hub",
+    "section": "",
+    "text": "Un espacio académico para organizar, documentar y compartir el aprendizaje desarrollado durante el doctorado: cursos, notebooks, talleres, evaluaciones, datos, presentaciones y avances de investigación.\nExplorar Machine Learning Ver investigación"
+  },
+  {
+    "objectID": "index.html#semestre-actual",
+    "href": "index.html#semestre-actual",
+    "title": "Doctoral Learning Hub",
+    "section": "Semestre actual",
+    "text": "Semestre actual\n\n\nSemestre 1\n2026-II\nOrganización del primer semestre doctoral por módulos y recursos.\nVer semestre →\n\n\nMódulo 1 · Machine Learning\nAprendizaje supervisado y no supervisado, preparación de datos, evaluación de modelos y experimentación reproducible.\nEntrar al módulo →\n\n\nResearch Track\nEspacio para consolidar ideas, lecturas, experimentos y avances del proyecto doctoral.\nVer investigación →"
+  },
+  {
+    "objectID": "index.html#organización-del-repositorio",
+    "href": "index.html#organización-del-repositorio",
+    "title": "Doctoral Learning Hub",
+    "section": "Organización del repositorio",
+    "text": "Organización del repositorio\nCada módulo conserva la misma estructura para que el repositorio pueda crecer sin perder orden:\n\nTareas — entregables académicos y soluciones.\nQuiz — evaluaciones, bancos de preguntas y repasos.\nData — datasets utilizados durante el módulo.\nTalleres — ejercicios prácticos y laboratorios.\nNotebooks (Colab) — notebooks ejecutables desde Google Colab.\nPresentaciones — diapositivas y material de clase.\nNotas — resúmenes, conceptos y material de estudio.\n\n\n\n\n\n\n\nTipReproducibilidad\n\n\n\nLos notebooks se publican con un badge Open in Colab, fijan una semilla y registran las versiones de sus dependencias. Los datasets restringidos se documentan mediante su origen y esquema, nunca se publican."
+  },
+  {
+    "objectID": "index.html#filosofía",
+    "href": "index.html#filosofía",
+    "title": "Doctoral Learning Hub",
+    "section": "Filosofía",
+    "text": "Filosofía\n\nLearn · Build · Document · Research · Reproduce\n\nEl objetivo no es almacenar archivos: es construir una bitácora técnica y académica reproducible del doctorado."
+  },
+  {
+    "objectID": "research/index.html",
+    "href": "research/index.html",
+    "title": "Research Track",
+    "section": "",
+    "text": "Espacio reservado para el trabajo de investigación del doctorado, separado de los materiales de clase. Cada sección conserva su propia carpeta y convención de archivos.",
+    "crumbs": [
+      "Investigación",
+      "Panorama"
+    ]
+  },
+  {
+    "objectID": "research/index.html#investigación-doctoral",
+    "href": "research/index.html#investigación-doctoral",
+    "title": "Research Track",
+    "section": "",
+    "text": "Espacio reservado para el trabajo de investigación del doctorado, separado de los materiales de clase. Cada sección conserva su propia carpeta y convención de archivos.",
+    "crumbs": [
+      "Investigación",
+      "Panorama"
+    ]
+  },
+  {
+    "objectID": "research/manuscripts/index.html",
+    "href": "research/manuscripts/index.html",
+    "title": "Manuscritos",
+    "section": "",
+    "text": "Borradores de artículos, capítulos de tesis y material en redacción.",
+    "crumbs": [
+      "Investigación",
+      "Secciones",
+      "Manuscritos"
+    ]
+  },
+  {
+    "objectID": "research/manuscripts/index.html#convención-de-archivos",
+    "href": "research/manuscripts/index.html#convención-de-archivos",
+    "title": "Manuscritos",
+    "section": "Convención de archivos",
+    "text": "Convención de archivos\nUna carpeta por manuscrito: manuscript-01-titulo/ con fuentes y versiones.",
+    "crumbs": [
+      "Investigación",
+      "Secciones",
+      "Manuscritos"
+    ]
+  },
+  {
+    "objectID": "research/manuscripts/index.html#contenido",
+    "href": "research/manuscripts/index.html#contenido",
+    "title": "Manuscritos",
+    "section": "Contenido",
+    "text": "Contenido\n\n\n\nElemento\nFecha\nEnlace\nEstado\n\n\n\n\n—\n—\n—\n—\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nSección en preparación. Aún no se ha agregado contenido.",
+    "crumbs": [
+      "Investigación",
+      "Secciones",
+      "Manuscritos"
+    ]
+  },
+  {
+    "objectID": "research/presentations/index.html",
+    "href": "research/presentations/index.html",
+    "title": "Presentaciones científicas",
+    "section": "",
+    "text": "Charlas, pósters y seminarios de investigación.",
+    "crumbs": [
+      "Investigación",
+      "Secciones",
+      "Presentaciones científicas"
+    ]
+  },
+  {
+    "objectID": "research/presentations/index.html#convención-de-archivos",
+    "href": "research/presentations/index.html#convención-de-archivos",
+    "title": "Presentaciones científicas",
+    "section": "Convención de archivos",
+    "text": "Convención de archivos\npresentation-01-evento.ext con prefijo cronológico; conservar fuente y PDF.",
+    "crumbs": [
+      "Investigación",
+      "Secciones",
+      "Presentaciones científicas"
+    ]
+  },
+  {
+    "objectID": "research/presentations/index.html#contenido",
+    "href": "research/presentations/index.html#contenido",
+    "title": "Presentaciones científicas",
+    "section": "Contenido",
+    "text": "Contenido\n\n\n\nElemento\nFecha\nEnlace\nEstado\n\n\n\n\n—\n—\n—\n—\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nSección en preparación. Aún no se ha agregado contenido.",
+    "crumbs": [
+      "Investigación",
+      "Secciones",
+      "Presentaciones científicas"
+    ]
+  },
+  {
+    "objectID": "research/research-questions/index.html",
+    "href": "research/research-questions/index.html",
+    "title": "Preguntas de investigación",
+    "section": "",
+    "text": "Preguntas, hipótesis y objetivos que guían el proyecto, con su evolución a lo largo del doctorado.",
+    "crumbs": [
+      "Investigación",
+      "Secciones",
+      "Preguntas de investigación"
+    ]
+  },
+  {
+    "objectID": "research/research-questions/index.html#convención-de-archivos",
+    "href": "research/research-questions/index.html#convención-de-archivos",
+    "title": "Preguntas de investigación",
+    "section": "Convención de archivos",
+    "text": "Convención de archivos\nUn documento por iteración: 01-preguntas.md, 02-preguntas.md, …",
+    "crumbs": [
+      "Investigación",
+      "Secciones",
+      "Preguntas de investigación"
+    ]
+  },
+  {
+    "objectID": "research/research-questions/index.html#contenido",
+    "href": "research/research-questions/index.html#contenido",
+    "title": "Preguntas de investigación",
+    "section": "Contenido",
+    "text": "Contenido\n\n\n\nElemento\nFecha\nEnlace\nEstado\n\n\n\n\n—\n—\n—\n—\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nSección en preparación. Aún no se ha agregado contenido.",
+    "crumbs": [
+      "Investigación",
+      "Secciones",
+      "Preguntas de investigación"
+    ]
+  },
+  {
+    "objectID": "semesters/index.html",
+    "href": "semesters/index.html",
+    "title": "Semestres",
+    "section": "",
+    "text": "Índice de semestres del doctorado. Cada semestre agrupa sus módulos, y cada módulo conserva la misma arquitectura de recursos (tareas, quiz, data, talleres, notebooks, presentaciones y notas).\n\n\nSemestre 1\n2026-II · En curso\n\nMódulo 01 · Machine Learning\n\nVer semestre →\n\n\nLos siguientes semestres (Semestre 2, Semestre 3, …) se agregarán aquí a medida que avance el programa, sin modificar la estructura existente.\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "semesters/semester-01/machine-learning/assignments/index.html",
+    "href": "semesters/semester-01/machine-learning/assignments/index.html",
+    "title": "Tareas",
+    "section": "",
+    "text": "Entregables, ejercicios y soluciones desarrolladas durante el módulo."
+  },
+  {
+    "objectID": "semesters/semester-01/machine-learning/assignments/index.html#convención-de-nombres",
+    "href": "semesters/semester-01/machine-learning/assignments/index.html#convención-de-nombres",
+    "title": "Tareas",
+    "section": "Convención de nombres",
+    "text": "Convención de nombres\nassignment-01-tema.ext, assignment-02-tema.ext, … — prefijo de dos dígitos en orden cronológico."
+  },
+  {
+    "objectID": "semesters/semester-01/machine-learning/assignments/index.html#inventario",
+    "href": "semesters/semester-01/machine-learning/assignments/index.html#inventario",
+    "title": "Tareas",
+    "section": "Inventario",
+    "text": "Inventario\n\n\n\n#\nTítulo\nFecha\nEnlace\nEstado\n\n\n\n\n—\n—\n—\n—\n—\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nAún no se han agregado tareas a esta sección. Añade una fila por entregable y enlaza el archivo correspondiente dentro de esta carpeta."
+  },
+  {
+    "objectID": "semesters/semester-01/machine-learning/index.html",
+    "href": "semesters/semester-01/machine-learning/index.html",
+    "title": "Machine Learning",
+    "section": "",
+    "text": "Repositorio académico del primer módulo doctoral. Aquí se centralizan materiales, ejercicios, evaluaciones, notebooks y recursos utilizados durante el curso."
+  },
+  {
+    "objectID": "semesters/semester-01/machine-learning/index.html#módulo-01-machine-learning",
+    "href": "semesters/semester-01/machine-learning/index.html#módulo-01-machine-learning",
+    "title": "Machine Learning",
+    "section": "",
+    "text": "Repositorio académico del primer módulo doctoral. Aquí se centralizan materiales, ejercicios, evaluaciones, notebooks y recursos utilizados durante el curso."
+  },
+  {
+    "objectID": "semesters/semester-01/machine-learning/index.html#recursos-del-módulo",
+    "href": "semesters/semester-01/machine-learning/index.html#recursos-del-módulo",
+    "title": "Machine Learning",
+    "section": "Recursos del módulo",
+    "text": "Recursos del módulo\n\n\n📝 Tareas\nEntregables, ejercicios y soluciones desarrolladas durante el módulo.\nExplorar tareas\n\n\n🧠 Quiz\nPreguntas de repaso, cuestionarios y evaluaciones.\nExplorar quizzes\n\n\n🗃️ Data\nDatasets originales, procesados o auxiliares utilizados en ejercicios.\nExplorar data\n\n\n🧪 Talleres\nLaboratorios prácticos y actividades guiadas.\nExplorar talleres\n\n\n🚀 Notebooks · Colab\nNotebooks reproducibles con enlaces para abrir directamente en Google Colab.\nExplorar notebooks\n\n\n📊 Presentaciones\nDiapositivas, material visual y recursos de clase.\nExplorar presentaciones\n\n\n📚 Notas\nResúmenes, conceptos, fórmulas y material de estudio personal.\nExplorar notas"
+  },
+  {
+    "objectID": "semesters/semester-01/machine-learning/index.html#progreso-del-módulo-editable",
+    "href": "semesters/semester-01/machine-learning/index.html#progreso-del-módulo-editable",
+    "title": "Machine Learning",
+    "section": "Progreso del módulo (editable)",
+    "text": "Progreso del módulo (editable)\nTabla de seguimiento del módulo. Se edita directamente en este archivo (semesters/semester-01/machine-learning/index.qmd) y queda versionada en cada commit. Los temas son una guía inicial y deben ajustarse al programa real del curso.\n\n\n\nUnidad\nTema\nEstado\n\n\n\n\n01\nFundamentos de Machine Learning\nEn progreso\n\n\n02\nPreparación de datos\nPendiente de documentar\n\n\n03\nSeparación de datos (train/test)\nPendiente de documentar\n\n\n04\nAprendizaje supervisado\nPróximamente\n\n\n05\nAprendizaje no supervisado\nPróximamente\n\n\n06\nEvaluación y selección de modelos\nPróximamente\n\n\n\n\n\n\n\n\n\nNoteCómo actualizar el estado\n\n\n\n\n\nSustituye el texto de la columna Estado por uno de: Próximamente, Pendiente de documentar, En progreso, Completado. Añade filas nuevas al final manteniendo la numeración de dos dígitos."
+  },
+  {
+    "objectID": "semesters/semester-01/machine-learning/index.html#abrir-notebooks-en-google-colab",
+    "href": "semesters/semester-01/machine-learning/index.html#abrir-notebooks-en-google-colab",
+    "title": "Machine Learning",
+    "section": "Abrir notebooks en Google Colab",
+    "text": "Abrir notebooks en Google Colab\nCada notebook .ipynb de la carpeta notebooks/ incluye un badge Open in Colab que apunta a:\nhttps://colab.research.google.com/github/Laverde97/phd-data-science-ai/blob/main/&lt;ruta-del-notebook&gt;"
+  },
+  {
+    "objectID": "semesters/semester-01/machine-learning/notes/index.html",
+    "href": "semesters/semester-01/machine-learning/notes/index.html",
+    "title": "Notas de estudio",
+    "section": "",
+    "text": "Resúmenes, conceptos clave, fórmulas, referencias y notas personales del módulo."
+  },
+  {
+    "objectID": "semesters/semester-01/machine-learning/notes/index.html#convención-de-nombres",
+    "href": "semesters/semester-01/machine-learning/notes/index.html#convención-de-nombres",
+    "title": "Notas de estudio",
+    "section": "Convención de nombres",
+    "text": "Convención de nombres\n01-tema.md, 02-tema.md, … — prefijo de dos dígitos en orden cronológico."
+  },
+  {
+    "objectID": "semesters/semester-01/machine-learning/notes/index.html#inventario",
+    "href": "semesters/semester-01/machine-learning/notes/index.html#inventario",
+    "title": "Notas de estudio",
+    "section": "Inventario",
+    "text": "Inventario\n\n\n\n#\nTema\nActualizada\nEnlace\nEstado\n\n\n\n\n—\n—\n—\n—\n—\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nAún no se han agregado notas a esta sección."
+  },
+  {
+    "objectID": "semesters/semester-01/machine-learning/quizzes/index.html",
+    "href": "semesters/semester-01/machine-learning/quizzes/index.html",
+    "title": "Quiz",
+    "section": "",
+    "text": "Cuestionarios, preguntas de repaso y bancos de evaluación del módulo."
+  },
+  {
+    "objectID": "semesters/semester-01/machine-learning/quizzes/index.html#convención-de-nombres",
+    "href": "semesters/semester-01/machine-learning/quizzes/index.html#convención-de-nombres",
+    "title": "Quiz",
+    "section": "Convención de nombres",
+    "text": "Convención de nombres\nquiz-01-tema.ext, quiz-02-tema.ext, … — prefijo de dos dígitos en orden cronológico."
+  },
+  {
+    "objectID": "semesters/semester-01/machine-learning/quizzes/index.html#inventario",
+    "href": "semesters/semester-01/machine-learning/quizzes/index.html#inventario",
+    "title": "Quiz",
+    "section": "Inventario",
+    "text": "Inventario\n\n\n\n#\nTítulo\nFecha\nEnlace\nEstado\n\n\n\n\n—\n—\n—\n—\n—\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nAún no se han agregado quizzes a esta sección."
+  }
+]
