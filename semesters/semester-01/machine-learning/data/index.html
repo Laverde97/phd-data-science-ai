@@ -327,8 +327,8 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#convención-de-nombres" id="toc-convención-de-nombres" class="nav-link active" data-scroll-target="#convención-de-nombres">Convención de nombres</a></li>
-  <li><a href="#inventario" id="toc-inventario" class="nav-link" data-scroll-target="#inventario">Inventario</a></li>
+  <li><a href="#datasets" id="toc-datasets" class="nav-link active" data-scroll-target="#datasets">Datasets</a></li>
+  <li><a href="#convención" id="toc-convención" class="nav-link" data-scroll-target="#convención">Convención</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/data/index.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></nav>
     </div>
@@ -356,7 +356,7 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Datasets y documentación de datos utilizados en el módulo.</p>
+<p>Datasets utilizados en el módulo, cada uno con su ficha (variables, dimensiones, tipos y propósito). Los archivos son pequeños y de uso didáctico.</p>
 <div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -367,35 +367,9 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>No se deben publicar datos sensibles, privados, con información personal o con restricciones de licencia. Cuando un dataset no pueda compartirse, esta sección debe documentar únicamente su <strong>origen</strong>, <strong>descripción</strong>, <strong>variables</strong>, <strong>esquema</strong> y <strong>procedimiento de acceso</strong>.</p>
+<p>No se publican datos sensibles, privados, con información personal identificable o con restricciones de licencia. Cuando un dataset no pueda compartirse, esta sección documenta únicamente su <strong>origen</strong>, <strong>descripción</strong>, <strong>variables</strong>, <strong>esquema</strong> y <strong>procedimiento de acceso</strong>.</p>
 </div>
 </div>
-<section id="convención-de-nombres" class="level2">
-<h2 class="anchored" data-anchor-id="convención-de-nombres">Convención de nombres</h2>
-<p><code>raw/</code> para datos sin procesar, <code>processed/</code> para derivados. Archivos con prefijo cronológico cuando aplique.</p>
-</section>
-<section id="inventario" class="level2">
-<h2 class="anchored" data-anchor-id="inventario">Inventario</h2>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Dataset</th>
-<th>Origen</th>
-<th style="text-align: center;">Acceso</th>
-<th>Esquema</th>
-<th>Estado</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>—</td>
-<td>—</td>
-<td style="text-align: center;">—</td>
-<td>—</td>
-<td>—</td>
-</tr>
-</tbody>
-</table>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -406,9 +380,49 @@ Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Aún no se han agregado datasets públicos ni fichas de datos a esta sección.</p>
+<p><strong>Procedencia y licencia pendientes de confirmar.</strong> Los tres datasets provienen del material de trabajo del curso; su origen y condiciones de uso todavía no están verificados. Se publican como ejemplos didácticos y se actualizarán las fichas cuando se confirme la procedencia.</p>
 </div>
 </div>
+<section id="datasets" class="level2">
+<h2 class="anchored" data-anchor-id="datasets">Datasets</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Dataset</th>
+<th style="text-align: center;">Filas × Cols</th>
+<th>Formato</th>
+<th>Propósito</th>
+<th>Ficha</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Ventas · costos y valor de facturación</td>
+<td style="text-align: center;">10 × 3</td>
+<td>CSV <code>;</code></td>
+<td>Márgenes; regresión simple</td>
+<td><a href="../../../../semesters/semester-01/machine-learning/data/ventas-costos-facturacion/index.html">Ver ficha</a></td>
+</tr>
+<tr class="even">
+<td>Citas mensuales y personal</td>
+<td style="text-align: center;">10 × 3</td>
+<td>CSV <code>,</code></td>
+<td>Serie agregada; regresión/correlación</td>
+<td><a href="../../../../semesters/semester-01/machine-learning/data/citas-mensuales/index.html">Ver ficha</a></td>
+</tr>
+<tr class="odd">
+<td>Clientes · compra (variables codificadas)</td>
+<td style="text-align: center;">12 × 6</td>
+<td>CSV <code>,</code></td>
+<td>Preprocesamiento <em>one-hot</em>; clasificación binaria</td>
+<td><a href="../../../../semesters/semester-01/machine-learning/data/clientes-compra-codificado/index.html">Ver ficha</a></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="convención" class="level2">
+<h2 class="anchored" data-anchor-id="convención">Convención</h2>
+<p>Una carpeta por dataset: <code>nombre-en-kebab-case/</code> con el archivo de datos y un <code>index.qmd</code> que actúa como ficha. Datos sin procesar en <code>raw/</code> y derivados en <code>processed/</code> cuando aplique.</p>
 
 
 </section>

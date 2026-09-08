@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Machine Learning – PhD · Data Science &amp; Artificial Intelligence</title>
+<title>Clientes · compra (variables codificadas) – PhD · Data Science &amp; Artificial Intelligence</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -26,30 +26,65 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../../">
-<link href="../../../assets/favicon.svg" rel="icon" type="image/svg+xml">
-<script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-bb62276ab45c84d9efd712f51ff97b5a.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-5a1953863e1f72ef3b996ef827f01ca7.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-bb62276ab45c84d9efd712f51ff97b5a.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
-<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-a58c86101bc34570451673160a4dbce4.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../../site_libs/bootstrap/bootstrap-dark-65ebfb0a4b0a3cf3d4092898e9ac8cae.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../../site_libs/bootstrap/bootstrap-a58c86101bc34570451673160a4dbce4.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="../../../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../../../">
+<link href="../../../../../assets/favicon.svg" rel="icon" type="image/svg+xml">
+<script src="../../../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../../../site_libs/quarto-html/quarto-syntax-highlighting-bb62276ab45c84d9efd712f51ff97b5a.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-5a1953863e1f72ef3b996ef827f01ca7.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../../../../site_libs/quarto-html/quarto-syntax-highlighting-bb62276ab45c84d9efd712f51ff97b5a.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../../../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../../../site_libs/bootstrap/bootstrap-a58c86101bc34570451673160a4dbce4.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../../../site_libs/bootstrap/bootstrap-dark-65ebfb0a4b0a3cf3d4092898e9ac8cae.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../../../../site_libs/bootstrap/bootstrap-a58c86101bc34570451673160a4dbce4.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -79,12 +114,12 @@ ul.task-list li input[type="checkbox"] {
 <style>html{ scroll-behavior: smooth; }</style>
 
 
-<link rel="stylesheet" href="../../../styles.css">
-<meta property="og:title" content="Machine Learning – PhD · Data Science &amp; Artificial Intelligence">
-<meta property="og:description" content="Semestre 1 · Módulo 1">
+<link rel="stylesheet" href="../../../../../styles.css">
+<meta property="og:title" content="Clientes · compra (variables codificadas) – PhD · Data Science &amp; Artificial Intelligence">
+<meta property="og:description" content="Ficha de dataset · Machine Learning · Semestre 1">
 <meta property="og:site_name" content="PhD · Data Science &amp; Artificial Intelligence">
-<meta name="twitter:title" content="Machine Learning – PhD · Data Science &amp; Artificial Intelligence">
-<meta name="twitter:description" content="Semestre 1 · Módulo 1">
+<meta name="twitter:title" content="Clientes · compra (variables codificadas) – PhD · Data Science &amp; Artificial Intelligence">
+<meta name="twitter:description" content="Ficha de dataset · Machine Learning · Semestre 1">
 <meta name="twitter:card" content="summary">
 </head>
 
@@ -257,11 +292,11 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="../../../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../../../assets/logo.svg" alt="" class="navbar-logo light-content">
-    <img src="../../../assets/logo.svg" alt="" class="navbar-logo dark-content">
+    <a href="../../../../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../../../../assets/logo.svg" alt="" class="navbar-logo light-content">
+    <img src="../../../../../assets/logo.svg" alt="" class="navbar-logo dark-content">
     </a>
-    <a class="navbar-brand" href="../../../index.html">
+    <a class="navbar-brand" href="../../../../../index.html">
     <span class="navbar-title">PhD · Data Science &amp; Artificial Intelligence</span>
     </a>
   </div>
@@ -272,7 +307,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../../index.html"> 
+    <a class="nav-link" href="../../../../../index.html"> 
 <span class="menu-text">Inicio</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -281,21 +316,21 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-semestres">    
         <li>
-    <a class="dropdown-item" href="../../../semesters/index.html">
+    <a class="dropdown-item" href="../../../../../semesters/index.html">
  <span class="dropdown-text">Todos los semestres</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../../semesters/semester-01/index.html">
+    <a class="dropdown-item" href="../../../../../semesters/semester-01/index.html">
  <span class="dropdown-text">Semestre 1</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../../semesters/semester-01/machine-learning/index.html">
+    <a class="dropdown-item" href="../../../../../semesters/semester-01/machine-learning/index.html">
  <span class="dropdown-text">Semestre 1 · Machine Learning</span></a>
   </li>  
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="../../../research/index.html"> 
+    <a class="nav-link" href="../../../../../research/index.html"> 
 <span class="menu-text">Investigación</span></a>
   </li>  
 </ul>
@@ -319,7 +354,7 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
@@ -327,26 +362,27 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#módulo-01-machine-learning" id="toc-módulo-01-machine-learning" class="nav-link active" data-scroll-target="#módulo-01-machine-learning">Módulo 01 · Machine Learning</a></li>
-  <li><a href="#recursos-del-módulo" id="toc-recursos-del-módulo" class="nav-link" data-scroll-target="#recursos-del-módulo">Recursos del módulo</a></li>
-  <li><a href="#progreso-del-módulo-editable" id="toc-progreso-del-módulo-editable" class="nav-link" data-scroll-target="#progreso-del-módulo-editable">Progreso del módulo (editable)</a></li>
-  <li><a href="#abrir-notebooks-en-google-colab" id="toc-abrir-notebooks-en-google-colab" class="nav-link" data-scroll-target="#abrir-notebooks-en-google-colab">Abrir notebooks en Google Colab</a></li>
+  <li><a href="#propósito" id="toc-propósito" class="nav-link active" data-scroll-target="#propósito">Propósito</a></li>
+  <li><a href="#variables" id="toc-variables" class="nav-link" data-scroll-target="#variables">Variables</a></li>
+  <li><a href="#observaciones" id="toc-observaciones" class="nav-link" data-scroll-target="#observaciones">Observaciones</a></li>
+  <li><a href="#riesgos-de-privacidad" id="toc-riesgos-de-privacidad" class="nav-link" data-scroll-target="#riesgos-de-privacidad">Riesgos de privacidad</a></li>
+  <li><a href="#cargar-en-python" id="toc-cargar-en-python" class="nav-link" data-scroll-target="#cargar-en-python">Cargar en Python</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/index.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/data/clientes-compra-codificado/index.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content column-page-left" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
 
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Machine Learning</h1>
-<p class="subtitle lead">Semestre 1 · Módulo 1</p>
+<h1 class="title">Clientes · compra (variables codificadas)</h1>
+<p class="subtitle lead">Ficha de dataset · Machine Learning · Semestre 1</p>
 </div>
 
 
 
-<div class="quarto-title-meta column-page-left">
+<div class="quarto-title-meta">
 
     
   
@@ -358,128 +394,121 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="módulo-01-machine-learning" class="level2 module-banner">
-<h2 class="anchored" data-anchor-id="módulo-01-machine-learning">Módulo 01 · Machine Learning</h2>
-<p>Repositorio académico del primer módulo doctoral. Aquí se centralizan materiales, ejercicios, evaluaciones, notebooks y recursos utilizados durante el curso.</p>
-</section>
-<section id="recursos-del-módulo" class="level2">
-<h2 class="anchored" data-anchor-id="recursos-del-módulo">Recursos del módulo</h2>
-<div class="resource-grid">
-<section id="tareas" class="level3 resource-card">
-<h3 class="anchored" data-anchor-id="tareas">📝 Tareas</h3>
-<p>Entregables, ejercicios y soluciones desarrolladas durante el módulo.</p>
-<p><a href="../../../semesters/semester-01/machine-learning/assignments/index.html">Explorar tareas</a></p>
-</section>
-<section id="quiz" class="level3 resource-card">
-<h3 class="anchored" data-anchor-id="quiz">🧠 Quiz</h3>
-<p>Preguntas de repaso, cuestionarios y evaluaciones.</p>
-<p><a href="../../../semesters/semester-01/machine-learning/quizzes/index.html">Explorar quizzes</a></p>
-</section>
-<section id="data" class="level3 resource-card">
-<h3 class="anchored" data-anchor-id="data">🗃️ Data</h3>
-<p>Datasets del módulo, cada uno con su ficha de variables, dimensiones y esquema.</p>
-<p><a href="../../../semesters/semester-01/machine-learning/data/index.html">Explorar data</a></p>
-</section>
-<section id="talleres" class="level3 resource-card">
-<h3 class="anchored" data-anchor-id="talleres">🧪 Talleres</h3>
-<p>Laboratorios prácticos y actividades guiadas.</p>
-<p><a href="../../../semesters/semester-01/machine-learning/workshops/index.html">Explorar talleres</a></p>
-</section>
-<section id="notebooks-colab" class="level3 resource-card">
-<h3 class="anchored" data-anchor-id="notebooks-colab">🚀 Notebooks · Colab</h3>
-<p>Notebooks reproducibles con enlaces para abrir directamente en Google Colab.</p>
-<p><a href="../../../semesters/semester-01/machine-learning/notebooks/index.html">Explorar notebooks</a></p>
-</section>
-<section id="presentaciones" class="level3 resource-card">
-<h3 class="anchored" data-anchor-id="presentaciones">📊 Presentaciones</h3>
-<p>Inventario de presentaciones. El material de clase de los docentes se conserva en almacenamiento privado.</p>
-<p><a href="../../../semesters/semester-01/machine-learning/presentations/index.html">Explorar presentaciones</a></p>
-</section>
-<section id="notas" class="level3 resource-card">
-<h3 class="anchored" data-anchor-id="notas">📚 Notas</h3>
-<p>Resúmenes, conceptos, fórmulas y material de estudio personal.</p>
-<p><a href="../../../semesters/semester-01/machine-learning/notes/index.html">Explorar notas</a></p>
-</section>
-</div>
-</section>
-<section id="progreso-del-módulo-editable" class="level2">
-<h2 class="anchored" data-anchor-id="progreso-del-módulo-editable">Progreso del módulo (editable)</h2>
-<p>Seguimiento de los materiales realmente incorporados. Se <strong>edita directamente en este archivo</strong> (<code>semesters/semester-01/machine-learning/index.qmd</code>) y queda versionado en cada commit.</p>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 28%">
-<col style="width: 17%">
-<col style="width: 31%">
-<col style="width: 22%">
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><strong>Archivo en el repo</strong></td>
+<td><code>clientes-compra-codificado.csv</code></td>
+</tr>
+<tr class="even">
+<td><strong>Nombre original (local)</strong></td>
+<td><code>DATOS1_CODIFICADO.csv</code></td>
+</tr>
+<tr class="odd">
+<td><strong>Formato</strong></td>
+<td>CSV, separador <code>,</code>, codificación UTF-8</td>
+</tr>
+<tr class="even">
+<td><strong>Dimensiones</strong></td>
+<td>12 filas de datos × 6 columnas (+ fila de cabecera)</td>
+</tr>
+<tr class="odd">
+<td><strong>Procedencia</strong></td>
+<td>Pendiente de confirmar</td>
+</tr>
+<tr class="even">
+<td><strong>Licencia</strong></td>
+<td>Pendiente de confirmar</td>
+</tr>
+</tbody>
+</table>
+<section id="propósito" class="level2">
+<h2 class="anchored" data-anchor-id="propósito">Propósito</h2>
+<p>Ejemplo de <strong>preprocesamiento</strong> ya aplicado: codificación <em>one-hot</em> de la variable categórica “país” e imputación de valores faltantes en el salario. Sirve para practicar clasificación binaria (<code>Compro_SI</code>) y para discutir la trampa de las variables ficticias.</p>
+</section>
+<section id="variables" class="level2">
+<h2 class="anchored" data-anchor-id="variables">Variables</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 26%">
+<col style="width: 15%">
+<col style="width: 34%">
+<col style="width: 23%">
 </colgroup>
 <thead>
 <tr class="header">
-<th>Material</th>
+<th>Variable</th>
 <th>Tipo</th>
-<th>Ubicación</th>
-<th>Estado</th>
+<th>Descripción</th>
+<th>Ejemplo</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Ventas · costos y valor de facturación</td>
-<td>Dataset</td>
-<td><code>data/</code> (repo público)</td>
-<td>Documentado</td>
+<td><code>Edad</code></td>
+<td>Decimal</td>
+<td>Edad del individuo, en años</td>
+<td><code>37.0</code></td>
 </tr>
 <tr class="even">
-<td>Citas mensuales y personal</td>
-<td>Dataset</td>
-<td><code>data/</code> (repo público)</td>
-<td>Documentado</td>
+<td><code>Salario</code></td>
+<td>Decimal</td>
+<td>Salario del individuo</td>
+<td><code>800000.0</code></td>
 </tr>
 <tr class="odd">
-<td>Clientes · compra (variables codificadas)</td>
-<td>Dataset</td>
-<td><code>data/</code> (repo público)</td>
-<td>Documentado</td>
+<td><code>Pais_COLOMBIA</code></td>
+<td>Binaria (0/1)</td>
+<td>Indicador <em>one-hot</em>: país = Colombia</td>
+<td><code>1</code></td>
 </tr>
 <tr class="even">
-<td>Introducción a Machine Learning</td>
-<td>Presentación</td>
-<td>Almacenamiento privado</td>
-<td>Inventariado</td>
+<td><code>Pais_ECUADOR</code></td>
+<td>Binaria (0/1)</td>
+<td>Indicador <em>one-hot</em>: país = Ecuador</td>
+<td><code>0</code></td>
 </tr>
 <tr class="odd">
-<td>Preparación de datos</td>
-<td>Presentación</td>
-<td>Almacenamiento privado</td>
-<td>Inventariado</td>
+<td><code>Pais_PERU</code></td>
+<td>Binaria (0/1)</td>
+<td>Indicador <em>one-hot</em>: país = Perú</td>
+<td><code>0</code></td>
 </tr>
 <tr class="even">
-<td>Separación de datos</td>
-<td>Presentación</td>
-<td>Almacenamiento privado</td>
-<td>Inventariado</td>
+<td><code>Compro_SI</code></td>
+<td>Binaria (0/1)</td>
+<td><strong>Variable objetivo</strong>: 1 = realizó la compra</td>
+<td><code>1</code></td>
 </tr>
 </tbody>
 </table>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Cómo actualizar
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-1" class="callout-1-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>Añade una fila por material incorporado. Estados sugeridos: <code>Inventariado</code>, <code>Documentado</code>, <code>En progreso</code>, <code>Completado</code>. No se anticipan aquí materiales que todavía no existen.</p>
-</div>
-</div>
-</div>
 </section>
-<section id="abrir-notebooks-en-google-colab" class="level2">
-<h2 class="anchored" data-anchor-id="abrir-notebooks-en-google-colab">Abrir notebooks en Google Colab</h2>
-<p>Cada notebook <code>.ipynb</code> de la carpeta <code>notebooks/</code> incluye un badge <strong>Open in Colab</strong> que apunta a:</p>
-<pre class="text"><code>https://colab.research.google.com/github/Laverde97/phd-data-science-ai/blob/main/&lt;ruta-del-notebook&gt;</code></pre>
+<section id="observaciones" class="level2">
+<h2 class="anchored" data-anchor-id="observaciones">Observaciones</h2>
+<ul>
+<li>El <code>Salario</code> incluye un valor ≈ <code>486363.64</code> que parece resultado de <strong>imputación por la media</strong>.</li>
+<li>Las filas con <code>Pais_COLOMBIA = Pais_ECUADOR = Pais_PERU = 0</code> corresponden a un <strong>país base implícito</strong> (codificación con una categoría de referencia; evita la colinealidad perfecta).</li>
+</ul>
+</section>
+<section id="riesgos-de-privacidad" class="level2">
+<h2 class="anchored" data-anchor-id="riesgos-de-privacidad">Riesgos de privacidad</h2>
+<p>Contiene atributos personales (edad, salario, país) pero <strong>sin identificadores directos</strong> (no hay nombre, documento ni contacto) y con solo 12 registros. Riesgo bajo; aun así, no combinar con otras fuentes que permitan reidentificación mientras la procedencia no esté confirmada.</p>
+</section>
+<section id="cargar-en-python" class="level2">
+<h2 class="anchored" data-anchor-id="cargar-en-python">Cargar en Python</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>url <span class="op">=</span> (<span class="st">"https://raw.githubusercontent.com/Laverde97/phd-data-science-ai/main/"</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>       <span class="st">"semesters/semester-01/machine-learning/data/"</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>       <span class="st">"clientes-compra-codificado/clientes-compra-codificado.csv"</span>)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(url)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> df.drop(columns<span class="op">=</span><span class="st">"Compro_SI"</span>)</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> df[<span class="st">"Compro_SI"</span>]</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>df.head()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 
 
 </section>
@@ -913,7 +942,7 @@ ul.task-list li input[type="checkbox"] {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/index.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/data/clientes-compra-codificado/index.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>Built with <a href="https://quarto.org">Quarto</a></p>
 </div>
@@ -923,5 +952,5 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<script src="../../../site_libs/quarto-html/zenscroll-min.js"></script>
+<script src="../../../../../site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>
