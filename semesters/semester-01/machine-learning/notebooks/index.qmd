@@ -4,36 +4,83 @@ subtitle: "Machine Learning · Semestre 1"
 ---
 
 Notebooks reproducibles del módulo, preparados para abrirse directamente en Google Colab.
+Están organizados en tres grupos: **tareas**, **apuntes de clase** y **guías de aprendizaje**.
 
-## Convención de nombres
+## Organización
 
-`01-tema.ipynb`, `02-tema.ipynb`, … — prefijo de dos dígitos en orden cronológico.
+```text
+notebooks/
+  00-template.ipynb        plantilla reproducible
+  assignments/             notebooks de tareas entregadas
+  class-notes/             apuntes tomados en cada sesión
+  learning-guides/         guías temáticas de estudio
+```
+
+Prefijo de dos dígitos en orden cronológico (`01-…`, `02-…`). Los apuntes de clase usan el
+patrón `NN-clase-YYYY-MM-DD.ipynb`.
+
+## Tareas
+
+| Notebook | Descripción | GitHub | Colab |
+|----------|-------------|:------:|:-----:|
+| **Tabla de multiplicar** — [Tarea 01](../assignments/assignment-01-tablas-de-multiplicar.qmd) | Pide `n` y un límite e imprime la tabla con un bucle `while`. | [GitHub](https://github.com/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/notebooks/assignments/01-tablas-de-multiplicar.ipynb) | [Open in Colab](https://colab.research.google.com/github/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/notebooks/assignments/01-tablas-de-multiplicar.ipynb) |
+| **Ingreso con password** — [Tarea 02](../assignments/assignment-02-ingreso-con-password.qmd) | Simula el acceso con un password fijo y tres intentos (`while`, `if/else`, `break`). | [GitHub](https://github.com/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/notebooks/assignments/02-ingreso-con-password.ipynb) | [Open in Colab](https://colab.research.google.com/github/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/notebooks/assignments/02-ingreso-con-password.ipynb) |
+
+: Notebooks de tareas {.striped .hover}
+
+## Apuntes de clase
+
+| # | Fecha | Notebook y tema | GitHub | Colab |
+| -: | ----- | --------------- |:------:|:-----:|
+| 01 | 31/08/2026 · Lunes | **Fundamentos de Python.** Mayor y menor de tres variables, series numéricas, sumatorias y tabla de multiplicar. | [GitHub](https://github.com/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/notebooks/class-notes/01-clase-2026-08-31.ipynb) | [Open in Colab](https://colab.research.google.com/github/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/notebooks/class-notes/01-clase-2026-08-31.ipynb) |
+| 02 | 01/09/2026 · Martes | **NumPy y listas.** Arreglos `np.array` y listas de Python: recorrido con `for`, `append` y eliminación de elementos. | [GitHub](https://github.com/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/notebooks/class-notes/02-clase-2026-09-01.ipynb) | [Open in Colab](https://colab.research.google.com/github/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/notebooks/class-notes/02-clase-2026-09-01.ipynb) |
+| 03 | 02/09/2026 · Miércoles | **Bases de datos y Matplotlib.** Conexión a una instancia MySQL en Google Cloud SQL e introducción a gráficas con Matplotlib. | [GitHub](https://github.com/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/notebooks/class-notes/03-clase-2026-09-02.ipynb) | [Open in Colab](https://colab.research.google.com/github/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/notebooks/class-notes/03-clase-2026-09-02.ipynb) |
+| 04 | 03/09/2026 · Jueves | **Formatos de datos y Pandas.** Formatos XML/JSON, buckets de Google Cloud Storage y primeras operaciones con Pandas. | [GitHub](https://github.com/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/notebooks/class-notes/04-clase-2026-09-03.ipynb) | [Open in Colab](https://colab.research.google.com/github/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/notebooks/class-notes/04-clase-2026-09-03.ipynb) |
+| 05 | 04/09/2026 · Viernes | **Análisis exploratorio.** `describe`, media, correlaciones e `iloc`; gráficas de líneas y un caso de utilidad por cliente. | [GitHub](https://github.com/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/notebooks/class-notes/05-clase-2026-09-04.ipynb) | [Open in Colab](https://colab.research.google.com/github/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/notebooks/class-notes/05-clase-2026-09-04.ipynb) |
+| 06 | 07/09/2026 · Lunes | **Preparación de datos.** Importación del conjunto, imputación de faltantes y codificación con `pd.get_dummies`. | [GitHub](https://github.com/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/notebooks/class-notes/06-clase-2026-09-07.ipynb) | [Open in Colab](https://colab.research.google.com/github/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/notebooks/class-notes/06-clase-2026-09-07.ipynb) |
+
+: Apuntes de clase {.striped .hover tbl-colwidths="[5,18,49,14,14]"}
+
+::: {.callout-note}
+El apunte del 02/09/2026 se publicó con los datos de conexión reemplazados por marcadores
+(`<HOST>`, `<USUARIO>`, `<PASSWORD>`); el del 04/09/2026 no incluye el enlace privado a la
+grabación de la sesión.
+:::
+
+## Guías de aprendizaje
+
+| Notebook | Descripción | GitHub | Colab |
+|----------|-------------|:------:|:-----:|
+| **Preparando los datos** | Flujo de preparación: inspección, separación `X`/`y`, imputación, variables dummy y guardado del conjunto. | [GitHub](https://github.com/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/notebooks/learning-guides/01-preparando-los-datos.ipynb) | [Open in Colab](https://colab.research.google.com/github/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/notebooks/learning-guides/01-preparando-los-datos.ipynb) |
+| **Separando los datos** | `train_test_split`, división estratificada, papel de `random_state` y nociones de under/overfitting. | [GitHub](https://github.com/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/notebooks/learning-guides/02-separando-los-datos.ipynb) | [Open in Colab](https://colab.research.google.com/github/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/notebooks/learning-guides/02-separando-los-datos.ipynb) |
+| **Supervisado vs. No supervisado** | Clasificación y regresión, clustering con K-Means, reducción de dimensionalidad con PCA y detección de anomalías. | [GitHub](https://github.com/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/notebooks/learning-guides/03-supervisado-no-supervisado.ipynb) | [Open in Colab](https://colab.research.google.com/github/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/notebooks/learning-guides/03-supervisado-no-supervisado.ipynb) |
+
+: Guías de aprendizaje {.striped .hover}
+
+## Plantilla
+
+`00-template.ipynb` — plantilla reproducible con badge de Colab y semilla fija.
+[GitHub](https://github.com/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/notebooks/00-template.ipynb) ·
+[Open in Colab](https://colab.research.google.com/github/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/notebooks/00-template.ipynb)
 
 ## Patrón de URL de Colab
 
 ```text
-https://colab.research.google.com/github/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/notebooks/<archivo>.ipynb
+https://colab.research.google.com/github/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/notebooks/<subcarpeta>/<archivo>.ipynb
 ```
 
 ## Badge Open in Colab
 
-Añade esta línea como primera celda **Markdown** de cada notebook, ajustando la ruta:
+Primera línea de la celda **Markdown** inicial de cada notebook, con la ruta ajustada:
 
 ```markdown
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/notebooks/00-template.ipynb)
 ```
 
-## Inventario
-
-| # | Notebook | Abrir en Colab | Estado |
-|:--:|----------|:--------------:|--------|
-| 00 | `00-template.ipynb` — plantilla reproducible | [Colab](https://colab.research.google.com/github/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/notebooks/00-template.ipynb) | Plantilla |
-| 01 | `01-tablas-de-multiplicar.ipynb` — [Tarea 01](../assignments/assignment-01-tablas-de-multiplicar.qmd) | [Colab](https://colab.research.google.com/github/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/notebooks/01-tablas-de-multiplicar.ipynb) | Completado |
-| 02 | `02-ingreso-con-password.ipynb` — [Tarea 02](../assignments/assignment-02-ingreso-con-password.qmd) | [Colab](https://colab.research.google.com/github/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/notebooks/02-ingreso-con-password.ipynb) | Completado |
-
 ::: {.callout-tip}
 ## Cómo empezar un notebook nuevo
 
-Duplica `00-template.ipynb`, renómbralo siguiendo la convención (`01-tema.ipynb`), actualiza
-la ruta del badge de Colab y añade una fila al inventario.
+Duplica `00-template.ipynb` en la subcarpeta que corresponda (`assignments/`, `class-notes/`
+o `learning-guides/`), renómbralo siguiendo la convención, actualiza la ruta del badge de
+Colab y añade una fila a la tabla de esta página.
 :::
