@@ -5,17 +5,40 @@ subtitle: "Machine Learning · Semestre 1"
 
 Entregables, ejercicios y soluciones desarrolladas durante el módulo.
 
-## Convención de nombres
-
-`assignment-01-tema.ext`, `assignment-02-tema.ext`, … — prefijo de dos dígitos en orden cronológico.
-
 ## Inventario
 
-| # | Título | Fecha | Enlace | Estado |
-|:--:|--------|:-----:|--------|--------|
-| — | — | — | — | — |
+|  # | Tarea | Tipo | Recurso | Estado |
+| -: | ----- | ---- | ------- | ------ |
+| 01 | [Tabla de multiplicar](assignment-01-tablas-de-multiplicar.qmd) | Python | Página + Colab | Completada |
+| 02 | [Ingreso con password](assignment-02-ingreso-con-password.qmd) | Python | Página + Colab | Completada |
+| 03 | [Página web](assignment-03-pagina-web.qmd) | Web | Evidencia externa | Completada |
 
-::: {.callout-note}
-Aún no se han agregado tareas a esta sección. Añade una fila por entregable y enlaza el
-archivo correspondiente dentro de esta carpeta.
+## Tareas
+
+::: {.resource-grid}
+::: {.resource-card}
+### 01 · Tabla de multiplicar
+Entrada con `input`, conversión con `int`, variable contador y bucle `while`.
+
+[Ver tarea](assignment-01-tablas-de-multiplicar.qmd)
 :::
+
+::: {.resource-card}
+### 02 · Ingreso con password
+Bucle `while` con contador de intentos, `if`/`else`, `break` y condición final.
+
+[Ver tarea](assignment-02-ingreso-con-password.qmd)
+:::
+
+::: {.resource-card}
+### 03 · Página web
+Portafolio publicado con GitHub Pages, enlazado como evidencia externa.
+
+[Ver tarea](assignment-03-pagina-web.qmd)
+:::
+:::
+
+## Convención de nombres
+
+`assignment-01-tema.ext`, `assignment-02-tema.ext`, … — prefijo de dos dígitos en orden
+cronológico.

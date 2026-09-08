@@ -28,6 +28,8 @@ Añade esta línea como primera celda **Markdown** de cada notebook, ajustando l
 | # | Notebook | Abrir en Colab | Estado |
 |:--:|----------|:--------------:|--------|
 | 00 | `00-template.ipynb` — plantilla reproducible | [Colab](https://colab.research.google.com/github/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/notebooks/00-template.ipynb) | Plantilla |
+| 01 | `01-tablas-de-multiplicar.ipynb` — [Tarea 01](../assignments/assignment-01-tablas-de-multiplicar.qmd) | [Colab](https://colab.research.google.com/github/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/notebooks/01-tablas-de-multiplicar.ipynb) | Completado |
+| 02 | `02-ingreso-con-password.ipynb` — [Tarea 02](../assignments/assignment-02-ingreso-con-password.qmd) | [Colab](https://colab.research.google.com/github/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/notebooks/02-ingreso-con-password.ipynb) | Completado |
 
 ::: {.callout-tip}
 ## Cómo empezar un notebook nuevo

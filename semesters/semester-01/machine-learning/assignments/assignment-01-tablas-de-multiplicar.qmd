@@ -1,0 +1,76 @@
+---
+title: "Tarea 01 · Tabla de multiplicar"
+subtitle: "Machine Learning · Semestre 1"
+---
+
+## Enunciado
+
+> CONSTRUIR UN PROGRAMA PARA QUE ME HAGA LA TABLA DE MULTIPLICAR CON DIGITAR EL N, EL QUE UNO
+> QUIERA HACER, HASTA DONDE QUIERE LLEGAR, POR EJEMPLO, N=5 HASTA 20.
+
+## Objetivo
+
+Escribir un programa que pida al usuario el número de la tabla y el límite, y luego imprima la
+tabla de multiplicar correspondiente. Se practican cuatro elementos básicos de Python:
+
+- lectura de datos con `input`,
+- conversión de texto a número con `int`,
+- una variable **contador**,
+- repetición controlada con un bucle `while`.
+
+## Código original
+
+Solución entregada, sin modificaciones.
+
+```python
+n = int(input('Digite la tabla que quiere realizar: ')) #Esta línea le pide al usuario el número de la tabla de multiplicar.
+
+hasta = int(input('Digite hasta dónde quiere llegar: ')) # Aquí se pregunta hasta qué número queremos multiplicar.
+
+x = 1 # La variable x es nuestro contador, comienza en 1 porque queremos empezar multiplicando: 5 x 1
+
+while x <= hasta: # Mientras x sea menor o igual que hasta, repita las instrucciones que están dentro del while.
+
+    print(n, 'x', x, '=', n * x) # "x": Es el simbolo, x: Hasta donde quiere multiplicar, "=": Es el simbolo, n * x: Es la multiplicación de 5 * 3, que da 15
+
+    x = x + 1 # Esta línea aumenta el contador en 1, si no se pone, x siempre sería 1 y el programa repetiría para siempre: 5 x 1 = 5
+```
+
+## Explicación conceptual
+
+### `input`
+
+`input('texto…')` muestra el mensaje entre comillas y **espera** a que el usuario escriba algo
+y pulse Enter. Lo que devuelve es siempre una **cadena de texto** (`str`), aunque el usuario
+teclee dígitos: `"5"`, no `5`.
+
+### `int`
+
+`int(...)` convierte esa cadena en un número **entero**. Es necesario porque no se puede
+multiplicar ni comparar texto como si fuera un número: `int("5")` da `5`. Por eso el programa
+envuelve cada `input` dentro de `int(...)` y guarda el resultado en `n` y en `hasta`.
+
+### El contador `x`
+
+`x = 1` crea una variable que sirve de **contador**: lleva la cuenta de por qué número vamos
+multiplicando. Empieza en `1` para que la primera línea impresa sea `n x 1`. Dentro del bucle,
+`x = x + 1` incrementa el contador en cada vuelta. Si esa línea faltara, `x` valdría siempre
+`1`, la condición del `while` nunca dejaría de cumplirse y el programa se repetiría sin fin.
+
+### El bucle `while`
+
+`while x <= hasta:` repite el bloque indentado **mientras** la condición sea verdadera. En cada
+vuelta:
+
+1. imprime `n 'x' x '=' n * x`, es decir, una fila de la tabla;
+2. suma `1` a `x`.
+
+Cuando `x` supera a `hasta`, la condición se vuelve falsa y el bucle termina. Con `n = 5` y
+`hasta = 20` se imprimen 20 filas, desde `5 x 1 = 5` hasta `5 x 20 = 100`.
+
+## Recursos
+
+[Abrir en Google Colab](https://colab.research.google.com/github/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/notebooks/01-tablas-de-multiplicar.ipynb){.btn .btn-primary}
+[Ver el notebook en GitHub](https://github.com/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/notebooks/01-tablas-de-multiplicar.ipynb){.btn .btn-outline-secondary}
+
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/notebooks/01-tablas-de-multiplicar.ipynb)

@@ -1,0 +1,24 @@
+---
+title: "Tarea 03 · Página web"
+subtitle: "Machine Learning · Semestre 1"
+---
+
+## Enunciado
+
+Elaborar una página web personal (portafolio / hoja de vida) y publicarla en línea como
+evidencia de la actividad.
+
+## Objetivo
+
+Practicar la estructura básica de una página web y su publicación mediante GitHub Pages,
+dejando una URL pública accesible.
+
+## Evidencia
+
+La página se publicó en un proyecto propio e independiente y se enlaza aquí como **evidencia
+externa**. El proyecto no forma parte de este repositorio.
+
+- **URL:** <https://laverde97.github.io/latent-frontiers/cv.html>
+- **Proyecto:** `latent-frontiers` (repositorio separado)
+
+[Ver página web](https://laverde97.github.io/latent-frontiers/cv.html){.btn .btn-primary target="_blank" rel="noopener"}
