@@ -329,6 +329,7 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#convención-de-nombres" id="toc-convención-de-nombres" class="nav-link active" data-scroll-target="#convención-de-nombres">Convención de nombres</a></li>
   <li><a href="#inventario" id="toc-inventario" class="nav-link" data-scroll-target="#inventario">Inventario</a></li>
+  <li><a href="#qué-se-practica" id="toc-qué-se-practica" class="nav-link" data-scroll-target="#qué-se-practica">¿Qué se practica?</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/workshops/index.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></nav>
     </div>
@@ -356,33 +357,57 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Laboratorios, talleres guiados y ejercicios prácticos del módulo.</p>
+<p>Ejercicios prácticos desarrollados a partir de las actividades del curso. Cada taller conserva el flujo de trabajo original y añade explicaciones para facilitar su estudio y su reproducción en Google Colab.</p>
 <section id="convención-de-nombres" class="level2">
 <h2 class="anchored" data-anchor-id="convención-de-nombres">Convención de nombres</h2>
 <p><code>workshop-01-tema.ext</code>, <code>workshop-02-tema.ext</code>, … — prefijo de dos dígitos en orden cronológico. Si el taller es un notebook, incluye su badge <strong>Open in Colab</strong>.</p>
 </section>
 <section id="inventario" class="level2">
 <h2 class="anchored" data-anchor-id="inventario">Inventario</h2>
-<table class="caption-top table">
+<table class="table-striped table-hover caption-top table">
+<caption>Talleres del módulo</caption>
 <thead>
 <tr class="header">
 <th style="text-align: center;">#</th>
 <th>Título</th>
 <th style="text-align: center;">Fecha</th>
-<th>Enlace</th>
-<th>Estado</th>
+<th style="text-align: center;">GitHub</th>
+<th style="text-align: center;">Colab</th>
+<th style="text-align: center;">Estado</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: center;">—</td>
-<td>—</td>
-<td style="text-align: center;">—</td>
-<td>—</td>
-<td>—</td>
+<td style="text-align: center;">01</td>
+<td>Preparación de datos ICFES — CSV</td>
+<td style="text-align: center;">08/09/2026</td>
+<td style="text-align: center;"><a href="https://github.com/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/workshops/workshop-01-icfes-csv.ipynb">GitHub</a></td>
+<td style="text-align: center;"><a href="https://colab.research.google.com/github/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/workshops/workshop-01-icfes-csv.ipynb">Open in Colab</a></td>
+<td style="text-align: center;">Completado</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">02</td>
+<td>Preparación de datos ICFES — JSON</td>
+<td style="text-align: center;">08/09/2026</td>
+<td style="text-align: center;"><a href="https://github.com/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/workshops/workshop-02-icfes-json.ipynb">GitHub</a></td>
+<td style="text-align: center;"><a href="https://colab.research.google.com/github/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/workshops/workshop-02-icfes-json.ipynb">Open in Colab</a></td>
+<td style="text-align: center;">Completado</td>
 </tr>
 </tbody>
 </table>
+</section>
+<section id="qué-se-practica" class="level2">
+<h2 class="anchored" data-anchor-id="qué-se-practica">¿Qué se practica?</h2>
+<ul>
+<li>lectura de datos CSV y JSON;</li>
+<li>separación <code>X</code>/<code>y</code>;</li>
+<li>identificación de variables numéricas y categóricas;</li>
+<li>imputación de valores faltantes;</li>
+<li>codificación de variables categóricas;</li>
+<li>reorganización del <code>DataFrame</code>;</li>
+<li>preparación de <code>X</code> e <code>y</code>;</li>
+<li><code>train_test_split</code>.</li>
+</ul>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -393,7 +418,20 @@ Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Aún no se han agregado talleres a esta sección.</p>
+<p>CSV y JSON representan dos formatos de almacenamiento diferentes, pero el objetivo de Machine Learning es construir el mismo flujo de preparación independientemente del formato de entrada.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Los talleres ICFES se publican <strong>sin salidas de celda</strong> porque el conjunto contiene la variable <code>documento</code>. El código del ejercicio se conserva sin cambios.</p>
 </div>
 </div>
 
