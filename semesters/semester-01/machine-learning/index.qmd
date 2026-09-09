@@ -38,14 +38,15 @@ Datasets del módulo, cada uno con su ficha de variables, dimensiones y esquema.
 
 ::: {.resource-card}
 ### 🧪 Talleres
-Laboratorios prácticos y actividades guiadas.
+Dos talleres guiados de preparación de datos ICFES (variantes CSV y JSON), reproducibles en
+Google Colab.
 
 [Explorar talleres](workshops/index.qmd)
 :::
 
 ::: {.resource-card}
 ### 🚀 Notebooks · Colab
-Plantilla reproducible, 4 notebooks de tareas, 8 apuntes de clase y 3 guías de aprendizaje,
+Plantilla reproducible, 4 notebooks de tareas, 8 apuntes de clase y 4 guías de aprendizaje,
 todos con badge para abrir en Google Colab.
 
 [Explorar notebooks](notebooks/index.qmd)
@@ -73,8 +74,8 @@ Seguimiento de los materiales realmente incorporados. Se **edita directamente en
 (`semesters/semester-01/machine-learning/index.qmd`) y queda versionado en cada commit.
 
 Estado actual: **4 tareas completadas**, **4 notebooks de tareas**, **8 apuntes de clase**,
-**3 guías de aprendizaje**, **3 datasets documentados** y las **presentaciones de clase en
-almacenamiento privado**.
+**4 guías de aprendizaje**, **2 talleres**, **3 datasets documentados** y las **presentaciones
+de clase en almacenamiento privado**.
 
 | Material | Tipo | Ubicación | Estado |
 |----------|------|-----------|--------|
@@ -93,6 +94,9 @@ almacenamiento privado**.
 | Guía · Preparando los datos | Guía de aprendizaje | `notebooks/learning-guides/` | Incorporada |
 | Guía · Separando los datos | Guía de aprendizaje | `notebooks/learning-guides/` | Incorporada |
 | Guía · Supervisado vs. No supervisado | Guía de aprendizaje | `notebooks/learning-guides/` | Incorporada |
+| Guía · Modelos de regresión | Guía de aprendizaje | `notebooks/learning-guides/` | Incorporada |
+| Taller 01 · Preparación de datos ICFES — CSV | Taller | `workshops/` | Completado |
+| Taller 02 · Preparación de datos ICFES — JSON | Taller | `workshops/` | Completado |
 | Ventas · costos y valor de facturación | Dataset | `data/` (repo público) | Documentado |
 | Citas mensuales y personal | Dataset | `data/` (repo público) | Documentado |
 | Clientes · compra (variables codificadas) | Dataset | `data/` (repo público) | Documentado |
