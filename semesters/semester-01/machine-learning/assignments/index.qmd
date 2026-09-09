@@ -12,6 +12,7 @@ Entregables, ejercicios y soluciones desarrolladas durante el módulo.
 | 01 | [Tabla de multiplicar](assignment-01-tablas-de-multiplicar.qmd) | Python | Página + Colab | Completada |
 | 02 | [Ingreso con password](assignment-02-ingreso-con-password.qmd) | Python | Página + Colab | Completada |
 | 03 | [Página web](assignment-03-pagina-web.qmd) | Web | Evidencia externa | Completada |
+| 04 | [Preparación de datos ICFES](assignment-04-preparacion-datos-icfes.qmd) | Python | Página + Colab (CSV/JSON) | Completada |
 
 ## Tareas
 
@@ -35,6 +36,14 @@ Bucle `while` con contador de intentos, `if`/`else`, `break` y condición final.
 Portafolio publicado con GitHub Pages, enlazado como evidencia externa.
 
 [Ver tarea](assignment-03-pagina-web.qmd)
+:::
+
+::: {.resource-card}
+### 04 · Preparación de datos ICFES
+Limpieza, imputación por la media, variables dummy de `departamento`, reorganización del
+`DataFrame` y `train_test_split`. Dos variantes: CSV y JSON.
+
+[Ver tarea](assignment-04-preparacion-datos-icfes.qmd)
 :::
 :::
 
