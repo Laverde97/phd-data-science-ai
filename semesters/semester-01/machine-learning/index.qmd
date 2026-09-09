@@ -16,7 +16,8 @@ evaluaciones, notebooks y recursos utilizados durante el curso.
 ::: {.resource-grid}
 ::: {.resource-card}
 ### 📝 Tareas
-Tres tareas completadas: dos de Python (con notebook) y una página web como evidencia externa.
+Cuatro tareas completadas: tres de Python (con notebook) y una página web como evidencia
+externa.
 
 [Explorar tareas](assignments/index.qmd)
 :::
@@ -44,7 +45,7 @@ Laboratorios prácticos y actividades guiadas.
 
 ::: {.resource-card}
 ### 🚀 Notebooks · Colab
-Plantilla reproducible, 2 notebooks de tareas, 6 apuntes de clase y 3 guías de aprendizaje,
+Plantilla reproducible, 4 notebooks de tareas, 8 apuntes de clase y 3 guías de aprendizaje,
 todos con badge para abrir en Google Colab.
 
 [Explorar notebooks](notebooks/index.qmd)
@@ -71,7 +72,7 @@ Resúmenes, conceptos, fórmulas y material de estudio personal.
 Seguimiento de los materiales realmente incorporados. Se **edita directamente en este archivo**
 (`semesters/semester-01/machine-learning/index.qmd`) y queda versionado en cada commit.
 
-Estado actual: **3 tareas completadas**, **2 notebooks de tareas**, **6 apuntes de clase**,
+Estado actual: **4 tareas completadas**, **4 notebooks de tareas**, **8 apuntes de clase**,
 **3 guías de aprendizaje**, **3 datasets documentados** y las **presentaciones de clase en
 almacenamiento privado**.
 
@@ -80,12 +81,15 @@ almacenamiento privado**.
 | Tarea 01 · Tabla de multiplicar | Tarea (Python) | `assignments/` + `notebooks/assignments/01-…` | Completada |
 | Tarea 02 · Ingreso con password | Tarea (Python) | `assignments/` + `notebooks/assignments/02-…` | Completada |
 | Tarea 03 · Página web | Tarea (Web) | `assignments/` (evidencia externa) | Completada |
+| Tarea 04 · Preparación de datos ICFES | Tarea (Python) | `assignments/` + `notebooks/assignments/04-…` (CSV/JSON) | Completada |
 | Apunte de clase · 31/08/2026 | Apunte | `notebooks/class-notes/` | Incorporado |
 | Apunte de clase · 01/09/2026 | Apunte | `notebooks/class-notes/` | Incorporado |
 | Apunte de clase · 02/09/2026 | Apunte | `notebooks/class-notes/` | Incorporado |
 | Apunte de clase · 03/09/2026 | Apunte | `notebooks/class-notes/` | Incorporado |
 | Apunte de clase · 04/09/2026 | Apunte | `notebooks/class-notes/` | Incorporado |
 | Apunte de clase · 07/09/2026 | Apunte | `notebooks/class-notes/` | Incorporado |
+| Apunte de clase · 08/09/2026 · Preparación de datos (cont.) | Apunte | `notebooks/class-notes/` | Incorporado |
+| Apunte de clase · 08/09/2026 · Regresión lineal simple | Apunte | `notebooks/class-notes/` | Incorporado |
 | Guía · Preparando los datos | Guía de aprendizaje | `notebooks/learning-guides/` | Incorporada |
 | Guía · Separando los datos | Guía de aprendizaje | `notebooks/learning-guides/` | Incorporada |
 | Guía · Supervisado vs. No supervisado | Guía de aprendizaje | `notebooks/learning-guides/` | Incorporada |

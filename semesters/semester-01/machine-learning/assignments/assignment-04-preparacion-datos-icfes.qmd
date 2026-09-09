@@ -1,0 +1,107 @@
+---
+title: "Tarea 04 · Preparación de datos ICFES"
+subtitle: "Machine Learning · Semestre 1"
+---
+
+## Objetivo
+
+Preparar el conjunto de datos ICFES para su uso posterior en Machine Learning: dejar un
+`DataFrame` limpio, con las variables categóricas codificadas y las columnas ordenadas, listo
+para separar en predictores y variable objetivo y para dividir en entrenamiento y prueba.
+
+El conjunto se toma del servidor del curso, en dos formatos equivalentes:
+
+- CSV — `https://cdtiueb.com.co/doctorado/datos_icfes.csv`
+- JSON — `https://cdtiueb.com.co/doctorado/datos_icfes.json`
+
+Ambas variantes resuelven **la misma tarea**; solo cambia la forma de cargar los datos.
+
+## Flujo realizado
+
+- Carga del conjunto (`pd.read_csv` en la variante CSV; `pd.read_json` en la variante JSON).
+- Identificación de `X` (predictores) e `y` (variable objetivo, `aprobado`).
+- Análisis de datos faltantes (`isnull().sum()`; en JSON se convierten las cadenas vacías a
+  `NaN` antes de contar).
+- Imputación de los puntajes con `SimpleImputer(strategy="mean")`.
+- Creación del `DataFrame` limpio con nombres de columna explícitos.
+- Codificación de `departamento` con variables dummy mediante `pd.get_dummies(..., drop_first=True)`
+  y conversión de las columnas booleanas a `0`/`1`.
+- Reorganización de columnas: `documento` primero, luego las dummy de `departamento`, después
+  los puntajes y `aprobado_SI` como última columna.
+- Separación entre predictores y variable objetivo a partir del `DataFrame` codificado.
+- División en conjuntos de entrenamiento y prueba con
+  `train_test_split(test_size=0.2, random_state=0)`.
+
+No se reportan resultados ni métricas: la tarea cubre únicamente la preparación de los datos.
+
+## Error de programación corregido
+
+Al construir el nuevo orden de columnas, la versión inicial tomaba las columnas así:
+
+```python
+columna_documento = df_codificado['documento']
+columna_aprobado  = df_codificado['aprobado_SI']
+```
+
+`df_codificado['documento']` **no** devuelve el nombre de la columna: devuelve un
+`pandas.Series` con **todos los valores** de esa columna. Lo mismo ocurre con
+`df_codificado['aprobado_SI']`. Por eso esas expresiones no podían combinarse con
+`columnas_departamentos` y `columnas_numericas` (que sí son listas de **nombres**) para
+formar `nuevo_orden`: sumar una lista de nombres con un `Series` de valores no produce la
+lista de nombres de columna que se necesita.
+
+`nuevo_orden` tiene que ser una **lista de nombres de columna**, porque acto seguido se usa
+para seleccionar y reordenar el `DataFrame`:
+
+```python
+df_codificado = df_codificado[nuevo_orden]
+```
+
+La corrección es escribir los nombres como listas de un elemento:
+
+```python
+columna_documento = ['documento']
+columna_aprobado  = ['aprobado_SI']
+
+nuevo_orden = (
+    columna_documento
+    + columnas_departamentos
+    + columnas_numericas
+    + columna_aprobado
+)
+
+df_codificado = df_codificado[nuevo_orden]
+```
+
+Así todos los sumandos son listas de nombres, `nuevo_orden` queda como una lista de cadenas y
+`df_codificado[nuevo_orden]` selecciona las columnas en el orden deseado.
+
+## Sobre la columna `documento`
+
+La columna `documento` se conserva porque se documenta el ejercicio **tal como se hizo en
+clase**. A modo educativo: en un proyecto predictivo real un identificador como este
+normalmente no se usaría como característica del modelo, ya que no aporta información
+generalizable sobre el fenómeno que se quiere predecir.
+
+Los notebooks de esta tarea se publican **sin salidas de celda** porque esa columna contiene
+identificadores; el código y las explicaciones se mantienen completos.
+
+## Sobre la variable objetivo
+
+`aprobado_SI` es una salida **binaria** (`SI` / `NO` codificado como `1` / `0`). Si más
+adelante se modelara ese objetivo, sería conceptualmente un problema de **clasificación**, no
+de regresión. La regresión lineal simple vista en la clase corresponde al ejercicio
+`experiencia → salario`, que es un objetivo continuo distinto de esta tarea.
+
+## Variantes y recursos
+
+Las dos variantes son el mismo ejercicio; la JSON solo cambia la carga por
+`dataset_ICFES = pd.read_json('https://cdtiueb.com.co/doctorado/datos_icfes.json')`.
+
+[Notebook CSV — GitHub](https://github.com/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/notebooks/assignments/04-icfes-preparacion-datos-csv.ipynb){.btn .btn-outline-secondary}
+[Open CSV in Colab](https://colab.research.google.com/github/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/notebooks/assignments/04-icfes-preparacion-datos-csv.ipynb){.btn .btn-primary}
+[Notebook JSON — GitHub](https://github.com/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/notebooks/assignments/04-icfes-preparacion-datos-json.ipynb){.btn .btn-outline-secondary}
+[Open JSON in Colab](https://colab.research.google.com/github/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/notebooks/assignments/04-icfes-preparacion-datos-json.ipynb){.btn .btn-primary}
+
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/notebooks/assignments/04-icfes-preparacion-datos-csv.ipynb)
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/notebooks/assignments/04-icfes-preparacion-datos-json.ipynb)
