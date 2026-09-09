@@ -3,7 +3,9 @@ title: "Talleres"
 subtitle: "Machine Learning · Semestre 1"
 ---
 
-Laboratorios, talleres guiados y ejercicios prácticos del módulo.
+Ejercicios prácticos desarrollados a partir de las actividades del curso. Cada taller conserva
+el flujo de trabajo original y añade explicaciones para facilitar su estudio y su reproducción
+en Google Colab.
 
 ## Convención de nombres
 
@@ -12,10 +14,30 @@ Si el taller es un notebook, incluye su badge **Open in Colab**.
 
 ## Inventario
 
-| # | Título | Fecha | Enlace | Estado |
-|:--:|--------|:-----:|--------|--------|
-| — | — | — | — | — |
+| # | Título | Fecha | GitHub | Colab | Estado |
+|:--:|--------|:-----:|:------:|:-----:|:------:|
+| 01 | Preparación de datos ICFES — CSV | 08/09/2026 | [GitHub](https://github.com/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/workshops/workshop-01-icfes-csv.ipynb) | [Open in Colab](https://colab.research.google.com/github/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/workshops/workshop-01-icfes-csv.ipynb) | Completado |
+| 02 | Preparación de datos ICFES — JSON | 08/09/2026 | [GitHub](https://github.com/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/workshops/workshop-02-icfes-json.ipynb) | [Open in Colab](https://colab.research.google.com/github/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/workshops/workshop-02-icfes-json.ipynb) | Completado |
+
+: Talleres del módulo {.striped .hover}
+
+## ¿Qué se practica?
+
+- lectura de datos CSV y JSON;
+- separación `X`/`y`;
+- identificación de variables numéricas y categóricas;
+- imputación de valores faltantes;
+- codificación de variables categóricas;
+- reorganización del `DataFrame`;
+- preparación de `X` e `y`;
+- `train_test_split`.
 
 ::: {.callout-note}
-Aún no se han agregado talleres a esta sección.
+CSV y JSON representan dos formatos de almacenamiento diferentes, pero el objetivo de Machine
+Learning es construir el mismo flujo de preparación independientemente del formato de entrada.
+:::
+
+::: {.callout-note}
+Los talleres ICFES se publican **sin salidas de celda** porque el conjunto contiene la
+variable `documento`. El código del ejercicio se conserva sin cambios.
 :::
