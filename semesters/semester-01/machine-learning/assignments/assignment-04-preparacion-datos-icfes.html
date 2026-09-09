@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Tareas – PhD · Data Science &amp; Artificial Intelligence</title>
+<title>Tarea 04 · Preparación de datos ICFES – PhD · Data Science &amp; Artificial Intelligence</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -25,6 +25,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -80,10 +115,10 @@ ul.task-list li input[type="checkbox"] {
 
 
 <link rel="stylesheet" href="../../../../styles.css">
-<meta property="og:title" content="Tareas – PhD · Data Science &amp; Artificial Intelligence">
+<meta property="og:title" content="Tarea 04 · Preparación de datos ICFES – PhD · Data Science &amp; Artificial Intelligence">
 <meta property="og:description" content="Machine Learning · Semestre 1">
 <meta property="og:site_name" content="PhD · Data Science &amp; Artificial Intelligence">
-<meta name="twitter:title" content="Tareas – PhD · Data Science &amp; Artificial Intelligence">
+<meta name="twitter:title" content="Tarea 04 · Preparación de datos ICFES – PhD · Data Science &amp; Artificial Intelligence">
 <meta name="twitter:description" content="Machine Learning · Semestre 1">
 <meta name="twitter:card" content="summary">
 </head>
@@ -327,11 +362,14 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#inventario" id="toc-inventario" class="nav-link active" data-scroll-target="#inventario">Inventario</a></li>
-  <li><a href="#tareas" id="toc-tareas" class="nav-link" data-scroll-target="#tareas">Tareas</a></li>
-  <li><a href="#convención-de-nombres" id="toc-convención-de-nombres" class="nav-link" data-scroll-target="#convención-de-nombres">Convención de nombres</a></li>
+  <li><a href="#objetivo" id="toc-objetivo" class="nav-link active" data-scroll-target="#objetivo">Objetivo</a></li>
+  <li><a href="#flujo-realizado" id="toc-flujo-realizado" class="nav-link" data-scroll-target="#flujo-realizado">Flujo realizado</a></li>
+  <li><a href="#error-de-programación-corregido" id="toc-error-de-programación-corregido" class="nav-link" data-scroll-target="#error-de-programación-corregido">Error de programación corregido</a></li>
+  <li><a href="#sobre-la-columna-documento" id="toc-sobre-la-columna-documento" class="nav-link" data-scroll-target="#sobre-la-columna-documento">Sobre la columna <code>documento</code></a></li>
+  <li><a href="#sobre-la-variable-objetivo" id="toc-sobre-la-variable-objetivo" class="nav-link" data-scroll-target="#sobre-la-variable-objetivo">Sobre la variable objetivo</a></li>
+  <li><a href="#variantes-y-recursos" id="toc-variantes-y-recursos" class="nav-link" data-scroll-target="#variantes-y-recursos">Variantes y recursos</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/assignments/index.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/assignments/assignment-04-preparacion-datos-icfes.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -339,7 +377,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Tareas</h1>
+<h1 class="title">Tarea 04 · Preparación de datos ICFES</h1>
 <p class="subtitle lead">Machine Learning · Semestre 1</p>
 </div>
 
@@ -357,79 +395,67 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Entregables, ejercicios y soluciones desarrolladas durante el módulo.</p>
-<section id="inventario" class="level2">
-<h2 class="anchored" data-anchor-id="inventario">Inventario</h2>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th style="text-align: right;">#</th>
-<th>Tarea</th>
-<th>Tipo</th>
-<th>Recurso</th>
-<th>Estado</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: right;">01</td>
-<td><a href="../../../../semesters/semester-01/machine-learning/assignments/assignment-01-tablas-de-multiplicar.html">Tabla de multiplicar</a></td>
-<td>Python</td>
-<td>Página + Colab</td>
-<td>Completada</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">02</td>
-<td><a href="../../../../semesters/semester-01/machine-learning/assignments/assignment-02-ingreso-con-password.html">Ingreso con password</a></td>
-<td>Python</td>
-<td>Página + Colab</td>
-<td>Completada</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">03</td>
-<td><a href="../../../../semesters/semester-01/machine-learning/assignments/assignment-03-pagina-web.html">Página web</a></td>
-<td>Web</td>
-<td>Evidencia externa</td>
-<td>Completada</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">04</td>
-<td><a href="../../../../semesters/semester-01/machine-learning/assignments/assignment-04-preparacion-datos-icfes.html">Preparación de datos ICFES</a></td>
-<td>Python</td>
-<td>Página + Colab (CSV/JSON)</td>
-<td>Completada</td>
-</tr>
-</tbody>
-</table>
+<section id="objetivo" class="level2">
+<h2 class="anchored" data-anchor-id="objetivo">Objetivo</h2>
+<p>Preparar el conjunto de datos ICFES para su uso posterior en Machine Learning: dejar un <code>DataFrame</code> limpio, con las variables categóricas codificadas y las columnas ordenadas, listo para separar en predictores y variable objetivo y para dividir en entrenamiento y prueba.</p>
+<p>El conjunto se toma del servidor del curso, en dos formatos equivalentes:</p>
+<ul>
+<li>CSV — <code>https://cdtiueb.com.co/doctorado/datos_icfes.csv</code></li>
+<li>JSON — <code>https://cdtiueb.com.co/doctorado/datos_icfes.json</code></li>
+</ul>
+<p>Ambas variantes resuelven <strong>la misma tarea</strong>; solo cambia la forma de cargar los datos.</p>
 </section>
-<section id="tareas" class="level2">
-<h2 class="anchored" data-anchor-id="tareas">Tareas</h2>
-<div class="resource-grid">
-<section id="tabla-de-multiplicar" class="level3 resource-card">
-<h3 class="anchored" data-anchor-id="tabla-de-multiplicar">01 · Tabla de multiplicar</h3>
-<p>Entrada con <code>input</code>, conversión con <code>int</code>, variable contador y bucle <code>while</code>.</p>
-<p><a href="../../../../semesters/semester-01/machine-learning/assignments/assignment-01-tablas-de-multiplicar.html">Ver tarea</a></p>
+<section id="flujo-realizado" class="level2">
+<h2 class="anchored" data-anchor-id="flujo-realizado">Flujo realizado</h2>
+<ul>
+<li>Carga del conjunto (<code>pd.read_csv</code> en la variante CSV; <code>pd.read_json</code> en la variante JSON).</li>
+<li>Identificación de <code>X</code> (predictores) e <code>y</code> (variable objetivo, <code>aprobado</code>).</li>
+<li>Análisis de datos faltantes (<code>isnull().sum()</code>; en JSON se convierten las cadenas vacías a <code>NaN</code> antes de contar).</li>
+<li>Imputación de los puntajes con <code>SimpleImputer(strategy="mean")</code>.</li>
+<li>Creación del <code>DataFrame</code> limpio con nombres de columna explícitos.</li>
+<li>Codificación de <code>departamento</code> con variables dummy mediante <code>pd.get_dummies(..., drop_first=True)</code> y conversión de las columnas booleanas a <code>0</code>/<code>1</code>.</li>
+<li>Reorganización de columnas: <code>documento</code> primero, luego las dummy de <code>departamento</code>, después los puntajes y <code>aprobado_SI</code> como última columna.</li>
+<li>Separación entre predictores y variable objetivo a partir del <code>DataFrame</code> codificado.</li>
+<li>División en conjuntos de entrenamiento y prueba con <code>train_test_split(test_size=0.2, random_state=0)</code>.</li>
+</ul>
+<p>No se reportan resultados ni métricas: la tarea cubre únicamente la preparación de los datos.</p>
 </section>
-<section id="ingreso-con-password" class="level3 resource-card">
-<h3 class="anchored" data-anchor-id="ingreso-con-password">02 · Ingreso con password</h3>
-<p>Bucle <code>while</code> con contador de intentos, <code>if</code>/<code>else</code>, <code>break</code> y condición final.</p>
-<p><a href="../../../../semesters/semester-01/machine-learning/assignments/assignment-02-ingreso-con-password.html">Ver tarea</a></p>
+<section id="error-de-programación-corregido" class="level2">
+<h2 class="anchored" data-anchor-id="error-de-programación-corregido">Error de programación corregido</h2>
+<p>Al construir el nuevo orden de columnas, la versión inicial tomaba las columnas así:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>columna_documento <span class="op">=</span> df_codificado[<span class="st">'documento'</span>]</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>columna_aprobado  <span class="op">=</span> df_codificado[<span class="st">'aprobado_SI'</span>]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><code>df_codificado['documento']</code> <strong>no</strong> devuelve el nombre de la columna: devuelve un <code>pandas.Series</code> con <strong>todos los valores</strong> de esa columna. Lo mismo ocurre con <code>df_codificado['aprobado_SI']</code>. Por eso esas expresiones no podían combinarse con <code>columnas_departamentos</code> y <code>columnas_numericas</code> (que sí son listas de <strong>nombres</strong>) para formar <code>nuevo_orden</code>: sumar una lista de nombres con un <code>Series</code> de valores no produce la lista de nombres de columna que se necesita.</p>
+<p><code>nuevo_orden</code> tiene que ser una <strong>lista de nombres de columna</strong>, porque acto seguido se usa para seleccionar y reordenar el <code>DataFrame</code>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>df_codificado <span class="op">=</span> df_codificado[nuevo_orden]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>La corrección es escribir los nombres como listas de un elemento:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>columna_documento <span class="op">=</span> [<span class="st">'documento'</span>]</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>columna_aprobado  <span class="op">=</span> [<span class="st">'aprobado_SI'</span>]</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>nuevo_orden <span class="op">=</span> (</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    columna_documento</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    <span class="op">+</span> columnas_departamentos</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    <span class="op">+</span> columnas_numericas</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>    <span class="op">+</span> columna_aprobado</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>df_codificado <span class="op">=</span> df_codificado[nuevo_orden]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Así todos los sumandos son listas de nombres, <code>nuevo_orden</code> queda como una lista de cadenas y <code>df_codificado[nuevo_orden]</code> selecciona las columnas en el orden deseado.</p>
 </section>
-<section id="página-web" class="level3 resource-card">
-<h3 class="anchored" data-anchor-id="página-web">03 · Página web</h3>
-<p>Portafolio publicado con GitHub Pages, enlazado como evidencia externa.</p>
-<p><a href="../../../../semesters/semester-01/machine-learning/assignments/assignment-03-pagina-web.html">Ver tarea</a></p>
+<section id="sobre-la-columna-documento" class="level2">
+<h2 class="anchored" data-anchor-id="sobre-la-columna-documento">Sobre la columna <code>documento</code></h2>
+<p>La columna <code>documento</code> se conserva porque se documenta el ejercicio <strong>tal como se hizo en clase</strong>. A modo educativo: en un proyecto predictivo real un identificador como este normalmente no se usaría como característica del modelo, ya que no aporta información generalizable sobre el fenómeno que se quiere predecir.</p>
+<p>Los notebooks de esta tarea se publican <strong>sin salidas de celda</strong> porque esa columna contiene identificadores; el código y las explicaciones se mantienen completos.</p>
 </section>
-<section id="preparación-de-datos-icfes" class="level3 resource-card">
-<h3 class="anchored" data-anchor-id="preparación-de-datos-icfes">04 · Preparación de datos ICFES</h3>
-<p>Limpieza, imputación por la media, variables dummy de <code>departamento</code>, reorganización del <code>DataFrame</code> y <code>train_test_split</code>. Dos variantes: CSV y JSON.</p>
-<p><a href="../../../../semesters/semester-01/machine-learning/assignments/assignment-04-preparacion-datos-icfes.html">Ver tarea</a></p>
+<section id="sobre-la-variable-objetivo" class="level2">
+<h2 class="anchored" data-anchor-id="sobre-la-variable-objetivo">Sobre la variable objetivo</h2>
+<p><code>aprobado_SI</code> es una salida <strong>binaria</strong> (<code>SI</code> / <code>NO</code> codificado como <code>1</code> / <code>0</code>). Si más adelante se modelara ese objetivo, sería conceptualmente un problema de <strong>clasificación</strong>, no de regresión. La regresión lineal simple vista en la clase corresponde al ejercicio <code>experiencia → salario</code>, que es un objetivo continuo distinto de esta tarea.</p>
 </section>
-</div>
-</section>
-<section id="convención-de-nombres" class="level2">
-<h2 class="anchored" data-anchor-id="convención-de-nombres">Convención de nombres</h2>
-<p><code>assignment-01-tema.ext</code>, <code>assignment-02-tema.ext</code>, … — prefijo de dos dígitos en orden cronológico.</p>
+<section id="variantes-y-recursos" class="level2">
+<h2 class="anchored" data-anchor-id="variantes-y-recursos">Variantes y recursos</h2>
+<p>Las dos variantes son el mismo ejercicio; la JSON solo cambia la carga por <code>dataset_ICFES = pd.read_json('https://cdtiueb.com.co/doctorado/datos_icfes.json')</code>.</p>
+<p><a href="https://github.com/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/notebooks/assignments/04-icfes-preparacion-datos-csv.ipynb" class="btn btn-outline-secondary">Notebook CSV — GitHub</a> <a href="https://colab.research.google.com/github/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/notebooks/assignments/04-icfes-preparacion-datos-csv.ipynb" class="btn btn-primary">Open CSV in Colab</a> <a href="https://github.com/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/notebooks/assignments/04-icfes-preparacion-datos-json.ipynb" class="btn btn-outline-secondary">Notebook JSON — GitHub</a> <a href="https://colab.research.google.com/github/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/notebooks/assignments/04-icfes-preparacion-datos-json.ipynb" class="btn btn-primary">Open JSON in Colab</a></p>
+<p><a href="https://colab.research.google.com/github/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/notebooks/assignments/04-icfes-preparacion-datos-csv.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" class="img-fluid" alt="Open in Colab"></a> <a href="https://colab.research.google.com/github/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/notebooks/assignments/04-icfes-preparacion-datos-json.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" class="img-fluid" alt="Open in Colab"></a></p>
 
 
 </section>
@@ -863,7 +889,7 @@ ul.task-list li input[type="checkbox"] {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/assignments/index.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/assignments/assignment-04-preparacion-datos-icfes.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>Built with <a href="https://quarto.org">Quarto</a></p>
 </div>
