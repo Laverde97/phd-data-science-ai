@@ -46,7 +46,7 @@ para predicción de precios de viviendas, con notebooks para Google Colab.
 
 ::: {.resource-card}
 ### 🚀 Notebooks · Colab
-Plantilla reproducible, 4 notebooks de tareas, 8 apuntes de clase y 4 guías de aprendizaje,
+Plantilla reproducible, 4 notebooks de tareas, 8 apuntes de clase y 5 guías de aprendizaje,
 todos con badge para abrir en Google Colab.
 
 [Explorar notebooks](notebooks/index.qmd)
@@ -74,7 +74,7 @@ Seguimiento de los materiales realmente incorporados. Se **edita directamente en
 (`semesters/semester-01/machine-learning/index.qmd`) y queda versionado en cada commit.
 
 Estado actual: **4 tareas completadas**, **4 notebooks de tareas**, **8 apuntes de clase**,
-**4 guías de aprendizaje**, **3 talleres**, **3 datasets documentados** y las **presentaciones
+**5 guías de aprendizaje**, **3 talleres**, **3 datasets documentados** y las **presentaciones
 de clase en almacenamiento privado**.
 
 | Material | Tipo | Ubicación | Estado |
@@ -95,6 +95,7 @@ de clase en almacenamiento privado**.
 | Guía · Separando los datos | Guía de aprendizaje | `notebooks/learning-guides/` | Incorporada |
 | Guía · Supervisado vs. No supervisado | Guía de aprendizaje | `notebooks/learning-guides/` | Incorporada |
 | Guía · Modelos de regresión | Guía de aprendizaje | `notebooks/learning-guides/` | Incorporada |
+| Guía · Redes Neuronales Artificiales (RNA) | Guía de aprendizaje | `notebooks/learning-guides/` | Incorporada |
 | Taller 01 · Preparación de datos ICFES — CSV | Taller | `workshops/` | Completado |
 | Taller 02 · Preparación de datos ICFES — JSON | Taller | `workshops/` | Completado |
 | Taller 03 · Regresión lineal para predicción de precios de viviendas | Taller | [Notebook e informe](workshops/index.qmd) | Completado |
@@ -104,6 +105,7 @@ de clase en almacenamiento privado**.
 | Introducción a Machine Learning | Presentación | Almacenamiento privado | Inventariado |
 | Preparación de datos | Presentación | Almacenamiento privado | Inventariado |
 | Separación de datos | Presentación | Almacenamiento privado | Inventariado |
+| Concepto RNA | Material de apoyo (docente) | Almacenamiento privado | Inventariado |
 
 ::: {.callout-note collapse="true"}
 ## Cómo actualizar
