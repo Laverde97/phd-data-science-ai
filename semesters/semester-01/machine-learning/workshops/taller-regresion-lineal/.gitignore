@@ -1,0 +1,11 @@
+.quarto/
+Taller_Regresion_Lineal_files/
+*.quarto_ipynb
+*.tex
+*.log
+*.aux
+*.toc
+.venv/
+
+/.quarto/
+**/*.quarto_ipynb

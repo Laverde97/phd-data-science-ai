@@ -1,0 +1,51 @@
+{
+  "observaciones": 100000,
+  "columnas": [
+    "tamano",
+    "precio"
+  ],
+  "faltantes": {
+    "tamano": 10000,
+    "precio": 5000
+  },
+  "porcentaje_faltantes": {
+    "tamano": 10.0,
+    "precio": 5.0
+  },
+  "porcentaje_celdas_faltantes": 7.5,
+  "filas_afectadas": 14499,
+  "filas_modelado": 95000,
+  "entrenamiento": 76000,
+  "prueba": 19000,
+  "media_imputacion": 150.03213941253838,
+  "intercepto": 49539.45392206352,
+  "coeficiente": 2504.4729677097143,
+  "r2": 0.7530804131210758,
+  "rmse_cop": 60812.91193796444,
+  "mape_porcentaje": 12.421594497808401,
+  "prediccion_150_cop": 425210.39907852066,
+  "correlacion_pares_completos": 0.9143223492325211,
+  "rmse_base": 122382.420241067,
+  "metricas_por_grupo": [
+    {
+      "Tamaño": "Observado",
+      "n": 17071,
+      "RMSE COP": 49830.235110424976,
+      "MAPE %": 10.668034845266817
+    },
+    {
+      "Tamaño": "Imputado",
+      "n": 1929,
+      "RMSE COP": 120216.25702036411,
+      "MAPE %": 27.940006539559253
+    }
+  ],
+  "residuo_medio": -389.0827128949681,
+  "huella_dataframe": "7c81e7bd8a34c6347a24aa3e564eee539048d5fa1e6af7cfe3d3580bba1ad751",
+  "widget_validado": true,
+  "celdas_codigo": 28,
+  "figuras": 3,
+  "errores": 0,
+  "stderr": [],
+  "segundos": 3.46
+}

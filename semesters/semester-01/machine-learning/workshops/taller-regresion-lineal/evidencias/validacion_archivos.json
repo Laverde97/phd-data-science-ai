@@ -1,0 +1,12 @@
+{
+  "paginas_pdf": 12,
+  "coincidencia_codigo_qmd_notebook": true,
+  "metricas_presentes_en_pdf": true,
+  "mensajes_internos_en_pdf": false,
+  "desbordamientos_geometricos": [],
+  "html_generados": 27,
+  "referencias_locales_comprobadas": 1022,
+  "referencias_locales_rotas": [],
+  "pdf_y_notebook_disponibles_en_sitio": true,
+  "pdf_sha256": "3ce9fe9205563764402282f4965963c0e19770372fe91d8f51f85b6a1c2ed887"
+}

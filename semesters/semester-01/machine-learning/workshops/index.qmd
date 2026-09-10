@@ -18,6 +18,7 @@ Si el taller es un notebook, incluye su badge **Open in Colab**.
 |:--:|--------|:-----:|:------:|:-----:|:------:|
 | 01 | Preparación de datos ICFES — CSV | 08/09/2026 | [GitHub](https://github.com/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/workshops/workshop-01-icfes-csv.ipynb) | [Open in Colab](https://colab.research.google.com/github/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/workshops/workshop-01-icfes-csv.ipynb) | Completado |
 | 02 | Preparación de datos ICFES — JSON | 08/09/2026 | [GitHub](https://github.com/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/workshops/workshop-02-icfes-json.ipynb) | [Open in Colab](https://colab.research.google.com/github/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/workshops/workshop-02-icfes-json.ipynb) | Completado |
+| 03 | [Regresión lineal: precios de viviendas](taller-regresion-lineal/Taller_Regresion_Lineal.pdf) | 09/09/2026 | — | [Notebook para cargar en Colab](taller-regresion-lineal/Taller_Regresion_Lineal.ipynb) | Completado |
 
 : Talleres del módulo {.striped .hover}
 
