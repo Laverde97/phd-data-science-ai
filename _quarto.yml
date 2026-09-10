@@ -5,6 +5,9 @@ project:
     - "*.qmd"
     - "semesters/**/*.qmd"
     - "research/**/*.qmd"
+  resources:
+    - "semesters/semester-01/machine-learning/workshops/workshop-03-regresion-lineal-viviendas.ipynb"
+    - "semesters/semester-01/machine-learning/workshops/workshop-03-regresion-lineal-viviendas.pdf"
 
 website:
   title: "PhD · Data Science & Artificial Intelligence"
