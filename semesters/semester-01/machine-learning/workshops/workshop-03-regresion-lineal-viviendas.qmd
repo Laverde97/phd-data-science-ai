@@ -1,0 +1,1213 @@
+---
+title: "Taller práctico: Regresión lineal para predicción de precios de viviendas"
+subtitle: "Doctorado en Ciencia de Datos e Inteligencia Artificial"
+author: "Juan Sebastián Laverde Chunza"
+date: "2026-09-10"
+date-format: "long"
+lang: es
+
+format:
+  pdf:
+    pdf-engine: lualatex
+    toc: true
+    toc-title: "Contenido"
+    number-sections: true
+    documentclass: scrartcl
+    papersize: letter
+    fontsize: 11pt
+    geometry:
+      - top=2.5cm
+      - bottom=2.5cm
+      - left=2.7cm
+      - right=2.7cm
+    code-block-bg: true
+    code-block-border-left: "#6c3483"
+    highlight-style: github
+
+execute:
+  warning: false
+  message: false
+---
+
+```{=latex}
+\clearpage
+```
+
+# Objetivo {.unnumbered}
+
+Construir un modelo de regresión lineal simple que permita estimar el precio de una vivienda a partir de su tamaño en metros cuadrados, utilizando un conjunto de datos de **100.000 registros** con valores faltantes.
+
+El desarrollo completo del código, incluidas las pruebas detalladas de los métodos de imputación, se encuentra en el notebook de Google Colab que acompaña este informe. En este documento se presentan la metodología, los resultados principales y su interpretación.
+
+# Actividades a desarrollar {.unnumbered}
+
+# Carga y exploración de datos
+
+## Carga del conjunto de datos
+
+El conjunto de datos se carga directamente desde la URL proporcionada utilizando la librería `pandas`.
+
+```{python}
+#| echo: true
+#| output: false
+
+# ============================================================
+# 1. CARGA DEL CONJUNTO DE DATOS
+# ============================================================
+
+import pandas as pd
+
+# Cargar directamente el archivo CSV desde Google Cloud Storage
+dataset = pd.read_csv(
+'https://storage.googleapis.com/backet_doctorado_ueb_2026_2/datos_viviendas_faltantes.csv'
+)
+
+```
+
+El conjunto de datos contiene **100.000 registros** y dos variables numéricas continuas:
+
+| Variable | Descripción | Unidad |
+|:---------|:------------|:------:|
+| `tamano` | Tamaño de la vivienda | $m^2$ |
+| `precio` | Precio de la vivienda | COP |
+
+A continuación, se presentan las primeras diez observaciones del conjunto de datos.
+
+```{python}
+#| echo: false
+
+display(dataset.head(10))
+```
+
+## Realice una exploración inicial:
+
+### Verifique la cantidad de registros y columnas.
+
+```{python}
+#| echo: false
+
+# ============================================================
+# 2. DIMENSIONES Y ESTRUCTURA DEL CONJUNTO DE DATOS
+# ============================================================
+
+print("DIMENSIONES DEL CONJUNTO DE DATOS")
+print("=" * 60)
+
+print(f"Número de registros : {dataset.shape[0]:,}")
+print(f"Número de columnas  : {dataset.shape[1]}")
+
+print("\nNOMBRES DE LAS COLUMNAS")
+print("=" * 60)
+
+print(list(dataset.columns))
+```
+
+El conjunto de datos contiene **`100.000` registros** y **`2` variables**: `tamano` y `precio`.
+
+### Identifique la presencia de valores nulos.
+
+```{python}
+#| echo: false
+# ============================================================
+# 4. IDENTIFICACIÓN DE VALORES NULOS
+# ============================================================
+
+valores_faltantes = dataset.isnull().sum()
+porcentaje_faltantes = (valores_faltantes / len(dataset)) * 100
+tabla_faltantes = pd.DataFrame({
+    'Variable': valores_faltantes.index,
+    'Valores nulos': valores_faltantes.values,
+    'Porcentaje (%)': porcentaje_faltantes.values
+})
+tabla_faltantes['Porcentaje (%)'] = tabla_faltantes['Porcentaje (%)'].round(1)
+
+print("VALORES NULOS POR VARIABLE")
+print("=" * 60)
+
+display(tabla_faltantes)
+```
+
+En el conjunto de datos, la variable `tamano` presenta un 10 % de valores faltantes, equivalente a 10.000 registros, mientras que la variable `precio` presenta un 5 %, correspondiente a 5.000 registros. La siguiente gráfica permite visualizar y comparar la proporción de valores faltantes en ambas variables.
+
+```{python}
+#| label: fig-faltantes-pct
+#| fig-cap: "Porcentaje de valores nulos por variable."
+#| echo: false
+# ============================================================
+# GRÁFICA DEL PORCENTAJE DE VALORES NULOS
+# ============================================================
+import matplotlib.pyplot as plt
+
+plt.figure(figsize=(8, 5))
+
+barras = plt.bar(
+    tabla_faltantes['Variable'],
+    tabla_faltantes['Porcentaje (%)']
+)
+
+# Mostrar porcentaje encima de cada barra
+for barra in barras:
+    altura = barra.get_height()
+    plt.text(
+        barra.get_x() + barra.get_width() / 2,
+        altura,
+        f'{altura:.1f}%',
+        ha='center',
+        va='bottom',
+        fontsize=11
+    )
+
+plt.title('Porcentaje de valores nulos por variable', fontsize=14, fontweight='bold')
+plt.xlabel('Variable')
+plt.ylabel('Valores nulos (%)')
+
+plt.ylim(0, max(tabla_faltantes['Porcentaje (%)']) + 2)
+plt.grid(axis='y', alpha=0.3)
+
+plt.tight_layout()
+plt.show()
+```
+
+### Calcule estadísticas descriptivas básicas (media, mediana, desviación estándar, etc.) para ambas variables.
+
+Las estadísticas descriptivas iniciales se presentan en la @tbl-descriptivas.
+
+```{python}
+#| label: tbl-descriptivas
+#| tbl-cap: "Estadísticas descriptivas de las variables originales."
+#| echo: false
+#| warning: false
+#| message: false
+
+# ============================================================
+# 5. ESTADÍSTICAS DESCRIPTIVAS
+# ============================================================
+
+variables_numericas = ['tamano', 'precio']
+
+estadisticas_descriptivas = pd.DataFrame({
+    'N': dataset[variables_numericas].count(),
+    'Media': dataset[variables_numericas].mean(),
+    'Mediana': dataset[variables_numericas].median(),
+    'Desv. Est.': dataset[variables_numericas].std(),
+    'Mín.': dataset[variables_numericas].min(),
+    'Q1': dataset[variables_numericas].quantile(0.25),
+    'Q3': dataset[variables_numericas].quantile(0.75),
+    'Máx.': dataset[variables_numericas].max()
+})
+
+estadisticas_descriptivas.index.name = 'Variable'
+
+display(estadisticas_descriptivas.round(2))
+```
+
+La similitud entre media y mediana sugiere que las distribuciones no presentan una asimetría extrema. Además, desde la exploración inicial se observa una relación positiva fuerte entre el tamaño y el precio de las viviendas.
+
+### Gráfica 1 — Distribución del tamaño {.unnumbered}
+
+Esta gráfica nos permite observar si los tamaños están concentrados en determinados intervalos y comparar visualmente media y mediana.
+
+```{python}
+#| label: fig-dist-tamano
+#| fig-cap: "Distribución del tamaño de las viviendas, con media y mediana."
+#| fig-pos: 'H'
+#| echo: false
+# ============================================================
+# 6. DISTRIBUCIÓN DEL TAMAÑO DE LAS VIVIENDAS
+# ============================================================
+
+import matplotlib.pyplot as plt
+
+plt.figure(figsize=(10, 6))
+
+plt.hist(
+    dataset['tamano'].dropna(),
+    bins=30,
+    edgecolor='white',
+    alpha=0.85
+)
+
+# Media y mediana
+media_tamano = dataset['tamano'].mean()
+mediana_tamano = dataset['tamano'].median()
+
+plt.axvline(
+    media_tamano,
+    linestyle='--',
+    linewidth=2,
+    label=f'Media: {media_tamano:,.2f} m²'
+)
+
+plt.axvline(
+    mediana_tamano,
+    linestyle=':',
+    linewidth=2.5,
+    label=f'Mediana: {mediana_tamano:,.2f} m²'
+)
+
+plt.title(
+    'Distribución del tamaño de las viviendas',
+    fontsize=15,
+    fontweight='bold'
+)
+
+plt.xlabel('Tamaño de la vivienda (m²)', fontsize=11)
+plt.ylabel('Frecuencia', fontsize=11)
+
+plt.grid(axis='y', alpha=0.25)
+plt.legend()
+plt.tight_layout()
+
+plt.show()
+```
+
+### Gráfica 2 — Distribución del precio {.unnumbered}
+
+Para el precio conviene evitar que Python muestre números como 2.5e8 (Notación cientifica). Podemos darle formato de pesos.
+
+```{python}
+#| label: fig-dist-precio
+#| fig-cap: "Distribución del precio de las viviendas, con media y mediana."
+#| echo: false
+# ============================================================
+# 7. DISTRIBUCIÓN DEL PRECIO DE LAS VIVIENDAS
+# ============================================================
+
+from matplotlib.ticker import FuncFormatter
+
+plt.figure(figsize=(10, 6))
+
+plt.hist(
+    dataset['precio'].dropna(),
+    bins=30,
+    edgecolor='white',
+    alpha=0.85
+)
+
+# Media y mediana
+media_precio = dataset['precio'].mean()
+mediana_precio = dataset['precio'].median()
+
+plt.axvline(
+    media_precio,
+    linestyle='--',
+    linewidth=2,
+    label=f'Media: ${media_precio:,.0f}'
+)
+
+plt.axvline(
+    mediana_precio,
+    linestyle=':',
+    linewidth=2.5,
+    label=f'Mediana: ${mediana_precio:,.0f}'
+)
+
+# Formato del eje X en millones de pesos
+plt.gca().xaxis.set_major_formatter(
+    FuncFormatter(lambda x, _: f'${x/1_000_000:,.0f} M')
+)
+
+plt.title(
+    'Distribución del precio de las viviendas',
+    fontsize=15,
+    fontweight='bold'
+)
+
+plt.xlabel('Precio de la vivienda (millones de COP)', fontsize=11)
+plt.ylabel('Frecuencia', fontsize=11)
+
+plt.grid(axis='y', alpha=0.25)
+plt.legend()
+plt.tight_layout()
+
+plt.show()
+```
+
+### Gráfica 3 — Boxplot del tamaño - precio {.unnumbered}
+
+Ahora podemos comprobar visualmente la existencia de posibles valores extremos.
+
+Con este gráfico podemos observar:
+
+- mediana;
+
+- rango intercuartílico;
+
+- dispersión;
+
+- posibles valores atípicos.
+
+```{python}
+#| label: fig-boxplots
+#| fig-cap: "Diagramas de caja del tamaño y del precio de las viviendas."
+#| echo: false
+
+# ============================================================
+# 8 y 9. DIAGRAMAS DE CAJA EN UNA SOLA IMAGEN
+# ============================================================
+
+import matplotlib.pyplot as plt
+from matplotlib.ticker import FuncFormatter
+
+fig, axes = plt.subplots(2, 1, figsize=(10, 8))
+
+# ------------------------------------------------------------
+# Diagrama de caja del tamaño
+# ------------------------------------------------------------
+axes[0].boxplot(
+    dataset['tamano'].dropna(),
+    vert=False,
+    patch_artist=True
+)
+
+axes[0].set_title(
+    'Diagrama de caja del tamaño de las viviendas',
+    fontsize=15,
+    fontweight='bold'
+)
+
+axes[0].set_xlabel('Tamaño de la vivienda (m²)', fontsize=11)
+axes[0].set_yticks([])
+axes[0].grid(axis='x', alpha=0.25)
+
+# ------------------------------------------------------------
+# Diagrama de caja del precio
+# ------------------------------------------------------------
+axes[1].boxplot(
+    dataset['precio'].dropna(),
+    vert=False,
+    patch_artist=True
+)
+
+axes[1].xaxis.set_major_formatter(
+    FuncFormatter(lambda x, _: f'${x/1_000_000:,.0f} M')
+)
+
+axes[1].set_title(
+    'Diagrama de caja del precio de las viviendas',
+    fontsize=15,
+    fontweight='bold'
+)
+
+axes[1].set_xlabel('Precio de la vivienda (millones de COP)', fontsize=11)
+axes[1].set_yticks([])
+axes[1].grid(axis='x', alpha=0.25)
+
+plt.tight_layout()
+plt.show()
+```
+
+# Tratamiento de datos faltantes (imputación)
+## Identifique qué porcentaje de datos faltantes tiene cada columna. 
+
+```{python}
+#| label: tbl-faltantes
+#| tbl-cap: "Resumen de valores faltantes"
+#| echo: false
+#| warning: false
+#| message: false
+# ============================================================
+# 2.2 CANTIDAD Y PORCENTAJE DE VALORES FALTANTES
+# ============================================================
+
+resumen_faltantes = pd.DataFrame({
+    'Variable': dataset.columns,
+    'Valores faltantes': dataset.isnull().sum().values,
+    'Valores observados': dataset.notnull().sum().values,
+    'Porcentaje faltante (%)': (
+        dataset.isnull().mean() * 100
+    ).round(2).values
+})
+
+print("RESUMEN DE VALORES FALTANTES")
+print("=" * 70)
+
+display(resumen_faltantes)
+
+```
+
+El análisis conjunto mostró que el **85,5 %** de los registros estaba completamente observado; el **9,5 %** tenía únicamente `tamano` faltante, el **4,5 %** únicamente `precio` faltante y el **0,5 %** presentaba ambas variables faltantes.
+
+## Seleccione una estrategia de imputación adecuada (ej. media, mediana, eliminación de filas, etc.) y justifique su elección. 
+
+Se compararon métodos simples y multivariados de imputación. Para seleccionar la estrategia se utilizó el **NRMSE promedio**, donde un valor menor indica una mejor capacidad de reconstrucción de datos conocidos que fueron ocultados temporalmente durante la validación.
+
+| Posición | Método | NRMSE promedio |
+|---------:|:-------|---------------:|
+| 1 | IterativeImputer + BayesianRidge | 0,3926 |
+| 2 | KNN ($k = 5$) | 0,4751 |
+| 3 | Mediana | 0,9997 |
+| 4 | Media | 0,9997 |
+
+: Comparación de los métodos de imputación. {#tbl-imputacion}
+
+```{python}
+#| label: fig-comparacion-imputacion
+#| fig-cap: "NRMSE promedio de los métodos de imputación evaluados."
+#| echo: false
+#| warning: false
+#| message: false
+
+# ============================================================
+# 2.6 COMPARACIÓN DE MÉTODOS DE IMPUTACIÓN
+# ============================================================
+
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+
+from sklearn.experimental import enable_iterative_imputer
+from sklearn.impute import (
+    SimpleImputer,
+    KNNImputer,
+    IterativeImputer
+)
+
+from sklearn.linear_model import BayesianRidge
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import mean_absolute_error, mean_squared_error
+from sklearn.base import clone
+
+# ============================================================
+# DATOS COMPLETOS PARA VALIDACIÓN DE LOS IMPUTADORES
+# ============================================================
+
+variables = ['tamano', 'precio']
+
+datos_completos = (
+    dataset[variables]
+    .dropna()
+    .copy()
+)
+
+n_muestra = min(5000, len(datos_completos))
+
+muestra_validacion = datos_completos.sample(
+    n=n_muestra,
+    random_state=42
+)
+
+# ============================================================
+# FUNCIÓN PARA INTRODUCIR VALORES FALTANTES ARTIFICIALES
+# ============================================================
+
+def introducir_faltantes(datos, proporcion=0.10, random_state=42):
+
+    datos_incompletos = datos.copy()
+    generador = np.random.default_rng(random_state)
+
+    for columna in datos_incompletos.columns:
+
+        n_faltantes = int(
+            len(datos_incompletos) * proporcion
+        )
+
+        indices = generador.choice(
+            datos_incompletos.index,
+            size=n_faltantes,
+            replace=False
+        )
+
+        datos_incompletos.loc[
+            indices,
+            columna
+        ] = np.nan
+
+    return datos_incompletos
+
+# ============================================================
+# MÉTODOS DE IMPUTACIÓN
+# ============================================================
+
+metodos_imputacion = {
+
+    'Media':
+        SimpleImputer(
+            strategy='mean'
+        ),
+
+    'Mediana':
+        SimpleImputer(
+            strategy='median'
+        ),
+
+    'KNN (k=5)':
+        KNNImputer(
+            n_neighbors=5,
+            weights='distance'
+        ),
+
+    'Iterativo + BayesianRidge':
+        IterativeImputer(
+            estimator=BayesianRidge(),
+            initial_strategy='median',
+            max_iter=15,
+            random_state=42,
+            min_value=0
+        )
+}
+
+# ============================================================
+# EVALUACIÓN DE LOS MÉTODOS
+# ============================================================
+
+resultados = []
+
+datos_train, datos_test = train_test_split(
+    muestra_validacion,
+    test_size=0.20,
+    random_state=42
+)
+
+datos_train_incompletos = introducir_faltantes(
+    datos_train,
+    proporcion=0.10,
+    random_state=42
+)
+
+for nombre_metodo, metodo in metodos_imputacion.items():
+
+    imputador = clone(metodo)
+
+    imputador.fit(datos_train_incompletos)
+
+    for variable in variables:
+
+        datos_prueba = datos_test.copy()
+
+        datos_prueba[variable] = np.nan
+
+        datos_estimados = pd.DataFrame(
+            imputador.transform(datos_prueba),
+            columns=variables,
+            index=datos_prueba.index
+        )
+
+        y_real = datos_test[variable].values
+        y_estimado = datos_estimados[variable].values
+
+        mae = mean_absolute_error(
+            y_real,
+            y_estimado
+        )
+
+        rmse = np.sqrt(
+            mean_squared_error(
+                y_real,
+                y_estimado
+            )
+        )
+
+        desviacion = np.std(
+            y_real,
+            ddof=1
+        )
+
+        nrmse = rmse / desviacion
+
+        resultados.append({
+            'Método': nombre_metodo,
+            'Variable': variable,
+            'MAE': mae,
+            'RMSE': rmse,
+            'NRMSE': nrmse
+        })
+
+# ============================================================
+# RANKING GENERAL
+# ============================================================
+
+resultados_imputacion = pd.DataFrame(resultados)
+
+ranking_imputacion = (
+    resultados_imputacion
+    .groupby('Método', as_index=False)
+    .agg(
+        NRMSE_promedio=('NRMSE', 'mean')
+    )
+    .sort_values(
+        'NRMSE_promedio'
+    )
+    .reset_index(drop=True)
+)
+
+ranking_imputacion.index = ranking_imputacion.index + 1
+
+# ============================================================
+# GRÁFICA
+# ============================================================
+
+plt.figure(figsize=(10, 6))
+
+barras = plt.bar(
+    ranking_imputacion['Método'],
+    ranking_imputacion['NRMSE_promedio']
+)
+
+plt.title(
+    'Comparación del desempeño de los métodos de imputación',
+    fontsize=15,
+    fontweight='bold'
+)
+
+plt.xlabel('Método de imputación', fontsize=11)
+plt.ylabel('NRMSE promedio', fontsize=11)
+
+plt.xticks(
+    rotation=15,
+    ha='right'
+)
+
+for barra, valor in zip(
+    barras,
+    ranking_imputacion['NRMSE_promedio']
+):
+    plt.text(
+        barra.get_x() + barra.get_width() / 2,
+        barra.get_height(),
+        f'{valor:.4f}',
+        ha='center',
+        va='bottom',
+        fontsize=10
+    )
+
+plt.grid(axis='y', alpha=0.25)
+plt.tight_layout()
+
+plt.show()
+
+```
+
+Se seleccionó **IterativeImputer con BayesianRidge** porque obtuvo el menor error de reconstrucción y, a diferencia de la media o la mediana, aprovecha la relación existente entre `tamano` y `precio`.
+
+Después de la imputación, ambas variables quedaron con **0 valores faltantes**. Las estadísticas antes y después permanecieron muy similares y la correlación entre `tamano` y `precio` pasó de **0,9143 a 0,9252**.
+
+Este cambio es pequeño y muestra que la fuerte relación lineal positiva se conservó sin una alteración sustancial de la estructura de los datos.
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+# ============================================================
+# 2.15 IMPUTACIÓN DEFINITIVA
+# ============================================================
+
+from sklearn.experimental import enable_iterative_imputer
+from sklearn.impute import IterativeImputer
+from sklearn.linear_model import BayesianRidge
+
+imputador_final = IterativeImputer(
+    estimator=BayesianRidge(),
+    initial_strategy='median',
+    max_iter=15,
+    random_state=42,
+    min_value=0
+)
+
+# Crear una copia para conservar el dataset original
+dataset_limpio = dataset.copy()
+
+# Imputar las dos variables numéricas
+dataset_limpio[['tamano', 'precio']] = (
+    imputador_final.fit_transform(
+        dataset[['tamano', 'precio']]
+    )
+)
+
+# ============================================================
+# 2.16 VERIFICACIÓN DEL DATASET IMPUTADO
+# ============================================================
+
+verificacion_final = pd.DataFrame({
+    'Variable': dataset_limpio.columns,
+    'Valores faltantes': (
+        dataset_limpio
+        .isnull()
+        .sum()
+        .values
+    ),
+    'Porcentaje faltante (%)': (
+        dataset_limpio
+        .isnull()
+        .mean()
+        .mul(100)
+        .round(2)
+        .values
+    )
+})
+
+print("VERIFICACIÓN POSTERIOR A LA IMPUTACIÓN")
+print("=" * 70)
+
+display(verificacion_final)
+
+```
+
+# Construcción del modelo de regresión lineal
+
+## Preparar el dataset para modelamiento
+
+```{python}
+#| echo: false
+# ============================================================
+# 3.1 DEFINICIÓN DE VARIABLES DEL MODELO
+# ============================================================
+
+# Variable independiente o predictora
+X = dataset_limpio[['tamano']]
+
+# Variable dependiente u objetivo
+y = dataset_limpio['precio']
+
+print("VARIABLES DEL MODELO")
+print("=" * 70)
+
+print(f"Variable predictora (X): {list(X.columns)}")
+print(f"Variable objetivo (y): {y.name}")
+
+print(f"\nDimensiones de X: {X.shape}")
+print(f"Dimensiones de y: {y.shape}")
+
+```
+
+
+
+Aquí definimos las variables predictora y objetivo a partir del dataset limpio completo:
+
+## Divida el dataset en dos conjuntos:
+
+Se utilizó el **dataset completo después de la imputación**. La variable predictora fue `tamano` y la variable objetivo fue `precio`.
+
+El conjunto de datos se dividió de la siguiente manera:
+
+| Conjunto | Registros | Porcentaje |
+|:---------|----------:|-----------:|
+| Entrenamiento | 80.000 | 80 % |
+| Prueba | 20.000 | 20 % |
+
+: División del conjunto de datos. {#tbl-division}
+
+```{python}
+#| echo: true
+#| output: false
+
+# ============================================================
+# 3.2 DIVISIÓN EN ENTRENAMIENTO Y PRUEBA
+# ============================================================
+
+from sklearn.model_selection import train_test_split
+
+X_train, X_test, y_train, y_test = train_test_split(
+    X,
+    y,
+    test_size=0.20,
+    random_state=0
+)
+
+print("DIVISIÓN DEL CONJUNTO DE DATOS")
+print("=" * 70)
+
+print(f"Entrenamiento (80 %): {len(X_train):,} registros")
+print(f"Prueba        (20 %): {len(X_test):,} registros")
+
+```
+
+El dataset imputado se dividió en **80.000 registros para entrenamiento (80 %)** y **20.000 para prueba (20 %)**. Se utilizó `random_state=0` para garantizar que la partición sea reproducible.
+
+## Entrene un modelo de regresión lineal simple utilizando la librería scikit-learn o statsmodels.
+
+```{python}
+#| echo: true
+#| output: false
+# ============================================================
+# 3.3 ENTRENAMIENTO DEL MODELO DE REGRESIÓN LINEAL
+# ============================================================
+
+from sklearn.linear_model import LinearRegression
+
+# Crear el modelo
+modelo = LinearRegression()
+
+# Entrenar el modelo
+modelo.fit(X_train, y_train)
+
+print("MODELO ENTRENADO CORRECTAMENTE")
+print("=" * 70)
+
+```
+
+### Parámetros obtenidos
+
+```{python}
+#| echo: true
+#| output: false
+# ============================================================
+# 3.4 PARÁMETROS DEL MODELO
+# ============================================================
+
+intercepto = modelo.intercept_
+coeficiente = modelo.coef_[0]
+
+print("PARÁMETROS ESTIMADOS DEL MODELO")
+print("=" * 70)
+
+print(f"Intercepto (β₀): ${intercepto:,.2f}")
+print(f"Coeficiente (β₁): ${coeficiente:,.2f} por m2")
+
+print("\nECUACIÓN DEL MODELO")
+print("=" * 70)
+
+print(
+    f"Precio estimado = "
+    f"{intercepto:,.2f} + "
+    f"{coeficiente:,.2f} × tamano"
+)
+```
+
+**Interpretación de los parámetros**
+
+El modelo estimado fue:
+
+$$
+\widehat{Precio}
+=
+43.002,89
++
+2.547,77 \times tamano
+$$
+
+El coeficiente indica que, en promedio, por cada $1\,m^2$ adicional, el precio estimado aumenta aproximadamente en **$2.547,77 COP**.
+
+El **intercepto de $43.002,89 COP** representa el precio estimado cuando el tamaño es $0\,m^2$; sin embargo, su interpretación práctica es limitada, ya que una vivienda de $0\,m^2$ no tiene sentido real.
+
+# Evaluación del modelo
+
+## Calcule las métricas de rendimiento: R² (coeficiente de determinación), RMSE (raíz del error cuadrático medio) y Error porcentual absoluto medio (MAPE) 
+
+Una vez entrenado el modelo de regresión lineal, se evalúa su capacidad predictiva utilizando exclusivamente el conjunto de prueba.
+
+Se calculan las siguientes métricas:
+
+- **$R^{2}$ (coeficiente de determinación):** indica qué proporción de la variabilidad del precio es explicada por el tamaño de la vivienda.
+- **RMSE (raíz del error cuadrático medio):** mide la magnitud promedio del error de predicción, penalizando con mayor intensidad los errores grandes.
+- **MAPE (error porcentual absoluto medio):** expresa el error promedio de las predicciones en términos porcentuales.
+
+Para las métricas RMSE y MAPE, valores menores indican un mejor desempeño. En $R^{2}$, valores más cercanos a 1 indican una mayor capacidad explicativa del modelo.
+
+## Interprete los resultados:
+
+```{python}
+#| echo: false
+# ============================================================
+# 4.1 PREDICCIONES SOBRE EL CONJUNTO DE PRUEBA
+# ============================================================
+
+y_pred = modelo.predict(X_test)
+
+print("PREDICCIONES REALIZADAS CORRECTAMENTE")
+print("=" * 70)
+
+print(f"Número de predicciones: {len(y_pred):,}")
+```
+
+El desempeño se evaluó sobre los **20.000 registros** del conjunto de prueba.
+
+```{python}
+#| echo: false
+# ============================================================
+# 4.2 MÉTRICAS DE EVALUACIÓN
+# ============================================================
+
+import numpy as np
+
+from sklearn.metrics import (
+    r2_score,
+    mean_squared_error,
+    mean_absolute_percentage_error
+)
+
+# Coeficiente de determinación
+r2 = r2_score(y_test, y_pred)
+
+# Raíz del error cuadrático medio
+rmse = np.sqrt(
+    mean_squared_error(y_test, y_pred)
+)
+
+# Error porcentual absoluto medio
+mape = mean_absolute_percentage_error(
+    y_test,
+    y_pred
+) * 100
+
+# ============================================================
+# 4.3 RESUMEN DE MÉTRICAS
+# ============================================================
+
+metricas_modelo = pd.DataFrame({
+    'Métrica': [
+        'R2',
+        'RMSE',
+        'MAPE'
+    ],
+    'Resultado': [
+        f'{r2:.4f}',
+        f'${rmse:,.2f} COP',
+        f'{mape:.2f}%'
+    ]
+})
+
+print("RESUMEN DEL RENDIMIENTO DEL MODELO")
+print("=" * 70)
+
+display(metricas_modelo)
+```
+
+El modelo explica aproximadamente el **85,39 % de la variabilidad del precio** a partir del tamaño de la vivienda.
+
+El **RMSE fue de $46.668,86 COP** y el **MAPE de 9,65 %**, lo que indica que las predicciones presentan, en promedio, un error porcentual cercano al 9,65 % respecto al precio real.
+
+En conjunto, los resultados muestran un buen desempeño predictivo para un modelo lineal simple con una única variable explicativa.
+
+### ¿Qué porcentaje de la variabilidad del precio explica el modelo?
+
+El coeficiente de determinación obtenido fue:
+
+$$
+R^2 = 0.8539
+$$
+
+Esto significa que el modelo de regresión lineal explica aproximadamente el 85.39 % de la variabilidad observada en el precio de las viviendas a partir de su tamaño en metros cuadrados.
+
+En otras palabras, el tamaño de la vivienda presenta una capacidad explicativa importante sobre el precio dentro de este conjunto de datos. El 14.61 % restante de la variabilidad no es explicado por este modelo lineal simple y puede estar asociado con otros factores que no están incluidos en el análisis, como la ubicación, el estrato, el número de habitaciones, la antigüedad de la vivienda, entre otras características.
+
+### ¿Qué tan precisas son las predicciones?
+
+El modelo obtuvo:
+
+$$
+\mathrm{RMSE} = 46{,}668.86\ \text{COP}
+$$
+
+y
+
+$$
+\mathrm{MAPE} = 9.65\%
+$$
+
+El RMSE de $46,668.86 COP indica que los errores de predicción tienen una magnitud de aproximadamente $46,669 COP, teniendo en cuenta que esta métrica penaliza con mayor intensidad los errores grandes.
+
+Por otra parte, el MAPE de 9.65 % indica que, en promedio, las predicciones realizadas por el modelo se alejan aproximadamente un 9.65 % del precio real de las viviendas.
+
+Por lo tanto, el modelo presenta una buena capacidad predictiva para este conjunto de datos, ya que explica cerca del 85.39 % de la variabilidad del precio y mantiene un error porcentual promedio inferior al 10 %. Sin embargo, sus predicciones no son exactas y todavía existe variabilidad asociada con factores diferentes al tamaño de la vivienda.
+
+# Predicción interactiva
+
+Una vez entrenado y evaluado el modelo de regresión lineal, se implementa una herramienta interactiva que permite ingresar el tamaño de una vivienda en metros cuadrados y obtener automáticamente su precio estimado.
+
+La predicción se realiza utilizando el modelo entrenado previamente, cuya variable predictora es `tamano` y cuya variable objetivo es `precio`.
+
+```{python}
+#| echo: true
+#| output: false
+# ============================================================
+# 5.1 FUNCIÓN PARA REALIZAR PREDICCIONES
+# ============================================================
+
+import pandas as pd
+
+def predecir_precio(tamano_vivienda):
+
+    # Crear DataFrame con el mismo nombre de variable
+    # utilizado durante el entrenamiento
+    nueva_vivienda = pd.DataFrame({
+        'tamano': [tamano_vivienda]
+    })
+
+    # Realizar la predicción
+    precio_estimado = modelo.predict(nueva_vivienda)[0]
+
+    return precio_estimado
+
+# ============================================================
+# 5.2 PRUEBA DEL MODELO
+# ============================================================
+
+tamano_prueba = 150
+
+precio_estimado = predecir_precio(tamano_prueba)
+
+print("PREDICCIÓN DEL PRECIO DE LA VIVIENDA")
+print("=" * 70)
+
+print(
+    f"Vivienda de {tamano_prueba:.0f} m2 "
+    f"→ Precio estimado: ${precio_estimado:,.2f} COP"
+)
+
+```
+
+La implementación interactiva se encuentra en el notebook de Colab. Para efectos del informe se presenta una prueba con una vivienda de $150\,m^2$:
+
+El precio estimado para una vivienda de `150` $m^{2}$ es de `$425,168.27 COP`
+
+> **Vivienda de 150 $m^2$ → Precio estimado: $425.168,27 COP**
+
+La predicción corresponde al valor esperado por el modelo según la relación aprendida entre tamaño y precio. No representa necesariamente el precio exacto de una observación individual, ya que existe variabilidad alrededor de la tendencia lineal.
+
+# Visualización de resultados
+
+Finalmente, se visualiza el comportamiento del modelo de regresión lineal mediante:
+
+- Un **gráfico de dispersión** entre `tamano` y `precio`, acompañado de la línea de regresión estimada.
+- Un **gráfico de residuos**, utilizado para analizar el comportamiento de los errores de predicción.
+
+## Dispersión y línea de regresión
+
+```{python}
+#| label: fig-regresion
+#| fig-cap: "Relación entre tamaño y precio con la línea de regresión estimada."
+#| echo: false
+#| warning: false
+#| message: false
+
+# ============================================================
+# 6.1 DATOS REALES Y LÍNEA DE REGRESIÓN
+# ============================================================
+
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+from matplotlib.ticker import FuncFormatter
+
+# Crear valores ordenados de tamaño para dibujar la recta
+tamano_linea = np.linspace(
+    dataset_limpio['tamano'].min(),
+    dataset_limpio['tamano'].max(),
+    300
+)
+
+# Convertir al mismo formato utilizado en el entrenamiento
+X_linea = pd.DataFrame({
+    'tamano': tamano_linea
+})
+
+# Predecir precios sobre los valores de la línea
+precio_linea = modelo.predict(X_linea)
+
+# Crear gráfica
+plt.figure(figsize=(11, 7))
+
+# Datos del dataset imputado
+plt.scatter(
+    dataset_limpio['tamano'],
+    dataset_limpio['precio'],
+    alpha=0.15,
+    s=8,
+    label='Datos'
+)
+
+# Línea de regresión
+plt.plot(
+    tamano_linea,
+    precio_linea,
+    linewidth=3,
+    label='Línea de regresión',
+    color='red'
+)
+
+# Formato del eje del precio
+plt.gca().yaxis.set_major_formatter(
+    FuncFormatter(lambda x, _: f'${x:,.0f}')
+)
+
+plt.title(
+    'Relación entre tamaño y precio con línea de regresión',
+    fontsize=15,
+    fontweight='bold'
+)
+
+plt.xlabel('Tamaño de la vivienda (m²)', fontsize=11)
+plt.ylabel('Precio de la vivienda (COP)', fontsize=11)
+
+plt.grid(alpha=0.20)
+plt.legend()
+plt.tight_layout()
+
+plt.show()
+```
+
+El gráfico @fig-regresion evidencia una relación lineal positiva entre el tamaño y el precio de las viviendas. La línea de regresión representa la tendencia estimada por el modelo: a medida que aumenta el tamaño de la vivienda, también aumenta su precio esperado.
+
+## Gráfico de residuos
+
+Las predicciones del conjunto de prueba, que ya calculamos: `y_pred = modelo.predict(X_test)`
+
+El residuo se calcula como:
+
+$$\text{Residuo} = \text{Precio}_{\text{real}} - \text{Precio}_{\text{estimado}}$$
+
+```{python}
+#| label: fig-residuos
+#| fig-cap: "Distribución de los residuos del modelo de regresión."
+#| echo: false
+#| warning: false
+#| message: false
+
+# ============================================================
+# 6.2 GRÁFICO DE RESIDUOS
+# ============================================================
+
+residuos = y_test.to_numpy() - y_pred
+
+plt.figure(figsize=(11, 6))
+
+plt.scatter(
+    y_pred,
+    residuos,
+    alpha=0.20,
+    s=10
+)
+
+# Línea de referencia en residuo = 0
+plt.axhline(
+    y=0,
+    linestyle='--',
+    linewidth=2,
+    label='Error = 0'
+)
+
+# Formato de los ejes
+plt.gca().xaxis.set_major_formatter(
+    FuncFormatter(lambda x, _: f'${x:,.0f}')
+)
+
+plt.gca().yaxis.set_major_formatter(
+    FuncFormatter(lambda x, _: f'${x:,.0f}')
+)
+
+plt.title(
+    'Distribución de los residuos del modelo',
+    fontsize=15,
+    fontweight='bold'
+)
+
+plt.xlabel('Precio estimado (COP)', fontsize=11)
+plt.ylabel('Residuo: precio real − precio estimado (COP)', fontsize=11)
+
+plt.grid(alpha=0.20)
+plt.legend()
+
+plt.tight_layout()
+plt.show()
+```
+
+Los residuos se distribuyen principalmente alrededor de cero, sin evidenciar una curvatura marcada, lo que respalda el uso de un modelo lineal. Sin embargo, se observan algunos errores extremos y cierta estructura en la dispersión, probablemente asociada a los valores imputados. En general, el comportamiento de los residuos es consistente con el buen desempeño predictivo obtenido por el modelo.
+
+# Conclusiones {.unnumbered}
+
+El tratamiento de los datos faltantes mediante **IterativeImputer + BayesianRidge** permitió obtener un conjunto completo conservando adecuadamente la estructura de los datos. La estrategia fue seleccionada mediante una comparación empírica y presentó el menor NRMSE promedio entre los métodos evaluados.
+
+Posteriormente, el modelo de regresión lineal obtuvo un $R^2$ de **0,8539** y un MAPE de **9,65 %**, evidenciando que el tamaño explica una proporción importante de la variabilidad del precio y que el modelo ofrece una capacidad predictiva adecuada para el objetivo planteado.
+
+El notebook de Colab conserva el **desarrollo técnico completo y reproducible**, mientras que este informe resume los elementos metodológicos, resultados e interpretaciones necesarios para la entrega académica.

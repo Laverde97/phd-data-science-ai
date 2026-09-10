@@ -18,7 +18,7 @@
     "href": "semesters/semester-01/machine-learning/workshops/index.html#inventario",
     "title": "Talleres",
     "section": "Inventario",
-    "text": "Inventario\n\nTalleres del módulo\n\n\n#\nTítulo\nFecha\nGitHub\nColab\nPDF\nEstado\n\n\n\n\n01\nPreparación de datos ICFES — CSV\n08/09/2026\nGitHub\nOpen in Colab\n—\nCompletado\n\n\n02\nPreparación de datos ICFES — JSON\n08/09/2026\nGitHub\nOpen in Colab\n—\nCompletado\n\n\n03\nRegresión lineal para predicción de precios de viviendas\n10/09/2026\nGitHub\nOpen in Colab\nPDF\nCompletado"
+    "text": "Inventario\n\nTalleres del módulo\n\n\n#\nTítulo\nFecha\nEnunciado\nNotebook\nColab\nFuente (QMD)\nSolución\nEstado\n\n\n\n\n01\nPreparación de datos ICFES — CSV\n08/09/2026\n—\nGitHub\nOpen in Colab\n—\n—\nCompletado\n\n\n02\nPreparación de datos ICFES — JSON\n08/09/2026\n—\nGitHub\nOpen in Colab\n—\n—\nCompletado\n\n\n03\nRegresión lineal para predicción de precios de viviendas\n10/09/2026\nPrivado\nGitHub\nOpen in Colab\nQMD\nPDF\nCompletado\n\n\n\n\n\n\n\n\n\nNoteTaller 03 — enunciado y solución\n\n\n\nEl enunciado original es material de clase y se conserva de forma privada; no se distribuye desde este repositorio público. La solución en PDF, el notebook y la fuente QMD son trabajo propio y sí se publican en este repositorio."
   },
   {
     "objectID": "semesters/semester-01/machine-learning/workshops/index.html#qué-se-practica",
