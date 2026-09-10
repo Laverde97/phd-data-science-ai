@@ -28,6 +28,16 @@ Las presentaciones **propias** que se elaboren más adelante sí se publicarán 
 *Modelos de regresión* (08/09/2026) cubre conceptos de regresión, regresión lineal simple,
 mínimos cuadrados y el ejemplo experiencia–salario.
 
+## Material de apoyo
+
+Documentos de referencia entregados en el curso. Al igual que las presentaciones, son
+material de autoría docente: se conservan en almacenamiento privado y este sitio solo
+mantiene el inventario, sin enlaces a los archivos.
+
+| Título | Formato | Autoría | Descripción | Disponibilidad |
+|--------|---------|---------|-------------|----------------|
+| Concepto RNA | DOCX | Germán Gonzalo Vargas Sánchez | Documento introductorio sobre Redes Neuronales Artificiales, funciones de transferencia, pesos, aprendizaje y algoritmo de backpropagation. | Almacenamiento privado — no distribuible públicamente |
+
 ## Convención (presentaciones propias)
 
 `presentation-01-tema.ext`, `presentation-02-tema.ext`, … — prefijo de dos dígitos en orden
