@@ -14,13 +14,29 @@ Si el taller es un notebook, incluye su badge **Open in Colab**.
 
 ## Inventario
 
-| # | Título | Fecha | GitHub | Colab | PDF | Estado |
-|:--:|--------|:-----:|:------:|:-----:|:---:|:------:|
-| 01 | Preparación de datos ICFES — CSV | 08/09/2026 | [GitHub](https://github.com/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/workshops/workshop-01-icfes-csv.ipynb) | [Open in Colab](https://colab.research.google.com/github/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/workshops/workshop-01-icfes-csv.ipynb) | — | Completado |
-| 02 | Preparación de datos ICFES — JSON | 08/09/2026 | [GitHub](https://github.com/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/workshops/workshop-02-icfes-json.ipynb) | [Open in Colab](https://colab.research.google.com/github/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/workshops/workshop-02-icfes-json.ipynb) | — | Completado |
-| 03 | Regresión lineal para predicción de precios de viviendas | 10/09/2026 | [GitHub](https://github.com/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/workshops/workshop-03-regresion-lineal-viviendas.ipynb) | [Open in Colab](https://colab.research.google.com/github/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/workshops/workshop-03-regresion-lineal-viviendas.ipynb) | [PDF](workshop-03-regresion-lineal-viviendas.pdf) | Completado |
+| # | Título | Fecha | Enunciado | Notebook | Colab | Fuente (QMD) | Solución | Estado |
+| :--: | :--- | :--: | :--: | :--: | :--: | :--: | :--: | :--: |
+| 01 | Preparación de datos ICFES — CSV | 08/09/2026 | — | [GitHub][w1nb] | [Open in Colab][w1cl] | — | — | Completado |
+| 02 | Preparación de datos ICFES — JSON | 08/09/2026 | — | [GitHub][w2nb] | [Open in Colab][w2cl] | — | — | Completado |
+| 03 | Regresión lineal para predicción de precios de viviendas | 10/09/2026 | Privado | [GitHub][w3nb] | [Open in Colab][w3cl] | [QMD][w3qmd] | [PDF](workshop-03-regresion-lineal-viviendas.pdf) | Completado |
 
 : Talleres del módulo {.striped .hover}
+
+[w1nb]: https://github.com/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/workshops/workshop-01-icfes-csv.ipynb
+[w1cl]: https://colab.research.google.com/github/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/workshops/workshop-01-icfes-csv.ipynb
+
+[w2nb]: https://github.com/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/workshops/workshop-02-icfes-json.ipynb
+[w2cl]: https://colab.research.google.com/github/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/workshops/workshop-02-icfes-json.ipynb
+
+[w3nb]: https://github.com/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/workshops/workshop-03-regresion-lineal-viviendas.ipynb
+[w3cl]: https://colab.research.google.com/github/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/workshops/workshop-03-regresion-lineal-viviendas.ipynb
+[w3qmd]: https://github.com/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/workshops/workshop-03-regresion-lineal-viviendas.qmd
+
+::: {.callout-note}
+## Taller 03 — enunciado y solución
+
+El **enunciado** original es material de clase y se conserva de forma privada; **no se distribuye desde este repositorio público**. La **solución** en PDF, el **notebook** y la **fuente QMD** son trabajo propio y sí se publican en este repositorio.
+:::
 
 ## ¿Qué se practica?
 

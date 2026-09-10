@@ -5,8 +5,12 @@ project:
     - "*.qmd"
     - "semesters/**/*.qmd"
     - "research/**/*.qmd"
+    # El informe del Taller 03 se compila fuera del sitio (necesita Python + datos).
+    # Se publica como PDF/QMD estático; el CI de GitHub Pages no lo ejecuta.
+    - "!semesters/semester-01/machine-learning/workshops/workshop-03-regresion-lineal-viviendas.qmd"
   resources:
     - "semesters/semester-01/machine-learning/workshops/workshop-03-regresion-lineal-viviendas.ipynb"
+    - "semesters/semester-01/machine-learning/workshops/workshop-03-regresion-lineal-viviendas.qmd"
     - "semesters/semester-01/machine-learning/workshops/workshop-03-regresion-lineal-viviendas.pdf"
 
 website:
