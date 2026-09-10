@@ -1,7 +1,0 @@
-project:
-  type: default
-  render:
-    - Taller_Regresion_Lineal.qmd
-execute:
-  freeze: false
-  cache: false

@@ -38,8 +38,8 @@ Datasets del módulo, cada uno con su ficha de variables, dimensiones y esquema.
 
 ::: {.resource-card}
 ### 🧪 Talleres
-Dos talleres guiados de preparación de datos ICFES (variantes CSV y JSON), reproducibles en
-Google Colab.
+Tres talleres guiados: preparación de datos ICFES (variantes CSV y JSON) y regresión lineal
+para predicción de precios de viviendas, con notebooks para Google Colab.
 
 [Explorar talleres](workshops/index.qmd)
 :::
@@ -74,7 +74,7 @@ Seguimiento de los materiales realmente incorporados. Se **edita directamente en
 (`semesters/semester-01/machine-learning/index.qmd`) y queda versionado en cada commit.
 
 Estado actual: **4 tareas completadas**, **4 notebooks de tareas**, **8 apuntes de clase**,
-**4 guías de aprendizaje**, **2 talleres**, **3 datasets documentados** y las **presentaciones
+**4 guías de aprendizaje**, **3 talleres**, **3 datasets documentados** y las **presentaciones
 de clase en almacenamiento privado**.
 
 | Material | Tipo | Ubicación | Estado |
@@ -97,6 +97,7 @@ de clase en almacenamiento privado**.
 | Guía · Modelos de regresión | Guía de aprendizaje | `notebooks/learning-guides/` | Incorporada |
 | Taller 01 · Preparación de datos ICFES — CSV | Taller | `workshops/` | Completado |
 | Taller 02 · Preparación de datos ICFES — JSON | Taller | `workshops/` | Completado |
+| Taller 03 · Regresión lineal para predicción de precios de viviendas | Taller | [Notebook e informe](workshops/index.qmd) | Completado |
 | Ventas · costos y valor de facturación | Dataset | `data/` (repo público) | Documentado |
 | Citas mensuales y personal | Dataset | `data/` (repo público) | Documentado |
 | Clientes · compra (variables codificadas) | Dataset | `data/` (repo público) | Documentado |
