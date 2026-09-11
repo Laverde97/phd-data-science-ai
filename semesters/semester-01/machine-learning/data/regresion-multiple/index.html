@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Data – PhD · Data Science &amp; Artificial Intelligence</title>
+<title>Dataset · Regresión múltiple – PhD · Data Science &amp; Artificial Intelligence</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -26,30 +26,65 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="../../../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../../../">
-<link href="../../../../assets/favicon.svg" rel="icon" type="image/svg+xml">
-<script src="../../../../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting-bb62276ab45c84d9efd712f51ff97b5a.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-5a1953863e1f72ef3b996ef827f01ca7.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting-bb62276ab45c84d9efd712f51ff97b5a.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
-<script src="../../../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../../site_libs/bootstrap/bootstrap-a58c86101bc34570451673160a4dbce4.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../../../site_libs/bootstrap/bootstrap-dark-65ebfb0a4b0a3cf3d4092898e9ac8cae.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../../../site_libs/bootstrap/bootstrap-a58c86101bc34570451673160a4dbce4.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="../../../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../../../">
+<link href="../../../../../assets/favicon.svg" rel="icon" type="image/svg+xml">
+<script src="../../../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../../../site_libs/quarto-html/quarto-syntax-highlighting-bb62276ab45c84d9efd712f51ff97b5a.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-5a1953863e1f72ef3b996ef827f01ca7.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../../../../site_libs/quarto-html/quarto-syntax-highlighting-bb62276ab45c84d9efd712f51ff97b5a.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../../../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../../../site_libs/bootstrap/bootstrap-a58c86101bc34570451673160a4dbce4.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../../../site_libs/bootstrap/bootstrap-dark-65ebfb0a4b0a3cf3d4092898e9ac8cae.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../../../../site_libs/bootstrap/bootstrap-a58c86101bc34570451673160a4dbce4.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -79,12 +114,12 @@ ul.task-list li input[type="checkbox"] {
 <style>html{ scroll-behavior: smooth; }</style>
 
 
-<link rel="stylesheet" href="../../../../styles.css">
-<meta property="og:title" content="Data – PhD · Data Science &amp; Artificial Intelligence">
-<meta property="og:description" content="Machine Learning · Semestre 1">
+<link rel="stylesheet" href="../../../../../styles.css">
+<meta property="og:title" content="Dataset · Regresión múltiple – PhD · Data Science &amp; Artificial Intelligence">
+<meta property="og:description" content="Ficha de dataset · Machine Learning · Semestre 1">
 <meta property="og:site_name" content="PhD · Data Science &amp; Artificial Intelligence">
-<meta name="twitter:title" content="Data – PhD · Data Science &amp; Artificial Intelligence">
-<meta name="twitter:description" content="Machine Learning · Semestre 1">
+<meta name="twitter:title" content="Dataset · Regresión múltiple – PhD · Data Science &amp; Artificial Intelligence">
+<meta name="twitter:description" content="Ficha de dataset · Machine Learning · Semestre 1">
 <meta name="twitter:card" content="summary">
 </head>
 
@@ -257,11 +292,11 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="../../../../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../../../../assets/logo.svg" alt="" class="navbar-logo light-content">
-    <img src="../../../../assets/logo.svg" alt="" class="navbar-logo dark-content">
+    <a href="../../../../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../../../../assets/logo.svg" alt="" class="navbar-logo light-content">
+    <img src="../../../../../assets/logo.svg" alt="" class="navbar-logo dark-content">
     </a>
-    <a class="navbar-brand" href="../../../../index.html">
+    <a class="navbar-brand" href="../../../../../index.html">
     <span class="navbar-title">PhD · Data Science &amp; Artificial Intelligence</span>
     </a>
   </div>
@@ -272,7 +307,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../../../index.html"> 
+    <a class="nav-link" href="../../../../../index.html"> 
 <span class="menu-text">Inicio</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -281,21 +316,21 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-semestres">    
         <li>
-    <a class="dropdown-item" href="../../../../semesters/index.html">
+    <a class="dropdown-item" href="../../../../../semesters/index.html">
  <span class="dropdown-text">Todos los semestres</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../../../semesters/semester-01/index.html">
+    <a class="dropdown-item" href="../../../../../semesters/semester-01/index.html">
  <span class="dropdown-text">Semestre 1</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../../../semesters/semester-01/machine-learning/index.html">
+    <a class="dropdown-item" href="../../../../../semesters/semester-01/machine-learning/index.html">
  <span class="dropdown-text">Semestre 1 · Machine Learning</span></a>
   </li>  
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="../../../../research/index.html"> 
+    <a class="nav-link" href="../../../../../research/index.html"> 
 <span class="menu-text">Investigación</span></a>
   </li>  
 </ul>
@@ -327,10 +362,12 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#datasets" id="toc-datasets" class="nav-link active" data-scroll-target="#datasets">Datasets</a></li>
-  <li><a href="#convención" id="toc-convención" class="nav-link" data-scroll-target="#convención">Convención</a></li>
+  <li><a href="#propósito" id="toc-propósito" class="nav-link active" data-scroll-target="#propósito">Propósito</a></li>
+  <li><a href="#variables" id="toc-variables" class="nav-link" data-scroll-target="#variables">Variables</a></li>
+  <li><a href="#riesgos-de-privacidad" id="toc-riesgos-de-privacidad" class="nav-link" data-scroll-target="#riesgos-de-privacidad">Riesgos de privacidad</a></li>
+  <li><a href="#cargar-en-python-google-colab" id="toc-cargar-en-python-google-colab" class="nav-link" data-scroll-target="#cargar-en-python-google-colab">Cargar en Python / Google Colab</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/data/index.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/data/regresion-multiple/index.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -338,8 +375,8 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Data</h1>
-<p class="subtitle lead">Machine Learning · Semestre 1</p>
+<h1 class="title">Dataset · Regresión múltiple</h1>
+<p class="subtitle lead">Ficha de dataset · Machine Learning · Semestre 1</p>
 </div>
 
 
@@ -356,80 +393,151 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Datasets utilizados en el módulo, cada uno con su ficha (variables, dimensiones, tipos y propósito). Los archivos son pequeños y de uso didáctico.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><strong>Archivo en el repo</strong></td>
+<td><code>dataset_regresion_multiple.csv</code></td>
+</tr>
+<tr class="even">
+<td><strong>Formato</strong></td>
+<td>CSV, separador <code>,</code>, codificación UTF-8 (con BOM)</td>
+</tr>
+<tr class="odd">
+<td><strong>Tamaño</strong></td>
+<td>187.629 bytes</td>
+</tr>
+<tr class="even">
+<td><strong>Dimensiones</strong></td>
+<td>5.000 filas de datos × 9 columnas (+ fila de cabecera)</td>
+</tr>
+<tr class="odd">
+<td><strong>Valores faltantes</strong></td>
+<td>Ninguno (0 en las 9 columnas)</td>
+</tr>
+<tr class="even">
+<td><strong>Procedencia</strong></td>
+<td>Material de trabajo del curso</td>
+</tr>
+<tr class="odd">
+<td><strong>Licencia</strong></td>
+<td>Pendiente de confirmar</td>
+</tr>
+<tr class="even">
+<td><strong>SHA-256</strong></td>
+<td><code>951a21893c2e78ccec09d415164ada9e5194cfc9382224f69a49cfdcce674e10</code></td>
+</tr>
+</tbody>
+</table>
+<section id="propósito" class="level2">
+<h2 class="anchored" data-anchor-id="propósito">Propósito</h2>
+<p>Dataset utilizado para ejercicios y modelado de <strong>regresión lineal múltiple</strong>: predicción del <code>Salario</code> a partir de variables demográficas y laborales (edad, experiencia, horas de trabajo, nivel educativo, proyectos, certificaciones, género y ciudad).</p>
+</section>
+<section id="variables" class="level2">
+<h2 class="anchored" data-anchor-id="variables">Variables</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 26%">
+<col style="width: 15%">
+<col style="width: 34%">
+<col style="width: 23%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Variable</th>
+<th>Tipo</th>
+<th>Descripción</th>
+<th>Ejemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>Edad</code></td>
+<td>Entero</td>
+<td>Edad de la persona, en años (rango observado 18–69)</td>
+<td><code>56</code></td>
+</tr>
+<tr class="even">
+<td><code>Experiencia_Anios</code></td>
+<td>Entero</td>
+<td>Años de experiencia laboral (rango observado 0–39)</td>
+<td><code>9</code></td>
+</tr>
+<tr class="odd">
+<td><code>Horas_Trabajo_Semanal</code></td>
+<td>Decimal</td>
+<td>Horas de trabajo por semana (rango observado 11.7–68.4)</td>
+<td><code>37.3</code></td>
+</tr>
+<tr class="even">
+<td><code>Nivel_Educacion</code></td>
+<td>Entero (1–5)</td>
+<td>Nivel educativo codificado numéricamente; el significado de cada código no está confirmado en la fuente</td>
+<td><code>3</code></td>
+</tr>
+<tr class="odd">
+<td><code>Num_Proyectos</code></td>
+<td>Entero</td>
+<td>Número de proyectos (rango observado 0–24)</td>
+<td><code>12</code></td>
+</tr>
+<tr class="even">
+<td><code>Certificaciones</code></td>
+<td>Entero</td>
+<td>Número de certificaciones (rango observado 0–9)</td>
+<td><code>8</code></td>
+</tr>
+<tr class="odd">
+<td><code>Genero</code></td>
+<td>Categórica (<code>F</code>/<code>M</code>)</td>
+<td>Género de la persona</td>
+<td><code>F</code></td>
+</tr>
+<tr class="even">
+<td><code>Ciudad</code></td>
+<td>Categórica</td>
+<td>Ciudad: <code>Barranquilla</code>, <code>Bogotá</code>, <code>Cali</code> o <code>Medellín</code></td>
+<td><code>Medellín</code></td>
+</tr>
+<tr class="odd">
+<td><code>Salario</code></td>
+<td>Decimal</td>
+<td><strong>Variable objetivo.</strong> Salario (unidad monetaria no especificada; rango observado 2694.39–14957.32)</td>
+<td><code>7985.65</code></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="riesgos-de-privacidad" class="level2">
+<h2 class="anchored" data-anchor-id="riesgos-de-privacidad">Riesgos de privacidad</h2>
+<p>Contiene atributos demográficos y laborales (edad, género, ciudad, salario) pero <strong>sin identificadores directos</strong> (no hay nombre, documento, correo, teléfono ni dirección). Se verificó explícitamente la ausencia de cédulas/documentos, nombres personales, correos, teléfonos, direcciones, credenciales, contraseñas y tokens antes de publicarlo.</p>
 <div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Warning</span>Seguridad de datos
+<span class="screen-reader-only">Warning</span>Uso didáctico
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>No se publican datos sensibles, privados, con información personal identificable o con restricciones de licencia. Cuando un dataset no pueda compartirse, esta sección documenta únicamente su <strong>origen</strong>, <strong>descripción</strong>, <strong>variables</strong>, <strong>esquema</strong> y <strong>procedimiento de acceso</strong>.</p>
+<p>Este dataset se publica únicamente con fines didácticos, como material de práctica del curso. Su procedencia y licencia todavía no están confirmadas; no debe usarse para decisiones reales sobre personas ni combinarse con otras fuentes que permitan reidentificación.</p>
 </div>
 </div>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p><strong>Procedencia y licencia pendientes de confirmar.</strong> Los cuatro datasets provienen del material de trabajo del curso; su origen y condiciones de uso todavía no están verificados. Se publican como ejemplos didácticos y se actualizarán las fichas cuando se confirme la procedencia.</p>
-</div>
-</div>
-<section id="datasets" class="level2">
-<h2 class="anchored" data-anchor-id="datasets">Datasets</h2>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Dataset</th>
-<th style="text-align: center;">Filas × Cols</th>
-<th>Formato</th>
-<th>Propósito</th>
-<th>Ficha</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Ventas · costos y valor de facturación</td>
-<td style="text-align: center;">10 × 3</td>
-<td>CSV <code>;</code></td>
-<td>Márgenes; regresión simple</td>
-<td><a href="../../../../semesters/semester-01/machine-learning/data/ventas-costos-facturacion/index.html">Ver ficha</a></td>
-</tr>
-<tr class="even">
-<td>Citas mensuales y personal</td>
-<td style="text-align: center;">10 × 3</td>
-<td>CSV <code>,</code></td>
-<td>Serie agregada; regresión/correlación</td>
-<td><a href="../../../../semesters/semester-01/machine-learning/data/citas-mensuales/index.html">Ver ficha</a></td>
-</tr>
-<tr class="odd">
-<td>Clientes · compra (variables codificadas)</td>
-<td style="text-align: center;">12 × 6</td>
-<td>CSV <code>,</code></td>
-<td>Preprocesamiento <em>one-hot</em>; clasificación binaria</td>
-<td><a href="../../../../semesters/semester-01/machine-learning/data/clientes-compra-codificado/index.html">Ver ficha</a></td>
-</tr>
-<tr class="even">
-<td>Dataset · Regresión múltiple</td>
-<td style="text-align: center;">5.000 × 9</td>
-<td>CSV <code>,</code></td>
-<td>Regresión lineal múltiple (predicción de salario)</td>
-<td><a href="../../../../semesters/semester-01/machine-learning/data/regresion-multiple/index.html">Ver ficha</a></td>
-</tr>
-</tbody>
-</table>
 </section>
-<section id="convención" class="level2">
-<h2 class="anchored" data-anchor-id="convención">Convención</h2>
-<p>Una carpeta por dataset: <code>nombre-en-kebab-case/</code> con el archivo de datos y un <code>index.qmd</code> que actúa como ficha. Datos sin procesar en <code>raw/</code> y derivados en <code>processed/</code> cuando aplique.</p>
+<section id="cargar-en-python-google-colab" class="level2">
+<h2 class="anchored" data-anchor-id="cargar-en-python-google-colab">Cargar en Python / Google Colab</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>dataset <span class="op">=</span> pd.read_csv(</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"https://raw.githubusercontent.com/Laverde97/phd-data-science-ai/main/semesters/semester-01/machine-learning/data/regresion-multiple/dataset_regresion_multiple.csv"</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>dataset.head()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 
 
 </section>
@@ -863,7 +971,7 @@ Note
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/data/index.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/data/regresion-multiple/index.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>Built with <a href="https://quarto.org">Quarto</a></p>
 </div>
@@ -873,5 +981,5 @@ Note
 
 
 
-<script src="../../../../site_libs/quarto-html/zenscroll-min.js"></script>
+<script src="../../../../../site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>
