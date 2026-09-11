@@ -74,7 +74,7 @@ Seguimiento de los materiales realmente incorporados. Se **edita directamente en
 (`semesters/semester-01/machine-learning/index.qmd`) y queda versionado en cada commit.
 
 Estado actual: **4 tareas completadas**, **4 notebooks de tareas**, **9 apuntes de clase**,
-**5 guías de aprendizaje**, **3 talleres**, **3 datasets documentados** y las **presentaciones
+**5 guías de aprendizaje**, **3 talleres**, **4 datasets documentados** y las **presentaciones
 de clase en almacenamiento privado**.
 
 | Material | Tipo | Ubicación | Estado |
@@ -103,6 +103,7 @@ de clase en almacenamiento privado**.
 | Ventas · costos y valor de facturación | Dataset | `data/` (repo público) | Documentado |
 | Citas mensuales y personal | Dataset | `data/` (repo público) | Documentado |
 | Clientes · compra (variables codificadas) | Dataset | `data/` (repo público) | Documentado |
+| Dataset · Regresión múltiple | Dataset | `data/` (repo público) | Documentado |
 | Introducción a Machine Learning | Presentación | Almacenamiento privado | Inventariado |
 | Preparación de datos | Presentación | Almacenamiento privado | Inventariado |
 | Separación de datos | Presentación | Almacenamiento privado | Inventariado |

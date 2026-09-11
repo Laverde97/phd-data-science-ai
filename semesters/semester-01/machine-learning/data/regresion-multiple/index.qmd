@@ -1,0 +1,62 @@
+---
+title: "Dataset · Regresión múltiple"
+subtitle: "Ficha de dataset · Machine Learning · Semestre 1"
+---
+
+| | |
+|---|---|
+| **Archivo en el repo** | `dataset_regresion_multiple.csv` |
+| **Formato** | CSV, separador `,`, codificación UTF-8 (con BOM) |
+| **Tamaño** | 187.629 bytes |
+| **Dimensiones** | 5.000 filas de datos × 9 columnas (+ fila de cabecera) |
+| **Valores faltantes** | Ninguno (0 en las 9 columnas) |
+| **Procedencia** | Material de trabajo del curso |
+| **Licencia** | Pendiente de confirmar |
+| **SHA-256** | `951a21893c2e78ccec09d415164ada9e5194cfc9382224f69a49cfdcce674e10` |
+
+## Propósito
+
+Dataset utilizado para ejercicios y modelado de **regresión lineal múltiple**: predicción del
+`Salario` a partir de variables demográficas y laborales (edad, experiencia, horas de trabajo,
+nivel educativo, proyectos, certificaciones, género y ciudad).
+
+## Variables
+
+| Variable | Tipo | Descripción | Ejemplo |
+|----------|------|-------------|---------|
+| `Edad` | Entero | Edad de la persona, en años (rango observado 18–69) | `56` |
+| `Experiencia_Anios` | Entero | Años de experiencia laboral (rango observado 0–39) | `9` |
+| `Horas_Trabajo_Semanal` | Decimal | Horas de trabajo por semana (rango observado 11.7–68.4) | `37.3` |
+| `Nivel_Educacion` | Entero (1–5) | Nivel educativo codificado numéricamente; el significado de cada código no está confirmado en la fuente | `3` |
+| `Num_Proyectos` | Entero | Número de proyectos (rango observado 0–24) | `12` |
+| `Certificaciones` | Entero | Número de certificaciones (rango observado 0–9) | `8` |
+| `Genero` | Categórica (`F`/`M`) | Género de la persona | `F` |
+| `Ciudad` | Categórica | Ciudad: `Barranquilla`, `Bogotá`, `Cali` o `Medellín` | `Medellín` |
+| `Salario` | Decimal | **Variable objetivo.** Salario (unidad monetaria no especificada; rango observado 2694.39–14957.32) | `7985.65` |
+
+## Riesgos de privacidad
+
+Contiene atributos demográficos y laborales (edad, género, ciudad, salario) pero **sin
+identificadores directos** (no hay nombre, documento, correo, teléfono ni dirección). Se
+verificó explícitamente la ausencia de cédulas/documentos, nombres personales, correos,
+teléfonos, direcciones, credenciales, contraseñas y tokens antes de publicarlo.
+
+::: {.callout-warning}
+## Uso didáctico
+
+Este dataset se publica únicamente con fines didácticos, como material de práctica del curso.
+Su procedencia y licencia todavía no están confirmadas; no debe usarse para decisiones reales
+sobre personas ni combinarse con otras fuentes que permitan reidentificación.
+:::
+
+## Cargar en Python / Google Colab
+
+```python
+import pandas as pd
+
+dataset = pd.read_csv(
+    "https://raw.githubusercontent.com/Laverde97/phd-data-science-ai/main/semesters/semester-01/machine-learning/data/regresion-multiple/dataset_regresion_multiple.csv"
+)
+
+dataset.head()
+```
