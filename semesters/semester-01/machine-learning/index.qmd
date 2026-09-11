@@ -46,7 +46,7 @@ para predicción de precios de viviendas, con notebooks para Google Colab.
 
 ::: {.resource-card}
 ### 🚀 Notebooks · Colab
-Plantilla reproducible, 4 notebooks de tareas, 8 apuntes de clase y 5 guías de aprendizaje,
+Plantilla reproducible, 4 notebooks de tareas, 9 apuntes de clase y 5 guías de aprendizaje,
 todos con badge para abrir en Google Colab.
 
 [Explorar notebooks](notebooks/index.qmd)
@@ -73,7 +73,7 @@ Resúmenes, conceptos, fórmulas y material de estudio personal.
 Seguimiento de los materiales realmente incorporados. Se **edita directamente en este archivo**
 (`semesters/semester-01/machine-learning/index.qmd`) y queda versionado en cada commit.
 
-Estado actual: **4 tareas completadas**, **4 notebooks de tareas**, **8 apuntes de clase**,
+Estado actual: **4 tareas completadas**, **4 notebooks de tareas**, **9 apuntes de clase**,
 **5 guías de aprendizaje**, **3 talleres**, **3 datasets documentados** y las **presentaciones
 de clase en almacenamiento privado**.
 
@@ -91,6 +91,7 @@ de clase en almacenamiento privado**.
 | Apunte de clase · 07/09/2026 | Apunte | `notebooks/class-notes/` | Incorporado |
 | Apunte de clase · 08/09/2026 · Preparación de datos (cont.) | Apunte | `notebooks/class-notes/` | Incorporado |
 | Apunte de clase · 08/09/2026 · Regresión lineal simple | Apunte | `notebooks/class-notes/` | Incorporado |
+| Apunte de clase · 10/09/2026 · Regresión lineal múltiple | Apunte | `notebooks/class-notes/` | Incorporado |
 | Guía · Preparando los datos | Guía de aprendizaje | `notebooks/learning-guides/` | Incorporada |
 | Guía · Separando los datos | Guía de aprendizaje | `notebooks/learning-guides/` | Incorporada |
 | Guía · Supervisado vs. No supervisado | Guía de aprendizaje | `notebooks/learning-guides/` | Incorporada |
