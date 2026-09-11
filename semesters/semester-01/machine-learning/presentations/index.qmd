@@ -24,9 +24,13 @@ Las presentaciones **propias** que se elaboren más adelante sí se publicarán 
 | 2 | Preparación de datos | PPTX | Docentes del curso | Almacenamiento privado — no distribuible públicamente |
 | 3 | Separación de datos | PPTX + PDF | Docentes del curso | Almacenamiento privado — no distribuible públicamente |
 | 4 | Modelos de regresión | PPTX | Docentes del curso | Almacenamiento privado — no distribuible públicamente |
+| 5 | Regresión múltiple | PPTX | Docentes del curso | Almacenamiento privado — no distribuible públicamente |
 
 *Modelos de regresión* (08/09/2026) cubre conceptos de regresión, regresión lineal simple,
 mínimos cuadrados y el ejemplo experiencia–salario.
+
+*Regresión múltiple* (10/09/2026) aborda el modelo de regresión lineal múltiple, variables
+dummy, entrenamiento del modelo y selección progresiva de variables mediante OLS.
 
 ## Material de apoyo
 
