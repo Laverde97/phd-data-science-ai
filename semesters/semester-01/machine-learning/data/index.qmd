@@ -16,7 +16,7 @@ acceso**.
 :::
 
 ::: {.callout-note}
-**Procedencia y licencia pendientes de confirmar.** Los tres datasets provienen del material
+**Procedencia y licencia pendientes de confirmar.** Los cuatro datasets provienen del material
 de trabajo del curso; su origen y condiciones de uso todavía no están verificados. Se publican
 como ejemplos didácticos y se actualizarán las fichas cuando se confirme la procedencia.
 :::
@@ -28,6 +28,7 @@ como ejemplos didácticos y se actualizarán las fichas cuando se confirme la pr
 | Ventas · costos y valor de facturación | 10 × 3 | CSV `;` | Márgenes; regresión simple | [Ver ficha](ventas-costos-facturacion/index.qmd) |
 | Citas mensuales y personal | 10 × 3 | CSV `,` | Serie agregada; regresión/correlación | [Ver ficha](citas-mensuales/index.qmd) |
 | Clientes · compra (variables codificadas) | 12 × 6 | CSV `,` | Preprocesamiento *one-hot*; clasificación binaria | [Ver ficha](clientes-compra-codificado/index.qmd) |
+| Dataset · Regresión múltiple | 5.000 × 9 | CSV `,` | Regresión lineal múltiple (predicción de salario) | [Ver ficha](regresion-multiple/index.qmd) |
 
 ## Convención
 
