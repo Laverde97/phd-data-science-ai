@@ -20,6 +20,7 @@ Si el taller es un notebook, incluye su badge **Open in Colab**.
 | 02 | Preparación de datos ICFES — JSON | 08/09/2026 | — | [GitHub][w2nb] | [Open in Colab][w2cl] | — | — | Completado |
 | 03 | Regresión lineal para predicción de precios de viviendas | 10/09/2026 | Privado | [GitHub][w3nb] | [Open in Colab][w3cl] | [QMD][w3qmd] | [PDF](workshop-03-regresion-lineal-viviendas.pdf) | Completado |
 | 04 | Regresión lineal múltiple: selección de variables con OLS | 14/09/2026 | — | [GitHub][w4nb] | [Open in Colab][w4cl] | — | — | Completado |
+| 05 | Árboles de Decisión para Regresión — California Housing | 16/09/2026 | — | [GitHub][w5nb] | [Open in Colab][w5cl] | — | [PDF](workshop-05-arbol-decision-california-housing.pdf) | Completado |
 
 : Talleres del módulo {.striped .hover}
 
@@ -35,6 +36,9 @@ Si el taller es un notebook, incluye su badge **Open in Colab**.
 
 [w4nb]: https://github.com/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/workshops/workshop-04-regresion-multiple-seleccion-variables.ipynb
 [w4cl]: https://colab.research.google.com/github/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/workshops/workshop-04-regresion-multiple-seleccion-variables.ipynb
+
+[w5nb]: https://github.com/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/workshops/workshop-05-arbol-decision-california-housing.ipynb
+[w5cl]: https://colab.research.google.com/github/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/workshops/workshop-05-arbol-decision-california-housing.ipynb
 
 ::: {.callout-note}
 ## Taller 03 — enunciado y solución
