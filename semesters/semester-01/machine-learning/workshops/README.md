@@ -8,7 +8,7 @@ Inventario de ejercicios prácticos reproducibles del módulo.
 | 02 · Preparación de datos ICFES — JSON | 08/09/2026 | — | [Notebook](workshop-02-icfes-json.ipynb) | — | — |
 | 03 · Regresión lineal para predicción de precios de viviendas | 10/09/2026 | Privado | [Notebook](workshop-03-regresion-lineal-viviendas.ipynb) | [QMD](workshop-03-regresion-lineal-viviendas.qmd) | [PDF](workshop-03-regresion-lineal-viviendas.pdf) |
 | 04 · Regresión lineal múltiple: selección de variables con OLS | 14/09/2026 | — | [Notebook](workshop-04-regresion-multiple-seleccion-variables.ipynb) | — | — |
-| 05 · Árboles de Decisión para Regresión — California Housing | 16/09/2026 | — | [Notebook](workshop-05-arbol-decision-california-housing.ipynb) | — | [PDF](workshop-05-arbol-decision-california-housing.pdf) |
+| 05 · Árboles de Decisión para Regresión — California Housing | 16/09/2026 | Privado | [Notebook](workshop-05-arbol-decision-california-housing.ipynb) | — | [PDF](workshop-05-arbol-decision-california-housing.pdf) |
 
 Los cinco notebooks incluyen un badge **Open in Colab** en la primera celda Markdown.
 
