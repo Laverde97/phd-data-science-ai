@@ -21,6 +21,7 @@ Si el taller es un notebook, incluye su badge **Open in Colab**.
 | 03 | Regresión lineal para predicción de precios de viviendas | 10/09/2026 | Privado | [GitHub][w3nb] | [Open in Colab][w3cl] | [QMD][w3qmd] | [PDF](workshop-03-regresion-lineal-viviendas.pdf) | Completado |
 | 04 | Regresión lineal múltiple: selección de variables con OLS | 14/09/2026 | — | [GitHub][w4nb] | [Open in Colab][w4cl] | — | — | Completado |
 | 05 | Árboles de Decisión para Regresión — California Housing | 16/09/2026 | Privado | [GitHub][w5nb] | [Open in Colab][w5cl] | — | [PDF](workshop-05-arbol-decision-california-housing.pdf) | Completado |
+| 06 | Random Forest vs. Árbol de Decisión para Regresión | 17/09/2026 | — | [GitHub][w6nb] | [Open in Colab][w6cl] | — | — | Completado |
 
 : Talleres del módulo {.striped .hover}
 
@@ -40,6 +41,9 @@ Si el taller es un notebook, incluye su badge **Open in Colab**.
 [w5nb]: https://github.com/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/workshops/workshop-05-arbol-decision-california-housing.ipynb
 [w5cl]: https://colab.research.google.com/github/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/workshops/workshop-05-arbol-decision-california-housing.ipynb
 
+[w6nb]: https://github.com/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/workshops/workshop-06-random-forest-vs-arbol-decision-regresion.ipynb
+[w6cl]: https://colab.research.google.com/github/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/workshops/workshop-06-random-forest-vs-arbol-decision-regresion.ipynb
+
 ::: {.callout-note}
 ## Taller 03 — enunciado y solución
 
@@ -58,7 +62,9 @@ El **enunciado** original es material de clase y se conserva de forma privada; *
 - `train_test_split`;
 - regresión lineal simple y predicción de precios de viviendas;
 - evaluación mediante R², RMSE y MAPE;
-- visualización de la recta de regresión y análisis de residuos.
+- visualización de la recta de regresión y análisis de residuos;
+- árboles de decisión y bosques aleatorios (Random Forest) para regresión;
+- comparación entre modelos e importancia de variables (*feature importance*).
 
 ::: {.callout-note}
 CSV y JSON representan dos formatos de almacenamiento diferentes, pero el objetivo de Machine
