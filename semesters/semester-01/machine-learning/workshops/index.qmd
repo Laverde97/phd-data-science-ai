@@ -22,6 +22,7 @@ Si el taller es un notebook, incluye su badge **Open in Colab**.
 | 04 | Regresión lineal múltiple: selección de variables con OLS | 14/09/2026 | — | [GitHub][w4nb] | [Open in Colab][w4cl] | — | — | Completado |
 | 05 | Árboles de Decisión para Regresión — California Housing | 16/09/2026 | Privado | [GitHub][w5nb] | [Open in Colab][w5cl] | — | [PDF](workshop-05-arbol-decision-california-housing.pdf) | Completado |
 | 06 | Random Forest vs. Árbol de Decisión para Regresión | 17/09/2026 | — | [GitHub][w6nb] | [Open in Colab][w6cl] | — | — | Completado |
+| 07 | Árbol de Decisión para Clasificación — Cáncer de Mama (Entropía) | 20/09/2026 | — | [GitHub][w7nb] | [Open in Colab][w7cl] | — | — | Completado |
 
 : Talleres del módulo {.striped .hover}
 
@@ -44,6 +45,9 @@ Si el taller es un notebook, incluye su badge **Open in Colab**.
 [w6nb]: https://github.com/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/workshops/workshop-06-random-forest-vs-arbol-decision-regresion.ipynb
 [w6cl]: https://colab.research.google.com/github/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/workshops/workshop-06-random-forest-vs-arbol-decision-regresion.ipynb
 
+[w7nb]: https://github.com/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/workshops/workshop-07-arbol-decision-clasificacion-cancer-mama.ipynb
+[w7cl]: https://colab.research.google.com/github/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/workshops/workshop-07-arbol-decision-clasificacion-cancer-mama.ipynb
+
 ::: {.callout-note}
 ## Taller 03 — enunciado y solución
 
@@ -64,7 +68,8 @@ El **enunciado** original es material de clase y se conserva de forma privada; *
 - evaluación mediante R², RMSE y MAPE;
 - visualización de la recta de regresión y análisis de residuos;
 - árboles de decisión y bosques aleatorios (Random Forest) para regresión;
-- comparación entre modelos e importancia de variables (*feature importance*).
+- comparación entre modelos e importancia de variables (*feature importance*);
+- árboles de decisión para clasificación con criterio de entropía y frontera de decisión.
 
 ::: {.callout-note}
 CSV y JSON representan dos formatos de almacenamiento diferentes, pero el objetivo de Machine

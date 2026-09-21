@@ -38,10 +38,11 @@ Datasets del módulo, cada uno con su ficha de variables, dimensiones y esquema.
 
 ::: {.resource-card}
 ### 🧪 Talleres
-Seis talleres guiados: preparación de datos ICFES (variantes CSV y JSON), regresión lineal
+Siete talleres guiados: preparación de datos ICFES (variantes CSV y JSON), regresión lineal
 para predicción de precios de viviendas, regresión lineal múltiple con selección de variables,
-árboles de decisión para regresión y comparación entre Random Forest y árbol de decisión, con
-notebooks para Google Colab.
+árboles de decisión para regresión y comparación entre Random Forest y árbol de decisión, y
+clasificación de cáncer de mama con árbol de decisión y entropía, con notebooks para Google
+Colab.
 
 [Explorar talleres](workshops/index.qmd)
 :::
@@ -76,7 +77,7 @@ Seguimiento de los materiales realmente incorporados. Se **edita directamente en
 (`semesters/semester-01/machine-learning/index.qmd`) y queda versionado en cada commit.
 
 Estado actual: **4 tareas completadas**, **4 notebooks de tareas**, **9 apuntes de clase**,
-**6 guías de aprendizaje**, **6 talleres**, **4 datasets documentados** y las **presentaciones
+**6 guías de aprendizaje**, **7 talleres**, **4 datasets documentados** y las **presentaciones
 de clase en almacenamiento privado**.
 
 | Material | Tipo | Ubicación | Estado |
@@ -106,6 +107,7 @@ de clase en almacenamiento privado**.
 | Taller 04 · Regresión lineal múltiple: selección de variables con OLS | Taller | `workshops/` | Completado |
 | Taller 05 · Árboles de Decisión para Regresión — California Housing | Taller | `workshops/` | Completado |
 | Taller 06 · Random Forest vs. Árbol de Decisión para Regresión | Taller | `workshops/` | Completado |
+| Taller 07 · Árbol de Decisión para Clasificación — Cáncer de Mama (Entropía) | Taller | `workshops/` | Completado |
 | Ventas · costos y valor de facturación | Dataset | `data/` (repo público) | Documentado |
 | Citas mensuales y personal | Dataset | `data/` (repo público) | Documentado |
 | Clientes · compra (variables codificadas) | Dataset | `data/` (repo público) | Documentado |

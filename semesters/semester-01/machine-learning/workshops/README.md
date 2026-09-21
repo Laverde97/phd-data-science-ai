@@ -10,8 +10,9 @@ Inventario de ejercicios prácticos reproducibles del módulo.
 | 04 · Regresión lineal múltiple: selección de variables con OLS | 14/09/2026 | — | [Notebook](workshop-04-regresion-multiple-seleccion-variables.ipynb) | — | — |
 | 05 · Árboles de Decisión para Regresión — California Housing | 16/09/2026 | Privado | [Notebook](workshop-05-arbol-decision-california-housing.ipynb) | — | [PDF](workshop-05-arbol-decision-california-housing.pdf) |
 | 06 · Random Forest vs. Árbol de Decisión para Regresión | 17/09/2026 | — | [Notebook](workshop-06-random-forest-vs-arbol-decision-regresion.ipynb) | — | — |
+| 07 · Árbol de Decisión para Clasificación — Cáncer de Mama (Entropía) | 20/09/2026 | — | [Notebook](workshop-07-arbol-decision-clasificacion-cancer-mama.ipynb) | — | — |
 
-Los seis notebooks incluyen un badge **Open in Colab** en la primera celda Markdown.
+Los siete notebooks incluyen un badge **Open in Colab** en la primera celda Markdown.
 
 ## Taller 03
 
