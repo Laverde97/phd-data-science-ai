@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Data – PhD · Data Science &amp; Artificial Intelligence</title>
+<title>Dataset · Cáncer de mama · Vigilancia epidemiológica – PhD · Data Science &amp; Artificial Intelligence</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -26,30 +26,65 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="../../../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../../../">
-<link href="../../../../assets/favicon.svg" rel="icon" type="image/svg+xml">
-<script src="../../../../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting-bb62276ab45c84d9efd712f51ff97b5a.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-5a1953863e1f72ef3b996ef827f01ca7.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting-bb62276ab45c84d9efd712f51ff97b5a.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
-<script src="../../../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../../site_libs/bootstrap/bootstrap-a58c86101bc34570451673160a4dbce4.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../../../site_libs/bootstrap/bootstrap-dark-65ebfb0a4b0a3cf3d4092898e9ac8cae.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../../../site_libs/bootstrap/bootstrap-a58c86101bc34570451673160a4dbce4.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="../../../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../../../">
+<link href="../../../../../assets/favicon.svg" rel="icon" type="image/svg+xml">
+<script src="../../../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../../../site_libs/quarto-html/quarto-syntax-highlighting-bb62276ab45c84d9efd712f51ff97b5a.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-5a1953863e1f72ef3b996ef827f01ca7.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../../../../site_libs/quarto-html/quarto-syntax-highlighting-bb62276ab45c84d9efd712f51ff97b5a.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../../../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../../../site_libs/bootstrap/bootstrap-a58c86101bc34570451673160a4dbce4.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../../../site_libs/bootstrap/bootstrap-dark-65ebfb0a4b0a3cf3d4092898e9ac8cae.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../../../../site_libs/bootstrap/bootstrap-a58c86101bc34570451673160a4dbce4.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -79,12 +114,12 @@ ul.task-list li input[type="checkbox"] {
 <style>html{ scroll-behavior: smooth; }</style>
 
 
-<link rel="stylesheet" href="../../../../styles.css">
-<meta property="og:title" content="Data – PhD · Data Science &amp; Artificial Intelligence">
-<meta property="og:description" content="Machine Learning · Semestre 1">
+<link rel="stylesheet" href="../../../../../styles.css">
+<meta property="og:title" content="Dataset · Cáncer de mama · Vigilancia epidemiológica – PhD · Data Science &amp; Artificial Intelligence">
+<meta property="og:description" content="Ficha de dataset · Machine Learning · Semestre 1">
 <meta property="og:site_name" content="PhD · Data Science &amp; Artificial Intelligence">
-<meta name="twitter:title" content="Data – PhD · Data Science &amp; Artificial Intelligence">
-<meta name="twitter:description" content="Machine Learning · Semestre 1">
+<meta name="twitter:title" content="Dataset · Cáncer de mama · Vigilancia epidemiológica – PhD · Data Science &amp; Artificial Intelligence">
+<meta name="twitter:description" content="Ficha de dataset · Machine Learning · Semestre 1">
 <meta name="twitter:card" content="summary">
 </head>
 
@@ -257,11 +292,11 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="../../../../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../../../../assets/logo.svg" alt="" class="navbar-logo light-content">
-    <img src="../../../../assets/logo.svg" alt="" class="navbar-logo dark-content">
+    <a href="../../../../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../../../../assets/logo.svg" alt="" class="navbar-logo light-content">
+    <img src="../../../../../assets/logo.svg" alt="" class="navbar-logo dark-content">
     </a>
-    <a class="navbar-brand" href="../../../../index.html">
+    <a class="navbar-brand" href="../../../../../index.html">
     <span class="navbar-title">PhD · Data Science &amp; Artificial Intelligence</span>
     </a>
   </div>
@@ -272,7 +307,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../../../index.html"> 
+    <a class="nav-link" href="../../../../../index.html"> 
 <span class="menu-text">Inicio</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -281,21 +316,21 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-semestres">    
         <li>
-    <a class="dropdown-item" href="../../../../semesters/index.html">
+    <a class="dropdown-item" href="../../../../../semesters/index.html">
  <span class="dropdown-text">Todos los semestres</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../../../semesters/semester-01/index.html">
+    <a class="dropdown-item" href="../../../../../semesters/semester-01/index.html">
  <span class="dropdown-text">Semestre 1</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../../../semesters/semester-01/machine-learning/index.html">
+    <a class="dropdown-item" href="../../../../../semesters/semester-01/machine-learning/index.html">
  <span class="dropdown-text">Semestre 1 · Machine Learning</span></a>
   </li>  
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="../../../../research/index.html"> 
+    <a class="nav-link" href="../../../../../research/index.html"> 
 <span class="menu-text">Investigación</span></a>
   </li>  
 </ul>
@@ -327,10 +362,16 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#datasets" id="toc-datasets" class="nav-link active" data-scroll-target="#datasets">Datasets</a></li>
-  <li><a href="#convención" id="toc-convención" class="nav-link" data-scroll-target="#convención">Convención</a></li>
+  <li><a href="#propósito" id="toc-propósito" class="nav-link active" data-scroll-target="#propósito">Propósito</a></li>
+  <li><a href="#diferencia-frente-al-dataset-de-clasificación" id="toc-diferencia-frente-al-dataset-de-clasificación" class="nav-link" data-scroll-target="#diferencia-frente-al-dataset-de-clasificación">Diferencia frente al dataset de clasificación</a></li>
+  <li><a href="#variables" id="toc-variables" class="nav-link" data-scroll-target="#variables">Variables</a></li>
+  <li><a href="#limitaciones-para-clasificación-supervisada" id="toc-limitaciones-para-clasificación-supervisada" class="nav-link" data-scroll-target="#limitaciones-para-clasificación-supervisada">Limitaciones para clasificación supervisada</a></li>
+  <li><a href="#calidad-de-los-datos" id="toc-calidad-de-los-datos" class="nav-link" data-scroll-target="#calidad-de-los-datos">Calidad de los datos</a></li>
+  <li><a href="#privacidad-y-protección-de-datos" id="toc-privacidad-y-protección-de-datos" class="nav-link" data-scroll-target="#privacidad-y-protección-de-datos">Privacidad y protección de datos</a></li>
+  <li><a href="#acceso-a-los-datos" id="toc-acceso-a-los-datos" class="nav-link" data-scroll-target="#acceso-a-los-datos">Acceso a los datos</a></li>
+  <li><a href="#cargar-en-python-google-colab" id="toc-cargar-en-python-google-colab" class="nav-link" data-scroll-target="#cargar-en-python-google-colab">Cargar en Python / Google Colab</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/data/index.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/data/cancer-de-mama/index.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -338,8 +379,8 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Data</h1>
-<p class="subtitle lead">Machine Learning · Semestre 1</p>
+<h1 class="title">Dataset · Cáncer de mama · Vigilancia epidemiológica</h1>
+<p class="subtitle lead">Ficha de dataset · Machine Learning · Semestre 1</p>
 </div>
 
 
@@ -356,87 +397,254 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Datasets utilizados en el módulo, cada uno con su ficha (variables, dimensiones, tipos y propósito). Los archivos son pequeños y de uso didáctico.</p>
-<div class="callout callout-style-default callout-warning callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Warning</span>Seguridad de datos
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>No se publican datos sensibles, privados, con información personal identificable o con restricciones de licencia. Cuando un dataset no pueda compartirse, esta sección documenta únicamente su <strong>origen</strong>, <strong>descripción</strong>, <strong>variables</strong>, <strong>esquema</strong> y <strong>procedimiento de acceso</strong>.</p>
-</div>
-</div>
+<table class="caption-top table">
+<tbody>
+<tr class="odd">
+<td><strong>Archivo en el repo</strong></td>
+<td><code>cancer_de_mama.csv</code></td>
+</tr>
+<tr class="even">
+<td><strong>Fuente oficial</strong></td>
+<td><a href="https://www.datos.gov.co/en/dataset/C-ncer-de-mama/v8kg-2j2j">Cáncer de mama — Datos Abiertos Colombia</a> (id <code>v8kg-2j2j</code>, distribución <code>1-026-22-000132</code>)</td>
+</tr>
+<tr class="odd">
+<td><strong>Formato</strong></td>
+<td>CSV, separador <code>,</code>, codificación Latin-1 / Windows-1252 (no es UTF-8 válido)</td>
+</tr>
+<tr class="even">
+<td><strong>Tamaño</strong></td>
+<td>330.246 bytes</td>
+</tr>
+<tr class="odd">
+<td><strong>Dimensiones</strong></td>
+<td>3.414 filas de datos × 15 columnas (+ fila de cabecera)</td>
+</tr>
+<tr class="even">
+<td><strong>Valores faltantes</strong></td>
+<td>58 en total, todos en <code>cod_ase_</code>; 0 en las demás columnas</td>
+</tr>
+<tr class="odd">
+<td><strong>Cobertura temporal</strong></td>
+<td>2016–2021 (columna <code>year_</code>)</td>
+</tr>
+<tr class="even">
+<td><strong>Cobertura geográfica</strong></td>
+<td>Medellín: 27 comunas/corregimientos y 337 barrios</td>
+</tr>
+<tr class="odd">
+<td><strong>Procedencia</strong></td>
+<td>Alcaldía de Medellín — Secretaría de Salud, Unidad de Gestión de la Información y el Conocimiento</td>
+</tr>
+<tr class="even">
+<td><strong>Licencia</strong></td>
+<td><a href="https://creativecommons.org/licenses/by-sa/4.0/legalcode">Creative Commons Attribution-ShareAlike 4.0 (CC BY-SA 4.0)</a></td>
+</tr>
+<tr class="odd">
+<td><strong>SHA-256</strong></td>
+<td><code>a795b9db94edd4a37bf664352c01f08998815a2598e406fcb7f5dedc35475144</code> — SHA-256 del archivo local publicado en este repositorio</td>
+</tr>
+</tbody>
+</table>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Note
+<span class="screen-reader-only">Note</span>Verificación de la fuente
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><strong>Procedencia y licencia.</strong> Cuatro de los cinco datasets provienen del material de trabajo del curso; su origen y condiciones de uso todavía no están verificados y se publican como ejemplos didácticos. El dataset <em>Cáncer de mama · vigilancia epidemiológica</em> es la excepción: su procedencia y licencia (CC BY-SA 4.0, Alcaldía de Medellín) sí fueron verificadas — ver su ficha para el detalle.</p>
+<p>Archivo local asociado al dataset oficial; correspondencia establecida mediante metadatos de la fuente oficial (nombre de archivo, descripción, editor, cobertura temporal y geográfica coincidentes con el catálogo de Datos Abiertos Colombia). No fue posible realizar comparación criptográfica con una descarga remota en esta ejecución, ya que el servidor de distribución (<code>medata.gov.co</code>) no fue alcanzable desde este entorno.</p>
 </div>
 </div>
-<section id="datasets" class="level2">
-<h2 class="anchored" data-anchor-id="datasets">Datasets</h2>
+<section id="propósito" class="level2">
+<h2 class="anchored" data-anchor-id="propósito">Propósito</h2>
+<p>Este dataset es un registro de vigilancia epidemiológica: pacientes atendidos en Instituciones Prestadoras de Servicios de Salud (IPS) de Medellín con diagnóstico de cáncer de mama, reportados entre 2016 y 2021. Es útil para:</p>
+<ul>
+<li>análisis exploratorio de datos (EDA);</li>
+<li>caracterización epidemiológica;</li>
+<li>análisis descriptivo, temporal y geográfico agregado;</li>
+<li>estudio de frecuencias por comuna, barrio, año y tipo de afiliación en salud;</li>
+<li>preparación y transformación de variables;</li>
+<li>aprendizaje de manejo responsable de datos de salud.</li>
+</ul>
+<p><strong>No es apto para un ejercicio estándar de clasificación supervisada de cáncer de mama.</strong> La columna <code>evento</code> tiene una única categoría (<code>CANCER DE MAMA</code>) en el 100% de los registros: no existe una variable objetivo con clases diagnósticas (p.&nbsp;ej. benigno vs.&nbsp;maligno), por lo que este dataset no debe describirse como insumo para Random Forest Classification ni Decision Tree Classification.</p>
+</section>
+<section id="diferencia-frente-al-dataset-de-clasificación" class="level2">
+<h2 class="anchored" data-anchor-id="diferencia-frente-al-dataset-de-clasificación">Diferencia frente al dataset de clasificación</h2>
+<p>Este archivo corresponde a un <strong>registro de casos</strong> de cáncer de mama (vigilancia en salud pública), no al dataset que se utilizará más adelante para distinguir clases diagnósticas mediante Árbol de Decisión o Random Forest de clasificación (por ejemplo, un dataset tipo Wisconsin Breast Cancer, con variables clínicas y una etiqueta benigno/maligno). Ambos datasets tratan el tema “cáncer de mama” pero tienen propósitos distintos: este es para análisis descriptivo/epidemiológico, el otro —pendiente de incorporar— será para clasificación supervisada.</p>
+</section>
+<section id="variables" class="level2">
+<h2 class="anchored" data-anchor-id="variables">Variables</h2>
 <table class="caption-top table">
+<colgroup>
+<col style="width: 34%">
+<col style="width: 20%">
+<col style="width: 44%">
+</colgroup>
 <thead>
 <tr class="header">
-<th>Dataset</th>
-<th style="text-align: center;">Filas × Cols</th>
-<th>Formato</th>
-<th>Propósito</th>
-<th>Ficha</th>
+<th>Variable</th>
+<th>Tipo</th>
+<th>Descripción</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Ventas · costos y valor de facturación</td>
-<td style="text-align: center;">10 × 3</td>
-<td>CSV <code>;</code></td>
-<td>Márgenes; regresión simple</td>
-<td><a href="../../../../semesters/semester-01/machine-learning/data/ventas-costos-facturacion/index.html">Ver ficha</a></td>
+<td><code>id</code></td>
+<td>Entero</td>
+<td>Identificador numérico del registro/caso.</td>
 </tr>
 <tr class="even">
-<td>Citas mensuales y personal</td>
-<td style="text-align: center;">10 × 3</td>
-<td>CSV <code>,</code></td>
-<td>Serie agregada; regresión/correlación</td>
-<td><a href="../../../../semesters/semester-01/machine-learning/data/citas-mensuales/index.html">Ver ficha</a></td>
+<td><code>semana</code></td>
+<td>Entero</td>
+<td>Semana epidemiológica de notificación (observado 1–53).</td>
 </tr>
 <tr class="odd">
-<td>Clientes · compra (variables codificadas)</td>
-<td style="text-align: center;">12 × 6</td>
-<td>CSV <code>,</code></td>
-<td>Preprocesamiento <em>one-hot</em>; clasificación binaria</td>
-<td><a href="../../../../semesters/semester-01/machine-learning/data/clientes-compra-codificado/index.html">Ver ficha</a></td>
+<td><code>edad_</code></td>
+<td>Entero</td>
+<td>Edad del paciente, en la unidad indicada por <code>uni_med_</code> (observado 17–98).</td>
 </tr>
 <tr class="even">
-<td>Dataset · Regresión múltiple</td>
-<td style="text-align: center;">5.000 × 9</td>
-<td>CSV <code>,</code></td>
-<td>Regresión lineal múltiple (predicción de salario)</td>
-<td><a href="../../../../semesters/semester-01/machine-learning/data/regresion-multiple/index.html">Ver ficha</a></td>
+<td><code>uni_med_</code></td>
+<td>Entero</td>
+<td>Unidad de medida de la edad. Significado exacto pendiente de confirmar en el diccionario de datos de la fuente (valor constante = 1 en este archivo).</td>
 </tr>
 <tr class="odd">
-<td>Cáncer de mama · vigilancia epidemiológica</td>
-<td style="text-align: center;">3.414 × 15</td>
-<td>CSV <code>,</code> (público, CC BY-SA 4.0)</td>
-<td>EDA y análisis epidemiológico descriptivo</td>
-<td><a href="../../../../semesters/semester-01/machine-learning/data/cancer-de-mama/index.html">Ver ficha</a></td>
+<td><code>sexo_</code></td>
+<td>Categórica (<code>F</code>/<code>M</code>)</td>
+<td>Sexo del paciente (F = 3.397 casos, M = 17 casos).</td>
+</tr>
+<tr class="even">
+<td><code>nombre_barrio</code></td>
+<td>Texto</td>
+<td>Barrio de residencia (337 valores distintos; incluye “Sin informacion”/“SIN INFORMACION” con capitalización inconsistente).</td>
+</tr>
+<tr class="odd">
+<td><code>comuna</code></td>
+<td>Texto</td>
+<td>Comuna o corregimiento de Medellín (27 valores distintos).</td>
+</tr>
+<tr class="even">
+<td><code>tipo_ss_</code></td>
+<td>Categórica (código)</td>
+<td>Tipo de afiliación al sistema de salud. Valores observados: <code>C</code>, <code>S</code>, <code>E</code>, <code>P</code>, <code>N</code>, <code>I</code>. Significado exacto pendiente de confirmar en el diccionario de datos de la fuente.</td>
+</tr>
+<tr class="odd">
+<td><code>cod_ase_</code></td>
+<td>Texto (código)</td>
+<td>Código de la entidad aseguradora (74 valores distintos). 58 valores faltantes.</td>
+</tr>
+<tr class="even">
+<td><code>fec_con_</code></td>
+<td>Fecha (texto)</td>
+<td>Fecha de consulta.</td>
+</tr>
+<tr class="odd">
+<td><code>ini_sin_</code></td>
+<td>Fecha (texto)</td>
+<td>Fecha de inicio de síntomas.</td>
+</tr>
+<tr class="even">
+<td><code>tip_cas_</code></td>
+<td>Entero (código)</td>
+<td>Tipo de caso. Valor constante (<code>3</code>) en todo el archivo; significado exacto pendiente de confirmar en el diccionario de datos de la fuente.</td>
+</tr>
+<tr class="odd">
+<td><code>pac_hos_</code></td>
+<td>Entero (código)</td>
+<td>Indicador relacionado con hospitalización del paciente. Valores observados: <code>1</code> (87 casos), <code>2</code> (3.327 casos); significado exacto de cada código pendiente de confirmar en el diccionario de datos de la fuente.</td>
+</tr>
+<tr class="even">
+<td><code>evento</code></td>
+<td>Categórica</td>
+<td>Nombre del evento de vigilancia. Único valor observado: <code>CANCER DE MAMA</code> (100% de los registros). <strong>No es una variable de clasificación.</strong></td>
+</tr>
+<tr class="odd">
+<td><code>year_</code></td>
+<td>Entero</td>
+<td>Año de notificación (2016–2021).</td>
 </tr>
 </tbody>
 </table>
+<p>No se incluyen ejemplos de filas individuales en esta ficha para evitar reproducir combinaciones de atributos a nivel de paciente.</p>
 </section>
-<section id="convención" class="level2">
-<h2 class="anchored" data-anchor-id="convención">Convención</h2>
-<p>Una carpeta por dataset: <code>nombre-en-kebab-case/</code> con el archivo de datos y un <code>index.qmd</code> que actúa como ficha. Datos sin procesar en <code>raw/</code> y derivados en <code>processed/</code> cuando aplique.</p>
+<section id="limitaciones-para-clasificación-supervisada" class="level2">
+<h2 class="anchored" data-anchor-id="limitaciones-para-clasificación-supervisada">Limitaciones para clasificación supervisada</h2>
+<ul>
+<li><code>evento</code> contiene una única clase (<code>CANCER DE MAMA</code>) en el 100% de los 3.414 registros.</li>
+<li>Un clasificador supervisado (Árbol de Decisión, Random Forest, etc.) requiere una variable objetivo con al menos dos clases con significado interpretable.</li>
+<li>Por lo tanto, este dataset <strong>no es adecuado</strong>, en su forma actual, para entrenar un modelo que distinga clases diagnósticas (p.&nbsp;ej. benigno/maligno).</li>
+<li>No se fabricará artificialmente una etiqueta a partir de otras columnas (como <code>tipo_ss_</code>, <code>pac_hos_</code> o <code>sexo_</code>) para forzar un ejercicio de clasificación.</li>
+<li>Para el taller de Árbol de Decisión / Random Forest de clasificación de cáncer de mama se buscará un dataset alternativo, correctamente etiquetado (ver nota de búsqueda más abajo), en una tarea separada.</li>
+</ul>
+</section>
+<section id="calidad-de-los-datos" class="level2">
+<h2 class="anchored" data-anchor-id="calidad-de-los-datos">Calidad de los datos</h2>
+<ul>
+<li>Dimensiones: 3.414 filas × 15 columnas.</li>
+<li>Valores faltantes: 58 en total, concentrados en <code>cod_ase_</code>; el resto de columnas no tiene faltantes.</li>
+<li>Filas duplicadas: 0.</li>
+<li>Consistencia: se observa capitalización inconsistente en los valores “sin información” de <code>comuna</code> (<code>"Sin informacion"</code> vs.&nbsp;<code>"SIN INFORMACION"</code>), lo cual debería normalizarse en cualquier análisis posterior.</li>
+<li>Balance de <code>sexo_</code>: fuertemente desbalanceado hacia <code>F</code> (99,5% vs.&nbsp;0,5% <code>M</code>), consistente con la epidemiología del cáncer de mama.</li>
+<li>Cobertura temporal: 6 años (2016–2021), con un mínimo de 359 registros (2016) y un máximo de 666 (2021).</li>
+</ul>
+</section>
+<section id="privacidad-y-protección-de-datos" class="level2">
+<h2 class="anchored" data-anchor-id="privacidad-y-protección-de-datos">Privacidad y protección de datos</h2>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>Privacidad
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Aunque este conjunto de datos es distribuido públicamente por su fuente oficial y su licencia permite reutilización y redistribución, contiene variables a nivel de registro que pueden funcionar como cuasi-identificadores, como edad, fechas y ubicación geográfica. Por ello, los análisis publicados en este sitio evitan reproducir filas individuales o combinaciones infrecuentes y priorizan resultados agregados. La disponibilidad pública del dataset no elimina la necesidad de un uso responsable de la información.</p>
+</div>
+</div>
+<p>En particular, en este sitio:</p>
+<ul>
+<li>no se publican ejemplos de filas individuales de pacientes;</li>
+<li>no se publican fechas exactas asociadas a un caso concreto;</li>
+<li>no se publican combinaciones raras (por ejemplo, barrios con un único caso) fuera del archivo de datos mismo;</li>
+<li>no se afirma cumplimiento de una norma jurídica específica, ya que no se ha realizado una revisión legal formal.</li>
+</ul>
+<p>Esta nota no aplica una restricción sobre el archivo <code>cancer_de_mama.csv</code> en sí, que se distribuye completo en este repositorio bajo los términos de su licencia oficial (ver tabla de metadatos arriba).</p>
+</section>
+<section id="acceso-a-los-datos" class="level2">
+<h2 class="anchored" data-anchor-id="acceso-a-los-datos">Acceso a los datos</h2>
+<p>El archivo completo (<code>cancer_de_mama.csv</code>) está disponible en esta misma carpeta del repositorio y puede descargarse directamente desde GitHub (ver sección siguiente). La fuente oficial y autoritativa del dataset es el catálogo de Datos Abiertos Colombia enlazado en la tabla de metadatos.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Uso didáctico
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Este dataset se publica con fines didácticos y de práctica en análisis exploratorio y epidemiológico descriptivo, como parte del módulo de Machine Learning. No debe usarse para tomar decisiones individuales sobre personas ni combinarse con otras fuentes con el propósito de reidentificación.</p>
+</div>
+</div>
+</section>
+<section id="cargar-en-python-google-colab" class="level2">
+<h2 class="anchored" data-anchor-id="cargar-en-python-google-colab">Cargar en Python / Google Colab</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>url <span class="op">=</span> (</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"https://raw.githubusercontent.com/"</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Laverde97/phd-data-science-ai/main/"</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">"semesters/semester-01/machine-learning/data/"</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">"cancer-de-mama/cancer_de_mama.csv"</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>dataset <span class="op">=</span> pd.read_csv(url, encoding<span class="op">=</span><span class="st">"latin1"</span>)</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>dataset.head()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 
 
 </section>
@@ -870,7 +1078,7 @@ Note
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/data/index.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/data/cancer-de-mama/index.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>Built with <a href="https://quarto.org">Quarto</a></p>
 </div>
@@ -880,5 +1088,5 @@ Note
 
 
 
-<script src="../../../../site_libs/quarto-html/zenscroll-min.js"></script>
+<script src="../../../../../site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>

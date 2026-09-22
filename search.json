@@ -158,7 +158,7 @@
     "href": "semesters/semester-01/machine-learning/data/index.html#datasets",
     "title": "Data",
     "section": "Datasets",
-    "text": "Datasets\n\n\n\nDataset\nFilas × Cols\nFormato\nPropósito\nFicha\n\n\n\n\nVentas · costos y valor de facturación\n10 × 3\nCSV ;\nMárgenes; regresión simple\nVer ficha\n\n\nCitas mensuales y personal\n10 × 3\nCSV ,\nSerie agregada; regresión/correlación\nVer ficha\n\n\nClientes · compra (variables codificadas)\n12 × 6\nCSV ,\nPreprocesamiento one-hot; clasificación binaria\nVer ficha\n\n\nDataset · Regresión múltiple\n5.000 × 9\nCSV ,\nRegresión lineal múltiple (predicción de salario)\nVer ficha"
+    "text": "Datasets\n\n\n\nDataset\nFilas × Cols\nFormato\nPropósito\nFicha\n\n\n\n\nVentas · costos y valor de facturación\n10 × 3\nCSV ;\nMárgenes; regresión simple\nVer ficha\n\n\nCitas mensuales y personal\n10 × 3\nCSV ,\nSerie agregada; regresión/correlación\nVer ficha\n\n\nClientes · compra (variables codificadas)\n12 × 6\nCSV ,\nPreprocesamiento one-hot; clasificación binaria\nVer ficha\n\n\nDataset · Regresión múltiple\n5.000 × 9\nCSV ,\nRegresión lineal múltiple (predicción de salario)\nVer ficha\n\n\nCáncer de mama · vigilancia epidemiológica\n3.414 × 15\nCSV , (público, CC BY-SA 4.0)\nEDA y análisis epidemiológico descriptivo\nVer ficha"
   },
   {
     "objectID": "semesters/semester-01/machine-learning/data/index.html#convención",
@@ -201,6 +201,505 @@
     "title": "Citas mensuales y personal",
     "section": "Cargar en Python",
     "text": "Cargar en Python\nimport pandas as pd\n\nurl = (\"https://raw.githubusercontent.com/Laverde97/phd-data-science-ai/main/\"\n       \"semesters/semester-01/machine-learning/data/\"\n       \"citas-mensuales/citas-mensuales.csv\")\ndf = pd.read_csv(url)\ndf.head()"
+  },
+  {
+    "objectID": "semesters/semester-01/machine-learning/assignments/index.html",
+    "href": "semesters/semester-01/machine-learning/assignments/index.html",
+    "title": "Tareas",
+    "section": "",
+    "text": "Entregables, ejercicios y soluciones desarrolladas durante el módulo."
+  },
+  {
+    "objectID": "semesters/semester-01/machine-learning/assignments/index.html#inventario",
+    "href": "semesters/semester-01/machine-learning/assignments/index.html#inventario",
+    "title": "Tareas",
+    "section": "Inventario",
+    "text": "Inventario\n\n\n\n#\nTarea\nTipo\nRecurso\nEstado\n\n\n\n\n01\nTabla de multiplicar\nPython\nPágina + Colab\nCompletada\n\n\n02\nIngreso con password\nPython\nPágina + Colab\nCompletada\n\n\n03\nPágina web\nWeb\nEvidencia externa\nCompletada\n\n\n04\nPreparación de datos ICFES\nPython\nPágina + Colab (CSV/JSON)\nCompletada"
+  },
+  {
+    "objectID": "semesters/semester-01/machine-learning/assignments/index.html#tareas",
+    "href": "semesters/semester-01/machine-learning/assignments/index.html#tareas",
+    "title": "Tareas",
+    "section": "Tareas",
+    "text": "Tareas\n\n\n01 · Tabla de multiplicar\nEntrada con input, conversión con int, variable contador y bucle while.\nVer tarea\n\n\n02 · Ingreso con password\nBucle while con contador de intentos, if/else, break y condición final.\nVer tarea\n\n\n03 · Página web\nPortafolio publicado con GitHub Pages, enlazado como evidencia externa.\nVer tarea\n\n\n04 · Preparación de datos ICFES\nLimpieza, imputación por la media, variables dummy de departamento, reorganización del DataFrame y train_test_split. Dos variantes: CSV y JSON.\nVer tarea"
+  },
+  {
+    "objectID": "semesters/semester-01/machine-learning/assignments/index.html#convención-de-nombres",
+    "href": "semesters/semester-01/machine-learning/assignments/index.html#convención-de-nombres",
+    "title": "Tareas",
+    "section": "Convención de nombres",
+    "text": "Convención de nombres\nassignment-01-tema.ext, assignment-02-tema.ext, … — prefijo de dos dígitos en orden cronológico."
+  },
+  {
+    "objectID": "semesters/semester-01/machine-learning/assignments/assignment-03-pagina-web.html",
+    "href": "semesters/semester-01/machine-learning/assignments/assignment-03-pagina-web.html",
+    "title": "Tarea 03 · Página web",
+    "section": "",
+    "text": "Elaborar una página web personal (portafolio / hoja de vida) y publicarla en línea como evidencia de la actividad."
+  },
+  {
+    "objectID": "semesters/semester-01/machine-learning/assignments/assignment-03-pagina-web.html#enunciado",
+    "href": "semesters/semester-01/machine-learning/assignments/assignment-03-pagina-web.html#enunciado",
+    "title": "Tarea 03 · Página web",
+    "section": "",
+    "text": "Elaborar una página web personal (portafolio / hoja de vida) y publicarla en línea como evidencia de la actividad."
+  },
+  {
+    "objectID": "semesters/semester-01/machine-learning/assignments/assignment-03-pagina-web.html#objetivo",
+    "href": "semesters/semester-01/machine-learning/assignments/assignment-03-pagina-web.html#objetivo",
+    "title": "Tarea 03 · Página web",
+    "section": "Objetivo",
+    "text": "Objetivo\nPracticar la estructura básica de una página web y su publicación mediante GitHub Pages, dejando una URL pública accesible."
+  },
+  {
+    "objectID": "semesters/semester-01/machine-learning/assignments/assignment-03-pagina-web.html#evidencia",
+    "href": "semesters/semester-01/machine-learning/assignments/assignment-03-pagina-web.html#evidencia",
+    "title": "Tarea 03 · Página web",
+    "section": "Evidencia",
+    "text": "Evidencia\nLa página se publicó en un proyecto propio e independiente y se enlaza aquí como evidencia externa. El proyecto no forma parte de este repositorio.\n\nURL: https://laverde97.github.io/latent-frontiers/cv.html\nProyecto: latent-frontiers (repositorio separado)\n\nVer página web"
+  },
+  {
+    "objectID": "semesters/semester-01/machine-learning/assignments/assignment-01-tablas-de-multiplicar.html",
+    "href": "semesters/semester-01/machine-learning/assignments/assignment-01-tablas-de-multiplicar.html",
+    "title": "Tarea 01 · Tabla de multiplicar",
+    "section": "",
+    "text": "CONSTRUIR UN PROGRAMA PARA QUE ME HAGA LA TABLA DE MULTIPLICAR CON DIGITAR EL N, EL QUE UNO QUIERA HACER, HASTA DONDE QUIERE LLEGAR, POR EJEMPLO, N=5 HASTA 20."
+  },
+  {
+    "objectID": "semesters/semester-01/machine-learning/assignments/assignment-01-tablas-de-multiplicar.html#enunciado",
+    "href": "semesters/semester-01/machine-learning/assignments/assignment-01-tablas-de-multiplicar.html#enunciado",
+    "title": "Tarea 01 · Tabla de multiplicar",
+    "section": "",
+    "text": "CONSTRUIR UN PROGRAMA PARA QUE ME HAGA LA TABLA DE MULTIPLICAR CON DIGITAR EL N, EL QUE UNO QUIERA HACER, HASTA DONDE QUIERE LLEGAR, POR EJEMPLO, N=5 HASTA 20."
+  },
+  {
+    "objectID": "semesters/semester-01/machine-learning/assignments/assignment-01-tablas-de-multiplicar.html#objetivo",
+    "href": "semesters/semester-01/machine-learning/assignments/assignment-01-tablas-de-multiplicar.html#objetivo",
+    "title": "Tarea 01 · Tabla de multiplicar",
+    "section": "Objetivo",
+    "text": "Objetivo\nEscribir un programa que pida al usuario el número de la tabla y el límite, y luego imprima la tabla de multiplicar correspondiente. Se practican cuatro elementos básicos de Python:\n\nlectura de datos con input,\nconversión de texto a número con int,\nuna variable contador,\nrepetición controlada con un bucle while."
+  },
+  {
+    "objectID": "semesters/semester-01/machine-learning/assignments/assignment-01-tablas-de-multiplicar.html#código-original",
+    "href": "semesters/semester-01/machine-learning/assignments/assignment-01-tablas-de-multiplicar.html#código-original",
+    "title": "Tarea 01 · Tabla de multiplicar",
+    "section": "Código original",
+    "text": "Código original\nSolución entregada, sin modificaciones.\nn = int(input('Digite la tabla que quiere realizar: ')) #Esta línea le pide al usuario el número de la tabla de multiplicar.\n\nhasta = int(input('Digite hasta dónde quiere llegar: ')) # Aquí se pregunta hasta qué número queremos multiplicar.\n\nx = 1 # La variable x es nuestro contador, comienza en 1 porque queremos empezar multiplicando: 5 x 1\n\nwhile x &lt;= hasta: # Mientras x sea menor o igual que hasta, repita las instrucciones que están dentro del while.\n\n    print(n, 'x', x, '=', n * x) # \"x\": Es el simbolo, x: Hasta donde quiere multiplicar, \"=\": Es el simbolo, n * x: Es la multiplicación de 5 * 3, que da 15\n\n    x = x + 1 # Esta línea aumenta el contador en 1, si no se pone, x siempre sería 1 y el programa repetiría para siempre: 5 x 1 = 5"
+  },
+  {
+    "objectID": "semesters/semester-01/machine-learning/assignments/assignment-01-tablas-de-multiplicar.html#explicación-conceptual",
+    "href": "semesters/semester-01/machine-learning/assignments/assignment-01-tablas-de-multiplicar.html#explicación-conceptual",
+    "title": "Tarea 01 · Tabla de multiplicar",
+    "section": "Explicación conceptual",
+    "text": "Explicación conceptual\n\ninput\ninput('texto…') muestra el mensaje entre comillas y espera a que el usuario escriba algo y pulse Enter. Lo que devuelve es siempre una cadena de texto (str), aunque el usuario teclee dígitos: \"5\", no 5.\n\n\nint\nint(...) convierte esa cadena en un número entero. Es necesario porque no se puede multiplicar ni comparar texto como si fuera un número: int(\"5\") da 5. Por eso el programa envuelve cada input dentro de int(...) y guarda el resultado en n y en hasta.\n\n\nEl contador x\nx = 1 crea una variable que sirve de contador: lleva la cuenta de por qué número vamos multiplicando. Empieza en 1 para que la primera línea impresa sea n x 1. Dentro del bucle, x = x + 1 incrementa el contador en cada vuelta. Si esa línea faltara, x valdría siempre 1, la condición del while nunca dejaría de cumplirse y el programa se repetiría sin fin.\n\n\nEl bucle while\nwhile x &lt;= hasta: repite el bloque indentado mientras la condición sea verdadera. En cada vuelta:\n\nimprime n 'x' x '=' n * x, es decir, una fila de la tabla;\nsuma 1 a x.\n\nCuando x supera a hasta, la condición se vuelve falsa y el bucle termina. Con n = 5 y hasta = 20 se imprimen 20 filas, desde 5 x 1 = 5 hasta 5 x 20 = 100."
+  },
+  {
+    "objectID": "semesters/semester-01/machine-learning/assignments/assignment-01-tablas-de-multiplicar.html#recursos",
+    "href": "semesters/semester-01/machine-learning/assignments/assignment-01-tablas-de-multiplicar.html#recursos",
+    "title": "Tarea 01 · Tabla de multiplicar",
+    "section": "Recursos",
+    "text": "Recursos\nAbrir en Google Colab Ver el notebook en GitHub\n\n\n\nOpen in Colab"
+  },
+  {
+    "objectID": "semesters/index.html",
+    "href": "semesters/index.html",
+    "title": "Semestres",
+    "section": "",
+    "text": "Índice de semestres del doctorado. Cada semestre agrupa sus módulos, y cada módulo conserva la misma arquitectura de recursos (tareas, quiz, data, talleres, notebooks, presentaciones y notas).\n\n\nSemestre 1\n2026-II · En curso\n\nMódulo 01 · Machine Learning\n\nVer semestre →\n\n\nLos siguientes semestres (Semestre 2, Semestre 3, …) se agregarán aquí a medida que avance el programa, sin modificar la estructura existente.\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "research/research-questions/index.html",
+    "href": "research/research-questions/index.html",
+    "title": "Preguntas de investigación",
+    "section": "",
+    "text": "Preguntas, hipótesis y objetivos que guían el proyecto, con su evolución a lo largo del doctorado.",
+    "crumbs": [
+      "Investigación",
+      "Secciones",
+      "Preguntas de investigación"
+    ]
+  },
+  {
+    "objectID": "research/research-questions/index.html#convención-de-archivos",
+    "href": "research/research-questions/index.html#convención-de-archivos",
+    "title": "Preguntas de investigación",
+    "section": "Convención de archivos",
+    "text": "Convención de archivos\nUn documento por iteración: 01-preguntas.md, 02-preguntas.md, …",
+    "crumbs": [
+      "Investigación",
+      "Secciones",
+      "Preguntas de investigación"
+    ]
+  },
+  {
+    "objectID": "research/research-questions/index.html#contenido",
+    "href": "research/research-questions/index.html#contenido",
+    "title": "Preguntas de investigación",
+    "section": "Contenido",
+    "text": "Contenido\n\n\n\nElemento\nFecha\nEnlace\nEstado\n\n\n\n\n—\n—\n—\n—\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nSección en preparación. Aún no se ha agregado contenido.",
+    "crumbs": [
+      "Investigación",
+      "Secciones",
+      "Preguntas de investigación"
+    ]
+  },
+  {
+    "objectID": "research/presentations/index.html",
+    "href": "research/presentations/index.html",
+    "title": "Presentaciones científicas",
+    "section": "",
+    "text": "Charlas, pósters y seminarios de investigación.",
+    "crumbs": [
+      "Investigación",
+      "Secciones",
+      "Presentaciones científicas"
+    ]
+  },
+  {
+    "objectID": "research/presentations/index.html#convención-de-archivos",
+    "href": "research/presentations/index.html#convención-de-archivos",
+    "title": "Presentaciones científicas",
+    "section": "Convención de archivos",
+    "text": "Convención de archivos\npresentation-01-evento.ext con prefijo cronológico; conservar fuente y PDF.",
+    "crumbs": [
+      "Investigación",
+      "Secciones",
+      "Presentaciones científicas"
+    ]
+  },
+  {
+    "objectID": "research/presentations/index.html#contenido",
+    "href": "research/presentations/index.html#contenido",
+    "title": "Presentaciones científicas",
+    "section": "Contenido",
+    "text": "Contenido\n\n\n\nElemento\nFecha\nEnlace\nEstado\n\n\n\n\n—\n—\n—\n—\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nSección en preparación. Aún no se ha agregado contenido.",
+    "crumbs": [
+      "Investigación",
+      "Secciones",
+      "Presentaciones científicas"
+    ]
+  },
+  {
+    "objectID": "research/manuscripts/index.html",
+    "href": "research/manuscripts/index.html",
+    "title": "Manuscritos",
+    "section": "",
+    "text": "Borradores de artículos, capítulos de tesis y material en redacción.",
+    "crumbs": [
+      "Investigación",
+      "Secciones",
+      "Manuscritos"
+    ]
+  },
+  {
+    "objectID": "research/manuscripts/index.html#convención-de-archivos",
+    "href": "research/manuscripts/index.html#convención-de-archivos",
+    "title": "Manuscritos",
+    "section": "Convención de archivos",
+    "text": "Convención de archivos\nUna carpeta por manuscrito: manuscript-01-titulo/ con fuentes y versiones.",
+    "crumbs": [
+      "Investigación",
+      "Secciones",
+      "Manuscritos"
+    ]
+  },
+  {
+    "objectID": "research/manuscripts/index.html#contenido",
+    "href": "research/manuscripts/index.html#contenido",
+    "title": "Manuscritos",
+    "section": "Contenido",
+    "text": "Contenido\n\n\n\nElemento\nFecha\nEnlace\nEstado\n\n\n\n\n—\n—\n—\n—\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nSección en preparación. Aún no se ha agregado contenido.",
+    "crumbs": [
+      "Investigación",
+      "Secciones",
+      "Manuscritos"
+    ]
+  },
+  {
+    "objectID": "research/index.html",
+    "href": "research/index.html",
+    "title": "Research Track",
+    "section": "",
+    "text": "Espacio reservado para el trabajo de investigación del doctorado, separado de los materiales de clase. Cada sección conserva su propia carpeta y convención de archivos.",
+    "crumbs": [
+      "Investigación",
+      "Panorama"
+    ]
+  },
+  {
+    "objectID": "research/index.html#investigación-doctoral",
+    "href": "research/index.html#investigación-doctoral",
+    "title": "Research Track",
+    "section": "",
+    "text": "Espacio reservado para el trabajo de investigación del doctorado, separado de los materiales de clase. Cada sección conserva su propia carpeta y convención de archivos.",
+    "crumbs": [
+      "Investigación",
+      "Panorama"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Doctoral Learning Hub",
+    "section": "",
+    "text": "Un espacio académico para organizar, documentar y compartir el aprendizaje desarrollado durante el doctorado: cursos, notebooks, talleres, evaluaciones, datos, presentaciones y avances de investigación.\nExplorar Machine Learning Ver investigación"
+  },
+  {
+    "objectID": "index.html#semestre-actual",
+    "href": "index.html#semestre-actual",
+    "title": "Doctoral Learning Hub",
+    "section": "Semestre actual",
+    "text": "Semestre actual\n\n\nSemestre 1\n2026-II\nOrganización del primer semestre doctoral por módulos y recursos.\nVer semestre →\n\n\nMódulo 1 · Machine Learning\nAprendizaje supervisado y no supervisado, preparación de datos, evaluación de modelos y experimentación reproducible.\nEntrar al módulo →\n\n\nResearch Track\nEspacio para consolidar ideas, lecturas, experimentos y avances del proyecto doctoral.\nVer investigación →"
+  },
+  {
+    "objectID": "index.html#organización-del-repositorio",
+    "href": "index.html#organización-del-repositorio",
+    "title": "Doctoral Learning Hub",
+    "section": "Organización del repositorio",
+    "text": "Organización del repositorio\nCada módulo conserva la misma estructura para que el repositorio pueda crecer sin perder orden:\n\nTareas — entregables académicos y soluciones.\nQuiz — evaluaciones, bancos de preguntas y repasos.\nData — datasets utilizados durante el módulo.\nTalleres — ejercicios prácticos y laboratorios.\nNotebooks (Colab) — notebooks ejecutables desde Google Colab.\nPresentaciones — diapositivas y material de clase.\nNotas — resúmenes, conceptos y material de estudio.\n\n\n\n\n\n\n\nTipReproducibilidad\n\n\n\nLos notebooks se publican con un badge Open in Colab, fijan una semilla y registran las versiones de sus dependencias. Los datasets restringidos se documentan mediante su origen y esquema, nunca se publican."
+  },
+  {
+    "objectID": "index.html#filosofía",
+    "href": "index.html#filosofía",
+    "title": "Doctoral Learning Hub",
+    "section": "Filosofía",
+    "text": "Filosofía\n\nLearn · Build · Document · Research · Reproduce\n\nEl objetivo no es almacenar archivos: es construir una bitácora técnica y académica reproducible del doctorado."
+  },
+  {
+    "objectID": "research/experiments/index.html",
+    "href": "research/experiments/index.html",
+    "title": "Experimentos",
+    "section": "",
+    "text": "Diseño, configuración y bitácora de los experimentos de investigación.",
+    "crumbs": [
+      "Investigación",
+      "Secciones",
+      "Experimentos"
+    ]
+  },
+  {
+    "objectID": "research/experiments/index.html#convención-de-archivos",
+    "href": "research/experiments/index.html#convención-de-archivos",
+    "title": "Experimentos",
+    "section": "Convención de archivos",
+    "text": "Convención de archivos\nUna carpeta por experimento: exp-01-nombre/ con README.md, configuración y notebook asociado.",
+    "crumbs": [
+      "Investigación",
+      "Secciones",
+      "Experimentos"
+    ]
+  },
+  {
+    "objectID": "research/experiments/index.html#contenido",
+    "href": "research/experiments/index.html#contenido",
+    "title": "Experimentos",
+    "section": "Contenido",
+    "text": "Contenido\n\n\n\nElemento\nFecha\nEnlace\nEstado\n\n\n\n\n—\n—\n—\n—\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nSección en preparación. Aún no se ha agregado contenido.",
+    "crumbs": [
+      "Investigación",
+      "Secciones",
+      "Experimentos"
+    ]
+  },
+  {
+    "objectID": "research/literature/index.html",
+    "href": "research/literature/index.html",
+    "title": "Literatura",
+    "section": "",
+    "text": "Revisión bibliográfica del proyecto doctoral: fichas de lectura, síntesis temáticas y la bibliografía consolidada.",
+    "crumbs": [
+      "Investigación",
+      "Secciones",
+      "Literatura"
+    ]
+  },
+  {
+    "objectID": "research/literature/index.html#convención-de-archivos",
+    "href": "research/literature/index.html#convención-de-archivos",
+    "title": "Literatura",
+    "section": "Convención de archivos",
+    "text": "Convención de archivos\nautor-anio-tema.md para cada ficha de lectura; references.bib para la bibliografía compartida.",
+    "crumbs": [
+      "Investigación",
+      "Secciones",
+      "Literatura"
+    ]
+  },
+  {
+    "objectID": "research/literature/index.html#contenido",
+    "href": "research/literature/index.html#contenido",
+    "title": "Literatura",
+    "section": "Contenido",
+    "text": "Contenido\n\n\n\nElemento\nFecha\nEnlace\nEstado\n\n\n\n\n—\n—\n—\n—\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nSección en preparación. Aún no se ha agregado contenido.",
+    "crumbs": [
+      "Investigación",
+      "Secciones",
+      "Literatura"
+    ]
+  },
+  {
+    "objectID": "research/meetings/index.html",
+    "href": "research/meetings/index.html",
+    "title": "Reuniones",
+    "section": "",
+    "text": "Actas de reuniones con la dirección de tesis y el grupo de investigación.",
+    "crumbs": [
+      "Investigación",
+      "Secciones",
+      "Reuniones"
+    ]
+  },
+  {
+    "objectID": "research/meetings/index.html#convención-de-archivos",
+    "href": "research/meetings/index.html#convención-de-archivos",
+    "title": "Reuniones",
+    "section": "Convención de archivos",
+    "text": "Convención de archivos\naaaa-mm-dd-reunion.md en orden cronológico.",
+    "crumbs": [
+      "Investigación",
+      "Secciones",
+      "Reuniones"
+    ]
+  },
+  {
+    "objectID": "research/meetings/index.html#contenido",
+    "href": "research/meetings/index.html#contenido",
+    "title": "Reuniones",
+    "section": "Contenido",
+    "text": "Contenido\n\n\n\nElemento\nFecha\nEnlace\nEstado\n\n\n\n\n—\n—\n—\n—\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nSección en preparación. Aún no se ha agregado contenido.",
+    "crumbs": [
+      "Investigación",
+      "Secciones",
+      "Reuniones"
+    ]
+  },
+  {
+    "objectID": "research/progress/index.html",
+    "href": "research/progress/index.html",
+    "title": "Avances",
+    "section": "",
+    "text": "Informes de progreso y planificación por periodos académicos.",
+    "crumbs": [
+      "Investigación",
+      "Secciones",
+      "Avances"
+    ]
+  },
+  {
+    "objectID": "research/progress/index.html#convención-de-archivos",
+    "href": "research/progress/index.html#convención-de-archivos",
+    "title": "Avances",
+    "section": "Convención de archivos",
+    "text": "Convención de archivos\naaaa-qN-avance.md (trimestral) o semestre-NN-avance.md.",
+    "crumbs": [
+      "Investigación",
+      "Secciones",
+      "Avances"
+    ]
+  },
+  {
+    "objectID": "research/progress/index.html#contenido",
+    "href": "research/progress/index.html#contenido",
+    "title": "Avances",
+    "section": "Contenido",
+    "text": "Contenido\n\n\n\nElemento\nFecha\nEnlace\nEstado\n\n\n\n\n—\n—\n—\n—\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nSección en preparación. Aún no se ha agregado contenido.",
+    "crumbs": [
+      "Investigación",
+      "Secciones",
+      "Avances"
+    ]
+  },
+  {
+    "objectID": "research/results/index.html",
+    "href": "research/results/index.html",
+    "title": "Resultados",
+    "section": "",
+    "text": "Hallazgos, métricas y figuras derivadas de los experimentos.",
+    "crumbs": [
+      "Investigación",
+      "Secciones",
+      "Resultados"
+    ]
+  },
+  {
+    "objectID": "research/results/index.html#convención-de-archivos",
+    "href": "research/results/index.html#convención-de-archivos",
+    "title": "Resultados",
+    "section": "Convención de archivos",
+    "text": "Convención de archivos\nexp-01-resultados.md por experimento; figuras en figures/.",
+    "crumbs": [
+      "Investigación",
+      "Secciones",
+      "Resultados"
+    ]
+  },
+  {
+    "objectID": "research/results/index.html#contenido",
+    "href": "research/results/index.html#contenido",
+    "title": "Resultados",
+    "section": "Contenido",
+    "text": "Contenido\n\n\n\nElemento\nFecha\nEnlace\nEstado\n\n\n\n\n—\n—\n—\n—\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nSección en preparación. Aún no se ha agregado contenido.",
+    "crumbs": [
+      "Investigación",
+      "Secciones",
+      "Resultados"
+    ]
+  },
+  {
+    "objectID": "semesters/semester-01/index.html",
+    "href": "semesters/semester-01/index.html",
+    "title": "Semestre 1",
+    "section": "",
+    "text": "Primer módulo del semestre.\nEstado: En curso\nAcceder al módulo →\n\n\nLos siguientes módulos se agregarán a medida que avance el semestre, conservando la misma arquitectura académica (siete categorías de recursos por módulo).\n\n\n\n\n\n\nNote\n\n\n\nEl nombre y el número de los módulos posteriores se documentarán cuando se conozcan oficialmente. No se anticipan aquí."
+  },
+  {
+    "objectID": "semesters/semester-01/index.html#módulos",
+    "href": "semesters/semester-01/index.html#módulos",
+    "title": "Semestre 1",
+    "section": "",
+    "text": "Primer módulo del semestre.\nEstado: En curso\nAcceder al módulo →\n\n\nLos siguientes módulos se agregarán a medida que avance el semestre, conservando la misma arquitectura académica (siete categorías de recursos por módulo).\n\n\n\n\n\n\nNote\n\n\n\nEl nombre y el número de los módulos posteriores se documentarán cuando se conozcan oficialmente. No se anticipan aquí."
+  },
+  {
+    "objectID": "semesters/semester-01/machine-learning/assignments/assignment-02-ingreso-con-password.html",
+    "href": "semesters/semester-01/machine-learning/assignments/assignment-02-ingreso-con-password.html",
+    "title": "Tarea 02 · Ingreso a un sitio mediante password",
+    "section": "",
+    "text": "Por favor construya un ingreso a un sitio, debe decir si logró o no ingresar al sitio para eso usted debe tener un Password sencillo. Mientras no tenga el password debe mostrar un mensaje diciendo, no es el password correcto; hasta que no tenga el password correcto no lo deja ingresar al sitio."
+  },
+  {
+    "objectID": "semesters/semester-01/machine-learning/assignments/assignment-02-ingreso-con-password.html#enunciado",
+    "href": "semesters/semester-01/machine-learning/assignments/assignment-02-ingreso-con-password.html#enunciado",
+    "title": "Tarea 02 · Ingreso a un sitio mediante password",
+    "section": "",
+    "text": "Por favor construya un ingreso a un sitio, debe decir si logró o no ingresar al sitio para eso usted debe tener un Password sencillo. Mientras no tenga el password debe mostrar un mensaje diciendo, no es el password correcto; hasta que no tenga el password correcto no lo deja ingresar al sitio."
+  },
+  {
+    "objectID": "semesters/semester-01/machine-learning/assignments/assignment-02-ingreso-con-password.html#objetivo",
+    "href": "semesters/semester-01/machine-learning/assignments/assignment-02-ingreso-con-password.html#objetivo",
+    "title": "Tarea 02 · Ingreso a un sitio mediante password",
+    "section": "Objetivo",
+    "text": "Objetivo\nSimular el ingreso a un sitio con un password fijo y un número limitado de intentos. Se practican: el bucle while, un contador de intentos, la decisión if/else, la salida anticipada con break y una condición final para el caso de intentos agotados."
+  },
+  {
+    "objectID": "semesters/semester-01/machine-learning/assignments/assignment-02-ingreso-con-password.html#código-original",
+    "href": "semesters/semester-01/machine-learning/assignments/assignment-02-ingreso-con-password.html#código-original",
+    "title": "Tarea 02 · Ingreso a un sitio mediante password",
+    "section": "Código original",
+    "text": "Código original\nSolución entregada, sin modificaciones.\npassword = \"1234\"\n\nintentos = 0\n\nwhile intentos &lt; 3:\n\n    clave = input(\"Digite el password númerico: \")\n\n    if clave == password:\n        print(\"Logró ingresar al sitio\")\n        break\n    else:\n        print(\"No es el password correcto\")\n        intentos = intentos + 1\n\nif intentos == 3:\n    print(\"No logró ingresar al sitio, por favor comuniquese con el administrador\")"
+  },
+  {
+    "objectID": "semesters/semester-01/machine-learning/assignments/assignment-02-ingreso-con-password.html#explicación-conceptual",
+    "href": "semesters/semester-01/machine-learning/assignments/assignment-02-ingreso-con-password.html#explicación-conceptual",
+    "title": "Tarea 02 · Ingreso a un sitio mediante password",
+    "section": "Explicación conceptual",
+    "text": "Explicación conceptual\n\nEl bucle while\nwhile intentos &lt; 3: repite el bloque mientras intentos sea menor que 3. Es la forma de dar al usuario varias oportunidades sin escribir el mismo código tres veces.\n\n\nEl contador de intentos\nintentos = 0 arranca la cuenta en cero. Solo se incrementa (intentos = intentos + 1) cuando la clave es incorrecta, dentro del else. Así, tres fallos llevan intentos a 3 y la condición del while deja de cumplirse.\n\n\nLa condición if / else\nif clave == password: compara lo que digitó el usuario con el password guardado.\n\nSi son iguales, se ejecuta el bloque del if: imprime \"Logró ingresar al sitio\".\nSi son distintas, se ejecuta el else: imprime \"No es el password correcto\" y suma 1 al contador.\n\n\n\nEl uso de break\nbreak corta el bucle inmediatamente. Se usa tras un acierto: una vez dentro, no tiene sentido seguir pidiendo el password, así que break sale del while sin agotar los intentos restantes.\n\n\nLa condición final\nif intentos == 3: se evalúa después del bucle. Solo es verdadera cuando el bucle terminó por haber agotado los tres intentos (si hubo acierto, se salió con break y intentos es menor que 3). En ese caso imprime el mensaje para comunicarse con el administrador."
+  },
+  {
+    "objectID": "semesters/semester-01/machine-learning/assignments/assignment-02-ingreso-con-password.html#recursos",
+    "href": "semesters/semester-01/machine-learning/assignments/assignment-02-ingreso-con-password.html#recursos",
+    "title": "Tarea 02 · Ingreso a un sitio mediante password",
+    "section": "Recursos",
+    "text": "Recursos\nAbrir en Google Colab Ver el notebook en GitHub\n\n\n\nOpen in Colab"
   },
   {
     "objectID": "semesters/semester-01/machine-learning/assignments/assignment-04-preparacion-datos-icfes.html",
@@ -252,503 +751,67 @@
     "text": "Variantes y recursos\nLas dos variantes son el mismo ejercicio; la JSON solo cambia la carga por dataset_ICFES = pd.read_json('https://cdtiueb.com.co/doctorado/datos_icfes.json').\nNotebook CSV — GitHub Open CSV in Colab Notebook JSON — GitHub Open JSON in Colab"
   },
   {
-    "objectID": "semesters/semester-01/machine-learning/assignments/assignment-02-ingreso-con-password.html",
-    "href": "semesters/semester-01/machine-learning/assignments/assignment-02-ingreso-con-password.html",
-    "title": "Tarea 02 · Ingreso a un sitio mediante password",
+    "objectID": "semesters/semester-01/machine-learning/data/cancer-de-mama/index.html",
+    "href": "semesters/semester-01/machine-learning/data/cancer-de-mama/index.html",
+    "title": "Dataset · Cáncer de mama · Vigilancia epidemiológica",
     "section": "",
-    "text": "Por favor construya un ingreso a un sitio, debe decir si logró o no ingresar al sitio para eso usted debe tener un Password sencillo. Mientras no tenga el password debe mostrar un mensaje diciendo, no es el password correcto; hasta que no tenga el password correcto no lo deja ingresar al sitio."
+    "text": "Archivo en el repo\ncancer_de_mama.csv\n\n\nFuente oficial\nCáncer de mama — Datos Abiertos Colombia (id v8kg-2j2j, distribución 1-026-22-000132)\n\n\nFormato\nCSV, separador ,, codificación Latin-1 / Windows-1252 (no es UTF-8 válido)\n\n\nTamaño\n330.246 bytes\n\n\nDimensiones\n3.414 filas de datos × 15 columnas (+ fila de cabecera)\n\n\nValores faltantes\n58 en total, todos en cod_ase_; 0 en las demás columnas\n\n\nCobertura temporal\n2016–2021 (columna year_)\n\n\nCobertura geográfica\nMedellín: 27 comunas/corregimientos y 337 barrios\n\n\nProcedencia\nAlcaldía de Medellín — Secretaría de Salud, Unidad de Gestión de la Información y el Conocimiento\n\n\nLicencia\nCreative Commons Attribution-ShareAlike 4.0 (CC BY-SA 4.0)\n\n\nSHA-256\na795b9db94edd4a37bf664352c01f08998815a2598e406fcb7f5dedc35475144 — SHA-256 del archivo local publicado en este repositorio"
   },
   {
-    "objectID": "semesters/semester-01/machine-learning/assignments/assignment-02-ingreso-con-password.html#enunciado",
-    "href": "semesters/semester-01/machine-learning/assignments/assignment-02-ingreso-con-password.html#enunciado",
-    "title": "Tarea 02 · Ingreso a un sitio mediante password",
-    "section": "",
-    "text": "Por favor construya un ingreso a un sitio, debe decir si logró o no ingresar al sitio para eso usted debe tener un Password sencillo. Mientras no tenga el password debe mostrar un mensaje diciendo, no es el password correcto; hasta que no tenga el password correcto no lo deja ingresar al sitio."
+    "objectID": "semesters/semester-01/machine-learning/data/cancer-de-mama/index.html#propósito",
+    "href": "semesters/semester-01/machine-learning/data/cancer-de-mama/index.html#propósito",
+    "title": "Dataset · Cáncer de mama · Vigilancia epidemiológica",
+    "section": "Propósito",
+    "text": "Propósito\nEste dataset es un registro de vigilancia epidemiológica: pacientes atendidos en Instituciones Prestadoras de Servicios de Salud (IPS) de Medellín con diagnóstico de cáncer de mama, reportados entre 2016 y 2021. Es útil para:\n\nanálisis exploratorio de datos (EDA);\ncaracterización epidemiológica;\nanálisis descriptivo, temporal y geográfico agregado;\nestudio de frecuencias por comuna, barrio, año y tipo de afiliación en salud;\npreparación y transformación de variables;\naprendizaje de manejo responsable de datos de salud.\n\nNo es apto para un ejercicio estándar de clasificación supervisada de cáncer de mama. La columna evento tiene una única categoría (CANCER DE MAMA) en el 100% de los registros: no existe una variable objetivo con clases diagnósticas (p. ej. benigno vs. maligno), por lo que este dataset no debe describirse como insumo para Random Forest Classification ni Decision Tree Classification."
   },
   {
-    "objectID": "semesters/semester-01/machine-learning/assignments/assignment-02-ingreso-con-password.html#objetivo",
-    "href": "semesters/semester-01/machine-learning/assignments/assignment-02-ingreso-con-password.html#objetivo",
-    "title": "Tarea 02 · Ingreso a un sitio mediante password",
-    "section": "Objetivo",
-    "text": "Objetivo\nSimular el ingreso a un sitio con un password fijo y un número limitado de intentos. Se practican: el bucle while, un contador de intentos, la decisión if/else, la salida anticipada con break y una condición final para el caso de intentos agotados."
+    "objectID": "semesters/semester-01/machine-learning/data/cancer-de-mama/index.html#diferencia-frente-al-dataset-de-clasificación",
+    "href": "semesters/semester-01/machine-learning/data/cancer-de-mama/index.html#diferencia-frente-al-dataset-de-clasificación",
+    "title": "Dataset · Cáncer de mama · Vigilancia epidemiológica",
+    "section": "Diferencia frente al dataset de clasificación",
+    "text": "Diferencia frente al dataset de clasificación\nEste archivo corresponde a un registro de casos de cáncer de mama (vigilancia en salud pública), no al dataset que se utilizará más adelante para distinguir clases diagnósticas mediante Árbol de Decisión o Random Forest de clasificación (por ejemplo, un dataset tipo Wisconsin Breast Cancer, con variables clínicas y una etiqueta benigno/maligno). Ambos datasets tratan el tema “cáncer de mama” pero tienen propósitos distintos: este es para análisis descriptivo/epidemiológico, el otro —pendiente de incorporar— será para clasificación supervisada."
   },
   {
-    "objectID": "semesters/semester-01/machine-learning/assignments/assignment-02-ingreso-con-password.html#código-original",
-    "href": "semesters/semester-01/machine-learning/assignments/assignment-02-ingreso-con-password.html#código-original",
-    "title": "Tarea 02 · Ingreso a un sitio mediante password",
-    "section": "Código original",
-    "text": "Código original\nSolución entregada, sin modificaciones.\npassword = \"1234\"\n\nintentos = 0\n\nwhile intentos &lt; 3:\n\n    clave = input(\"Digite el password númerico: \")\n\n    if clave == password:\n        print(\"Logró ingresar al sitio\")\n        break\n    else:\n        print(\"No es el password correcto\")\n        intentos = intentos + 1\n\nif intentos == 3:\n    print(\"No logró ingresar al sitio, por favor comuniquese con el administrador\")"
+    "objectID": "semesters/semester-01/machine-learning/data/cancer-de-mama/index.html#variables",
+    "href": "semesters/semester-01/machine-learning/data/cancer-de-mama/index.html#variables",
+    "title": "Dataset · Cáncer de mama · Vigilancia epidemiológica",
+    "section": "Variables",
+    "text": "Variables\n\n\n\n\n\n\n\n\nVariable\nTipo\nDescripción\n\n\n\n\nid\nEntero\nIdentificador numérico del registro/caso.\n\n\nsemana\nEntero\nSemana epidemiológica de notificación (observado 1–53).\n\n\nedad_\nEntero\nEdad del paciente, en la unidad indicada por uni_med_ (observado 17–98).\n\n\nuni_med_\nEntero\nUnidad de medida de la edad. Significado exacto pendiente de confirmar en el diccionario de datos de la fuente (valor constante = 1 en este archivo).\n\n\nsexo_\nCategórica (F/M)\nSexo del paciente (F = 3.397 casos, M = 17 casos).\n\n\nnombre_barrio\nTexto\nBarrio de residencia (337 valores distintos; incluye “Sin informacion”/“SIN INFORMACION” con capitalización inconsistente).\n\n\ncomuna\nTexto\nComuna o corregimiento de Medellín (27 valores distintos).\n\n\ntipo_ss_\nCategórica (código)\nTipo de afiliación al sistema de salud. Valores observados: C, S, E, P, N, I. Significado exacto pendiente de confirmar en el diccionario de datos de la fuente.\n\n\ncod_ase_\nTexto (código)\nCódigo de la entidad aseguradora (74 valores distintos). 58 valores faltantes.\n\n\nfec_con_\nFecha (texto)\nFecha de consulta.\n\n\nini_sin_\nFecha (texto)\nFecha de inicio de síntomas.\n\n\ntip_cas_\nEntero (código)\nTipo de caso. Valor constante (3) en todo el archivo; significado exacto pendiente de confirmar en el diccionario de datos de la fuente.\n\n\npac_hos_\nEntero (código)\nIndicador relacionado con hospitalización del paciente. Valores observados: 1 (87 casos), 2 (3.327 casos); significado exacto de cada código pendiente de confirmar en el diccionario de datos de la fuente.\n\n\nevento\nCategórica\nNombre del evento de vigilancia. Único valor observado: CANCER DE MAMA (100% de los registros). No es una variable de clasificación.\n\n\nyear_\nEntero\nAño de notificación (2016–2021).\n\n\n\nNo se incluyen ejemplos de filas individuales en esta ficha para evitar reproducir combinaciones de atributos a nivel de paciente."
   },
   {
-    "objectID": "semesters/semester-01/machine-learning/assignments/assignment-02-ingreso-con-password.html#explicación-conceptual",
-    "href": "semesters/semester-01/machine-learning/assignments/assignment-02-ingreso-con-password.html#explicación-conceptual",
-    "title": "Tarea 02 · Ingreso a un sitio mediante password",
-    "section": "Explicación conceptual",
-    "text": "Explicación conceptual\n\nEl bucle while\nwhile intentos &lt; 3: repite el bloque mientras intentos sea menor que 3. Es la forma de dar al usuario varias oportunidades sin escribir el mismo código tres veces.\n\n\nEl contador de intentos\nintentos = 0 arranca la cuenta en cero. Solo se incrementa (intentos = intentos + 1) cuando la clave es incorrecta, dentro del else. Así, tres fallos llevan intentos a 3 y la condición del while deja de cumplirse.\n\n\nLa condición if / else\nif clave == password: compara lo que digitó el usuario con el password guardado.\n\nSi son iguales, se ejecuta el bloque del if: imprime \"Logró ingresar al sitio\".\nSi son distintas, se ejecuta el else: imprime \"No es el password correcto\" y suma 1 al contador.\n\n\n\nEl uso de break\nbreak corta el bucle inmediatamente. Se usa tras un acierto: una vez dentro, no tiene sentido seguir pidiendo el password, así que break sale del while sin agotar los intentos restantes.\n\n\nLa condición final\nif intentos == 3: se evalúa después del bucle. Solo es verdadera cuando el bucle terminó por haber agotado los tres intentos (si hubo acierto, se salió con break y intentos es menor que 3). En ese caso imprime el mensaje para comunicarse con el administrador."
+    "objectID": "semesters/semester-01/machine-learning/data/cancer-de-mama/index.html#limitaciones-para-clasificación-supervisada",
+    "href": "semesters/semester-01/machine-learning/data/cancer-de-mama/index.html#limitaciones-para-clasificación-supervisada",
+    "title": "Dataset · Cáncer de mama · Vigilancia epidemiológica",
+    "section": "Limitaciones para clasificación supervisada",
+    "text": "Limitaciones para clasificación supervisada\n\nevento contiene una única clase (CANCER DE MAMA) en el 100% de los 3.414 registros.\nUn clasificador supervisado (Árbol de Decisión, Random Forest, etc.) requiere una variable objetivo con al menos dos clases con significado interpretable.\nPor lo tanto, este dataset no es adecuado, en su forma actual, para entrenar un modelo que distinga clases diagnósticas (p. ej. benigno/maligno).\nNo se fabricará artificialmente una etiqueta a partir de otras columnas (como tipo_ss_, pac_hos_ o sexo_) para forzar un ejercicio de clasificación.\nPara el taller de Árbol de Decisión / Random Forest de clasificación de cáncer de mama se buscará un dataset alternativo, correctamente etiquetado (ver nota de búsqueda más abajo), en una tarea separada."
   },
   {
-    "objectID": "semesters/semester-01/machine-learning/assignments/assignment-02-ingreso-con-password.html#recursos",
-    "href": "semesters/semester-01/machine-learning/assignments/assignment-02-ingreso-con-password.html#recursos",
-    "title": "Tarea 02 · Ingreso a un sitio mediante password",
-    "section": "Recursos",
-    "text": "Recursos\nAbrir en Google Colab Ver el notebook en GitHub\n\n\n\nOpen in Colab"
+    "objectID": "semesters/semester-01/machine-learning/data/cancer-de-mama/index.html#calidad-de-los-datos",
+    "href": "semesters/semester-01/machine-learning/data/cancer-de-mama/index.html#calidad-de-los-datos",
+    "title": "Dataset · Cáncer de mama · Vigilancia epidemiológica",
+    "section": "Calidad de los datos",
+    "text": "Calidad de los datos\n\nDimensiones: 3.414 filas × 15 columnas.\nValores faltantes: 58 en total, concentrados en cod_ase_; el resto de columnas no tiene faltantes.\nFilas duplicadas: 0.\nConsistencia: se observa capitalización inconsistente en los valores “sin información” de comuna (\"Sin informacion\" vs. \"SIN INFORMACION\"), lo cual debería normalizarse en cualquier análisis posterior.\nBalance de sexo_: fuertemente desbalanceado hacia F (99,5% vs. 0,5% M), consistente con la epidemiología del cáncer de mama.\nCobertura temporal: 6 años (2016–2021), con un mínimo de 359 registros (2016) y un máximo de 666 (2021)."
   },
   {
-    "objectID": "semesters/semester-01/index.html",
-    "href": "semesters/semester-01/index.html",
-    "title": "Semestre 1",
-    "section": "",
-    "text": "Primer módulo del semestre.\nEstado: En curso\nAcceder al módulo →\n\n\nLos siguientes módulos se agregarán a medida que avance el semestre, conservando la misma arquitectura académica (siete categorías de recursos por módulo).\n\n\n\n\n\n\nNote\n\n\n\nEl nombre y el número de los módulos posteriores se documentarán cuando se conozcan oficialmente. No se anticipan aquí."
+    "objectID": "semesters/semester-01/machine-learning/data/cancer-de-mama/index.html#privacidad-y-protección-de-datos",
+    "href": "semesters/semester-01/machine-learning/data/cancer-de-mama/index.html#privacidad-y-protección-de-datos",
+    "title": "Dataset · Cáncer de mama · Vigilancia epidemiológica",
+    "section": "Privacidad y protección de datos",
+    "text": "Privacidad y protección de datos\n\n\n\n\n\n\nWarningPrivacidad\n\n\n\nAunque este conjunto de datos es distribuido públicamente por su fuente oficial y su licencia permite reutilización y redistribución, contiene variables a nivel de registro que pueden funcionar como cuasi-identificadores, como edad, fechas y ubicación geográfica. Por ello, los análisis publicados en este sitio evitan reproducir filas individuales o combinaciones infrecuentes y priorizan resultados agregados. La disponibilidad pública del dataset no elimina la necesidad de un uso responsable de la información.\n\n\nEn particular, en este sitio:\n\nno se publican ejemplos de filas individuales de pacientes;\nno se publican fechas exactas asociadas a un caso concreto;\nno se publican combinaciones raras (por ejemplo, barrios con un único caso) fuera del archivo de datos mismo;\nno se afirma cumplimiento de una norma jurídica específica, ya que no se ha realizado una revisión legal formal.\n\nEsta nota no aplica una restricción sobre el archivo cancer_de_mama.csv en sí, que se distribuye completo en este repositorio bajo los términos de su licencia oficial (ver tabla de metadatos arriba)."
   },
   {
-    "objectID": "semesters/semester-01/index.html#módulos",
-    "href": "semesters/semester-01/index.html#módulos",
-    "title": "Semestre 1",
-    "section": "",
-    "text": "Primer módulo del semestre.\nEstado: En curso\nAcceder al módulo →\n\n\nLos siguientes módulos se agregarán a medida que avance el semestre, conservando la misma arquitectura académica (siete categorías de recursos por módulo).\n\n\n\n\n\n\nNote\n\n\n\nEl nombre y el número de los módulos posteriores se documentarán cuando se conozcan oficialmente. No se anticipan aquí."
+    "objectID": "semesters/semester-01/machine-learning/data/cancer-de-mama/index.html#acceso-a-los-datos",
+    "href": "semesters/semester-01/machine-learning/data/cancer-de-mama/index.html#acceso-a-los-datos",
+    "title": "Dataset · Cáncer de mama · Vigilancia epidemiológica",
+    "section": "Acceso a los datos",
+    "text": "Acceso a los datos\nEl archivo completo (cancer_de_mama.csv) está disponible en esta misma carpeta del repositorio y puede descargarse directamente desde GitHub (ver sección siguiente). La fuente oficial y autoritativa del dataset es el catálogo de Datos Abiertos Colombia enlazado en la tabla de metadatos.\n\n\n\n\n\n\nNoteUso didáctico\n\n\n\nEste dataset se publica con fines didácticos y de práctica en análisis exploratorio y epidemiológico descriptivo, como parte del módulo de Machine Learning. No debe usarse para tomar decisiones individuales sobre personas ni combinarse con otras fuentes con el propósito de reidentificación."
   },
   {
-    "objectID": "research/results/index.html",
-    "href": "research/results/index.html",
-    "title": "Resultados",
-    "section": "",
-    "text": "Hallazgos, métricas y figuras derivadas de los experimentos.",
-    "crumbs": [
-      "Investigación",
-      "Secciones",
-      "Resultados"
-    ]
-  },
-  {
-    "objectID": "research/results/index.html#convención-de-archivos",
-    "href": "research/results/index.html#convención-de-archivos",
-    "title": "Resultados",
-    "section": "Convención de archivos",
-    "text": "Convención de archivos\nexp-01-resultados.md por experimento; figuras en figures/.",
-    "crumbs": [
-      "Investigación",
-      "Secciones",
-      "Resultados"
-    ]
-  },
-  {
-    "objectID": "research/results/index.html#contenido",
-    "href": "research/results/index.html#contenido",
-    "title": "Resultados",
-    "section": "Contenido",
-    "text": "Contenido\n\n\n\nElemento\nFecha\nEnlace\nEstado\n\n\n\n\n—\n—\n—\n—\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nSección en preparación. Aún no se ha agregado contenido.",
-    "crumbs": [
-      "Investigación",
-      "Secciones",
-      "Resultados"
-    ]
-  },
-  {
-    "objectID": "research/progress/index.html",
-    "href": "research/progress/index.html",
-    "title": "Avances",
-    "section": "",
-    "text": "Informes de progreso y planificación por periodos académicos.",
-    "crumbs": [
-      "Investigación",
-      "Secciones",
-      "Avances"
-    ]
-  },
-  {
-    "objectID": "research/progress/index.html#convención-de-archivos",
-    "href": "research/progress/index.html#convención-de-archivos",
-    "title": "Avances",
-    "section": "Convención de archivos",
-    "text": "Convención de archivos\naaaa-qN-avance.md (trimestral) o semestre-NN-avance.md.",
-    "crumbs": [
-      "Investigación",
-      "Secciones",
-      "Avances"
-    ]
-  },
-  {
-    "objectID": "research/progress/index.html#contenido",
-    "href": "research/progress/index.html#contenido",
-    "title": "Avances",
-    "section": "Contenido",
-    "text": "Contenido\n\n\n\nElemento\nFecha\nEnlace\nEstado\n\n\n\n\n—\n—\n—\n—\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nSección en preparación. Aún no se ha agregado contenido.",
-    "crumbs": [
-      "Investigación",
-      "Secciones",
-      "Avances"
-    ]
-  },
-  {
-    "objectID": "research/meetings/index.html",
-    "href": "research/meetings/index.html",
-    "title": "Reuniones",
-    "section": "",
-    "text": "Actas de reuniones con la dirección de tesis y el grupo de investigación.",
-    "crumbs": [
-      "Investigación",
-      "Secciones",
-      "Reuniones"
-    ]
-  },
-  {
-    "objectID": "research/meetings/index.html#convención-de-archivos",
-    "href": "research/meetings/index.html#convención-de-archivos",
-    "title": "Reuniones",
-    "section": "Convención de archivos",
-    "text": "Convención de archivos\naaaa-mm-dd-reunion.md en orden cronológico.",
-    "crumbs": [
-      "Investigación",
-      "Secciones",
-      "Reuniones"
-    ]
-  },
-  {
-    "objectID": "research/meetings/index.html#contenido",
-    "href": "research/meetings/index.html#contenido",
-    "title": "Reuniones",
-    "section": "Contenido",
-    "text": "Contenido\n\n\n\nElemento\nFecha\nEnlace\nEstado\n\n\n\n\n—\n—\n—\n—\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nSección en preparación. Aún no se ha agregado contenido.",
-    "crumbs": [
-      "Investigación",
-      "Secciones",
-      "Reuniones"
-    ]
-  },
-  {
-    "objectID": "research/literature/index.html",
-    "href": "research/literature/index.html",
-    "title": "Literatura",
-    "section": "",
-    "text": "Revisión bibliográfica del proyecto doctoral: fichas de lectura, síntesis temáticas y la bibliografía consolidada.",
-    "crumbs": [
-      "Investigación",
-      "Secciones",
-      "Literatura"
-    ]
-  },
-  {
-    "objectID": "research/literature/index.html#convención-de-archivos",
-    "href": "research/literature/index.html#convención-de-archivos",
-    "title": "Literatura",
-    "section": "Convención de archivos",
-    "text": "Convención de archivos\nautor-anio-tema.md para cada ficha de lectura; references.bib para la bibliografía compartida.",
-    "crumbs": [
-      "Investigación",
-      "Secciones",
-      "Literatura"
-    ]
-  },
-  {
-    "objectID": "research/literature/index.html#contenido",
-    "href": "research/literature/index.html#contenido",
-    "title": "Literatura",
-    "section": "Contenido",
-    "text": "Contenido\n\n\n\nElemento\nFecha\nEnlace\nEstado\n\n\n\n\n—\n—\n—\n—\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nSección en preparación. Aún no se ha agregado contenido.",
-    "crumbs": [
-      "Investigación",
-      "Secciones",
-      "Literatura"
-    ]
-  },
-  {
-    "objectID": "research/experiments/index.html",
-    "href": "research/experiments/index.html",
-    "title": "Experimentos",
-    "section": "",
-    "text": "Diseño, configuración y bitácora de los experimentos de investigación.",
-    "crumbs": [
-      "Investigación",
-      "Secciones",
-      "Experimentos"
-    ]
-  },
-  {
-    "objectID": "research/experiments/index.html#convención-de-archivos",
-    "href": "research/experiments/index.html#convención-de-archivos",
-    "title": "Experimentos",
-    "section": "Convención de archivos",
-    "text": "Convención de archivos\nUna carpeta por experimento: exp-01-nombre/ con README.md, configuración y notebook asociado.",
-    "crumbs": [
-      "Investigación",
-      "Secciones",
-      "Experimentos"
-    ]
-  },
-  {
-    "objectID": "research/experiments/index.html#contenido",
-    "href": "research/experiments/index.html#contenido",
-    "title": "Experimentos",
-    "section": "Contenido",
-    "text": "Contenido\n\n\n\nElemento\nFecha\nEnlace\nEstado\n\n\n\n\n—\n—\n—\n—\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nSección en preparación. Aún no se ha agregado contenido.",
-    "crumbs": [
-      "Investigación",
-      "Secciones",
-      "Experimentos"
-    ]
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Doctoral Learning Hub",
-    "section": "",
-    "text": "Un espacio académico para organizar, documentar y compartir el aprendizaje desarrollado durante el doctorado: cursos, notebooks, talleres, evaluaciones, datos, presentaciones y avances de investigación.\nExplorar Machine Learning Ver investigación"
-  },
-  {
-    "objectID": "index.html#semestre-actual",
-    "href": "index.html#semestre-actual",
-    "title": "Doctoral Learning Hub",
-    "section": "Semestre actual",
-    "text": "Semestre actual\n\n\nSemestre 1\n2026-II\nOrganización del primer semestre doctoral por módulos y recursos.\nVer semestre →\n\n\nMódulo 1 · Machine Learning\nAprendizaje supervisado y no supervisado, preparación de datos, evaluación de modelos y experimentación reproducible.\nEntrar al módulo →\n\n\nResearch Track\nEspacio para consolidar ideas, lecturas, experimentos y avances del proyecto doctoral.\nVer investigación →"
-  },
-  {
-    "objectID": "index.html#organización-del-repositorio",
-    "href": "index.html#organización-del-repositorio",
-    "title": "Doctoral Learning Hub",
-    "section": "Organización del repositorio",
-    "text": "Organización del repositorio\nCada módulo conserva la misma estructura para que el repositorio pueda crecer sin perder orden:\n\nTareas — entregables académicos y soluciones.\nQuiz — evaluaciones, bancos de preguntas y repasos.\nData — datasets utilizados durante el módulo.\nTalleres — ejercicios prácticos y laboratorios.\nNotebooks (Colab) — notebooks ejecutables desde Google Colab.\nPresentaciones — diapositivas y material de clase.\nNotas — resúmenes, conceptos y material de estudio.\n\n\n\n\n\n\n\nTipReproducibilidad\n\n\n\nLos notebooks se publican con un badge Open in Colab, fijan una semilla y registran las versiones de sus dependencias. Los datasets restringidos se documentan mediante su origen y esquema, nunca se publican."
-  },
-  {
-    "objectID": "index.html#filosofía",
-    "href": "index.html#filosofía",
-    "title": "Doctoral Learning Hub",
-    "section": "Filosofía",
-    "text": "Filosofía\n\nLearn · Build · Document · Research · Reproduce\n\nEl objetivo no es almacenar archivos: es construir una bitácora técnica y académica reproducible del doctorado."
-  },
-  {
-    "objectID": "research/index.html",
-    "href": "research/index.html",
-    "title": "Research Track",
-    "section": "",
-    "text": "Espacio reservado para el trabajo de investigación del doctorado, separado de los materiales de clase. Cada sección conserva su propia carpeta y convención de archivos.",
-    "crumbs": [
-      "Investigación",
-      "Panorama"
-    ]
-  },
-  {
-    "objectID": "research/index.html#investigación-doctoral",
-    "href": "research/index.html#investigación-doctoral",
-    "title": "Research Track",
-    "section": "",
-    "text": "Espacio reservado para el trabajo de investigación del doctorado, separado de los materiales de clase. Cada sección conserva su propia carpeta y convención de archivos.",
-    "crumbs": [
-      "Investigación",
-      "Panorama"
-    ]
-  },
-  {
-    "objectID": "research/manuscripts/index.html",
-    "href": "research/manuscripts/index.html",
-    "title": "Manuscritos",
-    "section": "",
-    "text": "Borradores de artículos, capítulos de tesis y material en redacción.",
-    "crumbs": [
-      "Investigación",
-      "Secciones",
-      "Manuscritos"
-    ]
-  },
-  {
-    "objectID": "research/manuscripts/index.html#convención-de-archivos",
-    "href": "research/manuscripts/index.html#convención-de-archivos",
-    "title": "Manuscritos",
-    "section": "Convención de archivos",
-    "text": "Convención de archivos\nUna carpeta por manuscrito: manuscript-01-titulo/ con fuentes y versiones.",
-    "crumbs": [
-      "Investigación",
-      "Secciones",
-      "Manuscritos"
-    ]
-  },
-  {
-    "objectID": "research/manuscripts/index.html#contenido",
-    "href": "research/manuscripts/index.html#contenido",
-    "title": "Manuscritos",
-    "section": "Contenido",
-    "text": "Contenido\n\n\n\nElemento\nFecha\nEnlace\nEstado\n\n\n\n\n—\n—\n—\n—\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nSección en preparación. Aún no se ha agregado contenido.",
-    "crumbs": [
-      "Investigación",
-      "Secciones",
-      "Manuscritos"
-    ]
-  },
-  {
-    "objectID": "research/presentations/index.html",
-    "href": "research/presentations/index.html",
-    "title": "Presentaciones científicas",
-    "section": "",
-    "text": "Charlas, pósters y seminarios de investigación.",
-    "crumbs": [
-      "Investigación",
-      "Secciones",
-      "Presentaciones científicas"
-    ]
-  },
-  {
-    "objectID": "research/presentations/index.html#convención-de-archivos",
-    "href": "research/presentations/index.html#convención-de-archivos",
-    "title": "Presentaciones científicas",
-    "section": "Convención de archivos",
-    "text": "Convención de archivos\npresentation-01-evento.ext con prefijo cronológico; conservar fuente y PDF.",
-    "crumbs": [
-      "Investigación",
-      "Secciones",
-      "Presentaciones científicas"
-    ]
-  },
-  {
-    "objectID": "research/presentations/index.html#contenido",
-    "href": "research/presentations/index.html#contenido",
-    "title": "Presentaciones científicas",
-    "section": "Contenido",
-    "text": "Contenido\n\n\n\nElemento\nFecha\nEnlace\nEstado\n\n\n\n\n—\n—\n—\n—\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nSección en preparación. Aún no se ha agregado contenido.",
-    "crumbs": [
-      "Investigación",
-      "Secciones",
-      "Presentaciones científicas"
-    ]
-  },
-  {
-    "objectID": "research/research-questions/index.html",
-    "href": "research/research-questions/index.html",
-    "title": "Preguntas de investigación",
-    "section": "",
-    "text": "Preguntas, hipótesis y objetivos que guían el proyecto, con su evolución a lo largo del doctorado.",
-    "crumbs": [
-      "Investigación",
-      "Secciones",
-      "Preguntas de investigación"
-    ]
-  },
-  {
-    "objectID": "research/research-questions/index.html#convención-de-archivos",
-    "href": "research/research-questions/index.html#convención-de-archivos",
-    "title": "Preguntas de investigación",
-    "section": "Convención de archivos",
-    "text": "Convención de archivos\nUn documento por iteración: 01-preguntas.md, 02-preguntas.md, …",
-    "crumbs": [
-      "Investigación",
-      "Secciones",
-      "Preguntas de investigación"
-    ]
-  },
-  {
-    "objectID": "research/research-questions/index.html#contenido",
-    "href": "research/research-questions/index.html#contenido",
-    "title": "Preguntas de investigación",
-    "section": "Contenido",
-    "text": "Contenido\n\n\n\nElemento\nFecha\nEnlace\nEstado\n\n\n\n\n—\n—\n—\n—\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nSección en preparación. Aún no se ha agregado contenido.",
-    "crumbs": [
-      "Investigación",
-      "Secciones",
-      "Preguntas de investigación"
-    ]
-  },
-  {
-    "objectID": "semesters/index.html",
-    "href": "semesters/index.html",
-    "title": "Semestres",
-    "section": "",
-    "text": "Índice de semestres del doctorado. Cada semestre agrupa sus módulos, y cada módulo conserva la misma arquitectura de recursos (tareas, quiz, data, talleres, notebooks, presentaciones y notas).\n\n\nSemestre 1\n2026-II · En curso\n\nMódulo 01 · Machine Learning\n\nVer semestre →\n\n\nLos siguientes semestres (Semestre 2, Semestre 3, …) se agregarán aquí a medida que avance el programa, sin modificar la estructura existente.\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "semesters/semester-01/machine-learning/assignments/assignment-01-tablas-de-multiplicar.html",
-    "href": "semesters/semester-01/machine-learning/assignments/assignment-01-tablas-de-multiplicar.html",
-    "title": "Tarea 01 · Tabla de multiplicar",
-    "section": "",
-    "text": "CONSTRUIR UN PROGRAMA PARA QUE ME HAGA LA TABLA DE MULTIPLICAR CON DIGITAR EL N, EL QUE UNO QUIERA HACER, HASTA DONDE QUIERE LLEGAR, POR EJEMPLO, N=5 HASTA 20."
-  },
-  {
-    "objectID": "semesters/semester-01/machine-learning/assignments/assignment-01-tablas-de-multiplicar.html#enunciado",
-    "href": "semesters/semester-01/machine-learning/assignments/assignment-01-tablas-de-multiplicar.html#enunciado",
-    "title": "Tarea 01 · Tabla de multiplicar",
-    "section": "",
-    "text": "CONSTRUIR UN PROGRAMA PARA QUE ME HAGA LA TABLA DE MULTIPLICAR CON DIGITAR EL N, EL QUE UNO QUIERA HACER, HASTA DONDE QUIERE LLEGAR, POR EJEMPLO, N=5 HASTA 20."
-  },
-  {
-    "objectID": "semesters/semester-01/machine-learning/assignments/assignment-01-tablas-de-multiplicar.html#objetivo",
-    "href": "semesters/semester-01/machine-learning/assignments/assignment-01-tablas-de-multiplicar.html#objetivo",
-    "title": "Tarea 01 · Tabla de multiplicar",
-    "section": "Objetivo",
-    "text": "Objetivo\nEscribir un programa que pida al usuario el número de la tabla y el límite, y luego imprima la tabla de multiplicar correspondiente. Se practican cuatro elementos básicos de Python:\n\nlectura de datos con input,\nconversión de texto a número con int,\nuna variable contador,\nrepetición controlada con un bucle while."
-  },
-  {
-    "objectID": "semesters/semester-01/machine-learning/assignments/assignment-01-tablas-de-multiplicar.html#código-original",
-    "href": "semesters/semester-01/machine-learning/assignments/assignment-01-tablas-de-multiplicar.html#código-original",
-    "title": "Tarea 01 · Tabla de multiplicar",
-    "section": "Código original",
-    "text": "Código original\nSolución entregada, sin modificaciones.\nn = int(input('Digite la tabla que quiere realizar: ')) #Esta línea le pide al usuario el número de la tabla de multiplicar.\n\nhasta = int(input('Digite hasta dónde quiere llegar: ')) # Aquí se pregunta hasta qué número queremos multiplicar.\n\nx = 1 # La variable x es nuestro contador, comienza en 1 porque queremos empezar multiplicando: 5 x 1\n\nwhile x &lt;= hasta: # Mientras x sea menor o igual que hasta, repita las instrucciones que están dentro del while.\n\n    print(n, 'x', x, '=', n * x) # \"x\": Es el simbolo, x: Hasta donde quiere multiplicar, \"=\": Es el simbolo, n * x: Es la multiplicación de 5 * 3, que da 15\n\n    x = x + 1 # Esta línea aumenta el contador en 1, si no se pone, x siempre sería 1 y el programa repetiría para siempre: 5 x 1 = 5"
-  },
-  {
-    "objectID": "semesters/semester-01/machine-learning/assignments/assignment-01-tablas-de-multiplicar.html#explicación-conceptual",
-    "href": "semesters/semester-01/machine-learning/assignments/assignment-01-tablas-de-multiplicar.html#explicación-conceptual",
-    "title": "Tarea 01 · Tabla de multiplicar",
-    "section": "Explicación conceptual",
-    "text": "Explicación conceptual\n\ninput\ninput('texto…') muestra el mensaje entre comillas y espera a que el usuario escriba algo y pulse Enter. Lo que devuelve es siempre una cadena de texto (str), aunque el usuario teclee dígitos: \"5\", no 5.\n\n\nint\nint(...) convierte esa cadena en un número entero. Es necesario porque no se puede multiplicar ni comparar texto como si fuera un número: int(\"5\") da 5. Por eso el programa envuelve cada input dentro de int(...) y guarda el resultado en n y en hasta.\n\n\nEl contador x\nx = 1 crea una variable que sirve de contador: lleva la cuenta de por qué número vamos multiplicando. Empieza en 1 para que la primera línea impresa sea n x 1. Dentro del bucle, x = x + 1 incrementa el contador en cada vuelta. Si esa línea faltara, x valdría siempre 1, la condición del while nunca dejaría de cumplirse y el programa se repetiría sin fin.\n\n\nEl bucle while\nwhile x &lt;= hasta: repite el bloque indentado mientras la condición sea verdadera. En cada vuelta:\n\nimprime n 'x' x '=' n * x, es decir, una fila de la tabla;\nsuma 1 a x.\n\nCuando x supera a hasta, la condición se vuelve falsa y el bucle termina. Con n = 5 y hasta = 20 se imprimen 20 filas, desde 5 x 1 = 5 hasta 5 x 20 = 100."
-  },
-  {
-    "objectID": "semesters/semester-01/machine-learning/assignments/assignment-01-tablas-de-multiplicar.html#recursos",
-    "href": "semesters/semester-01/machine-learning/assignments/assignment-01-tablas-de-multiplicar.html#recursos",
-    "title": "Tarea 01 · Tabla de multiplicar",
-    "section": "Recursos",
-    "text": "Recursos\nAbrir en Google Colab Ver el notebook en GitHub\n\n\n\nOpen in Colab"
-  },
-  {
-    "objectID": "semesters/semester-01/machine-learning/assignments/assignment-03-pagina-web.html",
-    "href": "semesters/semester-01/machine-learning/assignments/assignment-03-pagina-web.html",
-    "title": "Tarea 03 · Página web",
-    "section": "",
-    "text": "Elaborar una página web personal (portafolio / hoja de vida) y publicarla en línea como evidencia de la actividad."
-  },
-  {
-    "objectID": "semesters/semester-01/machine-learning/assignments/assignment-03-pagina-web.html#enunciado",
-    "href": "semesters/semester-01/machine-learning/assignments/assignment-03-pagina-web.html#enunciado",
-    "title": "Tarea 03 · Página web",
-    "section": "",
-    "text": "Elaborar una página web personal (portafolio / hoja de vida) y publicarla en línea como evidencia de la actividad."
-  },
-  {
-    "objectID": "semesters/semester-01/machine-learning/assignments/assignment-03-pagina-web.html#objetivo",
-    "href": "semesters/semester-01/machine-learning/assignments/assignment-03-pagina-web.html#objetivo",
-    "title": "Tarea 03 · Página web",
-    "section": "Objetivo",
-    "text": "Objetivo\nPracticar la estructura básica de una página web y su publicación mediante GitHub Pages, dejando una URL pública accesible."
-  },
-  {
-    "objectID": "semesters/semester-01/machine-learning/assignments/assignment-03-pagina-web.html#evidencia",
-    "href": "semesters/semester-01/machine-learning/assignments/assignment-03-pagina-web.html#evidencia",
-    "title": "Tarea 03 · Página web",
-    "section": "Evidencia",
-    "text": "Evidencia\nLa página se publicó en un proyecto propio e independiente y se enlaza aquí como evidencia externa. El proyecto no forma parte de este repositorio.\n\nURL: https://laverde97.github.io/latent-frontiers/cv.html\nProyecto: latent-frontiers (repositorio separado)\n\nVer página web"
-  },
-  {
-    "objectID": "semesters/semester-01/machine-learning/assignments/index.html",
-    "href": "semesters/semester-01/machine-learning/assignments/index.html",
-    "title": "Tareas",
-    "section": "",
-    "text": "Entregables, ejercicios y soluciones desarrolladas durante el módulo."
-  },
-  {
-    "objectID": "semesters/semester-01/machine-learning/assignments/index.html#inventario",
-    "href": "semesters/semester-01/machine-learning/assignments/index.html#inventario",
-    "title": "Tareas",
-    "section": "Inventario",
-    "text": "Inventario\n\n\n\n#\nTarea\nTipo\nRecurso\nEstado\n\n\n\n\n01\nTabla de multiplicar\nPython\nPágina + Colab\nCompletada\n\n\n02\nIngreso con password\nPython\nPágina + Colab\nCompletada\n\n\n03\nPágina web\nWeb\nEvidencia externa\nCompletada\n\n\n04\nPreparación de datos ICFES\nPython\nPágina + Colab (CSV/JSON)\nCompletada"
-  },
-  {
-    "objectID": "semesters/semester-01/machine-learning/assignments/index.html#tareas",
-    "href": "semesters/semester-01/machine-learning/assignments/index.html#tareas",
-    "title": "Tareas",
-    "section": "Tareas",
-    "text": "Tareas\n\n\n01 · Tabla de multiplicar\nEntrada con input, conversión con int, variable contador y bucle while.\nVer tarea\n\n\n02 · Ingreso con password\nBucle while con contador de intentos, if/else, break y condición final.\nVer tarea\n\n\n03 · Página web\nPortafolio publicado con GitHub Pages, enlazado como evidencia externa.\nVer tarea\n\n\n04 · Preparación de datos ICFES\nLimpieza, imputación por la media, variables dummy de departamento, reorganización del DataFrame y train_test_split. Dos variantes: CSV y JSON.\nVer tarea"
-  },
-  {
-    "objectID": "semesters/semester-01/machine-learning/assignments/index.html#convención-de-nombres",
-    "href": "semesters/semester-01/machine-learning/assignments/index.html#convención-de-nombres",
-    "title": "Tareas",
-    "section": "Convención de nombres",
-    "text": "Convención de nombres\nassignment-01-tema.ext, assignment-02-tema.ext, … — prefijo de dos dígitos en orden cronológico."
+    "objectID": "semesters/semester-01/machine-learning/data/cancer-de-mama/index.html#cargar-en-python-google-colab",
+    "href": "semesters/semester-01/machine-learning/data/cancer-de-mama/index.html#cargar-en-python-google-colab",
+    "title": "Dataset · Cáncer de mama · Vigilancia epidemiológica",
+    "section": "Cargar en Python / Google Colab",
+    "text": "Cargar en Python / Google Colab\nimport pandas as pd\n\nurl = (\n    \"https://raw.githubusercontent.com/\"\n    \"Laverde97/phd-data-science-ai/main/\"\n    \"semesters/semester-01/machine-learning/data/\"\n    \"cancer-de-mama/cancer_de_mama.csv\"\n)\n\ndataset = pd.read_csv(url, encoding=\"latin1\")\ndataset.head()"
   },
   {
     "objectID": "semesters/semester-01/machine-learning/data/clientes-compra-codificado/index.html",
