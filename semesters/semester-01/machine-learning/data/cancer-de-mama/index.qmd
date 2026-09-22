@@ -1,0 +1,123 @@
+---
+title: "Dataset · Cáncer de mama · Vigilancia epidemiológica"
+subtitle: "Ficha de dataset · Machine Learning · Semestre 1"
+---
+
+| | |
+|---|---|
+| **Archivo en el repo** | `cancer_de_mama.csv` |
+| **Fuente oficial** | [Cáncer de mama — Datos Abiertos Colombia](https://www.datos.gov.co/en/dataset/C-ncer-de-mama/v8kg-2j2j) (id `v8kg-2j2j`, distribución `1-026-22-000132`) |
+| **Formato** | CSV, separador `,`, codificación Latin-1 / Windows-1252 (no es UTF-8 válido) |
+| **Tamaño** | 330.246 bytes |
+| **Dimensiones** | 3.414 filas de datos × 15 columnas (+ fila de cabecera) |
+| **Valores faltantes** | 58 en total, todos en `cod_ase_`; 0 en las demás columnas |
+| **Cobertura temporal** | 2016–2021 (columna `year_`) |
+| **Cobertura geográfica** | Medellín: 27 comunas/corregimientos y 337 barrios |
+| **Procedencia** | Alcaldía de Medellín — Secretaría de Salud, Unidad de Gestión de la Información y el Conocimiento |
+| **Licencia** | [Creative Commons Attribution-ShareAlike 4.0 (CC BY-SA 4.0)](https://creativecommons.org/licenses/by-sa/4.0/legalcode) |
+| **SHA-256** | `a795b9db94edd4a37bf664352c01f08998815a2598e406fcb7f5dedc35475144` — SHA-256 del archivo local publicado en este repositorio |
+
+::: {.callout-note}
+## Verificación de la fuente
+
+Archivo local asociado al dataset oficial; correspondencia establecida mediante metadatos de la fuente oficial (nombre de archivo, descripción, editor, cobertura temporal y geográfica coincidentes con el catálogo de Datos Abiertos Colombia). No fue posible realizar comparación criptográfica con una descarga remota en esta ejecución, ya que el servidor de distribución (`medata.gov.co`) no fue alcanzable desde este entorno.
+:::
+
+## Propósito
+
+Este dataset es un registro de vigilancia epidemiológica: pacientes atendidos en Instituciones Prestadoras de Servicios de Salud (IPS) de Medellín con diagnóstico de cáncer de mama, reportados entre 2016 y 2021. Es útil para:
+
+- análisis exploratorio de datos (EDA);
+- caracterización epidemiológica;
+- análisis descriptivo, temporal y geográfico agregado;
+- estudio de frecuencias por comuna, barrio, año y tipo de afiliación en salud;
+- preparación y transformación de variables;
+- aprendizaje de manejo responsable de datos de salud.
+
+**No es apto para un ejercicio estándar de clasificación supervisada de cáncer de mama.** La columna `evento` tiene una única categoría (`CANCER DE MAMA`) en el 100% de los registros: no existe una variable objetivo con clases diagnósticas (p. ej. benigno vs. maligno), por lo que este dataset no debe describirse como insumo para Random Forest Classification ni Decision Tree Classification.
+
+## Diferencia frente al dataset de clasificación
+
+Este archivo corresponde a un **registro de casos** de cáncer de mama (vigilancia en salud pública), no al dataset que se utilizará más adelante para distinguir clases diagnósticas mediante Árbol de Decisión o Random Forest de clasificación (por ejemplo, un dataset tipo Wisconsin Breast Cancer, con variables clínicas y una etiqueta benigno/maligno). Ambos datasets tratan el tema "cáncer de mama" pero tienen propósitos distintos: este es para análisis descriptivo/epidemiológico, el otro —pendiente de incorporar— será para clasificación supervisada.
+
+## Variables
+
+| Variable | Tipo | Descripción |
+|----------|------|-------------|
+| `id` | Entero | Identificador numérico del registro/caso. |
+| `semana` | Entero | Semana epidemiológica de notificación (observado 1–53). |
+| `edad_` | Entero | Edad del paciente, en la unidad indicada por `uni_med_` (observado 17–98). |
+| `uni_med_` | Entero | Unidad de medida de la edad. Significado exacto pendiente de confirmar en el diccionario de datos de la fuente (valor constante = 1 en este archivo). |
+| `sexo_` | Categórica (`F`/`M`) | Sexo del paciente (F = 3.397 casos, M = 17 casos). |
+| `nombre_barrio` | Texto | Barrio de residencia (337 valores distintos; incluye "Sin informacion"/"SIN INFORMACION" con capitalización inconsistente). |
+| `comuna` | Texto | Comuna o corregimiento de Medellín (27 valores distintos). |
+| `tipo_ss_` | Categórica (código) | Tipo de afiliación al sistema de salud. Valores observados: `C`, `S`, `E`, `P`, `N`, `I`. Significado exacto pendiente de confirmar en el diccionario de datos de la fuente. |
+| `cod_ase_` | Texto (código) | Código de la entidad aseguradora (74 valores distintos). 58 valores faltantes. |
+| `fec_con_` | Fecha (texto) | Fecha de consulta. |
+| `ini_sin_` | Fecha (texto) | Fecha de inicio de síntomas. |
+| `tip_cas_` | Entero (código) | Tipo de caso. Valor constante (`3`) en todo el archivo; significado exacto pendiente de confirmar en el diccionario de datos de la fuente. |
+| `pac_hos_` | Entero (código) | Indicador relacionado con hospitalización del paciente. Valores observados: `1` (87 casos), `2` (3.327 casos); significado exacto de cada código pendiente de confirmar en el diccionario de datos de la fuente. |
+| `evento` | Categórica | Nombre del evento de vigilancia. Único valor observado: `CANCER DE MAMA` (100% de los registros). **No es una variable de clasificación.** |
+| `year_` | Entero | Año de notificación (2016–2021). |
+
+No se incluyen ejemplos de filas individuales en esta ficha para evitar reproducir combinaciones de atributos a nivel de paciente.
+
+## Limitaciones para clasificación supervisada
+
+- `evento` contiene una única clase (`CANCER DE MAMA`) en el 100% de los 3.414 registros.
+- Un clasificador supervisado (Árbol de Decisión, Random Forest, etc.) requiere una variable objetivo con al menos dos clases con significado interpretable.
+- Por lo tanto, este dataset **no es adecuado**, en su forma actual, para entrenar un modelo que distinga clases diagnósticas (p. ej. benigno/maligno).
+- No se fabricará artificialmente una etiqueta a partir de otras columnas (como `tipo_ss_`, `pac_hos_` o `sexo_`) para forzar un ejercicio de clasificación.
+- Para el taller de Árbol de Decisión / Random Forest de clasificación de cáncer de mama se buscará un dataset alternativo, correctamente etiquetado (ver nota de búsqueda más abajo), en una tarea separada.
+
+## Calidad de los datos
+
+- Dimensiones: 3.414 filas × 15 columnas.
+- Valores faltantes: 58 en total, concentrados en `cod_ase_`; el resto de columnas no tiene faltantes.
+- Filas duplicadas: 0.
+- Consistencia: se observa capitalización inconsistente en los valores "sin información" de `comuna` (`"Sin informacion"` vs. `"SIN INFORMACION"`), lo cual debería normalizarse en cualquier análisis posterior.
+- Balance de `sexo_`: fuertemente desbalanceado hacia `F` (99,5% vs. 0,5% `M`), consistente con la epidemiología del cáncer de mama.
+- Cobertura temporal: 6 años (2016–2021), con un mínimo de 359 registros (2016) y un máximo de 666 (2021).
+
+## Privacidad y protección de datos
+
+::: {.callout-warning}
+## Privacidad
+
+Aunque este conjunto de datos es distribuido públicamente por su fuente oficial y su licencia permite reutilización y redistribución, contiene variables a nivel de registro que pueden funcionar como cuasi-identificadores, como edad, fechas y ubicación geográfica. Por ello, los análisis publicados en este sitio evitan reproducir filas individuales o combinaciones infrecuentes y priorizan resultados agregados. La disponibilidad pública del dataset no elimina la necesidad de un uso responsable de la información.
+:::
+
+En particular, en este sitio:
+
+- no se publican ejemplos de filas individuales de pacientes;
+- no se publican fechas exactas asociadas a un caso concreto;
+- no se publican combinaciones raras (por ejemplo, barrios con un único caso) fuera del archivo de datos mismo;
+- no se afirma cumplimiento de una norma jurídica específica, ya que no se ha realizado una revisión legal formal.
+
+Esta nota no aplica una restricción sobre el archivo `cancer_de_mama.csv` en sí, que se distribuye completo en este repositorio bajo los términos de su licencia oficial (ver tabla de metadatos arriba).
+
+## Acceso a los datos
+
+El archivo completo (`cancer_de_mama.csv`) está disponible en esta misma carpeta del repositorio y puede descargarse directamente desde GitHub (ver sección siguiente). La fuente oficial y autoritativa del dataset es el catálogo de Datos Abiertos Colombia enlazado en la tabla de metadatos.
+
+::: {.callout-note}
+## Uso didáctico
+
+Este dataset se publica con fines didácticos y de práctica en análisis exploratorio y epidemiológico descriptivo, como parte del módulo de Machine Learning. No debe usarse para tomar decisiones individuales sobre personas ni combinarse con otras fuentes con el propósito de reidentificación.
+:::
+
+## Cargar en Python / Google Colab
+
+```python
+import pandas as pd
+
+url = (
+    "https://raw.githubusercontent.com/"
+    "Laverde97/phd-data-science-ai/main/"
+    "semesters/semester-01/machine-learning/data/"
+    "cancer-de-mama/cancer_de_mama.csv"
+)
+
+dataset = pd.read_csv(url, encoding="latin1")
+dataset.head()
+```
