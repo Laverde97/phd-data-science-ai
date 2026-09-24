@@ -28,16 +28,21 @@ ejecutable en Google Colab.
 
 ## Notas personales
 
-Resúmenes, conceptos clave, fórmulas y referencias redactados fuera de clase.
+Material complementario de estudio y práctica de Machine Learning. Los notebooks
+desarrollan cada tema desde los conceptos fundamentales hasta ejemplos, métricas,
+visualizaciones y validación.
 
-## Convención de nombres
+|  # | Tema | GitHub | Google Colab |
+| -: | ---- | ------ | ------------ |
+| 01 | Árbol de Decisión para Regresión | [GitHub](https://github.com/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/notes/notebooks/01-arbol-decision-regresion.ipynb) | [Open in Colab](https://colab.research.google.com/github/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/notes/notebooks/01-arbol-decision-regresion.ipynb) |
+| 02 | Random Forest para Regresión | [GitHub](https://github.com/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/notes/notebooks/02-random-forest-regresion.ipynb) | [Open in Colab](https://colab.research.google.com/github/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/notes/notebooks/02-random-forest-regresion.ipynb) |
+| 03 | Árbol de Decisión vs Random Forest para Regresión | [GitHub](https://github.com/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/notes/notebooks/03-arbol-vs-random-forest-regresion.ipynb) | [Open in Colab](https://colab.research.google.com/github/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/notes/notebooks/03-arbol-vs-random-forest-regresion.ipynb) |
+| 04 | Árbol de Decisión para Clasificación | [GitHub](https://github.com/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/notes/notebooks/04-arbol-decision-clasificacion.ipynb) | [Open in Colab](https://colab.research.google.com/github/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/notes/notebooks/04-arbol-decision-clasificacion.ipynb) |
+| 05 | Random Forest para Clasificación | [GitHub](https://github.com/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/notes/notebooks/05-random-forest-clasificacion.ipynb) | [Open in Colab](https://colab.research.google.com/github/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/notes/notebooks/05-random-forest-clasificacion.ipynb) |
+| 06 | Árbol de Decisión vs Random Forest para Clasificación | [GitHub](https://github.com/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/notes/notebooks/06-arbol-vs-random-forest-clasificacion.ipynb) | [Open in Colab](https://colab.research.google.com/github/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/notes/notebooks/06-arbol-vs-random-forest-clasificacion.ipynb) |
+| 07 | Clustering con K-Means | [GitHub](https://github.com/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/notes/notebooks/07-clustering-kmeans.ipynb) | [Open in Colab](https://colab.research.google.com/github/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/notes/notebooks/07-clustering-kmeans.ipynb) |
+| 08 | PCA — Análisis de Componentes Principales | [GitHub](https://github.com/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/notes/notebooks/08-pca.ipynb) | [Open in Colab](https://colab.research.google.com/github/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/notes/notebooks/08-pca.ipynb) |
+| 09 | Imputación de Datos Faltantes | [GitHub](https://github.com/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/notes/notebooks/09-imputacion.ipynb) | [Open in Colab](https://colab.research.google.com/github/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/notes/notebooks/09-imputacion.ipynb) |
+| 10 | SQL y Conexiones a Bases de Datos | [GitHub](https://github.com/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/notes/notebooks/10-sql.ipynb) | [Open in Colab](https://colab.research.google.com/github/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/notes/notebooks/10-sql.ipynb) |
 
-`01-tema.md`, `02-tema.md`, … — prefijo de dos dígitos en orden cronológico.
-
-| # | Tema | Actualizada | Enlace | Estado |
-|:--:|------|:-----------:|--------|--------|
-| — | — | — | — | — |
-
-::: {.callout-note}
-Aún no se han agregado notas personales a esta sección.
-:::
+: Notas personales del módulo {.striped .hover tbl-colwidths="[6,50,22,22]"}
