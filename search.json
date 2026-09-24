@@ -944,14 +944,7 @@
     "href": "semesters/semester-01/machine-learning/notes/index.html#notas-personales",
     "title": "Notas de estudio",
     "section": "Notas personales",
-    "text": "Notas personales\nResúmenes, conceptos clave, fórmulas y referencias redactados fuera de clase."
-  },
-  {
-    "objectID": "semesters/semester-01/machine-learning/notes/index.html#convención-de-nombres",
-    "href": "semesters/semester-01/machine-learning/notes/index.html#convención-de-nombres",
-    "title": "Notas de estudio",
-    "section": "Convención de nombres",
-    "text": "Convención de nombres\n01-tema.md, 02-tema.md, … — prefijo de dos dígitos en orden cronológico.\n\n\n\n#\nTema\nActualizada\nEnlace\nEstado\n\n\n\n\n—\n—\n—\n—\n—\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nAún no se han agregado notas personales a esta sección."
+    "text": "Notas personales\nMaterial complementario de estudio y práctica de Machine Learning. Los notebooks desarrollan cada tema desde los conceptos fundamentales hasta ejemplos, métricas, visualizaciones y validación.\n\nNotas personales del módulo\n\n\n\n\n\n\n\n\n#\nTema\nGitHub\nGoogle Colab\n\n\n\n\n01\nÁrbol de Decisión para Regresión\nGitHub\nOpen in Colab\n\n\n02\nRandom Forest para Regresión\nGitHub\nOpen in Colab\n\n\n03\nÁrbol de Decisión vs Random Forest para Regresión\nGitHub\nOpen in Colab\n\n\n04\nÁrbol de Decisión para Clasificación\nGitHub\nOpen in Colab\n\n\n05\nRandom Forest para Clasificación\nGitHub\nOpen in Colab\n\n\n06\nÁrbol de Decisión vs Random Forest para Clasificación\nGitHub\nOpen in Colab\n\n\n07\nClustering con K-Means\nGitHub\nOpen in Colab\n\n\n08\nPCA — Análisis de Componentes Principales\nGitHub\nOpen in Colab\n\n\n09\nImputación de Datos Faltantes\nGitHub\nOpen in Colab\n\n\n10\nSQL y Conexiones a Bases de Datos\nGitHub\nOpen in Colab"
   },
   {
     "objectID": "semesters/semester-01/machine-learning/quizzes/index.html",
