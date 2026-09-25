@@ -14,6 +14,16 @@ Inventario de ejercicios prácticos reproducibles del módulo.
 
 Los siete notebooks incluyen un badge **Open in Colab** en la primera celda Markdown.
 
+## Taller Final
+
+Segmentación inteligente de servicios clínicos mediante PCA y K-Means (25/09/2026).
+Los resultados provienen de una base de datos MySQL de solo lectura; el notebook
+público no contiene la contraseña (usa Colab Secrets o `getpass`).
+
+- [SQL](taller-final/Taller_Final_Clinica_ML.sql) — consultas de solo lectura.
+- [Colab](https://colab.research.google.com/github/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/workshops/taller-final/Taller_Final_Clinica_PCA_KMeans.ipynb) — [notebook](taller-final/Taller_Final_Clinica_PCA_KMeans.ipynb) con sus salidas.
+- [PDF](taller-final/Taller_Final_Segmentacion_Clinica_PCA_KMeans.pdf) — informe generado con Quarto.
+
 ## Taller 03
 
 Desarrolla la exploración, comparación de métodos de imputación, selección de

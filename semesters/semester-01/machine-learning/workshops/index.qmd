@@ -48,6 +48,14 @@ Si el taller es un notebook, incluye su badge **Open in Colab**.
 [w7nb]: https://github.com/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/workshops/workshop-07-arbol-decision-clasificacion-cancer-mama.ipynb
 [w7cl]: https://colab.research.google.com/github/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/workshops/workshop-07-arbol-decision-clasificacion-cancer-mama.ipynb
 
+## Taller Final
+
+**Segmentación inteligente de servicios clínicos mediante PCA y K-Means** · 25/09/2026
+
+[SQL](taller-final/Taller_Final_Clinica_ML.sql) · [Colab][tfcl] · [PDF](taller-final/Taller_Final_Segmentacion_Clinica_PCA_KMeans.pdf)
+
+[tfcl]: https://colab.research.google.com/github/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/workshops/taller-final/Taller_Final_Clinica_PCA_KMeans.ipynb
+
 ::: {.callout-note}
 ## Taller 03 — enunciado y solución
 
@@ -69,7 +77,8 @@ El **enunciado** original es material de clase y se conserva de forma privada; *
 - visualización de la recta de regresión y análisis de residuos;
 - árboles de decisión y bosques aleatorios (Random Forest) para regresión;
 - comparación entre modelos e importancia de variables (*feature importance*);
-- árboles de decisión para clasificación con criterio de entropía y frontera de decisión.
+- árboles de decisión para clasificación con criterio de entropía y frontera de decisión;
+- integración de tablas MySQL con `JOIN`, reducción de dimensionalidad con PCA y segmentación con K-Means.
 
 ::: {.callout-note}
 CSV y JSON representan dos formatos de almacenamiento diferentes, pero el objetivo de Machine
