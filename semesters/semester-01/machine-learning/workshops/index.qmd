@@ -54,7 +54,7 @@ Si el taller es un notebook, incluye su badge **Open in Colab**.
 
 [SQL](taller-final/Taller_Final_Clinica_ML.sql) · [Colab][tfcl] · [PDF](taller-final/Taller_Final_Segmentacion_Clinica_PCA_KMeans.pdf)
 
-[tfcl]: https://colab.research.google.com/github/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/workshops/taller-final/Taller_Final_Clinica_PCA_KMeans.ipynb
+[tfcl]: https://colab.research.google.com/github/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/workshops/taller-final/Taller_Clinica_Machine_Learning_LAVERDE.ipynb
 
 ::: {.callout-note}
 ## Taller 03 — enunciado y solución

@@ -15,7 +15,7 @@ project:
     - "semesters/semester-01/machine-learning/workshops/workshop-03-regresion-lineal-viviendas.qmd"
     - "semesters/semester-01/machine-learning/workshops/workshop-03-regresion-lineal-viviendas.pdf"
     - "semesters/semester-01/machine-learning/workshops/taller-final/Taller_Final_Clinica_ML.sql"
-    - "semesters/semester-01/machine-learning/workshops/taller-final/Taller_Final_Clinica_PCA_KMeans.ipynb"
+    - "semesters/semester-01/machine-learning/workshops/taller-final/Taller_Clinica_Machine_Learning_LAVERDE.ipynb"
     - "semesters/semester-01/machine-learning/workshops/taller-final/Taller_Final_Segmentacion_Clinica_PCA_KMeans.pdf"
 
 website:

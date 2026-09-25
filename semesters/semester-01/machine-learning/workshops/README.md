@@ -21,7 +21,7 @@ Los resultados provienen de una base de datos MySQL de solo lectura; el notebook
 público no contiene la contraseña (usa Colab Secrets o `getpass`).
 
 - [SQL](taller-final/Taller_Final_Clinica_ML.sql) — consultas de solo lectura.
-- [Colab](https://colab.research.google.com/github/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/workshops/taller-final/Taller_Final_Clinica_PCA_KMeans.ipynb) — [notebook](taller-final/Taller_Final_Clinica_PCA_KMeans.ipynb) con sus salidas.
+- [Colab](https://colab.research.google.com/github/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/machine-learning/workshops/taller-final/Taller_Clinica_Machine_Learning_LAVERDE.ipynb) — [notebook](taller-final/Taller_Clinica_Machine_Learning_LAVERDE.ipynb) con sus salidas.
 - [PDF](taller-final/Taller_Final_Segmentacion_Clinica_PCA_KMeans.pdf) — informe generado con Quarto.
 
 ## Taller 03
