@@ -308,11 +308,102 @@
     "text": "Recursos\nAbrir en Google Colab Ver el notebook en GitHub\n\n\n\nOpen in Colab"
   },
   {
+    "objectID": "semesters/semester-01/deep-learning-1/week-01/index.html",
+    "href": "semesters/semester-01/deep-learning-1/week-01/index.html",
+    "title": "Semana 01",
+    "section": "",
+    "text": "En la semana 01 se presentan los tres frameworks del curso (TensorFlow, PyTorch y JAX): tensores, diferenciación automática y carga de datos. En el repositorio del docente corresponde a la sección “Semana 1. Introducción a TensorFlow, PyTorch y Jax” del README.md y a la carpeta clase1/.\nEstado: Material incorporado"
+  },
+  {
+    "objectID": "semesters/semester-01/deep-learning-1/week-01/index.html#clases",
+    "href": "semesters/semester-01/deep-learning-1/week-01/index.html#clases",
+    "title": "Semana 01",
+    "section": "Clases",
+    "text": "Clases\n\n\nClase 01 · Introducción a TensorFlow, PyTorch y JAX\nTensores y diferenciación automática en los tres frameworks, y carga de datos con tf.data y torch.utils.data.\n5 notebooks · 3 archivos de datos\nVer clase 01 →"
+  },
+  {
+    "objectID": "semesters/semester-01/deep-learning-1/week-01/index.html#temas",
+    "href": "semesters/semester-01/deep-learning-1/week-01/index.html#temas",
+    "title": "Semana 01",
+    "section": "Temas",
+    "text": "Temas\n\nTensores: rangos, indexado, operaciones, reshape y broadcasting.\nDiferenciación automática: tf.GradientTape, autograd de PyTorch y grad de JAX.\nModelo de ejecución: eager frente a grafo, y jit en JAX.\nCarga de datos: tf.data.Dataset, Dataset y DataLoader de PyTorch, transformaciones y data augmentation."
+  },
+  {
+    "objectID": "semesters/semester-01/deep-learning-1/week-01/index.html#resumen-de-materiales",
+    "href": "semesters/semester-01/deep-learning-1/week-01/index.html#resumen-de-materiales",
+    "title": "Semana 01",
+    "section": "Resumen de materiales",
+    "text": "Resumen de materiales\n\n\n\n\n\n\n\n\nTipo\nCantidad\nDetalle\n\n\n\n\nNotebooks\n5\n3 de tensores (TensorFlow, PyTorch, JAX) y 2 de carga de datos (TensorFlow, PyTorch)\n\n\nDatos\n3\nsonnets.txt, sonnets_2.txt, sunspots.csv\n\n\nRecursos externos\n—\nCarpeta imgs/ del docente y datasets de tensorflow_datasets (MNIST, IMDB)\n\n\nNotas personales\n0\nTodavía no hay\n\n\nEjercicios\n0\nTodavía no hay"
+  },
+  {
+    "objectID": "semesters/semester-01/deep-learning-1/week-01/index.html#fuente",
+    "href": "semesters/semester-01/deep-learning-1/week-01/index.html#fuente",
+    "title": "Semana 01",
+    "section": "Fuente",
+    "text": "Fuente\nMaterial del docente Héctor Javier Hortúa, PhD, del curso Deep Learning I (Universidad El Bosque). Fuente: Deep_Learning_I_Fundamentos/clase1.\nEl repositorio fuente no tiene un archivo de licencia explícito ni un aviso de reutilización. Por eso este sitio no republica el material del docente: lo enlaza con atribución."
+  },
+  {
+    "objectID": "semesters/semester-01/deep-learning-1/index.html",
+    "href": "semesters/semester-01/deep-learning-1/index.html",
+    "title": "Deep Learning I",
+    "section": "",
+    "text": "Segundo módulo del semestre. Cubre los fundamentos del aprendizaje profundo con TensorFlow, PyTorch y JAX: tensores, carga de datos, modelos MLP, RNN y CNN, entrenamiento y casos prácticos. Este módulo se organiza por semana → clase → tipo de recurso, de modo que se pueda auditar qué se vio en cada clase."
+  },
+  {
+    "objectID": "semesters/semester-01/deep-learning-1/index.html#módulo-02-deep-learning-i",
+    "href": "semesters/semester-01/deep-learning-1/index.html#módulo-02-deep-learning-i",
+    "title": "Deep Learning I",
+    "section": "",
+    "text": "Segundo módulo del semestre. Cubre los fundamentos del aprendizaje profundo con TensorFlow, PyTorch y JAX: tensores, carga de datos, modelos MLP, RNN y CNN, entrenamiento y casos prácticos. Este módulo se organiza por semana → clase → tipo de recurso, de modo que se pueda auditar qué se vio en cada clase."
+  },
+  {
+    "objectID": "semesters/semester-01/deep-learning-1/index.html#docente-y-fuente",
+    "href": "semesters/semester-01/deep-learning-1/index.html#docente-y-fuente",
+    "title": "Deep Learning I",
+    "section": "Docente y fuente",
+    "text": "Docente y fuente\n\n\n\nInstitución\nUniversidad El Bosque · Doctorado en Ciencia de Datos e Inteligencia Artificial\n\n\nCurso\nDeep Learning I\n\n\nDocente\nHéctor Javier Hortúa, PhD · SavIA-Lab, Instituto de Neurociencias\n\n\nRepositorio del docente\nMAESTRiA-ESTADiS-CIENCIA-DATOS-Bosque/Deep_Learning_I_Fundamentos"
+  },
+  {
+    "objectID": "semesters/semester-01/deep-learning-1/index.html#recursos-del-módulo",
+    "href": "semesters/semester-01/deep-learning-1/index.html#recursos-del-módulo",
+    "title": "Deep Learning I",
+    "section": "Recursos del módulo",
+    "text": "Recursos del módulo\n\n\n📋 Contenido del curso\nResumen del programa oficial (Contenido.ipynb): justificación, requisitos, módulos, metodología, evaluación, trabajo final y bibliografía.\nVer contenido del curso\n\n\n📅 Semana 01\nClase 01 · Introducción a TensorFlow, PyTorch y JAX: tensores, diferenciación automática y carga de datos. Cinco notebooks y tres archivos de datos.\nVer semana 01"
+  },
+  {
+    "objectID": "semesters/semester-01/deep-learning-1/index.html#semana-a-semana",
+    "href": "semesters/semester-01/deep-learning-1/index.html#semana-a-semana",
+    "title": "Deep Learning I",
+    "section": "Semana a semana",
+    "text": "Semana a semana\nSe agrega una fila cuando el material de una clase se publica en el repositorio del docente. No se anticipan semanas ni clases futuras.\n\n\n\nSemana\nClase\nTemas\nNotebooks\nDatos\nEstado\n\n\n\n\nSemana 01\nClase 01 · Introducción a TensorFlow, PyTorch y JAX\nTensores, diferenciación automática, TensorFlow, PyTorch, JAX, carga de datos\n5\n3\nMaterial incorporado"
+  },
+  {
+    "objectID": "semesters/semester-01/deep-learning-1/index.html#progreso-actual",
+    "href": "semesters/semester-01/deep-learning-1/index.html#progreso-actual",
+    "title": "Deep Learning I",
+    "section": "Progreso actual",
+    "text": "Progreso actual\n\nMaterial incorporado: Semana 01 · Clase 01. Es el contenido de la carpeta clase1/ del repositorio del docente, en el commit 0f989f9.\nNotas personales y ejercicios: todavía no se ha agregado ninguno."
+  },
+  {
+    "objectID": "semesters/semester-01/deep-learning-1/index.html#entorno-y-dependencias",
+    "href": "semesters/semester-01/deep-learning-1/index.html#entorno-y-dependencias",
+    "title": "Deep Learning I",
+    "section": "Entorno y dependencias",
+    "text": "Entorno y dependencias\nEl repositorio del docente gestiona su entorno con uv. Según su pyproject.toml, requiere:\n\n\n\nPaquete\nVersión mínima\n\n\n\n\nPython\n≥ 3.12\n\n\njax[cpu]\n≥ 0.11.1\n\n\njupyter\n≥ 1.1.1\n\n\nmatplotlib\n≥ 3.11.2\n\n\nnumpy\n≥ 2.5.3\n\n\npandas\n≥ 3.0.6\n\n\ntensorflow\n≥ 2.21.0\n\n\ntorch\n≥ 2.14.0\n\n\n\n\n\n\n\n\n\nNoteDependencias adicionales\n\n\n\nLos notebooks de carga de datos también importan tensorflow_datasets, torchvision y PIL (Pillow), que no aparecen en ese pyproject.toml.\nEste sitio no ejecuta los notebooks de Deep Learning al construirse. El sitio no instala TensorFlow, PyTorch ni JAX, y los notebooks se ofrecen solo como enlaces a GitHub y Colab. Para ejecutarlos localmente, clona el repositorio del docente y ejecuta uv sync."
+  },
+  {
+    "objectID": "semesters/semester-01/deep-learning-1/index.html#google-colab",
+    "href": "semesters/semester-01/deep-learning-1/index.html#google-colab",
+    "title": "Deep Learning I",
+    "section": "Google Colab",
+    "text": "Google Colab\nCada notebook de la clase tiene un enlace Open in Colab que apunta al archivo original del docente:\nhttps://colab.research.google.com/github/MAESTRiA-ESTADiS-CIENCIA-DATOS-Bosque/Deep_Learning_I_Fundamentos/blob/main/&lt;ruta-del-notebook&gt;\nColab abre solo el notebook. Los archivos de datos locales (sonnets.txt, sunspots.csv, imgs/) hay que subirlos a la sesión antes de ejecutar las celdas que los usan.\n\n\n\n\n\n\nImportantAtribución y derechos\n\n\n\nTodo el material de este módulo (notebooks, datos y contenido del curso) proviene del repositorio del docente, del curso Deep Learning I del Doctorado en Ciencia de Datos e Inteligencia Artificial de la Universidad El Bosque. No es de autoría propia.\nEl repositorio fuente no tiene un archivo de licencia explícito. Por eso este sitio no redistribuye los archivos: los enlaza con atribución. Las copias verbatim se guardan en almacenamiento privado."
+  },
+  {
     "objectID": "semesters/index.html",
     "href": "semesters/index.html",
     "title": "Semestres",
     "section": "",
-    "text": "Índice de semestres del doctorado. Cada semestre agrupa sus módulos, y cada módulo conserva la misma arquitectura de recursos (tareas, quiz, data, talleres, notebooks, presentaciones y notas).\n\n\nSemestre 1\n2026-II · En curso\n\nMódulo 01 · Machine Learning\n\nVer semestre →\n\n\nLos siguientes semestres (Semestre 2, Semestre 3, …) se agregarán aquí a medida que avance el programa, sin modificar la estructura existente.\n\n\n\n Back to top"
+    "text": "Índice de semestres del doctorado. Cada semestre agrupa sus módulos. Machine Learning se organiza por tipo de recurso (tareas, quiz, data, talleres, notebooks, presentaciones y notas), y Deep Learning I por semana → clase → tipo de recurso.\n\n\nSemestre 1\n2026-II · En curso\n\nMódulo 01 · Machine Learning\nMódulo 02 · Deep Learning I\n\nVer semestre →\n\n\nLos siguientes semestres (Semestre 2, Semestre 3, …) se agregarán aquí a medida que avance el programa, sin modificar la estructura existente.\n\n\n\n Back to top"
   },
   {
     "objectID": "research/research-questions/index.html",
@@ -653,18 +744,151 @@
     ]
   },
   {
+    "objectID": "semesters/semester-01/deep-learning-1/course-content/index.html",
+    "href": "semesters/semester-01/deep-learning-1/course-content/index.html",
+    "title": "Contenido del curso",
+    "section": "",
+    "text": "Resumen del programa oficial publicado por el docente en Contenido.ipynb (Open in Colab). Hay una copia verbatim en almacenamiento privado."
+  },
+  {
+    "objectID": "semesters/semester-01/deep-learning-1/course-content/index.html#descripción",
+    "href": "semesters/semester-01/deep-learning-1/course-content/index.html#descripción",
+    "title": "Contenido del curso",
+    "section": "Descripción",
+    "text": "Descripción\nCurso Deep Learning I del Doctorado en Ciencia de Datos e Inteligencia Artificial de la Universidad El Bosque."
+  },
+  {
+    "objectID": "semesters/semester-01/deep-learning-1/course-content/index.html#docente",
+    "href": "semesters/semester-01/deep-learning-1/course-content/index.html#docente",
+    "title": "Contenido del curso",
+    "section": "Docente",
+    "text": "Docente\nHéctor Javier Hortúa, PhD · SavIA-Lab, Instituto de Neurociencias · GitHub: JavierOrjuela."
+  },
+  {
+    "objectID": "semesters/semester-01/deep-learning-1/course-content/index.html#justificación",
+    "href": "semesters/semester-01/deep-learning-1/course-content/index.html#justificación",
+    "title": "Contenido del curso",
+    "section": "Justificación",
+    "text": "Justificación\nSegún el programa, el curso da una comprensión fundamental de las técnicas de aprendizaje supervisado y no supervisado. Con ellas, los estudiantes podrán diseñar e implementar soluciones en ciencia de datos e inteligencia artificial, con énfasis en el pensamiento crítico, la experimentación y la aplicación ética y estratégica en la industria, la investigación y la academia."
+  },
+  {
+    "objectID": "semesters/semester-01/deep-learning-1/course-content/index.html#requisitos",
+    "href": "semesters/semester-01/deep-learning-1/course-content/index.html#requisitos",
+    "title": "Contenido del curso",
+    "section": "Requisitos",
+    "text": "Requisitos\n\nProgramación en Python.\nConocimientos básicos de álgebra lineal.\nUna cuenta de Google para usar GPU en Colab, o un computador que cumpla los requisitos para instalar TensorFlow, con o sin GPU."
+  },
+  {
+    "objectID": "semesters/semester-01/deep-learning-1/course-content/index.html#contenido",
+    "href": "semesters/semester-01/deep-learning-1/course-content/index.html#contenido",
+    "title": "Contenido del curso",
+    "section": "Contenido",
+    "text": "Contenido\nPrimer módulo · Introducción a Deep Learning\n\nIntroducción a Deep Learning\nIntroducción a TensorFlow, PyTorch y JAX\nDatasets, transformación de datos y data augmentation\n\nSegundo módulo · Perceptrón multicapa (MLP)\n\nModelos MLP, RNN y CNN\nEntrenamiento y evaluación de modelos\nOptimización, regularización y funciones de costo\nPersonalización con las APIs de bajo nivel:\n\nGuardar y restaurar modelos\nSequential y Functional API\nVisualización con TensorBoard\nMulti-GPU\n\n\nTercer módulo · Casos prácticos\n\nAjuste de hiperparámetros\nMétodos aplicados (y trabajos finales): multimodales, transfer learning, style transfer, OCR, AutoML, explicabilidad e introducción breve a Hugging Face"
+  },
+  {
+    "objectID": "semesters/semester-01/deep-learning-1/course-content/index.html#metodología",
+    "href": "semesters/semester-01/deep-learning-1/course-content/index.html#metodología",
+    "title": "Contenido del curso",
+    "section": "Metodología",
+    "text": "Metodología\nCada clase tiene una parte teórica, en la que se introducen los conceptos básicos, y una parte práctica, en la que se aplican y se ven las implementaciones en software."
+  },
+  {
+    "objectID": "semesters/semester-01/deep-learning-1/course-content/index.html#evaluación",
+    "href": "semesters/semester-01/deep-learning-1/course-content/index.html#evaluación",
+    "title": "Contenido del curso",
+    "section": "Evaluación",
+    "text": "Evaluación\n\n\n\nComponente\nPeso\n\n\n\n\nEjercicios\n20 %\n\n\nTrabajo final\n80 %"
+  },
+  {
+    "objectID": "semesters/semester-01/deep-learning-1/course-content/index.html#trabajo-final",
+    "href": "semesters/semester-01/deep-learning-1/course-content/index.html#trabajo-final",
+    "title": "Contenido del curso",
+    "section": "Trabajo final",
+    "text": "Trabajo final\nPresentación de un artículo científico en grupos de dos personas, con una duración de 1 hora."
+  },
+  {
+    "objectID": "semesters/semester-01/deep-learning-1/course-content/index.html#bibliografía",
+    "href": "semesters/semester-01/deep-learning-1/course-content/index.html#bibliografía",
+    "title": "Contenido del curso",
+    "section": "Bibliografía",
+    "text": "Bibliografía\n\nTensorFlow\nPyTorch\nJAX — Thinking in JAX\nAurélien Géron. Hands-On Machine Learning with Scikit-Learn and PyTorch. O’Reilly.\nAurélien Géron. Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow, 2.ª ed. O’Reilly Media.\nRowel Atienza. Advanced Deep Learning with TensorFlow 2 and Keras. Packt Publishing.\nC. M. Bishop. Pattern Recognition and Machine Learning. Springer-Verlag New York, 2006."
+  },
+  {
+    "objectID": "semesters/semester-01/deep-learning-1/course-content/index.html#herramientas",
+    "href": "semesters/semester-01/deep-learning-1/course-content/index.html#herramientas",
+    "title": "Contenido del curso",
+    "section": "Herramientas",
+    "text": "Herramientas\n\nGoogle Colab\nGitHub (desktop)\nLaptop con TensorFlow instalado (basta con CPU). El docente recomienda trabajar en un entorno uv.\n\n\n\n\n\n\n\nNoteFuente\n\n\n\nEl contenido se resume del Contenido.ipynb del repositorio del docente (commit 0f989f9). El repositorio fuente no tiene un archivo de licencia explícito."
+  },
+  {
+    "objectID": "semesters/semester-01/deep-learning-1/week-01/class-01/index.html",
+    "href": "semesters/semester-01/deep-learning-1/week-01/class-01/index.html",
+    "title": "Clase 01",
+    "section": "",
+    "text": "ImportantFuente y atribución\n\n\n\nMaterial del docente Héctor Javier Hortúa, PhD (SavIA-Lab, Instituto de Neurociencias), del curso Deep Learning I del Doctorado en Ciencia de Datos e Inteligencia Artificial de la Universidad El Bosque. Viene de la carpeta clase1/ del repositorio del docente (commit 0f989f9). No es de autoría propia.\nEl repositorio fuente no tiene un archivo de licencia explícito, así que aquí se enlaza al original. Hay copias verbatim en almacenamiento privado, comprobadas con SHA-256."
+  },
+  {
+    "objectID": "semesters/semester-01/deep-learning-1/week-01/class-01/index.html#temas",
+    "href": "semesters/semester-01/deep-learning-1/week-01/class-01/index.html#temas",
+    "title": "Clase 01",
+    "section": "Temas",
+    "text": "Temas\nSegún los encabezados de los notebooks:\n\nTensores: rangos, indexado y slicing, operaciones y reducciones, propiedades, reshape, broadcasting, e interoperabilidad con NumPy.\nDiferenciación automática: derivadas simples, gradientes respecto a varios parámetros, derivadas de orden superior, verificación de la solución analítica de una EDO y un Metropolis-Hastings (MCMC) implementado en cada framework.\nParticularidades de cada framework: eager frente a grafo y variables (TensorFlow); CPU ↔︎ GPU, requires_grad, acumulación de gradientes y retain_graph (PyTorch); inmutabilidad, PRNGKey, jacobianos y jit (JAX).\nCarga de datos: tf.data.Dataset, Dataset y DataLoader de PyTorch, collate_fn, transformaciones, lectura de texto y CSV, tensorflow_datasets y data augmentation."
+  },
+  {
+    "objectID": "semesters/semester-01/deep-learning-1/week-01/class-01/index.html#notebooks",
+    "href": "semesters/semester-01/deep-learning-1/week-01/class-01/index.html#notebooks",
+    "title": "Clase 01",
+    "section": "Notebooks",
+    "text": "Notebooks\n\n\n\n#\nNotebook\nFramework\nContenido\nOriginal\nColab\n\n\n\n\n1\nTensores y diferenciación automática con TensorFlow · 01_tensores_tensorflow.ipynb\nTensorFlow\nArquitectura, eager vs graph, tensores y rangos, operaciones, broadcasting, tensores especiales, tf.Variable, tf.einsum, tf.GradientTape, EDO y MCMC.\nGitHub\nOpen in Colab\n\n\n2\nTensores y diferenciación automática con PyTorch · 01_tensores_pytorch.ipynb\nPyTorch\nLos mismos conceptos que el notebook de TensorFlow: ejecución dinámica, torch.where, view/reshape, CPU ↔︎ GPU, requires_grad, autograd (acumulación, retain_graph, congelar parámetros), EDO y MCMC.\nGitHub\nOpen in Colab\n\n\n3\nTensores y diferenciación automática con JAX · 01_tensores_jax.ipynb\nJAX\nNumPy acelerado con transformaciones de funciones: inmutabilidad, PRNGKey, jnp.where, grad, jacobianos, EDO, jit, MCMC y una comparación final de los tres frameworks.\nGitHub\nOpen in Colab\n\n\n4\nCarga de datos en TensorFlow: la API tf.data · 02_carga_datos_tensorflow.ipynb\nTensorFlow 2 / Keras\nDatasets desde memoria, iteración, shuffle/repeat/batch, map/flat_map, lectura de .txt y .csv, tensorflow_datasets (MNIST), pipeline de entrenamiento, data augmentation con tres métodos y pipeline de texto con IMDB y embeddings.\nGitHub\nOpen in Colab\n\n\n5\nCarga de datos en PyTorch: Dataset, DataLoader, batch y collate_fn · 02_carga_datos_pytorch.ipynb\nPyTorch\nDataset y TensorDataset, estilo map frente a iterable, DataLoader, collate_fn propio, transformaciones con torchvision, ImageFolder, serie temporal con ventanas deslizantes y tokenización de texto.\nGitHub\nOpen in Colab\n\n\n\nLos cinco notebooks del docente se publican sin salidas (celdas sin ejecutar). Las copias verbatim de este repositorio están en almacenamiento privado, y este sitio no las redistribuye."
+  },
+  {
+    "objectID": "semesters/semester-01/deep-learning-1/week-01/class-01/index.html#datos",
+    "href": "semesters/semester-01/deep-learning-1/week-01/class-01/index.html#datos",
+    "title": "Clase 01",
+    "section": "Datos",
+    "text": "Datos\n\n\n\nArchivo\nFormato\nTamaño\nUsado por\nDescripción\n\n\n\n\nsonnets.txt\nTXT (ASCII)\n93 578 B\n02_carga_datos_tensorflow, 02_carga_datos_pytorch\nTexto en inglés de 2 158 líneas que empieza con “FROM fairest creatures we desire increase”. Se usa para TextLineDataset y para tokenizar.\n\n\nsonnets_2.txt\nTXT (ASCII)\n93 578 B\n02_carga_datos_tensorflow\nIdéntico byte a byte a sonnets.txt. Se conservan los dos porque el notebook los lee juntos.\n\n\nsunspots.csv\nCSV\n67 591 B\n02_carga_datos_tensorflow, 02_carga_datos_pytorch\nSerie mensual de 3 235 filas (1749-01-31 → 2018-07-31). Columnas: índice sin nombre, Date y Monthly Mean Total Sunspot Number."
+  },
+  {
+    "objectID": "semesters/semester-01/deep-learning-1/week-01/class-01/index.html#recursos",
+    "href": "semesters/semester-01/deep-learning-1/week-01/class-01/index.html#recursos",
+    "title": "Clase 01",
+    "section": "Recursos",
+    "text": "Recursos\n\n\n\nRecurso\nUsado por\nNota\n\n\n\n\nimgs/ (animales/, apto/, arte/, ciudad/; 10 imágenes)\n02_carga_datos_tensorflow (image_dataset_from_directory), 02_carga_datos_pytorch (ImageFolder)\nSe lee como ../imgs/, así que el notebook espera estar en una subcarpeta del repositorio del docente. No se copió porque probablemente son imágenes de terceros.\n\n\ntensorflow_datasets: mnist e imdb_reviews\n02_carga_datos_tensorflow\nSe descargan de internet al ejecutar el notebook.\n\n\n\n\n\n\n\n\n\nWarningNotas para ejecutar los notebooks\n\n\n\n\n\nEsto describe los notebooks tal como están en la fuente. No se han modificado.\n\n02_carga_datos_tensorflow lee 'Sunspots.csv' con S mayúscula, pero el archivo se llama sunspots.csv. Esa celda falla en sistemas de archivos que distinguen mayúsculas (Linux, Colab).\nUna celda de 02_carga_datos_tensorflow usa una ruta absoluta de Windows del equipo del docente para make_csv_dataset. Hay que cambiarla por sunspots.csv antes de ejecutarla.\nLas rutas relativas (sonnets.txt, sunspots.csv, ../imgs/) suponen la estructura del repositorio del docente. En Colab hay que subir esos archivos a la sesión.\ntensorflow_datasets, torchvision y PIL no están en el pyproject.toml del docente.\nNumeración de módulos en la fuente: 01_tensores_jax, 02_carga_datos_tensorflow y 02_carga_datos_pytorch se identifican como “Módulo 2 — Herramientas y manejo de datos”. En cambio, Contenido.ipynb pone la introducción a TensorFlow, PyTorch y JAX, y los temas de datasets, transformación de datos y data augmentation, en el “Primer módulo: Introducción a Deep Learning”. Aquí se registran ambas etiquetas tal como aparecen en la fuente."
+  },
+  {
+    "objectID": "semesters/semester-01/deep-learning-1/week-01/class-01/index.html#notas-personales",
+    "href": "semesters/semester-01/deep-learning-1/week-01/class-01/index.html#notas-personales",
+    "title": "Clase 01",
+    "section": "Notas personales",
+    "text": "Notas personales\nTodavía no hay notas personales para esta clase."
+  },
+  {
+    "objectID": "semesters/semester-01/deep-learning-1/week-01/class-01/index.html#ejercicios",
+    "href": "semesters/semester-01/deep-learning-1/week-01/class-01/index.html#ejercicios",
+    "title": "Clase 01",
+    "section": "Ejercicios",
+    "text": "Ejercicios\nTodavía no hay ejercicios registrados para esta clase."
+  },
+  {
+    "objectID": "semesters/semester-01/deep-learning-1/week-01/class-01/index.html#fuente",
+    "href": "semesters/semester-01/deep-learning-1/week-01/class-01/index.html#fuente",
+    "title": "Clase 01",
+    "section": "Fuente",
+    "text": "Fuente\n\nRepositorio del docente: MAESTRiA-ESTADiS-CIENCIA-DATOS-Bosque/Deep_Learning_I_Fundamentos\nCarpeta de la clase: clase1/\nCommit incorporado: 0f989f9c339c1f15878f1c837cc22397fe4d71ec (2026-09-27)\n\n← Volver a la semana 01 · Módulo Deep Learning I"
+  },
+  {
     "objectID": "semesters/semester-01/index.html",
     "href": "semesters/semester-01/index.html",
     "title": "Semestre 1",
     "section": "",
-    "text": "Primer módulo del semestre.\nEstado: En curso\nAcceder al módulo →\n\n\nLos siguientes módulos se agregarán a medida que avance el semestre, conservando la misma arquitectura académica (siete categorías de recursos por módulo).\n\n\n\n\n\n\nNote\n\n\n\nEl nombre y el número de los módulos posteriores se documentarán cuando se conozcan oficialmente. No se anticipan aquí."
+    "text": "Primer módulo del semestre.\nEstado: En curso\nAcceder al módulo →\n\n\n\nSegundo módulo del semestre, organizado por semana y clase.\nEstado: En curso\nAcceder al módulo →\n\n\nLos siguientes módulos se agregarán a medida que avance el semestre. Machine Learning conserva sus siete categorías de recursos, y Deep Learning I se organiza por semana → clase → tipo de recurso.\n\n\n\n\n\n\nNote\n\n\n\nEl nombre y el número de los módulos posteriores se documentarán cuando se conozcan oficialmente. No se anticipan aquí."
   },
   {
     "objectID": "semesters/semester-01/index.html#módulos",
     "href": "semesters/semester-01/index.html#módulos",
     "title": "Semestre 1",
     "section": "",
-    "text": "Primer módulo del semestre.\nEstado: En curso\nAcceder al módulo →\n\n\nLos siguientes módulos se agregarán a medida que avance el semestre, conservando la misma arquitectura académica (siete categorías de recursos por módulo).\n\n\n\n\n\n\nNote\n\n\n\nEl nombre y el número de los módulos posteriores se documentarán cuando se conozcan oficialmente. No se anticipan aquí."
+    "text": "Primer módulo del semestre.\nEstado: En curso\nAcceder al módulo →\n\n\n\nSegundo módulo del semestre, organizado por semana y clase.\nEstado: En curso\nAcceder al módulo →\n\n\nLos siguientes módulos se agregarán a medida que avance el semestre. Machine Learning conserva sus siete categorías de recursos, y Deep Learning I se organiza por semana → clase → tipo de recurso.\n\n\n\n\n\n\nNote\n\n\n\nEl nombre y el número de los módulos posteriores se documentarán cuando se conozcan oficialmente. No se anticipan aquí."
   },
   {
     "objectID": "semesters/semester-01/machine-learning/assignments/assignment-02-ingreso-con-password.html",
