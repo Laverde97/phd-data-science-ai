@@ -1,0 +1,98 @@
+---
+title: "Contenido del curso"
+subtitle: "Deep Learning I · Semestre 1 · Módulo 2"
+---
+
+Resumen del programa oficial publicado por el docente en
+[`Contenido.ipynb`](https://github.com/MAESTRiA-ESTADiS-CIENCIA-DATOS-Bosque/Deep_Learning_I_Fundamentos/blob/main/Contenido.ipynb)
+([Open in Colab](https://colab.research.google.com/github/MAESTRiA-ESTADiS-CIENCIA-DATOS-Bosque/Deep_Learning_I_Fundamentos/blob/main/Contenido.ipynb)).
+Hay una copia verbatim en almacenamiento privado.
+
+## Descripción
+
+Curso *Deep Learning I* del Doctorado en Ciencia de Datos e Inteligencia Artificial de la
+Universidad El Bosque.
+
+## Docente
+
+[Héctor Javier Hortúa, PhD](https://javierorjuela.github.io/#about) · SavIA-Lab, Instituto de
+Neurociencias · GitHub: [JavierOrjuela](https://github.com/JavierOrjuela).
+
+## Justificación
+
+Según el programa, el curso da una comprensión fundamental de las técnicas de aprendizaje
+supervisado y no supervisado. Con ellas, los estudiantes podrán diseñar e implementar soluciones en
+ciencia de datos e inteligencia artificial, con énfasis en el pensamiento crítico, la
+experimentación y la aplicación ética y estratégica en la industria, la investigación y la
+academia.
+
+## Requisitos
+
+- Programación en Python.
+- Conocimientos básicos de álgebra lineal.
+- Una cuenta de Google para usar GPU en Colab, o un computador que cumpla los requisitos para
+  instalar [TensorFlow](https://www.tensorflow.org/install), con o sin GPU.
+
+## Contenido
+
+**Primer módulo · Introducción a Deep Learning**
+
+- Introducción a Deep Learning
+- Introducción a TensorFlow, PyTorch y JAX
+- Datasets, transformación de datos y *data augmentation*
+
+**Segundo módulo · Perceptrón multicapa (MLP)**
+
+- Modelos MLP, RNN y CNN
+- Entrenamiento y evaluación de modelos
+- Optimización, regularización y funciones de costo
+- Personalización con las APIs de bajo nivel:
+  - Guardar y restaurar modelos
+  - Sequential y Functional API
+  - Visualización con TensorBoard
+  - Multi-GPU
+
+**Tercer módulo · Casos prácticos**
+
+- Ajuste de hiperparámetros
+- Métodos aplicados (y trabajos finales): multimodales, *transfer learning*, *style transfer*,
+  OCR, AutoML, explicabilidad e introducción breve a Hugging Face
+
+## Metodología
+
+Cada clase tiene una parte teórica, en la que se introducen los conceptos básicos, y una parte
+práctica, en la que se aplican y se ven las implementaciones en software.
+
+## Evaluación
+
+| Componente | Peso |
+|------------|-----:|
+| Ejercicios | 20 % |
+| Trabajo final | 80 % |
+
+## Trabajo final
+
+Presentación de un artículo científico en grupos de dos personas, con una duración de 1 hora.
+
+## Bibliografía
+
+- [TensorFlow](https://www.tensorflow.org/)
+- [PyTorch](https://pytorch.org/)
+- [JAX — *Thinking in JAX*](https://docs.jax.dev/en/latest/notebooks/thinking_in_jax.html)
+- Aurélien Géron. *Hands-On Machine Learning with Scikit-Learn and PyTorch*. O'Reilly.
+- Aurélien Géron. *Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow*, 2.ª ed. O'Reilly Media.
+- Rowel Atienza. *Advanced Deep Learning with TensorFlow 2 and Keras*. Packt Publishing.
+- C. M. Bishop. *Pattern Recognition and Machine Learning*. Springer-Verlag New York, 2006.
+
+## Herramientas
+
+- Google Colab
+- GitHub (desktop)
+- Laptop con TensorFlow instalado (basta con CPU). El docente recomienda trabajar en un entorno `uv`.
+
+::: {.callout-note}
+## Fuente
+El contenido se resume del `Contenido.ipynb` del
+[repositorio del docente](https://github.com/MAESTRiA-ESTADiS-CIENCIA-DATOS-Bosque/Deep_Learning_I_Fundamentos)
+(commit `0f989f9`). El repositorio fuente no tiene un archivo de licencia explícito.
+:::

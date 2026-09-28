@@ -1,0 +1,108 @@
+---
+title: "Deep Learning I"
+subtitle: "Semestre 1 · Módulo 2"
+page-layout: full
+---
+
+::: {.module-banner}
+## Módulo 02 · Deep Learning I
+
+Segundo módulo del semestre. Cubre los fundamentos del aprendizaje profundo con TensorFlow,
+PyTorch y JAX: tensores, carga de datos, modelos MLP, RNN y CNN, entrenamiento y casos prácticos.
+Este módulo se organiza por **semana → clase → tipo de recurso**, de modo que se pueda auditar
+qué se vio en cada clase.
+:::
+
+## Docente y fuente
+
+| | |
+|---|---|
+| **Institución** | Universidad El Bosque · Doctorado en Ciencia de Datos e Inteligencia Artificial |
+| **Curso** | Deep Learning I |
+| **Docente** | [Héctor Javier Hortúa, PhD](https://javierorjuela.github.io/#about) · SavIA-Lab, Instituto de Neurociencias |
+| **Repositorio del docente** | [MAESTRiA-ESTADiS-CIENCIA-DATOS-Bosque/Deep_Learning_I_Fundamentos](https://github.com/MAESTRiA-ESTADiS-CIENCIA-DATOS-Bosque/Deep_Learning_I_Fundamentos) |
+
+## Recursos del módulo
+
+::: {.resource-grid}
+::: {.resource-card}
+### 📋 Contenido del curso
+Resumen del programa oficial (`Contenido.ipynb`): justificación, requisitos, módulos,
+metodología, evaluación, trabajo final y bibliografía.
+
+[Ver contenido del curso](course-content/index.qmd)
+:::
+
+::: {.resource-card}
+### 📅 Semana 01
+Clase 01 · Introducción a TensorFlow, PyTorch y JAX: tensores, diferenciación automática y
+carga de datos. Cinco notebooks y tres archivos de datos.
+
+[Ver semana 01](week-01/index.qmd)
+:::
+:::
+
+## Semana a semana
+
+Se agrega una fila cuando el material de una clase se publica en el repositorio del docente.
+No se anticipan semanas ni clases futuras.
+
+| Semana | Clase | Temas | Notebooks | Datos | Estado |
+|--------|-------|-------|:---------:|:-----:|--------|
+| [Semana 01](week-01/index.qmd) | [Clase 01 · Introducción a TensorFlow, PyTorch y JAX](week-01/class-01/index.qmd) | Tensores, diferenciación automática, TensorFlow, PyTorch, JAX, carga de datos | 5 | 3 | [Material incorporado]{.status-done} |
+
+## Progreso actual
+
+- **Material incorporado:** Semana 01 · Clase 01. Es el contenido de la carpeta `clase1/` del
+  repositorio del docente, en el commit
+  [`0f989f9`](https://github.com/MAESTRiA-ESTADiS-CIENCIA-DATOS-Bosque/Deep_Learning_I_Fundamentos/tree/0f989f9c339c1f15878f1c837cc22397fe4d71ec).
+- **Notas personales y ejercicios:** todavía no se ha agregado ninguno.
+
+## Entorno y dependencias
+
+El repositorio del docente gestiona su entorno con [`uv`](https://github.com/astral-sh/uv).
+Según su `pyproject.toml`, requiere:
+
+| Paquete | Versión mínima |
+|---------|----------------|
+| Python | ≥ 3.12 |
+| `jax[cpu]` | ≥ 0.11.1 |
+| `jupyter` | ≥ 1.1.1 |
+| `matplotlib` | ≥ 3.11.2 |
+| `numpy` | ≥ 2.5.3 |
+| `pandas` | ≥ 3.0.6 |
+| `tensorflow` | ≥ 2.21.0 |
+| `torch` | ≥ 2.14.0 |
+
+::: {.callout-note}
+## Dependencias adicionales
+Los notebooks de carga de datos también importan `tensorflow_datasets`, `torchvision` y `PIL`
+(Pillow), que no aparecen en ese `pyproject.toml`.
+
+Este sitio **no ejecuta** los notebooks de Deep Learning al construirse. El sitio no instala
+TensorFlow, PyTorch ni JAX, y los notebooks se ofrecen solo como enlaces a GitHub y Colab. Para
+ejecutarlos localmente, clona el repositorio del docente y ejecuta `uv sync`.
+:::
+
+## Google Colab
+
+Cada notebook de la clase tiene un enlace **Open in Colab** que apunta al archivo original del
+docente:
+
+```text
+https://colab.research.google.com/github/MAESTRiA-ESTADiS-CIENCIA-DATOS-Bosque/Deep_Learning_I_Fundamentos/blob/main/<ruta-del-notebook>
+```
+
+Colab abre solo el notebook. Los archivos de datos locales (`sonnets.txt`, `sunspots.csv`,
+`imgs/`) hay que subirlos a la sesión antes de ejecutar las celdas que los usan.
+
+::: {.callout-important}
+## Atribución y derechos
+Todo el material de este módulo (notebooks, datos y contenido del curso) proviene del
+[repositorio del docente](https://github.com/MAESTRiA-ESTADiS-CIENCIA-DATOS-Bosque/Deep_Learning_I_Fundamentos),
+del curso Deep Learning I del Doctorado en Ciencia de Datos e Inteligencia Artificial de la
+Universidad El Bosque. No es de autoría propia.
+
+El repositorio fuente no tiene un archivo de licencia explícito. Por eso este sitio no redistribuye
+los archivos: los enlaza con atribución. Las copias verbatim se guardan en almacenamiento privado.
+:::

@@ -14,10 +14,20 @@ Primer módulo del semestre.
 
 [Acceder al módulo →](machine-learning/index.qmd)
 :::
+
+::: {.card}
+### 02 · Deep Learning I
+Segundo módulo del semestre, organizado por semana y clase.
+
+**Estado:** En curso
+
+[Acceder al módulo →](deep-learning-1/index.qmd)
+:::
 :::
 
-Los siguientes módulos se agregarán a medida que avance el semestre, conservando la misma
-arquitectura académica (siete categorías de recursos por módulo).
+Los siguientes módulos se agregarán a medida que avance el semestre. Machine Learning conserva
+sus siete categorías de recursos, y Deep Learning I se organiza por semana → clase → tipo de
+recurso.
 
 ::: {.callout-note}
 El nombre y el número de los módulos posteriores se documentarán cuando se conozcan
