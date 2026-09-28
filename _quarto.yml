@@ -48,6 +48,8 @@ website:
             text: Semestre 1
           - href: semesters/semester-01/machine-learning/index.qmd
             text: "Semestre 1 · Machine Learning"
+          - href: semesters/semester-01/deep-learning-1/index.qmd
+            text: "Semestre 1 · Deep Learning I"
       - href: research/index.qmd
         text: Investigación
     right:

@@ -1,0 +1,52 @@
+---
+title: "Semana 01"
+subtitle: "Deep Learning I · Semestre 1 · Módulo 2"
+---
+
+En la semana 01 se presentan los tres frameworks del curso (TensorFlow, PyTorch y JAX): tensores,
+diferenciación automática y carga de datos. En el repositorio del docente corresponde a la sección
+*"Semana 1. Introducción a TensorFlow, PyTorch y Jax"* del `README.md` y a la carpeta
+[`clase1/`](https://github.com/MAESTRiA-ESTADiS-CIENCIA-DATOS-Bosque/Deep_Learning_I_Fundamentos/tree/main/clase1).
+
+**Estado:** [Material incorporado]{.status-done}
+
+## Clases
+
+::: {.grid}
+::: {.card}
+### Clase 01 · Introducción a TensorFlow, PyTorch y JAX
+Tensores y diferenciación automática en los tres frameworks, y carga de datos con `tf.data` y
+`torch.utils.data`.
+
+**5 notebooks · 3 archivos de datos**
+
+[Ver clase 01 →](class-01/index.qmd)
+:::
+:::
+
+## Temas
+
+- Tensores: rangos, indexado, operaciones, *reshape* y *broadcasting*.
+- Diferenciación automática: `tf.GradientTape`, *autograd* de PyTorch y `grad` de JAX.
+- Modelo de ejecución: *eager* frente a grafo, y `jit` en JAX.
+- Carga de datos: `tf.data.Dataset`, `Dataset` y `DataLoader` de PyTorch, transformaciones y
+  *data augmentation*.
+
+## Resumen de materiales
+
+| Tipo | Cantidad | Detalle |
+|------|:--------:|---------|
+| Notebooks | 5 | 3 de tensores (TensorFlow, PyTorch, JAX) y 2 de carga de datos (TensorFlow, PyTorch) |
+| Datos | 3 | `sonnets.txt`, `sonnets_2.txt`, `sunspots.csv` |
+| Recursos externos | — | Carpeta `imgs/` del docente y datasets de `tensorflow_datasets` (MNIST, IMDB) |
+| Notas personales | 0 | Todavía no hay |
+| Ejercicios | 0 | Todavía no hay |
+
+## Fuente
+
+Material del docente Héctor Javier Hortúa, PhD, del curso Deep Learning I (Universidad El
+Bosque). Fuente:
+[Deep_Learning_I_Fundamentos/clase1](https://github.com/MAESTRiA-ESTADiS-CIENCIA-DATOS-Bosque/Deep_Learning_I_Fundamentos/tree/main/clase1).
+
+El repositorio fuente no tiene un archivo de licencia explícito ni un aviso de reutilización.
+Por eso este sitio no republica el material del docente: lo enlaza con atribución.
