@@ -1,0 +1,8 @@
+# Artefactos de la generación local de las guías: no se versionan.
+_out/
+.quarto/
+checkpoints/
+lightning_logs/
+*.tex
+*.log
+*_files/

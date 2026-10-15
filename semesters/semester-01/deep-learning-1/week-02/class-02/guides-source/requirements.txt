@@ -1,0 +1,19 @@
+# Entorno con el que se ejecutaron las cuatro guías (CPU, Python 3.12.14, Quarto 1.9.38, TinyTeX/LuaLaTeX).
+# Para torch en CPU: --extra-index-url https://download.pytorch.org/whl/cpu
+numpy==2.5.4
+pandas==3.0.6
+matplotlib==3.11.2
+scikit-learn==1.9.1
+tensorflow-cpu==2.21.0
+tensorflow-datasets==4.9.10
+importlib-resources==7.1.0
+etils==1.14.0
+tensorboard==2.21.0
+torch==2.14.1
+lightning==2.6.6
+keras==3.15.1
+jax[cpu]==0.11.2
+jupyter==1.1.1
+ipykernel==7.4.0
+nbclient==0.11.0
+pyyaml==6.0.3
