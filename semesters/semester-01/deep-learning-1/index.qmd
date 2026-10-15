@@ -40,6 +40,22 @@ carga de datos. Cinco notebooks y tres archivos de datos.
 
 [Ver semana 01](week-01/index.qmd)
 :::
+
+::: {.resource-card}
+### 📅 Semana 02
+Clase 02 · Regresión, clasificación y pipelines de entrenamiento: de lo manual a Keras, `torch.nn`
+y PyTorch Lightning. Cuatro notebooks, un archivo de datos y artefactos de entrenamiento.
+
+[Ver semana 02](week-02/index.qmd)
+:::
+
+::: {.resource-card}
+### 📝 Talleres y tareas
+Enunciados del docente y soluciones propias. Hoy: tarea de pipeline de datos multimodal con
+CUB-200-2011 (solución pendiente).
+
+[Ver talleres y tareas](workshops/index.qmd)
+:::
 :::
 
 ## Semana a semana
@@ -50,13 +66,22 @@ No se anticipan semanas ni clases futuras.
 | Semana | Clase | Temas | Notebooks | Datos | Estado |
 |--------|-------|-------|:---------:|:-----:|--------|
 | [Semana 01](week-01/index.qmd) | [Clase 01 · Introducción a TensorFlow, PyTorch y JAX](week-01/class-01/index.qmd) | Tensores, diferenciación automática, TensorFlow, PyTorch, JAX, carga de datos | 5 | 3 | [Material incorporado]{.status-done} |
+| [Semana 02](week-02/index.qmd) | [Clase 02 · Regresión, clasificación y pipelines de entrenamiento](week-02/class-02/index.qmd) | Entrenamiento manual vs `tf.keras`/`torch.nn`/Lightning, regularización, normalización, *callbacks*, pipelines MNIST y series temporales | 4 | 1 | [Material incorporado]{.status-done} |
 
 ## Progreso actual
 
 - **Material incorporado:** Semana 01 · Clase 01. Es el contenido de la carpeta `clase1/` del
   repositorio del docente, en el commit
   [`0f989f9`](https://github.com/MAESTRiA-ESTADiS-CIENCIA-DATOS-Bosque/Deep_Learning_I_Fundamentos/tree/0f989f9c339c1f15878f1c837cc22397fe4d71ec).
-- **Notas personales y ejercicios:** todavía no se ha agregado ninguno.
+- **Material incorporado:** Semana 02 · Clase 02. Es el contenido de la carpeta `clase2/` del
+  repositorio del docente, en el commit
+  [`c9cfeb5`](https://github.com/MAESTRiA-ESTADiS-CIENCIA-DATOS-Bosque/Deep_Learning_I_Fundamentos/tree/c9cfeb52746c5d8c41fcdc3ae246bc6111324ce1).
+  Los enlaces de la Semana 01 apuntan a `main`. En ese commit, el docente actualizó los notebooks
+  de `clase1/`. La descripción de la Semana 01 corresponde a la versión `0f989f9`.
+- **Talleres y tareas:** [1 tarea del docente](workshops/index.qmd) (pipeline multimodal
+  CUB-200-2011). La solución propia está pendiente.
+- **Notas personales:** una nota de la Clase 02, en almacenamiento privado.
+- **Ejercicios:** todavía no se ha agregado ninguno.
 
 ## Entorno y dependencias
 
@@ -77,7 +102,9 @@ Según su `pyproject.toml`, requiere:
 ::: {.callout-note}
 ## Dependencias adicionales
 Los notebooks de carga de datos también importan `tensorflow_datasets`, `torchvision` y `PIL`
-(Pillow), que no aparecen en ese `pyproject.toml`.
+(Pillow), que no aparecen en ese `pyproject.toml`. Los notebooks de la clase 02 agregan
+`lightning`/`pytorch-lightning`, `tensorboard` y `keras ≥ 3` (con *backend* `torch` o `jax`), y
+los instalan con `!pip` dentro del notebook.
 
 Este sitio **no ejecuta** los notebooks de Deep Learning al construirse. El sitio no instala
 TensorFlow, PyTorch ni JAX, y los notebooks se ofrecen solo como enlaces a GitHub y Colab. Para
@@ -94,7 +121,8 @@ https://colab.research.google.com/github/MAESTRiA-ESTADiS-CIENCIA-DATOS-Bosque/D
 ```
 
 Colab abre solo el notebook. Los archivos de datos locales (`sonnets.txt`, `sunspots.csv`,
-`imgs/`) hay que subirlos a la sesión antes de ejecutar las celdas que los usan.
+`imgs/`) hay que subirlos a la sesión antes de ejecutar las celdas que los usan. El pipeline de
+series temporales de la clase 02 también necesita `sunspots.csv`.
 
 ::: {.callout-important}
 ## Atribución y derechos
