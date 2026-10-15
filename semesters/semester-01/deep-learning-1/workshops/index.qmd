@@ -1,0 +1,59 @@
+---
+title: "Talleres y tareas"
+subtitle: "Deep Learning I · Semestre 1 · Módulo 2"
+---
+
+Tareas que propone el docente en el curso, junto con las soluciones propias cuando estén listas.
+Los **enunciados** son del docente y se enlazan a su repositorio. Las **soluciones** son trabajo
+propio y se publicarán en esta carpeta.
+
+## Convención de nombres
+
+Las soluciones propias usan `workshop-01-tema.ext`, `workshop-02-tema.ext`, …, con un prefijo de
+dos dígitos en orden cronológico. Si la solución es un notebook, incluye su badge
+**Open in Colab**.
+
+## Inventario
+
+| # | Tarea | Publicada | Enunciado | Notebook | Colab | PDF | Estado |
+| :--: | :--- | :--: | :--: | :--: | :--: | :--: | :--: |
+| 01 | Pipeline de datos multimodal con CUB-200-2011 | 09/10/2026 | [GitHub][t1md] | — | — | — | [Pendiente]{.status-todo} |
+
+: Tareas del módulo {.striped .hover}
+
+[t1md]: https://github.com/MAESTRiA-ESTADiS-CIENCIA-DATOS-Bosque/Deep_Learning_I_Fundamentos/blob/main/tareas/Tarea_multimodal_CUB-200-2011.md
+
+## Tarea 01 · Pipeline de datos multimodal con CUB-200-2011
+
+Resumen del enunciado del docente (ver el [original][t1md]):
+
+- **Objetivo:** construir el pipeline de datos de una base multimodal (imagen, texto y datos
+  tabulares) y entregar DataLoaders de *train*, *validation* y *test* en **PyTorch**
+  (`Dataset` + `DataLoader`) y en **TensorFlow** (`tf.data`). En esta tarea **no** se entrena
+  ningún modelo. El enunciado dice que el pipeline será la base de las tareas siguientes.
+- **Datos:** [CUB-200-2011](https://www.vision.caltech.edu/datasets/cub_200_2011/)
+  (Wah et al., 2011): 11 788 imágenes de 200 especies de aves, con *bounding boxes* y 312
+  atributos binarios. Las *captions* son de
+  [Reed et al. (CVPR 2016)](https://arxiv.org/abs/1605.05395), con 10 descripciones por imagen.
+- **Contenido de cada batch:** imagen normalizada de 224 × 224, texto como ids de palabras con su
+  longitud real, 318 atributos tabulares (312 binarios + 6 de geometría escalados) y la etiqueta de
+  especie (0–199).
+- **Splits:** el *train* oficial se divide 90/10 en *train* y *validation*, estratificado por
+  especie (`seed=42`). El *test* oficial completo queda como *test*.
+- **Regla de preprocesamiento:** todo lo que se aprende de los datos (vocabulario, *scaler*,
+  `max_len`) se ajusta solo con *train*.
+
+::: {.callout-note}
+## Enunciado, dataset y solución
+El **enunciado** es del docente. El repositorio fuente no tiene licencia explícita, así que el
+original se enlaza y hay una copia verbatim en almacenamiento privado.
+
+El **dataset** CUB-200-2011 (~1,1 GB) y las *captions* no se guardan en este repositorio. Se
+descargan de las fuentes que indica el enunciado ([Caltech Data](https://data.caltech.edu/records/20098)
+y el [repositorio de Reed](https://github.com/reedscot/cvpr2016)).
+
+La **solución propia** todavía no está hecha. Cuando exista, se agregará aquí como notebook con su
+badge Colab y, si corresponde, un PDF.
+:::
+
+[← Módulo Deep Learning I](../index.qmd)

@@ -1,0 +1,133 @@
+---
+title: "Clase 02"
+subtitle: "Semana 02 · Regresión, clasificación y pipelines de entrenamiento"
+---
+
+::: {.callout-important}
+## Fuente y atribución
+Material del docente **Héctor Javier Hortúa, PhD** (SavIA-Lab, Instituto de Neurociencias), del
+curso Deep Learning I del Doctorado en Ciencia de Datos e Inteligencia Artificial de la
+Universidad El Bosque. Viene de la carpeta
+[`clase2/`](https://github.com/MAESTRiA-ESTADiS-CIENCIA-DATOS-Bosque/Deep_Learning_I_Fundamentos/tree/main/clase2)
+del repositorio del docente (commit `c9cfeb5`). No es de autoría propia.
+
+El repositorio fuente no tiene un archivo de licencia explícito, así que aquí se enlaza al original.
+Hay copias verbatim en almacenamiento privado, comprobadas con SHA-256.
+:::
+
+## Introducción
+
+En la clase 01 se vieron tensores y diferenciación automática. Esta clase los usa para entrenar
+modelos. Cada notebook implementa primero el entrenamiento **a mano** (parámetros, *forward pass*,
+pérdida, gradientes y *loop*) y después lo reescribe con la API de alto nivel del framework. Así se
+ve qué hace por dentro cada llamada de `compile()`/`fit()` o de `nn.Module`/`Trainer`. Los dos
+últimos notebooks reúnen todo en pipelines completos: datos, modelo, *callbacks*, evaluación y
+predicción.
+
+## Temas
+
+Según los encabezados de los notebooks:
+
+- **Regresión en TensorFlow:** generación de datos y división *train/validation/test* con
+  `tf.data`, parámetros entrenables, `tf.GradientTape` y *loop* manual. Luego el mismo modelo con
+  `tf.keras`: tres formas de definir modelos, capas y modelos personalizados, activaciones,
+  `compile()`, `fit()`, `History`, *callbacks*, `evaluate()`/`predict()`, y guardar y cargar
+  modelos y pesos.
+- **Clasificación en PyTorch:** `Dataset`/`DataLoader`, *binary cross entropy* manual,
+  `backward()` y descenso de gradiente. Luego el paso a `torch.nn`: `nn.Module`, capas propias
+  (densa y *Dropout*), MLP, `train()`/`eval()`, equivalentes de `compile`/`fit`/`History`/
+  `evaluate`/`predict`/*callbacks* de Keras, y guardar el estado del modelo y del optimizador.
+- **PyTorch Lightning:** `LightningModule`, `Trainer.fit()`, `validate()`/`test()`/`predict()`,
+  *callbacks* y *checkpoints*, y una comparación Keras vs PyTorch vs Lightning.
+- **Regularización y normalización** (en TensorFlow y en PyTorch): L1, L2 y L1-L2, *Dropout*, y
+  *Batch*, *Layer* y *Group Normalization*, con una comparación conceptual.
+- **Pipeline MNIST (TensorFlow/Keras):** `tensorflow_datasets`, exploración, pesos de clase,
+  preprocesamiento con `tf.data`, modelo denso, TensorBoard, `EarlyStopping`, `ModelCheckpoint`,
+  `ReduceLROnPlateau`, evaluación sobre *test* y matriz de confusión.
+- **Pipeline de series temporales (Sunspots):** división temporal, normalización con estadísticas
+  solo de *train*, `Dataset` de ventanas deslizantes y modelo denso con PyTorch Lightning. Después,
+  el mismo problema con Keras sobre el *backend* JAX, entrenado directamente con los `DataLoader`
+  de PyTorch.
+
+## Notebooks
+
+| # | Notebook | Framework | Contenido | Original | Colab |
+|:-:|----------|-----------|-----------|----------|-------|
+| 1 | **Regresión en TensorFlow: de entrenamiento manual a `tf.keras`** · `01_Regresion.ipynb` | TensorFlow / Keras | Datos sintéticos, `tf.data`, `GradientTape` y *loop* manual. Luego `compile`/`fit`, tres formas de definir modelos, capas y modelos personalizados, activaciones, `History`, *callbacks*, guardado de modelos, L1/L2, *Dropout* y normalizaciones. | [GitHub](https://github.com/MAESTRiA-ESTADiS-CIENCIA-DATOS-Bosque/Deep_Learning_I_Fundamentos/blob/main/clase2/01_Regresion.ipynb) | [Open in Colab](https://colab.research.google.com/github/MAESTRiA-ESTADiS-CIENCIA-DATOS-Bosque/Deep_Learning_I_Fundamentos/blob/main/clase2/01_Regresion.ipynb) |
+| 2 | **Clasificación en PyTorch: de tensores y autograd a `torch.nn`** · `02_Clasificacion.ipynb` | PyTorch / Lightning | BCE y *loop* manual, `nn.Module`, frontera de decisión, capas personalizadas, MLP, equivalentes de la API de Keras, guardado con optimizador, L1/L2, *Dropout*, normalizaciones y PyTorch Lightning. | [GitHub](https://github.com/MAESTRiA-ESTADiS-CIENCIA-DATOS-Bosque/Deep_Learning_I_Fundamentos/blob/main/clase2/02_Clasificacion.ipynb) | [Open in Colab](https://colab.research.google.com/github/MAESTRiA-ESTADiS-CIENCIA-DATOS-Bosque/Deep_Learning_I_Fundamentos/blob/main/clase2/02_Clasificacion.ipynb) |
+| 3 | **Pipeline completo de clasificación MNIST con TensorFlow/Keras** · `Pipeline_TensorFlow.ipynb` | TensorFlow / Keras | `tensorflow_datasets`, pesos de clase, `tf.data`, modelo denso, cuatro *callbacks* (TensorBoard, `EarlyStopping`, `ModelCheckpoint`, `ReduceLROnPlateau`), evaluación, predicción y matriz de confusión. | [GitHub](https://github.com/MAESTRiA-ESTADiS-CIENCIA-DATOS-Bosque/Deep_Learning_I_Fundamentos/blob/main/clase2/Pipeline_TensorFlow.ipynb) | [Open in Colab](https://colab.research.google.com/github/MAESTRiA-ESTADiS-CIENCIA-DATOS-Bosque/Deep_Learning_I_Fundamentos/blob/main/clase2/Pipeline_TensorFlow.ipynb) |
+| 4 | **Pipeline completo de series de tiempo con PyTorch Lightning y Keras/JAX** · `Pipeline__PyTorchL_KerasJAX.ipynb` | PyTorch Lightning · Keras (JAX) | Serie Sunspots, división temporal, ventanas deslizantes, `LightningModule`, `Trainer`, TensorBoard y *checkpoints*. Luego el mismo modelo en Keras/JAX con los `DataLoader` de PyTorch, métricas en unidades originales y comparación de ambos enfoques. | [GitHub](https://github.com/MAESTRiA-ESTADiS-CIENCIA-DATOS-Bosque/Deep_Learning_I_Fundamentos/blob/main/clase2/Pipeline__PyTorchL_KerasJAX.ipynb) | [Open in Colab](https://colab.research.google.com/github/MAESTRiA-ESTADiS-CIENCIA-DATOS-Bosque/Deep_Learning_I_Fundamentos/blob/main/clase2/Pipeline__PyTorchL_KerasJAX.ipynb) |
+
+Los cuatro notebooks del docente están publicados **sin salidas** (celdas sin ejecutar). Las copias
+verbatim están en almacenamiento privado, y este sitio no las redistribuye ni las ejecuta al construirse.
+
+## Datos y dependencias
+
+| Archivo | Formato | Tamaño | Usado por | Descripción |
+|---------|---------|-------:|-----------|-------------|
+| [`sunspots.csv`](https://github.com/MAESTRiA-ESTADiS-CIENCIA-DATOS-Bosque/Deep_Learning_I_Fundamentos/blob/main/clase1/sunspots.csv) | CSV | 67 591 B | `Pipeline__PyTorchL_KerasJAX` | El mismo archivo de la [clase 01](../../week-01/class-01/index.qmd) (está en `clase1/`): serie mensual de manchas solares, de 1749 a 2018. |
+
+Los notebooks de regresión y clasificación generan sus datos sintéticamente. El pipeline MNIST
+descarga el dataset con `tensorflow_datasets`.
+
+Paquetes que usan los notebooks y que **no** están en el `pyproject.toml` del docente:
+
+| Paquete | Usado por | Cómo se instala en el notebook |
+|---------|-----------|--------------------------------|
+| `lightning` / `pytorch-lightning` | `02_Clasificacion`, `Pipeline__PyTorchL_KerasJAX` | `!pip install pytorch-lightning` · `!pip install torch lightning tensorboard` |
+| `tensorboard` | `Pipeline__PyTorchL_KerasJAX` (y los *callbacks* de TensorBoard) | `!pip install torch lightning tensorboard` |
+| `tensorflow-datasets` | `Pipeline_TensorFlow` | `!pip install tensorflow tensorflow-datasets` |
+| `keras>=3` (*multi-backend*) | `02_Clasificacion` (*backend* `torch`), `Pipeline__PyTorchL_KerasJAX` (*backend* `jax`) | `!pip install "keras>=3" jax jaxlib` |
+
+## Material complementario y artefactos
+
+| Recurso | Tipo | Tamaño | Origen | Nota |
+|---------|------|-------:|--------|------|
+| [`resultados_regresion/mejor_modelo.keras`](https://github.com/MAESTRiA-ESTADiS-CIENCIA-DATOS-Bosque/Deep_Learning_I_Fundamentos/blob/main/clase2/resultados_regresion/mejor_modelo.keras) | Modelo Keras entrenado | 21 623 B | `01_Regresion` (`ModelCheckpoint`) | Es una salida del notebook. Se guarda solo como artefacto privado. |
+| [`resultados_regresion/logs/`](https://github.com/MAESTRiA-ESTADiS-CIENCIA-DATOS-Bosque/Deep_Learning_I_Fundamentos/tree/main/clase2/resultados_regresion/logs) | Registros de TensorBoard | 6 de `train` + 6 de `validation` | `01_Regresion` (*callback* `TensorBoard`) | Son las ejecuciones del docente. Se ven con `tensorboard --logdir resultados_regresion/logs`. |
+
+Estos artefactos se generan al ejecutar los notebooks. No se publican en este sitio.
+
+## Talleres y tareas
+
+La tarea asociada a este bloque del curso está en la página de
+[Talleres y tareas](../../workshops/index.qmd): **Pipeline de datos multimodal con CUB-200-2011**
+(imagen + texto + tabular, con DataLoaders en PyTorch y en `tf.data`).
+
+::: {.callout-warning collapse="true"}
+## Notas para ejecutar los notebooks
+Esto describe los notebooks tal como están en la fuente. No se han modificado.
+
+- `Pipeline__PyTorchL_KerasJAX` lee `sunspots.csv` con una **ruta absoluta de Windows** del
+  equipo del docente (`C:\Users\javier\...\clase1\sunspots.csv`). Antes de ejecutar,
+  hay que cambiarla por la ruta local o subir el archivo a Colab.
+- `KERAS_BACKEND` se define con `os.environ` **antes** de importar Keras: `torch` en
+  `02_Clasificacion` y `jax` en `Pipeline__PyTorchL_KerasJAX`. Si se cambia el orden, Keras usa
+  el *backend* por defecto.
+- Los notebooks escriben archivos en la carpeta de trabajo, por ejemplo `resultados_regresion/`,
+  `best_model.pt`, `classifier_lightning.ckpt`, `best_mnist.keras`, `mnist_final.keras`,
+  `best_timeseries_jax.keras` y logs de TensorBoard.
+- Varias celdas instalan paquetes con `!pip`. Fuera de Colab conviene instalarlos en el entorno
+  de `uv`.
+:::
+
+## Notas personales
+
+Hay una nota personal de esta clase (*Redes Neuronales*, en formato Word). Se guarda en almacenamiento
+privado y no se publica.
+
+## Ejercicios
+
+Todavía no hay ejercicios registrados para esta clase.
+
+## Fuente
+
+- Repositorio del docente:
+  [MAESTRiA-ESTADiS-CIENCIA-DATOS-Bosque/Deep_Learning_I_Fundamentos](https://github.com/MAESTRiA-ESTADiS-CIENCIA-DATOS-Bosque/Deep_Learning_I_Fundamentos)
+- Carpeta de la clase:
+  [`clase2/`](https://github.com/MAESTRiA-ESTADiS-CIENCIA-DATOS-Bosque/Deep_Learning_I_Fundamentos/tree/main/clase2)
+- Commit incorporado:
+  [`c9cfeb52746c5d8c41fcdc3ae246bc6111324ce1`](https://github.com/MAESTRiA-ESTADiS-CIENCIA-DATOS-Bosque/Deep_Learning_I_Fundamentos/tree/c9cfeb52746c5d8c41fcdc3ae246bc6111324ce1)
+  (2026-10-13)
+
+[← Volver a la semana 02](../index.qmd) · [Módulo Deep Learning I](../../index.qmd)

@@ -1,0 +1,62 @@
+---
+title: "Semana 02"
+subtitle: "Deep Learning I · Semestre 1 · Módulo 2"
+---
+
+La semana 02 cubre el paso del entrenamiento manual (gradientes y *loops* escritos a mano) a las
+API de alto nivel de cada framework: `tf.keras`, `torch.nn` y PyTorch Lightning. También se ven
+regularización, normalización, *callbacks* y pipelines completos de entrenamiento. En el
+repositorio del docente corresponde a la carpeta
+[`clase2/`](https://github.com/MAESTRiA-ESTADiS-CIENCIA-DATOS-Bosque/Deep_Learning_I_Fundamentos/tree/main/clase2).
+A diferencia de la Semana 1, el `README.md` del docente no tiene todavía una sección para esta semana.
+
+**Estado:** [Material incorporado]{.status-done}
+
+## Clases
+
+::: {.grid}
+::: {.card}
+### Clase 02 · Regresión, clasificación y pipelines de entrenamiento
+Regresión en TensorFlow y clasificación en PyTorch, de lo manual a Keras, `torch.nn` y Lightning.
+Además, dos pipelines completos: MNIST con TensorFlow y una serie temporal con Lightning y Keras/JAX.
+
+**4 notebooks · 1 archivo de datos · artefactos de entrenamiento**
+
+[Ver clase 02 →](class-02/index.qmd)
+:::
+:::
+
+## Temas
+
+- Entrenamiento manual: parámetros entrenables, *forward pass*, pérdida, `tf.GradientTape` y
+  `backward()`, y *loops* de entrenamiento escritos a mano.
+- API de alto nivel: `compile()`, `fit()`, `History`, `evaluate()` y `predict()` en Keras, con sus
+  equivalentes en PyTorch y PyTorch Lightning.
+- Capas y modelos personalizados, y funciones de activación.
+- Regularización L1, L2 y L1-L2, *Dropout*, y *Batch*, *Layer* y *Group Normalization*.
+- *Callbacks*: TensorBoard, `EarlyStopping`, `ModelCheckpoint` y `ReduceLROnPlateau`. Guardar y
+  cargar modelos.
+- Pipelines completos: clasificación de MNIST con `tf.data` y pronóstico de la serie Sunspots con
+  PyTorch Lightning y Keras sobre el *backend* JAX.
+
+## Resumen de materiales
+
+| Tipo | Cantidad | Detalle |
+|------|:--------:|---------|
+| Notebooks | 4 | Regresión (TensorFlow), clasificación (PyTorch), pipeline MNIST (TensorFlow) y pipeline de series temporales (PyTorch Lightning + Keras/JAX) |
+| Datos | 1 | `sunspots.csv`, que está en `clase1/` del repositorio del docente |
+| Artefactos | 13 | `resultados_regresion/`: `mejor_modelo.keras` y 12 registros de TensorBoard |
+| Recursos externos | — | MNIST de `tensorflow_datasets` |
+| Notas personales | 1 | En almacenamiento privado (no se publican) |
+| Talleres y tareas | 1 | [Tarea multimodal CUB-200-2011](../workshops/index.qmd) (enunciado del docente; solución pendiente) |
+
+## Fuente
+
+Material del docente Héctor Javier Hortúa, PhD, del curso Deep Learning I (Universidad El
+Bosque). Fuente:
+[Deep_Learning_I_Fundamentos/clase2](https://github.com/MAESTRiA-ESTADiS-CIENCIA-DATOS-Bosque/Deep_Learning_I_Fundamentos/tree/main/clase2).
+
+El repositorio fuente no tiene un archivo de licencia explícito ni un aviso de reutilización.
+Por eso este sitio no republica el material del docente: lo enlaza con atribución.
+
+[← Módulo Deep Learning I](../index.qmd)
