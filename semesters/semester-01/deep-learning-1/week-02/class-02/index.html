@@ -333,6 +333,11 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#introducción" id="toc-introducción" class="nav-link active" data-scroll-target="#introducción">Introducción</a></li>
   <li><a href="#temas" id="toc-temas" class="nav-link" data-scroll-target="#temas">Temas</a></li>
+  <li><a href="#material-redes-neuronales" id="toc-material-redes-neuronales" class="nav-link" data-scroll-target="#material-redes-neuronales">Material de estudio y laboratorio — Redes Neuronales Artificiales</a>
+  <ul class="collapse">
+  <li><a href="#ruta-de-aprendizaje-recomendada" id="toc-ruta-de-aprendizaje-recomendada" class="nav-link" data-scroll-target="#ruta-de-aprendizaje-recomendada">Ruta de aprendizaje recomendada</a></li>
+  <li><a href="#conocimientos-previos-recomendados" id="toc-conocimientos-previos-recomendados" class="nav-link" data-scroll-target="#conocimientos-previos-recomendados">Conocimientos previos recomendados</a></li>
+  </ul></li>
   <li><a href="#notebooks" id="toc-notebooks" class="nav-link" data-scroll-target="#notebooks">Notebooks</a></li>
   <li><a href="#datos-y-dependencias" id="toc-datos-y-dependencias" class="nav-link" data-scroll-target="#datos-y-dependencias">Datos y dependencias</a></li>
   <li><a href="#material-complementario-y-artefactos" id="toc-material-complementario-y-artefactos" class="nav-link" data-scroll-target="#material-complementario-y-artefactos">Material complementario y artefactos</a></li>
@@ -396,6 +401,78 @@ ul.task-list li input[type="checkbox"] {
 <li><strong>Pipeline MNIST (TensorFlow/Keras):</strong> <code>tensorflow_datasets</code>, exploración, pesos de clase, preprocesamiento con <code>tf.data</code>, modelo denso, TensorBoard, <code>EarlyStopping</code>, <code>ModelCheckpoint</code>, <code>ReduceLROnPlateau</code>, evaluación sobre <em>test</em> y matriz de confusión.</li>
 <li><strong>Pipeline de series temporales (Sunspots):</strong> división temporal, normalización con estadísticas solo de <em>train</em>, <code>Dataset</code> de ventanas deslizantes y modelo denso con PyTorch Lightning. Después, el mismo problema con Keras sobre el <em>backend</em> JAX, entrenado directamente con los <code>DataLoader</code> de PyTorch.</li>
 </ul>
+</section>
+<section id="material-redes-neuronales" class="level2">
+<h2 class="anchored" data-anchor-id="material-redes-neuronales">Material de estudio y laboratorio — Redes Neuronales Artificiales</h2>
+<p>Este espacio reúne recursos académicos para comprender los fundamentos de las redes neuronales artificiales, desde su interpretación intuitiva hasta su formulación matemática e implementación computacional. El material integra explicaciones conceptuales, ejemplos resueltos y ejercicios prácticos utilizando Python, NumPy y PyTorch.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Autoría y alcance
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><strong>Material de referencia del docente.</strong> La presentación <em>Artificial Neural Networks</em> es del profesor <strong>Héctor Javier Hortúa, PhD</strong>. Juan Sebastián Laverde Chunza la recopiló y organizó en formato Word como referencia para esta clase. La autoría intelectual del contenido es del docente. El archivo se guarda en almacenamiento privado y no se descarga desde este sitio sin autorización del titular de los derechos.</li>
+<li><strong>Material complementario propio.</strong> La guía PDF y el notebook los desarrolló <strong>Juan Sebastián Laverde Chunza</strong> con apoyo de herramientas de inteligencia artificial generativa, tomando como referencia esa presentación. Las explicaciones, analogías, diagramas redibujados, ejemplos y código son desarrollos complementarios. No reproducen las diapositivas.</li>
+<li><strong>Alcance.</strong> Estos recursos tienen fines exclusivamente educativos y de profundización conceptual, matemática y computacional. No son material oficial del docente ni de la Universidad El Bosque.</li>
+</ul>
+</div>
+</div>
+<div class="grid">
+<div class="card study-card">
+<p><span class="study-kicker"><span class="bi bi-file-earmark-text" aria-hidden="true"></span> Tarjeta 01 · Presentación de referencia</span></p>
+<section id="fundamentos-de-redes-neuronales-artificiales" class="level3">
+<h3 class="anchored" data-anchor-id="fundamentos-de-redes-neuronales-artificiales">Fundamentos de Redes Neuronales Artificiales</h3>
+<p>Presentación utilizada como referencia académica para estudiar neuronas artificiales, funciones de activación, arquitecturas de redes, descenso de gradiente y retropropagación. El contenido es del docente Héctor Javier Hortúa, PhD. El estudiante lo recopiló en formato Word.</p>
+<p><span class="study-meta">Word · Material docente · Referencia académica</span></p>
+<p><span class="status-todo">Distribución sujeta a autorización</span></p>
+</section>
+</div>
+<div class="card study-card">
+<p><span class="study-kicker"><span class="bi bi-book" aria-hidden="true"></span> Tarjeta 02 · Guía profesional de estudio</span></p>
+<section id="redes-neuronales-artificiales-guía-teórica-y-matemática" class="level3">
+<h3 class="anchored" data-anchor-id="redes-neuronales-artificiales-guía-teórica-y-matemática">Redes Neuronales Artificiales — Guía teórica y matemática</h3>
+<p>Documento de 33 páginas que amplía los fundamentos conceptuales y matemáticos, incorporando analogías, fórmulas, diagramas, ejemplos numéricos resueltos y aplicaciones para lectores técnicos y no técnicos.</p>
+<p><span class="study-meta">PDF · 33 páginas · Español</span></p>
+<div class="study-actions">
+<p><a href="resources/Guia_Profesional_Redes_Neuronales.pdf" target="_blank" rel="noopener" aria-label="Visualizar el PDF de la guía teórica y matemática de redes neuronales (se abre en una pestaña nueva)">Visualizar PDF</a> <a href="resources/Guia_Profesional_Redes_Neuronales.pdf" download="Guia_Profesional_Redes_Neuronales.pdf" aria-label="Descargar el PDF de la guía teórica y matemática de redes neuronales">Descargar PDF</a></p>
+</div>
+</section>
+</div>
+<div class="card study-card">
+<p><span class="study-kicker"><span class="bi bi-code-slash" aria-hidden="true"></span> Tarjeta 03 · Laboratorio computacional</span></p>
+<section id="laboratorio-de-redes-neuronales-con-python" class="level3">
+<h3 class="anchored" data-anchor-id="laboratorio-de-redes-neuronales-con-python">Laboratorio de Redes Neuronales con Python</h3>
+<p>Notebook de Jupyter que permite experimentar con neuronas artificiales, funciones de activación, propagación hacia delante, gradientes, retropropagación y entrenamiento de modelos con NumPy y PyTorch.</p>
+<p><span class="study-meta">Jupyter Notebook · Python · NumPy · PyTorch</span></p>
+<div class="study-actions">
+<p><a href="https://colab.research.google.com/github/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/deep-learning-1/week-02/class-02/notebooks/Guia_Redes_Neuronales_Practicas.ipynb" aria-label="Abrir el laboratorio de redes neuronales en Google Colab">Abrir en Google Colab</a> <a href="https://github.com/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/deep-learning-1/week-02/class-02/notebooks/Guia_Redes_Neuronales_Practicas.ipynb" aria-label="Ver el laboratorio de redes neuronales en GitHub">Ver notebook en GitHub</a> <a href="notebooks/Guia_Redes_Neuronales_Practicas.ipynb" download="Guia_Redes_Neuronales_Practicas.ipynb" aria-label="Descargar el notebook del laboratorio de redes neuronales">Descargar .ipynb</a></p>
+</div>
+</section>
+</div>
+</div>
+<section id="ruta-de-aprendizaje-recomendada" class="level3">
+<h3 class="anchored" data-anchor-id="ruta-de-aprendizaje-recomendada">Ruta de aprendizaje recomendada</h3>
+<ol type="1">
+<li><strong>Etapa 1. Comprender.</strong> Revisar la presentación de referencia y reconocer los principales componentes de una red neuronal.</li>
+<li><strong>Etapa 2. Profundizar.</strong> Estudiar la guía PDF y desarrollar las fórmulas y ejemplos numéricos.</li>
+<li><strong>Etapa 3. Experimentar.</strong> Ejecutar el laboratorio en Google Colab y observar cómo cambian los resultados al modificar los parámetros de la red.</li>
+</ol>
+</section>
+<section id="conocimientos-previos-recomendados" class="level3">
+<h3 class="anchored" data-anchor-id="conocimientos-previos-recomendados">Conocimientos previos recomendados</h3>
+<p>Ayudan a aprovechar mejor el material, pero no son requisitos para consultarlo. Las primeras secciones de la guía están pensadas también para quienes no programan.</p>
+<ul>
+<li>Álgebra lineal básica: vectores, matrices y producto punto.</li>
+<li>Derivadas y regla de la cadena.</li>
+<li>Python, en particular NumPy.</li>
+<li>Fundamentos de aprendizaje automático: regresión, clasificación y función de pérdida.</li>
+</ul>
+</section>
 </section>
 <section id="notebooks" class="level2">
 <h2 class="anchored" data-anchor-id="notebooks">Notebooks</h2>
@@ -543,7 +620,7 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="talleres-y-tareas">Talleres y tareas</h2>
 <p>La tarea asociada a este bloque del curso está en la página de <a href="../../../../../semesters/semester-01/deep-learning-1/workshops/index.html">Talleres y tareas</a>: <strong>Pipeline de datos multimodal con CUB-200-2011</strong> (imagen + texto + tabular, con DataLoaders en PyTorch y en <code>tf.data</code>).</p>
 <div class="callout callout-style-default callout-warning callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -552,7 +629,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Esto describe los notebooks tal como están en la fuente. No se han modificado.</p>
 <ul>
@@ -567,7 +644,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="notas-personales" class="level2">
 <h2 class="anchored" data-anchor-id="notas-personales">Notas personales</h2>
-<p>Hay una nota personal de esta clase (<em>Redes Neuronales</em>, en formato Word). Se guarda en almacenamiento privado y no se publica.</p>
+<p>La presentación del docente que se recopiló en Word (<em>Redes Neuronales</em>) se describe en <a href="#material-redes-neuronales">Material de estudio y laboratorio</a>. Es material de referencia del profesor Héctor Javier Hortúa, PhD, se guarda en almacenamiento privado y no se publica sin autorización.</p>
 </section>
 <section id="ejercicios" class="level2">
 <h2 class="anchored" data-anchor-id="ejercicios">Ejercicios</h2>
