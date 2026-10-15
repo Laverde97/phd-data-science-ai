@@ -24,6 +24,17 @@ Además, dos pipelines completos: MNIST con TensorFlow y una serie temporal con 
 
 [Ver clase 02 →](class-02/index.qmd)
 :::
+
+::: {.card}
+### Material de estudio · Redes Neuronales Artificiales
+Guía teórica y matemática en PDF y laboratorio en Python (NumPy y PyTorch), elaborados como material
+complementario a partir de la presentación de referencia del docente. Incluye una ruta de
+aprendizaje recomendada.
+
+**Guía PDF (33 pp.) · Notebook para Colab · Presentación de referencia (privada)**
+
+[Ver material de estudio →](class-02/index.qmd#material-redes-neuronales)
+:::
 :::
 
 ## Temas
@@ -47,7 +58,8 @@ Además, dos pipelines completos: MNIST con TensorFlow y una serie temporal con 
 | Datos | 1 | `sunspots.csv`, que está en `clase1/` del repositorio del docente |
 | Artefactos | 13 | `resultados_regresion/`: `mejor_modelo.keras` y 12 registros de TensorBoard |
 | Recursos externos | — | MNIST de `tensorflow_datasets` |
-| Notas personales | 1 | En almacenamiento privado (no se publican) |
+| Presentación de referencia | 1 | Presentación *Redes Neuronales* del docente, recopilada en Word. Está en almacenamiento privado y no se publica |
+| Material complementario propio | 2 | [Guía PDF (33 pp.) y laboratorio en Python](class-02/index.qmd#material-redes-neuronales), elaborados con apoyo de IA generativa |
 | Talleres y tareas | 1 | [Tarea multimodal CUB-200-2011](../workshops/index.qmd) (enunciado del docente; solución pendiente) |
 
 ## Fuente

@@ -158,3 +158,58 @@ blockquote {
   .hero { padding: 2.4rem 1.4rem; }
   .module-banner { padding: 1.4rem; }
 }
+
+/* Study materials (Deep Learning I · Clase 02) ----------------------- */
+.study-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.study-card .study-kicker {
+  display: block;
+  font-size: .8rem;
+  font-weight: 600;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  color: var(--phd-accent);
+  margin-bottom: .5rem;
+}
+
+.study-card .study-kicker .bi {
+  font-size: 1.15rem;
+  margin-right: .35rem;
+  vertical-align: -.1em;
+}
+
+.study-card .study-meta {
+  display: block;
+  font-size: .85rem;
+  opacity: .8;
+}
+
+.study-card .study-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  margin-top: auto;
+  padding-top: .75rem;
+}
+
+.study-card .study-actions a {
+  display: inline-block;
+  padding: .3rem .8rem;
+  border: 1px solid var(--phd-border);
+  border-radius: 999px;
+  font-size: .875rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.study-card .study-actions a:hover {
+  border-color: var(--phd-accent);
+}
+
+.study-card a:focus-visible {
+  outline: 2px solid var(--phd-accent);
+  outline-offset: 2px;
+}

@@ -17,6 +17,9 @@ project:
     - "semesters/semester-01/machine-learning/workshops/taller-final/Taller_Final_Clinica_ML.sql"
     - "semesters/semester-01/machine-learning/workshops/taller-final/Taller_Clinica_Machine_Learning_LAVERDE.ipynb"
     - "semesters/semester-01/machine-learning/workshops/taller-final/Taller_Final_Segmentacion_Clinica_PCA_KMeans.pdf"
+    # Deep Learning I · Clase 02: guía PDF y laboratorio propios (estáticos; el notebook no se ejecuta).
+    - "semesters/semester-01/deep-learning-1/week-02/class-02/resources/Guia_Profesional_Redes_Neuronales.pdf"
+    - "semesters/semester-01/deep-learning-1/week-02/class-02/notebooks/Guia_Redes_Neuronales_Practicas.ipynb"
 
 website:
   title: "PhD · Data Science & Artificial Intelligence"
