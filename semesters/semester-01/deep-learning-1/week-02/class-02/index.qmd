@@ -49,6 +49,94 @@ Según los encabezados de los notebooks:
   el mismo problema con Keras sobre el *backend* JAX, entrenado directamente con los `DataLoader`
   de PyTorch.
 
+## Material de estudio y laboratorio — Redes Neuronales Artificiales {#material-redes-neuronales}
+
+Este espacio reúne recursos académicos para comprender los fundamentos de las redes neuronales
+artificiales, desde su interpretación intuitiva hasta su formulación matemática e implementación
+computacional. El material integra explicaciones conceptuales, ejemplos resueltos y ejercicios
+prácticos utilizando Python, NumPy y PyTorch.
+
+::: {.callout-note}
+## Autoría y alcance
+- **Material de referencia del docente.** La presentación *Artificial Neural Networks* es del
+  profesor **Héctor Javier Hortúa, PhD**. Juan Sebastián Laverde Chunza la recopiló y organizó en
+  formato Word como referencia para esta clase. La autoría intelectual del contenido es del docente.
+  El archivo se guarda en almacenamiento privado y no se descarga desde este sitio sin autorización
+  del titular de los derechos.
+- **Material complementario propio.** La guía PDF y el notebook los desarrolló **Juan Sebastián
+  Laverde Chunza** con apoyo de herramientas de inteligencia artificial generativa, tomando como
+  referencia esa presentación. Las explicaciones, analogías, diagramas redibujados, ejemplos
+  y código son desarrollos complementarios. No reproducen las diapositivas.
+- **Alcance.** Estos recursos tienen fines exclusivamente educativos y de profundización conceptual,
+  matemática y computacional. No son material oficial del docente ni de la Universidad El Bosque.
+:::
+
+::: {.grid}
+::: {.card .study-card}
+[[]{.bi .bi-file-earmark-text aria-hidden="true"} Tarjeta 01 · Presentación de referencia]{.study-kicker}
+
+### Fundamentos de Redes Neuronales Artificiales
+Presentación utilizada como referencia académica para estudiar neuronas artificiales, funciones de
+activación, arquitecturas de redes, descenso de gradiente y retropropagación. El contenido es del
+docente Héctor Javier Hortúa, PhD. El estudiante lo recopiló en formato Word.
+
+[Word · Material docente · Referencia académica]{.study-meta}
+
+[Distribución sujeta a autorización]{.status-todo}
+:::
+
+::: {.card .study-card}
+[[]{.bi .bi-book aria-hidden="true"} Tarjeta 02 · Guía profesional de estudio]{.study-kicker}
+
+### Redes Neuronales Artificiales — Guía teórica y matemática
+Documento de 33 páginas que amplía los fundamentos conceptuales y matemáticos, incorporando
+analogías, fórmulas, diagramas, ejemplos numéricos resueltos y aplicaciones para lectores técnicos
+y no técnicos.
+
+[PDF · 33 páginas · Español]{.study-meta}
+
+::: {.study-actions}
+[Visualizar PDF](resources/Guia_Profesional_Redes_Neuronales.pdf){target="_blank" rel="noopener" aria-label="Visualizar el PDF de la guía teórica y matemática de redes neuronales (se abre en una pestaña nueva)"}
+[Descargar PDF](resources/Guia_Profesional_Redes_Neuronales.pdf){download="Guia_Profesional_Redes_Neuronales.pdf" aria-label="Descargar el PDF de la guía teórica y matemática de redes neuronales"}
+:::
+:::
+
+::: {.card .study-card}
+[[]{.bi .bi-code-slash aria-hidden="true"} Tarjeta 03 · Laboratorio computacional]{.study-kicker}
+
+### Laboratorio de Redes Neuronales con Python
+Notebook de Jupyter que permite experimentar con neuronas artificiales, funciones de activación,
+propagación hacia delante, gradientes, retropropagación y entrenamiento de modelos con NumPy y
+PyTorch.
+
+[Jupyter Notebook · Python · NumPy · PyTorch]{.study-meta}
+
+::: {.study-actions}
+[Abrir en Google Colab](https://colab.research.google.com/github/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/deep-learning-1/week-02/class-02/notebooks/Guia_Redes_Neuronales_Practicas.ipynb){aria-label="Abrir el laboratorio de redes neuronales en Google Colab"}
+[Ver notebook en GitHub](https://github.com/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/deep-learning-1/week-02/class-02/notebooks/Guia_Redes_Neuronales_Practicas.ipynb){aria-label="Ver el laboratorio de redes neuronales en GitHub"}
+[Descargar .ipynb](notebooks/Guia_Redes_Neuronales_Practicas.ipynb){download="Guia_Redes_Neuronales_Practicas.ipynb" aria-label="Descargar el notebook del laboratorio de redes neuronales"}
+:::
+:::
+:::
+
+### Ruta de aprendizaje recomendada
+
+1. **Etapa 1. Comprender.** Revisar la presentación de referencia y reconocer los principales
+   componentes de una red neuronal.
+2. **Etapa 2. Profundizar.** Estudiar la guía PDF y desarrollar las fórmulas y ejemplos numéricos.
+3. **Etapa 3. Experimentar.** Ejecutar el laboratorio en Google Colab y observar cómo cambian los
+   resultados al modificar los parámetros de la red.
+
+### Conocimientos previos recomendados
+
+Ayudan a aprovechar mejor el material, pero no son requisitos para consultarlo. Las primeras secciones
+de la guía están pensadas también para quienes no programan.
+
+- Álgebra lineal básica: vectores, matrices y producto punto.
+- Derivadas y regla de la cadena.
+- Python, en particular NumPy.
+- Fundamentos de aprendizaje automático: regresión, clasificación y función de pérdida.
+
 ## Notebooks
 
 | # | Notebook | Framework | Contenido | Original | Colab |
@@ -113,8 +201,9 @@ Esto describe los notebooks tal como están en la fuente. No se han modificado.
 
 ## Notas personales
 
-Hay una nota personal de esta clase (*Redes Neuronales*, en formato Word). Se guarda en almacenamiento
-privado y no se publica.
+La presentación del docente que se recopiló en Word (*Redes Neuronales*) se describe en
+[Material de estudio y laboratorio](#material-redes-neuronales). Es material de referencia del
+profesor Héctor Javier Hortúa, PhD, se guarda en almacenamiento privado y no se publica sin autorización.
 
 ## Ejercicios
 
