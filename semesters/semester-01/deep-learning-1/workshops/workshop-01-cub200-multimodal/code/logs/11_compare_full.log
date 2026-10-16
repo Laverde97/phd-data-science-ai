@@ -1,0 +1,3 @@
+val: 600 observaciones idénticas en IDs, etiquetas y texto; atributos tabulares equivalentes (atol=1e-6).
+test: 5794 observaciones idénticas en IDs, etiquetas y texto; atributos tabulares equivalentes (atol=1e-6).
+COMPARACIÓN INTERFRAMEWORK: OK

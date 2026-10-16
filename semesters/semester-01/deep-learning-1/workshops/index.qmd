@@ -4,24 +4,32 @@ subtitle: "Deep Learning I · Semestre 1 · Módulo 2"
 ---
 
 Tareas que propone el docente en el curso, junto con las soluciones propias cuando estén listas.
-Los **enunciados** son del docente y se enlazan a su repositorio. Las **soluciones** son trabajo
-propio y se publicarán en esta carpeta.
+Los **enunciados** son del docente y se enlazan a su repositorio. Las **soluciones** (código,
+notebooks e informes) son trabajo académico propio y se publican en esta carpeta.
 
 ## Convención de nombres
 
-Las soluciones propias usan `workshop-01-tema.ext`, `workshop-02-tema.ext`, …, con un prefijo de
-dos dígitos en orden cronológico. Si la solución es un notebook, incluye su badge
+Cada solución propia vive en su carpeta `workshop-NN-tema/`, con un prefijo de dos dígitos en orden
+cronológico. Dentro, sus archivos principales repiten ese nombre: `workshop-NN-tema.ipynb` y
+`workshop-NN-tema-informe.pdf`. Si la solución es un notebook, incluye su badge
 **Open in Colab**.
 
 ## Inventario
 
-| # | Tarea | Publicada | Enunciado | Notebook | Colab | PDF | Estado |
-| :--: | :--- | :--: | :--: | :--: | :--: | :--: | :--: |
-| 01 | Pipeline de datos multimodal con CUB-200-2011 | 09/10/2026 | [GitHub][t1md] | — | — | — | [Pendiente]{.status-todo} |
+::: {.table-responsive}
+| # | Tarea | Publicada | Enunciado | Notebook | Colab | PDF | Código | Estado |
+| :--: | :--- | :--: | :--: | :--: | :--: | :--: | :--: | :--: |
+| 01 | [Pipeline de datos multimodal con CUB-200-2011](workshop-01-cub200-multimodal/index.qmd) | 09/10/2026 | [GitHub][t1md] | [.ipynb](workshop-01-cub200-multimodal/workshop-01-cub200-multimodal.ipynb){download="workshop-01-cub200-multimodal.ipynb"} | [Solo lectura][t1colab]\* | [Informe](workshop-01-cub200-multimodal/workshop-01-cub200-multimodal-informe.pdf){target="_blank" rel="noopener"} | [GitHub][t1code] | [Solución desarrollada y validada]{.status-done} |
 
 : Tareas del módulo {.striped .hover}
+:::
 
 [t1md]: https://github.com/MAESTRiA-ESTADiS-CIENCIA-DATOS-Bosque/Deep_Learning_I_Fundamentos/blob/main/tareas/Tarea_multimodal_CUB-200-2011.md
+[t1colab]: https://colab.research.google.com/github/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/deep-learning-1/workshops/workshop-01-cub200-multimodal/workshop-01-cub200-multimodal.ipynb
+[t1code]: https://github.com/Laverde97/phd-data-science-ai/tree/main/semesters/semester-01/deep-learning-1/workshops/workshop-01-cub200-multimodal/code
+
+\* El notebook se ejecutó en WSL con dos entornos independientes y datos locales. Colab sirve para
+consultarlo, pero no lo ejecuta tal cual.
 
 ## Tarea 01 · Pipeline de datos multimodal con CUB-200-2011
 
@@ -52,8 +60,31 @@ El **dataset** CUB-200-2011 (~1,1 GB) y las *captions* no se guardan en este rep
 descargan de las fuentes que indica el enunciado ([Caltech Data](https://data.caltech.edu/records/20098)
 y el [repositorio de Reed](https://github.com/reedscot/cvpr2016)).
 
-La **solución propia** todavía no está hecha. Cuando exista, se agregará aquí como notebook con su
-badge Colab y, si corresponde, un PDF.
+La **solución propia** está desarrollada y validada. Se publica como edición pública: el notebook
+sin fotografías ni *captions*, el informe técnico en PDF y el código fuente. Los detalles están en su
+[página](workshop-01-cub200-multimodal/index.qmd).
+:::
+
+### Solución propia
+
+::: {.grid}
+::: {.card .study-card}
+[[]{.bi .bi-diagram-3 aria-hidden="true"} Tarea 01 · Solución desarrollada y validada]{.study-kicker}
+
+### Pipeline multimodal CUB-200-2011 en PyTorch y TensorFlow
+Seis flujos funcionales (*train*, *validation* y *test* por framework) que unen imagen, texto y
+318 atributos tabulares. Ocho pruebas aprobadas y una omitida por entorno, y 6.394 registros de *val*/*test*
+comparados entre frameworks. No se entrenó ningún modelo.
+
+[Notebook · Informe PDF · Código fuente]{.study-meta}
+
+::: {.study-actions}
+[Ver la solución](workshop-01-cub200-multimodal/index.qmd){aria-label="Ver la página detallada de la solución de la Tarea 01"}
+[Informe PDF](workshop-01-cub200-multimodal/workshop-01-cub200-multimodal-informe.pdf){target="_blank" rel="noopener" aria-label="Ver el informe técnico de la Tarea 01 (se abre en una pestaña nueva)"}
+[Notebook](https://github.com/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/deep-learning-1/workshops/workshop-01-cub200-multimodal/workshop-01-cub200-multimodal.ipynb){aria-label="Ver el notebook de la Tarea 01 en GitHub"}
+[Código](https://github.com/Laverde97/phd-data-science-ai/tree/main/semesters/semester-01/deep-learning-1/workshops/workshop-01-cub200-multimodal/code){aria-label="Explorar el código fuente de la Tarea 01 en GitHub"}
+:::
+:::
 :::
 
 [← Módulo Deep Learning I](../index.qmd)

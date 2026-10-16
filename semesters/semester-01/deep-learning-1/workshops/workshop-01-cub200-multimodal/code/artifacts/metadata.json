@@ -1,0 +1,33 @@
+{
+  "dataset": "CUB-200-2011 + Reed et al. captions",
+  "seed": 42,
+  "counts": {
+    "test": 5794,
+    "train": 5394,
+    "val": 600
+  },
+  "vocab_size": 2079,
+  "max_len": 25,
+  "special_tokens": {
+    "<pad>": 0,
+    "<unk>": 1
+  },
+  "geometry": [
+    "cx_over_W",
+    "cy_over_H",
+    "w_over_W",
+    "h_over_H",
+    "w_over_h",
+    "area_over_WH"
+  ],
+  "geometry_fit": "train_only",
+  "vocab_fit": "train_only",
+  "caption_rule": "train: random among 10; val/test: first",
+  "classes": 200,
+  "tabular_dim": 318,
+  "bbox_clipping_count": 30,
+  "bbox_policy": "clip_to_visible_image_for_geometry; preserve_raw_bbox_in_manifest",
+  "python": "3.12.14",
+  "numpy": "2.5.4",
+  "pandas": "2.3.3"
+}

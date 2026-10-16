@@ -1,0 +1,31 @@
+project:
+  type: default
+  output-dir: _out
+
+lang: es
+author: "Juan Sebastián Laverde Chunza"
+date: "2026-10-16"
+date-format: "D [de] MMMM [de] YYYY"
+
+format:
+  pdf:
+    documentclass: scrartcl
+    papersize: a4
+    fontsize: 10.5pt
+    pdf-engine: lualatex
+    mainfont: "TeX Gyre Pagella"
+    sansfont: "TeX Gyre Heros"
+    geometry:
+      - top=2.4cm
+      - bottom=2.4cm
+      - left=2.3cm
+      - right=2.3cm
+    toc: false
+    number-sections: false
+    colorlinks: true
+    linkcolor: "phdaccent"
+    urlcolor: "phdaccent"
+    include-in-header: report-style.tex
+    fig-pos: "H"
+    keep-tex: false
+    callout-icon: false
