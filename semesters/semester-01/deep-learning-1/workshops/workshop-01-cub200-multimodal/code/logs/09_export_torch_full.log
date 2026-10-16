@@ -1,0 +1,3 @@
+TORCH val: 600/600 observaciones; 38 lotes; salida: artifacts/reports/signatures/torch_val.npz
+TORCH test: 5794/5794 observaciones; 363 lotes; salida: artifacts/reports/signatures/torch_test.npz
+EXPORTACIÓN DE FIRMAS: OK

@@ -51,8 +51,8 @@ y PyTorch Lightning. Cuatro notebooks, un archivo de datos y artefactos de entre
 
 ::: {.resource-card}
 ### 📝 Talleres y tareas
-Enunciados del docente y soluciones propias. Hoy: tarea de pipeline de datos multimodal con
-CUB-200-2011 (solución pendiente).
+Enunciados del docente y soluciones propias. Tarea 01 · pipeline de datos multimodal con
+CUB-200-2011: solución propia desarrollada y validada en PyTorch y TensorFlow.
 
 [Ver talleres y tareas](workshops/index.qmd)
 :::
@@ -79,7 +79,10 @@ No se anticipan semanas ni clases futuras.
   Los enlaces de la Semana 01 apuntan a `main`. En ese commit, el docente actualizó los notebooks
   de `clase1/`. La descripción de la Semana 01 corresponde a la versión `0f989f9`.
 - **Talleres y tareas:** [1 tarea del docente](workshops/index.qmd) (pipeline multimodal
-  CUB-200-2011). La solución propia está pendiente.
+  CUB-200-2011). La [solución propia](workshops/workshop-01-cub200-multimodal/index.qmd) está
+  implementada y validada: seis flujos (*train*/*val*/*test* en PyTorch y TensorFlow), pruebas
+  automatizadas y comparación de val/test entre frameworks. Se publican el notebook, el informe y el
+  código. No se entrenó ningún modelo.
 - **Notas personales:** una nota de la Clase 02, en almacenamiento privado.
 - **Ejercicios:** todavía no se ha agregado ninguno.
 
@@ -126,11 +129,18 @@ series temporales de la clase 02 también necesita `sunspots.csv`.
 
 ::: {.callout-important}
 ## Atribución y derechos
-Todo el material de este módulo (notebooks, datos y contenido del curso) proviene del
-[repositorio del docente](https://github.com/MAESTRiA-ESTADiS-CIENCIA-DATOS-Bosque/Deep_Learning_I_Fundamentos),
-del curso Deep Learning I del Doctorado en Ciencia de Datos e Inteligencia Artificial de la
-Universidad El Bosque. No es de autoría propia.
-
-El repositorio fuente no tiene un archivo de licencia explícito. Por eso este sitio no redistribuye
-los archivos: los enlaza con atribución. Las copias verbatim se guardan en almacenamiento privado.
+- **Material docente original.** Los notebooks de clase, sus datos y el contenido del curso son del
+  docente **Héctor Javier Hortúa, PhD** y provienen de su
+  [repositorio](https://github.com/MAESTRiA-ESTADiS-CIENCIA-DATOS-Bosque/Deep_Learning_I_Fundamentos),
+  del curso Deep Learning I del Doctorado en Ciencia de Datos e Inteligencia Artificial de la
+  Universidad El Bosque. No son de autoría propia. El repositorio fuente no tiene un archivo de licencia
+  explícito, así que este sitio no redistribuye esos archivos: los enlaza con atribución. Las copias
+  verbatim se guardan en almacenamiento privado.
+- **Enunciados de tareas.** Son del docente. Se enlazan a su repositorio y se resumen en
+  [Talleres y tareas](workshops/index.qmd).
+- **Trabajo académico propio.** Las soluciones de las tareas (implementación, código, notebooks e
+  informes técnicos) y los materiales complementarios marcados como propios en cada clase son de
+  **Juan Sebastián Laverde Chunza**.
+- **Datos de terceros.** Los datasets que usan las tareas, como CUB-200-2011 y las *captions* de
+  Reed et al., no se publican en este sitio. Se citan con su fuente.
 :::
