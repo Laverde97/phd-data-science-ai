@@ -1,0 +1,45 @@
+project:
+  type: default
+  output-dir: _out
+
+lang: es
+author: "Juan Sebastián Laverde Chunza"
+date: "2026-10-15"
+date-format: "D [de] MMMM [de] YYYY"
+
+format:
+  pdf:
+    documentclass: scrartcl
+    papersize: a4
+    fontsize: 10.5pt
+    pdf-engine: lualatex
+    mainfont: "TeX Gyre Pagella"
+    sansfont: "TeX Gyre Heros"
+    geometry:
+      - top=2.4cm
+      - bottom=2.4cm
+      - left=2.3cm
+      - right=2.3cm
+    toc: true
+    toc-depth: 2
+    number-sections: true
+    colorlinks: true
+    linkcolor: "phdaccent"
+    urlcolor: "phdaccent"
+    toccolor: "black"
+    include-in-header: guide-style.tex
+    code-block-bg: "#F6F4FA"
+    code-block-border-left: "#6F42C1"
+    highlight-style: github
+    fig-width: 6.2
+    fig-height: 3.0
+    fig-dpi: 160
+    fig-pos: "H"
+    keep-tex: false
+    callout-icon: false
+
+execute:
+  echo: true
+  warning: false
+  message: false
+  cache: false
