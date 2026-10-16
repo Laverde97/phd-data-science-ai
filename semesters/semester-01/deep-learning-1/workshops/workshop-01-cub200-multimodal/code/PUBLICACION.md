@@ -2,7 +2,7 @@
 
 Esta carpeta es la **edición pública** del paquete académico `ENTREGA_CUB200_TAREA01.zip` (64 archivos, 16/10/2026).
 Contiene los **42 archivos** del paquete que se pueden redistribuir: código fuente, scripts, pruebas, documentación
-metodológica, registros de ejecución, metadatos y listados de entorno. Todos se copiaron **sin modificar**.
+metodológica, registros de ejecución, metadatos y listados de entorno. Todos se copiaron **sin modificar**, salvo `README.md`, al que se le añadió al principio una nota sobre esta distribución pública.
 
 La solución, el código y la documentación son trabajo académico propio de Juan Sebastián Laverde Chunza. El enunciado de la
 tarea es del docente Héctor Javier Hortúa, PhD:

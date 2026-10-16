@@ -11,10 +11,14 @@ subtitle: "Pipeline multimodal reproducible CUB-200-2011 + captions · Ingenier�
 ## Edición pública
 
 Esta edición reproduce el texto, las tablas y las cifras del informe técnico entregado
-(`Informe_Tecnico_CUB200_Deep_Learning_I.pdf`). Tiene una sola diferencia: la **Figura 2** del original
-mostraba cinco fotografías de CUB-200-2011, y aquí se sustituye por una **tabla** con los mismos cinco casos.
-Las fotografías no se redistribuyen porque Caltech indica que no posee sus derechos y restringe su uso a la
-investigación y la educación no comercial.
+(`Informe_Tecnico_CUB200_Deep_Learning_I.pdf`), con dos diferencias:
+
+1. La **Figura 2** del original mostraba cinco fotografías de CUB-200-2011. Aquí se sustituye por una **tabla**
+   con los mismos cinco casos. Las fotografías no se redistribuyen porque Caltech indica que no posee sus derechos
+   y restringe su uso a la investigación y la educación no comercial.
+2. En la **sección 6.3** se explica el motivo de la prueba omitida y se eliminan los tiempos de ejecución de
+   pytest, que no coincidían con los *logs* archivados. El resultado se mantiene: 8 pruebas aprobadas y 1 omitida
+   por entorno.
 
 **Autoría.** La solución, el código, el notebook y este informe son trabajo académico propio. El enunciado de
 la tarea es del docente Héctor Javier Hortúa, PhD (Deep Learning I, Universidad El Bosque).
@@ -56,7 +60,7 @@ La fuente visual y las anotaciones proceden de Caltech-UCSD Birds-200-2011 (Wah 
 | Test oficial | 5.794 | 200 | 11–30 |
 | Total | 11.788 | 200 | — |
 
-![Figura 1. Distribución de observaciones por partición (salida del notebook).](figures/fig-1-particiones.png){width=88%}
+![Distribución de observaciones por partición (salida del notebook).](figures/fig-1-particiones.png){width=78%}
 
 # 3. Metodología de preprocesamiento
 
@@ -135,7 +139,7 @@ Este resultado NO certifica igualdad píxel a píxel de las imágenes ni equival
 
 ## 6.3. Pruebas automatizadas
 
-El usuario volvió a ejecutar python -m pytest -q con cada entorno. Las salidas más recientes reportan 8 passed, 1 skipped en PyTorch (5,71 s) y 8 passed, 1 skipped en TensorFlow (6,41 s). No consta la razón de la omisión; debería consultarse con pytest -rs para documentarla.
+El usuario volvió a ejecutar python -m pytest -q con cada entorno. Las salidas reportan 8 passed, 1 skipped en PyTorch y 8 passed, 1 skipped en TensorFlow. La omisión es esperada: los *smoke tests* de `tests/test_framework_smoke.py` usan `pytest.importorskip`, y en cada entorno se omite el del framework que no está instalado. En `.venv` se omite la prueba de TensorFlow y en `.venv-tf`, la de PyTorch.
 
 # 7. Limitaciones y discusión
 
@@ -168,7 +172,7 @@ python -m pytest -q
 
 El objetivo de ingeniería de datos definido para esta tarea se alcanzó según las evidencias disponibles: seis pipelines válidos, particiones trazables, contrato de lotes multimodales, auditorías de integridad y consistencia de campos deterministas entre PyTorch y TensorFlow. La evidencia justifica declarar listo el pipeline para la entrega de preprocesamiento, no para despliegue productivo, predicción ni clasificación de imágenes nuevas sin anotaciones.
 
-*El notebook final «02_informe_ejecutable_CUB200_FINAL_PORTABLE.ipynb» utiliza una variable ROOT dinámica y ejecuta los dos frameworks en intérpretes separados. Para identificar formalmente el motivo de cada prueba omitida se recomienda volver a ejecutar pytest con la opción -rs.*
+*El notebook final «02_informe_ejecutable_CUB200_FINAL_PORTABLE.ipynb» utiliza una variable ROOT dinámica y ejecuta los dos frameworks en intérpretes separados. El motivo de la prueba omitida en cada entorno se explica en la sección 6.3; `pytest -rs` lo muestra explícitamente.*
 
 # Referencias
 

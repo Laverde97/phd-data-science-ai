@@ -1,3 +1,11 @@
+> **Nota de la distribución pública.** Este README se escribió para el **paquete académico completo**
+> (`ENTREGA_CUB200_TAREA01.zip`). La distribución pública de esta carpeta **excluye** algunos artefactos:
+> los arrays y metadatos derivados de los datos (`manifest.csv`, `*.npy`, `vocab.json`, *scaler*, firmas `.npz`),
+> la figura con fotografías, el informe original y los notebooks. Por eso algunas rutas que se citan abajo no
+> están aquí. Consulte [`PUBLICACION.md`](PUBLICACION.md) para ver el inventario exacto de lo incluido y lo excluido.
+> El notebook y el informe se publican en edición pública en la carpeta superior.
+> Salvo esta nota, el README es el original.
+
 # CUB-200-2011 — Pipeline multimodal reproducible
 **Deep Learning I · Tarea 01 · PyTorch y TensorFlow**
 
