@@ -308,165 +308,566 @@
     "text": "Recursos\nAbrir en Google Colab Ver el notebook en GitHub\n\n\n\nOpen in Colab"
   },
   {
-    "objectID": "semesters/semester-01/deep-learning-1/workshops/index.html",
-    "href": "semesters/semester-01/deep-learning-1/workshops/index.html",
-    "title": "Talleres y tareas",
+    "objectID": "semesters/semester-01/deep-learning-1/workshops/workshop-01-cub200-multimodal/index.html",
+    "href": "semesters/semester-01/deep-learning-1/workshops/workshop-01-cub200-multimodal/index.html",
+    "title": "Tarea 01 · Pipeline de datos multimodal con CUB-200-2011",
     "section": "",
-    "text": "Tareas que propone el docente en el curso, junto con las soluciones propias cuando estén listas. Los enunciados son del docente y se enlazan a su repositorio. Las soluciones son trabajo propio y se publicarán en esta carpeta."
+    "text": "Pipeline de datos multimodal reproducible para CUB-200-2011. Une fotografías, descripciones textuales y atributos tabulares en seis flujos funcionales: train, validation y test en PyTorch y en TensorFlow. La tarea consiste en construir, procesar y validar los datos. No se entrenó ningún modelo y no se reportan métricas predictivas.\nSolución desarrollada y validada · Entrega del 16/10/2026"
   },
   {
-    "objectID": "semesters/semester-01/deep-learning-1/workshops/index.html#convención-de-nombres",
-    "href": "semesters/semester-01/deep-learning-1/workshops/index.html#convención-de-nombres",
-    "title": "Talleres y tareas",
-    "section": "Convención de nombres",
-    "text": "Convención de nombres\nLas soluciones propias usan workshop-01-tema.ext, workshop-02-tema.ext, …, con un prefijo de dos dígitos en orden cronológico. Si la solución es un notebook, incluye su badge Open in Colab."
-  },
-  {
-    "objectID": "semesters/semester-01/deep-learning-1/workshops/index.html#inventario",
-    "href": "semesters/semester-01/deep-learning-1/workshops/index.html#inventario",
-    "title": "Talleres y tareas",
-    "section": "Inventario",
-    "text": "Inventario\n\nTareas del módulo\n\n\n#\nTarea\nPublicada\nEnunciado\nNotebook\nColab\nPDF\nEstado\n\n\n\n\n01\nPipeline de datos multimodal con CUB-200-2011\n09/10/2026\nGitHub\n—\n—\n—\nPendiente"
-  },
-  {
-    "objectID": "semesters/semester-01/deep-learning-1/workshops/index.html#tarea-01-pipeline-de-datos-multimodal-con-cub-200-2011",
-    "href": "semesters/semester-01/deep-learning-1/workshops/index.html#tarea-01-pipeline-de-datos-multimodal-con-cub-200-2011",
-    "title": "Talleres y tareas",
-    "section": "Tarea 01 · Pipeline de datos multimodal con CUB-200-2011",
-    "text": "Tarea 01 · Pipeline de datos multimodal con CUB-200-2011\nResumen del enunciado del docente (ver el original):\n\nObjetivo: construir el pipeline de datos de una base multimodal (imagen, texto y datos tabulares) y entregar DataLoaders de train, validation y test en PyTorch (Dataset + DataLoader) y en TensorFlow (tf.data). En esta tarea no se entrena ningún modelo. El enunciado dice que el pipeline será la base de las tareas siguientes.\nDatos: CUB-200-2011 (Wah et al., 2011): 11 788 imágenes de 200 especies de aves, con bounding boxes y 312 atributos binarios. Las captions son de Reed et al. (CVPR 2016), con 10 descripciones por imagen.\nContenido de cada batch: imagen normalizada de 224 × 224, texto como ids de palabras con su longitud real, 318 atributos tabulares (312 binarios + 6 de geometría escalados) y la etiqueta de especie (0–199).\nSplits: el train oficial se divide 90/10 en train y validation, estratificado por especie (seed=42). El test oficial completo queda como test.\nRegla de preprocesamiento: todo lo que se aprende de los datos (vocabulario, scaler, max_len) se ajusta solo con train.\n\n\n\n\n\n\n\nNoteEnunciado, dataset y solución\n\n\n\nEl enunciado es del docente. El repositorio fuente no tiene licencia explícita, así que el original se enlaza y hay una copia verbatim en almacenamiento privado.\nEl dataset CUB-200-2011 (~1,1 GB) y las captions no se guardan en este repositorio. Se descargan de las fuentes que indica el enunciado (Caltech Data y el repositorio de Reed).\nLa solución propia todavía no está hecha. Cuando exista, se agregará aquí como notebook con su badge Colab y, si corresponde, un PDF.\n\n\n← Módulo Deep Learning I"
-  },
-  {
-    "objectID": "semesters/semester-01/deep-learning-1/week-02/class-02/index.html",
-    "href": "semesters/semester-01/deep-learning-1/week-02/class-02/index.html",
-    "title": "Clase 02",
+    "objectID": "semesters/semester-01/deep-learning-1/workshops/workshop-01-cub200-multimodal/index.html#solución-desarrollada-y-validada",
+    "href": "semesters/semester-01/deep-learning-1/workshops/workshop-01-cub200-multimodal/index.html#solución-desarrollada-y-validada",
+    "title": "Tarea 01 · Pipeline de datos multimodal con CUB-200-2011",
     "section": "",
-    "text": "ImportantFuente y atribución\n\n\n\nMaterial del docente Héctor Javier Hortúa, PhD (SavIA-Lab, Instituto de Neurociencias), del curso Deep Learning I del Doctorado en Ciencia de Datos e Inteligencia Artificial de la Universidad El Bosque. Viene de la carpeta clase2/ del repositorio del docente (commit c9cfeb5). No es de autoría propia.\nEl repositorio fuente no tiene un archivo de licencia explícito, así que aquí se enlaza al original. Hay copias verbatim en almacenamiento privado, comprobadas con SHA-256."
+    "text": "Pipeline de datos multimodal reproducible para CUB-200-2011. Une fotografías, descripciones textuales y atributos tabulares en seis flujos funcionales: train, validation y test en PyTorch y en TensorFlow. La tarea consiste en construir, procesar y validar los datos. No se entrenó ningún modelo y no se reportan métricas predictivas.\nSolución desarrollada y validada · Entrega del 16/10/2026"
   },
   {
-    "objectID": "semesters/semester-01/deep-learning-1/week-02/class-02/index.html#introducción",
-    "href": "semesters/semester-01/deep-learning-1/week-02/class-02/index.html#introducción",
-    "title": "Clase 02",
-    "section": "Introducción",
-    "text": "Introducción\nEn la clase 01 se vieron tensores y diferenciación automática. Esta clase los usa para entrenar modelos. Cada notebook implementa primero el entrenamiento a mano (parámetros, forward pass, pérdida, gradientes y loop) y después lo reescribe con la API de alto nivel del framework. Así se ve qué hace por dentro cada llamada de compile()/fit() o de nn.Module/Trainer. Los dos últimos notebooks reúnen todo en pipelines completos: datos, modelo, callbacks, evaluación y predicción."
-  },
-  {
-    "objectID": "semesters/semester-01/deep-learning-1/week-02/class-02/index.html#temas",
-    "href": "semesters/semester-01/deep-learning-1/week-02/class-02/index.html#temas",
-    "title": "Clase 02",
-    "section": "Temas",
-    "text": "Temas\nSegún los encabezados de los notebooks:\n\nRegresión en TensorFlow: generación de datos y división train/validation/test con tf.data, parámetros entrenables, tf.GradientTape y loop manual. Luego el mismo modelo con tf.keras: tres formas de definir modelos, capas y modelos personalizados, activaciones, compile(), fit(), History, callbacks, evaluate()/predict(), y guardar y cargar modelos y pesos.\nClasificación en PyTorch: Dataset/DataLoader, binary cross entropy manual, backward() y descenso de gradiente. Luego el paso a torch.nn: nn.Module, capas propias (densa y Dropout), MLP, train()/eval(), equivalentes de compile/fit/History/ evaluate/predict/callbacks de Keras, y guardar el estado del modelo y del optimizador.\nPyTorch Lightning: LightningModule, Trainer.fit(), validate()/test()/predict(), callbacks y checkpoints, y una comparación Keras vs PyTorch vs Lightning.\nRegularización y normalización (en TensorFlow y en PyTorch): L1, L2 y L1-L2, Dropout, y Batch, Layer y Group Normalization, con una comparación conceptual.\nPipeline MNIST (TensorFlow/Keras): tensorflow_datasets, exploración, pesos de clase, preprocesamiento con tf.data, modelo denso, TensorBoard, EarlyStopping, ModelCheckpoint, ReduceLROnPlateau, evaluación sobre test y matriz de confusión.\nPipeline de series temporales (Sunspots): división temporal, normalización con estadísticas solo de train, Dataset de ventanas deslizantes y modelo denso con PyTorch Lightning. Después, el mismo problema con Keras sobre el backend JAX, entrenado directamente con los DataLoader de PyTorch."
-  },
-  {
-    "objectID": "semesters/semester-01/deep-learning-1/week-02/class-02/index.html#material-redes-neuronales",
-    "href": "semesters/semester-01/deep-learning-1/week-02/class-02/index.html#material-redes-neuronales",
-    "title": "Clase 02",
-    "section": "Material de estudio y laboratorio — Redes Neuronales Artificiales",
-    "text": "Material de estudio y laboratorio — Redes Neuronales Artificiales\nEste espacio reúne recursos académicos para comprender los fundamentos de las redes neuronales artificiales, desde su interpretación intuitiva hasta su formulación matemática e implementación computacional. El material integra explicaciones conceptuales, ejemplos resueltos y ejercicios prácticos utilizando Python, NumPy y PyTorch.\n\n\n\n\n\n\nNoteAutoría y alcance\n\n\n\n\nMaterial de referencia del docente. La presentación Artificial Neural Networks es del profesor Héctor Javier Hortúa, PhD. Juan Sebastián Laverde Chunza la recopiló y organizó en formato Word como referencia para esta clase. La autoría intelectual del contenido es del docente. El archivo se guarda en almacenamiento privado y no se descarga desde este sitio sin autorización del titular de los derechos.\nMaterial complementario propio. La guía PDF y el notebook los desarrolló Juan Sebastián Laverde Chunza con apoyo de herramientas de inteligencia artificial generativa, tomando como referencia esa presentación. Las explicaciones, analogías, diagramas redibujados, ejemplos y código son desarrollos complementarios. No reproducen las diapositivas.\nAlcance. Estos recursos tienen fines exclusivamente educativos y de profundización conceptual, matemática y computacional. No son material oficial del docente ni de la Universidad El Bosque.\n\n\n\n\n\n Tarjeta 01 · Presentación de referencia\n\nFundamentos de Redes Neuronales Artificiales\nPresentación utilizada como referencia académica para estudiar neuronas artificiales, funciones de activación, arquitecturas de redes, descenso de gradiente y retropropagación. El contenido es del docente Héctor Javier Hortúa, PhD. El estudiante lo recopiló en formato Word.\nWord · Material docente · Referencia académica\nDistribución sujeta a autorización\n\n\n\n Tarjeta 02 · Guía profesional de estudio\n\nRedes Neuronales Artificiales — Guía teórica y matemática\nDocumento de 33 páginas que amplía los fundamentos conceptuales y matemáticos, incorporando analogías, fórmulas, diagramas, ejemplos numéricos resueltos y aplicaciones para lectores técnicos y no técnicos.\nPDF · 33 páginas · Español\n\nVisualizar PDF Descargar PDF\n\n\n\n\n Tarjeta 03 · Laboratorio computacional\n\nLaboratorio de Redes Neuronales con Python\nNotebook de Jupyter que permite experimentar con neuronas artificiales, funciones de activación, propagación hacia delante, gradientes, retropropagación y entrenamiento de modelos con NumPy y PyTorch.\nJupyter Notebook · Python · NumPy · PyTorch\n\nAbrir en Google Colab Ver notebook en GitHub Descargar .ipynb\n\n\n\n\n\nRuta de aprendizaje recomendada\n\nEtapa 1. Comprender. Revisar la presentación de referencia y reconocer los principales componentes de una red neuronal.\nEtapa 2. Profundizar. Estudiar la guía PDF y desarrollar las fórmulas y ejemplos numéricos.\nEtapa 3. Experimentar. Ejecutar el laboratorio en Google Colab y observar cómo cambian los resultados al modificar los parámetros de la red.\n\n\n\nConocimientos previos recomendados\nAyudan a aprovechar mejor el material, pero no son requisitos para consultarlo. Las primeras secciones de la guía están pensadas también para quienes no programan.\n\nÁlgebra lineal básica: vectores, matrices y producto punto.\nDerivadas y regla de la cadena.\nPython, en particular NumPy.\nFundamentos de aprendizaje automático: regresión, clasificación y función de pérdida."
-  },
-  {
-    "objectID": "semesters/semester-01/deep-learning-1/week-02/class-02/index.html#notebooks",
-    "href": "semesters/semester-01/deep-learning-1/week-02/class-02/index.html#notebooks",
-    "title": "Clase 02",
-    "section": "Notebooks",
-    "text": "Notebooks\n\n\n\n\n#\nNotebook\nFramework\nContenido\nOriginal\nColab\nPDF\n\n\n\n\n1\nRegresión en TensorFlow: de entrenamiento manual a tf.keras · 01_Regresion.ipynb\nTensorFlow / Keras\nDatos sintéticos, tf.data, GradientTape y loop manual. Luego compile/fit, tres formas de definir modelos, capas y modelos personalizados, activaciones, History, callbacks, guardado de modelos, L1/L2, Dropout y normalizaciones.\nGitHub\nOpen in Colab\n Ver PDF\n\n\n2\nClasificación en PyTorch: de tensores y autograd a torch.nn · 02_Clasificacion.ipynb\nPyTorch / Lightning\nBCE y loop manual, nn.Module, frontera de decisión, capas personalizadas, MLP, equivalentes de la API de Keras, guardado con optimizador, L1/L2, Dropout, normalizaciones y PyTorch Lightning.\nGitHub\nOpen in Colab\n Ver PDF\n\n\n3\nPipeline completo de clasificación MNIST con TensorFlow/Keras · Pipeline_TensorFlow.ipynb\nTensorFlow / Keras\ntensorflow_datasets, pesos de clase, tf.data, modelo denso, cuatro callbacks (TensorBoard, EarlyStopping, ModelCheckpoint, ReduceLROnPlateau), evaluación, predicción y matriz de confusión.\nGitHub\nOpen in Colab\n Ver PDF\n\n\n4\nPipeline completo de series de tiempo con PyTorch Lightning y Keras/JAX · Pipeline__PyTorchL_KerasJAX.ipynb\nPyTorch Lightning · Keras (JAX)\nSerie Sunspots, división temporal, ventanas deslizantes, LightningModule, Trainer, TensorBoard y checkpoints. Luego el mismo modelo en Keras/JAX con los DataLoader de PyTorch, métricas en unidades originales y comparación de ambos enfoques.\nGitHub\nOpen in Colab\n Ver PDF\n\n\n\n\nLos cuatro notebooks del docente están publicados sin salidas (celdas sin ejecutar). Las copias verbatim están en almacenamiento privado, y este sitio no las redistribuye ni las ejecuta al construirse.\nLas guías PDF constituyen material académico complementario elaborado por Juan Sebastián Laverde Chunza con apoyo de herramientas de inteligencia artificial generativa, a partir de los contenidos de referencia de la Clase 02 del profesor Héctor Javier Hortúa, PhD. No son materiales oficiales del docente ni de la Universidad El Bosque. Son ediciones públicas con implementaciones, datos y explicaciones propias, y no reproducen el código ni el texto de los notebooks del docente."
-  },
-  {
-    "objectID": "semesters/semester-01/deep-learning-1/week-02/class-02/index.html#datos-y-dependencias",
-    "href": "semesters/semester-01/deep-learning-1/week-02/class-02/index.html#datos-y-dependencias",
-    "title": "Clase 02",
-    "section": "Datos y dependencias",
-    "text": "Datos y dependencias\n\n\n\nArchivo\nFormato\nTamaño\nUsado por\nDescripción\n\n\n\n\nsunspots.csv\nCSV\n67 591 B\nPipeline__PyTorchL_KerasJAX\nEl mismo archivo de la clase 01 (está en clase1/): serie mensual de manchas solares, de 1749 a 2018.\n\n\n\nLos notebooks de regresión y clasificación generan sus datos sintéticamente. El pipeline MNIST descarga el dataset con tensorflow_datasets.\nPaquetes que usan los notebooks y que no están en el pyproject.toml del docente:\n\n\n\n\n\n\n\n\nPaquete\nUsado por\nCómo se instala en el notebook\n\n\n\n\nlightning / pytorch-lightning\n02_Clasificacion, Pipeline__PyTorchL_KerasJAX\n!pip install pytorch-lightning · !pip install torch lightning tensorboard\n\n\ntensorboard\nPipeline__PyTorchL_KerasJAX (y los callbacks de TensorBoard)\n!pip install torch lightning tensorboard\n\n\ntensorflow-datasets\nPipeline_TensorFlow\n!pip install tensorflow tensorflow-datasets\n\n\nkeras&gt;=3 (multi-backend)\n02_Clasificacion (backend torch), Pipeline__PyTorchL_KerasJAX (backend jax)\n!pip install \"keras&gt;=3\" jax jaxlib"
-  },
-  {
-    "objectID": "semesters/semester-01/deep-learning-1/week-02/class-02/index.html#material-complementario-y-artefactos",
-    "href": "semesters/semester-01/deep-learning-1/week-02/class-02/index.html#material-complementario-y-artefactos",
-    "title": "Clase 02",
-    "section": "Material complementario y artefactos",
-    "text": "Material complementario y artefactos\n\n\n\nRecurso\nTipo\nTamaño\nOrigen\nNota\n\n\n\n\nresultados_regresion/mejor_modelo.keras\nModelo Keras entrenado\n21 623 B\n01_Regresion (ModelCheckpoint)\nEs una salida del notebook. Se guarda solo como artefacto privado.\n\n\nresultados_regresion/logs/\nRegistros de TensorBoard\n6 de train + 6 de validation\n01_Regresion (callback TensorBoard)\nSon las ejecuciones del docente. Se ven con tensorboard --logdir resultados_regresion/logs.\n\n\n\nEstos artefactos se generan al ejecutar los notebooks. No se publican en este sitio."
-  },
-  {
-    "objectID": "semesters/semester-01/deep-learning-1/week-02/class-02/index.html#talleres-y-tareas",
-    "href": "semesters/semester-01/deep-learning-1/week-02/class-02/index.html#talleres-y-tareas",
-    "title": "Clase 02",
-    "section": "Talleres y tareas",
-    "text": "Talleres y tareas\nLa tarea asociada a este bloque del curso está en la página de Talleres y tareas: Pipeline de datos multimodal con CUB-200-2011 (imagen + texto + tabular, con DataLoaders en PyTorch y en tf.data).\n\n\n\n\n\n\nWarningNotas para ejecutar los notebooks\n\n\n\n\n\nEsto describe los notebooks tal como están en la fuente. No se han modificado.\n\nPipeline__PyTorchL_KerasJAX lee sunspots.csv con una ruta absoluta de Windows del equipo del docente (C:\\Users\\javier\\...\\clase1\\sunspots.csv). Antes de ejecutar, hay que cambiarla por la ruta local o subir el archivo a Colab.\nKERAS_BACKEND se define con os.environ antes de importar Keras: torch en 02_Clasificacion y jax en Pipeline__PyTorchL_KerasJAX. Si se cambia el orden, Keras usa el backend por defecto.\nLos notebooks escriben archivos en la carpeta de trabajo, por ejemplo resultados_regresion/, best_model.pt, classifier_lightning.ckpt, best_mnist.keras, mnist_final.keras, best_timeseries_jax.keras y logs de TensorBoard.\nVarias celdas instalan paquetes con !pip. Fuera de Colab conviene instalarlos en el entorno de uv."
-  },
-  {
-    "objectID": "semesters/semester-01/deep-learning-1/week-02/class-02/index.html#notas-personales",
-    "href": "semesters/semester-01/deep-learning-1/week-02/class-02/index.html#notas-personales",
-    "title": "Clase 02",
-    "section": "Notas personales",
-    "text": "Notas personales\nLa presentación del docente que se recopiló en Word (Redes Neuronales) se describe en Material de estudio y laboratorio. Es material de referencia del profesor Héctor Javier Hortúa, PhD, se guarda en almacenamiento privado y no se publica sin autorización."
-  },
-  {
-    "objectID": "semesters/semester-01/deep-learning-1/week-02/class-02/index.html#ejercicios",
-    "href": "semesters/semester-01/deep-learning-1/week-02/class-02/index.html#ejercicios",
-    "title": "Clase 02",
-    "section": "Ejercicios",
-    "text": "Ejercicios\nTodavía no hay ejercicios registrados para esta clase."
-  },
-  {
-    "objectID": "semesters/semester-01/deep-learning-1/week-02/class-02/index.html#fuente",
-    "href": "semesters/semester-01/deep-learning-1/week-02/class-02/index.html#fuente",
-    "title": "Clase 02",
-    "section": "Fuente",
-    "text": "Fuente\n\nRepositorio del docente: MAESTRiA-ESTADiS-CIENCIA-DATOS-Bosque/Deep_Learning_I_Fundamentos\nCarpeta de la clase: clase2/\nCommit incorporado: c9cfeb52746c5d8c41fcdc3ae246bc6111324ce1 (2026-10-13)\n\n← Volver a la semana 02 · Módulo Deep Learning I"
-  },
-  {
-    "objectID": "semesters/semester-01/deep-learning-1/week-01/class-01/index.html",
-    "href": "semesters/semester-01/deep-learning-1/week-01/class-01/index.html",
-    "title": "Clase 01",
-    "section": "",
-    "text": "ImportantFuente y atribución\n\n\n\nMaterial del docente Héctor Javier Hortúa, PhD (SavIA-Lab, Instituto de Neurociencias), del curso Deep Learning I del Doctorado en Ciencia de Datos e Inteligencia Artificial de la Universidad El Bosque. Viene de la carpeta clase1/ del repositorio del docente (commit 0f989f9). No es de autoría propia.\nEl repositorio fuente no tiene un archivo de licencia explícito, así que aquí se enlaza al original. Hay copias verbatim en almacenamiento privado, comprobadas con SHA-256."
-  },
-  {
-    "objectID": "semesters/semester-01/deep-learning-1/week-01/class-01/index.html#temas",
-    "href": "semesters/semester-01/deep-learning-1/week-01/class-01/index.html#temas",
-    "title": "Clase 01",
-    "section": "Temas",
-    "text": "Temas\nSegún los encabezados de los notebooks:\n\nTensores: rangos, indexado y slicing, operaciones y reducciones, propiedades, reshape, broadcasting, e interoperabilidad con NumPy.\nDiferenciación automática: derivadas simples, gradientes respecto a varios parámetros, derivadas de orden superior, verificación de la solución analítica de una EDO y un Metropolis-Hastings (MCMC) implementado en cada framework.\nParticularidades de cada framework: eager frente a grafo y variables (TensorFlow); CPU ↔︎ GPU, requires_grad, acumulación de gradientes y retain_graph (PyTorch); inmutabilidad, PRNGKey, jacobianos y jit (JAX).\nCarga de datos: tf.data.Dataset, Dataset y DataLoader de PyTorch, collate_fn, transformaciones, lectura de texto y CSV, tensorflow_datasets y data augmentation."
-  },
-  {
-    "objectID": "semesters/semester-01/deep-learning-1/week-01/class-01/index.html#notebooks",
-    "href": "semesters/semester-01/deep-learning-1/week-01/class-01/index.html#notebooks",
-    "title": "Clase 01",
-    "section": "Notebooks",
-    "text": "Notebooks\n\n\n\n#\nNotebook\nFramework\nContenido\nOriginal\nColab\n\n\n\n\n1\nTensores y diferenciación automática con TensorFlow · 01_tensores_tensorflow.ipynb\nTensorFlow\nArquitectura, eager vs graph, tensores y rangos, operaciones, broadcasting, tensores especiales, tf.Variable, tf.einsum, tf.GradientTape, EDO y MCMC.\nGitHub\nOpen in Colab\n\n\n2\nTensores y diferenciación automática con PyTorch · 01_tensores_pytorch.ipynb\nPyTorch\nLos mismos conceptos que el notebook de TensorFlow: ejecución dinámica, torch.where, view/reshape, CPU ↔︎ GPU, requires_grad, autograd (acumulación, retain_graph, congelar parámetros), EDO y MCMC.\nGitHub\nOpen in Colab\n\n\n3\nTensores y diferenciación automática con JAX · 01_tensores_jax.ipynb\nJAX\nNumPy acelerado con transformaciones de funciones: inmutabilidad, PRNGKey, jnp.where, grad, jacobianos, EDO, jit, MCMC y una comparación final de los tres frameworks.\nGitHub\nOpen in Colab\n\n\n4\nCarga de datos en TensorFlow: la API tf.data · 02_carga_datos_tensorflow.ipynb\nTensorFlow 2 / Keras\nDatasets desde memoria, iteración, shuffle/repeat/batch, map/flat_map, lectura de .txt y .csv, tensorflow_datasets (MNIST), pipeline de entrenamiento, data augmentation con tres métodos y pipeline de texto con IMDB y embeddings.\nGitHub\nOpen in Colab\n\n\n5\nCarga de datos en PyTorch: Dataset, DataLoader, batch y collate_fn · 02_carga_datos_pytorch.ipynb\nPyTorch\nDataset y TensorDataset, estilo map frente a iterable, DataLoader, collate_fn propio, transformaciones con torchvision, ImageFolder, serie temporal con ventanas deslizantes y tokenización de texto.\nGitHub\nOpen in Colab\n\n\n\nLos cinco notebooks del docente se publican sin salidas (celdas sin ejecutar). Las copias verbatim de este repositorio están en almacenamiento privado, y este sitio no las redistribuye."
-  },
-  {
-    "objectID": "semesters/semester-01/deep-learning-1/week-01/class-01/index.html#datos",
-    "href": "semesters/semester-01/deep-learning-1/week-01/class-01/index.html#datos",
-    "title": "Clase 01",
-    "section": "Datos",
-    "text": "Datos\n\n\n\nArchivo\nFormato\nTamaño\nUsado por\nDescripción\n\n\n\n\nsonnets.txt\nTXT (ASCII)\n93 578 B\n02_carga_datos_tensorflow, 02_carga_datos_pytorch\nTexto en inglés de 2 158 líneas que empieza con “FROM fairest creatures we desire increase”. Se usa para TextLineDataset y para tokenizar.\n\n\nsonnets_2.txt\nTXT (ASCII)\n93 578 B\n02_carga_datos_tensorflow\nIdéntico byte a byte a sonnets.txt. Se conservan los dos porque el notebook los lee juntos.\n\n\nsunspots.csv\nCSV\n67 591 B\n02_carga_datos_tensorflow, 02_carga_datos_pytorch\nSerie mensual de 3 235 filas (1749-01-31 → 2018-07-31). Columnas: índice sin nombre, Date y Monthly Mean Total Sunspot Number."
-  },
-  {
-    "objectID": "semesters/semester-01/deep-learning-1/week-01/class-01/index.html#recursos",
-    "href": "semesters/semester-01/deep-learning-1/week-01/class-01/index.html#recursos",
-    "title": "Clase 01",
+    "objectID": "semesters/semester-01/deep-learning-1/workshops/workshop-01-cub200-multimodal/index.html#recursos",
+    "href": "semesters/semester-01/deep-learning-1/workshops/workshop-01-cub200-multimodal/index.html#recursos",
+    "title": "Tarea 01 · Pipeline de datos multimodal con CUB-200-2011",
     "section": "Recursos",
-    "text": "Recursos\n\n\n\nRecurso\nUsado por\nNota\n\n\n\n\nimgs/ (animales/, apto/, arte/, ciudad/; 10 imágenes)\n02_carga_datos_tensorflow (image_dataset_from_directory), 02_carga_datos_pytorch (ImageFolder)\nSe lee como ../imgs/, así que el notebook espera estar en una subcarpeta del repositorio del docente. No se copió porque probablemente son imágenes de terceros.\n\n\ntensorflow_datasets: mnist e imdb_reviews\n02_carga_datos_tensorflow\nSe descargan de internet al ejecutar el notebook.\n\n\n\n\n\n\n\n\n\nWarningNotas para ejecutar los notebooks\n\n\n\n\n\nEsto describe los notebooks tal como están en la fuente. No se han modificado.\n\n02_carga_datos_tensorflow lee 'Sunspots.csv' con S mayúscula, pero el archivo se llama sunspots.csv. Esa celda falla en sistemas de archivos que distinguen mayúsculas (Linux, Colab).\nUna celda de 02_carga_datos_tensorflow usa una ruta absoluta de Windows del equipo del docente para make_csv_dataset. Hay que cambiarla por sunspots.csv antes de ejecutarla.\nLas rutas relativas (sonnets.txt, sunspots.csv, ../imgs/) suponen la estructura del repositorio del docente. En Colab hay que subir esos archivos a la sesión.\ntensorflow_datasets, torchvision y PIL no están en el pyproject.toml del docente.\nNumeración de módulos en la fuente: 01_tensores_jax, 02_carga_datos_tensorflow y 02_carga_datos_pytorch se identifican como “Módulo 2 — Herramientas y manejo de datos”. En cambio, Contenido.ipynb pone la introducción a TensorFlow, PyTorch y JAX, y los temas de datasets, transformación de datos y data augmentation, en el “Primer módulo: Introducción a Deep Learning”. Aquí se registran ambas etiquetas tal como aparecen en la fuente."
+    "text": "Recursos\n\n\n Notebook · edición pública\n\nInforme ejecutable\nNotebook canónico (FINAL_PORTABLE) con sus 11 celdas de código ejecutadas y sin errores guardados. En esta edición pública se omiten las salidas con fotografías y la caption, y la ruta local.\nJupyter · 28 celdas (11 de código) · 66 KB\n\nVer en GitHub Descargar .ipynb Colab · solo lectura\n\n\n\n\n Informe técnico · edición pública\n\nInforme técnico en PDF\nResumen ejecutivo, fuentes, metodología, control de calidad, implementación en ambos frameworks, verificación, limitaciones y conclusiones. La Figura 2 (fotografías) se sustituye por una tabla.\nPDF · Español\n\nVisualizar PDF Descargar PDF\n\n\n\n\n Código fuente\n\nCódigo y documentación\nPaquete src/cub200/, scripts de preparación y validación, pruebas automatizadas, logs de ejecución y documentación metodológica. Es la distribución pública ligera, sin datos ni artefactos derivados.\nPython · 42 archivos\n\nExplorar código Qué se publica\n\n\n\n\n Reproducción\n\nInstrucciones de reproducción\nFuentes de datos, entornos .venv y .venv-tf, comandos de preparación, validación, pruebas y comparación de firmas en WSL.\nMarkdown · WSL · Python 3.12\n\nREADME del proyecto Guía paso a paso\n\n\n\n\n\n\n\n\n\n\nWarningGoogle Colab: solo consulta\n\n\n\nEl notebook se ejecutó en WSL con dos entornos independientes: .venv con PyTorch 2.11.0+cu128 y .venv-tf con TensorFlow 2.21.0. También necesita los datos originales en data/ y los artefactos preparados en artifacts/, y ninguno de los dos se distribuye. El enlace a Colab sirve para consultar el notebook y sus salidas guardadas. No es ejecutable tal cual en Colab, y no se ha hecho ni verificado una adaptación."
   },
   {
-    "objectID": "semesters/semester-01/deep-learning-1/week-01/class-01/index.html#notas-personales",
-    "href": "semesters/semester-01/deep-learning-1/week-01/class-01/index.html#notas-personales",
-    "title": "Clase 01",
-    "section": "Notas personales",
-    "text": "Notas personales\nTodavía no hay notas personales para esta clase."
+    "objectID": "semesters/semester-01/deep-learning-1/workshops/workshop-01-cub200-multimodal/index.html#problema-objetivos-y-alcance",
+    "href": "semesters/semester-01/deep-learning-1/workshops/workshop-01-cub200-multimodal/index.html#problema-objetivos-y-alcance",
+    "title": "Tarea 01 · Pipeline de datos multimodal con CUB-200-2011",
+    "section": "1. Problema, objetivos y alcance",
+    "text": "1. Problema, objetivos y alcance\nEl enunciado pide preparar los datos de una base multimodal que combina imagen, texto y datos tabulares. El objetivo es entregar DataLoaders de entrenamiento, validación y prueba en dos ecosistemas. Según el enunciado, este pipeline es la base de las tareas siguientes del curso.\n\nObjetivo: disponer de conjuntos de datos multimodales para train, val y test en PyTorch y TensorFlow, con lotes que unan imagen, tokens de una descripción, longitud real, atributos tabulares, etiqueta de especie e identificador.\nPregunta técnica: ¿se pueden generar los seis flujos de datos conservando el protocolo de partición, un esquema uniforme de variables y parámetros de procesamiento ajustados únicamente en entrenamiento?\nAlcance: termina en la producción y validación de lotes. No incluye modelos entrenados, métricas de clasificación (accuracy, F1) ni afirmaciones de rendimiento predictivo."
   },
   {
-    "objectID": "semesters/semester-01/deep-learning-1/week-01/class-01/index.html#ejercicios",
-    "href": "semesters/semester-01/deep-learning-1/week-01/class-01/index.html#ejercicios",
-    "title": "Clase 01",
-    "section": "Ejercicios",
-    "text": "Ejercicios\nTodavía no hay ejercicios registrados para esta clase."
+    "objectID": "semesters/semester-01/deep-learning-1/workshops/workshop-01-cub200-multimodal/index.html#cub-200-2011-y-sus-tres-modalidades",
+    "href": "semesters/semester-01/deep-learning-1/workshops/workshop-01-cub200-multimodal/index.html#cub-200-2011-y-sus-tres-modalidades",
+    "title": "Tarea 01 · Pipeline de datos multimodal con CUB-200-2011",
+    "section": "2. CUB-200-2011 y sus tres modalidades",
+    "text": "2. CUB-200-2011 y sus tres modalidades\n\n\nModalidades de la unidad de análisis (image_id)\n\n\n\n\n\n\n\n\nModalidad\nFuente\nVolumen\nUso en el pipeline\n\n\n\n\nImagen\nCaltech-UCSD Birds-200-2011 (Wah et al., 2011)\n11.788 fotografías de 200 especies de aves, con bounding box\nRecorte guiado por la caja, resize y crop a 224 × 224, normalización ImageNet\n\n\nTexto\nDescripciones finas de Reed et al. (2016), obtenidas mediante la distribución de AttnGAN\n117.880 captions, diez por imagen\nTokenización, vocabulario de train, padding a longitud fija\n\n\nTabular\nAnotaciones de CUB-200-2011\n318 atributos: 312 binarios y seis geométricos\nBinarios sin escalar; geometría derivada de la caja y estandarizada\n\n\n\n\nLa unidad de análisis es image_id. Cada registro tiene una fotografía, diez captions, 312 atributos binarios anotados, la geometría derivada de su caja delimitadora y la etiqueta de especie (0–199)."
   },
   {
-    "objectID": "semesters/semester-01/deep-learning-1/week-01/class-01/index.html#fuente",
-    "href": "semesters/semester-01/deep-learning-1/week-01/class-01/index.html#fuente",
-    "title": "Clase 01",
+    "objectID": "semesters/semester-01/deep-learning-1/workshops/workshop-01-cub200-multimodal/index.html#arquitectura-del-pipeline",
+    "href": "semesters/semester-01/deep-learning-1/workshops/workshop-01-cub200-multimodal/index.html#arquitectura-del-pipeline",
+    "title": "Tarea 01 · Pipeline de datos multimodal con CUB-200-2011",
+    "section": "3. Arquitectura del pipeline",
+    "text": "3. Arquitectura del pipeline\n\n\n\nFuente Fotografías CUB-200-201111.788 JPG · 200 especies\n\n\nFuente Captions Reed et al.11.788 TXT · 10 por imagen\n\n\nFuente Anotaciones CUB312 atributos · bounding boxes\n\n\n↓\n\n\nPreparación compartida · src/cub200/prepare.py manifest + split estratificado (semilla 42): train 5.394 · val 600 · test oficial 5.794. Ajuste solo con train: vocabulario (2.079 tokens), max_len = 25 (P95) y StandardScaler de la geometría. Persistido en artifacts/, con auditoría de 30 bounding boxes.\n\n\n↓\n\n\nImagen bbox + 10 % → 256 × 256 → crop 224 × 224 → normalización ImageNet. Aumentación solo en train.\n\n\nTexto [a-z]+ en minúsculas → ids (&lt;pad&gt;=0, &lt;unk&gt;=1) → padding a 25. Una caption aleatoria en train, la primera en val/test.\n\n\nTabular 312 binarios intactos + 6 geométricos estandarizados → vector de 318.\n\n\n↓\n\n\nContrato de batch image · input_ids · lengths · tabular · label · image_id\n\n\n↓\n\n\nPyTorch · pytorch_pipeline.py Dataset (__len__, __getitem__) + DataLoader · imágenes NCHW\n\n\nTensorFlow · tensorflow_pipeline.py tf.data (from_tensor_slices → map con tf.io/tf.image → batch → prefetch) · imágenes NHWC\n\n\n↓\n\n\nValidación Contrato por split y framework · pytest en cada entorno · comparación exhaustiva de firmas de val/test"
+  },
+  {
+    "objectID": "semesters/semester-01/deep-learning-1/workshops/workshop-01-cub200-multimodal/index.html#particiones",
+    "href": "semesters/semester-01/deep-learning-1/workshops/workshop-01-cub200-multimodal/index.html#particiones",
+    "title": "Tarea 01 · Pipeline de datos multimodal con CUB-200-2011",
+    "section": "4. Particiones",
+    "text": "4. Particiones\nEl test oficial de CUB-200-2011 se conserva completo. La validación se extrae del train oficial (5.994 imágenes) con una división estratificada por especie: tres imágenes por especie, con semilla 42.\n\n\nParticiones verificadas en el notebook\n\n\nConjunto\nObservaciones\nEspecies\nMín.–máx. por especie\nOrigen\n\n\n\n\nTrain\n5.394\n200\n26–27\nTrain oficial menos validación\n\n\nValidation\n600\n200\n3–3\nEstratificado del train oficial\n\n\nTest\n5.794\n200\n11–30\nTest oficial completo\n\n\nTotal\n11.788\n200\n—"
+  },
+  {
+    "objectID": "semesters/semester-01/deep-learning-1/workshops/workshop-01-cub200-multimodal/index.html#preprocesamiento-por-modalidad",
+    "href": "semesters/semester-01/deep-learning-1/workshops/workshop-01-cub200-multimodal/index.html#preprocesamiento-por-modalidad",
+    "title": "Tarea 01 · Pipeline de datos multimodal con CUB-200-2011",
+    "section": "5. Preprocesamiento por modalidad",
+    "text": "5. Preprocesamiento por modalidad\n\n\nEspecificación operativa del preprocesamiento\n\n\n\n\n\n\n\nModalidad\nEntrenamiento\nValidación y prueba\n\n\n\n\nImagen\nBounding box + 10 % de margen (con clipping al lienzo), resize 256 × 256, crop aleatorio 224 × 224, flip horizontal, brillo y contraste, normalización ImageNet\nBounding box + 10 %, resize 256 × 256, crop central 224 × 224, normalización ImageNet. Sin aumentación\n\n\nTexto\nMinúsculas y tokens [a-z]+. Vocabulario de train con frecuencia mínima 2 (2.079 tokens), &lt;pad&gt;=0, &lt;unk&gt;=1, max_len = 25 (P95 de train). Una de las diez captions, al azar en cada lectura\nMismo vocabulario y max_len. Primera caption\n\n\nTabular\n312 atributos binarios sin escalar + 6 geométricos con StandardScaler ajustado en train\nMismo scaler, aplicado sin reajuste\n\n\n\n\nLas seis variables geométricas son una propuesta propia, porque el enunciado pide posición, tamaño, aspecto y área sin dar fórmulas. Con la caja \\((x, y, w, h)\\) y la imagen de \\(W \\times H\\):\n\\[\n\\tfrac{x + w/2}{W},\\quad \\tfrac{y + h/2}{H},\\quad \\tfrac{w}{W},\n\\]\n\\[\n\\tfrac{h}{H},\\quad \\tfrac{w}{h},\\quad \\tfrac{w\\,h}{W\\,H}.\n\\]"
+  },
+  {
+    "objectID": "semesters/semester-01/deep-learning-1/workshops/workshop-01-cub200-multimodal/index.html#pytorch-datasetdataloader-frente-a-tensorflow-tf.data",
+    "href": "semesters/semester-01/deep-learning-1/workshops/workshop-01-cub200-multimodal/index.html#pytorch-datasetdataloader-frente-a-tensorflow-tf.data",
+    "title": "Tarea 01 · Pipeline de datos multimodal con CUB-200-2011",
+    "section": "6. PyTorch Dataset/DataLoader frente a TensorFlow tf.data",
+    "text": "6. PyTorch Dataset/DataLoader frente a TensorFlow tf.data\n\n\nDiferencias de implementación\n\n\n\n\n\n\n\nAspecto\nPyTorch\nTensorFlow\n\n\n\n\nAbstracción\nClase CUBMultimodalTorch (Dataset) con __len__ y __getitem__; make_torch_loaders crea los DataLoader\ntf.data.Dataset.from_tensor_slices con funciones map; make_tf_datasets crea los tres flujos\n\n\nLectura y transformación\nMuestra a muestra en Python, con PIL y torchvision\nGrafo de TensorFlow con tf.io y tf.image\n\n\nBarajado y lotes\nshuffle del DataLoader solo en train\nshuffle solo en train, luego batch y prefetch\n\n\nDisposición de la imagen\nNCHW: (B, 3, 224, 224)\nNHWC: (B, 224, 224, 3)\n\n\nEntorno\n.venv: PyTorch 2.11.0+cu128, torchvision 0.26.0+cu128\n.venv-tf: TensorFlow 2.21.0\n\n\n\n\nLos dos frameworks no se importan en el mismo intérprete. El notebook lanza la validación de cada uno en su entorno con subprocess y MPLBACKEND=Agg. Así evita conflictos de CUDA/cuDNN y del backend gráfico de Jupyter."
+  },
+  {
+    "objectID": "semesters/semester-01/deep-learning-1/workshops/workshop-01-cub200-multimodal/index.html#contrato-de-salida-y-shapes",
+    "href": "semesters/semester-01/deep-learning-1/workshops/workshop-01-cub200-multimodal/index.html#contrato-de-salida-y-shapes",
+    "title": "Tarea 01 · Pipeline de datos multimodal con CUB-200-2011",
+    "section": "7. Contrato de salida y shapes",
+    "text": "7. Contrato de salida y shapes\n\n\nContrato multimodal por lote\n\n\n\n\n\n\n\n\nCampo\nPyTorch\nTensorFlow\nContenido\n\n\n\n\nimage\n(B, 3, 224, 224) float32\n(B, 224, 224, 3) float32\nImagen recortada y normalizada\n\n\ninput_ids\n(B, 25) entero\n(B, 25) entero\nIds de una caption, con padding\n\n\nlengths\n(B,) entero\n(B,) entero\nLongitud real de la secuencia\n\n\ntabular\n(B, 318) float32\n(B, 318) float32\n312 binarios + 6 geométricos\n\n\nlabel\n(B,) entero\n(B,) entero\nEspecie, 0–199\n\n\nimage_id\n(B,) entero\n(B,) entero\nTrazabilidad del registro\n\n\n\n\nArrays persistidos en artifacts/: tabular (11788, 318), text_ids (11788, 10, 25) y text_lengths (11788, 10)."
+  },
+  {
+    "objectID": "semesters/semester-01/deep-learning-1/workshops/workshop-01-cub200-multimodal/index.html#evidencias-de-validación",
+    "href": "semesters/semester-01/deep-learning-1/workshops/workshop-01-cub200-multimodal/index.html#evidencias-de-validación",
+    "title": "Tarea 01 · Pipeline de datos multimodal con CUB-200-2011",
+    "section": "8. Evidencias de validación",
+    "text": "8. Evidencias de validación\n\n\n6 flujos\nTrain, val y test en PyTorch y TensorFlow superaron el contrato con lotes de B = 16.\n\n\n8 aprobadas · 1 omitida\npytest en cada entorno. La prueba omitida es el smoke test del framework que no está instalado en ese entorno (pytest.importorskip).\n\n\n6.394 registros\nComparación exhaustiva de val (600) y test (5.794) entre frameworks en sus campos deterministas.\n\n\n30 bounding boxes\nAjustadas al lienzo y auditadas (0,254 % del conjunto). La pérdida máxima de área es 7,98 %.\n\n\n\n\nEvidencias (los logs están en code/logs/)\n\n\nVerificación\nResultado documentado\nEvidencia\n\n\n\n\nIdentificadores y clases\n11.788 image_id únicos; 200 especies en cada partición\nNotebook, logs/12_final_data_audit.log\n\n\nIntegridad\nValores finitos, atributos binarios, padding correcto tras la longitud real\nNotebook, logs/12_final_data_audit.log\n\n\nContrato PyTorch\nTrain/val/test: Contrato multimodal: OK\nlogs/04_validate_pytorch.log\n\n\nContrato TensorFlow\nTrain/val/test: Contrato multimodal: OK\nlogs/05_validate_tensorflow.log\n\n\nPruebas automatizadas\n8 passed, 1 skipped en .venv y en .venv-tf\nlogs/02_pytest_torch.log, logs/13_pytest_tensorflow.log\n\n\nEquivalencia entre frameworks\n600 + 5.794 registros: image_id, label, input_ids y lengths idénticos; tabular con atol=1e-6, rtol=0\nlogs/11_compare_full.log\n\n\nBounding boxes\n30 casos recortados al lienzo, con la anotación original conservada\nlogs/03_prepare.log\n\n\nNotebook\n11/11 celdas de código ejecutadas, 0 errores guardados\nNotebook canónico\n\n\n\n\nCinco casos de clipping con mayor pérdida relativa de área:\n\n\nAuditoría de bounding boxes (se omiten las fotografías)\n\n\n\n\n\n\n\nimage_id\nEspecie (carpeta CUB-200-2011)\nPérdida relativa de área\n\n\n\n\n5007\n086.Pacific_Loon\n7,98 %\n\n\n1218\n022.Chuck_will_Widow\n7,27 %\n\n\n9762\n166.Golden_winged_Warbler\n1,85 %\n\n\n999\n019.Gray_Catbird\n1,61 %\n\n\n960\n018.Spotted_Catbird\n1,57 %"
+  },
+  {
+    "objectID": "semesters/semester-01/deep-learning-1/workshops/workshop-01-cub200-multimodal/index.html#decisiones-metodológicas-y-prevención-de-fuga-de-información",
+    "href": "semesters/semester-01/deep-learning-1/workshops/workshop-01-cub200-multimodal/index.html#decisiones-metodológicas-y-prevención-de-fuga-de-información",
+    "title": "Tarea 01 · Pipeline de datos multimodal con CUB-200-2011",
+    "section": "9. Decisiones metodológicas y prevención de fuga de información",
+    "text": "9. Decisiones metodológicas y prevención de fuga de información\n\nAjuste solo con train. El vocabulario, el percentil de longitud (max_len) y el StandardScaler de la geometría se calculan con train y se aplican sin reajuste a val y test. En el notebook, la media de las seis geometrías estandarizadas en train es ≈ 0. Ese resultado es coherente con el ajuste, pero no demuestra por sí solo que no haya fuga de información: se complementa con la inspección del código de preparación.\nEl test oficial queda intacto. No se usa para ajustar nada ni para elegir hiperparámetros.\nAtributos por imagen, no por clase. Se usan las anotaciones de cada imagen. Los rasgos agregados por clase podrían filtrar la etiqueta.\nAleatoriedad controlada por split. La aumentación y la selección aleatoria de caption solo ocurren en train. Val y test son deterministas, y por eso se pueden comparar entre frameworks.\nBounding boxes fuera del lienzo. La anotación original se conserva en el manifest. La geometría se calcula sobre la intersección visible. Si la caja no intersecta la imagen, la preparación se detiene.\nTrazabilidad. image_id viaja en cada lote. metadata.json registra la semilla, los conteos, las definiciones geométricas y las políticas de ajuste."
+  },
+  {
+    "objectID": "semesters/semester-01/deep-learning-1/workshops/workshop-01-cub200-multimodal/index.html#limitaciones-conclusiones-y-referencias",
+    "href": "semesters/semester-01/deep-learning-1/workshops/workshop-01-cub200-multimodal/index.html#limitaciones-conclusiones-y-referencias",
+    "title": "Tarea 01 · Pipeline de datos multimodal con CUB-200-2011",
+    "section": "10. Limitaciones, conclusiones y referencias",
+    "text": "10. Limitaciones, conclusiones y referencias\n\nLimitaciones\n\nLa comparación entre frameworks cubre solo los campos deterministas exportados. No verifica igualdad píxel a píxel de las imágenes, porque los decodificadores e interpoladores difieren. Tampoco verifica la igualdad de las aumentaciones aleatorias de train.\nscripts/validate.py inspecciona un lote por split, no las 11.788 imágenes.\nNo se certificó una instalación reproducible desde cero en otro computador. Los entornos son de WSL con GPU, y TensorFlow necesitó una corrección local del enlace libcusolver.so.11.\nLos 312 atributos y las bounding boxes son anotaciones humanas del benchmark. No están garantizados para fotografías nuevas, así que el pipeline no se puede desplegar directamente.\nNo hubo entrenamiento, métricas predictivas ni benchmarking de rendimiento.\n\n\n\nConclusiones\nEl objetivo de ingeniería de datos se alcanzó según las evidencias disponibles. Hay seis pipelines válidos, particiones trazables, un contrato de lotes multimodales, auditorías de integridad y campos deterministas consistentes entre PyTorch y TensorFlow. La evidencia permite declarar el pipeline listo para la entrega de preprocesamiento. No lo declara listo para despliegue productivo ni para clasificar imágenes nuevas sin anotaciones.\n\n\nReferencias\n\nWah, C., Branson, S., Welinder, P., Perona, P. y Belongie, S. (2011). The Caltech-UCSD Birds-200-2011 Dataset. California Institute of Technology. https://data.caltech.edu/records/20098\nReed, S., Akata, Z., Lee, H. y Schiele, B. (2016). Learning Deep Representations of Fine-Grained Visual Descriptions. CVPR. https://arxiv.org/abs/1605.05395\nXu, T. et al. (2018). AttnGAN: Fine-Grained Text to Image Generation with Attentional Generative Adversarial Networks. CVPR. Repositorio: https://github.com/taoxugit/AttnGAN\nPyTorch. torch.utils.data. https://pytorch.org/docs/stable/data.html\nTensorFlow. tf.data: Build TensorFlow input pipelines. https://www.tensorflow.org/guide/data\n\n\n\n\n\n\n\nNoteQué se publica y qué no\n\n\n\n\n\nEste sitio publica una distribución pública ligera con el código fuente, la documentación, los logs, los metadatos, la edición pública del notebook y la edición pública del informe.\nNo se publican las fotografías de CUB-200-2011 ni las captions. Tampoco los artefactos derivados de ellas o de las anotaciones (manifest.csv, tabular.npy, text_ids.npy, vocab.json, firmas .npz), los entornos virtuales ni el proyecto local completo. Caltech indica que no posee los derechos de las fotografías y restringe su uso a la investigación y la educación no comercial. Los términos de los datos de las captions no son explícitos.\nEl inventario completo, con hashes SHA-256, está en code/PUBLICACION.md.\n\n\n\n← Talleres y tareas · Módulo Deep Learning I"
+  },
+  {
+    "objectID": "semesters/semester-01/deep-learning-1/week-02/index.html",
+    "href": "semesters/semester-01/deep-learning-1/week-02/index.html",
+    "title": "Semana 02",
+    "section": "",
+    "text": "La semana 02 cubre el paso del entrenamiento manual (gradientes y loops escritos a mano) a las API de alto nivel de cada framework: tf.keras, torch.nn y PyTorch Lightning. También se ven regularización, normalización, callbacks y pipelines completos de entrenamiento. En el repositorio del docente corresponde a la carpeta clase2/. A diferencia de la Semana 1, el README.md del docente no tiene todavía una sección para esta semana.\nEstado: Material incorporado"
+  },
+  {
+    "objectID": "semesters/semester-01/deep-learning-1/week-02/index.html#clases",
+    "href": "semesters/semester-01/deep-learning-1/week-02/index.html#clases",
+    "title": "Semana 02",
+    "section": "Clases",
+    "text": "Clases\n\n\nClase 02 · Regresión, clasificación y pipelines de entrenamiento\nRegresión en TensorFlow y clasificación en PyTorch, de lo manual a Keras, torch.nn y Lightning. Además, dos pipelines completos: MNIST con TensorFlow y una serie temporal con Lightning y Keras/JAX.\n4 notebooks · 1 archivo de datos · artefactos de entrenamiento\nVer clase 02 →\n\n\nMaterial de estudio · Redes Neuronales Artificiales\nGuía teórica y matemática en PDF y laboratorio en Python (NumPy y PyTorch), elaborados como material complementario a partir de la presentación de referencia del docente. Incluye una ruta de aprendizaje recomendada.\nGuía PDF (33 pp.) · Notebook para Colab · Presentación de referencia (privada)\nVer material de estudio →"
+  },
+  {
+    "objectID": "semesters/semester-01/deep-learning-1/week-02/index.html#temas",
+    "href": "semesters/semester-01/deep-learning-1/week-02/index.html#temas",
+    "title": "Semana 02",
+    "section": "Temas",
+    "text": "Temas\n\nEntrenamiento manual: parámetros entrenables, forward pass, pérdida, tf.GradientTape y backward(), y loops de entrenamiento escritos a mano.\nAPI de alto nivel: compile(), fit(), History, evaluate() y predict() en Keras, con sus equivalentes en PyTorch y PyTorch Lightning.\nCapas y modelos personalizados, y funciones de activación.\nRegularización L1, L2 y L1-L2, Dropout, y Batch, Layer y Group Normalization.\nCallbacks: TensorBoard, EarlyStopping, ModelCheckpoint y ReduceLROnPlateau. Guardar y cargar modelos.\nPipelines completos: clasificación de MNIST con tf.data y pronóstico de la serie Sunspots con PyTorch Lightning y Keras sobre el backend JAX."
+  },
+  {
+    "objectID": "semesters/semester-01/deep-learning-1/week-02/index.html#resumen-de-materiales",
+    "href": "semesters/semester-01/deep-learning-1/week-02/index.html#resumen-de-materiales",
+    "title": "Semana 02",
+    "section": "Resumen de materiales",
+    "text": "Resumen de materiales\n\n\n\nTipo\nCantidad\nDetalle\n\n\n\n\nNotebooks\n4\nRegresión (TensorFlow), clasificación (PyTorch), pipeline MNIST (TensorFlow) y pipeline de series temporales (PyTorch Lightning + Keras/JAX)\n\n\nDatos\n1\nsunspots.csv, que está en clase1/ del repositorio del docente\n\n\nArtefactos\n13\nresultados_regresion/: mejor_modelo.keras y 12 registros de TensorBoard\n\n\nRecursos externos\n—\nMNIST de tensorflow_datasets\n\n\nPresentación de referencia\n1\nPresentación Redes Neuronales del docente, recopilada en Word. Está en almacenamiento privado y no se publica\n\n\nMaterial complementario propio\n2\nGuía PDF (33 pp.) y laboratorio en Python, elaborados con apoyo de IA generativa\n\n\nTalleres y tareas\n1\nTarea multimodal CUB-200-2011 (enunciado del docente; solución pendiente)"
+  },
+  {
+    "objectID": "semesters/semester-01/deep-learning-1/week-02/index.html#fuente",
+    "href": "semesters/semester-01/deep-learning-1/week-02/index.html#fuente",
+    "title": "Semana 02",
     "section": "Fuente",
-    "text": "Fuente\n\nRepositorio del docente: MAESTRiA-ESTADiS-CIENCIA-DATOS-Bosque/Deep_Learning_I_Fundamentos\nCarpeta de la clase: clase1/\nCommit incorporado: 0f989f9c339c1f15878f1c837cc22397fe4d71ec (2026-09-27)\n\n← Volver a la semana 01 · Módulo Deep Learning I"
+    "text": "Fuente\nMaterial del docente Héctor Javier Hortúa, PhD, del curso Deep Learning I (Universidad El Bosque). Fuente: Deep_Learning_I_Fundamentos/clase2.\nEl repositorio fuente no tiene un archivo de licencia explícito ni un aviso de reutilización. Por eso este sitio no republica el material del docente: lo enlaza con atribución.\n← Módulo Deep Learning I"
+  },
+  {
+    "objectID": "semesters/semester-01/deep-learning-1/week-01/index.html",
+    "href": "semesters/semester-01/deep-learning-1/week-01/index.html",
+    "title": "Semana 01",
+    "section": "",
+    "text": "En la semana 01 se presentan los tres frameworks del curso (TensorFlow, PyTorch y JAX): tensores, diferenciación automática y carga de datos. En el repositorio del docente corresponde a la sección “Semana 1. Introducción a TensorFlow, PyTorch y Jax” del README.md y a la carpeta clase1/.\nEstado: Material incorporado"
+  },
+  {
+    "objectID": "semesters/semester-01/deep-learning-1/week-01/index.html#clases",
+    "href": "semesters/semester-01/deep-learning-1/week-01/index.html#clases",
+    "title": "Semana 01",
+    "section": "Clases",
+    "text": "Clases\n\n\nClase 01 · Introducción a TensorFlow, PyTorch y JAX\nTensores y diferenciación automática en los tres frameworks, y carga de datos con tf.data y torch.utils.data.\n5 notebooks · 3 archivos de datos\nVer clase 01 →"
+  },
+  {
+    "objectID": "semesters/semester-01/deep-learning-1/week-01/index.html#temas",
+    "href": "semesters/semester-01/deep-learning-1/week-01/index.html#temas",
+    "title": "Semana 01",
+    "section": "Temas",
+    "text": "Temas\n\nTensores: rangos, indexado, operaciones, reshape y broadcasting.\nDiferenciación automática: tf.GradientTape, autograd de PyTorch y grad de JAX.\nModelo de ejecución: eager frente a grafo, y jit en JAX.\nCarga de datos: tf.data.Dataset, Dataset y DataLoader de PyTorch, transformaciones y data augmentation."
+  },
+  {
+    "objectID": "semesters/semester-01/deep-learning-1/week-01/index.html#resumen-de-materiales",
+    "href": "semesters/semester-01/deep-learning-1/week-01/index.html#resumen-de-materiales",
+    "title": "Semana 01",
+    "section": "Resumen de materiales",
+    "text": "Resumen de materiales\n\n\n\n\n\n\n\n\nTipo\nCantidad\nDetalle\n\n\n\n\nNotebooks\n5\n3 de tensores (TensorFlow, PyTorch, JAX) y 2 de carga de datos (TensorFlow, PyTorch)\n\n\nDatos\n3\nsonnets.txt, sonnets_2.txt, sunspots.csv\n\n\nRecursos externos\n—\nCarpeta imgs/ del docente y datasets de tensorflow_datasets (MNIST, IMDB)\n\n\nNotas personales\n0\nTodavía no hay\n\n\nEjercicios\n0\nTodavía no hay"
+  },
+  {
+    "objectID": "semesters/semester-01/deep-learning-1/week-01/index.html#fuente",
+    "href": "semesters/semester-01/deep-learning-1/week-01/index.html#fuente",
+    "title": "Semana 01",
+    "section": "Fuente",
+    "text": "Fuente\nMaterial del docente Héctor Javier Hortúa, PhD, del curso Deep Learning I (Universidad El Bosque). Fuente: Deep_Learning_I_Fundamentos/clase1.\nEl repositorio fuente no tiene un archivo de licencia explícito ni un aviso de reutilización. Por eso este sitio no republica el material del docente: lo enlaza con atribución."
+  },
+  {
+    "objectID": "semesters/semester-01/deep-learning-1/index.html",
+    "href": "semesters/semester-01/deep-learning-1/index.html",
+    "title": "Deep Learning I",
+    "section": "",
+    "text": "Segundo módulo del semestre. Cubre los fundamentos del aprendizaje profundo con TensorFlow, PyTorch y JAX: tensores, carga de datos, modelos MLP, RNN y CNN, entrenamiento y casos prácticos. Este módulo se organiza por semana → clase → tipo de recurso, de modo que se pueda auditar qué se vio en cada clase."
+  },
+  {
+    "objectID": "semesters/semester-01/deep-learning-1/index.html#módulo-02-deep-learning-i",
+    "href": "semesters/semester-01/deep-learning-1/index.html#módulo-02-deep-learning-i",
+    "title": "Deep Learning I",
+    "section": "",
+    "text": "Segundo módulo del semestre. Cubre los fundamentos del aprendizaje profundo con TensorFlow, PyTorch y JAX: tensores, carga de datos, modelos MLP, RNN y CNN, entrenamiento y casos prácticos. Este módulo se organiza por semana → clase → tipo de recurso, de modo que se pueda auditar qué se vio en cada clase."
+  },
+  {
+    "objectID": "semesters/semester-01/deep-learning-1/index.html#docente-y-fuente",
+    "href": "semesters/semester-01/deep-learning-1/index.html#docente-y-fuente",
+    "title": "Deep Learning I",
+    "section": "Docente y fuente",
+    "text": "Docente y fuente\n\n\n\nInstitución\nUniversidad El Bosque · Doctorado en Ciencia de Datos e Inteligencia Artificial\n\n\nCurso\nDeep Learning I\n\n\nDocente\nHéctor Javier Hortúa, PhD · SavIA-Lab, Instituto de Neurociencias\n\n\nRepositorio del docente\nMAESTRiA-ESTADiS-CIENCIA-DATOS-Bosque/Deep_Learning_I_Fundamentos"
+  },
+  {
+    "objectID": "semesters/semester-01/deep-learning-1/index.html#recursos-del-módulo",
+    "href": "semesters/semester-01/deep-learning-1/index.html#recursos-del-módulo",
+    "title": "Deep Learning I",
+    "section": "Recursos del módulo",
+    "text": "Recursos del módulo\n\n\n📋 Contenido del curso\nResumen del programa oficial (Contenido.ipynb): justificación, requisitos, módulos, metodología, evaluación, trabajo final y bibliografía.\nVer contenido del curso\n\n\n📅 Semana 01\nClase 01 · Introducción a TensorFlow, PyTorch y JAX: tensores, diferenciación automática y carga de datos. Cinco notebooks y tres archivos de datos.\nVer semana 01\n\n\n📅 Semana 02\nClase 02 · Regresión, clasificación y pipelines de entrenamiento: de lo manual a Keras, torch.nn y PyTorch Lightning. Cuatro notebooks, un archivo de datos y artefactos de entrenamiento.\nVer semana 02\n\n\n📝 Talleres y tareas\nEnunciados del docente y soluciones propias. Tarea 01 · pipeline de datos multimodal con CUB-200-2011: solución propia desarrollada y validada en PyTorch y TensorFlow.\nVer talleres y tareas"
+  },
+  {
+    "objectID": "semesters/semester-01/deep-learning-1/index.html#semana-a-semana",
+    "href": "semesters/semester-01/deep-learning-1/index.html#semana-a-semana",
+    "title": "Deep Learning I",
+    "section": "Semana a semana",
+    "text": "Semana a semana\nSe agrega una fila cuando el material de una clase se publica en el repositorio del docente. No se anticipan semanas ni clases futuras.\n\n\n\nSemana\nClase\nTemas\nNotebooks\nDatos\nEstado\n\n\n\n\nSemana 01\nClase 01 · Introducción a TensorFlow, PyTorch y JAX\nTensores, diferenciación automática, TensorFlow, PyTorch, JAX, carga de datos\n5\n3\nMaterial incorporado\n\n\nSemana 02\nClase 02 · Regresión, clasificación y pipelines de entrenamiento\nEntrenamiento manual vs tf.keras/torch.nn/Lightning, regularización, normalización, callbacks, pipelines MNIST y series temporales\n4\n1\nMaterial incorporado"
+  },
+  {
+    "objectID": "semesters/semester-01/deep-learning-1/index.html#progreso-actual",
+    "href": "semesters/semester-01/deep-learning-1/index.html#progreso-actual",
+    "title": "Deep Learning I",
+    "section": "Progreso actual",
+    "text": "Progreso actual\n\nMaterial incorporado: Semana 01 · Clase 01. Es el contenido de la carpeta clase1/ del repositorio del docente, en el commit 0f989f9.\nMaterial incorporado: Semana 02 · Clase 02. Es el contenido de la carpeta clase2/ del repositorio del docente, en el commit c9cfeb5. Los enlaces de la Semana 01 apuntan a main. En ese commit, el docente actualizó los notebooks de clase1/. La descripción de la Semana 01 corresponde a la versión 0f989f9.\nTalleres y tareas: 1 tarea del docente (pipeline multimodal CUB-200-2011). La solución propia está implementada y validada: seis flujos (train/val/test en PyTorch y TensorFlow), pruebas automatizadas y comparación de val/test entre frameworks. Se publican el notebook, el informe y el código. No se entrenó ningún modelo.\nNotas personales: una nota de la Clase 02, en almacenamiento privado.\nEjercicios: todavía no se ha agregado ninguno."
+  },
+  {
+    "objectID": "semesters/semester-01/deep-learning-1/index.html#entorno-y-dependencias",
+    "href": "semesters/semester-01/deep-learning-1/index.html#entorno-y-dependencias",
+    "title": "Deep Learning I",
+    "section": "Entorno y dependencias",
+    "text": "Entorno y dependencias\nEl repositorio del docente gestiona su entorno con uv. Según su pyproject.toml, requiere:\n\n\n\nPaquete\nVersión mínima\n\n\n\n\nPython\n≥ 3.12\n\n\njax[cpu]\n≥ 0.11.1\n\n\njupyter\n≥ 1.1.1\n\n\nmatplotlib\n≥ 3.11.2\n\n\nnumpy\n≥ 2.5.3\n\n\npandas\n≥ 3.0.6\n\n\ntensorflow\n≥ 2.21.0\n\n\ntorch\n≥ 2.14.0\n\n\n\n\n\n\n\n\n\nNoteDependencias adicionales\n\n\n\nLos notebooks de carga de datos también importan tensorflow_datasets, torchvision y PIL (Pillow), que no aparecen en ese pyproject.toml. Los notebooks de la clase 02 agregan lightning/pytorch-lightning, tensorboard y keras ≥ 3 (con backend torch o jax), y los instalan con !pip dentro del notebook.\nEste sitio no ejecuta los notebooks de Deep Learning al construirse. El sitio no instala TensorFlow, PyTorch ni JAX, y los notebooks se ofrecen solo como enlaces a GitHub y Colab. Para ejecutarlos localmente, clona el repositorio del docente y ejecuta uv sync."
+  },
+  {
+    "objectID": "semesters/semester-01/deep-learning-1/index.html#google-colab",
+    "href": "semesters/semester-01/deep-learning-1/index.html#google-colab",
+    "title": "Deep Learning I",
+    "section": "Google Colab",
+    "text": "Google Colab\nCada notebook de la clase tiene un enlace Open in Colab que apunta al archivo original del docente:\nhttps://colab.research.google.com/github/MAESTRiA-ESTADiS-CIENCIA-DATOS-Bosque/Deep_Learning_I_Fundamentos/blob/main/&lt;ruta-del-notebook&gt;\nColab abre solo el notebook. Los archivos de datos locales (sonnets.txt, sunspots.csv, imgs/) hay que subirlos a la sesión antes de ejecutar las celdas que los usan. El pipeline de series temporales de la clase 02 también necesita sunspots.csv.\n\n\n\n\n\n\nImportantAtribución y derechos\n\n\n\n\nMaterial docente original. Los notebooks de clase, sus datos y el contenido del curso son del docente Héctor Javier Hortúa, PhD y provienen de su repositorio, del curso Deep Learning I del Doctorado en Ciencia de Datos e Inteligencia Artificial de la Universidad El Bosque. No son de autoría propia. El repositorio fuente no tiene un archivo de licencia explícito, así que este sitio no redistribuye esos archivos: los enlaza con atribución. Las copias verbatim se guardan en almacenamiento privado.\nEnunciados de tareas. Son del docente. Se enlazan a su repositorio y se resumen en Talleres y tareas.\nTrabajo académico propio. Las soluciones de las tareas (implementación, código, notebooks e informes técnicos) y los materiales complementarios marcados como propios en cada clase son de Juan Sebastián Laverde Chunza.\nDatos de terceros. Los datasets que usan las tareas, como CUB-200-2011 y las captions de Reed et al., no se publican en este sitio. Se citan con su fuente."
+  },
+  {
+    "objectID": "semesters/index.html",
+    "href": "semesters/index.html",
+    "title": "Semestres",
+    "section": "",
+    "text": "Índice de semestres del doctorado. Cada semestre agrupa sus módulos. Machine Learning se organiza por tipo de recurso (tareas, quiz, data, talleres, notebooks, presentaciones y notas), y Deep Learning I por semana → clase → tipo de recurso.\n\n\nSemestre 1\n2026-II · En curso\n\nMódulo 01 · Machine Learning\nMódulo 02 · Deep Learning I\n\nVer semestre →\n\n\nLos siguientes semestres (Semestre 2, Semestre 3, …) se agregarán aquí a medida que avance el programa, sin modificar la estructura existente.\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "research/research-questions/index.html",
+    "href": "research/research-questions/index.html",
+    "title": "Preguntas de investigación",
+    "section": "",
+    "text": "Preguntas, hipótesis y objetivos que guían el proyecto, con su evolución a lo largo del doctorado.",
+    "crumbs": [
+      "Investigación",
+      "Secciones",
+      "Preguntas de investigación"
+    ]
+  },
+  {
+    "objectID": "research/research-questions/index.html#convención-de-archivos",
+    "href": "research/research-questions/index.html#convención-de-archivos",
+    "title": "Preguntas de investigación",
+    "section": "Convención de archivos",
+    "text": "Convención de archivos\nUn documento por iteración: 01-preguntas.md, 02-preguntas.md, …",
+    "crumbs": [
+      "Investigación",
+      "Secciones",
+      "Preguntas de investigación"
+    ]
+  },
+  {
+    "objectID": "research/research-questions/index.html#contenido",
+    "href": "research/research-questions/index.html#contenido",
+    "title": "Preguntas de investigación",
+    "section": "Contenido",
+    "text": "Contenido\n\n\n\nElemento\nFecha\nEnlace\nEstado\n\n\n\n\n—\n—\n—\n—\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nSección en preparación. Aún no se ha agregado contenido.",
+    "crumbs": [
+      "Investigación",
+      "Secciones",
+      "Preguntas de investigación"
+    ]
+  },
+  {
+    "objectID": "research/presentations/index.html",
+    "href": "research/presentations/index.html",
+    "title": "Presentaciones científicas",
+    "section": "",
+    "text": "Charlas, pósters y seminarios de investigación.",
+    "crumbs": [
+      "Investigación",
+      "Secciones",
+      "Presentaciones científicas"
+    ]
+  },
+  {
+    "objectID": "research/presentations/index.html#convención-de-archivos",
+    "href": "research/presentations/index.html#convención-de-archivos",
+    "title": "Presentaciones científicas",
+    "section": "Convención de archivos",
+    "text": "Convención de archivos\npresentation-01-evento.ext con prefijo cronológico; conservar fuente y PDF.",
+    "crumbs": [
+      "Investigación",
+      "Secciones",
+      "Presentaciones científicas"
+    ]
+  },
+  {
+    "objectID": "research/presentations/index.html#contenido",
+    "href": "research/presentations/index.html#contenido",
+    "title": "Presentaciones científicas",
+    "section": "Contenido",
+    "text": "Contenido\n\n\n\nElemento\nFecha\nEnlace\nEstado\n\n\n\n\n—\n—\n—\n—\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nSección en preparación. Aún no se ha agregado contenido.",
+    "crumbs": [
+      "Investigación",
+      "Secciones",
+      "Presentaciones científicas"
+    ]
+  },
+  {
+    "objectID": "research/manuscripts/index.html",
+    "href": "research/manuscripts/index.html",
+    "title": "Manuscritos",
+    "section": "",
+    "text": "Borradores de artículos, capítulos de tesis y material en redacción.",
+    "crumbs": [
+      "Investigación",
+      "Secciones",
+      "Manuscritos"
+    ]
+  },
+  {
+    "objectID": "research/manuscripts/index.html#convención-de-archivos",
+    "href": "research/manuscripts/index.html#convención-de-archivos",
+    "title": "Manuscritos",
+    "section": "Convención de archivos",
+    "text": "Convención de archivos\nUna carpeta por manuscrito: manuscript-01-titulo/ con fuentes y versiones.",
+    "crumbs": [
+      "Investigación",
+      "Secciones",
+      "Manuscritos"
+    ]
+  },
+  {
+    "objectID": "research/manuscripts/index.html#contenido",
+    "href": "research/manuscripts/index.html#contenido",
+    "title": "Manuscritos",
+    "section": "Contenido",
+    "text": "Contenido\n\n\n\nElemento\nFecha\nEnlace\nEstado\n\n\n\n\n—\n—\n—\n—\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nSección en preparación. Aún no se ha agregado contenido.",
+    "crumbs": [
+      "Investigación",
+      "Secciones",
+      "Manuscritos"
+    ]
+  },
+  {
+    "objectID": "research/index.html",
+    "href": "research/index.html",
+    "title": "Research Track",
+    "section": "",
+    "text": "Espacio reservado para el trabajo de investigación del doctorado, separado de los materiales de clase. Cada sección conserva su propia carpeta y convención de archivos.",
+    "crumbs": [
+      "Investigación",
+      "Panorama"
+    ]
+  },
+  {
+    "objectID": "research/index.html#investigación-doctoral",
+    "href": "research/index.html#investigación-doctoral",
+    "title": "Research Track",
+    "section": "",
+    "text": "Espacio reservado para el trabajo de investigación del doctorado, separado de los materiales de clase. Cada sección conserva su propia carpeta y convención de archivos.",
+    "crumbs": [
+      "Investigación",
+      "Panorama"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Doctoral Learning Hub",
+    "section": "",
+    "text": "Un espacio académico para organizar, documentar y compartir el aprendizaje desarrollado durante el doctorado: cursos, notebooks, talleres, evaluaciones, datos, presentaciones y avances de investigación.\nExplorar Machine Learning Ver investigación"
+  },
+  {
+    "objectID": "index.html#semestre-actual",
+    "href": "index.html#semestre-actual",
+    "title": "Doctoral Learning Hub",
+    "section": "Semestre actual",
+    "text": "Semestre actual\n\n\nSemestre 1\n2026-II\nOrganización del primer semestre doctoral por módulos y recursos.\nVer semestre →\n\n\nMódulo 1 · Machine Learning\nAprendizaje supervisado y no supervisado, preparación de datos, evaluación de modelos y experimentación reproducible.\nEntrar al módulo →\n\n\nResearch Track\nEspacio para consolidar ideas, lecturas, experimentos y avances del proyecto doctoral.\nVer investigación →"
+  },
+  {
+    "objectID": "index.html#organización-del-repositorio",
+    "href": "index.html#organización-del-repositorio",
+    "title": "Doctoral Learning Hub",
+    "section": "Organización del repositorio",
+    "text": "Organización del repositorio\nCada módulo conserva la misma estructura para que el repositorio pueda crecer sin perder orden:\n\nTareas — entregables académicos y soluciones.\nQuiz — evaluaciones, bancos de preguntas y repasos.\nData — datasets utilizados durante el módulo.\nTalleres — ejercicios prácticos y laboratorios.\nNotebooks (Colab) — notebooks ejecutables desde Google Colab.\nPresentaciones — diapositivas y material de clase.\nNotas — resúmenes, conceptos y material de estudio.\n\n\n\n\n\n\n\nTipReproducibilidad\n\n\n\nLos notebooks se publican con un badge Open in Colab, fijan una semilla y registran las versiones de sus dependencias. Los datasets restringidos se documentan mediante su origen y esquema, nunca se publican."
+  },
+  {
+    "objectID": "index.html#filosofía",
+    "href": "index.html#filosofía",
+    "title": "Doctoral Learning Hub",
+    "section": "Filosofía",
+    "text": "Filosofía\n\nLearn · Build · Document · Research · Reproduce\n\nEl objetivo no es almacenar archivos: es construir una bitácora técnica y académica reproducible del doctorado."
+  },
+  {
+    "objectID": "research/experiments/index.html",
+    "href": "research/experiments/index.html",
+    "title": "Experimentos",
+    "section": "",
+    "text": "Diseño, configuración y bitácora de los experimentos de investigación.",
+    "crumbs": [
+      "Investigación",
+      "Secciones",
+      "Experimentos"
+    ]
+  },
+  {
+    "objectID": "research/experiments/index.html#convención-de-archivos",
+    "href": "research/experiments/index.html#convención-de-archivos",
+    "title": "Experimentos",
+    "section": "Convención de archivos",
+    "text": "Convención de archivos\nUna carpeta por experimento: exp-01-nombre/ con README.md, configuración y notebook asociado.",
+    "crumbs": [
+      "Investigación",
+      "Secciones",
+      "Experimentos"
+    ]
+  },
+  {
+    "objectID": "research/experiments/index.html#contenido",
+    "href": "research/experiments/index.html#contenido",
+    "title": "Experimentos",
+    "section": "Contenido",
+    "text": "Contenido\n\n\n\nElemento\nFecha\nEnlace\nEstado\n\n\n\n\n—\n—\n—\n—\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nSección en preparación. Aún no se ha agregado contenido.",
+    "crumbs": [
+      "Investigación",
+      "Secciones",
+      "Experimentos"
+    ]
+  },
+  {
+    "objectID": "research/literature/index.html",
+    "href": "research/literature/index.html",
+    "title": "Literatura",
+    "section": "",
+    "text": "Revisión bibliográfica del proyecto doctoral: fichas de lectura, síntesis temáticas y la bibliografía consolidada.",
+    "crumbs": [
+      "Investigación",
+      "Secciones",
+      "Literatura"
+    ]
+  },
+  {
+    "objectID": "research/literature/index.html#convención-de-archivos",
+    "href": "research/literature/index.html#convención-de-archivos",
+    "title": "Literatura",
+    "section": "Convención de archivos",
+    "text": "Convención de archivos\nautor-anio-tema.md para cada ficha de lectura; references.bib para la bibliografía compartida.",
+    "crumbs": [
+      "Investigación",
+      "Secciones",
+      "Literatura"
+    ]
+  },
+  {
+    "objectID": "research/literature/index.html#contenido",
+    "href": "research/literature/index.html#contenido",
+    "title": "Literatura",
+    "section": "Contenido",
+    "text": "Contenido\n\n\n\nElemento\nFecha\nEnlace\nEstado\n\n\n\n\n—\n—\n—\n—\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nSección en preparación. Aún no se ha agregado contenido.",
+    "crumbs": [
+      "Investigación",
+      "Secciones",
+      "Literatura"
+    ]
+  },
+  {
+    "objectID": "research/meetings/index.html",
+    "href": "research/meetings/index.html",
+    "title": "Reuniones",
+    "section": "",
+    "text": "Actas de reuniones con la dirección de tesis y el grupo de investigación.",
+    "crumbs": [
+      "Investigación",
+      "Secciones",
+      "Reuniones"
+    ]
+  },
+  {
+    "objectID": "research/meetings/index.html#convención-de-archivos",
+    "href": "research/meetings/index.html#convención-de-archivos",
+    "title": "Reuniones",
+    "section": "Convención de archivos",
+    "text": "Convención de archivos\naaaa-mm-dd-reunion.md en orden cronológico.",
+    "crumbs": [
+      "Investigación",
+      "Secciones",
+      "Reuniones"
+    ]
+  },
+  {
+    "objectID": "research/meetings/index.html#contenido",
+    "href": "research/meetings/index.html#contenido",
+    "title": "Reuniones",
+    "section": "Contenido",
+    "text": "Contenido\n\n\n\nElemento\nFecha\nEnlace\nEstado\n\n\n\n\n—\n—\n—\n—\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nSección en preparación. Aún no se ha agregado contenido.",
+    "crumbs": [
+      "Investigación",
+      "Secciones",
+      "Reuniones"
+    ]
+  },
+  {
+    "objectID": "research/progress/index.html",
+    "href": "research/progress/index.html",
+    "title": "Avances",
+    "section": "",
+    "text": "Informes de progreso y planificación por periodos académicos.",
+    "crumbs": [
+      "Investigación",
+      "Secciones",
+      "Avances"
+    ]
+  },
+  {
+    "objectID": "research/progress/index.html#convención-de-archivos",
+    "href": "research/progress/index.html#convención-de-archivos",
+    "title": "Avances",
+    "section": "Convención de archivos",
+    "text": "Convención de archivos\naaaa-qN-avance.md (trimestral) o semestre-NN-avance.md.",
+    "crumbs": [
+      "Investigación",
+      "Secciones",
+      "Avances"
+    ]
+  },
+  {
+    "objectID": "research/progress/index.html#contenido",
+    "href": "research/progress/index.html#contenido",
+    "title": "Avances",
+    "section": "Contenido",
+    "text": "Contenido\n\n\n\nElemento\nFecha\nEnlace\nEstado\n\n\n\n\n—\n—\n—\n—\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nSección en preparación. Aún no se ha agregado contenido.",
+    "crumbs": [
+      "Investigación",
+      "Secciones",
+      "Avances"
+    ]
+  },
+  {
+    "objectID": "research/results/index.html",
+    "href": "research/results/index.html",
+    "title": "Resultados",
+    "section": "",
+    "text": "Hallazgos, métricas y figuras derivadas de los experimentos.",
+    "crumbs": [
+      "Investigación",
+      "Secciones",
+      "Resultados"
+    ]
+  },
+  {
+    "objectID": "research/results/index.html#convención-de-archivos",
+    "href": "research/results/index.html#convención-de-archivos",
+    "title": "Resultados",
+    "section": "Convención de archivos",
+    "text": "Convención de archivos\nexp-01-resultados.md por experimento; figuras en figures/.",
+    "crumbs": [
+      "Investigación",
+      "Secciones",
+      "Resultados"
+    ]
+  },
+  {
+    "objectID": "research/results/index.html#contenido",
+    "href": "research/results/index.html#contenido",
+    "title": "Resultados",
+    "section": "Contenido",
+    "text": "Contenido\n\n\n\nElemento\nFecha\nEnlace\nEstado\n\n\n\n\n—\n—\n—\n—\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nSección en preparación. Aún no se ha agregado contenido.",
+    "crumbs": [
+      "Investigación",
+      "Secciones",
+      "Resultados"
+    ]
   },
   {
     "objectID": "semesters/semester-01/deep-learning-1/course-content/index.html",
@@ -546,475 +947,165 @@
     "text": "Herramientas\n\nGoogle Colab\nGitHub (desktop)\nLaptop con TensorFlow instalado (basta con CPU). El docente recomienda trabajar en un entorno uv.\n\n\n\n\n\n\n\nNoteFuente\n\n\n\nEl contenido se resume del Contenido.ipynb del repositorio del docente (commit 0f989f9). El repositorio fuente no tiene un archivo de licencia explícito."
   },
   {
-    "objectID": "research/results/index.html",
-    "href": "research/results/index.html",
-    "title": "Resultados",
+    "objectID": "semesters/semester-01/deep-learning-1/week-01/class-01/index.html",
+    "href": "semesters/semester-01/deep-learning-1/week-01/class-01/index.html",
+    "title": "Clase 01",
     "section": "",
-    "text": "Hallazgos, métricas y figuras derivadas de los experimentos.",
-    "crumbs": [
-      "Investigación",
-      "Secciones",
-      "Resultados"
-    ]
+    "text": "ImportantFuente y atribución\n\n\n\nMaterial del docente Héctor Javier Hortúa, PhD (SavIA-Lab, Instituto de Neurociencias), del curso Deep Learning I del Doctorado en Ciencia de Datos e Inteligencia Artificial de la Universidad El Bosque. Viene de la carpeta clase1/ del repositorio del docente (commit 0f989f9). No es de autoría propia.\nEl repositorio fuente no tiene un archivo de licencia explícito, así que aquí se enlaza al original. Hay copias verbatim en almacenamiento privado, comprobadas con SHA-256."
   },
   {
-    "objectID": "research/results/index.html#convención-de-archivos",
-    "href": "research/results/index.html#convención-de-archivos",
-    "title": "Resultados",
-    "section": "Convención de archivos",
-    "text": "Convención de archivos\nexp-01-resultados.md por experimento; figuras en figures/.",
-    "crumbs": [
-      "Investigación",
-      "Secciones",
-      "Resultados"
-    ]
-  },
-  {
-    "objectID": "research/results/index.html#contenido",
-    "href": "research/results/index.html#contenido",
-    "title": "Resultados",
-    "section": "Contenido",
-    "text": "Contenido\n\n\n\nElemento\nFecha\nEnlace\nEstado\n\n\n\n\n—\n—\n—\n—\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nSección en preparación. Aún no se ha agregado contenido.",
-    "crumbs": [
-      "Investigación",
-      "Secciones",
-      "Resultados"
-    ]
-  },
-  {
-    "objectID": "research/progress/index.html",
-    "href": "research/progress/index.html",
-    "title": "Avances",
-    "section": "",
-    "text": "Informes de progreso y planificación por periodos académicos.",
-    "crumbs": [
-      "Investigación",
-      "Secciones",
-      "Avances"
-    ]
-  },
-  {
-    "objectID": "research/progress/index.html#convención-de-archivos",
-    "href": "research/progress/index.html#convención-de-archivos",
-    "title": "Avances",
-    "section": "Convención de archivos",
-    "text": "Convención de archivos\naaaa-qN-avance.md (trimestral) o semestre-NN-avance.md.",
-    "crumbs": [
-      "Investigación",
-      "Secciones",
-      "Avances"
-    ]
-  },
-  {
-    "objectID": "research/progress/index.html#contenido",
-    "href": "research/progress/index.html#contenido",
-    "title": "Avances",
-    "section": "Contenido",
-    "text": "Contenido\n\n\n\nElemento\nFecha\nEnlace\nEstado\n\n\n\n\n—\n—\n—\n—\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nSección en preparación. Aún no se ha agregado contenido.",
-    "crumbs": [
-      "Investigación",
-      "Secciones",
-      "Avances"
-    ]
-  },
-  {
-    "objectID": "research/meetings/index.html",
-    "href": "research/meetings/index.html",
-    "title": "Reuniones",
-    "section": "",
-    "text": "Actas de reuniones con la dirección de tesis y el grupo de investigación.",
-    "crumbs": [
-      "Investigación",
-      "Secciones",
-      "Reuniones"
-    ]
-  },
-  {
-    "objectID": "research/meetings/index.html#convención-de-archivos",
-    "href": "research/meetings/index.html#convención-de-archivos",
-    "title": "Reuniones",
-    "section": "Convención de archivos",
-    "text": "Convención de archivos\naaaa-mm-dd-reunion.md en orden cronológico.",
-    "crumbs": [
-      "Investigación",
-      "Secciones",
-      "Reuniones"
-    ]
-  },
-  {
-    "objectID": "research/meetings/index.html#contenido",
-    "href": "research/meetings/index.html#contenido",
-    "title": "Reuniones",
-    "section": "Contenido",
-    "text": "Contenido\n\n\n\nElemento\nFecha\nEnlace\nEstado\n\n\n\n\n—\n—\n—\n—\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nSección en preparación. Aún no se ha agregado contenido.",
-    "crumbs": [
-      "Investigación",
-      "Secciones",
-      "Reuniones"
-    ]
-  },
-  {
-    "objectID": "research/literature/index.html",
-    "href": "research/literature/index.html",
-    "title": "Literatura",
-    "section": "",
-    "text": "Revisión bibliográfica del proyecto doctoral: fichas de lectura, síntesis temáticas y la bibliografía consolidada.",
-    "crumbs": [
-      "Investigación",
-      "Secciones",
-      "Literatura"
-    ]
-  },
-  {
-    "objectID": "research/literature/index.html#convención-de-archivos",
-    "href": "research/literature/index.html#convención-de-archivos",
-    "title": "Literatura",
-    "section": "Convención de archivos",
-    "text": "Convención de archivos\nautor-anio-tema.md para cada ficha de lectura; references.bib para la bibliografía compartida.",
-    "crumbs": [
-      "Investigación",
-      "Secciones",
-      "Literatura"
-    ]
-  },
-  {
-    "objectID": "research/literature/index.html#contenido",
-    "href": "research/literature/index.html#contenido",
-    "title": "Literatura",
-    "section": "Contenido",
-    "text": "Contenido\n\n\n\nElemento\nFecha\nEnlace\nEstado\n\n\n\n\n—\n—\n—\n—\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nSección en preparación. Aún no se ha agregado contenido.",
-    "crumbs": [
-      "Investigación",
-      "Secciones",
-      "Literatura"
-    ]
-  },
-  {
-    "objectID": "research/experiments/index.html",
-    "href": "research/experiments/index.html",
-    "title": "Experimentos",
-    "section": "",
-    "text": "Diseño, configuración y bitácora de los experimentos de investigación.",
-    "crumbs": [
-      "Investigación",
-      "Secciones",
-      "Experimentos"
-    ]
-  },
-  {
-    "objectID": "research/experiments/index.html#convención-de-archivos",
-    "href": "research/experiments/index.html#convención-de-archivos",
-    "title": "Experimentos",
-    "section": "Convención de archivos",
-    "text": "Convención de archivos\nUna carpeta por experimento: exp-01-nombre/ con README.md, configuración y notebook asociado.",
-    "crumbs": [
-      "Investigación",
-      "Secciones",
-      "Experimentos"
-    ]
-  },
-  {
-    "objectID": "research/experiments/index.html#contenido",
-    "href": "research/experiments/index.html#contenido",
-    "title": "Experimentos",
-    "section": "Contenido",
-    "text": "Contenido\n\n\n\nElemento\nFecha\nEnlace\nEstado\n\n\n\n\n—\n—\n—\n—\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nSección en preparación. Aún no se ha agregado contenido.",
-    "crumbs": [
-      "Investigación",
-      "Secciones",
-      "Experimentos"
-    ]
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Doctoral Learning Hub",
-    "section": "",
-    "text": "Un espacio académico para organizar, documentar y compartir el aprendizaje desarrollado durante el doctorado: cursos, notebooks, talleres, evaluaciones, datos, presentaciones y avances de investigación.\nExplorar Machine Learning Ver investigación"
-  },
-  {
-    "objectID": "index.html#semestre-actual",
-    "href": "index.html#semestre-actual",
-    "title": "Doctoral Learning Hub",
-    "section": "Semestre actual",
-    "text": "Semestre actual\n\n\nSemestre 1\n2026-II\nOrganización del primer semestre doctoral por módulos y recursos.\nVer semestre →\n\n\nMódulo 1 · Machine Learning\nAprendizaje supervisado y no supervisado, preparación de datos, evaluación de modelos y experimentación reproducible.\nEntrar al módulo →\n\n\nResearch Track\nEspacio para consolidar ideas, lecturas, experimentos y avances del proyecto doctoral.\nVer investigación →"
-  },
-  {
-    "objectID": "index.html#organización-del-repositorio",
-    "href": "index.html#organización-del-repositorio",
-    "title": "Doctoral Learning Hub",
-    "section": "Organización del repositorio",
-    "text": "Organización del repositorio\nCada módulo conserva la misma estructura para que el repositorio pueda crecer sin perder orden:\n\nTareas — entregables académicos y soluciones.\nQuiz — evaluaciones, bancos de preguntas y repasos.\nData — datasets utilizados durante el módulo.\nTalleres — ejercicios prácticos y laboratorios.\nNotebooks (Colab) — notebooks ejecutables desde Google Colab.\nPresentaciones — diapositivas y material de clase.\nNotas — resúmenes, conceptos y material de estudio.\n\n\n\n\n\n\n\nTipReproducibilidad\n\n\n\nLos notebooks se publican con un badge Open in Colab, fijan una semilla y registran las versiones de sus dependencias. Los datasets restringidos se documentan mediante su origen y esquema, nunca se publican."
-  },
-  {
-    "objectID": "index.html#filosofía",
-    "href": "index.html#filosofía",
-    "title": "Doctoral Learning Hub",
-    "section": "Filosofía",
-    "text": "Filosofía\n\nLearn · Build · Document · Research · Reproduce\n\nEl objetivo no es almacenar archivos: es construir una bitácora técnica y académica reproducible del doctorado."
-  },
-  {
-    "objectID": "research/index.html",
-    "href": "research/index.html",
-    "title": "Research Track",
-    "section": "",
-    "text": "Espacio reservado para el trabajo de investigación del doctorado, separado de los materiales de clase. Cada sección conserva su propia carpeta y convención de archivos.",
-    "crumbs": [
-      "Investigación",
-      "Panorama"
-    ]
-  },
-  {
-    "objectID": "research/index.html#investigación-doctoral",
-    "href": "research/index.html#investigación-doctoral",
-    "title": "Research Track",
-    "section": "",
-    "text": "Espacio reservado para el trabajo de investigación del doctorado, separado de los materiales de clase. Cada sección conserva su propia carpeta y convención de archivos.",
-    "crumbs": [
-      "Investigación",
-      "Panorama"
-    ]
-  },
-  {
-    "objectID": "research/manuscripts/index.html",
-    "href": "research/manuscripts/index.html",
-    "title": "Manuscritos",
-    "section": "",
-    "text": "Borradores de artículos, capítulos de tesis y material en redacción.",
-    "crumbs": [
-      "Investigación",
-      "Secciones",
-      "Manuscritos"
-    ]
-  },
-  {
-    "objectID": "research/manuscripts/index.html#convención-de-archivos",
-    "href": "research/manuscripts/index.html#convención-de-archivos",
-    "title": "Manuscritos",
-    "section": "Convención de archivos",
-    "text": "Convención de archivos\nUna carpeta por manuscrito: manuscript-01-titulo/ con fuentes y versiones.",
-    "crumbs": [
-      "Investigación",
-      "Secciones",
-      "Manuscritos"
-    ]
-  },
-  {
-    "objectID": "research/manuscripts/index.html#contenido",
-    "href": "research/manuscripts/index.html#contenido",
-    "title": "Manuscritos",
-    "section": "Contenido",
-    "text": "Contenido\n\n\n\nElemento\nFecha\nEnlace\nEstado\n\n\n\n\n—\n—\n—\n—\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nSección en preparación. Aún no se ha agregado contenido.",
-    "crumbs": [
-      "Investigación",
-      "Secciones",
-      "Manuscritos"
-    ]
-  },
-  {
-    "objectID": "research/presentations/index.html",
-    "href": "research/presentations/index.html",
-    "title": "Presentaciones científicas",
-    "section": "",
-    "text": "Charlas, pósters y seminarios de investigación.",
-    "crumbs": [
-      "Investigación",
-      "Secciones",
-      "Presentaciones científicas"
-    ]
-  },
-  {
-    "objectID": "research/presentations/index.html#convención-de-archivos",
-    "href": "research/presentations/index.html#convención-de-archivos",
-    "title": "Presentaciones científicas",
-    "section": "Convención de archivos",
-    "text": "Convención de archivos\npresentation-01-evento.ext con prefijo cronológico; conservar fuente y PDF.",
-    "crumbs": [
-      "Investigación",
-      "Secciones",
-      "Presentaciones científicas"
-    ]
-  },
-  {
-    "objectID": "research/presentations/index.html#contenido",
-    "href": "research/presentations/index.html#contenido",
-    "title": "Presentaciones científicas",
-    "section": "Contenido",
-    "text": "Contenido\n\n\n\nElemento\nFecha\nEnlace\nEstado\n\n\n\n\n—\n—\n—\n—\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nSección en preparación. Aún no se ha agregado contenido.",
-    "crumbs": [
-      "Investigación",
-      "Secciones",
-      "Presentaciones científicas"
-    ]
-  },
-  {
-    "objectID": "research/research-questions/index.html",
-    "href": "research/research-questions/index.html",
-    "title": "Preguntas de investigación",
-    "section": "",
-    "text": "Preguntas, hipótesis y objetivos que guían el proyecto, con su evolución a lo largo del doctorado.",
-    "crumbs": [
-      "Investigación",
-      "Secciones",
-      "Preguntas de investigación"
-    ]
-  },
-  {
-    "objectID": "research/research-questions/index.html#convención-de-archivos",
-    "href": "research/research-questions/index.html#convención-de-archivos",
-    "title": "Preguntas de investigación",
-    "section": "Convención de archivos",
-    "text": "Convención de archivos\nUn documento por iteración: 01-preguntas.md, 02-preguntas.md, …",
-    "crumbs": [
-      "Investigación",
-      "Secciones",
-      "Preguntas de investigación"
-    ]
-  },
-  {
-    "objectID": "research/research-questions/index.html#contenido",
-    "href": "research/research-questions/index.html#contenido",
-    "title": "Preguntas de investigación",
-    "section": "Contenido",
-    "text": "Contenido\n\n\n\nElemento\nFecha\nEnlace\nEstado\n\n\n\n\n—\n—\n—\n—\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nSección en preparación. Aún no se ha agregado contenido.",
-    "crumbs": [
-      "Investigación",
-      "Secciones",
-      "Preguntas de investigación"
-    ]
-  },
-  {
-    "objectID": "semesters/index.html",
-    "href": "semesters/index.html",
-    "title": "Semestres",
-    "section": "",
-    "text": "Índice de semestres del doctorado. Cada semestre agrupa sus módulos. Machine Learning se organiza por tipo de recurso (tareas, quiz, data, talleres, notebooks, presentaciones y notas), y Deep Learning I por semana → clase → tipo de recurso.\n\n\nSemestre 1\n2026-II · En curso\n\nMódulo 01 · Machine Learning\nMódulo 02 · Deep Learning I\n\nVer semestre →\n\n\nLos siguientes semestres (Semestre 2, Semestre 3, …) se agregarán aquí a medida que avance el programa, sin modificar la estructura existente.\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "semesters/semester-01/deep-learning-1/index.html",
-    "href": "semesters/semester-01/deep-learning-1/index.html",
-    "title": "Deep Learning I",
-    "section": "",
-    "text": "Segundo módulo del semestre. Cubre los fundamentos del aprendizaje profundo con TensorFlow, PyTorch y JAX: tensores, carga de datos, modelos MLP, RNN y CNN, entrenamiento y casos prácticos. Este módulo se organiza por semana → clase → tipo de recurso, de modo que se pueda auditar qué se vio en cada clase."
-  },
-  {
-    "objectID": "semesters/semester-01/deep-learning-1/index.html#módulo-02-deep-learning-i",
-    "href": "semesters/semester-01/deep-learning-1/index.html#módulo-02-deep-learning-i",
-    "title": "Deep Learning I",
-    "section": "",
-    "text": "Segundo módulo del semestre. Cubre los fundamentos del aprendizaje profundo con TensorFlow, PyTorch y JAX: tensores, carga de datos, modelos MLP, RNN y CNN, entrenamiento y casos prácticos. Este módulo se organiza por semana → clase → tipo de recurso, de modo que se pueda auditar qué se vio en cada clase."
-  },
-  {
-    "objectID": "semesters/semester-01/deep-learning-1/index.html#docente-y-fuente",
-    "href": "semesters/semester-01/deep-learning-1/index.html#docente-y-fuente",
-    "title": "Deep Learning I",
-    "section": "Docente y fuente",
-    "text": "Docente y fuente\n\n\n\nInstitución\nUniversidad El Bosque · Doctorado en Ciencia de Datos e Inteligencia Artificial\n\n\nCurso\nDeep Learning I\n\n\nDocente\nHéctor Javier Hortúa, PhD · SavIA-Lab, Instituto de Neurociencias\n\n\nRepositorio del docente\nMAESTRiA-ESTADiS-CIENCIA-DATOS-Bosque/Deep_Learning_I_Fundamentos"
-  },
-  {
-    "objectID": "semesters/semester-01/deep-learning-1/index.html#recursos-del-módulo",
-    "href": "semesters/semester-01/deep-learning-1/index.html#recursos-del-módulo",
-    "title": "Deep Learning I",
-    "section": "Recursos del módulo",
-    "text": "Recursos del módulo\n\n\n📋 Contenido del curso\nResumen del programa oficial (Contenido.ipynb): justificación, requisitos, módulos, metodología, evaluación, trabajo final y bibliografía.\nVer contenido del curso\n\n\n📅 Semana 01\nClase 01 · Introducción a TensorFlow, PyTorch y JAX: tensores, diferenciación automática y carga de datos. Cinco notebooks y tres archivos de datos.\nVer semana 01\n\n\n📅 Semana 02\nClase 02 · Regresión, clasificación y pipelines de entrenamiento: de lo manual a Keras, torch.nn y PyTorch Lightning. Cuatro notebooks, un archivo de datos y artefactos de entrenamiento.\nVer semana 02\n\n\n📝 Talleres y tareas\nEnunciados del docente y soluciones propias. Hoy: tarea de pipeline de datos multimodal con CUB-200-2011 (solución pendiente).\nVer talleres y tareas"
-  },
-  {
-    "objectID": "semesters/semester-01/deep-learning-1/index.html#semana-a-semana",
-    "href": "semesters/semester-01/deep-learning-1/index.html#semana-a-semana",
-    "title": "Deep Learning I",
-    "section": "Semana a semana",
-    "text": "Semana a semana\nSe agrega una fila cuando el material de una clase se publica en el repositorio del docente. No se anticipan semanas ni clases futuras.\n\n\n\nSemana\nClase\nTemas\nNotebooks\nDatos\nEstado\n\n\n\n\nSemana 01\nClase 01 · Introducción a TensorFlow, PyTorch y JAX\nTensores, diferenciación automática, TensorFlow, PyTorch, JAX, carga de datos\n5\n3\nMaterial incorporado\n\n\nSemana 02\nClase 02 · Regresión, clasificación y pipelines de entrenamiento\nEntrenamiento manual vs tf.keras/torch.nn/Lightning, regularización, normalización, callbacks, pipelines MNIST y series temporales\n4\n1\nMaterial incorporado"
-  },
-  {
-    "objectID": "semesters/semester-01/deep-learning-1/index.html#progreso-actual",
-    "href": "semesters/semester-01/deep-learning-1/index.html#progreso-actual",
-    "title": "Deep Learning I",
-    "section": "Progreso actual",
-    "text": "Progreso actual\n\nMaterial incorporado: Semana 01 · Clase 01. Es el contenido de la carpeta clase1/ del repositorio del docente, en el commit 0f989f9.\nMaterial incorporado: Semana 02 · Clase 02. Es el contenido de la carpeta clase2/ del repositorio del docente, en el commit c9cfeb5. Los enlaces de la Semana 01 apuntan a main. En ese commit, el docente actualizó los notebooks de clase1/. La descripción de la Semana 01 corresponde a la versión 0f989f9.\nTalleres y tareas: 1 tarea del docente (pipeline multimodal CUB-200-2011). La solución propia está pendiente.\nNotas personales: una nota de la Clase 02, en almacenamiento privado.\nEjercicios: todavía no se ha agregado ninguno."
-  },
-  {
-    "objectID": "semesters/semester-01/deep-learning-1/index.html#entorno-y-dependencias",
-    "href": "semesters/semester-01/deep-learning-1/index.html#entorno-y-dependencias",
-    "title": "Deep Learning I",
-    "section": "Entorno y dependencias",
-    "text": "Entorno y dependencias\nEl repositorio del docente gestiona su entorno con uv. Según su pyproject.toml, requiere:\n\n\n\nPaquete\nVersión mínima\n\n\n\n\nPython\n≥ 3.12\n\n\njax[cpu]\n≥ 0.11.1\n\n\njupyter\n≥ 1.1.1\n\n\nmatplotlib\n≥ 3.11.2\n\n\nnumpy\n≥ 2.5.3\n\n\npandas\n≥ 3.0.6\n\n\ntensorflow\n≥ 2.21.0\n\n\ntorch\n≥ 2.14.0\n\n\n\n\n\n\n\n\n\nNoteDependencias adicionales\n\n\n\nLos notebooks de carga de datos también importan tensorflow_datasets, torchvision y PIL (Pillow), que no aparecen en ese pyproject.toml. Los notebooks de la clase 02 agregan lightning/pytorch-lightning, tensorboard y keras ≥ 3 (con backend torch o jax), y los instalan con !pip dentro del notebook.\nEste sitio no ejecuta los notebooks de Deep Learning al construirse. El sitio no instala TensorFlow, PyTorch ni JAX, y los notebooks se ofrecen solo como enlaces a GitHub y Colab. Para ejecutarlos localmente, clona el repositorio del docente y ejecuta uv sync."
-  },
-  {
-    "objectID": "semesters/semester-01/deep-learning-1/index.html#google-colab",
-    "href": "semesters/semester-01/deep-learning-1/index.html#google-colab",
-    "title": "Deep Learning I",
-    "section": "Google Colab",
-    "text": "Google Colab\nCada notebook de la clase tiene un enlace Open in Colab que apunta al archivo original del docente:\nhttps://colab.research.google.com/github/MAESTRiA-ESTADiS-CIENCIA-DATOS-Bosque/Deep_Learning_I_Fundamentos/blob/main/&lt;ruta-del-notebook&gt;\nColab abre solo el notebook. Los archivos de datos locales (sonnets.txt, sunspots.csv, imgs/) hay que subirlos a la sesión antes de ejecutar las celdas que los usan. El pipeline de series temporales de la clase 02 también necesita sunspots.csv.\n\n\n\n\n\n\nImportantAtribución y derechos\n\n\n\nTodo el material de este módulo (notebooks, datos y contenido del curso) proviene del repositorio del docente, del curso Deep Learning I del Doctorado en Ciencia de Datos e Inteligencia Artificial de la Universidad El Bosque. No es de autoría propia.\nEl repositorio fuente no tiene un archivo de licencia explícito. Por eso este sitio no redistribuye los archivos: los enlaza con atribución. Las copias verbatim se guardan en almacenamiento privado."
-  },
-  {
-    "objectID": "semesters/semester-01/deep-learning-1/week-01/index.html",
-    "href": "semesters/semester-01/deep-learning-1/week-01/index.html",
-    "title": "Semana 01",
-    "section": "",
-    "text": "En la semana 01 se presentan los tres frameworks del curso (TensorFlow, PyTorch y JAX): tensores, diferenciación automática y carga de datos. En el repositorio del docente corresponde a la sección “Semana 1. Introducción a TensorFlow, PyTorch y Jax” del README.md y a la carpeta clase1/.\nEstado: Material incorporado"
-  },
-  {
-    "objectID": "semesters/semester-01/deep-learning-1/week-01/index.html#clases",
-    "href": "semesters/semester-01/deep-learning-1/week-01/index.html#clases",
-    "title": "Semana 01",
-    "section": "Clases",
-    "text": "Clases\n\n\nClase 01 · Introducción a TensorFlow, PyTorch y JAX\nTensores y diferenciación automática en los tres frameworks, y carga de datos con tf.data y torch.utils.data.\n5 notebooks · 3 archivos de datos\nVer clase 01 →"
-  },
-  {
-    "objectID": "semesters/semester-01/deep-learning-1/week-01/index.html#temas",
-    "href": "semesters/semester-01/deep-learning-1/week-01/index.html#temas",
-    "title": "Semana 01",
+    "objectID": "semesters/semester-01/deep-learning-1/week-01/class-01/index.html#temas",
+    "href": "semesters/semester-01/deep-learning-1/week-01/class-01/index.html#temas",
+    "title": "Clase 01",
     "section": "Temas",
-    "text": "Temas\n\nTensores: rangos, indexado, operaciones, reshape y broadcasting.\nDiferenciación automática: tf.GradientTape, autograd de PyTorch y grad de JAX.\nModelo de ejecución: eager frente a grafo, y jit en JAX.\nCarga de datos: tf.data.Dataset, Dataset y DataLoader de PyTorch, transformaciones y data augmentation."
+    "text": "Temas\nSegún los encabezados de los notebooks:\n\nTensores: rangos, indexado y slicing, operaciones y reducciones, propiedades, reshape, broadcasting, e interoperabilidad con NumPy.\nDiferenciación automática: derivadas simples, gradientes respecto a varios parámetros, derivadas de orden superior, verificación de la solución analítica de una EDO y un Metropolis-Hastings (MCMC) implementado en cada framework.\nParticularidades de cada framework: eager frente a grafo y variables (TensorFlow); CPU ↔︎ GPU, requires_grad, acumulación de gradientes y retain_graph (PyTorch); inmutabilidad, PRNGKey, jacobianos y jit (JAX).\nCarga de datos: tf.data.Dataset, Dataset y DataLoader de PyTorch, collate_fn, transformaciones, lectura de texto y CSV, tensorflow_datasets y data augmentation."
   },
   {
-    "objectID": "semesters/semester-01/deep-learning-1/week-01/index.html#resumen-de-materiales",
-    "href": "semesters/semester-01/deep-learning-1/week-01/index.html#resumen-de-materiales",
-    "title": "Semana 01",
-    "section": "Resumen de materiales",
-    "text": "Resumen de materiales\n\n\n\n\n\n\n\n\nTipo\nCantidad\nDetalle\n\n\n\n\nNotebooks\n5\n3 de tensores (TensorFlow, PyTorch, JAX) y 2 de carga de datos (TensorFlow, PyTorch)\n\n\nDatos\n3\nsonnets.txt, sonnets_2.txt, sunspots.csv\n\n\nRecursos externos\n—\nCarpeta imgs/ del docente y datasets de tensorflow_datasets (MNIST, IMDB)\n\n\nNotas personales\n0\nTodavía no hay\n\n\nEjercicios\n0\nTodavía no hay"
+    "objectID": "semesters/semester-01/deep-learning-1/week-01/class-01/index.html#notebooks",
+    "href": "semesters/semester-01/deep-learning-1/week-01/class-01/index.html#notebooks",
+    "title": "Clase 01",
+    "section": "Notebooks",
+    "text": "Notebooks\n\n\n\n#\nNotebook\nFramework\nContenido\nOriginal\nColab\n\n\n\n\n1\nTensores y diferenciación automática con TensorFlow · 01_tensores_tensorflow.ipynb\nTensorFlow\nArquitectura, eager vs graph, tensores y rangos, operaciones, broadcasting, tensores especiales, tf.Variable, tf.einsum, tf.GradientTape, EDO y MCMC.\nGitHub\nOpen in Colab\n\n\n2\nTensores y diferenciación automática con PyTorch · 01_tensores_pytorch.ipynb\nPyTorch\nLos mismos conceptos que el notebook de TensorFlow: ejecución dinámica, torch.where, view/reshape, CPU ↔︎ GPU, requires_grad, autograd (acumulación, retain_graph, congelar parámetros), EDO y MCMC.\nGitHub\nOpen in Colab\n\n\n3\nTensores y diferenciación automática con JAX · 01_tensores_jax.ipynb\nJAX\nNumPy acelerado con transformaciones de funciones: inmutabilidad, PRNGKey, jnp.where, grad, jacobianos, EDO, jit, MCMC y una comparación final de los tres frameworks.\nGitHub\nOpen in Colab\n\n\n4\nCarga de datos en TensorFlow: la API tf.data · 02_carga_datos_tensorflow.ipynb\nTensorFlow 2 / Keras\nDatasets desde memoria, iteración, shuffle/repeat/batch, map/flat_map, lectura de .txt y .csv, tensorflow_datasets (MNIST), pipeline de entrenamiento, data augmentation con tres métodos y pipeline de texto con IMDB y embeddings.\nGitHub\nOpen in Colab\n\n\n5\nCarga de datos en PyTorch: Dataset, DataLoader, batch y collate_fn · 02_carga_datos_pytorch.ipynb\nPyTorch\nDataset y TensorDataset, estilo map frente a iterable, DataLoader, collate_fn propio, transformaciones con torchvision, ImageFolder, serie temporal con ventanas deslizantes y tokenización de texto.\nGitHub\nOpen in Colab\n\n\n\nLos cinco notebooks del docente se publican sin salidas (celdas sin ejecutar). Las copias verbatim de este repositorio están en almacenamiento privado, y este sitio no las redistribuye."
   },
   {
-    "objectID": "semesters/semester-01/deep-learning-1/week-01/index.html#fuente",
-    "href": "semesters/semester-01/deep-learning-1/week-01/index.html#fuente",
-    "title": "Semana 01",
+    "objectID": "semesters/semester-01/deep-learning-1/week-01/class-01/index.html#datos",
+    "href": "semesters/semester-01/deep-learning-1/week-01/class-01/index.html#datos",
+    "title": "Clase 01",
+    "section": "Datos",
+    "text": "Datos\n\n\n\nArchivo\nFormato\nTamaño\nUsado por\nDescripción\n\n\n\n\nsonnets.txt\nTXT (ASCII)\n93 578 B\n02_carga_datos_tensorflow, 02_carga_datos_pytorch\nTexto en inglés de 2 158 líneas que empieza con “FROM fairest creatures we desire increase”. Se usa para TextLineDataset y para tokenizar.\n\n\nsonnets_2.txt\nTXT (ASCII)\n93 578 B\n02_carga_datos_tensorflow\nIdéntico byte a byte a sonnets.txt. Se conservan los dos porque el notebook los lee juntos.\n\n\nsunspots.csv\nCSV\n67 591 B\n02_carga_datos_tensorflow, 02_carga_datos_pytorch\nSerie mensual de 3 235 filas (1749-01-31 → 2018-07-31). Columnas: índice sin nombre, Date y Monthly Mean Total Sunspot Number."
+  },
+  {
+    "objectID": "semesters/semester-01/deep-learning-1/week-01/class-01/index.html#recursos",
+    "href": "semesters/semester-01/deep-learning-1/week-01/class-01/index.html#recursos",
+    "title": "Clase 01",
+    "section": "Recursos",
+    "text": "Recursos\n\n\n\nRecurso\nUsado por\nNota\n\n\n\n\nimgs/ (animales/, apto/, arte/, ciudad/; 10 imágenes)\n02_carga_datos_tensorflow (image_dataset_from_directory), 02_carga_datos_pytorch (ImageFolder)\nSe lee como ../imgs/, así que el notebook espera estar en una subcarpeta del repositorio del docente. No se copió porque probablemente son imágenes de terceros.\n\n\ntensorflow_datasets: mnist e imdb_reviews\n02_carga_datos_tensorflow\nSe descargan de internet al ejecutar el notebook.\n\n\n\n\n\n\n\n\n\nWarningNotas para ejecutar los notebooks\n\n\n\n\n\nEsto describe los notebooks tal como están en la fuente. No se han modificado.\n\n02_carga_datos_tensorflow lee 'Sunspots.csv' con S mayúscula, pero el archivo se llama sunspots.csv. Esa celda falla en sistemas de archivos que distinguen mayúsculas (Linux, Colab).\nUna celda de 02_carga_datos_tensorflow usa una ruta absoluta de Windows del equipo del docente para make_csv_dataset. Hay que cambiarla por sunspots.csv antes de ejecutarla.\nLas rutas relativas (sonnets.txt, sunspots.csv, ../imgs/) suponen la estructura del repositorio del docente. En Colab hay que subir esos archivos a la sesión.\ntensorflow_datasets, torchvision y PIL no están en el pyproject.toml del docente.\nNumeración de módulos en la fuente: 01_tensores_jax, 02_carga_datos_tensorflow y 02_carga_datos_pytorch se identifican como “Módulo 2 — Herramientas y manejo de datos”. En cambio, Contenido.ipynb pone la introducción a TensorFlow, PyTorch y JAX, y los temas de datasets, transformación de datos y data augmentation, en el “Primer módulo: Introducción a Deep Learning”. Aquí se registran ambas etiquetas tal como aparecen en la fuente."
+  },
+  {
+    "objectID": "semesters/semester-01/deep-learning-1/week-01/class-01/index.html#notas-personales",
+    "href": "semesters/semester-01/deep-learning-1/week-01/class-01/index.html#notas-personales",
+    "title": "Clase 01",
+    "section": "Notas personales",
+    "text": "Notas personales\nTodavía no hay notas personales para esta clase."
+  },
+  {
+    "objectID": "semesters/semester-01/deep-learning-1/week-01/class-01/index.html#ejercicios",
+    "href": "semesters/semester-01/deep-learning-1/week-01/class-01/index.html#ejercicios",
+    "title": "Clase 01",
+    "section": "Ejercicios",
+    "text": "Ejercicios\nTodavía no hay ejercicios registrados para esta clase."
+  },
+  {
+    "objectID": "semesters/semester-01/deep-learning-1/week-01/class-01/index.html#fuente",
+    "href": "semesters/semester-01/deep-learning-1/week-01/class-01/index.html#fuente",
+    "title": "Clase 01",
     "section": "Fuente",
-    "text": "Fuente\nMaterial del docente Héctor Javier Hortúa, PhD, del curso Deep Learning I (Universidad El Bosque). Fuente: Deep_Learning_I_Fundamentos/clase1.\nEl repositorio fuente no tiene un archivo de licencia explícito ni un aviso de reutilización. Por eso este sitio no republica el material del docente: lo enlaza con atribución."
+    "text": "Fuente\n\nRepositorio del docente: MAESTRiA-ESTADiS-CIENCIA-DATOS-Bosque/Deep_Learning_I_Fundamentos\nCarpeta de la clase: clase1/\nCommit incorporado: 0f989f9c339c1f15878f1c837cc22397fe4d71ec (2026-09-27)\n\n← Volver a la semana 01 · Módulo Deep Learning I"
   },
   {
-    "objectID": "semesters/semester-01/deep-learning-1/week-02/index.html",
-    "href": "semesters/semester-01/deep-learning-1/week-02/index.html",
-    "title": "Semana 02",
+    "objectID": "semesters/semester-01/deep-learning-1/week-02/class-02/index.html",
+    "href": "semesters/semester-01/deep-learning-1/week-02/class-02/index.html",
+    "title": "Clase 02",
     "section": "",
-    "text": "La semana 02 cubre el paso del entrenamiento manual (gradientes y loops escritos a mano) a las API de alto nivel de cada framework: tf.keras, torch.nn y PyTorch Lightning. También se ven regularización, normalización, callbacks y pipelines completos de entrenamiento. En el repositorio del docente corresponde a la carpeta clase2/. A diferencia de la Semana 1, el README.md del docente no tiene todavía una sección para esta semana.\nEstado: Material incorporado"
+    "text": "ImportantFuente y atribución\n\n\n\nMaterial del docente Héctor Javier Hortúa, PhD (SavIA-Lab, Instituto de Neurociencias), del curso Deep Learning I del Doctorado en Ciencia de Datos e Inteligencia Artificial de la Universidad El Bosque. Viene de la carpeta clase2/ del repositorio del docente (commit c9cfeb5). No es de autoría propia.\nEl repositorio fuente no tiene un archivo de licencia explícito, así que aquí se enlaza al original. Hay copias verbatim en almacenamiento privado, comprobadas con SHA-256."
   },
   {
-    "objectID": "semesters/semester-01/deep-learning-1/week-02/index.html#clases",
-    "href": "semesters/semester-01/deep-learning-1/week-02/index.html#clases",
-    "title": "Semana 02",
-    "section": "Clases",
-    "text": "Clases\n\n\nClase 02 · Regresión, clasificación y pipelines de entrenamiento\nRegresión en TensorFlow y clasificación en PyTorch, de lo manual a Keras, torch.nn y Lightning. Además, dos pipelines completos: MNIST con TensorFlow y una serie temporal con Lightning y Keras/JAX.\n4 notebooks · 1 archivo de datos · artefactos de entrenamiento\nVer clase 02 →\n\n\nMaterial de estudio · Redes Neuronales Artificiales\nGuía teórica y matemática en PDF y laboratorio en Python (NumPy y PyTorch), elaborados como material complementario a partir de la presentación de referencia del docente. Incluye una ruta de aprendizaje recomendada.\nGuía PDF (33 pp.) · Notebook para Colab · Presentación de referencia (privada)\nVer material de estudio →"
+    "objectID": "semesters/semester-01/deep-learning-1/week-02/class-02/index.html#introducción",
+    "href": "semesters/semester-01/deep-learning-1/week-02/class-02/index.html#introducción",
+    "title": "Clase 02",
+    "section": "Introducción",
+    "text": "Introducción\nEn la clase 01 se vieron tensores y diferenciación automática. Esta clase los usa para entrenar modelos. Cada notebook implementa primero el entrenamiento a mano (parámetros, forward pass, pérdida, gradientes y loop) y después lo reescribe con la API de alto nivel del framework. Así se ve qué hace por dentro cada llamada de compile()/fit() o de nn.Module/Trainer. Los dos últimos notebooks reúnen todo en pipelines completos: datos, modelo, callbacks, evaluación y predicción."
   },
   {
-    "objectID": "semesters/semester-01/deep-learning-1/week-02/index.html#temas",
-    "href": "semesters/semester-01/deep-learning-1/week-02/index.html#temas",
-    "title": "Semana 02",
+    "objectID": "semesters/semester-01/deep-learning-1/week-02/class-02/index.html#temas",
+    "href": "semesters/semester-01/deep-learning-1/week-02/class-02/index.html#temas",
+    "title": "Clase 02",
     "section": "Temas",
-    "text": "Temas\n\nEntrenamiento manual: parámetros entrenables, forward pass, pérdida, tf.GradientTape y backward(), y loops de entrenamiento escritos a mano.\nAPI de alto nivel: compile(), fit(), History, evaluate() y predict() en Keras, con sus equivalentes en PyTorch y PyTorch Lightning.\nCapas y modelos personalizados, y funciones de activación.\nRegularización L1, L2 y L1-L2, Dropout, y Batch, Layer y Group Normalization.\nCallbacks: TensorBoard, EarlyStopping, ModelCheckpoint y ReduceLROnPlateau. Guardar y cargar modelos.\nPipelines completos: clasificación de MNIST con tf.data y pronóstico de la serie Sunspots con PyTorch Lightning y Keras sobre el backend JAX."
+    "text": "Temas\nSegún los encabezados de los notebooks:\n\nRegresión en TensorFlow: generación de datos y división train/validation/test con tf.data, parámetros entrenables, tf.GradientTape y loop manual. Luego el mismo modelo con tf.keras: tres formas de definir modelos, capas y modelos personalizados, activaciones, compile(), fit(), History, callbacks, evaluate()/predict(), y guardar y cargar modelos y pesos.\nClasificación en PyTorch: Dataset/DataLoader, binary cross entropy manual, backward() y descenso de gradiente. Luego el paso a torch.nn: nn.Module, capas propias (densa y Dropout), MLP, train()/eval(), equivalentes de compile/fit/History/ evaluate/predict/callbacks de Keras, y guardar el estado del modelo y del optimizador.\nPyTorch Lightning: LightningModule, Trainer.fit(), validate()/test()/predict(), callbacks y checkpoints, y una comparación Keras vs PyTorch vs Lightning.\nRegularización y normalización (en TensorFlow y en PyTorch): L1, L2 y L1-L2, Dropout, y Batch, Layer y Group Normalization, con una comparación conceptual.\nPipeline MNIST (TensorFlow/Keras): tensorflow_datasets, exploración, pesos de clase, preprocesamiento con tf.data, modelo denso, TensorBoard, EarlyStopping, ModelCheckpoint, ReduceLROnPlateau, evaluación sobre test y matriz de confusión.\nPipeline de series temporales (Sunspots): división temporal, normalización con estadísticas solo de train, Dataset de ventanas deslizantes y modelo denso con PyTorch Lightning. Después, el mismo problema con Keras sobre el backend JAX, entrenado directamente con los DataLoader de PyTorch."
   },
   {
-    "objectID": "semesters/semester-01/deep-learning-1/week-02/index.html#resumen-de-materiales",
-    "href": "semesters/semester-01/deep-learning-1/week-02/index.html#resumen-de-materiales",
-    "title": "Semana 02",
-    "section": "Resumen de materiales",
-    "text": "Resumen de materiales\n\n\n\nTipo\nCantidad\nDetalle\n\n\n\n\nNotebooks\n4\nRegresión (TensorFlow), clasificación (PyTorch), pipeline MNIST (TensorFlow) y pipeline de series temporales (PyTorch Lightning + Keras/JAX)\n\n\nDatos\n1\nsunspots.csv, que está en clase1/ del repositorio del docente\n\n\nArtefactos\n13\nresultados_regresion/: mejor_modelo.keras y 12 registros de TensorBoard\n\n\nRecursos externos\n—\nMNIST de tensorflow_datasets\n\n\nPresentación de referencia\n1\nPresentación Redes Neuronales del docente, recopilada en Word. Está en almacenamiento privado y no se publica\n\n\nMaterial complementario propio\n2\nGuía PDF (33 pp.) y laboratorio en Python, elaborados con apoyo de IA generativa\n\n\nTalleres y tareas\n1\nTarea multimodal CUB-200-2011 (enunciado del docente; solución pendiente)"
+    "objectID": "semesters/semester-01/deep-learning-1/week-02/class-02/index.html#material-redes-neuronales",
+    "href": "semesters/semester-01/deep-learning-1/week-02/class-02/index.html#material-redes-neuronales",
+    "title": "Clase 02",
+    "section": "Material de estudio y laboratorio — Redes Neuronales Artificiales",
+    "text": "Material de estudio y laboratorio — Redes Neuronales Artificiales\nEste espacio reúne recursos académicos para comprender los fundamentos de las redes neuronales artificiales, desde su interpretación intuitiva hasta su formulación matemática e implementación computacional. El material integra explicaciones conceptuales, ejemplos resueltos y ejercicios prácticos utilizando Python, NumPy y PyTorch.\n\n\n\n\n\n\nNoteAutoría y alcance\n\n\n\n\nMaterial de referencia del docente. La presentación Artificial Neural Networks es del profesor Héctor Javier Hortúa, PhD. Juan Sebastián Laverde Chunza la recopiló y organizó en formato Word como referencia para esta clase. La autoría intelectual del contenido es del docente. El archivo se guarda en almacenamiento privado y no se descarga desde este sitio sin autorización del titular de los derechos.\nMaterial complementario propio. La guía PDF y el notebook los desarrolló Juan Sebastián Laverde Chunza con apoyo de herramientas de inteligencia artificial generativa, tomando como referencia esa presentación. Las explicaciones, analogías, diagramas redibujados, ejemplos y código son desarrollos complementarios. No reproducen las diapositivas.\nAlcance. Estos recursos tienen fines exclusivamente educativos y de profundización conceptual, matemática y computacional. No son material oficial del docente ni de la Universidad El Bosque.\n\n\n\n\n\n Tarjeta 01 · Presentación de referencia\n\nFundamentos de Redes Neuronales Artificiales\nPresentación utilizada como referencia académica para estudiar neuronas artificiales, funciones de activación, arquitecturas de redes, descenso de gradiente y retropropagación. El contenido es del docente Héctor Javier Hortúa, PhD. El estudiante lo recopiló en formato Word.\nWord · Material docente · Referencia académica\nDistribución sujeta a autorización\n\n\n\n Tarjeta 02 · Guía profesional de estudio\n\nRedes Neuronales Artificiales — Guía teórica y matemática\nDocumento de 33 páginas que amplía los fundamentos conceptuales y matemáticos, incorporando analogías, fórmulas, diagramas, ejemplos numéricos resueltos y aplicaciones para lectores técnicos y no técnicos.\nPDF · 33 páginas · Español\n\nVisualizar PDF Descargar PDF\n\n\n\n\n Tarjeta 03 · Laboratorio computacional\n\nLaboratorio de Redes Neuronales con Python\nNotebook de Jupyter que permite experimentar con neuronas artificiales, funciones de activación, propagación hacia delante, gradientes, retropropagación y entrenamiento de modelos con NumPy y PyTorch.\nJupyter Notebook · Python · NumPy · PyTorch\n\nAbrir en Google Colab Ver notebook en GitHub Descargar .ipynb\n\n\n\n\n\nRuta de aprendizaje recomendada\n\nEtapa 1. Comprender. Revisar la presentación de referencia y reconocer los principales componentes de una red neuronal.\nEtapa 2. Profundizar. Estudiar la guía PDF y desarrollar las fórmulas y ejemplos numéricos.\nEtapa 3. Experimentar. Ejecutar el laboratorio en Google Colab y observar cómo cambian los resultados al modificar los parámetros de la red.\n\n\n\nConocimientos previos recomendados\nAyudan a aprovechar mejor el material, pero no son requisitos para consultarlo. Las primeras secciones de la guía están pensadas también para quienes no programan.\n\nÁlgebra lineal básica: vectores, matrices y producto punto.\nDerivadas y regla de la cadena.\nPython, en particular NumPy.\nFundamentos de aprendizaje automático: regresión, clasificación y función de pérdida."
   },
   {
-    "objectID": "semesters/semester-01/deep-learning-1/week-02/index.html#fuente",
-    "href": "semesters/semester-01/deep-learning-1/week-02/index.html#fuente",
-    "title": "Semana 02",
+    "objectID": "semesters/semester-01/deep-learning-1/week-02/class-02/index.html#notebooks",
+    "href": "semesters/semester-01/deep-learning-1/week-02/class-02/index.html#notebooks",
+    "title": "Clase 02",
+    "section": "Notebooks",
+    "text": "Notebooks\n\n\n\n\n#\nNotebook\nFramework\nContenido\nOriginal\nColab\nPDF\n\n\n\n\n1\nRegresión en TensorFlow: de entrenamiento manual a tf.keras · 01_Regresion.ipynb\nTensorFlow / Keras\nDatos sintéticos, tf.data, GradientTape y loop manual. Luego compile/fit, tres formas de definir modelos, capas y modelos personalizados, activaciones, History, callbacks, guardado de modelos, L1/L2, Dropout y normalizaciones.\nGitHub\nOpen in Colab\n Ver PDF\n\n\n2\nClasificación en PyTorch: de tensores y autograd a torch.nn · 02_Clasificacion.ipynb\nPyTorch / Lightning\nBCE y loop manual, nn.Module, frontera de decisión, capas personalizadas, MLP, equivalentes de la API de Keras, guardado con optimizador, L1/L2, Dropout, normalizaciones y PyTorch Lightning.\nGitHub\nOpen in Colab\n Ver PDF\n\n\n3\nPipeline completo de clasificación MNIST con TensorFlow/Keras · Pipeline_TensorFlow.ipynb\nTensorFlow / Keras\ntensorflow_datasets, pesos de clase, tf.data, modelo denso, cuatro callbacks (TensorBoard, EarlyStopping, ModelCheckpoint, ReduceLROnPlateau), evaluación, predicción y matriz de confusión.\nGitHub\nOpen in Colab\n Ver PDF\n\n\n4\nPipeline completo de series de tiempo con PyTorch Lightning y Keras/JAX · Pipeline__PyTorchL_KerasJAX.ipynb\nPyTorch Lightning · Keras (JAX)\nSerie Sunspots, división temporal, ventanas deslizantes, LightningModule, Trainer, TensorBoard y checkpoints. Luego el mismo modelo en Keras/JAX con los DataLoader de PyTorch, métricas en unidades originales y comparación de ambos enfoques.\nGitHub\nOpen in Colab\n Ver PDF\n\n\n\n\nLos cuatro notebooks del docente están publicados sin salidas (celdas sin ejecutar). Las copias verbatim están en almacenamiento privado, y este sitio no las redistribuye ni las ejecuta al construirse.\nLas guías PDF constituyen material académico complementario elaborado por Juan Sebastián Laverde Chunza con apoyo de herramientas de inteligencia artificial generativa, a partir de los contenidos de referencia de la Clase 02 del profesor Héctor Javier Hortúa, PhD. No son materiales oficiales del docente ni de la Universidad El Bosque. Son ediciones públicas con implementaciones, datos y explicaciones propias, y no reproducen el código ni el texto de los notebooks del docente."
+  },
+  {
+    "objectID": "semesters/semester-01/deep-learning-1/week-02/class-02/index.html#datos-y-dependencias",
+    "href": "semesters/semester-01/deep-learning-1/week-02/class-02/index.html#datos-y-dependencias",
+    "title": "Clase 02",
+    "section": "Datos y dependencias",
+    "text": "Datos y dependencias\n\n\n\nArchivo\nFormato\nTamaño\nUsado por\nDescripción\n\n\n\n\nsunspots.csv\nCSV\n67 591 B\nPipeline__PyTorchL_KerasJAX\nEl mismo archivo de la clase 01 (está en clase1/): serie mensual de manchas solares, de 1749 a 2018.\n\n\n\nLos notebooks de regresión y clasificación generan sus datos sintéticamente. El pipeline MNIST descarga el dataset con tensorflow_datasets.\nPaquetes que usan los notebooks y que no están en el pyproject.toml del docente:\n\n\n\n\n\n\n\n\nPaquete\nUsado por\nCómo se instala en el notebook\n\n\n\n\nlightning / pytorch-lightning\n02_Clasificacion, Pipeline__PyTorchL_KerasJAX\n!pip install pytorch-lightning · !pip install torch lightning tensorboard\n\n\ntensorboard\nPipeline__PyTorchL_KerasJAX (y los callbacks de TensorBoard)\n!pip install torch lightning tensorboard\n\n\ntensorflow-datasets\nPipeline_TensorFlow\n!pip install tensorflow tensorflow-datasets\n\n\nkeras&gt;=3 (multi-backend)\n02_Clasificacion (backend torch), Pipeline__PyTorchL_KerasJAX (backend jax)\n!pip install \"keras&gt;=3\" jax jaxlib"
+  },
+  {
+    "objectID": "semesters/semester-01/deep-learning-1/week-02/class-02/index.html#material-complementario-y-artefactos",
+    "href": "semesters/semester-01/deep-learning-1/week-02/class-02/index.html#material-complementario-y-artefactos",
+    "title": "Clase 02",
+    "section": "Material complementario y artefactos",
+    "text": "Material complementario y artefactos\n\n\n\nRecurso\nTipo\nTamaño\nOrigen\nNota\n\n\n\n\nresultados_regresion/mejor_modelo.keras\nModelo Keras entrenado\n21 623 B\n01_Regresion (ModelCheckpoint)\nEs una salida del notebook. Se guarda solo como artefacto privado.\n\n\nresultados_regresion/logs/\nRegistros de TensorBoard\n6 de train + 6 de validation\n01_Regresion (callback TensorBoard)\nSon las ejecuciones del docente. Se ven con tensorboard --logdir resultados_regresion/logs.\n\n\n\nEstos artefactos se generan al ejecutar los notebooks. No se publican en este sitio."
+  },
+  {
+    "objectID": "semesters/semester-01/deep-learning-1/week-02/class-02/index.html#talleres-y-tareas",
+    "href": "semesters/semester-01/deep-learning-1/week-02/class-02/index.html#talleres-y-tareas",
+    "title": "Clase 02",
+    "section": "Talleres y tareas",
+    "text": "Talleres y tareas\nLa tarea asociada a este bloque del curso está en la página de Talleres y tareas: Pipeline de datos multimodal con CUB-200-2011 (imagen + texto + tabular, con DataLoaders en PyTorch y en tf.data).\n\n\n\n\n\n\nWarningNotas para ejecutar los notebooks\n\n\n\n\n\nEsto describe los notebooks tal como están en la fuente. No se han modificado.\n\nPipeline__PyTorchL_KerasJAX lee sunspots.csv con una ruta absoluta de Windows del equipo del docente (C:\\Users\\javier\\...\\clase1\\sunspots.csv). Antes de ejecutar, hay que cambiarla por la ruta local o subir el archivo a Colab.\nKERAS_BACKEND se define con os.environ antes de importar Keras: torch en 02_Clasificacion y jax en Pipeline__PyTorchL_KerasJAX. Si se cambia el orden, Keras usa el backend por defecto.\nLos notebooks escriben archivos en la carpeta de trabajo, por ejemplo resultados_regresion/, best_model.pt, classifier_lightning.ckpt, best_mnist.keras, mnist_final.keras, best_timeseries_jax.keras y logs de TensorBoard.\nVarias celdas instalan paquetes con !pip. Fuera de Colab conviene instalarlos en el entorno de uv."
+  },
+  {
+    "objectID": "semesters/semester-01/deep-learning-1/week-02/class-02/index.html#notas-personales",
+    "href": "semesters/semester-01/deep-learning-1/week-02/class-02/index.html#notas-personales",
+    "title": "Clase 02",
+    "section": "Notas personales",
+    "text": "Notas personales\nLa presentación del docente que se recopiló en Word (Redes Neuronales) se describe en Material de estudio y laboratorio. Es material de referencia del profesor Héctor Javier Hortúa, PhD, se guarda en almacenamiento privado y no se publica sin autorización."
+  },
+  {
+    "objectID": "semesters/semester-01/deep-learning-1/week-02/class-02/index.html#ejercicios",
+    "href": "semesters/semester-01/deep-learning-1/week-02/class-02/index.html#ejercicios",
+    "title": "Clase 02",
+    "section": "Ejercicios",
+    "text": "Ejercicios\nTodavía no hay ejercicios registrados para esta clase."
+  },
+  {
+    "objectID": "semesters/semester-01/deep-learning-1/week-02/class-02/index.html#fuente",
+    "href": "semesters/semester-01/deep-learning-1/week-02/class-02/index.html#fuente",
+    "title": "Clase 02",
     "section": "Fuente",
-    "text": "Fuente\nMaterial del docente Héctor Javier Hortúa, PhD, del curso Deep Learning I (Universidad El Bosque). Fuente: Deep_Learning_I_Fundamentos/clase2.\nEl repositorio fuente no tiene un archivo de licencia explícito ni un aviso de reutilización. Por eso este sitio no republica el material del docente: lo enlaza con atribución.\n← Módulo Deep Learning I"
+    "text": "Fuente\n\nRepositorio del docente: MAESTRiA-ESTADiS-CIENCIA-DATOS-Bosque/Deep_Learning_I_Fundamentos\nCarpeta de la clase: clase2/\nCommit incorporado: c9cfeb52746c5d8c41fcdc3ae246bc6111324ce1 (2026-10-13)\n\n← Volver a la semana 02 · Módulo Deep Learning I"
+  },
+  {
+    "objectID": "semesters/semester-01/deep-learning-1/workshops/index.html",
+    "href": "semesters/semester-01/deep-learning-1/workshops/index.html",
+    "title": "Talleres y tareas",
+    "section": "",
+    "text": "Tareas que propone el docente en el curso, junto con las soluciones propias cuando estén listas. Los enunciados son del docente y se enlazan a su repositorio. Las soluciones (código, notebooks e informes) son trabajo académico propio y se publican en esta carpeta."
+  },
+  {
+    "objectID": "semesters/semester-01/deep-learning-1/workshops/index.html#convención-de-nombres",
+    "href": "semesters/semester-01/deep-learning-1/workshops/index.html#convención-de-nombres",
+    "title": "Talleres y tareas",
+    "section": "Convención de nombres",
+    "text": "Convención de nombres\nCada solución propia vive en su carpeta workshop-NN-tema/, con un prefijo de dos dígitos en orden cronológico. Dentro, sus archivos principales repiten ese nombre: workshop-NN-tema.ipynb y workshop-NN-tema-informe.pdf. Si la solución es un notebook, incluye su badge Open in Colab."
+  },
+  {
+    "objectID": "semesters/semester-01/deep-learning-1/workshops/index.html#inventario",
+    "href": "semesters/semester-01/deep-learning-1/workshops/index.html#inventario",
+    "title": "Talleres y tareas",
+    "section": "Inventario",
+    "text": "Inventario\n\n\nTareas del módulo\n\n\n#\nTarea\nPublicada\nEnunciado\nNotebook\nColab\nPDF\nCódigo\nEstado\n\n\n\n\n01\nPipeline de datos multimodal con CUB-200-2011\n09/10/2026\nGitHub\n.ipynb\nSolo lectura*\nInforme\nGitHub\nSolución desarrollada y validada\n\n\n\n\n* El notebook se ejecutó en WSL con dos entornos independientes y datos locales. Colab sirve para consultarlo, pero no lo ejecuta tal cual."
+  },
+  {
+    "objectID": "semesters/semester-01/deep-learning-1/workshops/index.html#tarea-01-pipeline-de-datos-multimodal-con-cub-200-2011",
+    "href": "semesters/semester-01/deep-learning-1/workshops/index.html#tarea-01-pipeline-de-datos-multimodal-con-cub-200-2011",
+    "title": "Talleres y tareas",
+    "section": "Tarea 01 · Pipeline de datos multimodal con CUB-200-2011",
+    "text": "Tarea 01 · Pipeline de datos multimodal con CUB-200-2011\nResumen del enunciado del docente (ver el original):\n\nObjetivo: construir el pipeline de datos de una base multimodal (imagen, texto y datos tabulares) y entregar DataLoaders de train, validation y test en PyTorch (Dataset + DataLoader) y en TensorFlow (tf.data). En esta tarea no se entrena ningún modelo. El enunciado dice que el pipeline será la base de las tareas siguientes.\nDatos: CUB-200-2011 (Wah et al., 2011): 11 788 imágenes de 200 especies de aves, con bounding boxes y 312 atributos binarios. Las captions son de Reed et al. (CVPR 2016), con 10 descripciones por imagen.\nContenido de cada batch: imagen normalizada de 224 × 224, texto como ids de palabras con su longitud real, 318 atributos tabulares (312 binarios + 6 de geometría escalados) y la etiqueta de especie (0–199).\nSplits: el train oficial se divide 90/10 en train y validation, estratificado por especie (seed=42). El test oficial completo queda como test.\nRegla de preprocesamiento: todo lo que se aprende de los datos (vocabulario, scaler, max_len) se ajusta solo con train.\n\n\n\n\n\n\n\nNoteEnunciado, dataset y solución\n\n\n\nEl enunciado es del docente. El repositorio fuente no tiene licencia explícita, así que el original se enlaza y hay una copia verbatim en almacenamiento privado.\nEl dataset CUB-200-2011 (~1,1 GB) y las captions no se guardan en este repositorio. Se descargan de las fuentes que indica el enunciado (Caltech Data y el repositorio de Reed).\nLa solución propia está desarrollada y validada. Se publica como edición pública: el notebook sin fotografías ni captions, el informe técnico en PDF y el código fuente. Los detalles están en su página.\n\n\n\nSolución propia\n\n\n Tarea 01 · Solución desarrollada y validada\n\nPipeline multimodal CUB-200-2011 en PyTorch y TensorFlow\nSeis flujos funcionales (train, validation y test por framework) que unen imagen, texto y 318 atributos tabulares. Ocho pruebas aprobadas y una omitida por entorno, y 6.394 registros de val/test comparados entre frameworks. No se entrenó ningún modelo.\nNotebook · Informe PDF · Código fuente\n\nVer la solución Informe PDF Notebook Código\n\n\n\n\n← Módulo Deep Learning I"
   },
   {
     "objectID": "semesters/semester-01/index.html",

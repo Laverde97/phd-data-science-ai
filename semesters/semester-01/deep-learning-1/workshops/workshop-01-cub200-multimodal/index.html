@@ -1,0 +1,1426 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.19">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="description" content="Solución propia de la Tarea 01 de Deep Learning I: construcción, preprocesamiento y validación de pipelines multimodales (imagen, texto y datos tabulares) de CUB-200-2011 en PyTorch y TensorFlow.">
+
+<title>Tarea 01 · Pipeline de datos multimodal con CUB-200-2011 – PhD · Data Science &amp; Artificial Intelligence</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../../../">
+<link href="../../../../../assets/favicon.svg" rel="icon" type="image/svg+xml">
+<script src="../../../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../../../site_libs/quarto-html/quarto-syntax-highlighting-5c1318cf63eba56dbef7ba16bc7d56f5.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-6453f418aeef366c23116eb9cb0b6816.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../../../../site_libs/quarto-html/quarto-syntax-highlighting-5c1318cf63eba56dbef7ba16bc7d56f5.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../../../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../../../site_libs/bootstrap/bootstrap-e707b0bcde5de7de326541d259ea9d2c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../../../site_libs/bootstrap/bootstrap-dark-c120618f3b1ab0249300a6f174e3d2b2.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../../../../site_libs/bootstrap/bootstrap-e707b0bcde5de7de326541d259ea9d2c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../../../../styles.css">
+<meta property="og:title" content="Tarea 01 · Pipeline de datos multimodal con CUB-200-2011 – PhD · Data Science &amp; Artificial Intelligence">
+<meta property="og:description" content="Solución propia de la Tarea 01 de Deep Learning I: construcción, preprocesamiento y validación de pipelines multimodales (imagen, texto y datos tabulares) de CUB-200-2011 en PyTorch y TensorFlow.">
+<meta property="og:site_name" content="PhD · Data Science &amp; Artificial Intelligence">
+<meta name="twitter:title" content="Tarea 01 · Pipeline de datos multimodal con CUB-200-2011 – PhD · Data Science &amp; Artificial Intelligence">
+<meta name="twitter:description" content="Solución propia de la Tarea 01 de Deep Learning I: construcción, preprocesamiento y validación de pipelines multimodales (imagen, texto y datos tabulares) de CUB-200-2011 en PyTorch y TensorFlow.">
+<meta name="twitter:card" content="summary">
+</head>
+
+<body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../../../../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../../../../assets/logo.svg" alt="" class="navbar-logo light-content">
+    <img src="../../../../../assets/logo.svg" alt="" class="navbar-logo dark-content">
+    </a>
+    <a class="navbar-brand" href="../../../../../index.html">
+    <span class="navbar-title">PhD · Data Science &amp; Artificial Intelligence</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../../../../index.html"> 
+<span class="menu-text">Inicio</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-semestres" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Semestres</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-semestres">    
+        <li>
+    <a class="dropdown-item" href="../../../../../semesters/index.html">
+ <span class="dropdown-text">Todos los semestres</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../../../semesters/semester-01/index.html">
+ <span class="dropdown-text">Semestre 1</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../../../semesters/semester-01/machine-learning/index.html">
+ <span class="dropdown-text">Semestre 1 · Machine Learning</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../../../semesters/semester-01/deep-learning-1/index.html">
+ <span class="dropdown-text">Semestre 1 · Deep Learning I</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../../../../../research/index.html"> 
+<span class="menu-text">Investigación</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/Laverde97/phd-data-science-ai"> <i class="bi bi-github" role="img" aria-label="GitHub">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="2">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul class="collapse">
+  <li><a href="#solución-desarrollada-y-validada" id="toc-solución-desarrollada-y-validada" class="nav-link active" data-scroll-target="#solución-desarrollada-y-validada">Solución desarrollada y validada</a></li>
+  <li><a href="#recursos" id="toc-recursos" class="nav-link" data-scroll-target="#recursos">Recursos</a></li>
+  <li><a href="#problema-objetivos-y-alcance" id="toc-problema-objetivos-y-alcance" class="nav-link" data-scroll-target="#problema-objetivos-y-alcance">1. Problema, objetivos y alcance</a></li>
+  <li><a href="#cub-200-2011-y-sus-tres-modalidades" id="toc-cub-200-2011-y-sus-tres-modalidades" class="nav-link" data-scroll-target="#cub-200-2011-y-sus-tres-modalidades">2. CUB-200-2011 y sus tres modalidades</a></li>
+  <li><a href="#arquitectura-del-pipeline" id="toc-arquitectura-del-pipeline" class="nav-link" data-scroll-target="#arquitectura-del-pipeline">3. Arquitectura del pipeline</a></li>
+  <li><a href="#particiones" id="toc-particiones" class="nav-link" data-scroll-target="#particiones">4. Particiones</a></li>
+  <li><a href="#preprocesamiento-por-modalidad" id="toc-preprocesamiento-por-modalidad" class="nav-link" data-scroll-target="#preprocesamiento-por-modalidad">5. Preprocesamiento por modalidad</a></li>
+  <li><a href="#pytorch-datasetdataloader-frente-a-tensorflow-tf.data" id="toc-pytorch-datasetdataloader-frente-a-tensorflow-tf.data" class="nav-link" data-scroll-target="#pytorch-datasetdataloader-frente-a-tensorflow-tf.data">6. PyTorch <code>Dataset</code>/<code>DataLoader</code> frente a TensorFlow <code>tf.data</code></a></li>
+  <li><a href="#contrato-de-salida-y-shapes" id="toc-contrato-de-salida-y-shapes" class="nav-link" data-scroll-target="#contrato-de-salida-y-shapes">7. Contrato de salida y <em>shapes</em></a></li>
+  <li><a href="#evidencias-de-validación" id="toc-evidencias-de-validación" class="nav-link" data-scroll-target="#evidencias-de-validación">8. Evidencias de validación</a></li>
+  <li><a href="#decisiones-metodológicas-y-prevención-de-fuga-de-información" id="toc-decisiones-metodológicas-y-prevención-de-fuga-de-información" class="nav-link" data-scroll-target="#decisiones-metodológicas-y-prevención-de-fuga-de-información">9. Decisiones metodológicas y prevención de fuga de información</a></li>
+  <li><a href="#limitaciones-conclusiones-y-referencias" id="toc-limitaciones-conclusiones-y-referencias" class="nav-link" data-scroll-target="#limitaciones-conclusiones-y-referencias">10. Limitaciones, conclusiones y referencias</a></li>
+  </ul>
+<div class="toc-actions"><ul class="collapse"><li><a href="https://github.com/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/deep-learning-1/workshops/workshop-01-cub200-multimodal/index.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Tarea 01 · Pipeline de datos multimodal con CUB-200-2011</h1>
+<p class="subtitle lead">Deep Learning I · Semestre 1 · Módulo 2 · PyTorch <code>Dataset</code>/<code>DataLoader</code> y TensorFlow <code>tf.data</code></p>
+</div>
+
+<div>
+  <div class="description">
+    Solución propia de la Tarea 01 de Deep Learning I: construcción, preprocesamiento y validación de pipelines multimodales (imagen, texto y datos tabulares) de CUB-200-2011 en PyTorch y TensorFlow.
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">16/10/2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="solución-desarrollada-y-validada" class="level2 module-banner">
+<h2 class="anchored" data-anchor-id="solución-desarrollada-y-validada">Solución desarrollada y validada</h2>
+<p>Pipeline de datos multimodal reproducible para <strong>CUB-200-2011</strong>. Une fotografías, descripciones textuales y atributos tabulares en <strong>seis flujos funcionales</strong>: <em>train</em>, <em>validation</em> y <em>test</em> en <strong>PyTorch</strong> y en <strong>TensorFlow</strong>. La tarea consiste en construir, procesar y validar los datos. <strong>No se entrenó ningún modelo</strong> y no se reportan métricas predictivas.</p>
+<p><span class="status-done">Solución desarrollada y validada</span> · Entrega del 16/10/2026</p>
+</section>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Autoría
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><strong>Enunciado:</strong> del docente <strong>Héctor Javier Hortúa, PhD</strong>, publicado el 09/10/2026 en su <a href="https://github.com/MAESTRiA-ESTADiS-CIENCIA-DATOS-Bosque/Deep_Learning_I_Fundamentos/blob/main/tareas/Tarea_multimodal_CUB-200-2011.md">repositorio del curso</a>. Se enlaza y no se redistribuye.</li>
+<li><strong>Solución:</strong> implementación, código, notebook, documentación técnica e informe son trabajo académico propio de <strong>Juan Sebastián Laverde Chunza</strong>. Doctorado en Ciencia de Datos e Inteligencia Artificial, Universidad El Bosque.</li>
+<li><strong>Datos:</strong> CUB-200-2011 (Wah et al., 2011) y <em>captions</em> de Reed et al.&nbsp;(2016). Son de terceros y <strong>no se publican</strong> en este sitio.</li>
+</ul>
+</div>
+</div>
+<section id="recursos" class="level2">
+<h2 class="anchored" data-anchor-id="recursos">Recursos</h2>
+<div class="grid study-grid-2">
+<div class="card study-card">
+<p><span class="study-kicker"><span class="bi bi-journal-code" aria-hidden="true"></span> Notebook · edición pública</span></p>
+<section id="informe-ejecutable" class="level3">
+<h3 class="anchored" data-anchor-id="informe-ejecutable">Informe ejecutable</h3>
+<p>Notebook canónico (<code>FINAL_PORTABLE</code>) con sus 11 celdas de código ejecutadas y sin errores guardados. En esta edición pública se omiten las salidas con fotografías y la <em>caption</em>, y la ruta local.</p>
+<p><span class="study-meta">Jupyter · 28 celdas (11 de código) · 66 KB</span></p>
+<div class="study-actions">
+<p><a href="https://github.com/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/deep-learning-1/workshops/workshop-01-cub200-multimodal/workshop-01-cub200-multimodal.ipynb" aria-label="Ver el notebook de la Tarea 01 en GitHub">Ver en GitHub</a> <a href="workshop-01-cub200-multimodal.ipynb" download="workshop-01-cub200-multimodal.ipynb" aria-label="Descargar el notebook de la Tarea 01">Descargar .ipynb</a> <a href="https://colab.research.google.com/github/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/deep-learning-1/workshops/workshop-01-cub200-multimodal/workshop-01-cub200-multimodal.ipynb" aria-label="Abrir el notebook de la Tarea 01 en Google Colab solo para consulta; no es ejecutable sin datos locales">Colab · solo lectura</a></p>
+</div>
+</section>
+</div>
+<div class="card study-card">
+<p><span class="study-kicker"><span class="bi bi-file-earmark-pdf" aria-hidden="true"></span> Informe técnico · edición pública</span></p>
+<section id="informe-técnico-en-pdf" class="level3">
+<h3 class="anchored" data-anchor-id="informe-técnico-en-pdf">Informe técnico en PDF</h3>
+<p>Resumen ejecutivo, fuentes, metodología, control de calidad, implementación en ambos frameworks, verificación, limitaciones y conclusiones. La Figura 2 (fotografías) se sustituye por una tabla.</p>
+<p><span class="study-meta">PDF · Español</span></p>
+<div class="study-actions">
+<p><a href="workshop-01-cub200-multimodal-informe.pdf" target="_blank" rel="noopener" aria-label="Visualizar el informe técnico de la Tarea 01 (se abre en una pestaña nueva)">Visualizar PDF</a> <a href="workshop-01-cub200-multimodal-informe.pdf" download="workshop-01-cub200-multimodal-informe.pdf" aria-label="Descargar el informe técnico de la Tarea 01">Descargar PDF</a></p>
+</div>
+</section>
+</div>
+<div class="card study-card">
+<p><span class="study-kicker"><span class="bi bi-code-slash" aria-hidden="true"></span> Código fuente</span></p>
+<section id="código-y-documentación" class="level3">
+<h3 class="anchored" data-anchor-id="código-y-documentación">Código y documentación</h3>
+<p>Paquete <code>src/cub200/</code>, scripts de preparación y validación, pruebas automatizadas, <em>logs</em> de ejecución y documentación metodológica. Es la distribución pública ligera, sin datos ni artefactos derivados.</p>
+<p><span class="study-meta">Python · 42 archivos</span></p>
+<div class="study-actions">
+<p><a href="https://github.com/Laverde97/phd-data-science-ai/tree/main/semesters/semester-01/deep-learning-1/workshops/workshop-01-cub200-multimodal/code" aria-label="Explorar el código fuente de la Tarea 01 en GitHub">Explorar código</a> <a href="https://github.com/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/deep-learning-1/workshops/workshop-01-cub200-multimodal/code/PUBLICACION.md" aria-label="Ver el inventario de la distribución pública de la Tarea 01">Qué se publica</a></p>
+</div>
+</section>
+</div>
+<div class="card study-card">
+<p><span class="study-kicker"><span class="bi bi-terminal" aria-hidden="true"></span> Reproducción</span></p>
+<section id="instrucciones-de-reproducción" class="level3">
+<h3 class="anchored" data-anchor-id="instrucciones-de-reproducción">Instrucciones de reproducción</h3>
+<p>Fuentes de datos, entornos <code>.venv</code> y <code>.venv-tf</code>, comandos de preparación, validación, pruebas y comparación de firmas en WSL.</p>
+<p><span class="study-meta">Markdown · WSL · Python 3.12</span></p>
+<div class="study-actions">
+<p><a href="https://github.com/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/deep-learning-1/workshops/workshop-01-cub200-multimodal/code/README.md" aria-label="Ver el README del proyecto de la Tarea 01">README del proyecto</a> <a href="https://github.com/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/deep-learning-1/workshops/workshop-01-cub200-multimodal/code/docs/GUIA_PASO_A_PASO.md" aria-label="Ver la guía paso a paso de la Tarea 01">Guía paso a paso</a></p>
+</div>
+</section>
+</div>
+</div>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>Google Colab: solo consulta
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>El notebook se ejecutó en <strong>WSL</strong> con <strong>dos entornos independientes</strong>: <code>.venv</code> con PyTorch 2.11.0+cu128 y <code>.venv-tf</code> con TensorFlow 2.21.0. También necesita los <strong>datos originales</strong> en <code>data/</code> y los artefactos preparados en <code>artifacts/</code>, y ninguno de los dos se distribuye. El enlace a Colab sirve para <strong>consultar</strong> el notebook y sus salidas guardadas. <strong>No es ejecutable tal cual</strong> en Colab, y no se ha hecho ni verificado una adaptación.</p>
+</div>
+</div>
+</section>
+<section id="problema-objetivos-y-alcance" class="level2">
+<h2 class="anchored" data-anchor-id="problema-objetivos-y-alcance">1. Problema, objetivos y alcance</h2>
+<p>El enunciado pide preparar los datos de una base <strong>multimodal</strong> que combina imagen, texto y datos tabulares. El objetivo es entregar <em>DataLoaders</em> de entrenamiento, validación y prueba en dos ecosistemas. Según el enunciado, este pipeline es la base de las tareas siguientes del curso.</p>
+<ul>
+<li><strong>Objetivo:</strong> disponer de conjuntos de datos multimodales para <em>train</em>, <em>val</em> y <em>test</em> en PyTorch y TensorFlow, con lotes que unan imagen, tokens de una descripción, longitud real, atributos tabulares, etiqueta de especie e identificador.</li>
+<li><strong>Pregunta técnica:</strong> ¿se pueden generar los seis flujos de datos conservando el protocolo de partición, un esquema uniforme de variables y parámetros de procesamiento ajustados únicamente en entrenamiento?</li>
+<li><strong>Alcance:</strong> termina en la producción y validación de lotes. <strong>No</strong> incluye modelos entrenados, métricas de clasificación (<em>accuracy</em>, F1) ni afirmaciones de rendimiento predictivo.</li>
+</ul>
+</section>
+<section id="cub-200-2011-y-sus-tres-modalidades" class="level2">
+<h2 class="anchored" data-anchor-id="cub-200-2011-y-sus-tres-modalidades">2. CUB-200-2011 y sus tres modalidades</h2>
+<div class="table-responsive">
+<table class="table-striped table-hover caption-top table">
+<caption>Modalidades de la unidad de análisis (<code>image_id</code>)</caption>
+<colgroup>
+<col style="width: 22%">
+<col style="width: 16%">
+<col style="width: 18%">
+<col style="width: 41%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Modalidad</th>
+<th>Fuente</th>
+<th>Volumen</th>
+<th>Uso en el pipeline</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Imagen</strong></td>
+<td>Caltech-UCSD Birds-200-2011 (Wah et al., 2011)</td>
+<td>11.788 fotografías de 200 especies de aves, con <em>bounding box</em></td>
+<td>Recorte guiado por la caja, <code>resize</code> y <code>crop</code> a 224 × 224, normalización ImageNet</td>
+</tr>
+<tr class="even">
+<td><strong>Texto</strong></td>
+<td>Descripciones finas de Reed et al.&nbsp;(2016), obtenidas mediante la distribución de AttnGAN</td>
+<td>117.880 <em>captions</em>, diez por imagen</td>
+<td>Tokenización, vocabulario de <em>train</em>, <em>padding</em> a longitud fija</td>
+</tr>
+<tr class="odd">
+<td><strong>Tabular</strong></td>
+<td>Anotaciones de CUB-200-2011</td>
+<td>318 atributos: 312 binarios y seis geométricos</td>
+<td>Binarios sin escalar; geometría derivada de la caja y estandarizada</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>La unidad de análisis es <code>image_id</code>. Cada registro tiene una fotografía, diez <em>captions</em>, 312 atributos binarios anotados, la geometría derivada de su caja delimitadora y la etiqueta de especie (0–199).</p>
+</section>
+<section id="arquitectura-del-pipeline" class="level2">
+<h2 class="anchored" data-anchor-id="arquitectura-del-pipeline">3. Arquitectura del pipeline</h2>
+<div class="pipeline-diagram" role="group" aria-label="Diagrama del pipeline multimodal: fuentes, preparación compartida ajustada solo con train, tres ramas de preprocesamiento, contrato de batch, implementaciones en PyTorch y TensorFlow, y validación">
+<div class="pipeline-row">
+<div class="pipeline-node">
+<p><span class="pipeline-tag">Fuente</span> <strong>Fotografías CUB-200-2011</strong><br>11.788 JPG · 200 especies</p>
+</div>
+<div class="pipeline-node">
+<p><span class="pipeline-tag">Fuente</span> <strong>Captions Reed et al.</strong><br>11.788 TXT · 10 por imagen</p>
+</div>
+<div class="pipeline-node">
+<p><span class="pipeline-tag">Fuente</span> <strong>Anotaciones CUB</strong><br>312 atributos · <em>bounding boxes</em></p>
+</div>
+</div>
+<p><span class="pipeline-arrow" aria-hidden="true">↓</span></p>
+<div class="pipeline-row">
+<div class="pipeline-node pipeline-node-key">
+<p><span class="pipeline-tag">Preparación compartida · <code>src/cub200/prepare.py</code></span> <strong><code>manifest</code> + split estratificado</strong> (semilla 42): <em>train</em> 5.394 · <em>val</em> 600 · <em>test</em> oficial 5.794. <strong>Ajuste solo con <em>train</em>:</strong> vocabulario (2.079 tokens), <code>max_len</code> = 25 (P95) y <code>StandardScaler</code> de la geometría. Persistido en <code>artifacts/</code>, con auditoría de 30 <em>bounding boxes</em>.</p>
+</div>
+</div>
+<p><span class="pipeline-arrow" aria-hidden="true">↓</span></p>
+<div class="pipeline-row">
+<div class="pipeline-node">
+<p><span class="pipeline-tag">Imagen</span> <em>bbox</em> + 10 % → 256 × 256 → <em>crop</em> 224 × 224 → normalización ImageNet. Aumentación solo en <em>train</em>.</p>
+</div>
+<div class="pipeline-node">
+<p><span class="pipeline-tag">Texto</span> <code>[a-z]+</code> en minúsculas → ids (<code>&lt;pad&gt;=0</code>, <code>&lt;unk&gt;=1</code>) → <em>padding</em> a 25. Una <em>caption</em> aleatoria en <em>train</em>, la primera en <em>val</em>/<em>test</em>.</p>
+</div>
+<div class="pipeline-node">
+<p><span class="pipeline-tag">Tabular</span> 312 binarios intactos + 6 geométricos estandarizados → vector de 318.</p>
+</div>
+</div>
+<p><span class="pipeline-arrow" aria-hidden="true">↓</span></p>
+<div class="pipeline-row">
+<div class="pipeline-node pipeline-node-key">
+<p><span class="pipeline-tag">Contrato de batch</span> <code>image</code> · <code>input_ids</code> · <code>lengths</code> · <code>tabular</code> · <code>label</code> · <code>image_id</code></p>
+</div>
+</div>
+<p><span class="pipeline-arrow" aria-hidden="true">↓</span></p>
+<div class="pipeline-row">
+<div class="pipeline-node">
+<p><span class="pipeline-tag">PyTorch · <code>pytorch_pipeline.py</code></span> <code>Dataset</code> (<code>__len__</code>, <code>__getitem__</code>) + <code>DataLoader</code> · imágenes <code>NCHW</code></p>
+</div>
+<div class="pipeline-node">
+<p><span class="pipeline-tag">TensorFlow · <code>tensorflow_pipeline.py</code></span> <code>tf.data</code> (<code>from_tensor_slices</code> → <code>map</code> con <code>tf.io</code>/<code>tf.image</code> → <code>batch</code> → <code>prefetch</code>) · imágenes <code>NHWC</code></p>
+</div>
+</div>
+<p><span class="pipeline-arrow" aria-hidden="true">↓</span></p>
+<div class="pipeline-row">
+<div class="pipeline-node">
+<p><span class="pipeline-tag">Validación</span> Contrato por <em>split</em> y framework · <code>pytest</code> en cada entorno · comparación exhaustiva de firmas de <em>val</em>/<em>test</em></p>
+</div>
+</div>
+</div>
+</section>
+<section id="particiones" class="level2">
+<h2 class="anchored" data-anchor-id="particiones">4. Particiones</h2>
+<p>El <em>test</em> oficial de CUB-200-2011 se conserva completo. La validación se extrae del <em>train</em> oficial (5.994 imágenes) con una división estratificada por especie: <strong>tres imágenes por especie</strong>, con semilla 42.</p>
+<div class="table-responsive">
+<table class="table-striped table-hover caption-top table">
+<caption>Particiones verificadas en el notebook</caption>
+<thead>
+<tr class="header">
+<th>Conjunto</th>
+<th style="text-align: right;">Observaciones</th>
+<th style="text-align: right;">Especies</th>
+<th style="text-align: center;">Mín.–máx. por especie</th>
+<th>Origen</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><em>Train</em></td>
+<td style="text-align: right;">5.394</td>
+<td style="text-align: right;">200</td>
+<td style="text-align: center;">26–27</td>
+<td><em>Train</em> oficial menos validación</td>
+</tr>
+<tr class="even">
+<td><em>Validation</em></td>
+<td style="text-align: right;">600</td>
+<td style="text-align: right;">200</td>
+<td style="text-align: center;">3–3</td>
+<td>Estratificado del <em>train</em> oficial</td>
+</tr>
+<tr class="odd">
+<td><em>Test</em></td>
+<td style="text-align: right;">5.794</td>
+<td style="text-align: right;">200</td>
+<td style="text-align: center;">11–30</td>
+<td><em>Test</em> oficial completo</td>
+</tr>
+<tr class="even">
+<td><strong>Total</strong></td>
+<td style="text-align: right;"><strong>11.788</strong></td>
+<td style="text-align: right;"><strong>200</strong></td>
+<td style="text-align: center;">—</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="preprocesamiento-por-modalidad" class="level2">
+<h2 class="anchored" data-anchor-id="preprocesamiento-por-modalidad">5. Preprocesamiento por modalidad</h2>
+<div class="table-responsive">
+<table class="table-striped table-hover caption-top table">
+<caption>Especificación operativa del preprocesamiento</caption>
+<colgroup>
+<col style="width: 23%">
+<col style="width: 31%">
+<col style="width: 44%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Modalidad</th>
+<th>Entrenamiento</th>
+<th>Validación y prueba</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Imagen</strong></td>
+<td><em>Bounding box</em> + 10 % de margen (con <em>clipping</em> al lienzo), <code>resize</code> 256 × 256, <em>crop</em> aleatorio 224 × 224, <em>flip</em> horizontal, brillo y contraste, normalización ImageNet</td>
+<td><em>Bounding box</em> + 10 %, <code>resize</code> 256 × 256, <em>crop</em> central 224 × 224, normalización ImageNet. <strong>Sin aumentación</strong></td>
+</tr>
+<tr class="even">
+<td><strong>Texto</strong></td>
+<td>Minúsculas y tokens <code>[a-z]+</code>. Vocabulario de <em>train</em> con frecuencia mínima 2 (<strong>2.079 tokens</strong>), <code>&lt;pad&gt;=0</code>, <code>&lt;unk&gt;=1</code>, <code>max_len</code> = <strong>25</strong> (P95 de <em>train</em>). Una de las diez <em>captions</em>, al azar en cada lectura</td>
+<td>Mismo vocabulario y <code>max_len</code>. <strong>Primera</strong> <em>caption</em></td>
+</tr>
+<tr class="odd">
+<td><strong>Tabular</strong></td>
+<td>312 atributos binarios sin escalar + 6 geométricos con <code>StandardScaler</code> <strong>ajustado en <em>train</em></strong></td>
+<td>Mismo <em>scaler</em>, aplicado sin reajuste</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Las seis variables geométricas son una propuesta propia, porque el enunciado pide posición, tamaño, aspecto y área sin dar fórmulas. Con la caja <span class="math inline">\((x, y, w, h)\)</span> y la imagen de <span class="math inline">\(W \times H\)</span>:</p>
+<p><span class="math display">\[
+\tfrac{x + w/2}{W},\quad \tfrac{y + h/2}{H},\quad \tfrac{w}{W},
+\]</span></p>
+<p><span class="math display">\[
+\tfrac{h}{H},\quad \tfrac{w}{h},\quad \tfrac{w\,h}{W\,H}.
+\]</span></p>
+</section>
+<section id="pytorch-datasetdataloader-frente-a-tensorflow-tf.data" class="level2">
+<h2 class="anchored" data-anchor-id="pytorch-datasetdataloader-frente-a-tensorflow-tf.data">6. PyTorch <code>Dataset</code>/<code>DataLoader</code> frente a TensorFlow <code>tf.data</code></h2>
+<div class="table-responsive">
+<table class="table-striped table-hover caption-top table">
+<caption>Diferencias de implementación</caption>
+<colgroup>
+<col style="width: 30%">
+<col style="width: 30%">
+<col style="width: 40%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Aspecto</th>
+<th>PyTorch</th>
+<th>TensorFlow</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Abstracción</td>
+<td>Clase <code>CUBMultimodalTorch</code> (<code>Dataset</code>) con <code>__len__</code> y <code>__getitem__</code>; <code>make_torch_loaders</code> crea los <code>DataLoader</code></td>
+<td><code>tf.data.Dataset.from_tensor_slices</code> con funciones <code>map</code>; <code>make_tf_datasets</code> crea los tres flujos</td>
+</tr>
+<tr class="even">
+<td>Lectura y transformación</td>
+<td>Muestra a muestra en Python, con <code>PIL</code> y <code>torchvision</code></td>
+<td>Grafo de TensorFlow con <code>tf.io</code> y <code>tf.image</code></td>
+</tr>
+<tr class="odd">
+<td>Barajado y lotes</td>
+<td><code>shuffle</code> del <code>DataLoader</code> solo en <em>train</em></td>
+<td><code>shuffle</code> solo en <em>train</em>, luego <code>batch</code> y <code>prefetch</code></td>
+</tr>
+<tr class="even">
+<td>Disposición de la imagen</td>
+<td><code>NCHW</code>: <code>(B, 3, 224, 224)</code></td>
+<td><code>NHWC</code>: <code>(B, 224, 224, 3)</code></td>
+</tr>
+<tr class="odd">
+<td>Entorno</td>
+<td><code>.venv</code>: PyTorch 2.11.0+cu128, torchvision 0.26.0+cu128</td>
+<td><code>.venv-tf</code>: TensorFlow 2.21.0</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Los dos frameworks <strong>no se importan en el mismo intérprete</strong>. El notebook lanza la validación de cada uno en su entorno con <code>subprocess</code> y <code>MPLBACKEND=Agg</code>. Así evita conflictos de CUDA/cuDNN y del <em>backend</em> gráfico de Jupyter.</p>
+</section>
+<section id="contrato-de-salida-y-shapes" class="level2">
+<h2 class="anchored" data-anchor-id="contrato-de-salida-y-shapes">7. Contrato de salida y <em>shapes</em></h2>
+<div class="table-responsive">
+<table class="table-striped table-hover caption-top table">
+<caption>Contrato multimodal por lote</caption>
+<colgroup>
+<col style="width: 17%">
+<col style="width: 23%">
+<col style="width: 30%">
+<col style="width: 28%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Campo</th>
+<th>PyTorch</th>
+<th>TensorFlow</th>
+<th>Contenido</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>image</code></td>
+<td><code>(B, 3, 224, 224)</code> float32</td>
+<td><code>(B, 224, 224, 3)</code> float32</td>
+<td>Imagen recortada y normalizada</td>
+</tr>
+<tr class="even">
+<td><code>input_ids</code></td>
+<td><code>(B, 25)</code> entero</td>
+<td><code>(B, 25)</code> entero</td>
+<td>Ids de una <em>caption</em>, con <em>padding</em></td>
+</tr>
+<tr class="odd">
+<td><code>lengths</code></td>
+<td><code>(B,)</code> entero</td>
+<td><code>(B,)</code> entero</td>
+<td>Longitud real de la secuencia</td>
+</tr>
+<tr class="even">
+<td><code>tabular</code></td>
+<td><code>(B, 318)</code> float32</td>
+<td><code>(B, 318)</code> float32</td>
+<td>312 binarios + 6 geométricos</td>
+</tr>
+<tr class="odd">
+<td><code>label</code></td>
+<td><code>(B,)</code> entero</td>
+<td><code>(B,)</code> entero</td>
+<td>Especie, 0–199</td>
+</tr>
+<tr class="even">
+<td><code>image_id</code></td>
+<td><code>(B,)</code> entero</td>
+<td><code>(B,)</code> entero</td>
+<td>Trazabilidad del registro</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Arrays persistidos en <code>artifacts/</code>: <code>tabular</code> <code>(11788, 318)</code>, <code>text_ids</code> <code>(11788, 10, 25)</code> y <code>text_lengths</code> <code>(11788, 10)</code>.</p>
+</section>
+<section id="evidencias-de-validación" class="level2">
+<h2 class="anchored" data-anchor-id="evidencias-de-validación">8. Evidencias de validación</h2>
+<div class="grid">
+<section id="flujos" class="level4 card">
+<h4 class="anchored" data-anchor-id="flujos">6 flujos</h4>
+<p><em>Train</em>, <em>val</em> y <em>test</em> en PyTorch y TensorFlow superaron el contrato con lotes de B = 16.</p>
+</section>
+<section id="aprobadas-1-omitida" class="level4 card">
+<h4 class="anchored" data-anchor-id="aprobadas-1-omitida">8 aprobadas · 1 omitida</h4>
+<p><code>pytest</code> <strong>en cada entorno</strong>. La prueba omitida es el <em>smoke test</em> del framework que no está instalado en ese entorno (<code>pytest.importorskip</code>).</p>
+</section>
+<section id="registros" class="level4 card">
+<h4 class="anchored" data-anchor-id="registros">6.394 registros</h4>
+<p>Comparación exhaustiva de <em>val</em> (600) y <em>test</em> (5.794) entre frameworks en sus campos deterministas.</p>
+</section>
+<section id="bounding-boxes" class="level4 card">
+<h4 class="anchored" data-anchor-id="bounding-boxes">30 <em>bounding boxes</em></h4>
+<p>Ajustadas al lienzo y auditadas (0,254 % del conjunto). La pérdida máxima de área es 7,98 %.</p>
+</section>
+</div>
+<div class="table-responsive">
+<table class="table-striped table-hover caption-top table">
+<caption>Evidencias (los <em>logs</em> están en <a href="https://github.com/Laverde97/phd-data-science-ai/tree/main/semesters/semester-01/deep-learning-1/workshops/workshop-01-cub200-multimodal/code/logs"><code>code/logs/</code></a>)</caption>
+<thead>
+<tr class="header">
+<th>Verificación</th>
+<th>Resultado documentado</th>
+<th>Evidencia</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Identificadores y clases</td>
+<td>11.788 <code>image_id</code> únicos; 200 especies en cada partición</td>
+<td>Notebook, <code>logs/12_final_data_audit.log</code></td>
+</tr>
+<tr class="even">
+<td>Integridad</td>
+<td>Valores finitos, atributos binarios, <em>padding</em> correcto tras la longitud real</td>
+<td>Notebook, <code>logs/12_final_data_audit.log</code></td>
+</tr>
+<tr class="odd">
+<td>Contrato PyTorch</td>
+<td><em>Train</em>/<em>val</em>/<em>test</em>: <code>Contrato multimodal: OK</code></td>
+<td><code>logs/04_validate_pytorch.log</code></td>
+</tr>
+<tr class="even">
+<td>Contrato TensorFlow</td>
+<td><em>Train</em>/<em>val</em>/<em>test</em>: <code>Contrato multimodal: OK</code></td>
+<td><code>logs/05_validate_tensorflow.log</code></td>
+</tr>
+<tr class="odd">
+<td>Pruebas automatizadas</td>
+<td>8 passed, 1 skipped en <code>.venv</code> y en <code>.venv-tf</code></td>
+<td><code>logs/02_pytest_torch.log</code>, <code>logs/13_pytest_tensorflow.log</code></td>
+</tr>
+<tr class="even">
+<td>Equivalencia entre frameworks</td>
+<td>600 + 5.794 registros: <code>image_id</code>, <code>label</code>, <code>input_ids</code> y <code>lengths</code> idénticos; <code>tabular</code> con <code>atol=1e-6</code>, <code>rtol=0</code></td>
+<td><code>logs/11_compare_full.log</code></td>
+</tr>
+<tr class="odd">
+<td><em>Bounding boxes</em></td>
+<td>30 casos recortados al lienzo, con la anotación original conservada</td>
+<td><code>logs/03_prepare.log</code></td>
+</tr>
+<tr class="even">
+<td>Notebook</td>
+<td>11/11 celdas de código ejecutadas, 0 errores guardados</td>
+<td>Notebook canónico</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Cinco casos de <em>clipping</em> con mayor pérdida relativa de área:</p>
+<div class="table-responsive">
+<table class="table-striped table-hover caption-top table">
+<caption>Auditoría de <em>bounding boxes</em> (se omiten las fotografías)</caption>
+<colgroup>
+<col style="width: 17%">
+<col style="width: 45%">
+<col style="width: 37%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: right;"><code>image_id</code></th>
+<th>Especie (carpeta CUB-200-2011)</th>
+<th style="text-align: right;">Pérdida relativa de área</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">5007</td>
+<td><code>086.Pacific_Loon</code></td>
+<td style="text-align: right;">7,98 %</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">1218</td>
+<td><code>022.Chuck_will_Widow</code></td>
+<td style="text-align: right;">7,27 %</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">9762</td>
+<td><code>166.Golden_winged_Warbler</code></td>
+<td style="text-align: right;">1,85 %</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">999</td>
+<td><code>019.Gray_Catbird</code></td>
+<td style="text-align: right;">1,61 %</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">960</td>
+<td><code>018.Spotted_Catbird</code></td>
+<td style="text-align: right;">1,57 %</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="decisiones-metodológicas-y-prevención-de-fuga-de-información" class="level2">
+<h2 class="anchored" data-anchor-id="decisiones-metodológicas-y-prevención-de-fuga-de-información">9. Decisiones metodológicas y prevención de fuga de información</h2>
+<ul>
+<li><strong>Ajuste solo con <em>train</em>.</strong> El vocabulario, el percentil de longitud (<code>max_len</code>) y el <code>StandardScaler</code> de la geometría se calculan con <em>train</em> y se aplican sin reajuste a <em>val</em> y <em>test</em>. En el notebook, la media de las seis geometrías estandarizadas en <em>train</em> es ≈ 0. Ese resultado es coherente con el ajuste, pero no demuestra por sí solo que no haya fuga de información: se complementa con la inspección del código de preparación.</li>
+<li><strong>El <em>test</em> oficial queda intacto.</strong> No se usa para ajustar nada ni para elegir hiperparámetros.</li>
+<li><strong>Atributos por imagen, no por clase.</strong> Se usan las anotaciones de cada imagen. Los rasgos agregados por clase podrían filtrar la etiqueta.</li>
+<li><strong>Aleatoriedad controlada por <em>split</em>.</strong> La aumentación y la selección aleatoria de <em>caption</em> solo ocurren en <em>train</em>. <em>Val</em> y <em>test</em> son deterministas, y por eso se pueden comparar entre frameworks.</li>
+<li><strong><em>Bounding boxes</em> fuera del lienzo.</strong> La anotación original se conserva en el <code>manifest</code>. La geometría se calcula sobre la intersección visible. Si la caja no intersecta la imagen, la preparación se detiene.</li>
+<li><strong>Trazabilidad.</strong> <code>image_id</code> viaja en cada lote. <code>metadata.json</code> registra la semilla, los conteos, las definiciones geométricas y las políticas de ajuste.</li>
+</ul>
+</section>
+<section id="limitaciones-conclusiones-y-referencias" class="level2">
+<h2 class="anchored" data-anchor-id="limitaciones-conclusiones-y-referencias">10. Limitaciones, conclusiones y referencias</h2>
+<section id="limitaciones" class="level3">
+<h3 class="anchored" data-anchor-id="limitaciones">Limitaciones</h3>
+<ul>
+<li>La comparación entre frameworks cubre solo los <strong>campos deterministas</strong> exportados. <strong>No</strong> verifica igualdad píxel a píxel de las imágenes, porque los decodificadores e interpoladores difieren. Tampoco verifica la igualdad de las aumentaciones aleatorias de <em>train</em>.</li>
+<li><code>scripts/validate.py</code> inspecciona <strong>un lote por <em>split</em></strong>, no las 11.788 imágenes.</li>
+<li><strong>No se certificó</strong> una instalación reproducible desde cero en otro computador. Los entornos son de WSL con GPU, y TensorFlow necesitó una corrección local del enlace <code>libcusolver.so.11</code>.</li>
+<li>Los 312 atributos y las <em>bounding boxes</em> son anotaciones humanas del <em>benchmark</em>. No están garantizados para fotografías nuevas, así que el pipeline no se puede desplegar directamente.</li>
+<li>No hubo entrenamiento, métricas predictivas ni <em>benchmarking</em> de rendimiento.</li>
+</ul>
+</section>
+<section id="conclusiones" class="level3">
+<h3 class="anchored" data-anchor-id="conclusiones">Conclusiones</h3>
+<p>El objetivo de ingeniería de datos se alcanzó según las evidencias disponibles. Hay seis pipelines válidos, particiones trazables, un contrato de lotes multimodales, auditorías de integridad y campos deterministas consistentes entre PyTorch y TensorFlow. La evidencia permite declarar el pipeline listo para la entrega de preprocesamiento. No lo declara listo para despliegue productivo ni para clasificar imágenes nuevas sin anotaciones.</p>
+</section>
+<section id="referencias" class="level3">
+<h3 class="anchored" data-anchor-id="referencias">Referencias</h3>
+<ul>
+<li>Wah, C., Branson, S., Welinder, P., Perona, P. y Belongie, S. (2011). <em>The Caltech-UCSD Birds-200-2011 Dataset</em>. California Institute of Technology. <a href="https://data.caltech.edu/records/20098" class="uri">https://data.caltech.edu/records/20098</a></li>
+<li>Reed, S., Akata, Z., Lee, H. y Schiele, B. (2016). <em>Learning Deep Representations of Fine-Grained Visual Descriptions</em>. CVPR. <a href="https://arxiv.org/abs/1605.05395" class="uri">https://arxiv.org/abs/1605.05395</a></li>
+<li>Xu, T. et al.&nbsp;(2018). <em>AttnGAN: Fine-Grained Text to Image Generation with Attentional Generative Adversarial Networks</em>. CVPR. Repositorio: <a href="https://github.com/taoxugit/AttnGAN" class="uri">https://github.com/taoxugit/AttnGAN</a></li>
+<li>PyTorch. <em>torch.utils.data</em>. <a href="https://pytorch.org/docs/stable/data.html" class="uri">https://pytorch.org/docs/stable/data.html</a></li>
+<li>TensorFlow. <em>tf.data: Build TensorFlow input pipelines</em>. <a href="https://www.tensorflow.org/guide/data" class="uri">https://www.tensorflow.org/guide/data</a></li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Qué se publica y qué no
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Este sitio publica una <strong>distribución pública ligera</strong> con el código fuente, la documentación, los <em>logs</em>, los metadatos, la edición pública del notebook y la edición pública del informe.</p>
+<p>No se publican las fotografías de CUB-200-2011 ni las <em>captions</em>. Tampoco los artefactos derivados de ellas o de las anotaciones (<code>manifest.csv</code>, <code>tabular.npy</code>, <code>text_ids.npy</code>, <code>vocab.json</code>, firmas <code>.npz</code>), los entornos virtuales ni el proyecto local completo. Caltech indica que no posee los derechos de las fotografías y restringe su uso a la investigación y la educación no comercial. Los términos de los datos de las <em>captions</em> no son explícitos.</p>
+<p>El inventario completo, con hashes SHA-256, está en <a href="https://github.com/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/deep-learning-1/workshops/workshop-01-cub200-multimodal/code/PUBLICACION.md"><code>code/PUBLICACION.md</code></a>.</p>
+</div>
+</div>
+</div>
+<p><a href="../../../../../semesters/semester-01/deep-learning-1/workshops/index.html">← Talleres y tareas</a> · <a href="../../../../../semesters/semester-01/deep-learning-1/index.html">Módulo Deep Learning I</a></p>
+
+
+</section>
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/laverde97\.github\.io\/phd-data-science-ai\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+            // default icon
+            link.classList.add("external");
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>Doctoral learning repository · Data Science &amp; Artificial Intelligence</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/deep-learning-1/workshops/workshop-01-cub200-multimodal/index.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></div>
+    <div class="nav-footer-right">
+<p>Built with <a href="https://quarto.org">Quarto</a></p>
+</div>
+  </div>
+</footer>
+
+
+
+
+<script src="../../../../../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

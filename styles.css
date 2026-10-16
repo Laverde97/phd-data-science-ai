@@ -248,3 +248,66 @@ blockquote {
   outline: 2px solid var(--phd-accent);
   outline-offset: 2px;
 }
+
+/* Two-column resource cards (Deep Learning I · Tarea 01) ------------- */
+.grid.study-grid-2 {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+/* Pipeline diagram (Deep Learning I · Tarea 01) ---------------------- */
+.pipeline-diagram {
+  display: flex;
+  flex-direction: column;
+  gap: .35rem;
+  margin: 1.5rem 0;
+}
+
+.pipeline-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: .75rem;
+}
+
+.pipeline-node {
+  border: 1px solid var(--phd-border);
+  border-radius: 12px;
+  padding: .8rem 1rem;
+  background: var(--phd-card-bg);
+  font-size: .9rem;
+  line-height: 1.45;
+}
+
+.pipeline-node p {
+  margin: 0;
+}
+
+.pipeline-node-key {
+  border-left: 4px solid var(--phd-accent);
+}
+
+.pipeline-node .pipeline-tag {
+  display: block;
+  font-size: .72rem;
+  font-weight: 600;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  color: var(--phd-accent);
+  margin-bottom: .3rem;
+}
+
+.pipeline-node code {
+  overflow-wrap: anywhere;
+}
+
+/* URLs largas de referencias: se parten en pantallas estrechas. */
+main a.uri {
+  overflow-wrap: anywhere;
+}
+
+.pipeline-diagram .pipeline-arrow {
+  display: block;
+  text-align: center;
+  font-size: 1.2rem;
+  line-height: 1;
+  color: var(--phd-accent);
+}
