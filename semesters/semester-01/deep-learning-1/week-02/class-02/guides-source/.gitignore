@@ -4,5 +4,7 @@ _out/
 checkpoints/
 lightning_logs/
 *.tex
+# Excepción: hoja de estilo LaTeX de las guías (sí se versiona).
+!guide-style.tex
 *.log
 *_files/
