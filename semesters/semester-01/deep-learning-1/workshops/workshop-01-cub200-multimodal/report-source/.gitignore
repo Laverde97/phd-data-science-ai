@@ -1,8 +1,0 @@
-# Artefactos de la generación local del informe: no se versionan.
-_out/
-.quarto/
-*.tex
-# Excepción: hoja de estilo LaTeX del informe (sí se versiona).
-!report-style.tex
-*.log
-*_files/

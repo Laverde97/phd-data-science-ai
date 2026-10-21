@@ -1,5 +1,0 @@
-Auditoría compartida: OK
-PyTorch train {'batch_size': 16, 'image': (16, 3, 224, 224), 'input_ids': (16, 25), 'tabular': (16, 318), 'state': 'OK'}
-PyTorch val {'batch_size': 16, 'image': (16, 3, 224, 224), 'input_ids': (16, 25), 'tabular': (16, 318), 'state': 'OK'}
-PyTorch test {'batch_size': 16, 'image': (16, 3, 224, 224), 'input_ids': (16, 25), 'tabular': (16, 318), 'state': 'OK'}
-Contrato multimodal: OK

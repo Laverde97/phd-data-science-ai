@@ -1,9 +1,0 @@
-WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
-I0000 00:00:1792164955.721235    3628 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
-I0000 00:00:1792164957.871716    3628 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-Auditoría compartida: OK
-TensorFlow train {'batch_size': 16, 'image': (16, 224, 224, 3), 'input_ids': (16, 25), 'tabular': (16, 318), 'state': 'OK'}
-TensorFlow val {'batch_size': 16, 'image': (16, 224, 224, 3), 'input_ids': (16, 25), 'tabular': (16, 318), 'state': 'OK'}
-TensorFlow test {'batch_size': 16, 'image': (16, 224, 224, 3), 'input_ids': (16, 25), 'tabular': (16, 318), 'state': 'OK'}
-Contrato multimodal: OK
