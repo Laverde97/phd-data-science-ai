@@ -1,155 +1,102 @@
 ---
-title: "Tarea 01 · Pipeline de datos multimodal con CUB-200-2011"
-subtitle: "Deep Learning I · Semestre 1 · Módulo 2 · PyTorch `Dataset`/`DataLoader` y TensorFlow `tf.data`"
-description: "Solución propia de la Tarea 01 de Deep Learning I: construcción, preprocesamiento y validación de pipelines multimodales (imagen, texto y datos tabulares) de CUB-200-2011 en PyTorch y TensorFlow."
-date: "2026-10-16"
+title: "Tarea 01 — Pipeline de datos multimodal con CUB-200-2011"
+subtitle: "Deep Learning I · Semestre 1 · Módulo 2 · PyTorch y TensorFlow"
+description: "Tarea 01 de Deep Learning I: preparación de un pipeline multimodal (imagen, texto y datos tabulares) de CUB-200-2011 en PyTorch y TensorFlow. Notebook de Google Colab de Claudio de la Rosa y Juan Sebastián Laverde Chunza."
+date: "2026-10-21"
 date-format: "DD/MM/YYYY"
 toc-depth: 2
 ---
 
 ::: {.module-banner}
-## Solución desarrollada y validada
+## Pipeline de datos multimodal con CUB-200-2011
 
-Pipeline de datos multimodal reproducible para **CUB-200-2011**. Une fotografías, descripciones
-textuales y atributos tabulares en **seis flujos funcionales**: *train*, *validation* y *test* en
-**PyTorch** y en **TensorFlow**. La tarea consiste en construir, procesar y validar los datos.
-**No se entrenó ningún modelo** y no se reportan métricas predictivas.
+| | |
+|---|---|
+| **Institución** | Universidad El Bosque · Doctorado en Ciencia de Datos e Inteligencia Artificial |
+| **Asignatura** | Deep Learning I |
+| **Docente** | Héctor Javier Hortúa, PhD |
+| **Autores** | Claudio de la Rosa · Juan Sebastián Laverde Chunza |
+| **Frameworks** | PyTorch (`Dataset` + `DataLoader`) · TensorFlow (`tf.data`) |
 
-[Solución desarrollada y validada]{.status-done} · Entrega del 16/10/2026
+[Pipeline implementado y verificado en Colab]{.status-done} [Ejecución completa desde cero pendiente]{.status-wip}
 :::
-
-::: {.callout-note}
-## Autoría
-- **Enunciado:** del docente **Héctor Javier Hortúa, PhD**, publicado el 09/10/2026 en su
-  [repositorio del curso](https://github.com/MAESTRiA-ESTADiS-CIENCIA-DATOS-Bosque/Deep_Learning_I_Fundamentos/blob/main/tareas/Tarea_multimodal_CUB-200-2011.md).
-  Se enlaza y no se redistribuye.
-- **Solución:** implementación, código, notebook, documentación técnica e informe son trabajo
-  académico propio de **Juan Sebastián Laverde Chunza**. Doctorado en Ciencia de Datos e
-  Inteligencia Artificial, Universidad El Bosque.
-- **Datos:** CUB-200-2011 (Wah et al., 2011) y *captions* de Reed et al. (2016). Son de terceros y
-  **no se publican** en este sitio.
-:::
-
-## Recursos
 
 ::: {.grid .study-grid-2}
 ::: {.card .study-card}
-[[]{.bi .bi-journal-code aria-hidden="true"} Notebook · edición pública]{.study-kicker}
+[[]{.bi .bi-journal-code aria-hidden="true"} Entregable oficial]{.study-kicker}
 
-### Informe ejecutable
-Notebook canónico (`FINAL_PORTABLE`) con sus 11 celdas de código ejecutadas y sin errores guardados.
-En esta edición pública se omiten las salidas con fotografías y la *caption*, y la ruta local.
+### Notebook en Google Colab
+El notebook es el documento central de la solución: contiene el código, las explicaciones y las
+verificaciones de los dos pipelines. Esta página es un resumen académico.
 
-[Jupyter · 28 celdas (11 de código) · 66 KB]{.study-meta}
+[Jupyter · 98 celdas (33 de código) · edición pública]{.study-meta}
 
 ::: {.study-actions}
-[Ver en GitHub](https://github.com/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/deep-learning-1/workshops/workshop-01-cub200-multimodal/workshop-01-cub200-multimodal.ipynb){aria-label="Ver el notebook de la Tarea 01 en GitHub"}
-[Descargar .ipynb](workshop-01-cub200-multimodal.ipynb){download="workshop-01-cub200-multimodal.ipynb" aria-label="Descargar el notebook de la Tarea 01"}
-[Colab · solo lectura](https://colab.research.google.com/github/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/deep-learning-1/workshops/workshop-01-cub200-multimodal/workshop-01-cub200-multimodal.ipynb){aria-label="Abrir el notebook de la Tarea 01 en Google Colab solo para consulta; no es ejecutable sin datos locales"}
+[Abrir en Google Colab](https://colab.research.google.com/github/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/deep-learning-1/workshops/workshop-01-cub200-multimodal/workshop-01-cub200-multimodal.ipynb){aria-label="Abrir el notebook de la Tarea 01 en Google Colab"}
+[Descargar notebook (.ipynb)](workshop-01-cub200-multimodal.ipynb){download="workshop-01-cub200-multimodal.ipynb" aria-label="Descargar el notebook de la Tarea 01"}
+[Ver notebook en GitHub](https://github.com/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/deep-learning-1/workshops/workshop-01-cub200-multimodal/workshop-01-cub200-multimodal.ipynb){aria-label="Ver el notebook de la Tarea 01 en GitHub"}
 :::
 :::
 
 ::: {.card .study-card}
-[[]{.bi .bi-file-earmark-pdf aria-hidden="true"} Informe técnico · edición pública]{.study-kicker}
+[[]{.bi .bi-file-text aria-hidden="true"} Enunciado del docente]{.study-kicker}
 
-### Informe técnico en PDF
-Resumen ejecutivo, fuentes, metodología, control de calidad, implementación en ambos frameworks,
-verificación, limitaciones y conclusiones. La Figura 2 (fotografías) se sustituye por una tabla.
+### Tarea multimodal CUB-200-2011
+Enunciado original de Héctor Javier Hortúa, PhD, publicado en el repositorio del curso. Se enlaza
+y no se redistribuye.
 
-[PDF · Español]{.study-meta}
-
-::: {.study-actions}
-[Visualizar PDF](workshop-01-cub200-multimodal-informe.pdf){target="_blank" rel="noopener" aria-label="Visualizar el informe técnico de la Tarea 01 (se abre en una pestaña nueva)"}
-[Descargar PDF](workshop-01-cub200-multimodal-informe.pdf){download="workshop-01-cub200-multimodal-informe.pdf" aria-label="Descargar el informe técnico de la Tarea 01"}
-:::
-:::
-
-::: {.card .study-card}
-[[]{.bi .bi-code-slash aria-hidden="true"} Código fuente]{.study-kicker}
-
-### Código y documentación
-Paquete `src/cub200/`, scripts de preparación y validación, pruebas automatizadas, *logs* de
-ejecución y documentación metodológica. Es la distribución pública ligera, sin datos ni artefactos derivados.
-
-[Python · 42 archivos]{.study-meta}
+[Markdown · repositorio del docente]{.study-meta}
 
 ::: {.study-actions}
-[Explorar código](https://github.com/Laverde97/phd-data-science-ai/tree/main/semesters/semester-01/deep-learning-1/workshops/workshop-01-cub200-multimodal/code){aria-label="Explorar el código fuente de la Tarea 01 en GitHub"}
-[Qué se publica](https://github.com/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/deep-learning-1/workshops/workshop-01-cub200-multimodal/code/PUBLICACION.md){aria-label="Ver el inventario de la distribución pública de la Tarea 01"}
-:::
-:::
-
-::: {.card .study-card}
-[[]{.bi .bi-terminal aria-hidden="true"} Reproducción]{.study-kicker}
-
-### Instrucciones de reproducción
-Fuentes de datos, entornos `.venv` y `.venv-tf`, comandos de preparación, validación, pruebas y
-comparación de firmas en WSL.
-
-[Markdown · WSL · Python 3.12]{.study-meta}
-
-::: {.study-actions}
-[README del proyecto](https://github.com/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/deep-learning-1/workshops/workshop-01-cub200-multimodal/code/README.md){aria-label="Ver el README del proyecto de la Tarea 01"}
-[Guía paso a paso](https://github.com/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/deep-learning-1/workshops/workshop-01-cub200-multimodal/code/docs/GUIA_PASO_A_PASO.md){aria-label="Ver la guía paso a paso de la Tarea 01"}
+[Ver enunciado](https://github.com/MAESTRiA-ESTADiS-CIENCIA-DATOS-Bosque/Deep_Learning_I_Fundamentos/blob/main/tareas/Tarea_multimodal_CUB-200-2011.md){aria-label="Ver el enunciado original de la Tarea 01 en el repositorio del docente"}
 :::
 :::
 :::
 
-::: {.callout-warning}
-## Google Colab: solo consulta
-El notebook se ejecutó en **WSL** con **dos entornos independientes**: `.venv` con PyTorch
-2.11.0+cu128 y `.venv-tf` con TensorFlow 2.21.0. También necesita los **datos originales** en
-`data/` y los artefactos preparados en `artifacts/`, y ninguno de los dos se distribuye. El enlace
-a Colab sirve para **consultar** el notebook y sus salidas guardadas. **No es ejecutable tal cual**
-en Colab, y no se ha hecho ni verificado una adaptación.
-:::
+## 1. Introducción
 
-## 1. Problema, objetivos y alcance
+La clasificación de especies de aves es un problema de **grano fino**: muchas especies comparten
+colores, formas y patrones de plumaje, mientras que individuos de una misma especie varían por
+postura, iluminación o perspectiva. CUB-200-2011 reúne 11.788 fotografías de 200 especies, y
+Reed et al. (2016) añadieron diez descripciones textuales por imagen.
 
-El enunciado pide preparar los datos de una base **multimodal** que combina imagen, texto y datos
-tabulares. El objetivo es entregar *DataLoaders* de entrenamiento, validación y prueba en dos ecosistemas.
-Según el enunciado, este pipeline es la base de las tareas siguientes del curso.
+Esta tarea **prepara los datos** para una futura clasificación supervisada de especies. Construye y
+verifica los lotes multimodales, pero **no entrena ningún modelo** ni reporta métricas predictivas.
 
-- **Objetivo:** disponer de conjuntos de datos multimodales para *train*, *val* y *test* en
-  PyTorch y TensorFlow, con lotes que unan imagen, tokens de una descripción, longitud real,
-  atributos tabulares, etiqueta de especie e identificador.
-- **Pregunta técnica:** ¿se pueden generar los seis flujos de datos conservando el protocolo de
-  partición, un esquema uniforme de variables y parámetros de procesamiento ajustados únicamente
-  en entrenamiento?
-- **Alcance:** termina en la producción y validación de lotes. **No** incluye modelos
-  entrenados, métricas de clasificación (*accuracy*, F1) ni afirmaciones de rendimiento predictivo.
+## 2. Objetivo
 
-## 2. CUB-200-2011 y sus tres modalidades
+Construir y verificar un pipeline multimodal reproducible para CUB-200-2011 y sus descripciones,
+implementado en **PyTorch** y en **TensorFlow**, que entregue lotes de **entrenamiento, validación y
+prueba**. Cada lote reúne una imagen normalizada, una descripción codificada con su longitud válida,
+un vector tabular y la etiqueta entera de especie.
+
+## 3. Dataset y modalidades
 
 ::: {.table-responsive}
-| Modalidad | Fuente | Volumen | Uso en el pipeline |
-|-----------|--------|---------|--------------------|
-| **Imagen** | Caltech-UCSD Birds-200-2011 (Wah et al., 2011) | 11.788 fotografías de 200 especies de aves, con *bounding box* | Recorte guiado por la caja, `resize` y `crop` a 224 × 224, normalización ImageNet |
-| **Texto** | Descripciones finas de Reed et al. (2016), obtenidas mediante la distribución de AttnGAN | 117.880 *captions*, diez por imagen | Tokenización, vocabulario de *train*, *padding* a longitud fija |
-| **Tabular** | Anotaciones de CUB-200-2011 | 318 atributos: 312 binarios y seis geométricos | Binarios sin escalar; geometría derivada de la caja y estandarizada |
+| Modalidad | Fuente | Contenido | Representación en el lote |
+|-----------|--------|-----------|---------------------------|
+| **Imagen** | CUB-200-2011 (Wah et al., 2011), descargado de CaltechDATA | 11.788 fotografías con caja delimitadora | Tensor 224 × 224 × 3 normalizado |
+| **Texto** | Descripciones de Reed et al. (2016), distribuidas por AttnGAN | 117.880 descripciones, diez por imagen | 25 ids de palabras y su longitud válida |
+| **Tabular** | Anotaciones de CUB-200-2011 | 312 atributos binarios + 6 variables geométricas | Vector de 318 valores |
+| **Etiqueta** | Clases de CUB-200-2011 | 200 especies | Entero de 0 a 199 |
 
-: Modalidades de la unidad de análisis (`image_id`) {.striped .hover}
+: Modalidades por imagen {.striped .hover}
 :::
 
-La unidad de análisis es `image_id`. Cada registro tiene una fotografía, diez *captions*, 312
-atributos binarios anotados, la geometría derivada de su caja delimitadora y la etiqueta de especie
-(0–199).
+## 4. Metodología implementada
 
-## 3. Arquitectura del pipeline
+Las dos implementaciones parten de una **preparación común**: la misma tabla maestra, las mismas
+particiones y los mismos parámetros ajustados con entrenamiento.
 
-::: {.pipeline-diagram role="group" aria-label="Diagrama del pipeline multimodal: fuentes, preparación compartida ajustada solo con train, tres ramas de preprocesamiento, contrato de batch, implementaciones en PyTorch y TensorFlow, y validación"}
+::: {.pipeline-diagram role="group" aria-label="Diagrama del pipeline: fuentes, preparación común ajustada con entrenamiento e implementaciones en PyTorch y TensorFlow"}
 ::: {.pipeline-row}
 ::: {.pipeline-node}
 [Fuente]{.pipeline-tag}
-**Fotografías CUB-200-2011**<br>11.788 JPG · 200 especies
+**CUB-200-2011**<br>Imágenes, cajas, atributos y clases
 :::
 ::: {.pipeline-node}
 [Fuente]{.pipeline-tag}
-**Captions Reed et al.**<br>11.788 TXT · 10 por imagen
-:::
-::: {.pipeline-node}
-[Fuente]{.pipeline-tag}
-**Anotaciones CUB**<br>312 atributos · *bounding boxes*
+**Descripciones (AttnGAN)**<br>`birds/text.zip` · diez por imagen
 :::
 :::
 
@@ -157,10 +104,9 @@ atributos binarios anotados, la geometría derivada de su caja delimitadora y la
 
 ::: {.pipeline-row}
 ::: {.pipeline-node .pipeline-node-key}
-[Preparación compartida · `src/cub200/prepare.py`]{.pipeline-tag}
-**`manifest` + split estratificado** (semilla 42): *train* 5.394 · *val* 600 · *test* oficial 5.794.
-**Ajuste solo con *train*:** vocabulario (2.079 tokens), `max_len` = 25 (P95) y `StandardScaler` de la geometría.
-Persistido en `artifacts/`, con auditoría de 30 *bounding boxes*.
+[Preparación común]{.pipeline-tag}
+Tabla maestra (una fila por imagen) · *test* oficial intacto · validación estratificada de 600
+imágenes (semilla 42) · vocabulario, `max_len` y `StandardScaler` ajustados **solo con *train***
 :::
 :::
 
@@ -168,240 +114,151 @@ Persistido en `artifacts/`, con auditoría de 30 *bounding boxes*.
 
 ::: {.pipeline-row}
 ::: {.pipeline-node}
-[Imagen]{.pipeline-tag}
-*bbox* + 10 % → 256 × 256 → *crop* 224 × 224 → normalización ImageNet. Aumentación solo en *train*.
+[PyTorch]{.pipeline-tag}
+`CUBMultimodalDataset` + `DataLoader` · imágenes `NCHW`
 :::
 ::: {.pipeline-node}
-[Texto]{.pipeline-tag}
-`[a-z]+` en minúsculas → ids (`<pad>=0`, `<unk>=1`) → *padding* a 25. Una *caption* aleatoria en *train*, la primera en *val*/*test*.
-:::
-::: {.pipeline-node}
-[Tabular]{.pipeline-tag}
-312 binarios intactos + 6 geométricos estandarizados → vector de 318.
-:::
-:::
-
-[↓]{.pipeline-arrow aria-hidden="true"}
-
-::: {.pipeline-row}
-::: {.pipeline-node .pipeline-node-key}
-[Contrato de batch]{.pipeline-tag}
-`image` · `input_ids` · `lengths` · `tabular` · `label` · `image_id`
-:::
-:::
-
-[↓]{.pipeline-arrow aria-hidden="true"}
-
-::: {.pipeline-row}
-::: {.pipeline-node}
-[PyTorch · `pytorch_pipeline.py`]{.pipeline-tag}
-`Dataset` (`__len__`, `__getitem__`) + `DataLoader` · imágenes `NCHW`
-:::
-::: {.pipeline-node}
-[TensorFlow · `tensorflow_pipeline.py`]{.pipeline-tag}
-`tf.data` (`from_tensor_slices` → `map` con `tf.io`/`tf.image` → `batch` → `prefetch`) · imágenes `NHWC`
-:::
-:::
-
-[↓]{.pipeline-arrow aria-hidden="true"}
-
-::: {.pipeline-row}
-::: {.pipeline-node}
-[Validación]{.pipeline-tag}
-Contrato por *split* y framework · `pytest` en cada entorno · comparación exhaustiva de firmas de *val*/*test*
+[TensorFlow]{.pipeline-tag}
+`tf.data`: `cache` → `shuffle` → `map` → `batch` → `prefetch` · imágenes `NHWC`
 :::
 :::
 :::
 
-## 4. Particiones
+- **Descarga y descompresión.** El notebook descarga CUB-200-2011 de CaltechDATA y comprueba el
+  `.tgz` con `tar -tzf` antes de extraerlo. Las descripciones se descargan con `gdown`, y los ZIP
+  se verifican con `testzip`. Las descargas se omiten si los archivos ya existen.
+- **Integración y tabla maestra.** Se unen imágenes, clases, cajas delimitadoras, partición
+  oficial, 312 atributos por imagen, dimensiones originales y las diez descripciones de cada imagen.
+- **División.** El *test* oficial (5.794) se conserva completo. Del *train* oficial (5.994) se
+  extraen 600 imágenes de validación, estratificadas por especie (`random_state=42`). Se verifica que
+  no haya solapamientos entre particiones.
+- **Cajas delimitadoras.** Cada imagen se recorta con un margen del 10 % del ancho y del alto de la
+  caja a cada lado, sin salir de los bordes de la fotografía.
+- **Imágenes.** En *train*: `resize` a 256 × 256, recorte aleatorio de 224 × 224, volteo horizontal y
+  brillo y contraste con factores entre 0,8 y 1,2. En *val* y *test*: recorte central de 224 × 224.
+  Todas las imágenes se normalizan con las medias y desviaciones de ImageNet.
+- **Texto.** Minúsculas y tokens `[a-z]+`. El vocabulario se construye con *train* (frecuencia
+  mínima 2, `<pad>` = 0, `<unk>` = 1). Cada descripción se trunca o rellena a `max_len` = 25. En
+  *train* se elige una descripción al azar en cada lectura; en *val* y *test*, siempre la primera.
+- **Variables geométricas.** Se definen como $x/W$, $y/H$, $w/W$, $h/H$, $w/h$ y $wh/(WH)$, con la
+  caja original $(x, y, w, h)$ y la imagen de $W \times H$. Se estandarizan con un `StandardScaler`
+  ajustado solo con *train*. Los 312 atributos binarios no se escalan.
+- **Pipelines.** Se construyen tres flujos (*train*, *val*, *test*) por framework, con lotes de 32
+  observaciones y conservando el último lote incompleto.
 
-El *test* oficial de CUB-200-2011 se conserva completo. La validación se extrae del *train* oficial
-(5.994 imágenes) con una división estratificada por especie: **tres imágenes por especie**, con semilla 42.
-
-::: {.table-responsive}
-| Conjunto | Observaciones | Especies | Mín.–máx. por especie | Origen |
-|----------|--------------:|---------:|:---------------------:|--------|
-| *Train* | 5.394 | 200 | 26–27 | *Train* oficial menos validación |
-| *Validation* | 600 | 200 | 3–3 | Estratificado del *train* oficial |
-| *Test* | 5.794 | 200 | 11–30 | *Test* oficial completo |
-| **Total** | **11.788** | **200** | — | |
-
-: Particiones verificadas en el notebook {.striped .hover}
-:::
-
-## 5. Preprocesamiento por modalidad
-
-::: {.table-responsive}
-| Modalidad | Entrenamiento | Validación y prueba |
-|-----------|---------------|---------------------|
-| **Imagen** | *Bounding box* + 10 % de margen (con *clipping* al lienzo), `resize` 256 × 256, *crop* aleatorio 224 × 224, *flip* horizontal, brillo y contraste, normalización ImageNet | *Bounding box* + 10 %, `resize` 256 × 256, *crop* central 224 × 224, normalización ImageNet. **Sin aumentación** |
-| **Texto** | Minúsculas y tokens `[a-z]+`. Vocabulario de *train* con frecuencia mínima 2 (**2.079 tokens**), `<pad>=0`, `<unk>=1`, `max_len` = **25** (P95 de *train*). Una de las diez *captions*, al azar en cada lectura | Mismo vocabulario y `max_len`. **Primera** *caption* |
-| **Tabular** | 312 atributos binarios sin escalar + 6 geométricos con `StandardScaler` **ajustado en *train*** | Mismo *scaler*, aplicado sin reajuste |
-
-: Especificación operativa del preprocesamiento {.striped .hover}
-:::
-
-Las seis variables geométricas son una propuesta propia, porque el enunciado pide posición, tamaño,
-aspecto y área sin dar fórmulas. Con la caja $(x, y, w, h)$ y la imagen de $W \times H$:
-
-$$
-\tfrac{x + w/2}{W},\quad \tfrac{y + h/2}{H},\quad \tfrac{w}{W},
-$$
-
-$$
-\tfrac{h}{H},\quad \tfrac{w}{h},\quad \tfrac{w\,h}{W\,H}.
-$$
-
-## 6. PyTorch `Dataset`/`DataLoader` frente a TensorFlow `tf.data`
+## 5. Implementación en PyTorch y TensorFlow
 
 ::: {.table-responsive}
 | Aspecto | PyTorch | TensorFlow |
 |---------|---------|------------|
-| Abstracción | Clase `CUBMultimodalTorch` (`Dataset`) con `__len__` y `__getitem__`; `make_torch_loaders` crea los `DataLoader` | `tf.data.Dataset.from_tensor_slices` con funciones `map`; `make_tf_datasets` crea los tres flujos |
-| Lectura y transformación | Muestra a muestra en Python, con `PIL` y `torchvision` | Grafo de TensorFlow con `tf.io` y `tf.image` |
-| Barajado y lotes | `shuffle` del `DataLoader` solo en *train* | `shuffle` solo en *train*, luego `batch` y `prefetch` |
-| Disposición de la imagen | `NCHW`: `(B, 3, 224, 224)` | `NHWC`: `(B, 224, 224, 3)` |
-| Entorno | `.venv`: PyTorch 2.11.0+cu128, torchvision 0.26.0+cu128 | `.venv-tf`: TensorFlow 2.21.0 |
+| Abstracción | Clase `CUBMultimodalDataset` (`__init__`, `__len__`, `__getitem__`) | `tf.data.Dataset` construido desde las tablas de cada partición |
+| Lectura y recorte | `PIL` dentro de `__getitem__` | `tf.io.read_file`, `decode_jpeg` y `crop_to_bounding_box` |
+| Transformaciones | `torchvision.transforms` | Funciones de `tf.image` dentro de `map` |
+| Mezcla y lotes | `DataLoader` con `shuffle` solo en *train* (generador con semilla 42), `batch_size=32`, `drop_last=False` | `shuffle` solo en *train*, `batch(32)` sin descartar el último lote y `prefetch(AUTOTUNE)` |
+| Imagen por lote | `(32, 3, 224, 224)` | `(32, 224, 224, 3)` |
 
 : Diferencias de implementación {.striped .hover}
 :::
 
-Los dos frameworks **no se importan en el mismo intérprete**. El notebook lanza la validación de
-cada uno en su entorno con `subprocess` y `MPLBACKEND=Agg`. Así evita conflictos de CUDA/cuDNN y del
-*backend* gráfico de Jupyter.
+Las dos versiones comparten la tabla maestra, las particiones, el vocabulario, `max_len` y el
+escalador. TensorFlow define sus propias constantes de normalización, así que su sección no depende
+de ejecutar antes la de PyTorch.
 
-## 7. Contrato de salida y *shapes*
-
-::: {.table-responsive}
-| Campo | PyTorch | TensorFlow | Contenido |
-|-------|---------|------------|-----------|
-| `image` | `(B, 3, 224, 224)` float32 | `(B, 224, 224, 3)` float32 | Imagen recortada y normalizada |
-| `input_ids` | `(B, 25)` entero | `(B, 25)` entero | Ids de una *caption*, con *padding* |
-| `lengths` | `(B,)` entero | `(B,)` entero | Longitud real de la secuencia |
-| `tabular` | `(B, 318)` float32 | `(B, 318)` float32 | 312 binarios + 6 geométricos |
-| `label` | `(B,)` entero | `(B,)` entero | Especie, 0–199 |
-| `image_id` | `(B,)` entero | `(B,)` entero | Trazabilidad del registro |
-
-: Contrato multimodal por lote {.striped .hover}
-:::
-
-Arrays persistidos en `artifacts/`: `tabular` `(11788, 318)`, `text_ids` `(11788, 10, 25)` y
-`text_lengths` `(11788, 10)`.
-
-## 8. Evidencias de validación
+## 6. Resultados y validaciones
 
 ::: {.grid}
 ::: {.card}
-#### 6 flujos
-*Train*, *val* y *test* en PyTorch y TensorFlow superaron el contrato con lotes de B = 16.
+#### 11.788 imágenes
+200 especies y 117.880 descripciones integradas.
 :::
 ::: {.card}
-#### 8 aprobadas · 1 omitida
-`pytest` **en cada entorno**. La prueba omitida es el *smoke test* del framework que no está instalado en ese entorno (`pytest.importorskip`).
+#### 5.394 · 600 · 5.794
+*Train*, *val* y *test*, con las 200 especies en cada partición.
 :::
 ::: {.card}
-#### 6.394 registros
-Comparación exhaustiva de *val* (600) y *test* (5.794) entre frameworks en sus campos deterministas.
+#### 318 variables tabulares
+312 atributos binarios y 6 variables geométricas estandarizadas.
 :::
 ::: {.card}
-#### 30 *bounding boxes*
-Ajustadas al lienzo y auditadas (0,254 % del conjunto). La pérdida máxima de área es 7,98 %.
+#### 2.079 tokens
+Vocabulario de *train*. Con `max_len` = 25 se trunca el 4,05 % de las descripciones de *train*.
 :::
 :::
 
 ::: {.table-responsive}
-| Verificación | Resultado documentado | Evidencia |
-|--------------|-----------------------|-----------|
-| Identificadores y clases | 11.788 `image_id` únicos; 200 especies en cada partición | Notebook, `logs/12_final_data_audit.log` |
-| Integridad | Valores finitos, atributos binarios, *padding* correcto tras la longitud real | Notebook, `logs/12_final_data_audit.log` |
-| Contrato PyTorch | *Train*/*val*/*test*: `Contrato multimodal: OK` | `logs/04_validate_pytorch.log` |
-| Contrato TensorFlow | *Train*/*val*/*test*: `Contrato multimodal: OK` | `logs/05_validate_tensorflow.log` |
-| Pruebas automatizadas | 8 passed, 1 skipped en `.venv` y en `.venv-tf` | `logs/02_pytest_torch.log`, `logs/13_pytest_tensorflow.log` |
-| Equivalencia entre frameworks | 600 + 5.794 registros: `image_id`, `label`, `input_ids` y `lengths` idénticos; `tabular` con `atol=1e-6`, `rtol=0` | `logs/11_compare_full.log` |
-| *Bounding boxes* | 30 casos recortados al lienzo, con la anotación original conservada | `logs/03_prepare.log` |
-| Notebook | 11/11 celdas de código ejecutadas, 0 errores guardados | Notebook canónico |
+| Campo | PyTorch | TensorFlow |
+|-------|---------|------------|
+| `image` | `(32, 3, 224, 224)` float32 | `(32, 224, 224, 3)` float32 |
+| `input_ids` | `(32, 25)` int64 | `(32, 25)` int64 |
+| `lengths` | `(32,)` int64 | `(32,)` int64 |
+| `tabular` | `(32, 318)` float32 | `(32, 318)` float32 |
+| `labels` | `(32,)` int64 | `(32,)` int64 |
+| Lotes *train* / *val* / *test* | 169 / 19 / 182 | 169 / 19 / 182 |
+| Tamaño del último lote | 18 / 24 / 2 | 18 / 24 / 2 |
 
-: Evidencias (los *logs* están en [`code/logs/`](https://github.com/Laverde97/phd-data-science-ai/tree/main/semesters/semester-01/deep-learning-1/workshops/workshop-01-cub200-multimodal/code/logs)) {.striped .hover}
+: Dimensiones de los lotes registradas en el notebook {.striped .hover}
 :::
-
-Cinco casos de *clipping* con mayor pérdida relativa de área:
 
 ::: {.table-responsive}
-| `image_id` | Especie (carpeta CUB-200-2011) | Pérdida relativa de área |
-|-----------:|--------------------------------|-------------------------:|
-| 5007 | `086.Pacific_Loon` | 7,98 % |
-| 1218 | `022.Chuck_will_Widow` | 7,27 % |
-| 9762 | `166.Golden_winged_Warbler` | 1,85 % |
-| 999 | `019.Gray_Catbird` | 1,61 % |
-| 960 | `018.Spotted_Catbird` | 1,57 % |
+| Verificación | Resultado registrado en el notebook |
+|--------------|--------------------------------------|
+| Particiones | Sin imágenes compartidas entre *train*, *val* y *test*; entre las tres suman las 11.788 imágenes |
+| Escalado | Media ≈ 0 y desviación 1 de las seis variables geométricas en *train* |
+| Texto | Ninguna descripción queda vacía tras la limpieza; codificación verificada para todas las imágenes |
+| Lote inspeccionado (ambos frameworks) | Valores finitos, atributos binarios, etiquetas entre 0 y 199, ids dentro del vocabulario, longitudes coherentes con el relleno |
+| Recorrido completo | Ambos frameworks procesan todas las observaciones de las tres particiones sin errores |
+| Comparación entre frameworks | En *val* y *test*, etiquetas, primera descripción, longitudes y atributos coinciden con las tablas y entre PyTorch y TensorFlow |
+| Estabilidad | El primer lote de *val* y de *test* es estable en lecturas repetidas |
 
-: Auditoría de *bounding boxes* (se omiten las fotografías) {.striped .hover}
+: Verificaciones {.striped .hover}
 :::
 
-## 9. Decisiones metodológicas y prevención de fuga de información
+::: {.callout-note}
+## Estado de ejecución
+- Las salidas guardadas provienen de una ejecución en Google Colab, con PyTorch 2.11.0 (CPU) y
+  TensorFlow 2.21.0.
+- Las celdas de descarga y verificación de la Parte 0 se actualizaron después de esa ejecución y
+  **no tienen salida guardada**. Todavía falta una ejecución completa del notebook desde cero.
+- La comparación entre frameworks no exige igualdad píxel a píxel de las imágenes, porque la
+  decodificación, la interpolación y las aumentaciones difieren.
+- En la edición pública se omitieron las salidas con fotografías y con el texto de las
+  descripciones. El código que las genera se conserva.
+:::
 
-- **Ajuste solo con *train*.** El vocabulario, el percentil de longitud (`max_len`) y el
-  `StandardScaler` de la geometría se calculan con *train* y se aplican sin reajuste a *val* y
-  *test*. En el notebook, la media de las seis geometrías estandarizadas en *train* es ≈ 0. Ese
-  resultado es coherente con el ajuste, pero no demuestra por sí solo que no haya fuga de información:
-  se complementa con la inspección del código de preparación.
-- **El *test* oficial queda intacto.** No se usa para ajustar nada ni para elegir hiperparámetros.
-- **Atributos por imagen, no por clase.** Se usan las anotaciones de cada imagen. Los rasgos
-  agregados por clase podrían filtrar la etiqueta.
-- **Aleatoriedad controlada por *split*.** La aumentación y la selección aleatoria de *caption*
-  solo ocurren en *train*. *Val* y *test* son deterministas, y por eso se pueden comparar entre frameworks.
-- ***Bounding boxes* fuera del lienzo.** La anotación original se conserva en el `manifest`. La
-  geometría se calcula sobre la intersección visible. Si la caja no intersecta la imagen, la preparación
-  se detiene.
-- **Trazabilidad.** `image_id` viaja en cada lote. `metadata.json` registra la semilla, los conteos,
-  las definiciones geométricas y las políticas de ajuste.
+## 7. Conclusiones
 
-## 10. Limitaciones, conclusiones y referencias
+Las salidas guardadas muestran que la preparación común y los dos pipelines producen lotes
+multimodales coherentes. Las particiones son disjuntas y cubren las 200 especies, y los parámetros
+de texto y de escalado se ajustan solo con entrenamiento. PyTorch y TensorFlow recorren todas las
+observaciones con las dimensiones esperadas y coinciden en los campos deterministas de validación y
+prueba.
 
-### Limitaciones
+Con ello, los datos quedan listos como entrada de una futura red de clasificación. Esta tarea no
+evalúa ningún modelo. El escenario supone disponer de descripciones y atributos anotados por
+personas además de la fotografía, y eso deberá considerarse al interpretar etapas posteriores.
 
-- La comparación entre frameworks cubre solo los **campos deterministas** exportados. **No**
-  verifica igualdad píxel a píxel de las imágenes, porque los decodificadores e interpoladores difieren.
-  Tampoco verifica la igualdad de las aumentaciones aleatorias de *train*.
-- `scripts/validate.py` inspecciona **un lote por *split***, no las 11.788 imágenes.
-- **No se certificó** una instalación reproducible desde cero en otro computador. Los entornos son
-  de WSL con GPU, y TensorFlow necesitó una corrección local del enlace `libcusolver.so.11`.
-- Los 312 atributos y las *bounding boxes* son anotaciones humanas del *benchmark*. No están
-  garantizados para fotografías nuevas, así que el pipeline no se puede desplegar directamente.
-- No hubo entrenamiento, métricas predictivas ni *benchmarking* de rendimiento.
+## 8. Referencias
 
-### Conclusiones
-
-El objetivo de ingeniería de datos se alcanzó según las evidencias disponibles. Hay seis pipelines
-válidos, particiones trazables, un contrato de lotes multimodales, auditorías de integridad y campos
-deterministas consistentes entre PyTorch y TensorFlow. La evidencia permite declarar el pipeline listo
-para la entrega de preprocesamiento. No lo declara listo para despliegue productivo ni para clasificar
-imágenes nuevas sin anotaciones.
-
-### Referencias
-
+- Enunciado: Hortúa, H. J. *Tarea multimodal CUB-200-2011*. Deep Learning I, Universidad El Bosque.
+  <https://github.com/MAESTRiA-ESTADiS-CIENCIA-DATOS-Bosque/Deep_Learning_I_Fundamentos/blob/main/tareas/Tarea_multimodal_CUB-200-2011.md>
 - Wah, C., Branson, S., Welinder, P., Perona, P. y Belongie, S. (2011). *The Caltech-UCSD
-  Birds-200-2011 Dataset*. California Institute of Technology. <https://data.caltech.edu/records/20098>
+  Birds-200-2011 Dataset* (CNS-TR-2011-001). California Institute of Technology.
+  <https://authors.library.caltech.edu/records/cvm3y-5hh21>
 - Reed, S., Akata, Z., Lee, H. y Schiele, B. (2016). *Learning Deep Representations of
-  Fine-Grained Visual Descriptions*. CVPR. <https://arxiv.org/abs/1605.05395>
+  Fine-Grained Visual Descriptions*. CVPR, 49–58. <https://arxiv.org/abs/1605.05395>
 - Xu, T. et al. (2018). *AttnGAN: Fine-Grained Text to Image Generation with Attentional
-  Generative Adversarial Networks*. CVPR. Repositorio: <https://github.com/taoxugit/AttnGAN>
+  Generative Adversarial Networks*. CVPR. Distribución de las descripciones:
+  <https://github.com/taoxugit/AttnGAN>
 - PyTorch. *torch.utils.data*. <https://pytorch.org/docs/stable/data.html>
 - TensorFlow. *tf.data: Build TensorFlow input pipelines*. <https://www.tensorflow.org/guide/data>
 
-::: {.callout-note collapse="true"}
-## Qué se publica y qué no
-Este sitio publica una **distribución pública ligera** con el código fuente, la documentación,
-los *logs*, los metadatos, la edición pública del notebook y la edición pública del informe.
-
-No se publican las fotografías de CUB-200-2011 ni las *captions*. Tampoco los artefactos derivados de ellas o de
-las anotaciones (`manifest.csv`, `tabular.npy`, `text_ids.npy`, `vocab.json`, firmas `.npz`), los
-entornos virtuales ni el proyecto local completo. Caltech indica que no posee los derechos de las
-fotografías y restringe su uso a la investigación y la educación no comercial. Los términos de los
-datos de las *captions* no son explícitos.
-
-El inventario completo, con hashes SHA-256, está en
-[`code/PUBLICACION.md`](https://github.com/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/deep-learning-1/workshops/workshop-01-cub200-multimodal/code/PUBLICACION.md).
+::: {.callout-important}
+## Autoría y datos
+- **Enunciado:** Héctor Javier Hortúa, PhD. Se enlaza y no se redistribuye.
+- **Solución:** notebook, código y explicaciones de **Claudio de la Rosa** y **Juan Sebastián
+  Laverde Chunza**.
+- **Datos:** CUB-200-2011 y las descripciones de Reed et al. son de terceros. No se publican en
+  este sitio; el notebook los descarga de sus fuentes al ejecutarse.
 :::
 
 [← Talleres y tareas](../index.qmd) · [Módulo Deep Learning I](../../index.qmd)

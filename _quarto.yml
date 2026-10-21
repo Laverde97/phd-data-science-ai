@@ -12,8 +12,6 @@ project:
     - "!semesters/semester-01/machine-learning/workshops/taller-final/informe_taller_final_clinica.qmd"
     # Fuentes de las guías de la Clase 02 de Deep Learning I: se compilan fuera del sitio (ejecutan código).
     - "!semesters/semester-01/deep-learning-1/week-02/class-02/guides-source/"
-    # Fuente del informe de la Tarea 01 de Deep Learning I: se compila fuera del sitio; se publica como PDF estático.
-    - "!semesters/semester-01/deep-learning-1/workshops/workshop-01-cub200-multimodal/report-source/"
   resources:
     - "semesters/semester-01/machine-learning/workshops/workshop-03-regresion-lineal-viviendas.ipynb"
     - "semesters/semester-01/machine-learning/workshops/workshop-03-regresion-lineal-viviendas.qmd"
@@ -29,9 +27,8 @@ project:
     - "semesters/semester-01/deep-learning-1/week-02/class-02/resources/guides/02_Guia_Academica_Clasificacion_PyTorch.pdf"
     - "semesters/semester-01/deep-learning-1/week-02/class-02/resources/guides/03_Guia_Academica_Pipeline_MNIST_TensorFlow.pdf"
     - "semesters/semester-01/deep-learning-1/week-02/class-02/resources/guides/04_Guia_Academica_Series_Temporales_Lightning_Keras_JAX.pdf"
-    # Deep Learning I · Tarea 01: notebook e informe en edición pública (estáticos; el notebook no se ejecuta).
+    # Deep Learning I · Tarea 01: notebook oficial de Colab en edición pública (estático; no se ejecuta).
     - "semesters/semester-01/deep-learning-1/workshops/workshop-01-cub200-multimodal/workshop-01-cub200-multimodal.ipynb"
-    - "semesters/semester-01/deep-learning-1/workshops/workshop-01-cub200-multimodal/workshop-01-cub200-multimodal-informe.pdf"
 
 website:
   title: "PhD · Data Science & Artificial Intelligence"
