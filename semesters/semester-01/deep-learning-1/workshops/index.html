@@ -47,9 +47,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting-5c1318cf63eba56dbef7ba16bc7d56f5.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../../site_libs/bootstrap/bootstrap-e707b0bcde5de7de326541d259ea9d2c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../../../site_libs/bootstrap/bootstrap-dark-c120618f3b1ab0249300a6f174e3d2b2.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../../../site_libs/bootstrap/bootstrap-e707b0bcde5de7de326541d259ea9d2c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../../../site_libs/bootstrap/bootstrap-4f404e84c5aecc4f08f914ee079c27bc.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../../site_libs/bootstrap/bootstrap-dark-1c510ed1d2a1fda4e5ca9b8d9f6ee855.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../../../site_libs/bootstrap/bootstrap-4f404e84c5aecc4f08f914ee079c27bc.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -331,12 +331,8 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#convención-de-nombres" id="toc-convención-de-nombres" class="nav-link active" data-scroll-target="#convención-de-nombres">Convención de nombres</a></li>
-  <li><a href="#inventario" id="toc-inventario" class="nav-link" data-scroll-target="#inventario">Inventario</a></li>
-  <li><a href="#tarea-01-pipeline-de-datos-multimodal-con-cub-200-2011" id="toc-tarea-01-pipeline-de-datos-multimodal-con-cub-200-2011" class="nav-link" data-scroll-target="#tarea-01-pipeline-de-datos-multimodal-con-cub-200-2011">Tarea 01 · Pipeline de datos multimodal con CUB-200-2011</a>
-  <ul class="collapse">
-  <li><a href="#solución-propia" id="toc-solución-propia" class="nav-link" data-scroll-target="#solución-propia">Solución propia</a></li>
-  </ul></li>
+  <li><a href="#inventario" id="toc-inventario" class="nav-link active" data-scroll-target="#inventario">Inventario</a></li>
+  <li><a href="#tarea-01-pipeline-de-datos-multimodal-con-cub-200-2011" id="toc-tarea-01-pipeline-de-datos-multimodal-con-cub-200-2011" class="nav-link" data-scroll-target="#tarea-01-pipeline-de-datos-multimodal-con-cub-200-2011">Tarea 01 · Pipeline de datos multimodal con CUB-200-2011</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/deep-learning-1/workshops/index.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></nav>
     </div>
@@ -364,11 +360,7 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Tareas que propone el docente en el curso, junto con las soluciones propias cuando estén listas. Los <strong>enunciados</strong> son del docente y se enlazan a su repositorio. Las <strong>soluciones</strong> (código, notebooks e informes) son trabajo académico propio y se publican en esta carpeta.</p>
-<section id="convención-de-nombres" class="level2">
-<h2 class="anchored" data-anchor-id="convención-de-nombres">Convención de nombres</h2>
-<p>Cada solución propia vive en su carpeta <code>workshop-NN-tema/</code>, con un prefijo de dos dígitos en orden cronológico. Dentro, sus archivos principales repiten ese nombre: <code>workshop-NN-tema.ipynb</code> y <code>workshop-NN-tema-informe.pdf</code>. Si la solución es un notebook, incluye su badge <strong>Open in Colab</strong>.</p>
-</section>
+<p>Tareas que propone el docente en el curso, junto con las soluciones cuando estén listas. Los <strong>enunciados</strong> son del docente y se enlazan a su repositorio. Las <strong>soluciones</strong> se publican en esta carpeta como notebooks ejecutables en Google Colab, con una página de resumen.</p>
 <section id="inventario" class="level2">
 <h2 class="anchored" data-anchor-id="inventario">Inventario</h2>
 <div class="table-responsive">
@@ -378,12 +370,9 @@ ul.task-list li input[type="checkbox"] {
 <tr class="header">
 <th style="text-align: center;">#</th>
 <th style="text-align: left;">Tarea</th>
-<th style="text-align: center;">Publicada</th>
+<th style="text-align: left;">Autores</th>
+<th style="text-align: left;">Frameworks</th>
 <th style="text-align: center;">Enunciado</th>
-<th style="text-align: center;">Notebook</th>
-<th style="text-align: center;">Colab</th>
-<th style="text-align: center;">PDF</th>
-<th style="text-align: center;">Código</th>
 <th style="text-align: center;">Estado</th>
 </tr>
 </thead>
@@ -391,27 +380,34 @@ ul.task-list li input[type="checkbox"] {
 <tr class="odd">
 <td style="text-align: center;">01</td>
 <td style="text-align: left;"><a href="../../../../semesters/semester-01/deep-learning-1/workshops/workshop-01-cub200-multimodal/index.html">Pipeline de datos multimodal con CUB-200-2011</a></td>
-<td style="text-align: center;">09/10/2026</td>
+<td style="text-align: left;">Claudio de la Rosa · Juan Sebastián Laverde Chunza</td>
+<td style="text-align: left;">PyTorch · TensorFlow</td>
 <td style="text-align: center;"><a href="https://github.com/MAESTRiA-ESTADiS-CIENCIA-DATOS-Bosque/Deep_Learning_I_Fundamentos/blob/main/tareas/Tarea_multimodal_CUB-200-2011.md">GitHub</a></td>
-<td style="text-align: center;"><a href="workshop-01-cub200-multimodal/workshop-01-cub200-multimodal.ipynb" download="workshop-01-cub200-multimodal.ipynb">.ipynb</a></td>
-<td style="text-align: center;"><a href="https://colab.research.google.com/github/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/deep-learning-1/workshops/workshop-01-cub200-multimodal/workshop-01-cub200-multimodal.ipynb">Solo lectura</a>*</td>
-<td style="text-align: center;"><a href="workshop-01-cub200-multimodal/workshop-01-cub200-multimodal-informe.pdf" target="_blank" rel="noopener">Informe</a></td>
-<td style="text-align: center;"><a href="https://github.com/Laverde97/phd-data-science-ai/tree/main/semesters/semester-01/deep-learning-1/workshops/workshop-01-cub200-multimodal/code">GitHub</a></td>
-<td style="text-align: center;"><span class="status-done">Solución desarrollada y validada</span></td>
+<td style="text-align: center;"><span class="status-done">Implementada y verificada en Colab</span></td>
 </tr>
 </tbody>
 </table>
 </div>
-<p>* El notebook se ejecutó en WSL con dos entornos independientes y datos locales. Colab sirve para consultarlo, pero no lo ejecuta tal cual.</p>
 </section>
 <section id="tarea-01-pipeline-de-datos-multimodal-con-cub-200-2011" class="level2">
 <h2 class="anchored" data-anchor-id="tarea-01-pipeline-de-datos-multimodal-con-cub-200-2011">Tarea 01 · Pipeline de datos multimodal con CUB-200-2011</h2>
+<div class="grid">
+<div class="card study-card">
+<p><span class="study-kicker"><span class="bi bi-diagram-3" aria-hidden="true"></span> Tarea 01 · Notebook de Google Colab</span></p>
+<section id="pipeline-multimodal-cub-200-2011-en-pytorch-y-tensorflow" class="level3">
+<h3 class="anchored" data-anchor-id="pipeline-multimodal-cub-200-2011-en-pytorch-y-tensorflow">Pipeline multimodal CUB-200-2011 en PyTorch y TensorFlow</h3>
+<p>Prepara imagen, texto y 318 variables tabulares de CUB-200-2011, y entrega lotes de entrenamiento, validación y prueba con <code>Dataset</code>/<code>DataLoader</code> y con <code>tf.data</code>. No entrena modelos.</p>
+<p><span class="study-meta">Autores: Claudio de la Rosa · Juan Sebastián Laverde Chunza</span></p>
+<div class="study-actions">
+<p><a href="../../../../semesters/semester-01/deep-learning-1/workshops/workshop-01-cub200-multimodal/index.html" aria-label="Ver la página detallada de la Tarea 01">Ver la tarea</a> <a href="https://colab.research.google.com/github/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/deep-learning-1/workshops/workshop-01-cub200-multimodal/workshop-01-cub200-multimodal.ipynb" aria-label="Abrir el notebook de la Tarea 01 en Google Colab">Abrir en Colab</a> <a href="https://github.com/MAESTRiA-ESTADiS-CIENCIA-DATOS-Bosque/Deep_Learning_I_Fundamentos/blob/main/tareas/Tarea_multimodal_CUB-200-2011.md" aria-label="Ver el enunciado original de la Tarea 01">Enunciado</a></p>
+</div>
+</section>
+</div>
+</div>
 <p>Resumen del enunciado del docente (ver el <a href="https://github.com/MAESTRiA-ESTADiS-CIENCIA-DATOS-Bosque/Deep_Learning_I_Fundamentos/blob/main/tareas/Tarea_multimodal_CUB-200-2011.md">original</a>):</p>
 <ul>
-<li><strong>Objetivo:</strong> construir el pipeline de datos de una base multimodal (imagen, texto y datos tabulares) y entregar DataLoaders de <em>train</em>, <em>validation</em> y <em>test</em> en <strong>PyTorch</strong> (<code>Dataset</code> + <code>DataLoader</code>) y en <strong>TensorFlow</strong> (<code>tf.data</code>). En esta tarea <strong>no</strong> se entrena ningún modelo. El enunciado dice que el pipeline será la base de las tareas siguientes.</li>
-<li><strong>Datos:</strong> <a href="https://www.vision.caltech.edu/datasets/cub_200_2011/">CUB-200-2011</a> (Wah et al., 2011): 11 788 imágenes de 200 especies de aves, con <em>bounding boxes</em> y 312 atributos binarios. Las <em>captions</em> son de <a href="https://arxiv.org/abs/1605.05395">Reed et al.&nbsp;(CVPR 2016)</a>, con 10 descripciones por imagen.</li>
-<li><strong>Contenido de cada batch:</strong> imagen normalizada de 224 × 224, texto como ids de palabras con su longitud real, 318 atributos tabulares (312 binarios + 6 de geometría escalados) y la etiqueta de especie (0–199).</li>
-<li><strong>Splits:</strong> el <em>train</em> oficial se divide 90/10 en <em>train</em> y <em>validation</em>, estratificado por especie (<code>seed=42</code>). El <em>test</em> oficial completo queda como <em>test</em>.</li>
+<li><strong>Objetivo:</strong> construir el pipeline de datos de una base multimodal (imagen, texto y datos tabulares) y entregar flujos de <em>train</em>, <em>validation</em> y <em>test</em> en <strong>PyTorch</strong> (<code>Dataset</code> + <code>DataLoader</code>) y en <strong>TensorFlow</strong> (<code>tf.data</code>). En esta tarea <strong>no</strong> se entrena ningún modelo.</li>
+<li><strong>Datos:</strong> <a href="https://www.vision.caltech.edu/datasets/cub_200_2011/">CUB-200-2011</a> (Wah et al., 2011): 11.788 imágenes de 200 especies de aves, con <em>bounding boxes</em> y 312 atributos binarios. Las descripciones son de <a href="https://arxiv.org/abs/1605.05395">Reed et al.&nbsp;(CVPR 2016)</a>, con diez por imagen.</li>
 <li><strong>Regla de preprocesamiento:</strong> todo lo que se aprende de los datos (vocabulario, <em>scaler</em>, <code>max_len</code>) se ajusta solo con <em>train</em>.</li>
 </ul>
 <div class="callout callout-style-default callout-note callout-titled">
@@ -420,34 +416,18 @@ ul.task-list li input[type="checkbox"] {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Enunciado, dataset y solución
+<span class="screen-reader-only">Note</span>Enunciado, datos y solución
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>El <strong>enunciado</strong> es del docente. El repositorio fuente no tiene licencia explícita, así que el original se enlaza y hay una copia verbatim en almacenamiento privado.</p>
-<p>El <strong>dataset</strong> CUB-200-2011 (~1,1 GB) y las <em>captions</em> no se guardan en este repositorio. Se descargan de las fuentes que indica el enunciado (<a href="https://data.caltech.edu/records/20098">Caltech Data</a> y el <a href="https://github.com/reedscot/cvpr2016">repositorio de Reed</a>).</p>
-<p>La <strong>solución propia</strong> está desarrollada y validada. Se publica como edición pública: el notebook sin fotografías ni <em>captions</em>, el informe técnico en PDF y el código fuente. Los detalles están en su <a href="../../../../semesters/semester-01/deep-learning-1/workshops/workshop-01-cub200-multimodal/index.html">página</a>.</p>
-</div>
-</div>
-<section id="solución-propia" class="level3">
-<h3 class="anchored" data-anchor-id="solución-propia">Solución propia</h3>
-<div class="grid">
-<div class="card study-card">
-<p><span class="study-kicker"><span class="bi bi-diagram-3" aria-hidden="true"></span> Tarea 01 · Solución desarrollada y validada</span></p>
-<section id="pipeline-multimodal-cub-200-2011-en-pytorch-y-tensorflow" class="level3">
-<h3 class="anchored" data-anchor-id="pipeline-multimodal-cub-200-2011-en-pytorch-y-tensorflow">Pipeline multimodal CUB-200-2011 en PyTorch y TensorFlow</h3>
-<p>Seis flujos funcionales (<em>train</em>, <em>validation</em> y <em>test</em> por framework) que unen imagen, texto y 318 atributos tabulares. Ocho pruebas aprobadas y una omitida por entorno, y 6.394 registros de <em>val</em>/<em>test</em> comparados entre frameworks. No se entrenó ningún modelo.</p>
-<p><span class="study-meta">Notebook · Informe PDF · Código fuente</span></p>
-<div class="study-actions">
-<p><a href="../../../../semesters/semester-01/deep-learning-1/workshops/workshop-01-cub200-multimodal/index.html" aria-label="Ver la página detallada de la solución de la Tarea 01">Ver la solución</a> <a href="workshop-01-cub200-multimodal/workshop-01-cub200-multimodal-informe.pdf" target="_blank" rel="noopener" aria-label="Ver el informe técnico de la Tarea 01 (se abre en una pestaña nueva)">Informe PDF</a> <a href="https://github.com/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/deep-learning-1/workshops/workshop-01-cub200-multimodal/workshop-01-cub200-multimodal.ipynb" aria-label="Ver el notebook de la Tarea 01 en GitHub">Notebook</a> <a href="https://github.com/Laverde97/phd-data-science-ai/tree/main/semesters/semester-01/deep-learning-1/workshops/workshop-01-cub200-multimodal/code" aria-label="Explorar el código fuente de la Tarea 01 en GitHub">Código</a></p>
-</div>
-</section>
+<p>El <strong>enunciado</strong> es del docente Héctor Javier Hortúa, PhD. Se enlaza y no se redistribuye.</p>
+<p>El <strong>dataset</strong> CUB-200-2011 y las descripciones no se guardan en este repositorio. El notebook los descarga de sus fuentes al ejecutarse en Colab.</p>
+<p>La <strong>solución</strong> es de Claudio de la Rosa y Juan Sebastián Laverde Chunza. Su <a href="../../../../semesters/semester-01/deep-learning-1/workshops/workshop-01-cub200-multimodal/index.html">página</a> resume la metodología y los resultados.</p>
 </div>
 </div>
 <p><a href="../../../../semesters/semester-01/deep-learning-1/index.html">← Módulo Deep Learning I</a></p>
 
 
-</section>
 </section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
