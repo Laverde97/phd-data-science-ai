@@ -27,7 +27,7 @@ project:
     - "semesters/semester-01/deep-learning-1/week-02/class-02/resources/guides/02_Guia_Academica_Clasificacion_PyTorch.pdf"
     - "semesters/semester-01/deep-learning-1/week-02/class-02/resources/guides/03_Guia_Academica_Pipeline_MNIST_TensorFlow.pdf"
     - "semesters/semester-01/deep-learning-1/week-02/class-02/resources/guides/04_Guia_Academica_Series_Temporales_Lightning_Keras_JAX.pdf"
-    # Deep Learning I · Tarea 01: notebook oficial de Colab en edición pública (estático; no se ejecuta).
+    # Deep Learning I · Tarea 01: notebook original con salidas (estático; no se ejecuta).
     - "semesters/semester-01/deep-learning-1/workshops/workshop-01-cub200-multimodal/workshop-01-cub200-multimodal.ipynb"
 
 website:

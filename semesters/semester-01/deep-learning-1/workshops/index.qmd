@@ -30,7 +30,8 @@ Esta tarea prepara los datos; no entrena modelos.
 :::
 
 **Fuentes y atribución:** el enunciado pertenece al docente **Héctor Javier Hortúa, PhD**.
-Las fotografías de CUB-200-2011 y las descripciones de Reed et al. se obtienen desde
-sus fuentes al ejecutar el notebook; no se redistribuyen en este repositorio.
+El notebook muestra, con fines académicos, algunas fotografías de CUB-200-2011 y descripciones
+de Reed et al. como ejemplos en sus salidas. El dataset completo no se redistribuye: se descarga
+desde sus fuentes al ejecutar el notebook.
 
 [← Módulo Deep Learning I](../index.qmd)
