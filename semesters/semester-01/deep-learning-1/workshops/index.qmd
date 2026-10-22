@@ -1,66 +1,36 @@
 ---
 title: "Talleres y tareas"
 subtitle: "Deep Learning I · Semestre 1 · Módulo 2"
+description: "Tareas de Deep Learning I con acceso al desarrollo académico, al notebook de Google Colab y al enunciado original."
 ---
 
-Tareas que propone el docente en el curso, junto con las soluciones cuando estén listas. Los
-**enunciados** son del docente y se enlazan a su repositorio. Las **soluciones** se publican en esta
-carpeta como notebooks ejecutables en Google Colab, con una página de resumen.
+Soluciones de las tareas de **Deep Learning I**. Cada entrega tiene una página con su
+desarrollo y un notebook ejecutable en Google Colab.
 
-## Inventario
-
-::: {.table-responsive}
-| # | Tarea | Autores | Frameworks | Enunciado | Estado |
-| :--: | :--- | :--- | :--- | :--: | :--: |
-| 01 | [Pipeline de datos multimodal con CUB-200-2011](workshop-01-cub200-multimodal/index.qmd) | Claudio de la Rosa · Juan Sebastián Laverde Chunza | PyTorch · TensorFlow | [GitHub][t1md] | [Implementada y verificada en Colab]{.status-done} |
-
-: Tareas del módulo {.striped .hover}
-:::
-
-[t1md]: https://github.com/MAESTRiA-ESTADiS-CIENCIA-DATOS-Bosque/Deep_Learning_I_Fundamentos/blob/main/tareas/Tarea_multimodal_CUB-200-2011.md
-
-## Tarea 01 · Pipeline de datos multimodal con CUB-200-2011
+## Tarea disponible
 
 ::: {.grid}
 ::: {.card .study-card}
-[[]{.bi .bi-diagram-3 aria-hidden="true"} Tarea 01 · Notebook de Google Colab]{.study-kicker}
+[[]{.bi .bi-journal-code aria-hidden="true"} Tarea 01 · Google Colab]{.study-kicker}
 
-### Pipeline multimodal CUB-200-2011 en PyTorch y TensorFlow
-Prepara imagen, texto y 318 variables tabulares de CUB-200-2011, y entrega lotes de
-entrenamiento, validación y prueba con `Dataset`/`DataLoader` y con `tf.data`. No entrena modelos.
+### Pipeline de datos multimodal con CUB-200-2011
 
-[Autores: Claudio de la Rosa · Juan Sebastián Laverde Chunza]{.study-meta}
+Preparación de **imágenes, descripciones y 318 variables tabulares** para construir
+pipelines de entrenamiento, validación y prueba en **PyTorch** y **TensorFlow**.
+Esta tarea prepara los datos; no entrena modelos.
+
+[**Autores:** Claudio de la Rosa · Juan Sebastián Laverde Chunza]{.study-meta}
 
 ::: {.study-actions}
-[Ver la tarea](workshop-01-cub200-multimodal/index.qmd){aria-label="Ver la página detallada de la Tarea 01"}
-[Abrir en Colab](https://colab.research.google.com/github/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/deep-learning-1/workshops/workshop-01-cub200-multimodal/workshop-01-cub200-multimodal.ipynb){aria-label="Abrir el notebook de la Tarea 01 en Google Colab"}
-[Enunciado][t1md]{aria-label="Ver el enunciado original de la Tarea 01"}
+[Ver desarrollo y resultados](workshop-01-cub200-multimodal/index.qmd){aria-label="Ver el desarrollo académico y los resultados de la Tarea 01"}
+[Abrir en Google Colab](https://colab.research.google.com/github/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/deep-learning-1/workshops/workshop-01-cub200-multimodal/workshop-01-cub200-multimodal.ipynb){aria-label="Ejecutar el notebook oficial de la Tarea 01 en Google Colab"}
+[Enunciado original](https://github.com/MAESTRiA-ESTADiS-CIENCIA-DATOS-Bosque/Deep_Learning_I_Fundamentos/blob/main/tareas/Tarea_multimodal_CUB-200-2011.md){aria-label="Consultar el enunciado original del docente"}
 :::
 :::
 :::
 
-Resumen del enunciado del docente (ver el [original][t1md]):
-
-- **Objetivo:** construir el pipeline de datos de una base multimodal (imagen, texto y datos
-  tabulares) y entregar flujos de *train*, *validation* y *test* en **PyTorch**
-  (`Dataset` + `DataLoader`) y en **TensorFlow** (`tf.data`). En esta tarea **no** se entrena
-  ningún modelo.
-- **Datos:** [CUB-200-2011](https://www.vision.caltech.edu/datasets/cub_200_2011/)
-  (Wah et al., 2011): 11.788 imágenes de 200 especies de aves, con *bounding boxes* y 312
-  atributos binarios. Las descripciones son de
-  [Reed et al. (CVPR 2016)](https://arxiv.org/abs/1605.05395), con diez por imagen.
-- **Regla de preprocesamiento:** todo lo que se aprende de los datos (vocabulario, *scaler*,
-  `max_len`) se ajusta solo con *train*.
-
-::: {.callout-note}
-## Enunciado, datos y solución
-El **enunciado** es del docente Héctor Javier Hortúa, PhD. Se enlaza y no se redistribuye.
-
-El **dataset** CUB-200-2011 y las descripciones no se guardan en este repositorio. El notebook los
-descarga de sus fuentes al ejecutarse en Colab.
-
-La **solución** es de Claudio de la Rosa y Juan Sebastián Laverde Chunza. Su
-[página](workshop-01-cub200-multimodal/index.qmd) resume la metodología y los resultados.
-:::
+**Fuentes y atribución:** el enunciado pertenece al docente **Héctor Javier Hortúa, PhD**.
+Las fotografías de CUB-200-2011 y las descripciones de Reed et al. se obtienen desde
+sus fuentes al ejecutar el notebook; no se redistribuyen en este repositorio.
 
 [← Módulo Deep Learning I](../index.qmd)
