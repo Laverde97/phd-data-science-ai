@@ -1,33 +1,22 @@
 ---
 title: "Talleres y tareas"
 subtitle: "Deep Learning I · Semestre 1 · Módulo 2"
-description: "Tareas de Deep Learning I con acceso al desarrollo académico, al notebook de Google Colab y al enunciado original."
+description: "Tareas de Deep Learning I con acceso al desarrollo académico, al notebook de Google Colab, a su PDF completo y al enunciado original."
 ---
 
 Soluciones de las tareas de **Deep Learning I**. Cada entrega tiene una página con su
-desarrollo y un notebook ejecutable en Google Colab.
+desarrollo, un notebook ejecutable en Google Colab y su PDF completo con todas las salidas.
 
 ## Tarea disponible
 
-::: {.grid}
-::: {.card .study-card}
-[[]{.bi .bi-journal-code aria-hidden="true"} Tarea 01 · Google Colab]{.study-kicker}
-
-### Pipeline de datos multimodal con CUB-200-2011
-
-Preparación de **imágenes, descripciones y 318 variables tabulares** para construir
-pipelines de entrenamiento, validación y prueba en **PyTorch** y **TensorFlow**.
-Esta tarea prepara los datos; no entrena modelos.
-
-[**Autores:** Claudio de la Rosa · Juan Sebastián Laverde Chunza]{.study-meta}
-
-::: {.study-actions}
-[Ver desarrollo y resultados](workshop-01-cub200-multimodal/index.qmd){aria-label="Ver el desarrollo académico y los resultados de la Tarea 01"}
-[Abrir en Google Colab](https://colab.research.google.com/github/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/deep-learning-1/workshops/workshop-01-cub200-multimodal/workshop-01-cub200-multimodal.ipynb){aria-label="Ejecutar el notebook oficial de la Tarea 01 en Google Colab"}
-[Enunciado original](https://github.com/MAESTRiA-ESTADiS-CIENCIA-DATOS-Bosque/Deep_Learning_I_Fundamentos/blob/main/tareas/Tarea_multimodal_CUB-200-2011.md){aria-label="Consultar el enunciado original del docente"}
+::: {.table-responsive .notebook-table tabindex="0" role="region" aria-label="Tarea 01 de Deep Learning I: desarrollo, notebook de Google Colab, PDF completo y enunciado"}
+| Tarea | Autores | Google Colab | PDF | Enunciado |
+|-------|---------|--------------|-----|-----------|
+| [**Tarea 01 — Pipeline multimodal CUB-200-2011**](workshop-01-cub200-multimodal/index.qmd){aria-label="Ver el desarrollo académico y los resultados de la Tarea 01"}<br>Imágenes, descripciones y 318 variables tabulares para pipelines en PyTorch y TensorFlow (prepara los datos; no entrena modelos). | Claudio de la Rosa · Juan Sebastián Laverde Chunza | [Abrir Colab](https://colab.research.google.com/github/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/deep-learning-1/workshops/workshop-01-cub200-multimodal/workshop-01-cub200-multimodal.ipynb){aria-label="Ejecutar el notebook oficial de la Tarea 01 en Google Colab"} | [[]{.bi .bi-file-earmark-pdf aria-hidden="true"} Ver PDF](workshop-01-cub200-multimodal/Tarea_01_Deep_Learning_I_CUB200_Notebook_Completo.pdf){target="_blank" rel="noopener" aria-label="Ver el PDF completo del notebook de la Tarea 01 (se abre en una pestaña nueva)"} · [[]{.bi .bi-download aria-hidden="true"} Descargar PDF](workshop-01-cub200-multimodal/Tarea_01_Deep_Learning_I_CUB200_Notebook_Completo.pdf){download="Tarea_01_Deep_Learning_I_CUB200_Notebook_Completo.pdf" aria-label="Descargar el PDF completo del notebook de la Tarea 01"} | [Ver enunciado](https://github.com/MAESTRiA-ESTADiS-CIENCIA-DATOS-Bosque/Deep_Learning_I_Fundamentos/blob/main/tareas/Tarea_multimodal_CUB-200-2011.md){aria-label="Consultar el enunciado original del docente"} |
 :::
-:::
-:::
+
+El PDF es la versión estática del mismo notebook de Colab, con todo el código, las fotografías,
+las tablas y las salidas de ejecución; no es un trabajo independiente.
 
 **Fuentes y atribución:** el enunciado pertenece al docente **Héctor Javier Hortúa, PhD**.
 El notebook muestra, con fines académicos, algunas fotografías de CUB-200-2011 y descripciones
