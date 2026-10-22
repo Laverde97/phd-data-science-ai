@@ -1063,14 +1063,14 @@
     "href": "semesters/semester-01/deep-learning-1/workshops/index.html",
     "title": "Talleres y tareas",
     "section": "",
-    "text": "Soluciones de las tareas de Deep Learning I. Cada entrega tiene una página con su desarrollo, un notebook ejecutable en Google Colab y su PDF completo con todas las salidas."
+    "text": "Esta página reúne las actividades académicas de Deep Learning I —exposiciones y tareas— con sus respectivos recursos: el artículo de referencia de cada exposición y, para cada tarea, una página con su desarrollo, un notebook ejecutable en Google Colab, su PDF completo con todas las salidas y el enunciado original."
   },
   {
-    "objectID": "semesters/semester-01/deep-learning-1/workshops/index.html#tarea-disponible",
-    "href": "semesters/semester-01/deep-learning-1/workshops/index.html#tarea-disponible",
+    "objectID": "semesters/semester-01/deep-learning-1/workshops/index.html#actividades-académicas",
+    "href": "semesters/semester-01/deep-learning-1/workshops/index.html#actividades-académicas",
     "title": "Talleres y tareas",
-    "section": "Tarea disponible",
-    "text": "Tarea disponible\n\n\n\n\nTarea\nAutores\nGoogle Colab\nPDF\nEnunciado\n\n\n\n\nTarea 01 — Pipeline multimodal CUB-200-2011Imágenes, descripciones y 318 variables tabulares para pipelines en PyTorch y TensorFlow (prepara los datos; no entrena modelos).\nClaudio de la Rosa · Juan Sebastián Laverde Chunza\nAbrir Colab\n Ver PDF ·  Descargar PDF\nVer enunciado\n\n\n\n\nEl PDF es la versión estática del mismo notebook de Colab, con todo el código, las fotografías, las tablas y las salidas de ejecución; no es un trabajo independiente.\nFuentes y atribución: el enunciado pertenece al docente Héctor Javier Hortúa, PhD. El notebook muestra, con fines académicos, algunas fotografías de CUB-200-2011 y descripciones de Reed et al. como ejemplos en sus salidas. El dataset completo no se redistribuye: se descarga desde sus fuentes al ejecutar el notebook.\n← Módulo Deep Learning I"
+    "section": "Actividades académicas",
+    "text": "Actividades académicas\n\n\n\n\nActividad\nAutores\nGoogle Colab\nPDF\nEnlace\nEnunciado\n\n\n\n\nExposición — Liquid Time-Constant Networks: de las ecuaciones diferenciales a una implementación moderna29 de octubre de 2026 · Exposición programada\nClaudio de la Rosa · Juan Sebastián Laverde Chunza\n—\n—\nVer artículo\n—\n\n\nTarea 01 — Pipeline multimodal CUB-200-2011Imágenes, descripciones y 318 variables tabulares para pipelines en PyTorch y TensorFlow (prepara los datos; no entrena modelos).\nClaudio de la Rosa · Juan Sebastián Laverde Chunza\nAbrir Colab\n Ver PDF ·  Descargar PDF\n—\nVer enunciado\n\n\n\n\nExposición LTC: Claudio de la Rosa y Juan Sebastián Laverde Chunza son los expositores. La exposición presenta un artículo de Latent Frontiers que ofrece una lectura guiada de Liquid Time-constant Networks (Hasani, Lechner, Amini, Rus y Grosu, AAAI 2021); la investigación original sobre LTC pertenece a sus autores.\nTarea 01: el PDF es la versión estática del mismo notebook de Colab, con todo el código, las fotografías, las tablas y las salidas de ejecución; no es un trabajo independiente.\nFuentes y atribución de la Tarea 01: el enunciado pertenece al docente Héctor Javier Hortúa, PhD. El notebook muestra, con fines académicos, algunas fotografías de CUB-200-2011 y descripciones de Reed et al. como ejemplos en sus salidas. El dataset completo no se redistribuye: se descarga desde sus fuentes al ejecutar el notebook.\n← Módulo Deep Learning I"
   },
   {
     "objectID": "semesters/semester-01/index.html",
