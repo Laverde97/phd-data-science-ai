@@ -54,8 +54,10 @@ website:
     left:
       - href: index.qmd
         text: Inicio
-      - href: semesters/semester-01/index.qmd
-        text: Semestre 1
+      - text: Semestres
+        menu:
+          - href: semesters/semester-01/index.qmd
+            text: Semestre 1
       - href: research/index.qmd
         text: Investigación
     right:
