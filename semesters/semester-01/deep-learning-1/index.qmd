@@ -144,5 +144,6 @@ series temporales de la clase 02 también necesita `sunspots.csv`.
   **Juan Sebastián Laverde Chunza**. La solución de la Tarea 01 es de autoría conjunta de
   **Claudio de la Rosa** y **Juan Sebastián Laverde Chunza**.
 - **Datos de terceros.** Los datasets que usan las tareas, como CUB-200-2011 y las *captions* de
-  Reed et al., no se publican en este sitio. Se citan con su fuente.
+  Reed et al., se citan con su fuente y no se redistribuyen completos. El notebook de la Tarea 01
+  incluye, con fines académicos, algunas fotografías y descripciones de ejemplo en sus salidas.
 :::

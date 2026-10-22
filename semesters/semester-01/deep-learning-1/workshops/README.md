@@ -9,4 +9,4 @@ Cada solución está en su carpeta `workshop-NN-tema/`, con su página `index.qm
 
 | # | Carpeta | Contenido |
 |---|---------|-----------|
-| 01 | `workshop-01-cub200-multimodal/` | Pipeline multimodal CUB-200-2011: página y notebook oficial de Colab (edición pública). Autores: Claudio de la Rosa y Juan Sebastián Laverde Chunza |
+| 01 | `workshop-01-cub200-multimodal/` | Pipeline multimodal CUB-200-2011: página y notebook oficial de Colab (versión original con salidas). Autores: Claudio de la Rosa y Juan Sebastián Laverde Chunza |

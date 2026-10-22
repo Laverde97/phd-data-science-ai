@@ -29,7 +29,7 @@ toc-depth: 2
 El notebook es el documento central de la solución: contiene el código, las explicaciones y las
 verificaciones de los dos pipelines. Esta página es un resumen académico.
 
-[Jupyter · 98 celdas (33 de código) · edición pública]{.study-meta}
+[Jupyter · 98 celdas (33 de código) · notebook original con salidas, fotografías y descripciones de ejemplo]{.study-meta}
 
 ::: {.study-actions}
 [Abrir en Google Colab](https://colab.research.google.com/github/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/deep-learning-1/workshops/workshop-01-cub200-multimodal/workshop-01-cub200-multimodal.ipynb){aria-label="Abrir el notebook de la Tarea 01 en Google Colab"}
@@ -221,8 +221,6 @@ Vocabulario de *train*. Con `max_len` = 25 se trunca el 4,05 % de las descripcio
   **no tienen salida guardada**. Todavía falta una ejecución completa del notebook desde cero.
 - La comparación entre frameworks no exige igualdad píxel a píxel de las imágenes, porque la
   decodificación, la interpolación y las aumentaciones difieren.
-- En la edición pública se omitieron las salidas con fotografías y con el texto de las
-  descripciones. El código que las genera se conserva.
 :::
 
 ## 7. Conclusiones
@@ -257,8 +255,9 @@ personas además de la fotografía, y eso deberá considerarse al interpretar et
 - **Enunciado:** Héctor Javier Hortúa, PhD. Se enlaza y no se redistribuye.
 - **Solución:** notebook, código y explicaciones de **Claudio de la Rosa** y **Juan Sebastián
   Laverde Chunza**.
-- **Datos:** CUB-200-2011 y las descripciones de Reed et al. son de terceros. No se publican en
-  este sitio; el notebook los descarga de sus fuentes al ejecutarse.
+- **Datos:** CUB-200-2011 y las descripciones de Reed et al. son de terceros. El notebook incluye,
+  con fines académicos, algunas fotografías y descripciones de ejemplo en sus salidas; no
+  redistribuye el dataset completo, que se descarga de sus fuentes al ejecutarse.
 :::
 
 [← Talleres y tareas](../index.qmd) · [Módulo Deep Learning I](../../index.qmd)
