@@ -1063,21 +1063,14 @@
     "href": "semesters/semester-01/deep-learning-1/workshops/index.html",
     "title": "Talleres y tareas",
     "section": "",
-    "text": "Tareas que propone el docente en el curso, junto con las soluciones cuando estén listas. Los enunciados son del docente y se enlazan a su repositorio. Las soluciones se publican en esta carpeta como notebooks ejecutables en Google Colab, con una página de resumen."
+    "text": "Soluciones de las tareas de Deep Learning I. Cada entrega tiene una página con su desarrollo y un notebook ejecutable en Google Colab."
   },
   {
-    "objectID": "semesters/semester-01/deep-learning-1/workshops/index.html#inventario",
-    "href": "semesters/semester-01/deep-learning-1/workshops/index.html#inventario",
+    "objectID": "semesters/semester-01/deep-learning-1/workshops/index.html#tarea-disponible",
+    "href": "semesters/semester-01/deep-learning-1/workshops/index.html#tarea-disponible",
     "title": "Talleres y tareas",
-    "section": "Inventario",
-    "text": "Inventario\n\n\nTareas del módulo\n\n\n#\nTarea\nAutores\nFrameworks\nEnunciado\nEstado\n\n\n\n\n01\nPipeline de datos multimodal con CUB-200-2011\nClaudio de la Rosa · Juan Sebastián Laverde Chunza\nPyTorch · TensorFlow\nGitHub\nImplementada y verificada en Colab"
-  },
-  {
-    "objectID": "semesters/semester-01/deep-learning-1/workshops/index.html#tarea-01-pipeline-de-datos-multimodal-con-cub-200-2011",
-    "href": "semesters/semester-01/deep-learning-1/workshops/index.html#tarea-01-pipeline-de-datos-multimodal-con-cub-200-2011",
-    "title": "Talleres y tareas",
-    "section": "Tarea 01 · Pipeline de datos multimodal con CUB-200-2011",
-    "text": "Tarea 01 · Pipeline de datos multimodal con CUB-200-2011\n\n\n Tarea 01 · Notebook de Google Colab\n\nPipeline multimodal CUB-200-2011 en PyTorch y TensorFlow\nPrepara imagen, texto y 318 variables tabulares de CUB-200-2011, y entrega lotes de entrenamiento, validación y prueba con Dataset/DataLoader y con tf.data. No entrena modelos.\nAutores: Claudio de la Rosa · Juan Sebastián Laverde Chunza\n\nVer la tarea Abrir en Colab Enunciado\n\n\n\n\nResumen del enunciado del docente (ver el original):\n\nObjetivo: construir el pipeline de datos de una base multimodal (imagen, texto y datos tabulares) y entregar flujos de train, validation y test en PyTorch (Dataset + DataLoader) y en TensorFlow (tf.data). En esta tarea no se entrena ningún modelo.\nDatos: CUB-200-2011 (Wah et al., 2011): 11.788 imágenes de 200 especies de aves, con bounding boxes y 312 atributos binarios. Las descripciones son de Reed et al. (CVPR 2016), con diez por imagen.\nRegla de preprocesamiento: todo lo que se aprende de los datos (vocabulario, scaler, max_len) se ajusta solo con train.\n\n\n\n\n\n\n\nNoteEnunciado, datos y solución\n\n\n\nEl enunciado es del docente Héctor Javier Hortúa, PhD. Se enlaza y no se redistribuye.\nEl dataset CUB-200-2011 y las descripciones no se guardan en este repositorio. El notebook los descarga de sus fuentes al ejecutarse en Colab.\nLa solución es de Claudio de la Rosa y Juan Sebastián Laverde Chunza. Su página resume la metodología y los resultados.\n\n\n← Módulo Deep Learning I"
+    "section": "Tarea disponible",
+    "text": "Tarea disponible\n\n\n Tarea 01 · Google Colab\n\nPipeline de datos multimodal con CUB-200-2011\nPreparación de imágenes, descripciones y 318 variables tabulares para construir pipelines de entrenamiento, validación y prueba en PyTorch y TensorFlow. Esta tarea prepara los datos; no entrena modelos.\nAutores: Claudio de la Rosa · Juan Sebastián Laverde Chunza\n\nVer desarrollo y resultados Abrir en Google Colab Enunciado original\n\n\n\n\nFuentes y atribución: el enunciado pertenece al docente Héctor Javier Hortúa, PhD. Las fotografías de CUB-200-2011 y las descripciones de Reed et al. se obtienen desde sus fuentes al ejecutar el notebook; no se redistribuyen en este repositorio.\n← Módulo Deep Learning I"
   },
   {
     "objectID": "semesters/semester-01/index.html",
