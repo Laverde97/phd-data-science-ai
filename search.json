@@ -1063,14 +1063,14 @@
     "href": "semesters/semester-01/deep-learning-1/workshops/index.html",
     "title": "Talleres y tareas",
     "section": "",
-    "text": "Soluciones de las tareas de Deep Learning I. Cada entrega tiene una página con su desarrollo y un notebook ejecutable en Google Colab."
+    "text": "Soluciones de las tareas de Deep Learning I. Cada entrega tiene una página con su desarrollo, un notebook ejecutable en Google Colab y su PDF completo con todas las salidas."
   },
   {
     "objectID": "semesters/semester-01/deep-learning-1/workshops/index.html#tarea-disponible",
     "href": "semesters/semester-01/deep-learning-1/workshops/index.html#tarea-disponible",
     "title": "Talleres y tareas",
     "section": "Tarea disponible",
-    "text": "Tarea disponible\n\n\n Tarea 01 · Google Colab\n\nPipeline de datos multimodal con CUB-200-2011\nPreparación de imágenes, descripciones y 318 variables tabulares para construir pipelines de entrenamiento, validación y prueba en PyTorch y TensorFlow. Esta tarea prepara los datos; no entrena modelos.\nAutores: Claudio de la Rosa · Juan Sebastián Laverde Chunza\n\nVer desarrollo y resultados Abrir en Google Colab Enunciado original\n\n\n\n\nFuentes y atribución: el enunciado pertenece al docente Héctor Javier Hortúa, PhD. El notebook muestra, con fines académicos, algunas fotografías de CUB-200-2011 y descripciones de Reed et al. como ejemplos en sus salidas. El dataset completo no se redistribuye: se descarga desde sus fuentes al ejecutar el notebook.\n← Módulo Deep Learning I"
+    "text": "Tarea disponible\n\n\n\n\nTarea\nAutores\nGoogle Colab\nPDF\nEnunciado\n\n\n\n\nTarea 01 — Pipeline multimodal CUB-200-2011Imágenes, descripciones y 318 variables tabulares para pipelines en PyTorch y TensorFlow (prepara los datos; no entrena modelos).\nClaudio de la Rosa · Juan Sebastián Laverde Chunza\nAbrir Colab\n Ver PDF ·  Descargar PDF\nVer enunciado\n\n\n\n\nEl PDF es la versión estática del mismo notebook de Colab, con todo el código, las fotografías, las tablas y las salidas de ejecución; no es un trabajo independiente.\nFuentes y atribución: el enunciado pertenece al docente Héctor Javier Hortúa, PhD. El notebook muestra, con fines académicos, algunas fotografías de CUB-200-2011 y descripciones de Reed et al. como ejemplos en sus salidas. El dataset completo no se redistribuye: se descarga desde sus fuentes al ejecutar el notebook.\n← Módulo Deep Learning I"
   },
   {
     "objectID": "semesters/semester-01/index.html",
