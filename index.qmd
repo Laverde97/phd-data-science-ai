@@ -12,7 +12,7 @@ Un espacio académico para organizar, documentar y compartir el aprendizaje desa
 durante el doctorado: cursos, notebooks, talleres, evaluaciones, datos, presentaciones
 y avances de investigación.
 
-[Explorar Machine Learning](semesters/semester-01/machine-learning/index.qmd){.btn .btn-primary .btn-lg}
+[Explorar Semestre 1](semesters/semester-01/index.qmd){.btn .btn-primary .btn-lg}
 [Ver investigación](research/index.qmd){.btn .btn-outline-secondary .btn-lg}
 :::
 
@@ -23,22 +23,16 @@ y avances de investigación.
 ### Semestre 1
 **2026-II**
 
-Organización del primer semestre doctoral por módulos y recursos.
+Cursos, talleres, materiales y recursos académicos del primer semestre doctoral.
 
 [Ver semestre →](semesters/semester-01/index.qmd)
 :::
 
 ::: {.card}
-### Módulo 1 · Machine Learning
-Aprendizaje supervisado y no supervisado, preparación de datos, evaluación de modelos
-y experimentación reproducible.
-
-[Entrar al módulo →](semesters/semester-01/machine-learning/index.qmd)
-:::
-
-::: {.card}
 ### Research Track
-Espacio para consolidar ideas, lecturas, experimentos y avances del proyecto doctoral.
+**Investigación doctoral**
+
+Lecturas, experimentos y avances del proyecto de investigación doctoral.
 
 [Ver investigación →](research/index.qmd)
 :::
