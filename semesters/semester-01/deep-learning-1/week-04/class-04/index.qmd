@@ -50,13 +50,13 @@ Según los encabezados y el código de los notebooks:
 
 ## Notebooks
 
-Los enlaces **Original** y **Colab** apuntan al repositorio del docente, fijados al commit
-`349351d`. Son referencias de procedencia: dependen de que ese repositorio siga disponible.
+El enlace **Google Colab** apunta provisionalmente al repositorio del docente, fijado al
+commit `349351d`. Depende de que ese repositorio siga disponible.
 
-| # | Notebook | Framework | Contenido | Original | Colab |
-|:-:|----------|-----------|-----------|----------|-------|
-| 1 | **Redes recurrentes: LSTM, BiLSTM y GRU** · `lstm.ipynb` | TensorFlow / Keras | Sentimiento en IMDB con LSTM y BiLSTM; pronóstico de manchas solares con LSTM y GRU. | [GitHub](https://github.com/MAESTRiA-ESTADiS-CIENCIA-DATOS-Bosque/Deep_Learning_I_Fundamentos/blob/349351db46d07cf07dbecad86b54a17c44219d6d/clase4/lstm.ipynb) | [Open in Colab](https://colab.research.google.com/github/MAESTRiA-ESTADiS-CIENCIA-DATOS-Bosque/Deep_Learning_I_Fundamentos/blob/349351db46d07cf07dbecad86b54a17c44219d6d/clase4/lstm.ipynb) |
-| 2 | **Aprendizaje multimodal con MNIST + dígitos hablados** · `multimodal_mnist.ipynb` | TensorFlow / Keras | Espectrogramas de audio, pares imagen–audio, fusión tardía (promedio, producto, *stacking*) y *embeddings* compartidos tipo CLIP con clasificación *zero-shot*. | [GitHub](https://github.com/MAESTRiA-ESTADiS-CIENCIA-DATOS-Bosque/Deep_Learning_I_Fundamentos/blob/349351db46d07cf07dbecad86b54a17c44219d6d/clase4/multimodal_mnist.ipynb) | [Open in Colab](https://colab.research.google.com/github/MAESTRiA-ESTADiS-CIENCIA-DATOS-Bosque/Deep_Learning_I_Fundamentos/blob/349351db46d07cf07dbecad86b54a17c44219d6d/clase4/multimodal_mnist.ipynb) |
+| # | Notebook | Script | Framework | Contenido | Google Colab |
+|:-:|----------|--------|-----------|-----------|-------|
+| 1 | **Redes recurrentes: LSTM, BiLSTM y GRU** · `lstm.ipynb` | **lstm** | TensorFlow / Keras | Sentimiento en IMDB con LSTM y BiLSTM; pronóstico de manchas solares con LSTM y GRU. | [Open in Colab](https://colab.research.google.com/github/MAESTRiA-ESTADiS-CIENCIA-DATOS-Bosque/Deep_Learning_I_Fundamentos/blob/349351db46d07cf07dbecad86b54a17c44219d6d/clase4/lstm.ipynb) |
+| 2 | **Aprendizaje multimodal con MNIST + dígitos hablados** · `multimodal_mnist.ipynb` | **multimodal_mnist** | TensorFlow / Keras | Espectrogramas de audio, pares imagen–audio, fusión tardía (promedio, producto, *stacking*) y *embeddings* compartidos tipo CLIP con clasificación *zero-shot*. | [Open in Colab](https://colab.research.google.com/github/MAESTRiA-ESTADiS-CIENCIA-DATOS-Bosque/Deep_Learning_I_Fundamentos/blob/349351db46d07cf07dbecad86b54a17c44219d6d/clase4/multimodal_mnist.ipynb) |
 
 Los dos notebooks están **sin salidas** en la fuente (ninguna celda ejecutada). Este sitio no los
 redistribuye ni los ejecuta.
