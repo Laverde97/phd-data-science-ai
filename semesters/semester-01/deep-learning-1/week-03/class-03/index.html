@@ -1,0 +1,988 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.19">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Clase 03 – PhD · Data Science &amp; Artificial Intelligence</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../../../">
+<link href="../../../../../assets/favicon.svg" rel="icon" type="image/svg+xml">
+<script src="../../../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../../../site_libs/quarto-html/quarto-syntax-highlighting-5c1318cf63eba56dbef7ba16bc7d56f5.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-6453f418aeef366c23116eb9cb0b6816.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../../../../site_libs/quarto-html/quarto-syntax-highlighting-5c1318cf63eba56dbef7ba16bc7d56f5.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../../../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../../../site_libs/bootstrap/bootstrap-972fc31045e472f2f59b00c52f542971.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../../../site_libs/bootstrap/bootstrap-dark-9699c7d721bba90ddc4bdc5b4b2b9fa0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../../../../site_libs/bootstrap/bootstrap-972fc31045e472f2f59b00c52f542971.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+
+
+<link rel="stylesheet" href="../../../../../styles.css">
+<meta property="og:title" content="Clase 03 – PhD · Data Science &amp; Artificial Intelligence">
+<meta property="og:description" content="Semana 03 · Redes neuronales convolucionales">
+<meta property="og:site_name" content="PhD · Data Science &amp; Artificial Intelligence">
+<meta name="twitter:title" content="Clase 03 – PhD · Data Science &amp; Artificial Intelligence">
+<meta name="twitter:description" content="Semana 03 · Redes neuronales convolucionales">
+<meta name="twitter:card" content="summary">
+</head>
+
+<body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../../../../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../../../../assets/logo.svg" alt="" class="navbar-logo light-content">
+    <img src="../../../../../assets/logo.svg" alt="" class="navbar-logo dark-content">
+    </a>
+    <a class="navbar-brand" href="../../../../../index.html">
+    <span class="navbar-title">PhD · Data Science &amp; Artificial Intelligence</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../../../../index.html"> 
+<span class="menu-text">Inicio</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-semestres" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Semestres</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-semestres">    
+        <li>
+    <a class="dropdown-item" href="../../../../../semesters/semester-01/index.html">
+ <span class="dropdown-text">Semestre 1</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../../../../../research/index.html"> 
+<span class="menu-text">Investigación</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/Laverde97/phd-data-science-ai"> <i class="bi bi-github" role="img" aria-label="GitHub">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="2">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#objetivos-de-aprendizaje" id="toc-objetivos-de-aprendizaje" class="nav-link active" data-scroll-target="#objetivos-de-aprendizaje">Objetivos de aprendizaje</a></li>
+  <li><a href="#temas" id="toc-temas" class="nav-link" data-scroll-target="#temas">Temas</a></li>
+  <li><a href="#notebooks" id="toc-notebooks" class="nav-link" data-scroll-target="#notebooks">Notebooks</a></li>
+  <li><a href="#datos-y-recursos-necesarios" id="toc-datos-y-recursos-necesarios" class="nav-link" data-scroll-target="#datos-y-recursos-necesarios">Datos y recursos necesarios</a></li>
+  <li><a href="#materiales-complementarios" id="toc-materiales-complementarios" class="nav-link" data-scroll-target="#materiales-complementarios">Materiales complementarios</a></li>
+  <li><a href="#notas-personales" id="toc-notas-personales" class="nav-link" data-scroll-target="#notas-personales">Notas personales</a></li>
+  <li><a href="#ejercicios" id="toc-ejercicios" class="nav-link" data-scroll-target="#ejercicios">Ejercicios</a></li>
+  <li><a href="#referencias-y-atribuciones" id="toc-referencias-y-atribuciones" class="nav-link" data-scroll-target="#referencias-y-atribuciones">Referencias y atribuciones</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/deep-learning-1/week-03/class-03/index.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Clase 03</h1>
+<p class="subtitle lead">Semana 03 · Redes neuronales convolucionales</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Fuente y atribución
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Material del docente <strong>Héctor Javier Hortúa, PhD</strong> (SavIA-Lab, Instituto de Neurociencias), del curso Deep Learning I del Doctorado en Ciencia de Datos e Inteligencia Artificial de la Universidad El Bosque. Viene de la carpeta <a href="https://github.com/MAESTRiA-ESTADiS-CIENCIA-DATOS-Bosque/Deep_Learning_I_Fundamentos/tree/349351db46d07cf07dbecad86b54a17c44219d6d/clase3"><code>clase3/</code></a> del repositorio del docente (commit <code>349351d</code>). No es de autoría propia.</p>
+<p>El repositorio fuente no tiene un archivo de licencia explícito, así que aquí se enlaza al original. Hay copias verbatim en un archivo privado, comprobadas con SHA-256. Ese archivo no es un recurso público de este sitio.</p>
+</div>
+</div>
+<section id="objetivos-de-aprendizaje" class="level2">
+<h2 class="anchored" data-anchor-id="objetivos-de-aprendizaje">Objetivos de aprendizaje</h2>
+<p>Según las celdas de objetivos de los notebooks:</p>
+<ul>
+<li><strong><code>CNN_TensorFlow</code>:</strong> (1) explicar el cálculo de una convolución; (2) construir un pipeline de datos seguro; (3) distinguir filtros, mapas de características y atribuciones; (4) comparar la convolución 1D y la dilatada en series de tiempo.</li>
+<li><strong><code>hyperTun</code>:</strong> comparar dos métodos de búsqueda de hiperparámetros con la misma arquitectura conceptual, las mismas imágenes y la misma partición <em>train</em>/<em>validation</em>/<em>test</em>. El flujo es: datos → CNN parametrizada → búsqueda → mejor configuración → reentrenamiento → evaluación en <em>test</em>.</li>
+<li>Los dos notebooks de <em>transfer learning</em> no tienen una celda de objetivos.</li>
+</ul>
+</section>
+<section id="temas" class="level2">
+<h2 class="anchored" data-anchor-id="temas">Temas</h2>
+<p>Según los encabezados y el código de los notebooks:</p>
+<ul>
+<li><strong>CNN en TensorFlow:</strong> forma de los tensores de imagen, correlación cruzada y conteo de parámetros de <code>Conv2D</code>, el patrón <code>Conv2D → MaxPooling2D</code> repetido tres veces, <code>GlobalAveragePooling2D</code> en lugar de <code>Flatten</code> y <code>callbacks</code> (<code>EarlyStopping</code>, <code>ModelCheckpoint</code>).</li>
+<li><strong>Evaluación e interpretación:</strong> el conjunto de prueba se usa solo al final; matriz de confusión, precisión/<em>recall</em>/F1 y ROC-AUC; un kernel aprendido y sus mapas de características; Grad-CAM («explicación local aproximada», según el propio notebook) y SHAP con <code>GradientExplainer</code>.</li>
+<li><strong>Series de tiempo:</strong> ventanas <code>[t-n, …, t-1] → t</code> sobre manchas solares, <code>Conv1D</code> con <code>padding="causal"</code>, convoluciones dilatadas (<code>dilation_rate</code> 1, 2, 4, 9, 15) y comparación de MAE y RMSE en la escala original.</li>
+<li><strong>Ajuste de hiperparámetros (Fashion-MNIST):</strong> Hyperband con Keras Tuner (número de capas convolucionales, tamaño de kernel, filtros, activación, <em>dropout</em> y tasa de aprendizaje) frente a <em>Random Search</em> con Optuna y PyTorch Lightning (sin <em>pruning</em>). Al final se reentrena desde cero la mejor configuración y se consulta el <em>test</em> una sola vez.</li>
+<li><strong>Transfer learning (<code>cats_vs_dogs</code>):</strong> inferencia con modelos ImageNet, extractor congelado con cabeza nueva y <em>fine-tuning</em> (<code>trainable</code>) con VGG16 y ResNet50 de <code>keras.applications</code>.</li>
+<li><strong>Multi-GPU y Hugging Face:</strong> el mismo problema con <code>tf.distribute.MirroredStrategy</code>, y después el <em>fine-tuning</em> de <code>microsoft/resnet-50</code> con <code>transformers</code> (<code>AutoModelForImageClassification</code>, <code>Trainer</code>), con la cabeza de 1000 clases reemplazada por una de 2.</li>
+</ul>
+</section>
+<section id="notebooks" class="level2">
+<h2 class="anchored" data-anchor-id="notebooks">Notebooks</h2>
+<p>Los enlaces <strong>Original</strong> y <strong>Colab</strong> apuntan al repositorio del docente, fijados al commit <code>349351d</code>. Son referencias de procedencia: dependen de que ese repositorio siga disponible.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: center;">#</th>
+<th>Notebook</th>
+<th>Framework</th>
+<th>Contenido</th>
+<th>Original</th>
+<th>Colab</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">1</td>
+<td><strong>Introducción a redes neuronales convolucionales con TensorFlow</strong> · <code>CNN_TensorFlow.ipynb</code></td>
+<td>TensorFlow / Keras</td>
+<td>Pipeline <code>tf.data</code> con <code>cats_vs_dogs</code>, CNN <code>Conv2D</code>/<code>MaxPooling2D</code>, evaluación en <em>test</em>, kernels y mapas de características, Grad-CAM, SHAP, <code>Conv1D</code> causal y dilatada sobre manchas solares.</td>
+<td><a href="https://github.com/MAESTRiA-ESTADiS-CIENCIA-DATOS-Bosque/Deep_Learning_I_Fundamentos/blob/349351db46d07cf07dbecad86b54a17c44219d6d/clase3/CNN_TensorFlow.ipynb">GitHub</a></td>
+<td><a href="https://colab.research.google.com/github/MAESTRiA-ESTADiS-CIENCIA-DATOS-Bosque/Deep_Learning_I_Fundamentos/blob/349351db46d07cf07dbecad86b54a17c44219d6d/clase3/CNN_TensorFlow.ipynb">Open in Colab</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2</td>
+<td><strong>Ajuste de hiperparámetros de CNN con Fashion-MNIST</strong> · <code>hyperTun.ipynb</code></td>
+<td>TensorFlow + Keras Tuner; PyTorch Lightning + Optuna</td>
+<td>Hyperband frente a <em>Random Search</em> con el mismo espacio de búsqueda y la misma partición; reentrenamiento de la mejor configuración y evaluación final en <em>test</em>.</td>
+<td><a href="https://github.com/MAESTRiA-ESTADiS-CIENCIA-DATOS-Bosque/Deep_Learning_I_Fundamentos/blob/349351db46d07cf07dbecad86b54a17c44219d6d/clase3/hyperTun.ipynb">GitHub</a></td>
+<td><a href="https://colab.research.google.com/github/MAESTRiA-ESTADiS-CIENCIA-DATOS-Bosque/Deep_Learning_I_Fundamentos/blob/349351db46d07cf07dbecad86b54a17c44219d6d/clase3/hyperTun.ipynb">Open in Colab</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">3</td>
+<td><strong>Transfer learning</strong> · <code>Transfer_clase_viernes.ipynb</code></td>
+<td>TensorFlow / Keras</td>
+<td>Solo código, sin celdas de texto. Inferencia ImageNet, modelo de transferencia con VGG16 y ResNet50, <em>fine-tuning</em> y comparación de probabilidades en imágenes de prueba.</td>
+<td><a href="https://github.com/MAESTRiA-ESTADiS-CIENCIA-DATOS-Bosque/Deep_Learning_I_Fundamentos/blob/349351db46d07cf07dbecad86b54a17c44219d6d/clase3/Transfer_clase_viernes.ipynb">GitHub</a></td>
+<td><a href="https://colab.research.google.com/github/MAESTRiA-ESTADiS-CIENCIA-DATOS-Bosque/Deep_Learning_I_Fundamentos/blob/349351db46d07cf07dbecad86b54a17c44219d6d/clase3/Transfer_clase_viernes.ipynb">Open in Colab</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">4</td>
+<td><strong>Multi-GPU y capacitación distribuida</strong> · <code>Transfer_learning_MultiGPU.ipynb</code></td>
+<td>TensorFlow / Keras; PyTorch + Hugging Face <code>transformers</code></td>
+<td>Las mismas celdas de <em>transfer learning</em>, más entrenamiento con <code>MirroredStrategy</code> y <em>fine-tuning</em> de <code>microsoft/resnet-50</code> sobre <code>microsoft/cats_vs_dogs</code>.</td>
+<td><a href="https://github.com/MAESTRiA-ESTADiS-CIENCIA-DATOS-Bosque/Deep_Learning_I_Fundamentos/blob/349351db46d07cf07dbecad86b54a17c44219d6d/clase3/Transfer_learning_MultiGPU.ipynb">GitHub</a></td>
+<td><a href="https://colab.research.google.com/github/MAESTRiA-ESTADiS-CIENCIA-DATOS-Bosque/Deep_Learning_I_Fundamentos/blob/349351db46d07cf07dbecad86b54a17c44219d6d/clase3/Transfer_learning_MultiGPU.ipynb">Open in Colab</a></td>
+</tr>
+</tbody>
+</table>
+<p>Los cuatro notebooks están <strong>sin salidas</strong> en la fuente (ninguna celda ejecutada). Este sitio no los redistribuye ni los ejecuta.</p>
+</section>
+<section id="datos-y-recursos-necesarios" class="level2">
+<h2 class="anchored" data-anchor-id="datos-y-recursos-necesarios">Datos y recursos necesarios</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 29%">
+<col style="width: 35%">
+<col style="width: 35%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Recurso</th>
+<th>Usado por</th>
+<th>Situación</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>sunspots.csv</code> (en <code>clase1/</code>, leído como <code>../clase1/sunspots.csv</code>)</td>
+<td><code>CNN_TensorFlow</code></td>
+<td>Archivo del docente. Copia verbatim en el archivo privado; no se publica aquí.</td>
+</tr>
+<tr class="even">
+<td><code>imgs/animales/</code> del docente (leído como <code>../imgs/animales/*</code>)</td>
+<td><code>Transfer_clase_viernes</code></td>
+<td>Imágenes de terceros. Copia en el archivo privado; no se publican.</td>
+</tr>
+<tr class="odd">
+<td><code>figura1_perro.jpg</code> por <strong>ruta absoluta</strong> (<code>/home/…/figura1_perro.jpg</code>)</td>
+<td><code>Transfer_learning_MultiGPU</code></td>
+<td>Tiene el mismo nombre que un archivo de <code>imgs/animales/</code>, pero se lee desde una ruta del equipo del docente. Hay que cambiarla para ejecutar la celda.</td>
+</tr>
+<tr class="even">
+<td><code>tensorflow_datasets</code>: <code>cats_vs_dogs</code> y <code>fashion_mnist</code></td>
+<td><code>CNN_TensorFlow</code>, <code>Transfer_*</code>, <code>hyperTun</code></td>
+<td>Recurso externo; se descarga al ejecutar.</td>
+</tr>
+<tr class="odd">
+<td>Hugging Face Hub: dataset <code>microsoft/cats_vs_dogs</code> y modelo <code>microsoft/resnet-50</code></td>
+<td><code>Transfer_learning_MultiGPU</code></td>
+<td>Recurso externo; se descarga al ejecutar.</td>
+</tr>
+<tr class="even">
+<td>Pesos ImageNet de <code>keras.applications</code> (VGG16, ResNet50)</td>
+<td><code>Transfer_*</code></td>
+<td>Recurso externo; se descarga al ejecutar.</td>
+</tr>
+<tr class="odd">
+<td>Varias GPU</td>
+<td><code>Transfer_learning_MultiGPU</code> (<code>MirroredStrategy</code>)</td>
+<td>Con una sola GPU o en CPU, la estrategia usa solo los dispositivos disponibles.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Bibliotecas que importan los notebooks:</strong> <code>tensorflow</code>, <code>tensorflow_datasets</code>, <code>keras_tuner</code>, <code>torch</code>, <code>torchvision</code>, <code>lightning</code>, <code>optuna</code>, <code>scikit-learn</code>, <code>shap</code>, <code>transformers</code>, <code>datasets</code> y <code>PIL</code>. En el commit <code>349351d</code>, el <code>pyproject.toml</code> del docente declara <code>keras-tuner</code>, <code>optuna</code>, <code>optuna-integration[pytorch-lightning]</code>, <code>scikit-learn</code> y <code>shap</code>. No declara <code>transformers</code>, <code>datasets</code>, <code>lightning</code>, <code>torchvision</code> ni <code>tensorflow_datasets</code>.</p>
+<p>Los notebooks <strong>no son autónomos</strong>: dependen de datasets y modelos descargados de internet y de archivos del repositorio del docente.</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>Notas para ejecutar los notebooks
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Describen los notebooks tal como están en la fuente. No se han modificado.</p>
+<ul>
+<li>El <code>README.md</code> del docente enlaza en Colab <code>clase3/Transfer.ipynb</code>, que <strong>no existe</strong> en el commit <code>349351d</code>. El notebook equivalente es <code>Transfer_clase_viernes.ipynb</code>.</li>
+<li><code>Transfer_clase_viernes</code> (19 celdas) y <code>Transfer_learning_MultiGPU</code> (36 celdas) tienen 13 de las primeras 19 celdas idénticas. El segundo añade las secciones de multi-GPU y Hugging Face.</li>
+<li>Las rutas relativas (<code>../clase1/sunspots.csv</code>, <code>../imgs/animales/</code>) suponen la estructura del repositorio del docente. En Colab hay que subir esos archivos a la sesión.</li>
+<li>Una celda de <code>Transfer_learning_MultiGPU</code> usa una ruta absoluta del equipo del docente.</li>
+<li><code>Transfer_learning_MultiGPU</code> incluye, comentadas, unas líneas para iniciar sesión en Hugging Face y subir el modelo al Hub. No se ejecutan por defecto.</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="materiales-complementarios" class="level2">
+<h2 class="anchored" data-anchor-id="materiales-complementarios">Materiales complementarios</h2>
+<p>Todavía no hay materiales complementarios propios publicados para esta clase.</p>
+</section>
+<section id="notas-personales" class="level2">
+<h2 class="anchored" data-anchor-id="notas-personales">Notas personales</h2>
+<p>Todavía no hay notas personales publicadas para esta clase.</p>
+</section>
+<section id="ejercicios" class="level2">
+<h2 class="anchored" data-anchor-id="ejercicios">Ejercicios</h2>
+<p>Todavía no hay ejercicios registrados para esta clase.</p>
+</section>
+<section id="referencias-y-atribuciones" class="level2">
+<h2 class="anchored" data-anchor-id="referencias-y-atribuciones">Referencias y atribuciones</h2>
+<ul>
+<li>Repositorio del docente: <a href="https://github.com/MAESTRiA-ESTADiS-CIENCIA-DATOS-Bosque/Deep_Learning_I_Fundamentos">MAESTRiA-ESTADiS-CIENCIA-DATOS-Bosque/Deep_Learning_I_Fundamentos</a></li>
+<li>Carpeta de la clase: <a href="https://github.com/MAESTRiA-ESTADiS-CIENCIA-DATOS-Bosque/Deep_Learning_I_Fundamentos/tree/349351db46d07cf07dbecad86b54a17c44219d6d/clase3"><code>clase3/</code></a></li>
+<li>Commit incorporado: <a href="https://github.com/MAESTRiA-ESTADiS-CIENCIA-DATOS-Bosque/Deep_Learning_I_Fundamentos/tree/349351db46d07cf07dbecad86b54a17c44219d6d"><code>349351db46d07cf07dbecad86b54a17c44219d6d</code></a> (2026-10-27)</li>
+<li>Documentación citada en los notebooks: <a href="https://keras.io/keras_tuner/api/hyperparameters/#int-method">Keras Tuner</a>, <a href="https://optuna.org/">Optuna</a> y <a href="https://huggingface.co/microsoft/resnet-50">microsoft/resnet-50</a>.</li>
+<li>Los datasets externos (<code>cats_vs_dogs</code>, Fashion-MNIST) y los modelos preentrenados tienen sus propios términos de uso, que hay que consultar en su fuente.</li>
+</ul>
+<p><a href="../../../../../semesters/semester-01/deep-learning-1/week-03/index.html">← Volver a la semana 03</a> · <a href="../../../../../semesters/semester-01/deep-learning-1/index.html">Módulo Deep Learning I</a></p>
+
+
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/laverde97\.github\.io\/phd-data-science-ai\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+            // default icon
+            link.classList.add("external");
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>Doctoral learning repository · Data Science &amp; Artificial Intelligence</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/deep-learning-1/week-03/class-03/index.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></div>
+    <div class="nav-footer-right">
+<p>Built with <a href="https://quarto.org">Quarto</a></p>
+</div>
+  </div>
+</footer>
+
+
+
+
+<script src="../../../../../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

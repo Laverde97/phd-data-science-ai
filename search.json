@@ -364,6 +364,132 @@
     "text": "Actividades académicas\n\n\n\n\nActividad\nAutores\nGoogle Colab\nPDF\nEnlace\nEnunciado\n\n\n\n\nExposición — Liquid Time-Constant Networks: de las ecuaciones diferenciales a una implementación moderna29 de octubre de 2026 · Exposición programada\nClaudio de la Rosa · Juan Sebastián Laverde Chunza\n—\n—\nVer artículo\n—\n\n\nTarea 01 — Pipeline multimodal CUB-200-2011Imágenes, descripciones y 318 variables tabulares para pipelines en PyTorch y TensorFlow (prepara los datos; no entrena modelos).\nClaudio de la Rosa · Juan Sebastián Laverde Chunza\nAbrir Colab\n Ver PDF ·  Descargar PDF\n—\nVer enunciado\n\n\nTarea 02 — Fusión multimodal, red siamesa y CLIP con CUB-200-2011Entrenamiento y comparación de modelos unimodales, early fusion, late fusion, redes siamesas y CLIP, utilizando imágenes, descripciones textuales y atributos del conjunto de datos CUB-200-2011.\nClaudio de la Rosa · Juan Sebastián Laverde Chunza\nPENDIENTE\nPENDIENTE\n-\nVer enunciado\n\n\n\n\nExposición LTC: Claudio de la Rosa y Juan Sebastián Laverde Chunza son los expositores. La exposición presenta un artículo de Latent Frontiers que ofrece una lectura guiada de Liquid Time-constant Networks (Hasani, Lechner, Amini, Rus y Grosu, AAAI 2021); la investigación original sobre LTC pertenece a sus autores.\nTarea 01: el PDF es la versión estática del mismo notebook de Colab, con todo el código, las fotografías, las tablas y las salidas de ejecución; no es un trabajo independiente.\nFuentes y atribución de la Tarea 01: el enunciado pertenece al docente Héctor Javier Hortúa, PhD. El notebook muestra, con fines académicos, algunas fotografías de CUB-200-2011 y descripciones de Reed et al. como ejemplos en sus salidas. El dataset completo no se redistribuye: se descarga desde sus fuentes al ejecutar el notebook.\nTarea 02: actividad pendiente; el notebook de Colab y su PDF se publicarán al completarse. El enunciado pertenece al docente Héctor Javier Hortúa, PhD.\n← Módulo Deep Learning I"
   },
   {
+    "objectID": "semesters/semester-01/deep-learning-1/week-04/class-04/index.html",
+    "href": "semesters/semester-01/deep-learning-1/week-04/class-04/index.html",
+    "title": "Clase 04",
+    "section": "",
+    "text": "ImportantFuente y atribución\n\n\n\nMaterial del docente Héctor Javier Hortúa, PhD (SavIA-Lab, Instituto de Neurociencias), del curso Deep Learning I del Doctorado en Ciencia de Datos e Inteligencia Artificial de la Universidad El Bosque. Viene de la carpeta clase4/ del repositorio del docente (commit 349351d). No es de autoría propia.\nEl repositorio fuente no tiene un archivo de licencia explícito, así que aquí se enlaza al original. Hay copias verbatim en un archivo privado, comprobadas con SHA-256. Ese archivo no es un recurso público de este sitio."
+  },
+  {
+    "objectID": "semesters/semester-01/deep-learning-1/week-04/class-04/index.html#objetivos-de-aprendizaje",
+    "href": "semesters/semester-01/deep-learning-1/week-04/class-04/index.html#objetivos-de-aprendizaje",
+    "title": "Clase 04",
+    "section": "Objetivos de aprendizaje",
+    "text": "Objetivos de aprendizaje\nLos notebooks no tienen una celda de objetivos. Según sus introducciones:\n\nlstm: (1) clasificar el sentimiento de reseñas de IMDB (positivo/negativo), comparando una LSTM simple con una LSTM bidireccional apilada; (2) pronosticar el valor del mes siguiente de la serie de manchas solares, comparando LSTM y GRU.\nmultimodal_mnist: combinar dos modalidades que describen lo mismo, un dígito del 0 al 9 escrito (MNIST) y hablado (Free Spoken Digit Dataset)."
+  },
+  {
+    "objectID": "semesters/semester-01/deep-learning-1/week-04/class-04/index.html#temas",
+    "href": "semesters/semester-01/deep-learning-1/week-04/class-04/index.html#temas",
+    "title": "Clase 04",
+    "section": "Temas",
+    "text": "Temas\nSegún los encabezados y el código de los notebooks:\n\nAnálisis de sentimiento (IMDB): estandarización del texto con marcadores [START]/[END], TextVectorization con vocabulario de 10 000 palabras, visualización de la máscara de padding, truncado a MAX_LEN = 250 tokens, Embedding(mask_zero=True) de 64 dimensiones, LSTM de 64 unidades frente a dos BiLSTM apiladas y EarlyStopping sobre val_loss.\nPronóstico de manchas solares: división cronológica 70/15/15, normalización con media y desviación de entrenamiento, ventanas y la misma arquitectura con celda LSTM (tres puertas) o GRU (dos puertas), evaluadas en test.\nModalidad audio: spoken_digit (WAV a 8 kHz, 6 personas, partición por índice de repetición) y espectrograma como única transformación. La LSTM ve 61 instantes de 129 frecuencias.\nDataset multimodal: pares (imagen, audio) de la misma clase y la misma partición, para no filtrar información entre particiones.\nFusión tardía: CNN 2D para la imagen y LSTM para el audio, entrenadas por separado, con reglas de fusión de promedio, producto (log-probabilidades) y stacking.\nCLIP con imagen y audio: los mismos cuerpos con cabeza de proyección Dense(d) y normalización L2, matriz de similitudes con temperatura, pérdida contrastiva, un audio distinto por época como aumento de datos y clasificación zero-shot en ambos sentidos (imagen ↔︎ audio)."
+  },
+  {
+    "objectID": "semesters/semester-01/deep-learning-1/week-04/class-04/index.html#notebooks",
+    "href": "semesters/semester-01/deep-learning-1/week-04/class-04/index.html#notebooks",
+    "title": "Clase 04",
+    "section": "Notebooks",
+    "text": "Notebooks\nLos enlaces Original y Colab apuntan al repositorio del docente, fijados al commit 349351d. Son referencias de procedencia: dependen de que ese repositorio siga disponible.\n\n\n\n#\nNotebook\nFramework\nContenido\nOriginal\nColab\n\n\n\n\n1\nRedes recurrentes: LSTM, BiLSTM y GRU · lstm.ipynb\nTensorFlow / Keras\nSentimiento en IMDB con LSTM y BiLSTM; pronóstico de manchas solares con LSTM y GRU.\nGitHub\nOpen in Colab\n\n\n2\nAprendizaje multimodal con MNIST + dígitos hablados · multimodal_mnist.ipynb\nTensorFlow / Keras\nEspectrogramas de audio, pares imagen–audio, fusión tardía (promedio, producto, stacking) y embeddings compartidos tipo CLIP con clasificación zero-shot.\nGitHub\nOpen in Colab\n\n\n\nLos dos notebooks están sin salidas en la fuente (ninguna celda ejecutada). Este sitio no los redistribuye ni los ejecuta."
+  },
+  {
+    "objectID": "semesters/semester-01/deep-learning-1/week-04/class-04/index.html#datos-y-recursos-necesarios",
+    "href": "semesters/semester-01/deep-learning-1/week-04/class-04/index.html#datos-y-recursos-necesarios",
+    "title": "Clase 04",
+    "section": "Datos y recursos necesarios",
+    "text": "Datos y recursos necesarios\n\n\n\n\n\n\n\n\nRecurso\nUsado por\nSituación\n\n\n\n\nsunspots.csv (en clase1/, leído como ../clase1/sunspots.csv)\nlstm\nArchivo del docente. Copia verbatim en el archivo privado; no se publica aquí.\n\n\ntensorflow_datasets: imdb_reviews\nlstm\nRecurso externo; se descarga al ejecutar.\n\n\ntensorflow_datasets: mnist y spoken_digit (Free Spoken Digit Dataset)\nmultimodal_mnist\nRecurso externo; se descarga al ejecutar.\n\n\n\nBibliotecas que importan los notebooks: tensorflow, tensorflow_datasets, numpy, pandas, matplotlib, scikit-learn e IPython (reproducción de audio).\nLos notebooks no son autónomos: dependen de datasets descargados de internet y, en el caso de lstm, de un archivo de la carpeta clase1/ del repositorio del docente.\n\n\n\n\n\n\nWarningNotas para ejecutar los notebooks\n\n\n\n\n\nDescriben los notebooks tal como están en la fuente. No se han modificado.\n\nlstm lee ../clase1/sunspots.csv, así que espera la estructura del repositorio del docente. En Colab hay que subir ese archivo y ajustar la ruta en una copia propia.\nEl notebook lstm indica que, con solo 2 épocas, el early stopping apenas actúa.\nEn el README.md del docente, la sección de la Semana 4 enlaza primero multimodal_mnist y después lstm."
+  },
+  {
+    "objectID": "semesters/semester-01/deep-learning-1/week-04/class-04/index.html#materiales-complementarios",
+    "href": "semesters/semester-01/deep-learning-1/week-04/class-04/index.html#materiales-complementarios",
+    "title": "Clase 04",
+    "section": "Materiales complementarios",
+    "text": "Materiales complementarios\nTodavía no hay materiales complementarios propios publicados para esta clase."
+  },
+  {
+    "objectID": "semesters/semester-01/deep-learning-1/week-04/class-04/index.html#notas-personales",
+    "href": "semesters/semester-01/deep-learning-1/week-04/class-04/index.html#notas-personales",
+    "title": "Clase 04",
+    "section": "Notas personales",
+    "text": "Notas personales\nTodavía no hay notas personales publicadas para esta clase."
+  },
+  {
+    "objectID": "semesters/semester-01/deep-learning-1/week-04/class-04/index.html#ejercicios",
+    "href": "semesters/semester-01/deep-learning-1/week-04/class-04/index.html#ejercicios",
+    "title": "Clase 04",
+    "section": "Ejercicios",
+    "text": "Ejercicios\nTodavía no hay ejercicios registrados para esta clase. La Tarea 02, de temática multimodal (fusión, red siamesa y CLIP con CUB-200-2011), está en Talleres y tareas."
+  },
+  {
+    "objectID": "semesters/semester-01/deep-learning-1/week-04/class-04/index.html#referencias-y-atribuciones",
+    "href": "semesters/semester-01/deep-learning-1/week-04/class-04/index.html#referencias-y-atribuciones",
+    "title": "Clase 04",
+    "section": "Referencias y atribuciones",
+    "text": "Referencias y atribuciones\n\nRepositorio del docente: MAESTRiA-ESTADiS-CIENCIA-DATOS-Bosque/Deep_Learning_I_Fundamentos\nCarpeta de la clase: clase4/\nCommit incorporado: 349351db46d07cf07dbecad86b54a17c44219d6d (2026-10-27)\nEl notebook multimodal cita CLIP (Contrastive Language–Image Pre-training, Radford et al., 2021).\nLos datasets externos (IMDB, MNIST, Free Spoken Digit Dataset) tienen sus propios términos de uso, que hay que consultar en su fuente.\n\n← Volver a la semana 04 · Módulo Deep Learning I"
+  },
+  {
+    "objectID": "semesters/semester-01/deep-learning-1/week-03/class-03/index.html",
+    "href": "semesters/semester-01/deep-learning-1/week-03/class-03/index.html",
+    "title": "Clase 03",
+    "section": "",
+    "text": "ImportantFuente y atribución\n\n\n\nMaterial del docente Héctor Javier Hortúa, PhD (SavIA-Lab, Instituto de Neurociencias), del curso Deep Learning I del Doctorado en Ciencia de Datos e Inteligencia Artificial de la Universidad El Bosque. Viene de la carpeta clase3/ del repositorio del docente (commit 349351d). No es de autoría propia.\nEl repositorio fuente no tiene un archivo de licencia explícito, así que aquí se enlaza al original. Hay copias verbatim en un archivo privado, comprobadas con SHA-256. Ese archivo no es un recurso público de este sitio."
+  },
+  {
+    "objectID": "semesters/semester-01/deep-learning-1/week-03/class-03/index.html#objetivos-de-aprendizaje",
+    "href": "semesters/semester-01/deep-learning-1/week-03/class-03/index.html#objetivos-de-aprendizaje",
+    "title": "Clase 03",
+    "section": "Objetivos de aprendizaje",
+    "text": "Objetivos de aprendizaje\nSegún las celdas de objetivos de los notebooks:\n\nCNN_TensorFlow: (1) explicar el cálculo de una convolución; (2) construir un pipeline de datos seguro; (3) distinguir filtros, mapas de características y atribuciones; (4) comparar la convolución 1D y la dilatada en series de tiempo.\nhyperTun: comparar dos métodos de búsqueda de hiperparámetros con la misma arquitectura conceptual, las mismas imágenes y la misma partición train/validation/test. El flujo es: datos → CNN parametrizada → búsqueda → mejor configuración → reentrenamiento → evaluación en test.\nLos dos notebooks de transfer learning no tienen una celda de objetivos."
+  },
+  {
+    "objectID": "semesters/semester-01/deep-learning-1/week-03/class-03/index.html#temas",
+    "href": "semesters/semester-01/deep-learning-1/week-03/class-03/index.html#temas",
+    "title": "Clase 03",
+    "section": "Temas",
+    "text": "Temas\nSegún los encabezados y el código de los notebooks:\n\nCNN en TensorFlow: forma de los tensores de imagen, correlación cruzada y conteo de parámetros de Conv2D, el patrón Conv2D → MaxPooling2D repetido tres veces, GlobalAveragePooling2D en lugar de Flatten y callbacks (EarlyStopping, ModelCheckpoint).\nEvaluación e interpretación: el conjunto de prueba se usa solo al final; matriz de confusión, precisión/recall/F1 y ROC-AUC; un kernel aprendido y sus mapas de características; Grad-CAM («explicación local aproximada», según el propio notebook) y SHAP con GradientExplainer.\nSeries de tiempo: ventanas [t-n, …, t-1] → t sobre manchas solares, Conv1D con padding=\"causal\", convoluciones dilatadas (dilation_rate 1, 2, 4, 9, 15) y comparación de MAE y RMSE en la escala original.\nAjuste de hiperparámetros (Fashion-MNIST): Hyperband con Keras Tuner (número de capas convolucionales, tamaño de kernel, filtros, activación, dropout y tasa de aprendizaje) frente a Random Search con Optuna y PyTorch Lightning (sin pruning). Al final se reentrena desde cero la mejor configuración y se consulta el test una sola vez.\nTransfer learning (cats_vs_dogs): inferencia con modelos ImageNet, extractor congelado con cabeza nueva y fine-tuning (trainable) con VGG16 y ResNet50 de keras.applications.\nMulti-GPU y Hugging Face: el mismo problema con tf.distribute.MirroredStrategy, y después el fine-tuning de microsoft/resnet-50 con transformers (AutoModelForImageClassification, Trainer), con la cabeza de 1000 clases reemplazada por una de 2."
+  },
+  {
+    "objectID": "semesters/semester-01/deep-learning-1/week-03/class-03/index.html#notebooks",
+    "href": "semesters/semester-01/deep-learning-1/week-03/class-03/index.html#notebooks",
+    "title": "Clase 03",
+    "section": "Notebooks",
+    "text": "Notebooks\nLos enlaces Original y Colab apuntan al repositorio del docente, fijados al commit 349351d. Son referencias de procedencia: dependen de que ese repositorio siga disponible.\n\n\n\n#\nNotebook\nFramework\nContenido\nOriginal\nColab\n\n\n\n\n1\nIntroducción a redes neuronales convolucionales con TensorFlow · CNN_TensorFlow.ipynb\nTensorFlow / Keras\nPipeline tf.data con cats_vs_dogs, CNN Conv2D/MaxPooling2D, evaluación en test, kernels y mapas de características, Grad-CAM, SHAP, Conv1D causal y dilatada sobre manchas solares.\nGitHub\nOpen in Colab\n\n\n2\nAjuste de hiperparámetros de CNN con Fashion-MNIST · hyperTun.ipynb\nTensorFlow + Keras Tuner; PyTorch Lightning + Optuna\nHyperband frente a Random Search con el mismo espacio de búsqueda y la misma partición; reentrenamiento de la mejor configuración y evaluación final en test.\nGitHub\nOpen in Colab\n\n\n3\nTransfer learning · Transfer_clase_viernes.ipynb\nTensorFlow / Keras\nSolo código, sin celdas de texto. Inferencia ImageNet, modelo de transferencia con VGG16 y ResNet50, fine-tuning y comparación de probabilidades en imágenes de prueba.\nGitHub\nOpen in Colab\n\n\n4\nMulti-GPU y capacitación distribuida · Transfer_learning_MultiGPU.ipynb\nTensorFlow / Keras; PyTorch + Hugging Face transformers\nLas mismas celdas de transfer learning, más entrenamiento con MirroredStrategy y fine-tuning de microsoft/resnet-50 sobre microsoft/cats_vs_dogs.\nGitHub\nOpen in Colab\n\n\n\nLos cuatro notebooks están sin salidas en la fuente (ninguna celda ejecutada). Este sitio no los redistribuye ni los ejecuta."
+  },
+  {
+    "objectID": "semesters/semester-01/deep-learning-1/week-03/class-03/index.html#datos-y-recursos-necesarios",
+    "href": "semesters/semester-01/deep-learning-1/week-03/class-03/index.html#datos-y-recursos-necesarios",
+    "title": "Clase 03",
+    "section": "Datos y recursos necesarios",
+    "text": "Datos y recursos necesarios\n\n\n\n\n\n\n\n\nRecurso\nUsado por\nSituación\n\n\n\n\nsunspots.csv (en clase1/, leído como ../clase1/sunspots.csv)\nCNN_TensorFlow\nArchivo del docente. Copia verbatim en el archivo privado; no se publica aquí.\n\n\nimgs/animales/ del docente (leído como ../imgs/animales/*)\nTransfer_clase_viernes\nImágenes de terceros. Copia en el archivo privado; no se publican.\n\n\nfigura1_perro.jpg por ruta absoluta (/home/…/figura1_perro.jpg)\nTransfer_learning_MultiGPU\nTiene el mismo nombre que un archivo de imgs/animales/, pero se lee desde una ruta del equipo del docente. Hay que cambiarla para ejecutar la celda.\n\n\ntensorflow_datasets: cats_vs_dogs y fashion_mnist\nCNN_TensorFlow, Transfer_*, hyperTun\nRecurso externo; se descarga al ejecutar.\n\n\nHugging Face Hub: dataset microsoft/cats_vs_dogs y modelo microsoft/resnet-50\nTransfer_learning_MultiGPU\nRecurso externo; se descarga al ejecutar.\n\n\nPesos ImageNet de keras.applications (VGG16, ResNet50)\nTransfer_*\nRecurso externo; se descarga al ejecutar.\n\n\nVarias GPU\nTransfer_learning_MultiGPU (MirroredStrategy)\nCon una sola GPU o en CPU, la estrategia usa solo los dispositivos disponibles.\n\n\n\nBibliotecas que importan los notebooks: tensorflow, tensorflow_datasets, keras_tuner, torch, torchvision, lightning, optuna, scikit-learn, shap, transformers, datasets y PIL. En el commit 349351d, el pyproject.toml del docente declara keras-tuner, optuna, optuna-integration[pytorch-lightning], scikit-learn y shap. No declara transformers, datasets, lightning, torchvision ni tensorflow_datasets.\nLos notebooks no son autónomos: dependen de datasets y modelos descargados de internet y de archivos del repositorio del docente.\n\n\n\n\n\n\nWarningNotas para ejecutar los notebooks\n\n\n\n\n\nDescriben los notebooks tal como están en la fuente. No se han modificado.\n\nEl README.md del docente enlaza en Colab clase3/Transfer.ipynb, que no existe en el commit 349351d. El notebook equivalente es Transfer_clase_viernes.ipynb.\nTransfer_clase_viernes (19 celdas) y Transfer_learning_MultiGPU (36 celdas) tienen 13 de las primeras 19 celdas idénticas. El segundo añade las secciones de multi-GPU y Hugging Face.\nLas rutas relativas (../clase1/sunspots.csv, ../imgs/animales/) suponen la estructura del repositorio del docente. En Colab hay que subir esos archivos a la sesión.\nUna celda de Transfer_learning_MultiGPU usa una ruta absoluta del equipo del docente.\nTransfer_learning_MultiGPU incluye, comentadas, unas líneas para iniciar sesión en Hugging Face y subir el modelo al Hub. No se ejecutan por defecto."
+  },
+  {
+    "objectID": "semesters/semester-01/deep-learning-1/week-03/class-03/index.html#materiales-complementarios",
+    "href": "semesters/semester-01/deep-learning-1/week-03/class-03/index.html#materiales-complementarios",
+    "title": "Clase 03",
+    "section": "Materiales complementarios",
+    "text": "Materiales complementarios\nTodavía no hay materiales complementarios propios publicados para esta clase."
+  },
+  {
+    "objectID": "semesters/semester-01/deep-learning-1/week-03/class-03/index.html#notas-personales",
+    "href": "semesters/semester-01/deep-learning-1/week-03/class-03/index.html#notas-personales",
+    "title": "Clase 03",
+    "section": "Notas personales",
+    "text": "Notas personales\nTodavía no hay notas personales publicadas para esta clase."
+  },
+  {
+    "objectID": "semesters/semester-01/deep-learning-1/week-03/class-03/index.html#ejercicios",
+    "href": "semesters/semester-01/deep-learning-1/week-03/class-03/index.html#ejercicios",
+    "title": "Clase 03",
+    "section": "Ejercicios",
+    "text": "Ejercicios\nTodavía no hay ejercicios registrados para esta clase."
+  },
+  {
+    "objectID": "semesters/semester-01/deep-learning-1/week-03/class-03/index.html#referencias-y-atribuciones",
+    "href": "semesters/semester-01/deep-learning-1/week-03/class-03/index.html#referencias-y-atribuciones",
+    "title": "Clase 03",
+    "section": "Referencias y atribuciones",
+    "text": "Referencias y atribuciones\n\nRepositorio del docente: MAESTRiA-ESTADiS-CIENCIA-DATOS-Bosque/Deep_Learning_I_Fundamentos\nCarpeta de la clase: clase3/\nCommit incorporado: 349351db46d07cf07dbecad86b54a17c44219d6d (2026-10-27)\nDocumentación citada en los notebooks: Keras Tuner, Optuna y microsoft/resnet-50.\nLos datasets externos (cats_vs_dogs, Fashion-MNIST) y los modelos preentrenados tienen sus propios términos de uso, que hay que consultar en su fuente.\n\n← Volver a la semana 03 · Módulo Deep Learning I"
+  },
+  {
     "objectID": "semesters/semester-01/deep-learning-1/week-02/class-02/index.html",
     "href": "semesters/semester-01/deep-learning-1/week-02/class-02/index.html",
     "title": "Clase 02",
@@ -944,28 +1070,28 @@
     "href": "semesters/semester-01/deep-learning-1/index.html#recursos-del-módulo",
     "title": "Deep Learning I",
     "section": "Recursos del módulo",
-    "text": "Recursos del módulo\n\n\n📋 Contenido del curso\nResumen del programa oficial (Contenido.ipynb): justificación, requisitos, módulos, metodología, evaluación, trabajo final y bibliografía.\nVer contenido del curso\n\n\n📅 Semana 01\nClase 01 · Introducción a TensorFlow, PyTorch y JAX: tensores, diferenciación automática y carga de datos. Cinco notebooks y tres archivos de datos.\nVer semana 01\n\n\n📅 Semana 02\nClase 02 · Regresión, clasificación y pipelines de entrenamiento: de lo manual a Keras, torch.nn y PyTorch Lightning. Cuatro notebooks, un archivo de datos y artefactos de entrenamiento.\nVer semana 02\n\n\n📝 Talleres y tareas\nEnunciados del docente y soluciones. Tarea 01 · pipeline de datos multimodal con CUB-200-2011: notebook de Google Colab en PyTorch y TensorFlow, de Claudio de la Rosa y Juan Sebastián Laverde Chunza.\nVer talleres y tareas"
+    "text": "Recursos del módulo\n\n\n📋 Contenido del curso\nResumen del programa oficial (Contenido.ipynb): justificación, requisitos, módulos, metodología, evaluación, trabajo final y bibliografía.\nVer contenido del curso\n\n\n📅 Semana 01\nClase 01 · Introducción a TensorFlow, PyTorch y JAX: tensores, diferenciación automática y carga de datos. Cinco notebooks y tres archivos de datos.\nVer semana 01\n\n\n📅 Semana 02\nClase 02 · Regresión, clasificación y pipelines de entrenamiento: de lo manual a Keras, torch.nn y PyTorch Lightning. Cuatro notebooks, un archivo de datos y artefactos de entrenamiento.\nVer semana 02\n\n\n📅 Semana 03 — Redes neuronales convolucionales\nRedes neuronales convolucionales (CNN), ajuste de hiperparámetros, transfer learning y entrenamiento distribuido.\nVer semana 03\n\n\n📅 Semana 04 — LSTM y modelos multimodales\nRedes neuronales recurrentes LSTM, modelado secuencial y aprendizaje multimodal con aplicaciones prácticas.\nVer semana 04\n\n\n📝 Talleres y tareas\nEnunciados del docente y soluciones. Tarea 01 · pipeline de datos multimodal con CUB-200-2011: notebook de Google Colab en PyTorch y TensorFlow, de Claudio de la Rosa y Juan Sebastián Laverde Chunza.\nVer talleres y tareas"
   },
   {
     "objectID": "semesters/semester-01/deep-learning-1/index.html#semana-a-semana",
     "href": "semesters/semester-01/deep-learning-1/index.html#semana-a-semana",
     "title": "Deep Learning I",
     "section": "Semana a semana",
-    "text": "Semana a semana\nSe agrega una fila cuando el material de una clase se publica en el repositorio del docente. No se anticipan semanas ni clases futuras.\n\n\n\nSemana\nClase\nTemas\nNotebooks\nDatos\nEstado\n\n\n\n\nSemana 01\nClase 01 · Introducción a TensorFlow, PyTorch y JAX\nTensores, diferenciación automática, TensorFlow, PyTorch, JAX, carga de datos\n5\n3\nMaterial incorporado\n\n\nSemana 02\nClase 02 · Regresión, clasificación y pipelines de entrenamiento\nEntrenamiento manual vs tf.keras/torch.nn/Lightning, regularización, normalización, callbacks, pipelines MNIST y series temporales\n4\n1\nMaterial incorporado"
+    "text": "Semana a semana\nSe agrega una fila cuando el material de una clase se publica en el repositorio del docente. No se anticipan semanas ni clases futuras.\n\n\n\nSemana\nClase\nTemas\nNotebooks\nDatos\nEstado\n\n\n\n\nSemana 01\nClase 01 · Introducción a TensorFlow, PyTorch y JAX\nTensores, diferenciación automática, TensorFlow, PyTorch, JAX, carga de datos\n5\n3\nMaterial incorporado\n\n\nSemana 02\nClase 02 · Regresión, clasificación y pipelines de entrenamiento\nEntrenamiento manual vs tf.keras/torch.nn/Lightning, regularización, normalización, callbacks, pipelines MNIST y series temporales\n4\n1\nMaterial incorporado\n\n\nSemana 03\nClase 03 · Redes neuronales convolucionales\nCNN, Grad-CAM y SHAP, Conv1D y convoluciones dilatadas, ajuste de hiperparámetros (Keras Tuner, Optuna), transfer learning y multi-GPU\n4\n0\nMaterial incorporado\n\n\nSemana 04\nClase 04 · LSTM y modelos multimodales\nLSTM, BiLSTM y GRU (IMDB, manchas solares), fusión tardía imagen–audio y embeddings tipo CLIP\n2\n0\nMaterial incorporado"
   },
   {
     "objectID": "semesters/semester-01/deep-learning-1/index.html#progreso-actual",
     "href": "semesters/semester-01/deep-learning-1/index.html#progreso-actual",
     "title": "Deep Learning I",
     "section": "Progreso actual",
-    "text": "Progreso actual\n\nMaterial incorporado: Semana 01 · Clase 01. Es el contenido de la carpeta clase1/ del repositorio del docente, en el commit 0f989f9.\nMaterial incorporado: Semana 02 · Clase 02. Es el contenido de la carpeta clase2/ del repositorio del docente, en el commit c9cfeb5. Los enlaces de la Semana 01 apuntan a main. En ese commit, el docente actualizó los notebooks de clase1/. La descripción de la Semana 01 corresponde a la versión 0f989f9.\nTalleres y tareas: 1 tarea del docente (pipeline multimodal CUB-200-2011). La solución, de Claudio de la Rosa y Juan Sebastián Laverde Chunza, es un notebook de Google Colab con pipelines de train/val/test en PyTorch y TensorFlow, verificados en el propio notebook. No se entrenó ningún modelo.\nNotas personales: una nota de la Clase 02, en almacenamiento privado.\nEjercicios: todavía no se ha agregado ninguno."
+    "text": "Progreso actual\n\nMaterial incorporado: Semana 01 · Clase 01. Es el contenido de la carpeta clase1/ del repositorio del docente, en el commit 0f989f9.\nMaterial incorporado: Semana 02 · Clase 02. Es el contenido de la carpeta clase2/ del repositorio del docente, en el commit c9cfeb5. Los enlaces de la Semana 01 apuntan a main. En ese commit, el docente actualizó los notebooks de clase1/. La descripción de la Semana 01 corresponde a la versión 0f989f9.\nMaterial incorporado: Semanas 03 y 04 · Clases 03 y 04. Es el contenido de las carpetas clase3/ y clase4/ del repositorio del docente, en el commit 349351d. Los enlaces de estas dos semanas están fijados a ese commit. Las descripciones de las Semanas 01 y 02 siguen correspondiendo a sus commits originales.\nPreservación: hay una copia verbatim y privada del repositorio del docente en el commit 349351d (las cuatro semanas, 42 archivos verificados con SHA-256), con su historial Git en un respaldo local. No es un recurso público de este sitio.\nTalleres y tareas: 1 tarea del docente (pipeline multimodal CUB-200-2011). La solución, de Claudio de la Rosa y Juan Sebastián Laverde Chunza, es un notebook de Google Colab con pipelines de train/val/test en PyTorch y TensorFlow, verificados en el propio notebook. No se entrenó ningún modelo.\nNotas personales: una nota de la Clase 02, en almacenamiento privado.\nEjercicios: todavía no se ha agregado ninguno."
   },
   {
     "objectID": "semesters/semester-01/deep-learning-1/index.html#entorno-y-dependencias",
     "href": "semesters/semester-01/deep-learning-1/index.html#entorno-y-dependencias",
     "title": "Deep Learning I",
     "section": "Entorno y dependencias",
-    "text": "Entorno y dependencias\nEl repositorio del docente gestiona su entorno con uv. Según su pyproject.toml, requiere:\n\n\n\nPaquete\nVersión mínima\n\n\n\n\nPython\n≥ 3.12\n\n\njax[cpu]\n≥ 0.11.1\n\n\njupyter\n≥ 1.1.1\n\n\nmatplotlib\n≥ 3.11.2\n\n\nnumpy\n≥ 2.5.3\n\n\npandas\n≥ 3.0.6\n\n\ntensorflow\n≥ 2.21.0\n\n\ntorch\n≥ 2.14.0\n\n\n\n\n\n\n\n\n\nNoteDependencias adicionales\n\n\n\nLos notebooks de carga de datos también importan tensorflow_datasets, torchvision y PIL (Pillow), que no aparecen en ese pyproject.toml. Los notebooks de la clase 02 agregan lightning/pytorch-lightning, tensorboard y keras ≥ 3 (con backend torch o jax), y los instalan con !pip dentro del notebook.\nEste sitio no ejecuta los notebooks de Deep Learning al construirse. El sitio no instala TensorFlow, PyTorch ni JAX, y los notebooks se ofrecen solo como enlaces a GitHub y Colab. Para ejecutarlos localmente, clona el repositorio del docente y ejecuta uv sync."
+    "text": "Entorno y dependencias\nEl repositorio del docente gestiona su entorno con uv. Según su pyproject.toml, requiere:\n\n\n\nPaquete\nVersión mínima\n\n\n\n\nPython\n≥ 3.12\n\n\njax[cpu]\n≥ 0.11.1\n\n\njupyter\n≥ 1.1.1\n\n\nmatplotlib\n≥ 3.11.2\n\n\nnumpy\n≥ 2.5.3\n\n\npandas\n≥ 3.0.6\n\n\ntensorflow\n≥ 2.21.0\n\n\ntorch\n≥ 2.14.0\n\n\n\n\n\n\n\n\n\nNoteDependencias adicionales\n\n\n\nLos notebooks de carga de datos también importan tensorflow_datasets, torchvision y PIL (Pillow), que no aparecen en ese pyproject.toml. Los notebooks de la clase 02 agregan lightning/pytorch-lightning, tensorboard y keras ≥ 3 (con backend torch o jax), y los instalan con !pip dentro del notebook.\nEn el commit 349351d, el pyproject.toml del docente agrega keras-tuner, optuna, optuna-integration[pytorch-lightning], scikit-learn, shap, pydub e importlib-resources. Los notebooks de las clases 03 y 04 importan además transformers y datasets (Hugging Face), lightning y torchvision, que ese archivo no declara.\nEste sitio no ejecuta los notebooks de Deep Learning al construirse. El sitio no instala TensorFlow, PyTorch ni JAX, y los notebooks se ofrecen solo como enlaces a GitHub y Colab. Para ejecutarlos localmente, clona el repositorio del docente y ejecuta uv sync."
   },
   {
     "objectID": "semesters/semester-01/deep-learning-1/index.html#google-colab",
@@ -1007,7 +1133,7 @@
     "href": "semesters/semester-01/deep-learning-1/week-01/index.html#fuente",
     "title": "Semana 01",
     "section": "Fuente",
-    "text": "Fuente\nMaterial del docente Héctor Javier Hortúa, PhD, del curso Deep Learning I (Universidad El Bosque). Fuente: Deep_Learning_I_Fundamentos/clase1.\nEl repositorio fuente no tiene un archivo de licencia explícito ni un aviso de reutilización. Por eso este sitio no republica el material del docente: lo enlaza con atribución."
+    "text": "Fuente\nMaterial del docente Héctor Javier Hortúa, PhD, del curso Deep Learning I (Universidad El Bosque). Fuente: Deep_Learning_I_Fundamentos/clase1.\nEl repositorio fuente no tiene un archivo de licencia explícito ni un aviso de reutilización. Por eso este sitio no republica el material del docente: lo enlaza con atribución.\nMódulo Deep Learning I · Semana 02 →"
   },
   {
     "objectID": "semesters/semester-01/deep-learning-1/week-02/index.html",
@@ -1042,7 +1168,77 @@
     "href": "semesters/semester-01/deep-learning-1/week-02/index.html#fuente",
     "title": "Semana 02",
     "section": "Fuente",
-    "text": "Fuente\nMaterial del docente Héctor Javier Hortúa, PhD, del curso Deep Learning I (Universidad El Bosque). Fuente: Deep_Learning_I_Fundamentos/clase2.\nEl repositorio fuente no tiene un archivo de licencia explícito ni un aviso de reutilización. Por eso este sitio no republica el material del docente: lo enlaza con atribución.\n← Módulo Deep Learning I"
+    "text": "Fuente\nMaterial del docente Héctor Javier Hortúa, PhD, del curso Deep Learning I (Universidad El Bosque). Fuente: Deep_Learning_I_Fundamentos/clase2.\nEl repositorio fuente no tiene un archivo de licencia explícito ni un aviso de reutilización. Por eso este sitio no republica el material del docente: lo enlaza con atribución.\n← Semana 01 · Módulo Deep Learning I · Semana 03 →"
+  },
+  {
+    "objectID": "semesters/semester-01/deep-learning-1/week-03/index.html",
+    "href": "semesters/semester-01/deep-learning-1/week-03/index.html",
+    "title": "Semana 03",
+    "section": "",
+    "text": "La semana 03 introduce las redes neuronales convolucionales (CNN) con TensorFlow. Cubre la operación de convolución, el entrenamiento y la evaluación de una CNN, su interpretación con Grad-CAM y SHAP, y la convolución 1D aplicada a series de tiempo. Se completa con el ajuste de hiperparámetros (Keras Tuner y Optuna), transfer learning con modelos preentrenados en ImageNet y entrenamiento distribuido con varias GPU. En el repositorio del docente corresponde a la sección “Semana 3. CNNs, ajuste de hiperparámetros, entrenamiento distribuido, Transfer Learning” del README.md y a la carpeta clase3/.\nEstado: Material incorporado"
+  },
+  {
+    "objectID": "semesters/semester-01/deep-learning-1/week-03/index.html#clases",
+    "href": "semesters/semester-01/deep-learning-1/week-03/index.html#clases",
+    "title": "Semana 03",
+    "section": "Clases",
+    "text": "Clases\n\n\nClase 03 · Redes neuronales convolucionales\nCNN en TensorFlow con Grad-CAM y SHAP, convoluciones 1D y dilatadas para series de tiempo, ajuste de hiperparámetros con Keras Tuner y Optuna, transfer learning (VGG16, ResNet50) y entrenamiento con varias GPU.\n4 notebooks · sin archivos de datos propios · datasets externos\nVer clase 03 →"
+  },
+  {
+    "objectID": "semesters/semester-01/deep-learning-1/week-03/index.html#temas",
+    "href": "semesters/semester-01/deep-learning-1/week-03/index.html#temas",
+    "title": "Semana 03",
+    "section": "Temas",
+    "text": "Temas\n\nConvolución: cálculo de la operación, filtros, mapas de características, Conv2D, MaxPooling2D y GlobalAveragePooling2D.\nPipeline seguro con tf.data y particiones train/validation/test (70/15/15) de cats_vs_dogs. Evaluación con matriz de confusión, precisión/recall/F1 y ROC-AUC.\nInterpretabilidad: visualización de kernels y mapas de activación, Grad-CAM y SHAP (GradientExplainer).\nSeries de tiempo con Conv1D causal y convoluciones dilatadas (manchas solares).\nAjuste de hiperparámetros sobre Fashion-MNIST: Hyperband (Keras Tuner) frente a Random Search (Optuna con PyTorch Lightning).\nTransfer learning y fine-tuning con VGG16 y ResNet50 (Keras), y con ResNet-50 de Hugging Face (transformers).\nEntrenamiento distribuido síncrono con tf.distribute.MirroredStrategy."
+  },
+  {
+    "objectID": "semesters/semester-01/deep-learning-1/week-03/index.html#resumen-de-materiales",
+    "href": "semesters/semester-01/deep-learning-1/week-03/index.html#resumen-de-materiales",
+    "title": "Semana 03",
+    "section": "Resumen de materiales",
+    "text": "Resumen de materiales\n\n\n\n\n\n\n\n\nTipo\nCantidad\nDetalle\n\n\n\n\nNotebooks\n4\nCNN (TensorFlow), ajuste de hiperparámetros (Keras Tuner + Optuna/Lightning), transfer learning y transfer learning con multi-GPU y Hugging Face\n\n\nDatos\n0\nLa clase no trae archivos de datos propios. CNN_TensorFlow reutiliza sunspots.csv de clase1/\n\n\nRecursos externos\n—\ntensorflow_datasets (cats_vs_dogs, fashion_mnist), Hugging Face Hub (microsoft/cats_vs_dogs, microsoft/resnet-50), pesos ImageNet de Keras e imágenes imgs/animales/ del docente (Transfer_clase_viernes)\n\n\nNotas personales\n0\nTodavía no hay notas publicadas\n\n\nEjercicios\n0\nTodavía no hay"
+  },
+  {
+    "objectID": "semesters/semester-01/deep-learning-1/week-03/index.html#fuente",
+    "href": "semesters/semester-01/deep-learning-1/week-03/index.html#fuente",
+    "title": "Semana 03",
+    "section": "Fuente",
+    "text": "Fuente\nMaterial del docente Héctor Javier Hortúa, PhD, del curso Deep Learning I (Universidad El Bosque). Fuente: Deep_Learning_I_Fundamentos/clase3 (commit 349351d).\nEl repositorio fuente no tiene un archivo de licencia explícito ni un aviso de reutilización. Por eso este sitio no republica el material del docente: lo enlaza con atribución.\n← Semana 02 · Módulo Deep Learning I · Semana 04 →"
+  },
+  {
+    "objectID": "semesters/semester-01/deep-learning-1/week-04/index.html",
+    "href": "semesters/semester-01/deep-learning-1/week-04/index.html",
+    "title": "Semana 04",
+    "section": "",
+    "text": "La semana 04 trata las redes recurrentes (LSTM, BiLSTM y GRU) y el aprendizaje multimodal. Las redes recurrentes se aplican a la clasificación de sentimiento de texto y al pronóstico de series de tiempo. El bloque multimodal combina imagen y audio de un mismo dígito, primero con fusión tardía y después con un espacio de embeddings compartido al estilo CLIP. En el repositorio del docente corresponde a la sección “Semana 4. LSTM y Modelos multimodales” del README.md y a la carpeta clase4/.\nEstado: Material incorporado"
+  },
+  {
+    "objectID": "semesters/semester-01/deep-learning-1/week-04/index.html#clases",
+    "href": "semesters/semester-01/deep-learning-1/week-04/index.html#clases",
+    "title": "Semana 04",
+    "section": "Clases",
+    "text": "Clases\n\n\nClase 04 · LSTM y modelos multimodales\nLSTM y BiLSTM para análisis de sentimiento con IMDB, LSTM frente a GRU para pronosticar manchas solares, y un modelo multimodal MNIST + dígitos hablados con fusión tardía y aprendizaje contrastivo tipo CLIP.\n2 notebooks · sin archivos de datos propios · datasets externos\nVer clase 04 →"
+  },
+  {
+    "objectID": "semesters/semester-01/deep-learning-1/week-04/index.html#temas",
+    "href": "semesters/semester-01/deep-learning-1/week-04/index.html#temas",
+    "title": "Semana 04",
+    "section": "Temas",
+    "text": "Temas\n\nRedes recurrentes: LSTM, LSTM bidireccional apilada (BiLSTM) y GRU.\nTexto: estandarización, TextVectorization, máscaras de padding, Embedding(mask_zero=True) y truncado de secuencias (IMDB).\nSeries de tiempo: división cronológica 70/15/15, normalización con estadísticas de entrenamiento y ventanas (manchas solares).\nAudio como secuencia: espectrograma de la forma de onda (Free Spoken Digit Dataset).\nAprendizaje multimodal: emparejamiento imagen–audio por clase y partición, fusión tardía (promedio, producto y stacking).\nEspacio de embeddings compartido tipo CLIP: cabezas de proyección, normalización L2, temperatura, pérdida contrastiva y clasificación zero-shot."
+  },
+  {
+    "objectID": "semesters/semester-01/deep-learning-1/week-04/index.html#resumen-de-materiales",
+    "href": "semesters/semester-01/deep-learning-1/week-04/index.html#resumen-de-materiales",
+    "title": "Semana 04",
+    "section": "Resumen de materiales",
+    "text": "Resumen de materiales\n\n\n\nTipo\nCantidad\nDetalle\n\n\n\n\nNotebooks\n2\nRedes recurrentes (TensorFlow/Keras) y aprendizaje multimodal (TensorFlow/Keras)\n\n\nDatos\n0\nLa clase no trae archivos de datos propios. lstm reutiliza sunspots.csv de clase1/\n\n\nRecursos externos\n—\ntensorflow_datasets: imdb_reviews, mnist y spoken_digit\n\n\nNotas personales\n0\nTodavía no hay notas publicadas\n\n\nEjercicios\n0\nTodavía no hay\n\n\nTalleres y tareas\n1\nTarea 02 · fusión multimodal, red siamesa y CLIP con CUB-200-2011. Es de temática multimodal y el docente la publicó el mismo día que la Semana 4 (2026-10-27)"
+  },
+  {
+    "objectID": "semesters/semester-01/deep-learning-1/week-04/index.html#fuente",
+    "href": "semesters/semester-01/deep-learning-1/week-04/index.html#fuente",
+    "title": "Semana 04",
+    "section": "Fuente",
+    "text": "Fuente\nMaterial del docente Héctor Javier Hortúa, PhD, del curso Deep Learning I (Universidad El Bosque). Fuente: Deep_Learning_I_Fundamentos/clase4 (commit 349351d).\nEl repositorio fuente no tiene un archivo de licencia explícito ni un aviso de reutilización. Por eso este sitio no republica el material del docente: lo enlaza con atribución.\n← Semana 03 · Módulo Deep Learning I"
   },
   {
     "objectID": "semesters/semester-01/deep-learning-1/workshops/workshop-01-cub200-multimodal/index.html",
