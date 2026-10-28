@@ -1,0 +1,106 @@
+---
+title: "Tarea 02 — Fusión multimodal, red siamesa y CLIP con CUB-200-2011"
+subtitle: "Deep Learning I · Semestre 1 · Módulo 2"
+description: "Tarea 02 de Deep Learning I: comparación de modelos unimodales, early fusion, late fusion, una red siamesa y un modelo tipo CLIP sobre CUB-200-2011. Actividad pendiente de Claudio de la Rosa y Juan Sebastián Laverde Chunza."
+date: "2026-10-28"
+date-format: "DD/MM/YYYY"
+toc-depth: 2
+---
+
+::: {.module-banner}
+## Fusión multimodal, red siamesa y CLIP con CUB-200-2011
+
+| | |
+|---|---|
+| **Institución** | Universidad El Bosque · Doctorado en Ciencia de Datos e Inteligencia Artificial |
+| **Asignatura** | Deep Learning I |
+| **Semestre** | Semestre 1 · Módulo 2 |
+| **Docente** | Héctor Javier Hortúa, PhD |
+| **Autores** | Claudio de la Rosa · Juan Sebastián Laverde Chunza |
+| **Frameworks** | PyTorch, JAX o TensorFlow (a elección) |
+
+[PENDIENTE]{.status-wip}
+:::
+
+::: {.grid .study-grid-2}
+::: {.card .study-card}
+[[]{.bi .bi-journal-code aria-hidden="true"} Entregable]{.study-kicker}
+
+### Notebook y PDF
+La entrega será un notebook ejecutado y su PDF con las salidas visibles. Ambos están pendientes
+y se publicarán en esta página cuando la tarea esté resuelta.
+
+[Estado: PENDIENTE]{.study-meta}
+:::
+
+::: {.card .study-card}
+[[]{.bi .bi-file-text aria-hidden="true"} Enunciado del docente]{.study-kicker}
+
+### Tarea modelos multimodal CUB-200-2011
+Enunciado original de Héctor Javier Hortúa, PhD, publicado en el repositorio del curso. Se enlaza
+y no se redistribuye.
+
+[Markdown · repositorio del docente]{.study-meta}
+
+::: {.study-actions}
+[Ver enunciado](https://github.com/MAESTRiA-ESTADiS-CIENCIA-DATOS-Bosque/Deep_Learning_I_Fundamentos/blob/main/tareas/Tarea_modelos_multimodal_CUB-200-2011.md){aria-label="Ver el enunciado original de la Tarea 02 en el repositorio del docente"}
+:::
+:::
+:::
+
+## 1. Descripción
+
+La Tarea 02 parte de los pipelines construidos en la
+[Tarea 01](../workshop-01-cub200-multimodal/index.qmd), que entregan por cada ejemplo una imagen,
+una descripción textual, un vector de atributos y la especie. Sobre esa base, la actividad entrena y
+compara distintas maneras de combinar o relacionar las modalidades de CUB-200-2011.
+
+## 2. Objetivo
+
+Determinar qué gana un modelo al usar más de una modalidad y de qué manera conviene combinarlas,
+comparando clasificadores de especies con modelos que aprenden distancias y pueden trabajar con
+especies no vistas durante el entrenamiento.
+
+## 3. Partes del trabajo solicitado
+
+Las secciones siguientes describen lo que pide el enunciado; todavía no contienen desarrollo ni
+resultados.
+
+### 3.1 Modelos unimodales
+
+Un clasificador de las 200 especies por cada modalidad por separado, para medir cuánto rinde cada
+una por sí sola y comparar las especies que cada modelo confunde.
+
+### 3.2 Early fusion
+
+Un único modelo que recibe las tres modalidades, fusiona sus representaciones y se entrena de punta
+a punta con una sola pérdida.
+
+### 3.3 Late fusion, ablación y robustez
+
+Combinación de las predicciones de los modelos unimodales sin reentrenarlos, ablación por pares de
+modalidades y evaluación de la robustez de early y late fusion cuando se degrada una modalidad.
+
+### 3.4 Red siamesa de imágenes
+
+Un encoder con pesos compartidos que proyecta fotografías en un espacio métrico, entrenado con una
+mitad de las especies y evaluado con especies que no vio, comparando pérdidas y estrategias de
+muestreo.
+
+### 3.5 CLIP imagen–texto con especies no vistas
+
+Dos encoders, de imagen y de texto, entrenados con una pérdida contrastiva para alinear cada foto con
+sus descripciones, y evaluados en clasificación *zero-shot* y búsqueda cruzada sobre especies no
+vistas.
+
+## 4. Entrega esperada
+
+- Notebook ejecutado, con cada decisión y cada resultado explicados en celdas Markdown.
+- PDF del notebook con las salidas visibles.
+
+::: {.callout-note}
+## Estado
+Actividad **pendiente**. Todavía no se han entrenado modelos ni se reportan métricas o resultados.
+:::
+
+[← Talleres y tareas](../index.qmd) · [Módulo Deep Learning I](../../index.qmd)
