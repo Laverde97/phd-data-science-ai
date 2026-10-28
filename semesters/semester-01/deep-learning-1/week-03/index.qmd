@@ -1,0 +1,67 @@
+---
+title: "Semana 03"
+subtitle: "Deep Learning I · Semestre 1 · Módulo 2"
+---
+
+La semana 03 introduce las redes neuronales convolucionales (CNN) con TensorFlow. Cubre la
+operación de convolución, el entrenamiento y la evaluación de una CNN, su interpretación con
+Grad-CAM y SHAP, y la convolución 1D aplicada a series de tiempo. Se completa con el ajuste de
+hiperparámetros (Keras Tuner y Optuna), *transfer learning* con modelos preentrenados en ImageNet
+y entrenamiento distribuido con varias GPU. En el repositorio del docente corresponde a la sección
+*"Semana 3. CNNs, ajuste de hiperparámetros, entrenamiento distribuido, Transfer Learning"* del
+`README.md` y a la carpeta
+[`clase3/`](https://github.com/MAESTRiA-ESTADiS-CIENCIA-DATOS-Bosque/Deep_Learning_I_Fundamentos/tree/349351db46d07cf07dbecad86b54a17c44219d6d/clase3).
+
+**Estado:** [Material incorporado]{.status-done}
+
+## Clases
+
+::: {.grid}
+::: {.card}
+### Clase 03 · Redes neuronales convolucionales
+CNN en TensorFlow con Grad-CAM y SHAP, convoluciones 1D y dilatadas para series de tiempo, ajuste
+de hiperparámetros con Keras Tuner y Optuna, *transfer learning* (VGG16, ResNet50) y
+entrenamiento con varias GPU.
+
+**4 notebooks · sin archivos de datos propios · datasets externos**
+
+[Ver clase 03 →](class-03/index.qmd)
+:::
+:::
+
+## Temas
+
+- Convolución: cálculo de la operación, filtros, mapas de características, `Conv2D`,
+  `MaxPooling2D` y `GlobalAveragePooling2D`.
+- Pipeline seguro con `tf.data` y particiones *train*/*validation*/*test* (70/15/15) de
+  `cats_vs_dogs`. Evaluación con matriz de confusión, precisión/*recall*/F1 y ROC-AUC.
+- Interpretabilidad: visualización de kernels y mapas de activación, Grad-CAM y SHAP
+  (`GradientExplainer`).
+- Series de tiempo con `Conv1D` causal y convoluciones dilatadas (manchas solares).
+- Ajuste de hiperparámetros sobre Fashion-MNIST: Hyperband (Keras Tuner) frente a *Random Search*
+  (Optuna con PyTorch Lightning).
+- *Transfer learning* y *fine-tuning* con VGG16 y ResNet50 (Keras), y con ResNet-50 de Hugging
+  Face (`transformers`).
+- Entrenamiento distribuido síncrono con `tf.distribute.MirroredStrategy`.
+
+## Resumen de materiales
+
+| Tipo | Cantidad | Detalle |
+|------|:--------:|---------|
+| Notebooks | 4 | CNN (TensorFlow), ajuste de hiperparámetros (Keras Tuner + Optuna/Lightning), *transfer learning* y *transfer learning* con multi-GPU y Hugging Face |
+| Datos | 0 | La clase no trae archivos de datos propios. `CNN_TensorFlow` reutiliza `sunspots.csv` de `clase1/` |
+| Recursos externos | — | `tensorflow_datasets` (`cats_vs_dogs`, `fashion_mnist`), Hugging Face Hub (`microsoft/cats_vs_dogs`, `microsoft/resnet-50`), pesos ImageNet de Keras e imágenes `imgs/animales/` del docente (`Transfer_clase_viernes`) |
+| Notas personales | 0 | Todavía no hay notas publicadas |
+| Ejercicios | 0 | Todavía no hay |
+
+## Fuente
+
+Material del docente Héctor Javier Hortúa, PhD, del curso Deep Learning I (Universidad El
+Bosque). Fuente:
+[Deep_Learning_I_Fundamentos/clase3](https://github.com/MAESTRiA-ESTADiS-CIENCIA-DATOS-Bosque/Deep_Learning_I_Fundamentos/tree/349351db46d07cf07dbecad86b54a17c44219d6d/clase3)
+(commit `349351d`).
+
+El repositorio fuente no tiene un archivo de licencia explícito ni un aviso de reutilización.
+Por eso este sitio no republica el material del docente: lo enlaza con atribución.
+
+[← Semana 02](../week-02/index.qmd) · [Módulo Deep Learning I](../index.qmd) · [Semana 04 →](../week-04/index.qmd)

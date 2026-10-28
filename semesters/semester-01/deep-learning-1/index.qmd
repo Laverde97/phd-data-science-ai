@@ -50,6 +50,22 @@ y PyTorch Lightning. Cuatro notebooks, un archivo de datos y artefactos de entre
 :::
 
 ::: {.resource-card}
+### 📅 Semana 03 — Redes neuronales convolucionales
+Redes neuronales convolucionales (CNN), ajuste de hiperparámetros, transfer learning y
+entrenamiento distribuido.
+
+[Ver semana 03](week-03/index.qmd)
+:::
+
+::: {.resource-card}
+### 📅 Semana 04 — LSTM y modelos multimodales
+Redes neuronales recurrentes LSTM, modelado secuencial y aprendizaje multimodal con
+aplicaciones prácticas.
+
+[Ver semana 04](week-04/index.qmd)
+:::
+
+::: {.resource-card}
 ### 📝 Talleres y tareas
 Enunciados del docente y soluciones. Tarea 01 · pipeline de datos multimodal con
 CUB-200-2011: notebook de Google Colab en PyTorch y TensorFlow, de Claudio de la Rosa y
@@ -68,6 +84,8 @@ No se anticipan semanas ni clases futuras.
 |--------|-------|-------|:---------:|:-----:|--------|
 | [Semana 01](week-01/index.qmd) | [Clase 01 · Introducción a TensorFlow, PyTorch y JAX](week-01/class-01/index.qmd) | Tensores, diferenciación automática, TensorFlow, PyTorch, JAX, carga de datos | 5 | 3 | [Material incorporado]{.status-done} |
 | [Semana 02](week-02/index.qmd) | [Clase 02 · Regresión, clasificación y pipelines de entrenamiento](week-02/class-02/index.qmd) | Entrenamiento manual vs `tf.keras`/`torch.nn`/Lightning, regularización, normalización, *callbacks*, pipelines MNIST y series temporales | 4 | 1 | [Material incorporado]{.status-done} |
+| [Semana 03](week-03/index.qmd) | [Clase 03 · Redes neuronales convolucionales](week-03/class-03/index.qmd) | CNN, Grad-CAM y SHAP, `Conv1D` y convoluciones dilatadas, ajuste de hiperparámetros (Keras Tuner, Optuna), *transfer learning* y multi-GPU | 4 | 0 | [Material incorporado]{.status-done} |
+| [Semana 04](week-04/index.qmd) | [Clase 04 · LSTM y modelos multimodales](week-04/class-04/index.qmd) | LSTM, BiLSTM y GRU (IMDB, manchas solares), fusión tardía imagen–audio y *embeddings* tipo CLIP | 2 | 0 | [Material incorporado]{.status-done} |
 
 ## Progreso actual
 
@@ -79,6 +97,14 @@ No se anticipan semanas ni clases futuras.
   [`c9cfeb5`](https://github.com/MAESTRiA-ESTADiS-CIENCIA-DATOS-Bosque/Deep_Learning_I_Fundamentos/tree/c9cfeb52746c5d8c41fcdc3ae246bc6111324ce1).
   Los enlaces de la Semana 01 apuntan a `main`. En ese commit, el docente actualizó los notebooks
   de `clase1/`. La descripción de la Semana 01 corresponde a la versión `0f989f9`.
+- **Material incorporado:** Semanas 03 y 04 · Clases 03 y 04. Es el contenido de las carpetas
+  `clase3/` y `clase4/` del repositorio del docente, en el commit
+  [`349351d`](https://github.com/MAESTRiA-ESTADiS-CIENCIA-DATOS-Bosque/Deep_Learning_I_Fundamentos/tree/349351db46d07cf07dbecad86b54a17c44219d6d).
+  Los enlaces de estas dos semanas están fijados a ese commit. Las descripciones de las Semanas 01
+  y 02 siguen correspondiendo a sus commits originales.
+- **Preservación:** hay una copia verbatim y privada del repositorio del docente en el commit
+  `349351d` (las cuatro semanas, 42 archivos verificados con SHA-256), con su historial Git en un
+  respaldo local. No es un recurso público de este sitio.
 - **Talleres y tareas:** [1 tarea del docente](workshops/index.qmd) (pipeline multimodal
   CUB-200-2011). La [solución](workshops/workshop-01-cub200-multimodal/index.qmd), de Claudio de
   la Rosa y Juan Sebastián Laverde Chunza, es un notebook de Google Colab con pipelines de
@@ -109,6 +135,11 @@ Los notebooks de carga de datos también importan `tensorflow_datasets`, `torchv
 (Pillow), que no aparecen en ese `pyproject.toml`. Los notebooks de la clase 02 agregan
 `lightning`/`pytorch-lightning`, `tensorboard` y `keras ≥ 3` (con *backend* `torch` o `jax`), y
 los instalan con `!pip` dentro del notebook.
+
+En el commit `349351d`, el `pyproject.toml` del docente agrega `keras-tuner`, `optuna`,
+`optuna-integration[pytorch-lightning]`, `scikit-learn`, `shap`, `pydub` e
+`importlib-resources`. Los notebooks de las clases 03 y 04 importan además `transformers` y
+`datasets` (Hugging Face), `lightning` y `torchvision`, que ese archivo no declara.
 
 Este sitio **no ejecuta** los notebooks de Deep Learning al construirse. El sitio no instala
 TensorFlow, PyTorch ni JAX, y los notebooks se ofrecen solo como enlaces a GitHub y Colab. Para

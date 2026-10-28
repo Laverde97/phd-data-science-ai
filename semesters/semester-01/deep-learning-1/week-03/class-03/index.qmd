@@ -1,0 +1,136 @@
+---
+title: "Clase 03"
+subtitle: "Semana 03 · Redes neuronales convolucionales"
+---
+
+::: {.callout-important}
+## Fuente y atribución
+Material del docente **Héctor Javier Hortúa, PhD** (SavIA-Lab, Instituto de Neurociencias), del
+curso Deep Learning I del Doctorado en Ciencia de Datos e Inteligencia Artificial de la
+Universidad El Bosque. Viene de la carpeta
+[`clase3/`](https://github.com/MAESTRiA-ESTADiS-CIENCIA-DATOS-Bosque/Deep_Learning_I_Fundamentos/tree/349351db46d07cf07dbecad86b54a17c44219d6d/clase3)
+del repositorio del docente (commit `349351d`). No es de autoría propia.
+
+El repositorio fuente no tiene un archivo de licencia explícito, así que aquí se enlaza al original.
+Hay copias verbatim en un archivo privado, comprobadas con SHA-256. Ese archivo no es un recurso
+público de este sitio.
+:::
+
+## Objetivos de aprendizaje
+
+Según las celdas de objetivos de los notebooks:
+
+- **`CNN_TensorFlow`:** (1) explicar el cálculo de una convolución; (2) construir un pipeline de
+  datos seguro; (3) distinguir filtros, mapas de características y atribuciones; (4) comparar la
+  convolución 1D y la dilatada en series de tiempo.
+- **`hyperTun`:** comparar dos métodos de búsqueda de hiperparámetros con la misma arquitectura
+  conceptual, las mismas imágenes y la misma partición *train*/*validation*/*test*. El flujo es:
+  datos → CNN parametrizada → búsqueda → mejor configuración → reentrenamiento → evaluación en
+  *test*.
+- Los dos notebooks de *transfer learning* no tienen una celda de objetivos.
+
+## Temas
+
+Según los encabezados y el código de los notebooks:
+
+- **CNN en TensorFlow:** forma de los tensores de imagen, correlación cruzada y conteo de
+  parámetros de `Conv2D`, el patrón `Conv2D → MaxPooling2D` repetido tres veces,
+  `GlobalAveragePooling2D` en lugar de `Flatten` y `callbacks` (`EarlyStopping`,
+  `ModelCheckpoint`).
+- **Evaluación e interpretación:** el conjunto de prueba se usa solo al final; matriz de
+  confusión, precisión/*recall*/F1 y ROC-AUC; un kernel aprendido y sus mapas de
+  características; Grad-CAM («explicación local aproximada», según el propio notebook) y SHAP con
+  `GradientExplainer`.
+- **Series de tiempo:** ventanas `[t-n, …, t-1] → t` sobre manchas solares, `Conv1D` con
+  `padding="causal"`, convoluciones dilatadas (`dilation_rate` 1, 2, 4, 9, 15) y comparación de
+  MAE y RMSE en la escala original.
+- **Ajuste de hiperparámetros (Fashion-MNIST):** Hyperband con Keras Tuner (número de capas
+  convolucionales, tamaño de kernel, filtros, activación, *dropout* y tasa de aprendizaje) frente a
+  *Random Search* con Optuna y PyTorch Lightning (sin *pruning*). Al final se reentrena desde cero
+  la mejor configuración y se consulta el *test* una sola vez.
+- **Transfer learning (`cats_vs_dogs`):** inferencia con modelos ImageNet, extractor congelado con
+  cabeza nueva y *fine-tuning* (`trainable`) con VGG16 y ResNet50 de `keras.applications`.
+- **Multi-GPU y Hugging Face:** el mismo problema con `tf.distribute.MirroredStrategy`, y después
+  el *fine-tuning* de `microsoft/resnet-50` con `transformers` (`AutoModelForImageClassification`,
+  `Trainer`), con la cabeza de 1000 clases reemplazada por una de 2.
+
+## Notebooks
+
+Los enlaces **Original** y **Colab** apuntan al repositorio del docente, fijados al commit
+`349351d`. Son referencias de procedencia: dependen de que ese repositorio siga disponible.
+
+| # | Notebook | Framework | Contenido | Original | Colab |
+|:-:|----------|-----------|-----------|----------|-------|
+| 1 | **Introducción a redes neuronales convolucionales con TensorFlow** · `CNN_TensorFlow.ipynb` | TensorFlow / Keras | Pipeline `tf.data` con `cats_vs_dogs`, CNN `Conv2D`/`MaxPooling2D`, evaluación en *test*, kernels y mapas de características, Grad-CAM, SHAP, `Conv1D` causal y dilatada sobre manchas solares. | [GitHub](https://github.com/MAESTRiA-ESTADiS-CIENCIA-DATOS-Bosque/Deep_Learning_I_Fundamentos/blob/349351db46d07cf07dbecad86b54a17c44219d6d/clase3/CNN_TensorFlow.ipynb) | [Open in Colab](https://colab.research.google.com/github/MAESTRiA-ESTADiS-CIENCIA-DATOS-Bosque/Deep_Learning_I_Fundamentos/blob/349351db46d07cf07dbecad86b54a17c44219d6d/clase3/CNN_TensorFlow.ipynb) |
+| 2 | **Ajuste de hiperparámetros de CNN con Fashion-MNIST** · `hyperTun.ipynb` | TensorFlow + Keras Tuner; PyTorch Lightning + Optuna | Hyperband frente a *Random Search* con el mismo espacio de búsqueda y la misma partición; reentrenamiento de la mejor configuración y evaluación final en *test*. | [GitHub](https://github.com/MAESTRiA-ESTADiS-CIENCIA-DATOS-Bosque/Deep_Learning_I_Fundamentos/blob/349351db46d07cf07dbecad86b54a17c44219d6d/clase3/hyperTun.ipynb) | [Open in Colab](https://colab.research.google.com/github/MAESTRiA-ESTADiS-CIENCIA-DATOS-Bosque/Deep_Learning_I_Fundamentos/blob/349351db46d07cf07dbecad86b54a17c44219d6d/clase3/hyperTun.ipynb) |
+| 3 | **Transfer learning** · `Transfer_clase_viernes.ipynb` | TensorFlow / Keras | Solo código, sin celdas de texto. Inferencia ImageNet, modelo de transferencia con VGG16 y ResNet50, *fine-tuning* y comparación de probabilidades en imágenes de prueba. | [GitHub](https://github.com/MAESTRiA-ESTADiS-CIENCIA-DATOS-Bosque/Deep_Learning_I_Fundamentos/blob/349351db46d07cf07dbecad86b54a17c44219d6d/clase3/Transfer_clase_viernes.ipynb) | [Open in Colab](https://colab.research.google.com/github/MAESTRiA-ESTADiS-CIENCIA-DATOS-Bosque/Deep_Learning_I_Fundamentos/blob/349351db46d07cf07dbecad86b54a17c44219d6d/clase3/Transfer_clase_viernes.ipynb) |
+| 4 | **Multi-GPU y capacitación distribuida** · `Transfer_learning_MultiGPU.ipynb` | TensorFlow / Keras; PyTorch + Hugging Face `transformers` | Las mismas celdas de *transfer learning*, más entrenamiento con `MirroredStrategy` y *fine-tuning* de `microsoft/resnet-50` sobre `microsoft/cats_vs_dogs`. | [GitHub](https://github.com/MAESTRiA-ESTADiS-CIENCIA-DATOS-Bosque/Deep_Learning_I_Fundamentos/blob/349351db46d07cf07dbecad86b54a17c44219d6d/clase3/Transfer_learning_MultiGPU.ipynb) | [Open in Colab](https://colab.research.google.com/github/MAESTRiA-ESTADiS-CIENCIA-DATOS-Bosque/Deep_Learning_I_Fundamentos/blob/349351db46d07cf07dbecad86b54a17c44219d6d/clase3/Transfer_learning_MultiGPU.ipynb) |
+
+Los cuatro notebooks están **sin salidas** en la fuente (ninguna celda ejecutada). Este sitio no
+los redistribuye ni los ejecuta.
+
+## Datos y recursos necesarios
+
+| Recurso | Usado por | Situación |
+|---------|-----------|-----------|
+| `sunspots.csv` (en `clase1/`, leído como `../clase1/sunspots.csv`) | `CNN_TensorFlow` | Archivo del docente. Copia verbatim en el archivo privado; no se publica aquí. |
+| `imgs/animales/` del docente (leído como `../imgs/animales/*`) | `Transfer_clase_viernes` | Imágenes de terceros. Copia en el archivo privado; no se publican. |
+| `figura1_perro.jpg` por **ruta absoluta** (`/home/…/figura1_perro.jpg`) | `Transfer_learning_MultiGPU` | Tiene el mismo nombre que un archivo de `imgs/animales/`, pero se lee desde una ruta del equipo del docente. Hay que cambiarla para ejecutar la celda. |
+| `tensorflow_datasets`: `cats_vs_dogs` y `fashion_mnist` | `CNN_TensorFlow`, `Transfer_*`, `hyperTun` | Recurso externo; se descarga al ejecutar. |
+| Hugging Face Hub: dataset `microsoft/cats_vs_dogs` y modelo `microsoft/resnet-50` | `Transfer_learning_MultiGPU` | Recurso externo; se descarga al ejecutar. |
+| Pesos ImageNet de `keras.applications` (VGG16, ResNet50) | `Transfer_*` | Recurso externo; se descarga al ejecutar. |
+| Varias GPU | `Transfer_learning_MultiGPU` (`MirroredStrategy`) | Con una sola GPU o en CPU, la estrategia usa solo los dispositivos disponibles. |
+
+**Bibliotecas que importan los notebooks:** `tensorflow`, `tensorflow_datasets`, `keras_tuner`,
+`torch`, `torchvision`, `lightning`, `optuna`, `scikit-learn`, `shap`, `transformers`, `datasets` y
+`PIL`. En el commit `349351d`, el `pyproject.toml` del docente declara `keras-tuner`, `optuna`,
+`optuna-integration[pytorch-lightning]`, `scikit-learn` y `shap`. No declara `transformers`,
+`datasets`, `lightning`, `torchvision` ni `tensorflow_datasets`.
+
+Los notebooks **no son autónomos**: dependen de datasets y modelos descargados de internet y de
+archivos del repositorio del docente.
+
+::: {.callout-warning collapse="true"}
+## Notas para ejecutar los notebooks
+Describen los notebooks tal como están en la fuente. No se han modificado.
+
+- El `README.md` del docente enlaza en Colab `clase3/Transfer.ipynb`, que **no existe** en el
+  commit `349351d`. El notebook equivalente es `Transfer_clase_viernes.ipynb`.
+- `Transfer_clase_viernes` (19 celdas) y `Transfer_learning_MultiGPU` (36 celdas) tienen 13 de
+  las primeras 19 celdas idénticas. El segundo añade las secciones de multi-GPU y Hugging Face.
+- Las rutas relativas (`../clase1/sunspots.csv`, `../imgs/animales/`) suponen la estructura del
+  repositorio del docente. En Colab hay que subir esos archivos a la sesión.
+- Una celda de `Transfer_learning_MultiGPU` usa una ruta absoluta del equipo del docente.
+- `Transfer_learning_MultiGPU` incluye, comentadas, unas líneas para iniciar sesión en Hugging
+  Face y subir el modelo al Hub. No se ejecutan por defecto.
+:::
+
+## Materiales complementarios
+
+Todavía no hay materiales complementarios propios publicados para esta clase.
+
+## Notas personales
+
+Todavía no hay notas personales publicadas para esta clase.
+
+## Ejercicios
+
+Todavía no hay ejercicios registrados para esta clase.
+
+## Referencias y atribuciones
+
+- Repositorio del docente:
+  [MAESTRiA-ESTADiS-CIENCIA-DATOS-Bosque/Deep_Learning_I_Fundamentos](https://github.com/MAESTRiA-ESTADiS-CIENCIA-DATOS-Bosque/Deep_Learning_I_Fundamentos)
+- Carpeta de la clase:
+  [`clase3/`](https://github.com/MAESTRiA-ESTADiS-CIENCIA-DATOS-Bosque/Deep_Learning_I_Fundamentos/tree/349351db46d07cf07dbecad86b54a17c44219d6d/clase3)
+- Commit incorporado:
+  [`349351db46d07cf07dbecad86b54a17c44219d6d`](https://github.com/MAESTRiA-ESTADiS-CIENCIA-DATOS-Bosque/Deep_Learning_I_Fundamentos/tree/349351db46d07cf07dbecad86b54a17c44219d6d)
+  (2026-10-27)
+- Documentación citada en los notebooks:
+  [Keras Tuner](https://keras.io/keras_tuner/api/hyperparameters/#int-method),
+  [Optuna](https://optuna.org/) y
+  [microsoft/resnet-50](https://huggingface.co/microsoft/resnet-50).
+- Los datasets externos (`cats_vs_dogs`, Fashion-MNIST) y los modelos preentrenados tienen sus
+  propios términos de uso, que hay que consultar en su fuente.
+
+[← Volver a la semana 03](../index.qmd) · [Módulo Deep Learning I](../../index.qmd)

@@ -50,3 +50,5 @@ Bosque). Fuente:
 
 El repositorio fuente no tiene un archivo de licencia explícito ni un aviso de reutilización.
 Por eso este sitio no republica el material del docente: lo enlaza con atribución.
+
+[Módulo Deep Learning I](../index.qmd) · [Semana 02 →](../week-02/index.qmd)
