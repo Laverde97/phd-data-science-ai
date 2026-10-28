@@ -1,0 +1,65 @@
+---
+title: "Semana 04"
+subtitle: "Deep Learning I · Semestre 1 · Módulo 2"
+---
+
+La semana 04 trata las redes recurrentes (LSTM, BiLSTM y GRU) y el aprendizaje multimodal. Las
+redes recurrentes se aplican a la clasificación de sentimiento de texto y al pronóstico de series
+de tiempo. El bloque multimodal combina imagen y audio de un mismo dígito, primero con fusión
+tardía y después con un espacio de *embeddings* compartido al estilo CLIP. En el repositorio del
+docente corresponde a la sección *"Semana 4. LSTM y Modelos multimodales"* del `README.md` y a la
+carpeta
+[`clase4/`](https://github.com/MAESTRiA-ESTADiS-CIENCIA-DATOS-Bosque/Deep_Learning_I_Fundamentos/tree/349351db46d07cf07dbecad86b54a17c44219d6d/clase4).
+
+**Estado:** [Material incorporado]{.status-done}
+
+## Clases
+
+::: {.grid}
+::: {.card}
+### Clase 04 · LSTM y modelos multimodales
+LSTM y BiLSTM para análisis de sentimiento con IMDB, LSTM frente a GRU para pronosticar manchas
+solares, y un modelo multimodal MNIST + dígitos hablados con fusión tardía y aprendizaje
+contrastivo tipo CLIP.
+
+**2 notebooks · sin archivos de datos propios · datasets externos**
+
+[Ver clase 04 →](class-04/index.qmd)
+:::
+:::
+
+## Temas
+
+- Redes recurrentes: LSTM, LSTM bidireccional apilada (BiLSTM) y GRU.
+- Texto: estandarización, `TextVectorization`, máscaras de *padding*, `Embedding(mask_zero=True)`
+  y truncado de secuencias (IMDB).
+- Series de tiempo: división cronológica 70/15/15, normalización con estadísticas de
+  entrenamiento y ventanas (manchas solares).
+- Audio como secuencia: espectrograma de la forma de onda (Free Spoken Digit Dataset).
+- Aprendizaje multimodal: emparejamiento imagen–audio por clase y partición, fusión tardía
+  (promedio, producto y *stacking*).
+- Espacio de *embeddings* compartido tipo CLIP: cabezas de proyección, normalización L2,
+  temperatura, pérdida contrastiva y clasificación *zero-shot*.
+
+## Resumen de materiales
+
+| Tipo | Cantidad | Detalle |
+|------|:--------:|---------|
+| Notebooks | 2 | Redes recurrentes (TensorFlow/Keras) y aprendizaje multimodal (TensorFlow/Keras) |
+| Datos | 0 | La clase no trae archivos de datos propios. `lstm` reutiliza `sunspots.csv` de `clase1/` |
+| Recursos externos | — | `tensorflow_datasets`: `imdb_reviews`, `mnist` y `spoken_digit` |
+| Notas personales | 0 | Todavía no hay notas publicadas |
+| Ejercicios | 0 | Todavía no hay |
+| Talleres y tareas | 1 | [Tarea 02 · fusión multimodal, red siamesa y CLIP con CUB-200-2011](../workshops/index.qmd). Es de temática multimodal y el docente la publicó el mismo día que la Semana 4 (2026-10-27) |
+
+## Fuente
+
+Material del docente Héctor Javier Hortúa, PhD, del curso Deep Learning I (Universidad El
+Bosque). Fuente:
+[Deep_Learning_I_Fundamentos/clase4](https://github.com/MAESTRiA-ESTADiS-CIENCIA-DATOS-Bosque/Deep_Learning_I_Fundamentos/tree/349351db46d07cf07dbecad86b54a17c44219d6d/clase4)
+(commit `349351d`).
+
+El repositorio fuente no tiene un archivo de licencia explícito ni un aviso de reutilización.
+Por eso este sitio no republica el material del docente: lo enlaza con atribución.
+
+[← Semana 03](../week-03/index.qmd) · [Módulo Deep Learning I](../index.qmd)

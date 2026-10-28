@@ -1,0 +1,116 @@
+---
+title: "Clase 04"
+subtitle: "Semana 04 · LSTM y modelos multimodales"
+---
+
+::: {.callout-important}
+## Fuente y atribución
+Material del docente **Héctor Javier Hortúa, PhD** (SavIA-Lab, Instituto de Neurociencias), del
+curso Deep Learning I del Doctorado en Ciencia de Datos e Inteligencia Artificial de la
+Universidad El Bosque. Viene de la carpeta
+[`clase4/`](https://github.com/MAESTRiA-ESTADiS-CIENCIA-DATOS-Bosque/Deep_Learning_I_Fundamentos/tree/349351db46d07cf07dbecad86b54a17c44219d6d/clase4)
+del repositorio del docente (commit `349351d`). No es de autoría propia.
+
+El repositorio fuente no tiene un archivo de licencia explícito, así que aquí se enlaza al original.
+Hay copias verbatim en un archivo privado, comprobadas con SHA-256. Ese archivo no es un recurso
+público de este sitio.
+:::
+
+## Objetivos de aprendizaje
+
+Los notebooks no tienen una celda de objetivos. Según sus introducciones:
+
+- **`lstm`:** (1) clasificar el sentimiento de reseñas de IMDB (positivo/negativo), comparando una
+  LSTM simple con una LSTM bidireccional apilada; (2) pronosticar el valor del mes siguiente de la
+  serie de manchas solares, comparando LSTM y GRU.
+- **`multimodal_mnist`:** combinar dos modalidades que describen lo mismo, un dígito del 0 al 9
+  escrito (MNIST) y hablado (Free Spoken Digit Dataset).
+
+## Temas
+
+Según los encabezados y el código de los notebooks:
+
+- **Análisis de sentimiento (IMDB):** estandarización del texto con marcadores `[START]`/`[END]`,
+  `TextVectorization` con vocabulario de 10 000 palabras, visualización de la máscara de
+  *padding*, truncado a `MAX_LEN = 250` tokens, `Embedding(mask_zero=True)` de 64 dimensiones, LSTM
+  de 64 unidades frente a dos BiLSTM apiladas y `EarlyStopping` sobre `val_loss`.
+- **Pronóstico de manchas solares:** división cronológica 70/15/15, normalización con media y
+  desviación de entrenamiento, ventanas y la misma arquitectura con celda LSTM (tres puertas) o GRU
+  (dos puertas), evaluadas en *test*.
+- **Modalidad audio:** `spoken_digit` (WAV a 8 kHz, 6 personas, partición por índice de
+  repetición) y espectrograma como única transformación. La LSTM ve 61 instantes de 129
+  frecuencias.
+- **Dataset multimodal:** pares (imagen, audio) de la misma clase y la misma partición, para no
+  filtrar información entre particiones.
+- **Fusión tardía:** CNN 2D para la imagen y LSTM para el audio, entrenadas por separado, con
+  reglas de fusión de promedio, producto (log-probabilidades) y *stacking*.
+- **CLIP con imagen y audio:** los mismos cuerpos con cabeza de proyección `Dense(d)` y
+  normalización L2, matriz de similitudes con temperatura, pérdida contrastiva, un audio distinto
+  por época como aumento de datos y clasificación *zero-shot* en ambos sentidos (imagen ↔ audio).
+
+## Notebooks
+
+Los enlaces **Original** y **Colab** apuntan al repositorio del docente, fijados al commit
+`349351d`. Son referencias de procedencia: dependen de que ese repositorio siga disponible.
+
+| # | Notebook | Framework | Contenido | Original | Colab |
+|:-:|----------|-----------|-----------|----------|-------|
+| 1 | **Redes recurrentes: LSTM, BiLSTM y GRU** · `lstm.ipynb` | TensorFlow / Keras | Sentimiento en IMDB con LSTM y BiLSTM; pronóstico de manchas solares con LSTM y GRU. | [GitHub](https://github.com/MAESTRiA-ESTADiS-CIENCIA-DATOS-Bosque/Deep_Learning_I_Fundamentos/blob/349351db46d07cf07dbecad86b54a17c44219d6d/clase4/lstm.ipynb) | [Open in Colab](https://colab.research.google.com/github/MAESTRiA-ESTADiS-CIENCIA-DATOS-Bosque/Deep_Learning_I_Fundamentos/blob/349351db46d07cf07dbecad86b54a17c44219d6d/clase4/lstm.ipynb) |
+| 2 | **Aprendizaje multimodal con MNIST + dígitos hablados** · `multimodal_mnist.ipynb` | TensorFlow / Keras | Espectrogramas de audio, pares imagen–audio, fusión tardía (promedio, producto, *stacking*) y *embeddings* compartidos tipo CLIP con clasificación *zero-shot*. | [GitHub](https://github.com/MAESTRiA-ESTADiS-CIENCIA-DATOS-Bosque/Deep_Learning_I_Fundamentos/blob/349351db46d07cf07dbecad86b54a17c44219d6d/clase4/multimodal_mnist.ipynb) | [Open in Colab](https://colab.research.google.com/github/MAESTRiA-ESTADiS-CIENCIA-DATOS-Bosque/Deep_Learning_I_Fundamentos/blob/349351db46d07cf07dbecad86b54a17c44219d6d/clase4/multimodal_mnist.ipynb) |
+
+Los dos notebooks están **sin salidas** en la fuente (ninguna celda ejecutada). Este sitio no los
+redistribuye ni los ejecuta.
+
+## Datos y recursos necesarios
+
+| Recurso | Usado por | Situación |
+|---------|-----------|-----------|
+| `sunspots.csv` (en `clase1/`, leído como `../clase1/sunspots.csv`) | `lstm` | Archivo del docente. Copia verbatim en el archivo privado; no se publica aquí. |
+| `tensorflow_datasets`: `imdb_reviews` | `lstm` | Recurso externo; se descarga al ejecutar. |
+| `tensorflow_datasets`: `mnist` y `spoken_digit` (Free Spoken Digit Dataset) | `multimodal_mnist` | Recurso externo; se descarga al ejecutar. |
+
+**Bibliotecas que importan los notebooks:** `tensorflow`, `tensorflow_datasets`, `numpy`,
+`pandas`, `matplotlib`, `scikit-learn` e `IPython` (reproducción de audio).
+
+Los notebooks **no son autónomos**: dependen de datasets descargados de internet y, en el caso de
+`lstm`, de un archivo de la carpeta `clase1/` del repositorio del docente.
+
+::: {.callout-warning collapse="true"}
+## Notas para ejecutar los notebooks
+Describen los notebooks tal como están en la fuente. No se han modificado.
+
+- `lstm` lee `../clase1/sunspots.csv`, así que espera la estructura del repositorio del docente.
+  En Colab hay que subir ese archivo y ajustar la ruta en una copia propia.
+- El notebook `lstm` indica que, con solo 2 épocas, el *early stopping* apenas actúa.
+- En el `README.md` del docente, la sección de la Semana 4 enlaza primero `multimodal_mnist` y
+  después `lstm`.
+:::
+
+## Materiales complementarios
+
+Todavía no hay materiales complementarios propios publicados para esta clase.
+
+## Notas personales
+
+Todavía no hay notas personales publicadas para esta clase.
+
+## Ejercicios
+
+Todavía no hay ejercicios registrados para esta clase. La Tarea 02, de temática multimodal
+(fusión, red siamesa y CLIP con CUB-200-2011), está en [Talleres y tareas](../../workshops/index.qmd).
+
+## Referencias y atribuciones
+
+- Repositorio del docente:
+  [MAESTRiA-ESTADiS-CIENCIA-DATOS-Bosque/Deep_Learning_I_Fundamentos](https://github.com/MAESTRiA-ESTADiS-CIENCIA-DATOS-Bosque/Deep_Learning_I_Fundamentos)
+- Carpeta de la clase:
+  [`clase4/`](https://github.com/MAESTRiA-ESTADiS-CIENCIA-DATOS-Bosque/Deep_Learning_I_Fundamentos/tree/349351db46d07cf07dbecad86b54a17c44219d6d/clase4)
+- Commit incorporado:
+  [`349351db46d07cf07dbecad86b54a17c44219d6d`](https://github.com/MAESTRiA-ESTADiS-CIENCIA-DATOS-Bosque/Deep_Learning_I_Fundamentos/tree/349351db46d07cf07dbecad86b54a17c44219d6d)
+  (2026-10-27)
+- El notebook multimodal cita CLIP (*Contrastive Language–Image Pre-training*, Radford et al.,
+  2021).
+- Los datasets externos (IMDB, MNIST, Free Spoken Digit Dataset) tienen sus propios términos de
+  uso, que hay que consultar en su fuente.
+
+[← Volver a la semana 04](../index.qmd) · [Módulo Deep Learning I](../../index.qmd)
