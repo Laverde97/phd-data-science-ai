@@ -10,3 +10,4 @@ Cada solución está en su carpeta `workshop-NN-tema/`, con su página `index.qm
 | # | Carpeta | Contenido |
 |---|---------|-----------|
 | 01 | `workshop-01-cub200-multimodal/` | Pipeline multimodal CUB-200-2011: página y notebook oficial de Colab (versión original con salidas). Autores: Claudio de la Rosa y Juan Sebastián Laverde Chunza |
+| 02 | `workshop-02-cub200-fusion-multimodal/` | Fusión multimodal, red siamesa y CLIP con CUB-200-2011: página de la actividad (pendiente; sin notebook ni PDF aún). Autores: Claudio de la Rosa y Juan Sebastián Laverde Chunza |
