@@ -1,7 +1,7 @@
 ---
 title: "Tarea 02 — Fusión multimodal, red siamesa y CLIP con CUB-200-2011"
 subtitle: "Deep Learning I · Semestre 1 · Módulo 2"
-description: "Tarea 02 de Deep Learning I: comparación de modelos unimodales, early fusion, late fusion, una red siamesa y un modelo tipo CLIP sobre CUB-200-2011. Actividad pendiente de Claudio de la Rosa y Juan Sebastián Laverde Chunza."
+description: "Tarea 02 de Deep Learning I: comparación de modelos unimodales, early fusion, late fusion, una red siamesa y un modelo tipo CLIP sobre CUB-200-2011. Incluye dos entregas independientes, PRINCIPAL y SECUNDARIO, cada una con su notebook y su PDF."
 date: "2026-10-28"
 date-format: "DD/MM/YYYY"
 toc-depth: 2
@@ -16,23 +16,53 @@ toc-depth: 2
 | **Asignatura** | Deep Learning I |
 | **Semestre** | Semestre 1 · Módulo 2 |
 | **Docente** | Héctor Javier Hortúa, PhD |
-| **Autores** | Claudio de la Rosa · Juan Sebastián Laverde Chunza |
+| **Entregas** | PRINCIPAL · SECUNDARIO |
 | **Frameworks** | PyTorch, JAX o TensorFlow (a elección) |
 
-[PENDIENTE]{.status-wip}
+[ENTREGADA]{.status-done}
 :::
+
+## Entregables
 
 ::: {.grid .study-grid-2}
 ::: {.card .study-card}
-[[]{.bi .bi-journal-code aria-hidden="true"} Entregable]{.study-kicker}
+[[]{.bi .bi-journal-code aria-hidden="true"} Entrega]{.study-kicker}
 
-### Notebook y PDF
-La entrega será un notebook ejecutado y su PDF con las salidas visibles. Ambos están pendientes
-y se publicarán en esta página cuando la tarea esté resuelta.
+### PRINCIPAL
+Notebook y documento PDF de la versión principal, con el desarrollo experimental, las implementaciones y los resultados originales.
 
-[Estado: PENDIENTE]{.study-meta}
+[Jupyter · PDF]{.study-meta}
+
+::: {.study-actions}
+[[]{.bi .bi-google aria-hidden="true"} Abrir en Google Colab](https://colab.research.google.com/github/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/deep-learning-1/workshops/workshop-02-cub200-fusion-multimodal/Tarea_02_Deep_Learning_I_CUB200.ipynb){target="_blank" rel="noopener" aria-label="Abrir el notebook de la versión PRINCIPAL en Google Colab (se abre en una pestaña nueva)"}
+[[]{.bi .bi-file-earmark-pdf aria-hidden="true"} Ver PDF](Tarea_02_Deep_Learning_I_CUB200.pdf){target="_blank" rel="noopener" aria-label="Ver el PDF de la versión PRINCIPAL (se abre en una pestaña nueva)"}
+[[]{.bi .bi-download aria-hidden="true"} Descargar PDF](Tarea_02_Deep_Learning_I_CUB200.pdf){download="Tarea_02_Deep_Learning_I_CUB200.pdf" aria-label="Descargar el PDF de la versión PRINCIPAL"}
+:::
 :::
 
+::: {.card .study-card}
+[[]{.bi .bi-journal-code aria-hidden="true"} Entrega]{.study-kicker}
+
+### SECUNDARIO
+Notebook y documento PDF de una segunda implementación independiente de la misma actividad, conservando sus resultados originales.
+
+[Jupyter · PDF]{.study-meta}
+
+::: {.study-actions}
+[[]{.bi .bi-google aria-hidden="true"} Abrir en Google Colab](https://colab.research.google.com/github/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/deep-learning-1/workshops/workshop-02-cub200-fusion-multimodal/secundario/Taller_2_Soluciones_de_integracio%CC%81n_de_datos_Multimodales_.ipynb){target="_blank" rel="noopener" aria-label="Abrir el notebook de la versión SECUNDARIO en Google Colab (se abre en una pestaña nueva)"}
+[[]{.bi .bi-file-earmark-pdf aria-hidden="true"} Ver PDF](secundario/Taller_2_Soluciones_de_integracion_de_datos_Multimodales.pdf){target="_blank" rel="noopener" aria-label="Ver el PDF de la versión SECUNDARIO (se abre en una pestaña nueva)"}
+[[]{.bi .bi-download aria-hidden="true"} Descargar PDF](secundario/Taller_2_Soluciones_de_integracion_de_datos_Multimodales.pdf){download="Taller_2_Soluciones_de_integracion_de_datos_Multimodales.pdf" aria-label="Descargar el PDF de la versión SECUNDARIO"}
+:::
+:::
+:::
+
+Las versiones PRINCIPAL y SECUNDARIO corresponden a desarrollos independientes de la misma actividad
+académica. Cada una conserva sus propios archivos, configuraciones experimentales y resultados. La
+consulta de ambas permite examinar diferentes implementaciones sin modificar sus contenidos originales.
+
+## Enunciado
+
+::: {.grid .study-grid-2}
 ::: {.card .study-card}
 [[]{.bi .bi-file-text aria-hidden="true"} Enunciado del docente]{.study-kicker}
 
@@ -63,8 +93,8 @@ especies no vistas durante el entrenamiento.
 
 ## 3. Partes del trabajo solicitado
 
-Las secciones siguientes describen lo que pide el enunciado; todavía no contienen desarrollo ni
-resultados.
+Las secciones siguientes describen lo que pide el enunciado; el desarrollo y los resultados de cada
+versión se encuentran en sus respectivos entregables.
 
 ### 3.1 Modelos unimodales
 
@@ -100,7 +130,8 @@ vistas.
 
 ::: {.callout-note}
 ## Estado
-Actividad **pendiente**. Todavía no se han entrenado modelos ni se reportan métricas o resultados.
+Actividad **entregada** en dos versiones independientes, PRINCIPAL y SECUNDARIO. El desarrollo, las
+métricas y los resultados de cada una se consultan en su notebook y su PDF.
 :::
 
 [← Talleres y tareas](../index.qmd) · [Módulo Deep Learning I](../../index.qmd)
