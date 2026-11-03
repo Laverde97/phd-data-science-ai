@@ -2,11 +2,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.10.19">
+<meta name="generator" content="quarto-1.11.9">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Tarea 02 de Deep Learning I: comparación de modelos unimodales, early fusion, late fusion, una red siamesa y un modelo tipo CLIP sobre CUB-200-2011. Actividad pendiente de Claudio de la Rosa y Juan Sebastián Laverde Chunza.">
+<meta name="description" content="Tarea 02 de Deep Learning I: comparación de modelos unimodales, early fusion, late fusion, una red siamesa y un modelo tipo CLIP sobre CUB-200-2011. Incluye dos entregas independientes, PRINCIPAL y SECUNDARIO, cada una con su notebook y su PDF.">
 
 <title>Tarea 02 — Fusión multimodal, red siamesa y CLIP con CUB-200-2011 – PhD · Data Science &amp; Artificial Intelligence</title>
 <style>
@@ -39,18 +39,19 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../../../../assets/favicon.svg" rel="icon" type="image/svg+xml">
 <script src="../../../../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../../../site_libs/quarto-html/scrollable-regions/scrollable-regions.js" type="module"></script>
 <script src="../../../../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../../../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../../../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../../../site_libs/quarto-html/quarto-syntax-highlighting-5c1318cf63eba56dbef7ba16bc7d56f5.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-6453f418aeef366c23116eb9cb0b6816.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../../../../site_libs/quarto-html/quarto-syntax-highlighting-5c1318cf63eba56dbef7ba16bc7d56f5.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../../../../../site_libs/quarto-html/quarto-syntax-highlighting-5de16f5e46225c21e2daa90d340bf64f.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-3218d7d29a29f08bc4fdf3802c3e3ca5.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../../../../site_libs/quarto-html/quarto-syntax-highlighting-5de16f5e46225c21e2daa90d340bf64f.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../../../site_libs/bootstrap/bootstrap-3f7cd3c6ae2dea1182d44e2777f91ff5.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../../../../site_libs/bootstrap/bootstrap-dark-792f78743fe05014a223cdfcd8663719.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../../../../site_libs/bootstrap/bootstrap-3f7cd3c6ae2dea1182d44e2777f91ff5.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../../../../site_libs/bootstrap/bootstrap-44e7d9d8dee4ca1b05acd07ea13e3c8c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../../../site_libs/bootstrap/bootstrap-dark-9e965e8e1ee193b92bd14ddcfe9d60e9.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../../../../site_libs/bootstrap/bootstrap-44e7d9d8dee4ca1b05acd07ea13e3c8c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -82,14 +83,14 @@ ul.task-list li input[type="checkbox"] {
 
 <link rel="stylesheet" href="../../../../../styles.css">
 <meta property="og:title" content="Tarea 02 — Fusión multimodal, red siamesa y CLIP con CUB-200-2011 – PhD · Data Science &amp; Artificial Intelligence">
-<meta property="og:description" content="Tarea 02 de Deep Learning I: comparación de modelos unimodales, early fusion, late fusion, una red siamesa y un modelo tipo CLIP sobre CUB-200-2011. Actividad pendiente de Claudio de la Rosa y Juan Sebastián Laverde Chunza.">
+<meta property="og:description" content="Tarea 02 de Deep Learning I: comparación de modelos unimodales, early fusion, late fusion, una red siamesa y un modelo tipo CLIP sobre CUB-200-2011. Incluye dos entregas independientes, PRINCIPAL y SECUNDARIO, cada una con su notebook y su PDF.">
 <meta property="og:site_name" content="PhD · Data Science &amp; Artificial Intelligence">
 <meta name="twitter:title" content="Tarea 02 — Fusión multimodal, red siamesa y CLIP con CUB-200-2011 – PhD · Data Science &amp; Artificial Intelligence">
-<meta name="twitter:description" content="Tarea 02 de Deep Learning I: comparación de modelos unimodales, early fusion, late fusion, una red siamesa y un modelo tipo CLIP sobre CUB-200-2011. Actividad pendiente de Claudio de la Rosa y Juan Sebastián Laverde Chunza.">
+<meta name="twitter:description" content="Tarea 02 de Deep Learning I: comparación de modelos unimodales, early fusion, late fusion, una red siamesa y un modelo tipo CLIP sobre CUB-200-2011. Incluye dos entregas independientes, PRINCIPAL y SECUNDARIO, cada una con su notebook y su PDF.">
 <meta name="twitter:card" content="summary">
 </head>
 
-<body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+<body class="nav-fixed quarto-light"><a id="quarto-skip-link" class="visually-hidden-focusable" href="#quarto-document-content">Skip to main content</a><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
       const mode = bsSheetEl.getAttribute("data-mode");
       const bodyEl = window.document.querySelector("body");
@@ -112,6 +113,7 @@ ul.task-list li input[type="checkbox"] {
       for (let i=0; i < toggles.length; i++) {
         const toggle = toggles[i];
         if (toggle) {
+          toggle.setAttribute("aria-checked", alternate ? "true" : "false");
           if (alternate) {
             toggle.classList.add("alternate");
           } else {
@@ -141,13 +143,19 @@ ul.task-list li input[type="checkbox"] {
       manageTransitions('#quarto-margin-sidebar .nav-link', true);
       // Switch the toggles
       setColorSchemeToggle(alternate)
-      // Hack to workaround the fact that safari doesn't
-      // properly recolor the scrollbar when toggling (#1455)
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455).
+    // Not run on load: stylesheets are set before first paint there, and
+    // scrolling would undo the scroll to a URL fragment (#14973).
+    // The one pixel nudge keeps the reader where they were.
+    const refreshSafariScrollbar = () => {
       if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
         manageTransitions("body", false);
-        window.scrollTo(0, 1);
+        const scrollY = window.scrollY;
+        window.scrollTo(0, scrollY > 0 ? scrollY - 1 : 1);
         setTimeout(() => {
-          window.scrollTo(0, 0);
+          window.scrollTo(0, scrollY);
           manageTransitions("body", true);
         }, 40);
       }
@@ -241,6 +249,7 @@ ul.task-list li input[type="checkbox"] {
       // Read the current dark / light value
       let toAlternate = !hasAlternateSentinel();
       toggleColorMode(toAlternate);
+      refreshSafariScrollbar();
       setStyleSentinel(toAlternate);
       toggleGiscusIfUsed(toAlternate, darkModeDefault);
       window.dispatchEvent(new Event('resize'));
@@ -255,7 +264,7 @@ ul.task-list li input[type="checkbox"] {
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark" aria-label="Site">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a href="../../../../../index.html" class="navbar-brand navbar-brand-logo">
@@ -266,8 +275,7 @@ ul.task-list li input[type="checkbox"] {
     <span class="navbar-title">PhD · Data Science &amp; Artificial Intelligence</span>
     </a>
   </div>
-            <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -301,13 +309,14 @@ ul.task-list li input[type="checkbox"] {
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
-  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+  <button type="button" role="switch" aria-checked="false" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode" aria-label="Toggle dark mode"><i class="bi"></i></button>
   <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
   <div class="quarto-reader-toggle-btn">
   <i class="bi"></i>
   </div>
 </a>
 </div>
+            <div id="quarto-search" class="" title="Search"></div>
       </div> <!-- /container-fluid -->
     </nav>
 </header>
@@ -316,11 +325,13 @@ ul.task-list li input[type="checkbox"] {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="2">
+        <nav id="TOC" role="doc-toc" aria-labelledby="toc-title" class="toc-active" data-toc-expanded="2">
     <h2 id="toc-title">On this page</h2>
    
   <ul class="collapse">
   <li><a href="#fusión-multimodal-red-siamesa-y-clip-con-cub-200-2011" id="toc-fusión-multimodal-red-siamesa-y-clip-con-cub-200-2011" class="nav-link active" data-scroll-target="#fusión-multimodal-red-siamesa-y-clip-con-cub-200-2011">Fusión multimodal, red siamesa y CLIP con CUB-200-2011</a></li>
+  <li><a href="#entregables" id="toc-entregables" class="nav-link" data-scroll-target="#entregables">Entregables</a></li>
+  <li><a href="#enunciado" id="toc-enunciado" class="nav-link" data-scroll-target="#enunciado">Enunciado</a></li>
   <li><a href="#descripción" id="toc-descripción" class="nav-link" data-scroll-target="#descripción">1. Descripción</a></li>
   <li><a href="#objetivo" id="toc-objetivo" class="nav-link" data-scroll-target="#objetivo">2. Objetivo</a></li>
   <li><a href="#partes-del-trabajo-solicitado" id="toc-partes-del-trabajo-solicitado" class="nav-link" data-scroll-target="#partes-del-trabajo-solicitado">3. Partes del trabajo solicitado</a></li>
@@ -329,7 +340,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="toc-actions"><ul class="collapse"><li><a href="https://github.com/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/deep-learning-1/workshops/workshop-02-cub200-fusion-multimodal/index.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content" id="quarto-document-content" tabindex="-1">
 
 
 <header id="title-block-header" class="quarto-title-block default">
@@ -340,7 +351,7 @@ ul.task-list li input[type="checkbox"] {
 
 <div>
   <div class="description">
-    Tarea 02 de Deep Learning I: comparación de modelos unimodales, early fusion, late fusion, una red siamesa y un modelo tipo CLIP sobre CUB-200-2011. Actividad pendiente de Claudio de la Rosa y Juan Sebastián Laverde Chunza.
+    Tarea 02 de Deep Learning I: comparación de modelos unimodales, early fusion, late fusion, una red siamesa y un modelo tipo CLIP sobre CUB-200-2011. Incluye dos entregas independientes, PRINCIPAL y SECUNDARIO, cada una con su notebook y su PDF.
   </div>
 </div>
 
@@ -388,8 +399,8 @@ ul.task-list li input[type="checkbox"] {
 <td>Héctor Javier Hortúa, PhD</td>
 </tr>
 <tr class="odd">
-<td><strong>Autores</strong></td>
-<td>Claudio de la Rosa · Juan Sebastián Laverde Chunza</td>
+<td><strong>Entregas</strong></td>
+<td>PRINCIPAL · SECUNDARIO</td>
 </tr>
 <tr class="even">
 <td><strong>Frameworks</strong></td>
@@ -397,17 +408,39 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 </tbody>
 </table>
-<p><span class="status-wip">PENDIENTE</span></p>
+<p><span class="status-done">ENTREGADA</span></p>
 </section>
+<section id="entregables" class="level2">
+<h2 class="anchored" data-anchor-id="entregables">Entregables</h2>
 <div class="grid study-grid-2">
 <div class="card study-card">
-<p><span class="study-kicker"><span class="bi bi-journal-code" aria-hidden="true"></span> Entregable</span></p>
-<section id="notebook-y-pdf" class="level3">
-<h3 class="anchored" data-anchor-id="notebook-y-pdf">Notebook y PDF</h3>
-<p>La entrega será un notebook ejecutado y su PDF con las salidas visibles. Ambos están pendientes y se publicarán en esta página cuando la tarea esté resuelta.</p>
-<p><span class="study-meta">Estado: PENDIENTE</span></p>
+<p><span class="study-kicker"><span class="bi bi-journal-code" aria-hidden="true"></span> Entrega</span></p>
+<section id="principal" class="level3">
+<h3 class="anchored" data-anchor-id="principal">PRINCIPAL</h3>
+<p>Notebook y documento PDF de la versión principal, con el desarrollo experimental, las implementaciones y los resultados originales.</p>
+<p><span class="study-meta">Jupyter · PDF</span></p>
+<div class="study-actions">
+<p><a href="https://colab.research.google.com/github/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/deep-learning-1/workshops/workshop-02-cub200-fusion-multimodal/Tarea_02_Deep_Learning_I_CUB200.ipynb" target="_blank" rel="noopener" aria-label="Abrir el notebook de la versión PRINCIPAL en Google Colab (se abre en una pestaña nueva)"><span class="bi bi-google" aria-hidden="true"></span> Abrir en Google Colab</a> <a href="Tarea_02_Deep_Learning_I_CUB200.pdf" target="_blank" rel="noopener" aria-label="Ver el PDF de la versión PRINCIPAL (se abre en una pestaña nueva)"><span class="bi bi-file-earmark-pdf" aria-hidden="true"></span> Ver PDF</a> <a href="Tarea_02_Deep_Learning_I_CUB200.pdf" download="Tarea_02_Deep_Learning_I_CUB200.pdf" aria-label="Descargar el PDF de la versión PRINCIPAL"><span class="bi bi-download" aria-hidden="true"></span> Descargar PDF</a></p>
+</div>
 </section>
 </div>
+<div class="card study-card">
+<p><span class="study-kicker"><span class="bi bi-journal-code" aria-hidden="true"></span> Entrega</span></p>
+<section id="secundario" class="level3">
+<h3 class="anchored" data-anchor-id="secundario">SECUNDARIO</h3>
+<p>Notebook y documento PDF de una segunda implementación independiente de la misma actividad, conservando sus resultados originales.</p>
+<p><span class="study-meta">Jupyter · PDF</span></p>
+<div class="study-actions">
+<p><a href="https://colab.research.google.com/github/Laverde97/phd-data-science-ai/blob/main/semesters/semester-01/deep-learning-1/workshops/workshop-02-cub200-fusion-multimodal/secundario/Taller_2_Soluciones_de_integracio%CC%81n_de_datos_Multimodales_.ipynb" target="_blank" rel="noopener" aria-label="Abrir el notebook de la versión SECUNDARIO en Google Colab (se abre en una pestaña nueva)"><span class="bi bi-google" aria-hidden="true"></span> Abrir en Google Colab</a> <a href="secundario/Taller_2_Soluciones_de_integracion_de_datos_Multimodales.pdf" target="_blank" rel="noopener" aria-label="Ver el PDF de la versión SECUNDARIO (se abre en una pestaña nueva)"><span class="bi bi-file-earmark-pdf" aria-hidden="true"></span> Ver PDF</a> <a href="secundario/Taller_2_Soluciones_de_integracion_de_datos_Multimodales.pdf" download="Taller_2_Soluciones_de_integracion_de_datos_Multimodales.pdf" aria-label="Descargar el PDF de la versión SECUNDARIO"><span class="bi bi-download" aria-hidden="true"></span> Descargar PDF</a></p>
+</div>
+</section>
+</div>
+</div>
+<p>Las versiones PRINCIPAL y SECUNDARIO corresponden a desarrollos independientes de la misma actividad académica. Cada una conserva sus propios archivos, configuraciones experimentales y resultados. La consulta de ambas permite examinar diferentes implementaciones sin modificar sus contenidos originales.</p>
+</section>
+<section id="enunciado" class="level2">
+<h2 class="anchored" data-anchor-id="enunciado">Enunciado</h2>
+<div class="grid study-grid-2">
 <div class="card study-card">
 <p><span class="study-kicker"><span class="bi bi-file-text" aria-hidden="true"></span> Enunciado del docente</span></p>
 <section id="tarea-modelos-multimodal-cub-200-2011" class="level3">
@@ -420,6 +453,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 </div>
 </div>
+</section>
 <section id="descripción" class="level2">
 <h2 class="anchored" data-anchor-id="descripción">1. Descripción</h2>
 <p>La Tarea 02 parte de los pipelines construidos en la <a href="../../../../../semesters/semester-01/deep-learning-1/workshops/workshop-01-cub200-multimodal/index.html">Tarea 01</a>, que entregan por cada ejemplo una imagen, una descripción textual, un vector de atributos y la especie. Sobre esa base, la actividad entrena y compara distintas maneras de combinar o relacionar las modalidades de CUB-200-2011.</p>
@@ -430,7 +464,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="partes-del-trabajo-solicitado" class="level2">
 <h2 class="anchored" data-anchor-id="partes-del-trabajo-solicitado">3. Partes del trabajo solicitado</h2>
-<p>Las secciones siguientes describen lo que pide el enunciado; todavía no contienen desarrollo ni resultados.</p>
+<p>Las secciones siguientes describen lo que pide el enunciado; el desarrollo y los resultados de cada versión se encuentran en sus respectivos entregables.</p>
 <section id="modelos-unimodales" class="level3">
 <h3 class="anchored" data-anchor-id="modelos-unimodales">3.1 Modelos unimodales</h3>
 <p>Un clasificador de las 200 especies por cada modalidad por separado, para medir cuánto rinde cada una por sí sola y comparar las especies que cada modelo confunde.</p>
@@ -468,7 +502,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Actividad <strong>pendiente</strong>. Todavía no se han entrenado modelos ni se reportan métricas o resultados.</p>
+<p>Actividad <strong>entregada</strong> en dos versiones independientes, PRINCIPAL y SECUNDARIO. El desarrollo, las métricas y los resultados de cada una se consultan en su notebook y su PDF.</p>
 </div>
 </div>
 <p><a href="../../../../../semesters/semester-01/deep-learning-1/workshops/index.html">← Talleres y tareas</a> · <a href="../../../../../semesters/semester-01/deep-learning-1/index.html">Módulo Deep Learning I</a></p>
@@ -481,15 +515,50 @@ ul.task-list li input[type="checkbox"] {
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
     if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
-      const a = window.document.createElement('a');
-      a.classList.add('top-right');
-      a.classList.add('quarto-color-scheme-toggle');
-      a.href = "";
-      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const toggle = window.document.createElement('button');
+      toggle.type = "button";
+      toggle.setAttribute("role", "switch");
+      toggle.setAttribute("aria-checked", "false");
+      toggle.classList.add('top-right');
+      toggle.classList.add('quarto-color-scheme-toggle');
+      toggle.setAttribute("aria-label", "Toggle dark mode");
+      toggle.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
       const i = window.document.createElement("i");
       i.classList.add('bi');
-      a.appendChild(i);
-      window.document.body.appendChild(a);
+      toggle.appendChild(i);
+      // Put the toggle in a landmark of its own, so that landmark navigation
+      // can reach it.
+      //
+      // The container is always a fresh direct child of body, and the toggle is
+      // never moved into page furniture that the theme or the author controls.
+      // The toggle is positioned against the page, so any ancestor that
+      // establishes a containing block captures it: a positioned element or a
+      // grid for position: absolute, and transform, filter, will-change or
+      // contain for position: fixed. A direct child of body has none of these
+      // to inherit, and the shift when one appears is silent and visual.
+      //
+      // ARIA says a document should have at most one banner, and axe reports a
+      // duplicate whether or not the banners carry distinct labels. So use a
+      // header when the page has no banner yet, and a named region otherwise.
+      //
+      // A header is a banner wherever it sits, unless it is inside sectioning
+      // content, so this cannot just look at the children of body: a custom
+      // page layout wraps the title block header in a plain div. An explicit
+      // role="banner" always counts.
+      const sectioning = 'article, aside, main, nav, section, [role="article"], [role="complementary"], [role="main"], [role="navigation"], [role="region"]';
+      const hasBanner = Array.from(
+        window.document.querySelectorAll('header:not([role]), [role="banner"]')
+      ).some(function(el) {
+        return el.hasAttribute("role") || el.closest(sectioning) === null;
+      });
+      const container = window.document.createElement(hasBanner ? "div" : "header");
+      if (hasBanner) {
+        container.setAttribute("role", "region");
+        container.setAttribute("aria-label", "Toggle dark mode");
+      }
+      container.classList.add('quarto-color-scheme-toggle-container');
+      container.appendChild(toggle);
+      window.document.body.appendChild(container);
     }
     setColorSchemeToggle(hasAlternateSentinel())
     const icon = "";
@@ -564,11 +633,30 @@ ul.task-list li input[type="checkbox"] {
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
         var filterRegex = new RegExp("https:\/\/laverde97\.github\.io\/phd-data-science-ai\/");
+      const newWindowLabel = "(opens in a new tab)";
+      const newWindowNoteId = "quarto-ext-newwindow-label";
+      // Links reference one hidden label through aria-describedby, so the
+      // announcement never changes their accessible name.
+      var describeNewWindow = (link) => {
+        if (!window.document.getElementById(newWindowNoteId)) {
+          var newWindowNote = window.document.createElement("span");
+          newWindowNote.id = newWindowNoteId;
+          newWindowNote.hidden = true;
+          newWindowNote.textContent = newWindowLabel;
+          window.document.body.appendChild(newWindowNote);
+        }
+        var describedBy = (link.getAttribute("aria-describedby") || "").split(/\s+/).filter(Boolean);
+        if (!describedBy.includes(newWindowNoteId)) {
+          describedBy.push(newWindowNoteId);
+          link.setAttribute("aria-describedby", describedBy.join(" "));
+        }
+      }
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
       // Inspect non-navigation links and adorn them if external
-     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      window.quartoDecorateExternalLinks = function (root) {
+     var links = (root || window.document).querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
       for (var i=0; i<links.length; i++) {
         const link = links[i];
         if (!isInternal(link.href)) {
@@ -582,10 +670,72 @@ ul.task-list li input[type="checkbox"] {
             if (link.getAttribute("rel") === null) {
               link.setAttribute("rel", "noopener");
             }
+            describeNewWindow(link);
+          if (!link.classList.contains('no-external-icon')) {
             // default icon
             link.classList.add("external");
+          }
         }
       }
+      };
+      window.quartoDecorateExternalLinks(window.document);
+    // Esc closes the popup (WCAG 1.4.13) and focus leaving both trigger and
+    // popup closes it (WCAG 2.4.11); tippy handles neither for interactive popups.
+    const hideOnEscAndFocusOut = {
+      name: 'hideOnEscAndFocusOut',
+      defaultValue: true,
+      fn(instance) {
+        const dismiss = () => {
+          // A show scheduled by the trigger delay would otherwise reopen it
+          instance.clearDelayTimeouts();
+          instance.hide();
+        };
+        const onKeyDown = (event) => {
+          if (event.key !== 'Escape') {
+            return;
+          }
+          // Keep Esc from also reaching page handlers (e.g. reveal.js overview),
+          // except an open reveal.js slide menu, which Esc should close too.
+          // The menu handles keys only when its keyboard option is on.
+          const menuHandlesEsc = window.Reveal?.getPlugin?.('menu')?.isOpen() &&
+            window.Reveal.getConfig().menu?.keyboard !== false;
+          if (!menuHandlesEsc) {
+            event.stopPropagation();
+          }
+          if (instance.popper.contains(window.document.activeElement)) {
+            // Disabled while refocusing so the focus trigger does not reopen it
+            instance.disable();
+            instance.reference.focus();
+            instance.enable();
+          }
+          dismiss();
+        };
+        const onFocusOut = (event) => {
+          const target = event.relatedTarget;
+          if (target && !instance.reference.contains(target) &&
+              !instance.popper.contains(target)) {
+            dismiss();
+          }
+        };
+        // On the trigger too: a click trigger (code-annotations: select) has no
+        // blur handling. Attached for the instance's lifetime so leaving the
+        // trigger also cancels a show still pending on the trigger delay.
+        instance.reference.addEventListener('focusout', onFocusOut);
+        return {
+          onShow() {
+            window.document.addEventListener('keydown', onKeyDown, true);
+            instance.popper.addEventListener('focusout', onFocusOut);
+          },
+          onHide() {
+            window.document.removeEventListener('keydown', onKeyDown, true);
+            instance.popper.removeEventListener('focusout', onFocusOut);
+          },
+          onDestroy() {
+            instance.reference.removeEventListener('focusout', onFocusOut);
+          },
+        };
+      },
+    };
     function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
       const config = {
         allowHTML: true,
@@ -599,6 +749,7 @@ ul.task-list li input[type="checkbox"] {
         interactiveBorder: 10,
         theme: 'quarto',
         placement: 'bottom-start',
+        plugins: [hideOnEscAndFocusOut],
       };
       if (contentFn) {
         config.content = contentFn;
@@ -761,44 +912,54 @@ ul.task-list li input[type="checkbox"] {
           const lineIds = lines.map((line) => {
             return targetCell + "-" + line;
           })
-          let top = null;
-          let height = null;
-          let parent = null;
+          // Each band is positioned against its own containing block, which is
+          // not the offsetParent of the lines, so place it from client rects.
+          const placeBand = (band, firstEl, lastEl, codeBlock) => {
+            const container = band.offsetParent;
+            if (container === null) {
+              return;
+            }
+            const containerRect = container.getBoundingClientRect();
+            // Reveal.js scales slides with a transform, so convert client
+            // pixels back to the CSS pixels of the container.
+            const scale = containerRect.height / container.offsetHeight || 1;
+            const firstRect = firstEl.getBoundingClientRect();
+            const lastRect = lastEl.getBoundingClientRect();
+            const top = (firstRect.top - containerRect.top) / scale - container.clientTop + container.scrollTop;
+            const height = (lastRect.bottom - firstRect.top) / scale;
+            band.style.top = top - 2 + "px";
+            band.style.height = height + 4 + "px";
+            if (codeBlock) {
+              // Without the copy button wrapper, the containing block is wider
+              // than the code block, so span the code block explicitly.
+              const blockRect = codeBlock.getBoundingClientRect();
+              band.style.left = (blockRect.left - containerRect.left) / scale - container.clientLeft + container.scrollLeft + "px";
+              band.style.width = blockRect.width / scale + "px";
+            }
+          };
           if (lineIds.length > 0) {
-              //compute the position of the single el (top and bottom and make a div)
-              const el = window.document.getElementById(lineIds[0]);
-              top = el.offsetTop;
-              height = el.offsetHeight;
-              parent = el.parentElement.parentElement;
-            if (lineIds.length > 1) {
-              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
-              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
-              height = bottom - top;
+            const el = window.document.getElementById(lineIds[0]);
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const parent = el.parentElement.parentElement;
+            // cook up a div (if necessary) and position it
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
             }
-            if (top !== null && height !== null && parent !== null) {
-              // cook up a div (if necessary) and position it 
-              let div = window.document.getElementById("code-annotation-line-highlight");
-              if (div === null) {
-                div = window.document.createElement("div");
-                div.setAttribute("id", "code-annotation-line-highlight");
-                div.style.position = 'absolute';
-                parent.appendChild(div);
-              }
-              div.style.top = top - 2 + "px";
-              div.style.height = height + 4 + "px";
-              div.style.left = 0;
-              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
-              if (gutterDiv === null) {
-                gutterDiv = window.document.createElement("div");
-                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
-                gutterDiv.style.position = 'absolute';
-                const codeCell = window.document.getElementById(targetCell);
-                const gutter = codeCell.querySelector('.code-annotation-gutter');
-                gutter.appendChild(gutterDiv);
-              }
-              gutterDiv.style.top = top - 2 + "px";
-              gutterDiv.style.height = height + 4 + "px";
+            placeBand(div, el, lastEl, parent.closest("div.sourceCode") || parent);
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
             }
+            placeBand(gutterDiv, el, lastEl);
             selectedAnnoteEl = annoteEl;
           }
         };
@@ -896,6 +1057,9 @@ ul.task-list li input[type="checkbox"] {
       }
     }
   });
+  </script>
+  <script type="application/javascript">
+  window.quartoScrollableRegionsLabels = {"code":"Scrollable code","output":"Scrollable output"};
   </script>
 </div> <!-- /content -->
 <footer class="footer">
