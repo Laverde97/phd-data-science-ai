@@ -19,7 +19,7 @@ Primer módulo del semestre.
 ### 02 · Deep Learning I
 Segundo módulo del semestre, organizado por semana y clase.
 
-**Estado:** En curso
+**Estado:** Finalizado
 
 [Acceder al módulo →](deep-learning-1/index.qmd)
 :::
