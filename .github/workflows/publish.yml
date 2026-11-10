@@ -19,6 +19,9 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v4
 
+      - name: Validate literature catalog
+        run: python3 research/literature/scripts/validate_catalog.py
+
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
 

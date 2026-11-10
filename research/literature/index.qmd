@@ -1,20 +1,126 @@
 ---
-title: "Literatura"
-subtitle: "Research Track"
+title: "Literatura científica"
+subtitle: "Revisión bibliográfica doctoral sobre inteligencia artificial aplicada a tumores gastrointestinales, aprendizaje de representaciones, robustez y generalización de modelos."
+page-layout: full
+toc: false
+css: literature.css
+resources:
+  - literature.js
+  - data/literature_catalog.csv
+  - data/references.bib
+  - data/anteproyecto_references_order.csv
 ---
 
-Revisión bibliográfica del proyecto doctoral: fichas de lectura, síntesis temáticas y la bibliografía consolidada.
+::: {.lit-intro}
+Catálogo de la literatura reunida para la investigación doctoral. Cada registro muestra el **título original
+completo**, tal como fue publicado, con su **traducción académica al español** debajo. La lista se divide
+en dos bloques: primero las **referencias del anteproyecto doctoral**, en el orden de su lista de referencias,
+y después la **literatura complementaria** de la biblioteca de investigación, organizada por categorías.
+:::
 
-## Convención de archivos
+```{=html}
+<section class="lit-app" id="lit-app" aria-label="Catálogo bibliográfico">
 
-`autor-anio-tema.md` para cada ficha de lectura; `references.bib` para la bibliografía compartida.
+  <div class="lit-stats" id="lit-stats" aria-live="polite">
+    <div class="lit-stat"><span class="lit-stat-value" data-stat="total">—</span><span class="lit-stat-label">Referencias únicas</span></div>
+    <div class="lit-stat"><span class="lit-stat-value" data-stat="done">—</span><span class="lit-stat-label">Lecturas realizadas</span></div>
+    <div class="lit-stat"><span class="lit-stat-value" data-stat="pending">—</span><span class="lit-stat-label">Lecturas pendientes</span></div>
+    <div class="lit-stat"><span class="lit-stat-value" data-stat="lf">—</span><span class="lit-stat-label">Análisis en Latent Frontiers</span></div>
+  </div>
 
-## Contenido
+  <nav class="lit-nav" aria-label="Navegación temática">
+    <p class="lit-nav-title">Explorar por sección</p>
+    <div class="lit-chips" id="lit-chips"></div>
+  </nav>
 
-| Elemento | Fecha | Enlace | Estado |
-|----------|:-----:|--------|--------|
-| — | — | — | — |
+  <form class="lit-controls" id="lit-controls" role="search" onsubmit="return false">
+    <div class="lit-field lit-field-search">
+      <label for="lit-q">Buscar</label>
+      <input id="lit-q" type="search" autocomplete="off"
+             placeholder="Título original o traducido, autor o DOI">
+    </div>
+    <div class="lit-field">
+      <label for="lit-block">Bloque</label>
+      <select id="lit-block">
+        <option value="">Todos</option>
+        <option value="I">I · Anteproyecto doctoral</option>
+        <option value="II">II · Literatura complementaria</option>
+      </select>
+    </div>
+    <div class="lit-field">
+      <label for="lit-cat">Categoría</label>
+      <select id="lit-cat"><option value="">Todas</option></select>
+    </div>
+    <div class="lit-field">
+      <label for="lit-status">Estado</label>
+      <select id="lit-status">
+        <option value="">Todos</option>
+        <option value="Pendiente">Pendiente</option>
+        <option value="Realizado">Realizado</option>
+      </select>
+    </div>
+    <div class="lit-field">
+      <label for="lit-sort">Ordenar por</label>
+      <select id="lit-sort">
+        <option value="order">N.º · orden de lectura</option>
+        <option value="read-desc">Fecha de lectura (recientes)</option>
+        <option value="year-desc">Año de publicación (recientes)</option>
+        <option value="year-asc">Año de publicación (antiguos)</option>
+      </select>
+    </div>
+    <div class="lit-field lit-field-check">
+      <input id="lit-lf" type="checkbox">
+      <label for="lit-lf">Solo con análisis en Latent Frontiers</label>
+    </div>
+    <button type="button" class="lit-reset" id="lit-reset">Limpiar filtros</button>
+  </form>
 
-::: {.callout-note}
-Sección en preparación. Aún no se ha agregado contenido.
+  <p class="lit-count" id="lit-count" aria-live="polite">Cargando catálogo…</p>
+
+  <div class="lit-table-wrap">
+    <table class="lit-table" id="littable" aria-label="Catálogo bibliográfico: número de orden, título original con traducción, fecha de lectura, enlace al artículo original, estado de lectura y análisis en Latent Frontiers">
+      <thead>
+        <tr>
+          <th scope="col" class="lit-col-n">N.º</th>
+          <th scope="col" class="lit-col-item">Elemento</th>
+          <th scope="col" class="lit-col-date">Fecha de lectura</th>
+          <th scope="col" class="lit-col-link">Artículo original</th>
+          <th scope="col" class="lit-col-status">Estado</th>
+          <th scope="col" class="lit-col-lf">Latent Frontiers</th>
+        </tr>
+      </thead>
+      <tbody id="littbody"></tbody>
+    </table>
+  </div>
+
+  <nav class="lit-pager" id="lit-pager" aria-label="Paginación del catálogo"></nav>
+
+  <noscript>
+    <p class="lit-noscript">El catálogo interactivo necesita JavaScript. Puede consultar los datos completos en
+    <a href="data/literature_catalog.csv">literature_catalog.csv</a> o la bibliografía en
+    <a href="data/references.bib">references.bib</a>.</p>
+  </noscript>
+</section>
+<script src="literature.js" defer></script>
+```
+
+## Criterios del catálogo
+
+::: {.lit-notes}
+- **Título original.** Es el título publicado, verificado contra Crossref, DataCite o la página oficial del artículo.
+  Nunca se sustituye por una cita abreviada; los autores y el año aparecen solo como dato secundario.
+- **Traducción.** Es una traducción académica propia que no reemplaza el título oficial. Los nombres de modelos,
+  arquitecturas y acrónimos (U-Net, Grad-CAM, TransMIL, MSI, H&E…) se conservan sin traducir.
+- **Orden.** El **Bloque I** sigue exactamente la lista de referencias del anteproyecto doctoral (versión 4). El **Bloque II**
+  agrupa la literatura complementaria por categoría y sigue la guía de lectura de la biblioteca.
+- **Estado de lectura.** El estado *Realizado* exige una fecha de lectura verificable. Tener el PDF descargado,
+  haberlo procesado automáticamente o haber publicado un análisis no cuenta como lectura.
+- **Latent Frontiers.** Solo se enlaza una publicación del blog cuando trata de forma explícita el artículo, por ejemplo con
+  un experimento sobre sus datos y una cita de su DOI. Una mención de paso no basta.
+- **Derechos de autor.** Solo se publican metadatos bibliográficos y enlaces a las fuentes oficiales. No se publican
+  PDF ni textos completos de terceros.
+
+Datos abiertos: [catálogo en CSV](data/literature_catalog.csv) · [bibliografía en BibTeX](data/references.bib) ·
+[orden de referencias del anteproyecto](data/anteproyecto_references_order.csv). Informes de inventario y verificación
+en el [repositorio](https://github.com/Laverde97/phd-data-science-ai/tree/main/research/literature/reports).
 :::
