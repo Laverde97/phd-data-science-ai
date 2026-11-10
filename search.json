@@ -824,37 +824,25 @@
   {
     "objectID": "research/literature/index.html",
     "href": "research/literature/index.html",
-    "title": "Literatura",
+    "title": "Literatura científica",
     "section": "",
-    "text": "Revisión bibliográfica del proyecto doctoral: fichas de lectura, síntesis temáticas y la bibliografía consolidada.",
+    "text": "Catálogo de la literatura reunida para la investigación doctoral. Cada registro muestra el título original completo, tal como fue publicado, con su traducción académica al español debajo. La lista se divide en dos bloques: primero las referencias del anteproyecto doctoral, en el orden de su lista de referencias, y después la literatura complementaria de la biblioteca de investigación, organizada por categorías.",
     "crumbs": [
       "Investigación",
       "Secciones",
-      "Literatura"
+      "Literatura científica"
     ]
   },
   {
-    "objectID": "research/literature/index.html#convención-de-archivos",
-    "href": "research/literature/index.html#convención-de-archivos",
-    "title": "Literatura",
-    "section": "Convención de archivos",
-    "text": "Convención de archivos\nautor-anio-tema.md para cada ficha de lectura; references.bib para la bibliografía compartida.",
+    "objectID": "research/literature/index.html#criterios-del-catálogo",
+    "href": "research/literature/index.html#criterios-del-catálogo",
+    "title": "Literatura científica",
+    "section": "Criterios del catálogo",
+    "text": "Criterios del catálogo\n\n\nTítulo original. Es el título publicado, verificado contra Crossref, DataCite o la página oficial del artículo. Nunca se sustituye por una cita abreviada; los autores y el año aparecen solo como dato secundario.\nTraducción. Es una traducción académica propia que no reemplaza el título oficial. Los nombres de modelos, arquitecturas y acrónimos (U-Net, Grad-CAM, TransMIL, MSI, H&E…) se conservan sin traducir.\nOrden. El Bloque I sigue exactamente la lista de referencias del anteproyecto doctoral (versión 4). El Bloque II agrupa la literatura complementaria por categoría y sigue la guía de lectura de la biblioteca.\nEstado de lectura. El estado Realizado exige una fecha de lectura verificable. Tener el PDF descargado, haberlo procesado automáticamente o haber publicado un análisis no cuenta como lectura.\nLatent Frontiers. Solo se enlaza una publicación del blog cuando trata de forma explícita el artículo, por ejemplo con un experimento sobre sus datos y una cita de su DOI. Una mención de paso no basta.\nDerechos de autor. Solo se publican metadatos bibliográficos y enlaces a las fuentes oficiales. No se publican PDF ni textos completos de terceros.\n\nDatos abiertos: catálogo en CSV · bibliografía en BibTeX · orden de referencias del anteproyecto. Informes de inventario y verificación en el repositorio.",
     "crumbs": [
       "Investigación",
       "Secciones",
-      "Literatura"
-    ]
-  },
-  {
-    "objectID": "research/literature/index.html#contenido",
-    "href": "research/literature/index.html#contenido",
-    "title": "Literatura",
-    "section": "Contenido",
-    "text": "Contenido\n\n\n\nElemento\nFecha\nEnlace\nEstado\n\n\n\n\n—\n—\n—\n—\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nSección en preparación. Aún no se ha agregado contenido.",
-    "crumbs": [
-      "Investigación",
-      "Secciones",
-      "Literatura"
+      "Literatura científica"
     ]
   },
   {
