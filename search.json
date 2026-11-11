@@ -714,257 +714,53 @@
     "text": "Herramientas\n\nGoogle Colab\nGitHub (desktop)\nLaptop con TensorFlow instalado (basta con CPU). El docente recomienda trabajar en un entorno uv.\n\n\n\n\n\n\n\nNoteFuente\n\n\n\nEl contenido se resume del Contenido.ipynb del repositorio del docente (commit 0f989f9). El repositorio fuente no tiene un archivo de licencia explícito."
   },
   {
-    "objectID": "research/results/index.html",
-    "href": "research/results/index.html",
-    "title": "Resultados",
+    "objectID": "research/thesis/index.html",
+    "href": "research/thesis/index.html",
+    "title": "Tesis doctoral",
     "section": "",
-    "text": "Hallazgos, métricas y figuras derivadas de los experimentos.",
+    "text": "Documentos de la tesis doctoral. Los archivos se alojan en un repositorio privado de GitHub y solo pueden consultarse con una cuenta autorizada."
+  },
+  {
+    "objectID": "research/thesis/index.html#tesis-doctoral",
+    "href": "research/thesis/index.html#tesis-doctoral",
+    "title": "Tesis doctoral",
+    "section": "",
+    "text": "Documentos de la tesis doctoral. Los archivos se alojan en un repositorio privado de GitHub y solo pueden consultarse con una cuenta autorizada."
+  },
+  {
+    "objectID": "research/research-questions/index.html",
+    "href": "research/research-questions/index.html",
+    "title": "Preguntas de investigación",
+    "section": "",
+    "text": "Preguntas, hipótesis y objetivos que guían el proyecto, con su evolución a lo largo del doctorado.",
     "crumbs": [
       "Investigación",
       "Secciones",
-      "Resultados"
+      "Preguntas de investigación"
     ]
   },
   {
-    "objectID": "research/results/index.html#convención-de-archivos",
-    "href": "research/results/index.html#convención-de-archivos",
-    "title": "Resultados",
+    "objectID": "research/research-questions/index.html#convención-de-archivos",
+    "href": "research/research-questions/index.html#convención-de-archivos",
+    "title": "Preguntas de investigación",
     "section": "Convención de archivos",
-    "text": "Convención de archivos\nexp-01-resultados.md por experimento; figuras en figures/.",
+    "text": "Convención de archivos\nUn documento por iteración: 01-preguntas.md, 02-preguntas.md, …",
     "crumbs": [
       "Investigación",
       "Secciones",
-      "Resultados"
+      "Preguntas de investigación"
     ]
   },
   {
-    "objectID": "research/results/index.html#contenido",
-    "href": "research/results/index.html#contenido",
-    "title": "Resultados",
+    "objectID": "research/research-questions/index.html#contenido",
+    "href": "research/research-questions/index.html#contenido",
+    "title": "Preguntas de investigación",
     "section": "Contenido",
     "text": "Contenido\n\n\n\nElemento\nFecha\nEnlace\nEstado\n\n\n\n\n—\n—\n—\n—\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nSección en preparación. Aún no se ha agregado contenido.",
     "crumbs": [
       "Investigación",
       "Secciones",
-      "Resultados"
-    ]
-  },
-  {
-    "objectID": "research/progress/index.html",
-    "href": "research/progress/index.html",
-    "title": "Avances",
-    "section": "",
-    "text": "Informes de progreso y planificación por periodos académicos.",
-    "crumbs": [
-      "Investigación",
-      "Secciones",
-      "Avances"
-    ]
-  },
-  {
-    "objectID": "research/progress/index.html#convención-de-archivos",
-    "href": "research/progress/index.html#convención-de-archivos",
-    "title": "Avances",
-    "section": "Convención de archivos",
-    "text": "Convención de archivos\naaaa-qN-avance.md (trimestral) o semestre-NN-avance.md.",
-    "crumbs": [
-      "Investigación",
-      "Secciones",
-      "Avances"
-    ]
-  },
-  {
-    "objectID": "research/progress/index.html#contenido",
-    "href": "research/progress/index.html#contenido",
-    "title": "Avances",
-    "section": "Contenido",
-    "text": "Contenido\n\n\n\nElemento\nFecha\nEnlace\nEstado\n\n\n\n\n—\n—\n—\n—\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nSección en preparación. Aún no se ha agregado contenido.",
-    "crumbs": [
-      "Investigación",
-      "Secciones",
-      "Avances"
-    ]
-  },
-  {
-    "objectID": "research/meetings/index.html",
-    "href": "research/meetings/index.html",
-    "title": "Reuniones",
-    "section": "",
-    "text": "Actas de reuniones con la dirección de tesis y el grupo de investigación.",
-    "crumbs": [
-      "Investigación",
-      "Secciones",
-      "Reuniones"
-    ]
-  },
-  {
-    "objectID": "research/meetings/index.html#convención-de-archivos",
-    "href": "research/meetings/index.html#convención-de-archivos",
-    "title": "Reuniones",
-    "section": "Convención de archivos",
-    "text": "Convención de archivos\naaaa-mm-dd-reunion.md en orden cronológico.",
-    "crumbs": [
-      "Investigación",
-      "Secciones",
-      "Reuniones"
-    ]
-  },
-  {
-    "objectID": "research/meetings/index.html#contenido",
-    "href": "research/meetings/index.html#contenido",
-    "title": "Reuniones",
-    "section": "Contenido",
-    "text": "Contenido\n\n\n\nElemento\nFecha\nEnlace\nEstado\n\n\n\n\n—\n—\n—\n—\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nSección en preparación. Aún no se ha agregado contenido.",
-    "crumbs": [
-      "Investigación",
-      "Secciones",
-      "Reuniones"
-    ]
-  },
-  {
-    "objectID": "research/literature/index.html",
-    "href": "research/literature/index.html",
-    "title": "Literatura científica",
-    "section": "",
-    "text": "Catálogo de la literatura reunida para la investigación doctoral. Cada registro muestra el título original completo, tal como fue publicado, con su traducción académica al español debajo. La lista se divide en dos bloques: primero las referencias del anteproyecto doctoral, en el orden de su lista de referencias, y después la literatura complementaria de la biblioteca de investigación, organizada por categorías.",
-    "crumbs": [
-      "Investigación",
-      "Secciones",
-      "Literatura científica"
-    ]
-  },
-  {
-    "objectID": "research/literature/index.html#criterios-del-catálogo",
-    "href": "research/literature/index.html#criterios-del-catálogo",
-    "title": "Literatura científica",
-    "section": "Criterios del catálogo",
-    "text": "Criterios del catálogo\n\n\nTítulo original. Es el título publicado, verificado contra Crossref, DataCite o la página oficial del artículo. Nunca se sustituye por una cita abreviada; los autores y el año aparecen solo como dato secundario.\nTraducción. Es una traducción académica propia que no reemplaza el título oficial. Los nombres de modelos, arquitecturas y acrónimos (U-Net, Grad-CAM, TransMIL, MSI, H&E…) se conservan sin traducir.\nOrden. El Bloque I sigue exactamente la lista de referencias del anteproyecto doctoral (versión 4). El Bloque II agrupa la literatura complementaria por categoría y sigue la guía de lectura de la biblioteca.\nEstado de lectura. El estado Realizado exige una fecha de lectura verificable. Tener el PDF descargado, haberlo procesado automáticamente o haber publicado un análisis no cuenta como lectura.\nLatent Frontiers. Solo se enlaza una publicación del blog cuando trata de forma explícita el artículo, por ejemplo con un experimento sobre sus datos y una cita de su DOI. Una mención de paso no basta.\nDerechos de autor. Solo se publican metadatos bibliográficos y enlaces a las fuentes oficiales. No se publican PDF ni textos completos de terceros.\n\nDatos abiertos: catálogo en CSV · bibliografía en BibTeX · orden de referencias del anteproyecto. Informes de inventario y verificación en el repositorio.",
-    "crumbs": [
-      "Investigación",
-      "Secciones",
-      "Literatura científica"
-    ]
-  },
-  {
-    "objectID": "research/experiments/index.html",
-    "href": "research/experiments/index.html",
-    "title": "Experimentos",
-    "section": "",
-    "text": "Diseño, configuración y bitácora de los experimentos de investigación.",
-    "crumbs": [
-      "Investigación",
-      "Secciones",
-      "Experimentos"
-    ]
-  },
-  {
-    "objectID": "research/experiments/index.html#convención-de-archivos",
-    "href": "research/experiments/index.html#convención-de-archivos",
-    "title": "Experimentos",
-    "section": "Convención de archivos",
-    "text": "Convención de archivos\nUna carpeta por experimento: exp-01-nombre/ con README.md, configuración y notebook asociado.",
-    "crumbs": [
-      "Investigación",
-      "Secciones",
-      "Experimentos"
-    ]
-  },
-  {
-    "objectID": "research/experiments/index.html#contenido",
-    "href": "research/experiments/index.html#contenido",
-    "title": "Experimentos",
-    "section": "Contenido",
-    "text": "Contenido\n\n\n\nElemento\nFecha\nEnlace\nEstado\n\n\n\n\n—\n—\n—\n—\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nSección en preparación. Aún no se ha agregado contenido.",
-    "crumbs": [
-      "Investigación",
-      "Secciones",
-      "Experimentos"
-    ]
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Doctoral Learning Hub",
-    "section": "",
-    "text": "Un espacio académico para organizar, documentar y compartir el aprendizaje desarrollado durante el doctorado: cursos, notebooks, talleres, evaluaciones, datos, presentaciones y avances de investigación.\nExplorar Semestre 1 Ver investigación"
-  },
-  {
-    "objectID": "index.html#semestre-actual",
-    "href": "index.html#semestre-actual",
-    "title": "Doctoral Learning Hub",
-    "section": "Semestre actual",
-    "text": "Semestre actual\n\n\nSemestre 1\n2026-II\nCursos, talleres, materiales y recursos académicos del primer semestre doctoral.\nVer semestre →\n\n\nResearch Track\nInvestigación doctoral\nLecturas, experimentos y avances del proyecto de investigación doctoral.\nVer investigación →"
-  },
-  {
-    "objectID": "index.html#organización-del-repositorio",
-    "href": "index.html#organización-del-repositorio",
-    "title": "Doctoral Learning Hub",
-    "section": "Organización del repositorio",
-    "text": "Organización del repositorio\nCada módulo conserva la misma estructura para que el repositorio pueda crecer sin perder orden:\n\nTareas — entregables académicos y soluciones.\nQuiz — evaluaciones, bancos de preguntas y repasos.\nData — datasets utilizados durante el módulo.\nTalleres — ejercicios prácticos y laboratorios.\nNotebooks (Colab) — notebooks ejecutables desde Google Colab.\nPresentaciones — diapositivas y material de clase.\nNotas — resúmenes, conceptos y material de estudio.\n\n\n\n\n\n\n\nTipReproducibilidad\n\n\n\nLos notebooks se publican con un badge Open in Colab, fijan una semilla y registran las versiones de sus dependencias. Los datasets restringidos se documentan mediante su origen y esquema, nunca se publican."
-  },
-  {
-    "objectID": "index.html#filosofía",
-    "href": "index.html#filosofía",
-    "title": "Doctoral Learning Hub",
-    "section": "Filosofía",
-    "text": "Filosofía\n\nLearn · Build · Document · Research · Reproduce\n\nEl objetivo no es almacenar archivos: es construir una bitácora técnica y académica reproducible del doctorado."
-  },
-  {
-    "objectID": "research/index.html",
-    "href": "research/index.html",
-    "title": "Research Track",
-    "section": "",
-    "text": "Espacio reservado para el trabajo de investigación del doctorado, separado de los materiales de clase. Cada sección conserva su propia carpeta y convención de archivos.",
-    "crumbs": [
-      "Investigación",
-      "Panorama"
-    ]
-  },
-  {
-    "objectID": "research/index.html#investigación-doctoral",
-    "href": "research/index.html#investigación-doctoral",
-    "title": "Research Track",
-    "section": "",
-    "text": "Espacio reservado para el trabajo de investigación del doctorado, separado de los materiales de clase. Cada sección conserva su propia carpeta y convención de archivos.",
-    "crumbs": [
-      "Investigación",
-      "Panorama"
-    ]
-  },
-  {
-    "objectID": "research/manuscripts/index.html",
-    "href": "research/manuscripts/index.html",
-    "title": "Manuscritos",
-    "section": "",
-    "text": "Borradores de artículos, capítulos de tesis y material en redacción.",
-    "crumbs": [
-      "Investigación",
-      "Secciones",
-      "Manuscritos"
-    ]
-  },
-  {
-    "objectID": "research/manuscripts/index.html#convención-de-archivos",
-    "href": "research/manuscripts/index.html#convención-de-archivos",
-    "title": "Manuscritos",
-    "section": "Convención de archivos",
-    "text": "Convención de archivos\nUna carpeta por manuscrito: manuscript-01-titulo/ con fuentes y versiones.",
-    "crumbs": [
-      "Investigación",
-      "Secciones",
-      "Manuscritos"
-    ]
-  },
-  {
-    "objectID": "research/manuscripts/index.html#contenido",
-    "href": "research/manuscripts/index.html#contenido",
-    "title": "Manuscritos",
-    "section": "Contenido",
-    "text": "Contenido\n\n\n\nElemento\nFecha\nEnlace\nEstado\n\n\n\n\n—\n—\n—\n—\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nSección en preparación. Aún no se ha agregado contenido.",
-    "crumbs": [
-      "Investigación",
-      "Secciones",
-      "Manuscritos"
+      "Preguntas de investigación"
     ]
   },
   {
@@ -1004,39 +800,257 @@
     ]
   },
   {
-    "objectID": "research/research-questions/index.html",
-    "href": "research/research-questions/index.html",
-    "title": "Preguntas de investigación",
+    "objectID": "research/manuscripts/index.html",
+    "href": "research/manuscripts/index.html",
+    "title": "Manuscritos",
     "section": "",
-    "text": "Preguntas, hipótesis y objetivos que guían el proyecto, con su evolución a lo largo del doctorado.",
+    "text": "Borradores de artículos, capítulos de tesis y material en redacción.",
     "crumbs": [
       "Investigación",
       "Secciones",
-      "Preguntas de investigación"
+      "Manuscritos"
     ]
   },
   {
-    "objectID": "research/research-questions/index.html#convención-de-archivos",
-    "href": "research/research-questions/index.html#convención-de-archivos",
-    "title": "Preguntas de investigación",
+    "objectID": "research/manuscripts/index.html#convención-de-archivos",
+    "href": "research/manuscripts/index.html#convención-de-archivos",
+    "title": "Manuscritos",
     "section": "Convención de archivos",
-    "text": "Convención de archivos\nUn documento por iteración: 01-preguntas.md, 02-preguntas.md, …",
+    "text": "Convención de archivos\nUna carpeta por manuscrito: manuscript-01-titulo/ con fuentes y versiones.",
     "crumbs": [
       "Investigación",
       "Secciones",
-      "Preguntas de investigación"
+      "Manuscritos"
     ]
   },
   {
-    "objectID": "research/research-questions/index.html#contenido",
-    "href": "research/research-questions/index.html#contenido",
-    "title": "Preguntas de investigación",
+    "objectID": "research/manuscripts/index.html#contenido",
+    "href": "research/manuscripts/index.html#contenido",
+    "title": "Manuscritos",
     "section": "Contenido",
     "text": "Contenido\n\n\n\nElemento\nFecha\nEnlace\nEstado\n\n\n\n\n—\n—\n—\n—\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nSección en preparación. Aún no se ha agregado contenido.",
     "crumbs": [
       "Investigación",
       "Secciones",
-      "Preguntas de investigación"
+      "Manuscritos"
+    ]
+  },
+  {
+    "objectID": "research/index.html",
+    "href": "research/index.html",
+    "title": "Research Track",
+    "section": "",
+    "text": "Espacio reservado para el trabajo de investigación del doctorado, separado de los materiales de clase. Cada sección conserva su propia carpeta y convención de archivos.",
+    "crumbs": [
+      "Investigación",
+      "Panorama"
+    ]
+  },
+  {
+    "objectID": "research/index.html#investigación-doctoral",
+    "href": "research/index.html#investigación-doctoral",
+    "title": "Research Track",
+    "section": "",
+    "text": "Espacio reservado para el trabajo de investigación del doctorado, separado de los materiales de clase. Cada sección conserva su propia carpeta y convención de archivos.",
+    "crumbs": [
+      "Investigación",
+      "Panorama"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Doctoral Learning Hub",
+    "section": "",
+    "text": "Un espacio académico para organizar, documentar y compartir el aprendizaje desarrollado durante el doctorado: cursos, notebooks, talleres, evaluaciones, datos, presentaciones y avances de investigación.\nExplorar Semestre 1 Ver investigación"
+  },
+  {
+    "objectID": "index.html#semestre-actual",
+    "href": "index.html#semestre-actual",
+    "title": "Doctoral Learning Hub",
+    "section": "Semestre actual",
+    "text": "Semestre actual\n\n\nSemestre 1\n2026-II\nCursos, talleres, materiales y recursos académicos del primer semestre doctoral.\nVer semestre →\n\n\nResearch Track\nInvestigación doctoral\nLecturas, experimentos y avances del proyecto de investigación doctoral.\nVer investigación →"
+  },
+  {
+    "objectID": "index.html#organización-del-repositorio",
+    "href": "index.html#organización-del-repositorio",
+    "title": "Doctoral Learning Hub",
+    "section": "Organización del repositorio",
+    "text": "Organización del repositorio\nCada módulo conserva la misma estructura para que el repositorio pueda crecer sin perder orden:\n\nTareas — entregables académicos y soluciones.\nQuiz — evaluaciones, bancos de preguntas y repasos.\nData — datasets utilizados durante el módulo.\nTalleres — ejercicios prácticos y laboratorios.\nNotebooks (Colab) — notebooks ejecutables desde Google Colab.\nPresentaciones — diapositivas y material de clase.\nNotas — resúmenes, conceptos y material de estudio.\n\n\n\n\n\n\n\nTipReproducibilidad\n\n\n\nLos notebooks se publican con un badge Open in Colab, fijan una semilla y registran las versiones de sus dependencias. Los datasets restringidos se documentan mediante su origen y esquema, nunca se publican."
+  },
+  {
+    "objectID": "index.html#filosofía",
+    "href": "index.html#filosofía",
+    "title": "Doctoral Learning Hub",
+    "section": "Filosofía",
+    "text": "Filosofía\n\nLearn · Build · Document · Research · Reproduce\n\nEl objetivo no es almacenar archivos: es construir una bitácora técnica y académica reproducible del doctorado."
+  },
+  {
+    "objectID": "research/experiments/index.html",
+    "href": "research/experiments/index.html",
+    "title": "Experimentos",
+    "section": "",
+    "text": "Diseño, configuración y bitácora de los experimentos de investigación.",
+    "crumbs": [
+      "Investigación",
+      "Secciones",
+      "Experimentos"
+    ]
+  },
+  {
+    "objectID": "research/experiments/index.html#convención-de-archivos",
+    "href": "research/experiments/index.html#convención-de-archivos",
+    "title": "Experimentos",
+    "section": "Convención de archivos",
+    "text": "Convención de archivos\nUna carpeta por experimento: exp-01-nombre/ con README.md, configuración y notebook asociado.",
+    "crumbs": [
+      "Investigación",
+      "Secciones",
+      "Experimentos"
+    ]
+  },
+  {
+    "objectID": "research/experiments/index.html#contenido",
+    "href": "research/experiments/index.html#contenido",
+    "title": "Experimentos",
+    "section": "Contenido",
+    "text": "Contenido\n\n\n\nElemento\nFecha\nEnlace\nEstado\n\n\n\n\n—\n—\n—\n—\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nSección en preparación. Aún no se ha agregado contenido.",
+    "crumbs": [
+      "Investigación",
+      "Secciones",
+      "Experimentos"
+    ]
+  },
+  {
+    "objectID": "research/literature/index.html",
+    "href": "research/literature/index.html",
+    "title": "Literatura científica",
+    "section": "",
+    "text": "Catálogo de la literatura reunida para la investigación doctoral. Cada registro muestra el título original completo, tal como fue publicado, con su traducción académica al español debajo. La lista se divide en dos bloques: primero las referencias del anteproyecto doctoral, en el orden de su lista de referencias, y después la literatura complementaria de la biblioteca de investigación, organizada por categorías.",
+    "crumbs": [
+      "Investigación",
+      "Secciones",
+      "Literatura científica"
+    ]
+  },
+  {
+    "objectID": "research/literature/index.html#criterios-del-catálogo",
+    "href": "research/literature/index.html#criterios-del-catálogo",
+    "title": "Literatura científica",
+    "section": "Criterios del catálogo",
+    "text": "Criterios del catálogo\n\n\nTítulo original. Es el título publicado, verificado contra Crossref, DataCite o la página oficial del artículo. Nunca se sustituye por una cita abreviada; los autores y el año aparecen solo como dato secundario.\nTraducción. Es una traducción académica propia que no reemplaza el título oficial. Los nombres de modelos, arquitecturas y acrónimos (U-Net, Grad-CAM, TransMIL, MSI, H&E…) se conservan sin traducir.\nOrden. El Bloque I sigue exactamente la lista de referencias del anteproyecto doctoral (versión 4). El Bloque II agrupa la literatura complementaria por categoría y sigue la guía de lectura de la biblioteca.\nEstado de lectura. El estado Realizado exige una fecha de lectura verificable. Tener el PDF descargado, haberlo procesado automáticamente o haber publicado un análisis no cuenta como lectura.\nLatent Frontiers. Solo se enlaza una publicación del blog cuando trata de forma explícita el artículo, por ejemplo con un experimento sobre sus datos y una cita de su DOI. Una mención de paso no basta.\nDerechos de autor. Solo se publican metadatos bibliográficos y enlaces a las fuentes oficiales. No se publican PDF ni textos completos de terceros.\n\nDatos abiertos: catálogo en CSV · bibliografía en BibTeX · orden de referencias del anteproyecto. Informes de inventario y verificación en el repositorio.",
+    "crumbs": [
+      "Investigación",
+      "Secciones",
+      "Literatura científica"
+    ]
+  },
+  {
+    "objectID": "research/meetings/index.html",
+    "href": "research/meetings/index.html",
+    "title": "Reuniones",
+    "section": "",
+    "text": "Actas de reuniones con la dirección de tesis y el grupo de investigación.",
+    "crumbs": [
+      "Investigación",
+      "Secciones",
+      "Reuniones"
+    ]
+  },
+  {
+    "objectID": "research/meetings/index.html#convención-de-archivos",
+    "href": "research/meetings/index.html#convención-de-archivos",
+    "title": "Reuniones",
+    "section": "Convención de archivos",
+    "text": "Convención de archivos\naaaa-mm-dd-reunion.md en orden cronológico.",
+    "crumbs": [
+      "Investigación",
+      "Secciones",
+      "Reuniones"
+    ]
+  },
+  {
+    "objectID": "research/meetings/index.html#contenido",
+    "href": "research/meetings/index.html#contenido",
+    "title": "Reuniones",
+    "section": "Contenido",
+    "text": "Contenido\n\n\n\nElemento\nFecha\nEnlace\nEstado\n\n\n\n\n—\n—\n—\n—\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nSección en preparación. Aún no se ha agregado contenido.",
+    "crumbs": [
+      "Investigación",
+      "Secciones",
+      "Reuniones"
+    ]
+  },
+  {
+    "objectID": "research/progress/index.html",
+    "href": "research/progress/index.html",
+    "title": "Avances",
+    "section": "",
+    "text": "Informes de progreso y planificación por periodos académicos.",
+    "crumbs": [
+      "Investigación",
+      "Secciones",
+      "Avances"
+    ]
+  },
+  {
+    "objectID": "research/progress/index.html#convención-de-archivos",
+    "href": "research/progress/index.html#convención-de-archivos",
+    "title": "Avances",
+    "section": "Convención de archivos",
+    "text": "Convención de archivos\naaaa-qN-avance.md (trimestral) o semestre-NN-avance.md.",
+    "crumbs": [
+      "Investigación",
+      "Secciones",
+      "Avances"
+    ]
+  },
+  {
+    "objectID": "research/progress/index.html#contenido",
+    "href": "research/progress/index.html#contenido",
+    "title": "Avances",
+    "section": "Contenido",
+    "text": "Contenido\n\n\n\nElemento\nFecha\nEnlace\nEstado\n\n\n\n\n—\n—\n—\n—\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nSección en preparación. Aún no se ha agregado contenido.",
+    "crumbs": [
+      "Investigación",
+      "Secciones",
+      "Avances"
+    ]
+  },
+  {
+    "objectID": "research/results/index.html",
+    "href": "research/results/index.html",
+    "title": "Resultados",
+    "section": "",
+    "text": "Hallazgos, métricas y figuras derivadas de los experimentos.",
+    "crumbs": [
+      "Investigación",
+      "Secciones",
+      "Resultados"
+    ]
+  },
+  {
+    "objectID": "research/results/index.html#convención-de-archivos",
+    "href": "research/results/index.html#convención-de-archivos",
+    "title": "Resultados",
+    "section": "Convención de archivos",
+    "text": "Convención de archivos\nexp-01-resultados.md por experimento; figuras en figures/.",
+    "crumbs": [
+      "Investigación",
+      "Secciones",
+      "Resultados"
+    ]
+  },
+  {
+    "objectID": "research/results/index.html#contenido",
+    "href": "research/results/index.html#contenido",
+    "title": "Resultados",
+    "section": "Contenido",
+    "text": "Contenido\n\n\n\nElemento\nFecha\nEnlace\nEstado\n\n\n\n\n—\n—\n—\n—\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nSección en preparación. Aún no se ha agregado contenido.",
+    "crumbs": [
+      "Investigación",
+      "Secciones",
+      "Resultados"
     ]
   },
   {
