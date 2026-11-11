@@ -60,6 +60,8 @@ website:
             text: Semestre 1
       - href: research/index.qmd
         text: Investigación
+      - href: research/thesis/index.qmd
+        text: Tesis
     right:
       - icon: github
         href: "https://github.com/Laverde97/phd-data-science-ai"
