@@ -1,0 +1,33 @@
+---
+title: "Tesis doctoral"
+subtitle: "Anteproyecto · Acceso restringido"
+toc: false
+---
+
+::: {.module-banner}
+## Tesis doctoral
+
+Documentos de la tesis doctoral. Los archivos se alojan en un repositorio privado de GitHub y
+solo pueden consultarse con una cuenta autorizada.
+:::
+
+::: {.resource-grid}
+::: {.resource-card}
+### 🔒 Anteproyecto doctoral — Tumores gastrointestinales
+
+| | |
+|---|---|
+| **Documento** | Anteproyecto doctoral — Tumores gastrointestinales |
+| **Archivo** | `ANTEPROYECTO_DOCTORAL_GASTROINTESTINAL.pdf` |
+| **Estado de acceso** | [Restringido]{.status-todo} |
+
+[Acceder al documento (requiere autenticación en GitHub)](https://github.com/Laverde97/doctoral-thesis-private/blob/main/anteproyecto/ANTEPROYECTO_DOCTORAL_GASTROINTESTINAL.pdf){.btn .btn-outline-primary}
+:::
+:::
+
+::: {.callout-note}
+## Acceso restringido
+El documento solo está disponible para cuentas de GitHub con permisos autorizados sobre el
+repositorio privado. Sin esos permisos, GitHub muestra una página «404 · Not Found». Para
+solicitar acceso, contacte al autor.
+:::
