@@ -1,33 +1,37 @@
 ---
 title: "Tesis doctoral"
-subtitle: "Anteproyecto · Acceso restringido"
+subtitle: "Anteproyecto doctoral y documentos académicos"
 toc: false
+resources:
+  - documents/anteproyecto/ANTEPROYECTO_DOCTORAL_GASTROINTESTINAL.pdf
 ---
 
 ::: {.module-banner}
-## Tesis doctoral
+## Presentación
 
-Documentos de la tesis doctoral. Los archivos se alojan en un repositorio privado de GitHub y
-solo pueden consultarse con una cuenta autorizada.
+**Desarrollo y evaluación de metodologías de inteligencia artificial, aprendizaje automático y aprendizaje profundo para el análisis de imágenes de tumores gastrointestinales**
+
+Juan Sebastián Laverde Chunza · Director de tesis: Ravi Kalia, PhD · Doctorado en Ciencia de Datos e Inteligencia Artificial, Universidad El Bosque.
 :::
 
 ::: {.resource-grid}
 ::: {.resource-card}
-### 🔒 Anteproyecto doctoral — Tumores gastrointestinales
+### Anteproyecto doctoral
 
-| | |
-|---|---|
-| **Documento** | Anteproyecto doctoral — Tumores gastrointestinales |
-| **Archivo** | `ANTEPROYECTO_DOCTORAL_GASTROINTESTINAL.pdf` |
-| **Estado de acceso** | [Restringido]{.status-todo} |
+Documento completo del anteproyecto de investigación doctoral. PDF, 26 páginas, 9 de noviembre de 2026.
 
-[Acceder al documento (requiere autenticación en GitHub)](https://github.com/Laverde97/doctoral-thesis-private/blob/main/anteproyecto/ANTEPROYECTO_DOCTORAL_GASTROINTESTINAL.pdf){.btn .btn-outline-primary}
-:::
+[Ver anteproyecto](documents/anteproyecto/ANTEPROYECTO_DOCTORAL_GASTROINTESTINAL.pdf){.btn .btn-primary target="_blank" rel="noopener"}
+[Descargar PDF](documents/anteproyecto/ANTEPROYECTO_DOCTORAL_GASTROINTESTINAL.pdf){.btn .btn-outline-primary download=""}
 :::
 
-::: {.callout-note}
-## Acceso restringido
-El documento solo está disponible para cuentas de GitHub con permisos autorizados sobre el
-repositorio privado. Sin esos permisos, GitHub muestra una página «404 · Not Found». Para
-solicitar acceso, contacte al autor.
+::: {.resource-card}
+### Documentos institucionales
+
+Plantillas originales de la Universidad El Bosque, en blanco y sin modificaciones (DOCX).
+
+- Guía para la presentación del anteproyecto de investigación doctoral
+- Aval del director al anteproyecto y evaluación del trabajo semestral
+
+[Pendiente de autorización institucional]{.status-todo}
+:::
 :::
