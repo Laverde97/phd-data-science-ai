@@ -4,6 +4,8 @@ subtitle: "Anteproyecto doctoral y documentos académicos"
 toc: false
 resources:
   - documents/anteproyecto/ANTEPROYECTO_DOCTORAL_GASTROINTESTINAL.pdf
+  - documents/institucionales/Guia_anteproyecto_doctoral_UEB.docx
+  - documents/institucionales/Aval_anteproyecto_y_evaluacion_semestral_UEB.docx
 ---
 
 ::: {.module-banner}
@@ -32,6 +34,7 @@ Plantillas originales de la Universidad El Bosque, en blanco y sin modificacione
 - Guía para la presentación del anteproyecto de investigación doctoral
 - Aval del director al anteproyecto y evaluación del trabajo semestral
 
-[Pendiente de autorización institucional]{.status-todo}
+[Descargar guía del anteproyecto (Word)](documents/institucionales/Guia_anteproyecto_doctoral_UEB.docx){.btn .btn-outline-primary download=""}
+[Descargar aval y evaluación semestral (Word)](documents/institucionales/Aval_anteproyecto_y_evaluacion_semestral_UEB.docx){.btn .btn-outline-primary download=""}
 :::
 :::
