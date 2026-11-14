@@ -25,16 +25,57 @@ Documento completo del anteproyecto de investigación doctoral. PDF, 26 páginas
 [Ver anteproyecto](documents/anteproyecto/ANTEPROYECTO_DOCTORAL_GASTROINTESTINAL.pdf){.btn .btn-primary target="_blank" rel="noopener"}
 [Descargar PDF](documents/anteproyecto/ANTEPROYECTO_DOCTORAL_GASTROINTESTINAL.pdf){.btn .btn-outline-primary download=""}
 :::
+:::
 
-::: {.resource-card}
-### Documentos institucionales
+## Documentos institucionales
 
-Plantillas originales de la Universidad El Bosque, en blanco y sin modificaciones (DOCX).
+Documentos institucionales de la Universidad El Bosque para la presentación del anteproyecto doctoral y la evaluación académica del primer semestre.
 
-- Guía para la presentación del anteproyecto de investigación doctoral
-- Aval del director al anteproyecto y evaluación del trabajo semestral
+::: {.resource-grid}
+::: {.resource-card .study-card}
+[[]{.bi .bi-file-earmark-word aria-hidden="true"} Guía institucional]{.study-kicker}
 
-[Descargar guía del anteproyecto (Word)](documents/institucionales/Guia_anteproyecto_doctoral_UEB.docx){.btn .btn-outline-primary download=""}
-[Descargar aval y evaluación semestral (Word)](documents/institucionales/Aval_anteproyecto_y_evaluacion_semestral_UEB.docx){.btn .btn-outline-primary download=""}
+```{=html}
+<h3>Guía para la presentación del anteproyecto doctoral</h3>
+```
+
+Documento institucional de la Universidad El Bosque que establece las orientaciones para la elaboración, estructuración y presentación del anteproyecto de investigación doctoral.
+
+[Microsoft Word (.docx)]{.study-meta}
+
+::: {.study-actions}
+[Descargar guía del anteproyecto](documents/institucionales/Guia_anteproyecto_doctoral_UEB.docx){download="Guia_anteproyecto_doctoral_UEB.docx" aria-label="Descargar la guía para la presentación del anteproyecto doctoral (Microsoft Word)"}
+:::
+:::
+
+::: {.resource-card .study-card}
+[[]{.bi .bi-file-earmark-word aria-hidden="true"} Formulario del director]{.study-kicker}
+
+```{=html}
+<h3>Aval del director y evaluación del trabajo semestral</h3>
+```
+
+Documento institucional de la Universidad El Bosque destinado a registrar el concepto del director sobre el anteproyecto doctoral y la evaluación del trabajo desarrollado durante el primer semestre.
+
+En este formulario, Ravi Kalia, PhD, como director de tesis, debe revisar y determinar:
+
+- El concepto académico del anteproyecto.
+- Las observaciones y los ajustes que considere necesarios.
+- La nota propuesta por el director.
+- La escala de calificación utilizada.
+- La justificación de la evaluación semestral.
+- Su firma y la fecha correspondiente.
+
+::: {.callout-note appearance="simple" icon="false"}
+La calificación correspondiente al trabajo del primer semestre doctoral debe ser registrada por el director de tesis en este documento, en el apartado «Evaluación del trabajo del estudiante durante el semestre».
+:::
+
+[**Estado del documento:** versión para revisión del director. No constituye un aval firmado ni una evaluación oficial emitida.]{.study-meta}
+
+[Microsoft Word (.docx)]{.study-meta}
+
+::: {.study-actions}
+[Descargar aval y evaluación semestral](documents/institucionales/Aval_anteproyecto_y_evaluacion_semestral_UEB.docx){download="Aval_anteproyecto_y_evaluacion_semestral_UEB.docx" aria-label="Descargar el formulario de aval del director y evaluación del trabajo semestral (Microsoft Word)"}
+:::
 :::
 :::
