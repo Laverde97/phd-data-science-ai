@@ -714,278 +714,81 @@
     "text": "Herramientas\n\nGoogle Colab\nGitHub (desktop)\nLaptop con TensorFlow instalado (basta con CPU). El docente recomienda trabajar en un entorno uv.\n\n\n\n\n\n\n\nNoteFuente\n\n\n\nEl contenido se resume del Contenido.ipynb del repositorio del docente (commit 0f989f9). El repositorio fuente no tiene un archivo de licencia explícito."
   },
   {
-    "objectID": "research/thesis/index.html",
-    "href": "research/thesis/index.html",
-    "title": "Tesis doctoral",
+    "objectID": "research/thesis/workplan.html",
+    "href": "research/thesis/workplan.html",
+    "title": "Retroalimentación y plan de trabajo",
     "section": "",
-    "text": "Desarrollo y evaluación de metodologías de inteligencia artificial, aprendizaje automático y aprendizaje profundo para el análisis de imágenes de tumores gastrointestinales\nJuan Sebastián Laverde Chunza · Director de tesis: Ravi Kalia, PhD · Doctorado en Ciencia de Datos e Inteligencia Artificial, Universidad El Bosque."
+    "text": "Anteproyecto en revisión (noviembre de 2026). El director otorgó el visto bueno con ajustes en el formulario de aval. Cada ajuste y cada tarea se sigue como un issue de GitHub asignado al doctorando; todo cambio entra mediante pull request para revisión del director.\nLa tesis estudia por qué los modelos de IA para imágenes de tumores gastrointestinales pierden desempeño cuando cambian los datos (sede, equipo, tinción, población o tipo de muestra) y cómo reducir esa pérdida en una cohorte institucional de tamaño moderado. Compara modelos de ML tradicional, aprendizaje profundo supervisado, modelos fundacionales y representaciones autosupervisadas (incluida I-JEPA) con un protocolo común. La modalidad de imagen y la tarea clínica se definirán tras caracterizar el banco de imágenes del CTIC."
   },
   {
-    "objectID": "research/thesis/index.html#presentación",
-    "href": "research/thesis/index.html#presentación",
-    "title": "Tesis doctoral",
+    "objectID": "research/thesis/workplan.html#estado-del-proyecto",
+    "href": "research/thesis/workplan.html#estado-del-proyecto",
+    "title": "Retroalimentación y plan de trabajo",
     "section": "",
-    "text": "Desarrollo y evaluación de metodologías de inteligencia artificial, aprendizaje automático y aprendizaje profundo para el análisis de imágenes de tumores gastrointestinales\nJuan Sebastián Laverde Chunza · Director de tesis: Ravi Kalia, PhD · Doctorado en Ciencia de Datos e Inteligencia Artificial, Universidad El Bosque."
+    "text": "Anteproyecto en revisión (noviembre de 2026). El director otorgó el visto bueno con ajustes en el formulario de aval. Cada ajuste y cada tarea se sigue como un issue de GitHub asignado al doctorando; todo cambio entra mediante pull request para revisión del director."
   },
   {
-    "objectID": "research/thesis/index.html#documentos-institucionales",
-    "href": "research/thesis/index.html#documentos-institucionales",
-    "title": "Tesis doctoral",
-    "section": "Documentos institucionales",
-    "text": "Documentos institucionales\nDocumentos institucionales de la Universidad El Bosque para la presentación del anteproyecto doctoral y la evaluación académica del primer semestre.\n\n\n Guía institucional\nGuía para la presentación del anteproyecto doctoral\nDocumento institucional de la Universidad El Bosque que establece las orientaciones para la elaboración, estructuración y presentación del anteproyecto de investigación doctoral.\nMicrosoft Word (.docx)\n\nDescargar guía del anteproyecto\n\n\n\n Formulario del director\nAval del director y evaluación del trabajo semestral\nDocumento institucional de la Universidad El Bosque destinado a registrar el concepto del director sobre el anteproyecto doctoral y la evaluación del trabajo desarrollado durante el primer semestre.\nEn este formulario, Ravi Kalia, PhD, como director de tesis, debe revisar y determinar:\n\nEl concepto académico del anteproyecto.\nLas observaciones y los ajustes que considere necesarios.\nLa nota propuesta por el director.\nLa escala de calificación utilizada.\nLa justificación de la evaluación semestral.\nSu firma y la fecha correspondiente.\n\n\n\n\n\n\n\nLa calificación correspondiente al trabajo del primer semestre doctoral debe ser registrada por el director de tesis en este documento, en el apartado «Evaluación del trabajo del estudiante durante el semestre».\n\n\n\nEstado del documento: versión para revisión del director. No constituye un aval firmado ni una evaluación oficial emitida.\nMicrosoft Word (.docx)\n\nDescargar aval y evaluación semestral"
+    "objectID": "research/thesis/workplan.html#ajustes-solicitados-al-anteproyecto",
+    "href": "research/thesis/workplan.html#ajustes-solicitados-al-anteproyecto",
+    "title": "Retroalimentación y plan de trabajo",
+    "section": "Ajustes solicitados al anteproyecto",
+    "text": "Ajustes solicitados al anteproyecto\nEstos puntos condicionan el visto bueno y deben quedar resueltos en la siguiente versión del anteproyecto.\n\n\n\n#\nAjuste\nQué se pide\nIssue\n\n\n\n\n1\nAlcance y punto de decisión\nMetadatos del banco del CTIC (modalidad, pacientes, sedes, equipos, fechas) o, si no es posible, un escenario principal (p. ej., H&E colorrectal) con alternativas nombradas. Punto de decisión al final del semestre 2 que active la contribución alternativa de la Tabla 1.\n#34\n\n\n2\nContribución original\nConcretar el aporte de nivel 4 con al menos una idea metodológica (penalización contra la información de adquisición, selección de modelos guiada por la fuga de adquisición, atribución de Δ a factores) y la evidencia que la validaría.\n#35\n\n\n3\nHipótesis H1\nNombrar el par estrategia–referencia principal; incluir la no inferioridad del desempeño interno, con su margen, en el contraste principal; reportar también el desempeño absoluto bajo cambio.\n#36\n\n\n4\nFactores y confusión\nEstimar dominios y pacientes por dominio, explicar cómo se separarán sede, equipo y periodo, y hacer de las perturbaciones controladas un componente central.\n#37\n\n\n5\nJEPA frente a modelos fundacionales\nJustificar I-JEPA frente a UNI, CONCH y el modelo GI, o reducirlo a un brazo menor; separar el color de adquisición del color diagnóstico; estimar el cómputo y su fuente.\n#38\n\n\n6\nReferencias\nIncluir trabajo del CTIC, DomainBed y WILDS, y una búsqueda de cohortes latinoamericanas de imágenes GI.\n#39\n\n\n7\nRiesgos, publicaciones y cronograma\nRegistro de riesgos con responsable y fecha, plan de publicaciones por etapas y cronograma ligado a la fecha de acceso a los datos.\n#43\n\n\n\n\nContribución esperada y evidencia\nLa contribución de nivel 4 debe pasar de «un procedimiento que ayude a explicar y reducir la pérdida» a una propuesta concreta. Algunas ideas de partida:\n\nuna penalización que desincentive codificar información de adquisición en las representaciones;\nla selección de modelos guiada por la fuga de adquisición medida;\nun marco que atribuya la pérdida Δ a factores concretos (sede, equipo, periodo, tinción).\n\n\n\nH1 y la trampa de la no inferioridad\nH1 compara la pérdida de desempeño Δ de una estrategia con la de su referencia, mediante δ = Δestrategia − Δreferencia. Δ también disminuye cuando baja el desempeño interno, de modo que un modelo peor puede parecer más robusto. Por eso el contraste principal debe exigir que la estrategia sea no inferior a la referencia en el desempeño interno, con un margen fijado de antemano, y reportar el desempeño absoluto en los datos con cambio, no solo Δ."
   },
   {
-    "objectID": "research/research-questions/index.html",
-    "href": "research/research-questions/index.html",
-    "title": "Preguntas de investigación",
+    "objectID": "research/thesis/workplan.html#plan-de-trabajo",
+    "href": "research/thesis/workplan.html#plan-de-trabajo",
+    "title": "Retroalimentación y plan de trabajo",
+    "section": "Plan de trabajo",
+    "text": "Plan de trabajo\n\n\n\nTarea\nResultado\nIssue\n\n\n\n\nAmpliar referencias, incluido el trabajo del CTIC\nCatálogo de literatura con una nota por referencia\n#39\n\n\nConjuntos públicos de referencia\nresearch/thesis/datasets.md y 1–2 conjuntos para un primer experimento\n#40\n\n\nEntrevistas con profesionales del área\n8–12 entrevistas y una síntesis de problemas\n#41\n\n\nDocumentación periódica del avance\nBitácoras, actas y resúmenes semestrales\n#42\n\n\nPágina interactiva del proyecto\nPágina bilingüe en este sitio, bajo research/thesis/\n#44\n\n\nLaboratorios y grupos de frontera\nresearch/thesis/labs.md\n#45\n\n\n\n\nReferencias de partida\n\nSussman L, …, Cardona AF (2022). Integration of artificial intelligence and precision oncology in Latin America. Frontiers in Medical Technology 4:1007822. https://doi.org/10.3389/fmedt.2022.1007822\nGulrajani I, Lopez-Paz D (2021). In search of lost domain generalization (DomainBed). ICLR 2021.\nKoh PW et al. (2021). WILDS: A benchmark of in-the-wild distribution shifts. ICML 2021.\n\nAntes de citar otros trabajos del CTIC (genómica del cáncer gástrico en latinos, PD-L1 con IA, radiómica CTIC–ADL Digital Lab), conviene confirmar con el Dr. Andrés Felipe Cardona Zorrilla cuáles son pertinentes y verificar su autoría.\n\n\nConjuntos públicos de referencia\nLista inicial para trabajar antes del acceso al CTIC y como conjuntos con cambio de distribución. Pendiente de verificar tamaño, etiquetas, licencia y acceso de cada uno; se priorizan los multicéntricos.\n\n\n\n\n\n\n\n\nConjunto\nModalidad\nCambio incorporado\n\n\n\n\nNCT-CRC-HE-100K / CRC-VAL-HE-7K\nH&E\nFuentes distintas en entrenamiento y validación\n\n\nTCGA COAD / READ / STAD / ESCA\nH&E + genómica\nMuchas sedes\n\n\nPAIP 2020\nH&E (MSI)\nLimitado\n\n\nLizard / CoNIC\nH&E\nVarias fuentes\n\n\nGlaS, CRAG, MHIST\nH&E\nNo\n\n\nCamelyon17-WILDS\nH&E (mama)\n5 hospitales\n\n\nHyperKvasir\nEndoscopia\nUn centro\n\n\nPolypGen\nEndoscopia\n6 centros\n\n\nKvasir-SEG, CVC-ClinicDB, ETIS-Larib\nEndoscopia\nEntre conjuntos\n\n\nSUN Colonoscopy\nVideo endoscópico\nNo\n\n\nMedical Segmentation Decathlon, TCIA CT Colonography\nTC\nLimitado / multisede\n\n\n\n\n\nEntrevistas\nLa tarea clínica debe surgir de quienes usarían el modelo. Antes de fijarla se entrevistará a 8–12 personas: patólogos, gastroenterólogos y endoscopistas del CTIC, oncólogos y radiólogos, técnicos de tinción y adquisición, personal del banco de imágenes e investigadores que hayan implantado IA en imágenes en Latinoamérica.\nLa guía cubre decisiones lentas o inconsistentes, desacuerdos entre colegas, qué varía entre equipos, tinciones y sedes, qué debería mostrar una herramienta útil y qué ha fallado antes. Las notas se guardan en research/thesis/interviews/AAAA-MM-DD-rol.md, con consentimiento y sin datos de pacientes:\n# Entrevista — AAAA-MM-DD\nRol:\nContexto: unidad, años de experiencia\nProblemas señalados:\nSolución actual:\nQué debe hacer una herramienta útil:\nImplicaciones para la tesis:"
+  },
+  {
+    "objectID": "research/thesis/workplan.html#documentación-periódica",
+    "href": "research/thesis/workplan.html#documentación-periódica",
+    "title": "Retroalimentación y plan de trabajo",
+    "section": "Documentación periódica",
+    "text": "Documentación periódica\n\n\n\nElemento\nFrecuencia\nRuta\n\n\n\n\nBitácora de avance (hecho, siguiente, bloqueos)\nCada 2 semanas\nresearch/progress/, aaaa-mm-dd-bitacora.md\n\n\nActas de reunión con el director\nMensual\nresearch/meetings/, aaaa-mm-dd-reunion.md\n\n\nResumen semestral\nCada semestre\nresearch/progress/, semestre-NN-avance.md\n\n\nNotas de entrevistas (sin datos identificables)\nTras cada entrevista\nresearch/thesis/interviews/\n\n\nReferencias nuevas con una nota breve\nContinua; revisión quincenal\nresearch/literature/\n\n\nRegistro de riesgos\nMensual\nresearch/thesis/risks.md"
+  },
+  {
+    "objectID": "research/thesis/workplan.html#datos-y-ética",
+    "href": "research/thesis/workplan.html#datos-y-ética",
+    "title": "Retroalimentación y plan de trabajo",
+    "section": "Datos y ética",
+    "text": "Datos y ética\n\n\n\n\n\n\nEste repositorio no contiene ni debe contener imágenes clínicas, metadatos identificables ni datos de pacientes. El uso del banco de imágenes del CTIC requiere aprobación del comité de ética y un acuerdo de uso de datos (Ley 1581 de 2012, Decreto 1377 de 2013 y Resolución 8430 de 1993). Las notas de entrevistas requieren consentimiento y no deben incluir nombres sin autorización."
+  },
+  {
+    "objectID": "research/results/index.html",
+    "href": "research/results/index.html",
+    "title": "Resultados",
     "section": "",
-    "text": "Preguntas, hipótesis y objetivos que guían el proyecto, con su evolución a lo largo del doctorado.",
+    "text": "Hallazgos, métricas y figuras derivadas de los experimentos.",
     "crumbs": [
       "Investigación",
       "Secciones",
-      "Preguntas de investigación"
+      "Resultados"
     ]
   },
   {
-    "objectID": "research/research-questions/index.html#convención-de-archivos",
-    "href": "research/research-questions/index.html#convención-de-archivos",
-    "title": "Preguntas de investigación",
+    "objectID": "research/results/index.html#convención-de-archivos",
+    "href": "research/results/index.html#convención-de-archivos",
+    "title": "Resultados",
     "section": "Convención de archivos",
-    "text": "Convención de archivos\nUn documento por iteración: 01-preguntas.md, 02-preguntas.md, …",
+    "text": "Convención de archivos\nexp-01-resultados.md por experimento; figuras en figures/.",
     "crumbs": [
       "Investigación",
       "Secciones",
-      "Preguntas de investigación"
+      "Resultados"
     ]
   },
   {
-    "objectID": "research/research-questions/index.html#contenido",
-    "href": "research/research-questions/index.html#contenido",
-    "title": "Preguntas de investigación",
+    "objectID": "research/results/index.html#contenido",
+    "href": "research/results/index.html#contenido",
+    "title": "Resultados",
     "section": "Contenido",
     "text": "Contenido\n\n\n\nElemento\nFecha\nEnlace\nEstado\n\n\n\n\n—\n—\n—\n—\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nSección en preparación. Aún no se ha agregado contenido.",
     "crumbs": [
       "Investigación",
       "Secciones",
-      "Preguntas de investigación"
-    ]
-  },
-  {
-    "objectID": "research/presentations/index.html",
-    "href": "research/presentations/index.html",
-    "title": "Presentaciones científicas",
-    "section": "",
-    "text": "Charlas, pósters y seminarios de investigación.",
-    "crumbs": [
-      "Investigación",
-      "Secciones",
-      "Presentaciones científicas"
-    ]
-  },
-  {
-    "objectID": "research/presentations/index.html#convención-de-archivos",
-    "href": "research/presentations/index.html#convención-de-archivos",
-    "title": "Presentaciones científicas",
-    "section": "Convención de archivos",
-    "text": "Convención de archivos\npresentation-01-evento.ext con prefijo cronológico; conservar fuente y PDF.",
-    "crumbs": [
-      "Investigación",
-      "Secciones",
-      "Presentaciones científicas"
-    ]
-  },
-  {
-    "objectID": "research/presentations/index.html#contenido",
-    "href": "research/presentations/index.html#contenido",
-    "title": "Presentaciones científicas",
-    "section": "Contenido",
-    "text": "Contenido\n\n\n\nElemento\nFecha\nEnlace\nEstado\n\n\n\n\n—\n—\n—\n—\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nSección en preparación. Aún no se ha agregado contenido.",
-    "crumbs": [
-      "Investigación",
-      "Secciones",
-      "Presentaciones científicas"
-    ]
-  },
-  {
-    "objectID": "research/manuscripts/index.html",
-    "href": "research/manuscripts/index.html",
-    "title": "Manuscritos",
-    "section": "",
-    "text": "Borradores de artículos, capítulos de tesis y material en redacción.",
-    "crumbs": [
-      "Investigación",
-      "Secciones",
-      "Manuscritos"
-    ]
-  },
-  {
-    "objectID": "research/manuscripts/index.html#convención-de-archivos",
-    "href": "research/manuscripts/index.html#convención-de-archivos",
-    "title": "Manuscritos",
-    "section": "Convención de archivos",
-    "text": "Convención de archivos\nUna carpeta por manuscrito: manuscript-01-titulo/ con fuentes y versiones.",
-    "crumbs": [
-      "Investigación",
-      "Secciones",
-      "Manuscritos"
-    ]
-  },
-  {
-    "objectID": "research/manuscripts/index.html#contenido",
-    "href": "research/manuscripts/index.html#contenido",
-    "title": "Manuscritos",
-    "section": "Contenido",
-    "text": "Contenido\n\n\n\nElemento\nFecha\nEnlace\nEstado\n\n\n\n\n—\n—\n—\n—\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nSección en preparación. Aún no se ha agregado contenido.",
-    "crumbs": [
-      "Investigación",
-      "Secciones",
-      "Manuscritos"
-    ]
-  },
-  {
-    "objectID": "research/index.html",
-    "href": "research/index.html",
-    "title": "Research Track",
-    "section": "",
-    "text": "Espacio reservado para el trabajo de investigación del doctorado, separado de los materiales de clase. Cada sección conserva su propia carpeta y convención de archivos.",
-    "crumbs": [
-      "Investigación",
-      "Panorama"
-    ]
-  },
-  {
-    "objectID": "research/index.html#investigación-doctoral",
-    "href": "research/index.html#investigación-doctoral",
-    "title": "Research Track",
-    "section": "",
-    "text": "Espacio reservado para el trabajo de investigación del doctorado, separado de los materiales de clase. Cada sección conserva su propia carpeta y convención de archivos.",
-    "crumbs": [
-      "Investigación",
-      "Panorama"
-    ]
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Doctoral Learning Hub",
-    "section": "",
-    "text": "Un espacio académico para organizar, documentar y compartir el aprendizaje desarrollado durante el doctorado: cursos, notebooks, talleres, evaluaciones, datos, presentaciones y avances de investigación.\nExplorar Semestre 1 Ver investigación"
-  },
-  {
-    "objectID": "index.html#semestre-actual",
-    "href": "index.html#semestre-actual",
-    "title": "Doctoral Learning Hub",
-    "section": "Semestre actual",
-    "text": "Semestre actual\n\n\nSemestre 1\n2026-II\nCursos, talleres, materiales y recursos académicos del primer semestre doctoral.\nVer semestre →\n\n\nResearch Track\nInvestigación doctoral\nLecturas, experimentos y avances del proyecto de investigación doctoral.\nVer investigación →"
-  },
-  {
-    "objectID": "index.html#organización-del-repositorio",
-    "href": "index.html#organización-del-repositorio",
-    "title": "Doctoral Learning Hub",
-    "section": "Organización del repositorio",
-    "text": "Organización del repositorio\nCada módulo conserva la misma estructura para que el repositorio pueda crecer sin perder orden:\n\nTareas — entregables académicos y soluciones.\nQuiz — evaluaciones, bancos de preguntas y repasos.\nData — datasets utilizados durante el módulo.\nTalleres — ejercicios prácticos y laboratorios.\nNotebooks (Colab) — notebooks ejecutables desde Google Colab.\nPresentaciones — diapositivas y material de clase.\nNotas — resúmenes, conceptos y material de estudio.\n\n\n\n\n\n\n\nTipReproducibilidad\n\n\n\nLos notebooks se publican con un badge Open in Colab, fijan una semilla y registran las versiones de sus dependencias. Los datasets restringidos se documentan mediante su origen y esquema, nunca se publican."
-  },
-  {
-    "objectID": "index.html#filosofía",
-    "href": "index.html#filosofía",
-    "title": "Doctoral Learning Hub",
-    "section": "Filosofía",
-    "text": "Filosofía\n\nLearn · Build · Document · Research · Reproduce\n\nEl objetivo no es almacenar archivos: es construir una bitácora técnica y académica reproducible del doctorado."
-  },
-  {
-    "objectID": "research/experiments/index.html",
-    "href": "research/experiments/index.html",
-    "title": "Experimentos",
-    "section": "",
-    "text": "Diseño, configuración y bitácora de los experimentos de investigación.",
-    "crumbs": [
-      "Investigación",
-      "Secciones",
-      "Experimentos"
-    ]
-  },
-  {
-    "objectID": "research/experiments/index.html#convención-de-archivos",
-    "href": "research/experiments/index.html#convención-de-archivos",
-    "title": "Experimentos",
-    "section": "Convención de archivos",
-    "text": "Convención de archivos\nUna carpeta por experimento: exp-01-nombre/ con README.md, configuración y notebook asociado.",
-    "crumbs": [
-      "Investigación",
-      "Secciones",
-      "Experimentos"
-    ]
-  },
-  {
-    "objectID": "research/experiments/index.html#contenido",
-    "href": "research/experiments/index.html#contenido",
-    "title": "Experimentos",
-    "section": "Contenido",
-    "text": "Contenido\n\n\n\nElemento\nFecha\nEnlace\nEstado\n\n\n\n\n—\n—\n—\n—\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nSección en preparación. Aún no se ha agregado contenido.",
-    "crumbs": [
-      "Investigación",
-      "Secciones",
-      "Experimentos"
-    ]
-  },
-  {
-    "objectID": "research/literature/index.html",
-    "href": "research/literature/index.html",
-    "title": "Literatura científica",
-    "section": "",
-    "text": "Catálogo de la literatura reunida para la investigación doctoral. Cada registro muestra el título original completo, tal como fue publicado, con su traducción académica al español debajo. La lista se divide en dos bloques: primero las referencias del anteproyecto doctoral, en el orden de su lista de referencias, y después la literatura complementaria de la biblioteca de investigación, organizada por categorías.",
-    "crumbs": [
-      "Investigación",
-      "Secciones",
-      "Literatura científica"
-    ]
-  },
-  {
-    "objectID": "research/literature/index.html#criterios-del-catálogo",
-    "href": "research/literature/index.html#criterios-del-catálogo",
-    "title": "Literatura científica",
-    "section": "Criterios del catálogo",
-    "text": "Criterios del catálogo\n\n\nTítulo original. Es el título publicado, verificado contra Crossref, DataCite o la página oficial del artículo. Nunca se sustituye por una cita abreviada; los autores y el año aparecen solo como dato secundario.\nTraducción. Es una traducción académica propia que no reemplaza el título oficial. Los nombres de modelos, arquitecturas y acrónimos (U-Net, Grad-CAM, TransMIL, MSI, H&E…) se conservan sin traducir.\nOrden. El Bloque I sigue exactamente la lista de referencias del anteproyecto doctoral (versión 4). El Bloque II agrupa la literatura complementaria por categoría y sigue la guía de lectura de la biblioteca.\nEstado de lectura. El estado Realizado exige una fecha de lectura verificable. Tener el PDF descargado, haberlo procesado automáticamente o haber publicado un análisis no cuenta como lectura.\nLatent Frontiers. Solo se enlaza una publicación del blog cuando trata de forma explícita el artículo, por ejemplo con un experimento sobre sus datos y una cita de su DOI. Una mención de paso no basta.\nDerechos de autor. Solo se publican metadatos bibliográficos y enlaces a las fuentes oficiales. No se publican PDF ni textos completos de terceros.\n\nDatos abiertos: catálogo en CSV · bibliografía en BibTeX · orden de referencias del anteproyecto. Informes de inventario y verificación en el repositorio.",
-    "crumbs": [
-      "Investigación",
-      "Secciones",
-      "Literatura científica"
-    ]
-  },
-  {
-    "objectID": "research/meetings/index.html",
-    "href": "research/meetings/index.html",
-    "title": "Reuniones",
-    "section": "",
-    "text": "Actas de reuniones con la dirección de tesis y el grupo de investigación.",
-    "crumbs": [
-      "Investigación",
-      "Secciones",
-      "Reuniones"
-    ]
-  },
-  {
-    "objectID": "research/meetings/index.html#convención-de-archivos",
-    "href": "research/meetings/index.html#convención-de-archivos",
-    "title": "Reuniones",
-    "section": "Convención de archivos",
-    "text": "Convención de archivos\naaaa-mm-dd-reunion.md en orden cronológico.",
-    "crumbs": [
-      "Investigación",
-      "Secciones",
-      "Reuniones"
-    ]
-  },
-  {
-    "objectID": "research/meetings/index.html#contenido",
-    "href": "research/meetings/index.html#contenido",
-    "title": "Reuniones",
-    "section": "Contenido",
-    "text": "Contenido\n\n\n\nElemento\nFecha\nEnlace\nEstado\n\n\n\n\n—\n—\n—\n—\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nSección en preparación. Aún no se ha agregado contenido.",
-    "crumbs": [
-      "Investigación",
-      "Secciones",
-      "Reuniones"
+      "Resultados"
     ]
   },
   {
@@ -1025,40 +828,279 @@
     ]
   },
   {
-    "objectID": "research/results/index.html",
-    "href": "research/results/index.html",
-    "title": "Resultados",
+    "objectID": "research/meetings/index.html",
+    "href": "research/meetings/index.html",
+    "title": "Reuniones",
     "section": "",
-    "text": "Hallazgos, métricas y figuras derivadas de los experimentos.",
+    "text": "Actas de reuniones con la dirección de tesis y el grupo de investigación.",
     "crumbs": [
       "Investigación",
       "Secciones",
-      "Resultados"
+      "Reuniones"
     ]
   },
   {
-    "objectID": "research/results/index.html#convención-de-archivos",
-    "href": "research/results/index.html#convención-de-archivos",
-    "title": "Resultados",
+    "objectID": "research/meetings/index.html#convención-de-archivos",
+    "href": "research/meetings/index.html#convención-de-archivos",
+    "title": "Reuniones",
     "section": "Convención de archivos",
-    "text": "Convención de archivos\nexp-01-resultados.md por experimento; figuras en figures/.",
+    "text": "Convención de archivos\naaaa-mm-dd-reunion.md en orden cronológico.",
     "crumbs": [
       "Investigación",
       "Secciones",
-      "Resultados"
+      "Reuniones"
     ]
   },
   {
-    "objectID": "research/results/index.html#contenido",
-    "href": "research/results/index.html#contenido",
-    "title": "Resultados",
+    "objectID": "research/meetings/index.html#contenido",
+    "href": "research/meetings/index.html#contenido",
+    "title": "Reuniones",
     "section": "Contenido",
     "text": "Contenido\n\n\n\nElemento\nFecha\nEnlace\nEstado\n\n\n\n\n—\n—\n—\n—\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nSección en preparación. Aún no se ha agregado contenido.",
     "crumbs": [
       "Investigación",
       "Secciones",
-      "Resultados"
+      "Reuniones"
     ]
+  },
+  {
+    "objectID": "research/literature/index.html",
+    "href": "research/literature/index.html",
+    "title": "Literatura científica",
+    "section": "",
+    "text": "Catálogo de la literatura reunida para la investigación doctoral. Cada registro muestra el título original completo, tal como fue publicado, con su traducción académica al español debajo. La lista se divide en dos bloques: primero las referencias del anteproyecto doctoral, en el orden de su lista de referencias, y después la literatura complementaria de la biblioteca de investigación, organizada por categorías.",
+    "crumbs": [
+      "Investigación",
+      "Secciones",
+      "Literatura científica"
+    ]
+  },
+  {
+    "objectID": "research/literature/index.html#criterios-del-catálogo",
+    "href": "research/literature/index.html#criterios-del-catálogo",
+    "title": "Literatura científica",
+    "section": "Criterios del catálogo",
+    "text": "Criterios del catálogo\n\n\nTítulo original. Es el título publicado, verificado contra Crossref, DataCite o la página oficial del artículo. Nunca se sustituye por una cita abreviada; los autores y el año aparecen solo como dato secundario.\nTraducción. Es una traducción académica propia que no reemplaza el título oficial. Los nombres de modelos, arquitecturas y acrónimos (U-Net, Grad-CAM, TransMIL, MSI, H&E…) se conservan sin traducir.\nOrden. El Bloque I sigue exactamente la lista de referencias del anteproyecto doctoral (versión 4). El Bloque II agrupa la literatura complementaria por categoría y sigue la guía de lectura de la biblioteca.\nEstado de lectura. El estado Realizado exige una fecha de lectura verificable. Tener el PDF descargado, haberlo procesado automáticamente o haber publicado un análisis no cuenta como lectura.\nLatent Frontiers. Solo se enlaza una publicación del blog cuando trata de forma explícita el artículo, por ejemplo con un experimento sobre sus datos y una cita de su DOI. Una mención de paso no basta.\nDerechos de autor. Solo se publican metadatos bibliográficos y enlaces a las fuentes oficiales. No se publican PDF ni textos completos de terceros.\n\nDatos abiertos: catálogo en CSV · bibliografía en BibTeX · orden de referencias del anteproyecto. Informes de inventario y verificación en el repositorio.",
+    "crumbs": [
+      "Investigación",
+      "Secciones",
+      "Literatura científica"
+    ]
+  },
+  {
+    "objectID": "research/experiments/index.html",
+    "href": "research/experiments/index.html",
+    "title": "Experimentos",
+    "section": "",
+    "text": "Diseño, configuración y bitácora de los experimentos de investigación.",
+    "crumbs": [
+      "Investigación",
+      "Secciones",
+      "Experimentos"
+    ]
+  },
+  {
+    "objectID": "research/experiments/index.html#convención-de-archivos",
+    "href": "research/experiments/index.html#convención-de-archivos",
+    "title": "Experimentos",
+    "section": "Convención de archivos",
+    "text": "Convención de archivos\nUna carpeta por experimento: exp-01-nombre/ con README.md, configuración y notebook asociado.",
+    "crumbs": [
+      "Investigación",
+      "Secciones",
+      "Experimentos"
+    ]
+  },
+  {
+    "objectID": "research/experiments/index.html#contenido",
+    "href": "research/experiments/index.html#contenido",
+    "title": "Experimentos",
+    "section": "Contenido",
+    "text": "Contenido\n\n\n\nElemento\nFecha\nEnlace\nEstado\n\n\n\n\n—\n—\n—\n—\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nSección en preparación. Aún no se ha agregado contenido.",
+    "crumbs": [
+      "Investigación",
+      "Secciones",
+      "Experimentos"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Doctoral Learning Hub",
+    "section": "",
+    "text": "Un espacio académico para organizar, documentar y compartir el aprendizaje desarrollado durante el doctorado: cursos, notebooks, talleres, evaluaciones, datos, presentaciones y avances de investigación.\nExplorar Semestre 1 Ver investigación"
+  },
+  {
+    "objectID": "index.html#semestre-actual",
+    "href": "index.html#semestre-actual",
+    "title": "Doctoral Learning Hub",
+    "section": "Semestre actual",
+    "text": "Semestre actual\n\n\nSemestre 1\n2026-II\nCursos, talleres, materiales y recursos académicos del primer semestre doctoral.\nVer semestre →\n\n\nResearch Track\nInvestigación doctoral\nLecturas, experimentos y avances del proyecto de investigación doctoral.\nVer investigación →"
+  },
+  {
+    "objectID": "index.html#organización-del-repositorio",
+    "href": "index.html#organización-del-repositorio",
+    "title": "Doctoral Learning Hub",
+    "section": "Organización del repositorio",
+    "text": "Organización del repositorio\nCada módulo conserva la misma estructura para que el repositorio pueda crecer sin perder orden:\n\nTareas — entregables académicos y soluciones.\nQuiz — evaluaciones, bancos de preguntas y repasos.\nData — datasets utilizados durante el módulo.\nTalleres — ejercicios prácticos y laboratorios.\nNotebooks (Colab) — notebooks ejecutables desde Google Colab.\nPresentaciones — diapositivas y material de clase.\nNotas — resúmenes, conceptos y material de estudio.\n\n\n\n\n\n\n\nTipReproducibilidad\n\n\n\nLos notebooks se publican con un badge Open in Colab, fijan una semilla y registran las versiones de sus dependencias. Los datasets restringidos se documentan mediante su origen y esquema, nunca se publican."
+  },
+  {
+    "objectID": "index.html#filosofía",
+    "href": "index.html#filosofía",
+    "title": "Doctoral Learning Hub",
+    "section": "Filosofía",
+    "text": "Filosofía\n\nLearn · Build · Document · Research · Reproduce\n\nEl objetivo no es almacenar archivos: es construir una bitácora técnica y académica reproducible del doctorado."
+  },
+  {
+    "objectID": "research/index.html",
+    "href": "research/index.html",
+    "title": "Research Track",
+    "section": "",
+    "text": "Espacio reservado para el trabajo de investigación del doctorado, separado de los materiales de clase. Cada sección conserva su propia carpeta y convención de archivos.",
+    "crumbs": [
+      "Investigación",
+      "Panorama"
+    ]
+  },
+  {
+    "objectID": "research/index.html#investigación-doctoral",
+    "href": "research/index.html#investigación-doctoral",
+    "title": "Research Track",
+    "section": "",
+    "text": "Espacio reservado para el trabajo de investigación del doctorado, separado de los materiales de clase. Cada sección conserva su propia carpeta y convención de archivos.",
+    "crumbs": [
+      "Investigación",
+      "Panorama"
+    ]
+  },
+  {
+    "objectID": "research/manuscripts/index.html",
+    "href": "research/manuscripts/index.html",
+    "title": "Manuscritos",
+    "section": "",
+    "text": "Borradores de artículos, capítulos de tesis y material en redacción.",
+    "crumbs": [
+      "Investigación",
+      "Secciones",
+      "Manuscritos"
+    ]
+  },
+  {
+    "objectID": "research/manuscripts/index.html#convención-de-archivos",
+    "href": "research/manuscripts/index.html#convención-de-archivos",
+    "title": "Manuscritos",
+    "section": "Convención de archivos",
+    "text": "Convención de archivos\nUna carpeta por manuscrito: manuscript-01-titulo/ con fuentes y versiones.",
+    "crumbs": [
+      "Investigación",
+      "Secciones",
+      "Manuscritos"
+    ]
+  },
+  {
+    "objectID": "research/manuscripts/index.html#contenido",
+    "href": "research/manuscripts/index.html#contenido",
+    "title": "Manuscritos",
+    "section": "Contenido",
+    "text": "Contenido\n\n\n\nElemento\nFecha\nEnlace\nEstado\n\n\n\n\n—\n—\n—\n—\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nSección en preparación. Aún no se ha agregado contenido.",
+    "crumbs": [
+      "Investigación",
+      "Secciones",
+      "Manuscritos"
+    ]
+  },
+  {
+    "objectID": "research/presentations/index.html",
+    "href": "research/presentations/index.html",
+    "title": "Presentaciones científicas",
+    "section": "",
+    "text": "Charlas, pósters y seminarios de investigación.",
+    "crumbs": [
+      "Investigación",
+      "Secciones",
+      "Presentaciones científicas"
+    ]
+  },
+  {
+    "objectID": "research/presentations/index.html#convención-de-archivos",
+    "href": "research/presentations/index.html#convención-de-archivos",
+    "title": "Presentaciones científicas",
+    "section": "Convención de archivos",
+    "text": "Convención de archivos\npresentation-01-evento.ext con prefijo cronológico; conservar fuente y PDF.",
+    "crumbs": [
+      "Investigación",
+      "Secciones",
+      "Presentaciones científicas"
+    ]
+  },
+  {
+    "objectID": "research/presentations/index.html#contenido",
+    "href": "research/presentations/index.html#contenido",
+    "title": "Presentaciones científicas",
+    "section": "Contenido",
+    "text": "Contenido\n\n\n\nElemento\nFecha\nEnlace\nEstado\n\n\n\n\n—\n—\n—\n—\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nSección en preparación. Aún no se ha agregado contenido.",
+    "crumbs": [
+      "Investigación",
+      "Secciones",
+      "Presentaciones científicas"
+    ]
+  },
+  {
+    "objectID": "research/research-questions/index.html",
+    "href": "research/research-questions/index.html",
+    "title": "Preguntas de investigación",
+    "section": "",
+    "text": "Preguntas, hipótesis y objetivos que guían el proyecto, con su evolución a lo largo del doctorado.",
+    "crumbs": [
+      "Investigación",
+      "Secciones",
+      "Preguntas de investigación"
+    ]
+  },
+  {
+    "objectID": "research/research-questions/index.html#convención-de-archivos",
+    "href": "research/research-questions/index.html#convención-de-archivos",
+    "title": "Preguntas de investigación",
+    "section": "Convención de archivos",
+    "text": "Convención de archivos\nUn documento por iteración: 01-preguntas.md, 02-preguntas.md, …",
+    "crumbs": [
+      "Investigación",
+      "Secciones",
+      "Preguntas de investigación"
+    ]
+  },
+  {
+    "objectID": "research/research-questions/index.html#contenido",
+    "href": "research/research-questions/index.html#contenido",
+    "title": "Preguntas de investigación",
+    "section": "Contenido",
+    "text": "Contenido\n\n\n\nElemento\nFecha\nEnlace\nEstado\n\n\n\n\n—\n—\n—\n—\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nSección en preparación. Aún no se ha agregado contenido.",
+    "crumbs": [
+      "Investigación",
+      "Secciones",
+      "Preguntas de investigación"
+    ]
+  },
+  {
+    "objectID": "research/thesis/index.html",
+    "href": "research/thesis/index.html",
+    "title": "Tesis doctoral",
+    "section": "",
+    "text": "Desarrollo y evaluación de metodologías de inteligencia artificial, aprendizaje automático y aprendizaje profundo para el análisis de imágenes de tumores gastrointestinales\nJuan Sebastián Laverde Chunza · Director de tesis: Ravi Kalia, PhD · Doctorado en Ciencia de Datos e Inteligencia Artificial, Universidad El Bosque."
+  },
+  {
+    "objectID": "research/thesis/index.html#presentación",
+    "href": "research/thesis/index.html#presentación",
+    "title": "Tesis doctoral",
+    "section": "",
+    "text": "Desarrollo y evaluación de metodologías de inteligencia artificial, aprendizaje automático y aprendizaje profundo para el análisis de imágenes de tumores gastrointestinales\nJuan Sebastián Laverde Chunza · Director de tesis: Ravi Kalia, PhD · Doctorado en Ciencia de Datos e Inteligencia Artificial, Universidad El Bosque."
+  },
+  {
+    "objectID": "research/thesis/index.html#documentos-institucionales",
+    "href": "research/thesis/index.html#documentos-institucionales",
+    "title": "Tesis doctoral",
+    "section": "Documentos institucionales",
+    "text": "Documentos institucionales\nDocumentos institucionales de la Universidad El Bosque para la presentación del anteproyecto doctoral y la evaluación académica del primer semestre.\n\n\n Guía institucional\nGuía para la presentación del anteproyecto doctoral\nDocumento institucional de la Universidad El Bosque que establece las orientaciones para la elaboración, estructuración y presentación del anteproyecto de investigación doctoral.\nMicrosoft Word (.docx)\n\nDescargar guía del anteproyecto\n\n\n\n Formulario del director\nAval del director y evaluación del trabajo semestral\nDocumento institucional de la Universidad El Bosque destinado a registrar el concepto del director sobre el anteproyecto doctoral y la evaluación del trabajo desarrollado durante el primer semestre.\nEn este formulario, Ravi Kalia, PhD, como director de tesis, debe revisar y determinar:\n\nEl concepto académico del anteproyecto.\nLas observaciones y los ajustes que considere necesarios.\nLa nota propuesta por el director.\nLa escala de calificación utilizada.\nLa justificación de la evaluación semestral.\nSu firma y la fecha correspondiente.\n\n\n\n\n\n\n\nLa calificación correspondiente al trabajo del primer semestre doctoral debe ser registrada por el director de tesis en este documento, en el apartado «Evaluación del trabajo del estudiante durante el semestre».\n\n\n\nEstado del documento: diligenciado por el director (concepto: satisfactorio con ajustes; nota propuesta: 4,5 sobre 5) y firmado con las iniciales del director el 14 de noviembre de 2026. Los ajustes se detallan en Retroalimentación y plan de trabajo.\nMicrosoft Word (.docx)\n\nDescargar aval y evaluación semestral"
   },
   {
     "objectID": "semesters/index.html",
