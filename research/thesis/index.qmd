@@ -79,7 +79,7 @@ En este formulario, Ravi Kalia, PhD, como director de tesis, debe revisar y dete
 La calificación correspondiente al trabajo del primer semestre doctoral debe ser registrada por el director de tesis en este documento, en el apartado «Evaluación del trabajo del estudiante durante el semestre».
 :::
 
-[**Estado del documento:** diligenciado por el director (concepto: satisfactorio con ajustes; nota propuesta: 4,5 sobre 5), pendiente de firma. Los ajustes se detallan en [Retroalimentación y plan de trabajo](workplan.qmd).]{.study-meta}
+[**Estado del documento:** diligenciado por el director (concepto: satisfactorio con ajustes; nota propuesta: 4,5 sobre 5) y firmado con las iniciales del director el 14 de noviembre de 2026. Los ajustes se detallan en [Retroalimentación y plan de trabajo](workplan.qmd).]{.study-meta}
 
 [Microsoft Word (.docx)]{.study-meta}
 
