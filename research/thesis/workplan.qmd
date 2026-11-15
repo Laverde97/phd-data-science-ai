@@ -1,0 +1,147 @@
+---
+title: "Retroalimentación y plan de trabajo"
+subtitle: "Ajustes solicitados al anteproyecto y tareas de investigación"
+toc: true
+---
+
+::: {.module-banner}
+## Estado del proyecto
+
+**Anteproyecto en revisión (noviembre de 2026).** El director otorgó el visto bueno con ajustes en el
+[formulario de aval](documents/institucionales/Aval_anteproyecto_y_evaluacion_semestral_UEB.docx). Cada ajuste y
+cada tarea se sigue como un *issue* de GitHub asignado al doctorando; todo cambio entra mediante *pull request*
+para revisión del director.
+:::
+
+| | |
+|---|---|
+| Programa | Doctorado en Ciencia de Datos e Inteligencia Artificial, Facultad de Ciencias, Universidad El Bosque |
+| Doctorando | Juan Sebastián Laverde Chunza |
+| Director | Ravi Kalia, PhD |
+| Codirector clínico (CTIC) | Pendiente de designación |
+| Institución aliada | Centro de Tratamiento e Investigación sobre Cáncer Luis Carlos Sarmiento Angulo (CTIC), Bogotá |
+
+La tesis estudia por qué los modelos de IA para imágenes de tumores gastrointestinales pierden desempeño cuando
+cambian los datos (sede, equipo, tinción, población o tipo de muestra) y cómo reducir esa pérdida en una cohorte
+institucional de tamaño moderado. Compara modelos de ML tradicional, aprendizaje profundo supervisado, modelos
+fundacionales y representaciones autosupervisadas (incluida I-JEPA) con un protocolo común. La modalidad de imagen
+y la tarea clínica se definirán tras caracterizar el banco de imágenes del CTIC.
+
+## Ajustes solicitados al anteproyecto
+
+Estos puntos condicionan el visto bueno y deben quedar resueltos en la siguiente versión del anteproyecto.
+
+| # | Ajuste | Qué se pide | Issue |
+|:-:|---|---|:-:|
+| 1 | Alcance y punto de decisión | Metadatos del banco del CTIC (modalidad, pacientes, sedes, equipos, fechas) o, si no es posible, un escenario principal (p. ej., H&E colorrectal) con alternativas nombradas. Punto de decisión al final del semestre 2 que active la contribución alternativa de la Tabla 1. | [#34](https://github.com/Laverde97/phd-data-science-ai/issues/34) |
+| 2 | Contribución original | Concretar el aporte de nivel 4 con al menos una idea metodológica (penalización contra la información de adquisición, selección de modelos guiada por la fuga de adquisición, atribución de Δ a factores) y la evidencia que la validaría. | [#35](https://github.com/Laverde97/phd-data-science-ai/issues/35) |
+| 3 | Hipótesis H1 | Nombrar el par estrategia–referencia principal; incluir la no inferioridad del desempeño interno, con su margen, en el contraste principal; reportar también el desempeño absoluto bajo cambio. | [#36](https://github.com/Laverde97/phd-data-science-ai/issues/36) |
+| 4 | Factores y confusión | Estimar dominios y pacientes por dominio, explicar cómo se separarán sede, equipo y periodo, y hacer de las perturbaciones controladas un componente central. | [#37](https://github.com/Laverde97/phd-data-science-ai/issues/37) |
+| 5 | JEPA frente a modelos fundacionales | Justificar I-JEPA frente a UNI, CONCH y el modelo GI, o reducirlo a un brazo menor; separar el color de adquisición del color diagnóstico; estimar el cómputo y su fuente. | [#38](https://github.com/Laverde97/phd-data-science-ai/issues/38) |
+| 6 | Referencias | Incluir trabajo del CTIC, DomainBed y WILDS, y una búsqueda de cohortes latinoamericanas de imágenes GI. | [#39](https://github.com/Laverde97/phd-data-science-ai/issues/39) |
+| 7 | Riesgos, publicaciones y cronograma | Registro de riesgos con responsable y fecha, plan de publicaciones por etapas y cronograma ligado a la fecha de acceso a los datos. | [#43](https://github.com/Laverde97/phd-data-science-ai/issues/43) |
+
+: {.striped .hover}
+
+### Contribución esperada y evidencia
+
+La contribución de nivel 4 debe pasar de «un procedimiento que ayude a explicar y reducir la pérdida» a una
+propuesta concreta. Algunas ideas de partida:
+
+- una penalización que desincentive codificar información de adquisición en las representaciones;
+- la selección de modelos guiada por la fuga de adquisición medida;
+- un marco que atribuya la pérdida Δ a factores concretos (sede, equipo, periodo, tinción).
+
+### H1 y la trampa de la no inferioridad
+
+H1 compara la pérdida de desempeño Δ de una estrategia con la de su referencia, mediante δ = Δ~estrategia~ − Δ~referencia~.
+Δ también disminuye cuando baja el desempeño interno, de modo que un modelo peor puede parecer más robusto. Por eso
+el contraste principal debe exigir que la estrategia sea no inferior a la referencia en el desempeño interno, con
+un margen fijado de antemano, y reportar el desempeño absoluto en los datos con cambio, no solo Δ.
+
+## Plan de trabajo
+
+| Tarea | Resultado | Issue |
+|---|---|:-:|
+| Ampliar referencias, incluido el trabajo del CTIC | Catálogo de [literatura](../literature/index.qmd) con una nota por referencia | [#39](https://github.com/Laverde97/phd-data-science-ai/issues/39) |
+| Conjuntos públicos de referencia | `research/thesis/datasets.md` y 1–2 conjuntos para un primer experimento | [#40](https://github.com/Laverde97/phd-data-science-ai/issues/40) |
+| Entrevistas con profesionales del área | 8–12 entrevistas y una síntesis de problemas | [#41](https://github.com/Laverde97/phd-data-science-ai/issues/41) |
+| Documentación periódica del avance | Bitácoras, actas y resúmenes semestrales | [#42](https://github.com/Laverde97/phd-data-science-ai/issues/42) |
+| Página interactiva del proyecto | Página bilingüe en este sitio, bajo `research/thesis/` | [#44](https://github.com/Laverde97/phd-data-science-ai/issues/44) |
+| Laboratorios y grupos de frontera | `research/thesis/labs.md` | [#45](https://github.com/Laverde97/phd-data-science-ai/issues/45) |
+
+: {.striped .hover}
+
+### Referencias de partida
+
+- Sussman L, …, Cardona AF (2022). *Integration of artificial intelligence and precision oncology in Latin
+  America*. Frontiers in Medical Technology 4:1007822. <https://doi.org/10.3389/fmedt.2022.1007822>
+- Gulrajani I, Lopez-Paz D (2021). *In search of lost domain generalization* (DomainBed). ICLR 2021.
+- Koh PW et al. (2021). *WILDS: A benchmark of in-the-wild distribution shifts*. ICML 2021.
+
+Antes de citar otros trabajos del CTIC (genómica del cáncer gástrico en latinos, PD-L1 con IA, radiómica
+CTIC–ADL Digital Lab), conviene confirmar con el Dr. Andrés Felipe Cardona Zorrilla cuáles son pertinentes y
+verificar su autoría.
+
+### Conjuntos públicos de referencia
+
+Lista inicial para trabajar antes del acceso al CTIC y como conjuntos con cambio de distribución. **Pendiente de
+verificar** tamaño, etiquetas, licencia y acceso de cada uno; se priorizan los multicéntricos.
+
+| Conjunto | Modalidad | Cambio incorporado |
+|---|---|---|
+| NCT-CRC-HE-100K / CRC-VAL-HE-7K | H&E | Fuentes distintas en entrenamiento y validación |
+| TCGA COAD / READ / STAD / ESCA | H&E + genómica | Muchas sedes |
+| PAIP 2020 | H&E (MSI) | Limitado |
+| Lizard / CoNIC | H&E | Varias fuentes |
+| GlaS, CRAG, MHIST | H&E | No |
+| Camelyon17-WILDS | H&E (mama) | 5 hospitales |
+| HyperKvasir | Endoscopia | Un centro |
+| PolypGen | Endoscopia | 6 centros |
+| Kvasir-SEG, CVC-ClinicDB, ETIS-Larib | Endoscopia | Entre conjuntos |
+| SUN Colonoscopy | Video endoscópico | No |
+| Medical Segmentation Decathlon, TCIA CT Colonography | TC | Limitado / multisede |
+
+: {.striped .hover}
+
+### Entrevistas
+
+La tarea clínica debe surgir de quienes usarían el modelo. Antes de fijarla se entrevistará a 8–12 personas:
+patólogos, gastroenterólogos y endoscopistas del CTIC, oncólogos y radiólogos, técnicos de tinción y adquisición,
+personal del banco de imágenes e investigadores que hayan implantado IA en imágenes en Latinoamérica.
+
+La guía cubre decisiones lentas o inconsistentes, desacuerdos entre colegas, qué varía entre equipos, tinciones y
+sedes, qué debería mostrar una herramienta útil y qué ha fallado antes. Las notas se guardan en
+`research/thesis/interviews/AAAA-MM-DD-rol.md`, con consentimiento y sin datos de pacientes:
+
+```markdown
+# Entrevista — AAAA-MM-DD
+Rol:
+Contexto: unidad, años de experiencia
+Problemas señalados:
+Solución actual:
+Qué debe hacer una herramienta útil:
+Implicaciones para la tesis:
+```
+
+## Documentación periódica
+
+| Elemento | Frecuencia | Ruta |
+|---|---|---|
+| Bitácora de avance (hecho, siguiente, bloqueos) | Cada 2 semanas | [`research/progress/`](../progress/index.qmd), `aaaa-mm-dd-bitacora.md` |
+| Actas de reunión con el director | Mensual | [`research/meetings/`](../meetings/index.qmd), `aaaa-mm-dd-reunion.md` |
+| Resumen semestral | Cada semestre | [`research/progress/`](../progress/index.qmd), `semestre-NN-avance.md` |
+| Notas de entrevistas (sin datos identificables) | Tras cada entrevista | `research/thesis/interviews/` |
+| Referencias nuevas con una nota breve | Continua; revisión quincenal | [`research/literature/`](../literature/index.qmd) |
+| Registro de riesgos | Mensual | `research/thesis/risks.md` |
+
+: {.striped .hover}
+
+## Datos y ética
+
+::: {.callout-important appearance="simple"}
+Este repositorio **no contiene ni debe contener** imágenes clínicas, metadatos identificables ni datos de pacientes.
+El uso del banco de imágenes del CTIC requiere aprobación del comité de ética y un acuerdo de uso de datos
+(Ley 1581 de 2012, Decreto 1377 de 2013 y Resolución 8430 de 1993). Las notas de entrevistas requieren
+consentimiento y no deben incluir nombres sin autorización.
+:::

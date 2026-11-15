@@ -25,6 +25,15 @@ Documento completo del anteproyecto de investigación doctoral. PDF, 26 páginas
 [Ver anteproyecto](documents/anteproyecto/ANTEPROYECTO_DOCTORAL_GASTROINTESTINAL.pdf){.btn .btn-primary target="_blank" rel="noopener"}
 [Descargar PDF](documents/anteproyecto/ANTEPROYECTO_DOCTORAL_GASTROINTESTINAL.pdf){.btn .btn-outline-primary download=""}
 :::
+
+::: {.resource-card}
+### Retroalimentación y plan de trabajo
+
+Ajustes solicitados por el director al anteproyecto, tareas de investigación, conjuntos públicos de referencia y
+documentación periódica del avance.
+
+[Ver plan de trabajo](workplan.qmd){.btn .btn-primary}
+:::
 :::
 
 ## Documentos institucionales
@@ -70,7 +79,7 @@ En este formulario, Ravi Kalia, PhD, como director de tesis, debe revisar y dete
 La calificación correspondiente al trabajo del primer semestre doctoral debe ser registrada por el director de tesis en este documento, en el apartado «Evaluación del trabajo del estudiante durante el semestre».
 :::
 
-[**Estado del documento:** versión para revisión del director. No constituye un aval firmado ni una evaluación oficial emitida.]{.study-meta}
+[**Estado del documento:** diligenciado por el director (concepto: satisfactorio con ajustes; nota propuesta: 4,5 sobre 5) y firmado con las iniciales del director el 14 de noviembre de 2026. Los ajustes se detallan en [Retroalimentación y plan de trabajo](workplan.qmd).]{.study-meta}
 
 [Microsoft Word (.docx)]{.study-meta}
 
